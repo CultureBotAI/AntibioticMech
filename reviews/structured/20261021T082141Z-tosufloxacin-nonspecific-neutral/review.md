@@ -1,0 +1,976 @@
+# Tosufloxacin nonspecific neutral form: identity and bounded primary evidence
+
+- Review: 20261021T082141Z-tosufloxacin-nonspecific-neutral
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T08:08:06Z
+- Finished UTC: 2026-10-21T08:21:41Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Native nonspecific neutral identity, source merge, broader classes and antibacterial filing are supported. One minor finding requests explicit disposition of compound-specific activity and functional enzyme evidence with form, assay and taxon boundaries. LINCS/CAS detail and exact tested salt/composition remain limited; no direct binding or universal primary-target claim is inferred.
+
+## Scope And Provenance
+
+Complete one-record identity, evidence placement and bounded scientific review.
+
+Selection: Queue066; exactly CHEBI:77581 in isolated batch007.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:77581 | data/antibiotics/antibacterial/7-3-aminopyrrolidin-1-yl-1-2-4-difluorophenyl-6-fluoro-4-oxo-1-4-dihyd.yaml | generated | 7-(3-aminopyrrolidin-1-yl)-1-(2,4-difluorophenyl)-6-fluoro-4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic acid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema validation | passed | True | CHEBI:77581 | Actual focused execution passed. |
+| Focused strict validation | passed | True | CHEBI:77581 | Actual focused execution passed. |
+| Nonspecific structure consistency | passed | True | CHEBI:77581 | Native structures and source registry representations agree; no single-enantiomer or salt claim is made. |
+| Optional source check after new enzyme evidence | passed | False | CHEBI:77581 | Network-permitted adapter calls exited0; no E. faecalis dataset and no grlA hit in the queried S. aureus dataset. The native record had no protein/pathway query before primary discovery. |
+| Independent LINCS and CAS details | unavailable | False | CHEBI:77581 | Official source assertions read; independent details unavailable. |
+| Authoritative full QC | failed | True | CHEBI:77581 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:77581 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:77581 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:77581 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:77581 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:77581 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:77581 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:77581 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:77581 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Nonspecific neutral structure and racemate boundary
+
+identity: supported. Targets: CHEBI:77581.
+
+The native explicit nonspecific name/structure agrees with ChEBI77581 and the shared PubChem/ChEMBL/CARD representation. ChEBI77573 separately encodes equimolar mixture semantics; neither proportions nor an isolated enantiomer are claimed here. Future primary transfer must qualify tested preparations.
+
+### Broader classes and filing
+
+grounding: supported. Targets: CHEBI:77581.
+
+Eight ChEBI parents and the ARO class are broader and applicable. Generic antimicrobial role is retained; ARO class and primary activity support antibacterial filing without inventing extra source roles.
+
+### Compound-specific functional inhibition evidence
+
+completeness: concern. Targets: CHEBI:77581.
+
+Inspected primary studies supply enzyme-inhibition evidence that warrants explicit curator disposition after form mapping. No native target is currently asserted; functional inhibition and species-specific preference must remain distinct from direct binding and universal lethal-target order.
+
+### Assay-method and cross-susceptibility context
+
+completeness: concern. Targets: CHEBI:77581.
+
+The original assay can support carefully scoped observations, preserving preparation and method limits. Summary MIC distributions cannot become individual strain MICs; cross-susceptibility is not proof of a named determinant.
+
+### Selection agent and biochemical causality
+
+evidence: unknown. Targets: CHEBI:77581.
+
+The inspected studies include cross-susceptibility in selected mutants, but selection drugs and mechanistic interpretations differ. No native resistance route is asserted and no genetic-causality chain is imported.
+
+### Producer, clinical and dataset claims
+
+scope: not_applicable. Targets: CHEBI:77581.
+
+The native record contains no producer, clinical product or transcriptomics assertion. A LINCS chemical identifier alone does not establish an applicable expression dataset.
+
+### ARO/ChEBI merge and history
+
+provenance: supported. Targets: CHEBI:77581.
+
+Maintained raw ownership, shared structural key, source date, both mints and four history events explain the generated record. No native status/history change was made.
+
+### Focused gates
+
+schema: supported. Targets: CHEBI:77581.
+
+Focused schema and strict validation pass.
+
+## Findings
+
+### F1: Disposition the compound-specific assay and enzyme evidence with preparation scope
+
+minor / open / confirmed; issue key: chebi-77581-primary-assay-mechanism-disposition.
+
+The cited full assay paper and additional primary enzyme studies provide concrete evidence for bounded annotations. A curator should qualify the nonspecific/racemate preparation mapping and either curate or explicitly defer the supported observations. This does not justify transferring pure-enantiomer or tosylate data, asserting direct binding, or converting another drug’s mutant-selection order into tosufloxacin target preference.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Curate or explicitly defer the inspected assay and enzyme observations after qualifying exact preparation scope.
+
+- Document which neutral/racemic preparation each paper tested and which form details are unknown; do not infer a pure R or S compound or a tosylate salt from the nonspecific key.
+- Keep functional enzyme inhibition separate from binding-affinity evidence; preserve organism, strain, enzyme assay and units. Do not assign a universal primary target from an IC50 comparison.
+- Preserve MIC method, organism group versus strain resolution, study-specific susceptibility language and selection drug. Do not apply modern breakpoints to historical observations without an independently justified standard.
+- Use claim-level primary evidence, actual native fields, validated writer and curation event, then required schema, strict, reference, grounding and history gates. No source identity or status promotion is implied by this review.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/7-3-aminopyrrolidin-1-yl-1-2-4-difluorophenyl-6-fluoro-4-oxo-1-4-dihyd.yaml; Entire native YAML | supports | Read the ANTIBACTERIAL, SEEDED, EXACT record, nonspecific systematic label/definition, nine parents, generic antimicrobial role, ARO structural class, complete structure, five xrefs, both source concepts and four history events. No molecular target, mode, quantitative activity, resistance, clinical status, producer, dataset or causal graph assertion is present. |
+| owner | data/raw/chebi_antimicrobials.tsv; Rows 1964–1967; aro_antibiotics.tsv row 337; pubchem_structures.tsv row 114; PATHS row 2235; seeder lines 786–864 | supports | ChEBI 77581 supplies the nonspecific structure; CARD 3004499 supplies tosufloxacin identity/class and PMID1906696. The ARO-linked racemate 77573 has no default structure, so PubChem 5517 supplies the full key used to merge with 77581. Both source mints and source date reproduce. No exact target/resistance edge or curator override was found in the ignored-inclusive maintained-input searches. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:77581; Official identity, structure, definition, ontology and manual xref | supports | Live ChEBI reproduces native neutral C19H15F3N4O3, masses 404.348/404.10962 and key WUWFMDMBOJLQIV-UHFFFAOYSA-N. The aminopyrrolidine center is unspecified, consistently with the native name. ChEBI lists the R and S forms as narrower children and asserts LINCS LSM-5050. |
+| racemate | https://www.ebi.ac.uk/chebi/CHEBI:77573; Definition, component relations and registry | context_only | This separate ChEBI entry defines tosufloxacin as an equimolar R/S racemate and links CAS100490-36-6. It has no default single structure. Its mechanism and clinical roles must not be silently treated as direct primary evidence for the nonspecific parent or either isolated enantiomer. |
+| parent-25384 | https://www.ebi.ac.uk/chebi/CHEBI:25384; Official term definition/identity | supports | The term resolves to monocarboxylic acid and is broader than the represented structure. Class wording is not a compound-specific mechanism experiment. |
+| parent-33709 | https://www.ebi.ac.uk/chebi/CHEBI:33709; Official term definition/identity | supports | The term resolves to amino acid, defined broadly by amino and carboxy groups and is broader than the represented structure. Class wording is not a compound-specific mechanism experiment. |
+| parent-37143 | https://www.ebi.ac.uk/chebi/CHEBI:37143; Official term definition/identity | supports | The term resolves to organofluorine compound and is broader than the represented structure. Class wording is not a compound-specific mechanism experiment. |
+| parent-46769 | https://www.ebi.ac.uk/chebi/CHEBI:46769; Official term definition/identity | supports | The term resolves to aminopyrrolidine and is broader than the represented structure. Class wording is not a compound-specific mechanism experiment. |
+| parent-50994 | https://www.ebi.ac.uk/chebi/CHEBI:50994; Official term definition/identity | supports | The term resolves to primary amino compound and is broader than the represented structure. Class wording is not a compound-specific mechanism experiment. |
+| parent-50996 | https://www.ebi.ac.uk/chebi/CHEBI:50996; Official term definition/identity | supports | The term resolves to tertiary amino compound and is broader than the represented structure. Class wording is not a compound-specific mechanism experiment. |
+| parent-73537 | https://www.ebi.ac.uk/chebi/CHEBI:73537; Official term definition/identity | supports | The term resolves to 1,8-naphthyridine derivative and is broader than the represented structure. Class wording is not a compound-specific mechanism experiment. |
+| parent-86324 | https://www.ebi.ac.uk/chebi/CHEBI:86324; Official term definition/identity | supports | The term resolves to quinolone antibiotic, including quinolone-related skeletons and is broader than the represented structure. Class wording is not a compound-specific mechanism experiment. |
+| card | https://card.mcmaster.ca/ontology/42144; ARO:3004499 identity, structure, class, xrefs and publication | supports | Current CARD gives the same native SMILES, PubChem5517, ChEMBL273348 and CAS100490-36-6; its ChEBI cross-reference is the separate racemate77573. ARO:0000001 resolves to the broader fluoroquinolone-antibiotic class. CARD supports provenance and filing but does not establish an isolated enantiomer or assay preparation. |
+| aro-parent | http://purl.obolibrary.org/obo/ARO_0000001; OLS4 official ontology term | supports | ARO:0000001 is the broader fluoroquinolone-antibiotic class. Its general mechanism description is not used as direct evidence for a native molecular target. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/5517; PUG View exact compound identity | supports | PubChem5517 names tosufloxacin and agrees with the native nonspecific neutral structure, formula, key and masses. Unspecified chirality does not itself encode an equimolar mixture or a pure enantiomer. |
+| chembl | https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL273348.json; Molecule structures and preferred name | supports | CHEMBL273348 is tosufloxacin and supplies exactly the native canonical SMILES, Standard InChI and full key. This verifies the registry representation, not a specific salt or stereochemical composition of a tested preparation. |
+| chemistry | RDKit native structure calculation; SMILES and Standard InChI separately; locked batch007 environment | supports | Both encodings parse and reproduce the full key, C19H15F3N4O3, charge0, one fragment and masses404.348/404.109625. One center is unassigned, matching the nonspecific label. Both CHEBI and ARO minted identifiers reproduce. |
+| primary-assay | PMID:1906696; DOI:10.1128/AAC.35.5.955; complete original pp955–960 via six PMC CDN scans; pp955,958,959 visually checked | supports | Abbott supplied tosufloxacin; salt, purity and enantiomeric proportions are unspecified. The 1991 study supports antibacterial activity and a method-dependent MIC difference: broth values exceeded agar values for enteric bacilli/staphylococci, while anaerobe results were comparable. Table2 reports cross-susceptibility after sparfloxacin selection, not tosufloxacin-selected mutations. No molecular target was measured. |
+| staph-enzyme | PMID:9371334; DOI:10.1128/AAC.41.11.2362; primary abstract via Europe PMC | supports | Tosufloxacin inhibited reconstituted S. aureus FDA209-P topoisomerase IV decatenation with IC50 1.8 micrograms/mL. This is functional enzyme inhibition, not a binding-affinity measurement. Full reagent/form details were not inspected. |
+| enterococcus-enzyme | PMID:12019093; DOI:10.1128/AAC.46.6.1800-1804.2002; PMC127212 Methods, Tables2–3 and Discussion inspected in browser | supports | Daiichi-synthesized tosufloxacin gave E. faecalis ATCC19433 agar MIC0.39, topoisomerase IV IC50 3.89 and gyrase IC50 11.6 micrograms/mL. Methods specify MHA, about10^4 CFU/spot, 18h,37C; enzyme assays quantify decatenation/supercoiling. Salt and stereochemical composition are unstated. Mutants were selected with levofloxacin, so their selection order cannot establish tosufloxacin’s primary lethal target. Full XML/downloads later failed; relevant source text and tables were read before access became intermittent. |
+| adapter | https://imodulondb.org/api/datasets; Installed kg-microbe-sources datasets and s_aureus/staph_precise165 search grlA | context_only | Native record names no protein/pathway, so an adapter query was not initially applicable. An additional check after enzyme-source discovery succeeded with network escalation: no E. faecalis dataset was listed; grlA search in the available S. aureus dataset returned no genes/modules. This is a bounded query result, not evidence against enzyme function or activity. |
+| xref-limits | https://bioregistry.io/lincs.smallmolecule:LSM-5050; Native LINCS resolver and https://commonchemistry.cas.org/detail?cas_rn=100490-36-6 | partial | The inspected official ChEBI and CARD assertions support provenance of these identifiers. Independent LINCS detail was inaccessible through certificate errors and its PubChem substance-name query returned404; CAS detail returned an error. Neither failure demonstrates a wrong xref. |
+| search | CultureBotAI/AntibioticMech; Ignored-inclusive local references and free exact-compound literature | context_only | Historical R/S reports and broad fluoroquinolone sources were discovery context only. The native nonspecific form was kept separate from racemate, pure enantiomer, cation and tosylate preparations. Bounded new primary findings support a concrete evidence-curation opportunity without creating a new native assertion. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Exact form, mechanism, activity and resistance | supports | Source-specific assays justify bounded curation opportunities. Preserve preparation, taxon, method and selection-drug context. Functional inhibition is not direct binding, unspecified stereochemistry is not a claimed pure enantiomer, and optional blanks alone are not defects. |
+| validation | just validate; just validate-strict; Actual batch007 focused commands | supports | Both focused gates exited0 with one target and zero strict ERROR rows. |
+
+## Limits And Additional Notes
+
+- The native key specifies no enantiomeric proportion. Primary reagent descriptions identify tosufloxacin but do not fully establish salt, purity or stereochemical composition.
+- The complete 1991 article was read from six scans; relevant 2002 methods/tables/discussion were inspected in the browser, but subsequent XML/download attempts failed. The 1997 enzyme study was inspected at abstract level.
+- Independent LINCS and CAS detail was unavailable; current source assertions were verified.
+- The optional structured query covered only the listed dataset and grlA term; no hit is not evidence of biological absence.
+- Bounded discovery does not establish absence of additional exact-compound studies. No current clinical product or regulatory status was assessed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 25 original/expanded input hashes were retained and rechecked unchanged; additional ARO/PubChem owners were captured before judgment.
+- No native record, curation status or history was changed.
+- Native absence of a protein/pathway made the initial adapter step not applicable; the successful later call was additional context checking for newly discovered evidence.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T082141Z-tosufloxacin-nonspecific-neutral
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Tosufloxacin nonspecific neutral form: identity and bounded primary evidence'
+started_at: '2026-10-21T08:08:06Z'
+finished_at: '2026-10-21T08:21:41Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer independently read complete native record, maintained
+    source rows, current authorities and primary sources; did not create seed.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Native nonspecific neutral identity, source merge, broader classes and antibacterial
+  filing are supported. One minor finding requests explicit disposition of compound-specific
+  activity and functional enzyme evidence with form, assay and taxon boundaries. LINCS/CAS
+  detail and exact tested salt/composition remain limited; no direct binding or universal
+  primary-target claim is inferred.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/7-3-aminopyrrolidin-1-yl-1-2-4-difluorophenyl-6-fluoro-4-oxo-1-4-dihyd.yaml
+    sha256: fa071db0402e3735a0ba57046455995ae8668519bd33c16d48b91289d22e15de
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    role: context
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+  - path: justfile
+    role: context
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+  - path: docs/record-reviews.md
+    role: context
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+  - path: docs/record-review-profile.md
+    role: context
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+  - path: conf/record_review.yaml
+    role: context
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    role: context
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+  - path: data/antibiotics/PATHS.tsv
+    role: context
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+  - path: data/raw/aro_antibiotics.tsv
+    role: context
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+  - path: data/raw/pubchem_structures.tsv
+    role: context
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+  - path: data/raw/aro_target_edges.tsv
+    role: context
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+  - path: data/raw/aro_resistance_edges.tsv
+    role: context
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+  - path: scripts/enrich_pubchem_structures.py
+    role: context
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+targets:
+- target_id: CHEBI:77581
+  path: data/antibiotics/antibacterial/7-3-aminopyrrolidin-1-yl-1-2-4-difluorophenyl-6-fluoro-4-oxo-1-4-dihyd.yaml
+  label: 7-(3-aminopyrrolidin-1-yl)-1-(2,4-difluorophenyl)-6-fluoro-4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic
+    acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted CARD identity, class, xrefs and primary citation
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted ARO exact-structure enrichment and merge identity
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem ARO enrichment owner
+scope:
+  description: Complete one-record identity, evidence placement and bounded scientific
+    review.
+  selection: Queue066; exactly CHEBI:77581 in isolated batch007.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:77581
+  exclusions:
+  - target: Pure R/S enantiomers, protonated forms, tosylate formulations and other
+      quinolones
+    reason: Boundary context only; identity, activity and mechanism are not transferred
+      without source-specific qualification.
+checks:
+- check_id: schema
+  name: Focused schema validation
+  status: passed
+  required: true
+  summary: Actual focused execution passed.
+  target_ids:
+  - CHEBI:77581
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/7-3-aminopyrrolidin-1-yl-1-2-4-difluorophenyl-6-fluoro-4-oxo-1-4-dihyd.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  summary: Actual focused execution passed.
+  target_ids:
+  - CHEBI:77581
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/7-3-aminopyrrolidin-1-yl-1-2-4-difluorophenyl-6-fluoro-4-oxo-1-4-dihyd.yaml
+    --out /private/tmp/am-review-session/066-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Nonspecific structure consistency
+  status: passed
+  required: true
+  summary: Native structures and source registry representations agree; no single-enantiomer
+    or salt claim is made.
+  target_ids:
+  - CHEBI:77581
+  evidence_ids:
+  - chemistry
+  - chebi
+  - pubchem
+  - chembl
+- check_id: structured-source
+  name: Optional source check after new enzyme evidence
+  status: passed
+  required: false
+  summary: Network-permitted adapter calls exited0; no E. faecalis dataset and no
+    grlA hit in the queried S. aureus dataset. The native record had no protein/pathway
+    query before primary discovery.
+  target_ids:
+  - CHEBI:77581
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism s_aureus --dataset
+    staph_precise165 --query grlA
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: registry-details
+  name: Independent LINCS and CAS details
+  status: unavailable
+  required: false
+  summary: Official source assertions read; independent details unavailable.
+  target_ids:
+  - CHEBI:77581
+  evidence_ids:
+  - xref-limits
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:77581
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:77581
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:77581
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:77581
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:77581
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:77581
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:77581
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:77581
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:77581
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/7-3-aminopyrrolidin-1-yl-1-2-4-difluorophenyl-6-fluoro-4-oxo-1-4-dihyd.yaml
+  locator: Entire native YAML
+  accessed_at: '2026-10-21T08:14:01Z'
+  support: supports
+  summary: Read the ANTIBACTERIAL, SEEDED, EXACT record, nonspecific systematic label/definition,
+    nine parents, generic antimicrobial role, ARO structural class, complete structure,
+    five xrefs, both source concepts and four history events. No molecular target,
+    mode, quantitative activity, resistance, clinical status, producer, dataset or
+    causal graph assertion is present.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Rows 1964–1967; aro_antibiotics.tsv row 337; pubchem_structures.tsv row
+    114; PATHS row 2235; seeder lines 786–864
+  accessed_at: '2026-10-21T08:14:01Z'
+  support: supports
+  summary: ChEBI 77581 supplies the nonspecific structure; CARD 3004499 supplies tosufloxacin
+    identity/class and PMID1906696. The ARO-linked racemate 77573 has no default structure,
+    so PubChem 5517 supplies the full key used to merge with 77581. Both source mints
+    and source date reproduce. No exact target/resistance edge or curator override
+    was found in the ignored-inclusive maintained-input searches.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:77581
+  locator: Official identity, structure, definition, ontology and manual xref
+  accessed_at: '2026-10-21T08:08:54Z'
+  support: supports
+  summary: Live ChEBI reproduces native neutral C19H15F3N4O3, masses 404.348/404.10962
+    and key WUWFMDMBOJLQIV-UHFFFAOYSA-N. The aminopyrrolidine center is unspecified,
+    consistently with the native name. ChEBI lists the R and S forms as narrower children
+    and asserts LINCS LSM-5050.
+  snapshot_sha256: b253b4158aaa52eb62a2b75724d2833a921aac1b7d9b565ad76a61d8636e5a05
+- evidence_id: racemate
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:77573
+  locator: Definition, component relations and registry
+  accessed_at: '2026-10-21T08:08:55Z'
+  support: context_only
+  summary: This separate ChEBI entry defines tosufloxacin as an equimolar R/S racemate
+    and links CAS100490-36-6. It has no default single structure. Its mechanism and
+    clinical roles must not be silently treated as direct primary evidence for the
+    nonspecific parent or either isolated enantiomer.
+  snapshot_sha256: 22e2c19485a14facd79e96fc3c67af92066fffd759bea0c781d15cfe77a1b585
+- evidence_id: parent-25384
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:25384
+  locator: Official term definition/identity
+  accessed_at: '2026-10-21T08:08:58Z'
+  support: supports
+  summary: The term resolves to monocarboxylic acid and is broader than the represented
+    structure. Class wording is not a compound-specific mechanism experiment.
+  snapshot_sha256: 0c86f786f0d3eea11272fd8e241daabcce1227989fda29b727873b8b0581ebf5
+- evidence_id: parent-33709
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:33709
+  locator: Official term definition/identity
+  accessed_at: '2026-10-21T08:08:56Z'
+  support: supports
+  summary: The term resolves to amino acid, defined broadly by amino and carboxy groups
+    and is broader than the represented structure. Class wording is not a compound-specific
+    mechanism experiment.
+  snapshot_sha256: 29cba5c73285f604d72cf9030f75b907eb695127f0921a04265179c189c49ce4
+- evidence_id: parent-37143
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:37143
+  locator: Official term definition/identity
+  accessed_at: '2026-10-21T08:09:01Z'
+  support: supports
+  summary: The term resolves to organofluorine compound and is broader than the represented
+    structure. Class wording is not a compound-specific mechanism experiment.
+  snapshot_sha256: 12d36af9fa69182a6c2d008de813afb49cca15fb63b59a98a3b5134759b9b217
+- evidence_id: parent-46769
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:46769
+  locator: Official term definition/identity
+  accessed_at: '2026-10-21T08:08:57Z'
+  support: supports
+  summary: The term resolves to aminopyrrolidine and is broader than the represented
+    structure. Class wording is not a compound-specific mechanism experiment.
+  snapshot_sha256: 625d3b8dacd132c389b71c3c6043216d838b958bd99158d557905286a9d47d66
+- evidence_id: parent-50994
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:50994
+  locator: Official term definition/identity
+  accessed_at: '2026-10-21T08:08:58Z'
+  support: supports
+  summary: The term resolves to primary amino compound and is broader than the represented
+    structure. Class wording is not a compound-specific mechanism experiment.
+  snapshot_sha256: cbbb8a55193241c94ab52b222097036aee7a060de17e0e0e7d5a7de59287ed3e
+- evidence_id: parent-50996
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:50996
+  locator: Official term definition/identity
+  accessed_at: '2026-10-21T08:08:59Z'
+  support: supports
+  summary: The term resolves to tertiary amino compound and is broader than the represented
+    structure. Class wording is not a compound-specific mechanism experiment.
+  snapshot_sha256: 1f26c7ee265cda1d6838b192279bbab48ae6e0ff2d52c84ec862653f4a5a0bf2
+- evidence_id: parent-73537
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:73537
+  locator: Official term definition/identity
+  accessed_at: '2026-10-21T08:09:01Z'
+  support: supports
+  summary: The term resolves to 1,8-naphthyridine derivative and is broader than the
+    represented structure. Class wording is not a compound-specific mechanism experiment.
+  snapshot_sha256: e7c496f01bf228aa45357a0cf159bc3ea40b8559d0243e0d3e2244e916d58483
+- evidence_id: parent-86324
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:86324
+  locator: Official term definition/identity
+  accessed_at: '2026-10-21T08:09:03Z'
+  support: supports
+  summary: The term resolves to quinolone antibiotic, including quinolone-related
+    skeletons and is broader than the represented structure. Class wording is not
+    a compound-specific mechanism experiment.
+  snapshot_sha256: 2887636e817ba160f2efe092c026c93bae7281dcadd682778a82a143ed3fbb20
+- evidence_id: card
+  kind: database
+  reference: https://card.mcmaster.ca/ontology/42144
+  locator: ARO:3004499 identity, structure, class, xrefs and publication
+  accessed_at: '2026-10-21T08:09:22Z'
+  support: supports
+  summary: Current CARD gives the same native SMILES, PubChem5517, ChEMBL273348 and
+    CAS100490-36-6; its ChEBI cross-reference is the separate racemate77573. ARO:0000001
+    resolves to the broader fluoroquinolone-antibiotic class. CARD supports provenance
+    and filing but does not establish an isolated enantiomer or assay preparation.
+  snapshot_sha256: 431a8f4b500a34094b2d3cc9a336fec9da83057e2bdfcf73e1bba001b52bfd35
+- evidence_id: aro-parent
+  kind: authority
+  reference: http://purl.obolibrary.org/obo/ARO_0000001
+  locator: OLS4 official ontology term
+  accessed_at: '2026-10-21T08:09:23Z'
+  support: supports
+  summary: ARO:0000001 is the broader fluoroquinolone-antibiotic class. Its general
+    mechanism description is not used as direct evidence for a native molecular target.
+  snapshot_sha256: f22ebfc305d96bc7f6759b11f9b27276666d63a4ad5d1a9942208228d2691fd1
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/5517
+  locator: PUG View exact compound identity
+  accessed_at: '2026-10-21T08:08:53Z'
+  support: supports
+  summary: PubChem5517 names tosufloxacin and agrees with the native nonspecific neutral
+    structure, formula, key and masses. Unspecified chirality does not itself encode
+    an equimolar mixture or a pure enantiomer.
+  snapshot_sha256: 9e77263a21a58a5be98cbb3876749c6be07b339845b99d6c10c90853d07ec333
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL273348.json
+  locator: Molecule structures and preferred name
+  accessed_at: '2026-10-21T08:08:53Z'
+  support: supports
+  summary: CHEMBL273348 is tosufloxacin and supplies exactly the native canonical
+    SMILES, Standard InChI and full key. This verifies the registry representation,
+    not a specific salt or stereochemical composition of a tested preparation.
+  snapshot_sha256: 516ee7fe273940a239905cabebad0d7c8256a28e5213006139647e0cf681ec57
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit native structure calculation
+  locator: SMILES and Standard InChI separately; locked batch007 environment
+  accessed_at: '2026-10-21T08:08:53Z'
+  support: supports
+  summary: Both encodings parse and reproduce the full key, C19H15F3N4O3, charge0,
+    one fragment and masses404.348/404.109625. One center is unassigned, matching
+    the nonspecific label. Both CHEBI and ARO minted identifiers reproduce.
+  snapshot_sha256: 84e021442169b78d33ac90f8c72e68e61b19227e6406ab87af7523b60f5a6725
+- evidence_id: primary-assay
+  kind: primary_source
+  reference: PMID:1906696
+  locator: DOI:10.1128/AAC.35.5.955; complete original pp955–960 via six PMC CDN scans;
+    pp955,958,959 visually checked
+  accessed_at: '2026-10-21T08:14:01Z'
+  support: supports
+  summary: 'Abbott supplied tosufloxacin; salt, purity and enantiomeric proportions
+    are unspecified. The 1991 study supports antibacterial activity and a method-dependent
+    MIC difference: broth values exceeded agar values for enteric bacilli/staphylococci,
+    while anaerobe results were comparable. Table2 reports cross-susceptibility after
+    sparfloxacin selection, not tosufloxacin-selected mutations. No molecular target
+    was measured.'
+  snapshot_sha256: c9876a27450a1994652370e1c6fa70b22f7aafa9cf7ed3c4b0257b03e4bd5fb3
+- evidence_id: staph-enzyme
+  kind: primary_source
+  reference: PMID:9371334
+  locator: DOI:10.1128/AAC.41.11.2362; primary abstract via Europe PMC
+  accessed_at: '2026-10-21T08:09:56Z'
+  support: supports
+  summary: Tosufloxacin inhibited reconstituted S. aureus FDA209-P topoisomerase IV
+    decatenation with IC50 1.8 micrograms/mL. This is functional enzyme inhibition,
+    not a binding-affinity measurement. Full reagent/form details were not inspected.
+  snapshot_sha256: 94400aee0e4d6d01bb1016f27a42feb08373a2538f765dcfcb0ca184db2187be
+- evidence_id: enterococcus-enzyme
+  kind: primary_source
+  reference: PMID:12019093
+  locator: DOI:10.1128/AAC.46.6.1800-1804.2002; PMC127212 Methods, Tables2–3 and Discussion
+    inspected in browser
+  accessed_at: '2026-10-21T08:14:01Z'
+  support: supports
+  summary: Daiichi-synthesized tosufloxacin gave E. faecalis ATCC19433 agar MIC0.39,
+    topoisomerase IV IC50 3.89 and gyrase IC50 11.6 micrograms/mL. Methods specify
+    MHA, about10^4 CFU/spot, 18h,37C; enzyme assays quantify decatenation/supercoiling.
+    Salt and stereochemical composition are unstated. Mutants were selected with levofloxacin,
+    so their selection order cannot establish tosufloxacin’s primary lethal target.
+    Full XML/downloads later failed; relevant source text and tables were read before
+    access became intermittent.
+- evidence_id: adapter
+  kind: search
+  reference: https://imodulondb.org/api/datasets
+  locator: Installed kg-microbe-sources datasets and s_aureus/staph_precise165 search
+    grlA
+  accessed_at: '2026-10-21T08:11:47Z'
+  support: context_only
+  summary: 'Native record names no protein/pathway, so an adapter query was not initially
+    applicable. An additional check after enzyme-source discovery succeeded with network
+    escalation: no E. faecalis dataset was listed; grlA search in the available S.
+    aureus dataset returned no genes/modules. This is a bounded query result, not
+    evidence against enzyme function or activity.'
+  search_scope: Dataset list plus s_aureus/staph_precise165 query grlA, 2026-10-21.
+    Sandbox attempt exited2 with DNS error; network-permitted dataset and search calls
+    exited0. No useful hit required a component summary.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: xref-limits
+  kind: authority
+  reference: https://bioregistry.io/lincs.smallmolecule:LSM-5050
+  locator: Native LINCS resolver and https://commonchemistry.cas.org/detail?cas_rn=100490-36-6
+  accessed_at: '2026-10-21T08:14:01Z'
+  support: partial
+  summary: The inspected official ChEBI and CARD assertions support provenance of
+    these identifiers. Independent LINCS detail was inaccessible through certificate
+    errors and its PubChem substance-name query returned404; CAS detail returned an
+    error. Neither failure demonstrates a wrong xref.
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: Ignored-inclusive local references and free exact-compound literature
+  accessed_at: '2026-10-21T08:14:01Z'
+  support: context_only
+  summary: Historical R/S reports and broad fluoroquinolone sources were discovery
+    context only. The native nonspecific form was kept separate from racemate, pure
+    enantiomer, cation and tosylate preparations. Bounded new primary findings support
+    a concrete evidence-curation opportunity without creating a new native assertion.
+  search_scope: prepare.py66 and follow-up rg --no-ignore --hidden searches included
+    raw, curation, conf, reviews, reports and PATHS; matched CHEBI77581, ARO3004499,
+    full key, LSM-5050, CHEMBL273348 and CAS100490-36-6. Open web discovery used tosufloxacin,
+    adopted PMID1906696, exact registry IDs and compound-specific DNA gyrase/topoisomerase
+    IV terms. Inspected current authorities, complete 1991 primary scans, 1997 primary
+    abstract and relevant 2002 full-text sections. No clinical-status inference or
+    class-only target transfer.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Exact form, mechanism, activity and resistance
+  accessed_at: '2026-10-21T08:14:01Z'
+  support: supports
+  summary: Source-specific assays justify bounded curation opportunities. Preserve
+    preparation, taxon, method and selection-drug context. Functional inhibition is
+    not direct binding, unspecified stereochemistry is not a claimed pure enantiomer,
+    and optional blanks alone are not defects.
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual batch007 focused commands
+  accessed_at: '2026-10-21T08:08:33Z'
+  support: supports
+  summary: Both focused gates exited0 with one target and zero strict ERROR rows.
+  snapshot_sha256: 19ea2adb7ffc7eb7dcda763415bee68d611fe2b07a204ad313a1d8da1e623fa0
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Nonspecific neutral structure and racemate boundary
+  outcome: supported
+  summary: The native explicit nonspecific name/structure agrees with ChEBI77581 and
+    the shared PubChem/ChEMBL/CARD representation. ChEBI77573 separately encodes equimolar
+    mixture semantics; neither proportions nor an isolated enantiomer are claimed
+    here. Future primary transfer must qualify tested preparations.
+  target_ids:
+  - CHEBI:77581
+  evidence_ids:
+  - record
+  - chebi
+  - racemate
+  - pubchem
+  - chembl
+  - card
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Broader classes and filing
+  outcome: supported
+  summary: Eight ChEBI parents and the ARO class are broader and applicable. Generic
+    antimicrobial role is retained; ARO class and primary activity support antibacterial
+    filing without inventing extra source roles.
+  target_ids:
+  - CHEBI:77581
+  evidence_ids:
+  - chebi
+  - card
+  - aro-parent
+  - primary-assay
+- assessment_id: mechanism
+  area: completeness
+  topic: Compound-specific functional inhibition evidence
+  outcome: concern
+  summary: Inspected primary studies supply enzyme-inhibition evidence that warrants
+    explicit curator disposition after form mapping. No native target is currently
+    asserted; functional inhibition and species-specific preference must remain distinct
+    from direct binding and universal lethal-target order.
+  target_ids:
+  - CHEBI:77581
+  evidence_ids:
+  - staph-enzyme
+  - enterococcus-enzyme
+  - rubric
+- assessment_id: activity
+  area: completeness
+  topic: Assay-method and cross-susceptibility context
+  outcome: concern
+  summary: The original assay can support carefully scoped observations, preserving
+    preparation and method limits. Summary MIC distributions cannot become individual
+    strain MICs; cross-susceptibility is not proof of a named determinant.
+  target_ids:
+  - CHEBI:77581
+  evidence_ids:
+  - primary-assay
+  - rubric
+- assessment_id: resistance
+  area: evidence
+  topic: Selection agent and biochemical causality
+  outcome: unknown
+  summary: The inspected studies include cross-susceptibility in selected mutants,
+    but selection drugs and mechanistic interpretations differ. No native resistance
+    route is asserted and no genetic-causality chain is imported.
+  target_ids:
+  - CHEBI:77581
+  evidence_ids:
+  - primary-assay
+  - enterococcus-enzyme
+  - rubric
+- assessment_id: other
+  area: scope
+  topic: Producer, clinical and dataset claims
+  outcome: not_applicable
+  summary: The native record contains no producer, clinical product or transcriptomics
+    assertion. A LINCS chemical identifier alone does not establish an applicable
+    expression dataset.
+  target_ids:
+  - CHEBI:77581
+  evidence_ids:
+  - record
+  - xref-limits
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: ARO/ChEBI merge and history
+  outcome: supported
+  summary: Maintained raw ownership, shared structural key, source date, both mints
+    and four history events explain the generated record. No native status/history
+    change was made.
+  target_ids:
+  - CHEBI:77581
+  evidence_ids:
+  - owner
+  - chemistry
+  - record
+- assessment_id: schema
+  area: schema
+  topic: Focused gates
+  outcome: supported
+  summary: Focused schema and strict validation pass.
+  target_ids:
+  - CHEBI:77581
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-77581-primary-assay-mechanism-disposition
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Disposition the compound-specific assay and enzyme evidence with preparation
+    scope
+  description: The cited full assay paper and additional primary enzyme studies provide
+    concrete evidence for bounded annotations. A curator should qualify the nonspecific/racemate
+    preparation mapping and either curate or explicitly defer the supported observations.
+    This does not justify transferring pure-enantiomer or tosylate data, asserting
+    direct binding, or converting another drug’s mutant-selection order into tosufloxacin
+    target preference.
+  target_ids:
+  - CHEBI:77581
+  field_paths:
+  - activity_spectrum
+  - molecular_targets
+  - mode_of_action_notes
+  evidence_ids:
+  - primary-assay
+  - staph-enzyme
+  - enterococcus-enzyme
+  - racemate
+  - rubric
+  rule_id: native-review-checklist:Activity-and-Mode-of-action
+  native_severity: minor specific primary evidence follow-up
+  normalization_reason: Current identity and broad classification are supported. This
+    is a source-specific curation opportunity, not a required-field failure or a finding
+    caused solely by optional blanks.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/7-3-aminopyrrolidin-1-yl-1-2-4-difluorophenyl-6-fluoro-4-oxo-1-4-dihyd.yaml
+    role: Curator-owned scientific annotations through validated writer and curation
+      history
+actions:
+- action_id: A1
+  description: Curate or explicitly defer the inspected assay and enzyme observations
+    after qualifying exact preparation scope.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:77581
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/7-3-aminopyrrolidin-1-yl-1-2-4-difluorophenyl-6-fluoro-4-oxo-1-4-dihyd.yaml
+    role: Curator-owned scientific annotations through validated writer and curation
+      history
+  acceptance_checks:
+  - Document which neutral/racemic preparation each paper tested and which form details
+    are unknown; do not infer a pure R or S compound or a tosylate salt from the nonspecific
+    key.
+  - Keep functional enzyme inhibition separate from binding-affinity evidence; preserve
+    organism, strain, enzyme assay and units. Do not assign a universal primary target
+    from an IC50 comparison.
+  - Preserve MIC method, organism group versus strain resolution, study-specific susceptibility
+    language and selection drug. Do not apply modern breakpoints to historical observations
+    without an independently justified standard.
+  - Use claim-level primary evidence, actual native fields, validated writer and curation
+    event, then required schema, strict, reference, grounding and history gates. No
+    source identity or status promotion is implied by this review.
+limitations:
+- The native key specifies no enantiomeric proportion. Primary reagent descriptions
+  identify tosufloxacin but do not fully establish salt, purity or stereochemical
+  composition.
+- The complete 1991 article was read from six scans; relevant 2002 methods/tables/discussion
+  were inspected in the browser, but subsequent XML/download attempts failed. The
+  1997 enzyme study was inspected at abstract level.
+- Independent LINCS and CAS detail was unavailable; current source assertions were
+  verified.
+- The optional structured query covered only the listed dataset and grlA term; no
+  hit is not evidence of biological absence.
+- Bounded discovery does not establish absence of additional exact-compound studies.
+  No current clinical product or regulatory status was assessed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 25 original/expanded input hashes were retained and rechecked unchanged; additional
+  ARO/PubChem owners were captured before judgment.
+- No native record, curation status or history was changed.
+- Native absence of a protein/pathway made the initial adapter step not applicable;
+  the successful later call was additional context checking for newly discovered evidence.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:77581
+- https://card.mcmaster.ca/ontology/42144
+- https://doi.org/10.1128/AAC.35.5.955
+- https://doi.org/10.1128/AAC.46.6.1800-1804.2002
+tags:
+- antibacterial
+- fluoroquinolone
+- stereochemical-scope
+- primary-evidence
+- seeded
+```

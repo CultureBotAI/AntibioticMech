@@ -1,0 +1,957 @@
+# 6-tuliposide B: supported activity with cross-reference and tissue-scope qualifications
+
+- Review: 20261021T081921Z-6-tuliposide-b
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T08:05:11Z
+- Finished UTC: 2026-10-21T08:19:21Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Native pyranose identity and antibacterial/antifungal roles are supported. Two minor findings concern an external ring-chain representation mismatch and wording that could imply exclusive anther occurrence. One informational follow-up identifies exact assay and MurA evidence suitable for scoped enrichment; downstream lethal targets remain hypothetical. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire native record, source ownership, all seven adopted citation abstracts, full 2005/2011/2013 primary papers and bounded official cross-reference checks.
+
+Selection: Queue index063, CHEBI:87124 at its locked path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:87124 | data/antibiotics/antibacterial/6-tuliposide-b.yaml | generated | 6-tuliposide B |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:87124 | Focused LinkML validation exited0. |
+| strict | passed | True | CHEBI:87124 | One-record strict scan has zero ERROR rows. |
+| chemistry | passed | False | CHEBI:87124 | Both native structures parse consistently; full stereochemical key, neutral formula, masses and source mint match. |
+| structured-context | passed | False | CHEBI:87124 | Covered E.coli gene search returned murA context and no iModulon hits; no component summary applies. |
+| registry-limits | unavailable | False | CHEBI:87124 | MetaCyc compound content required account access; Reaxys was not independently inspected. CAS is source-corroborated, not directly checked in a CAS registry. |
+| additional-fulltext | unavailable | False | CHEBI:87124 | The2010 SAR publisher route returned403. The2015 Wiley abstract/introduction were accessible, later sections timed out and direct download returned403. No uninspected experimental detail is adopted. |
+| Authoritative full QC | failed | True | CHEBI:87124 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:87124 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:87124 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:87124 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:87124 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:87124 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:87124 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:87124 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:87124 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact chemical identity and synonym
+
+identity: supported. Targets: CHEBI:87124.
+
+Native pyranose and specified acyl stereochemistry are consistent with official chemistry and primary structure characterization; retain unspecified anomer.
+
+### External identifiers and parents
+
+grounding: concern. Targets: CHEBI:87124.
+
+Parents are chemically appropriate; KNApSAcK has a ring-chain and internal metadata mismatch. Other registry access limits remain explicit.
+
+### Antibacterial filing and two roles
+
+evidence: supported. Targets: CHEBI:87124.
+
+Exact-compound bacterial and fungal experiments support the role assignments within their measured conditions. Pythium result must retain oomycete scope; fungal role also has actual fungal assays.
+
+### Secondary metabolite and tissue occurrence
+
+evidence: concern. Targets: CHEBI:87124.
+
+Tulip isolation and accumulation are supported, but exclusive-anther wording would contradict direct tissue quantification.
+
+### Claim-level activity and targets
+
+completeness: supported. Targets: CHEBI:87124.
+
+Measured MurA inhibition can be curated with enzyme conditions; downstream cell-death mechanism remains hypothetical. Optional collections are currently absent without violating schema.
+
+### Resistance and producer boundaries
+
+evidence: unknown. Targets: CHEBI:87124.
+
+Negative growth observations do not establish a molecular resistance determinant. TCEB converts precursor to product and is not a bacterial target or proof of the precursor biosynthetic pathway.
+
+### Generated ownership/history
+
+ownership: supported. Targets: CHEBI:87124.
+
+Maintained row and native histories agree; scientific additions belong to actual record through validated writer/history. All13 input hashes are unchanged.
+
+### Focused checks
+
+schema: supported. Targets: CHEBI:87124.
+
+All three focused gates passed.
+
+## Findings
+
+### F1: Qualify the KNApSAcK structural cross-reference
+
+minor / open / confirmed; issue key: chebi-87124-knapsack-ring-chain-cross-reference.
+
+The linked entry is a related open-chain representation and has internally inconsistent formula/key metadata. It must not be treated as independent exact pyranose corroboration. Native SMILES/InChI themselves are coherent.
+
+### F2: Express preferential anther accumulation without exclusivity
+
+minor / open / confirmed; issue key: chebi-87124-anther-occurrence-wording.
+
+The source phrase occurring specifically in tulip anthers can imply exclusive location, whereas direct tissue analysis detects B elsewhere. Qualify as especially abundant in anthers and retain the measured developmental context.
+
+### F3: Consider qualified assay and MurA evidence enrichment
+
+informational / open / confirmed; issue key: chebi-87124-scoped-primary-enrichment.
+
+Primary evidence can populate optional activity and mechanism objects with exact compound, organism, condition and endpoint. Do not turn proposed adduct/downstream Mur targets into established mechanism edges or copy tulipalin B results.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Adjudicate KNApSAcK link semantics and preserve ring-chain scope through maintained source handling.
+
+- Document the official open-chain structure and internal key/formula conflicts. Retain the native pyranose representation unless separate evidence warrants change.
+- If excluding or qualifying the link, use an authorized reproducible source/extractor/seeder mechanism; do not hand-patch a regenerated xref.
+- Run focused schema/strict, chemistry and corpus reproduction after any authorized change.
+
+### A2
+
+Qualify the generated occurrence sentence using the original tissue measurements.
+
+- Describe enrichment in tulip anthers without denying occurrence in the other directly assayed tissues.
+- Retain2005 Table1 preparation/species/cultivar scope and distinguish substrate localization from TCEB localization.
+- Use maintained source ownership plus native validated discussion/history for scientific additions; rerun focused and corpus gates.
+
+### A3
+
+Optionally curate exact antibacterial/antifungal observations and measured MurA inhibition with their limits.
+
+- Keep2005 MIC mg/L and original dilution conditions separate from crude-anther inhibition zones; preserve uncertain analytical purity.
+- Keep2011 pigment responses at0.05mM separate from growth MICs; no Botrytis activity at2.5mM is a bounded negative observation, not a proven resistance mechanism.
+- Treat2013 residual MurA activities as measurements, not IC50/binding constants. The proposed adduct/MurB/MurC mechanism remains explicitly hypothetical.
+- Retain native unspecified anomer and3S side chain, and ground any organism/protein identifiers to the actual experimental context before writing. Use validated native writer/history and required gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/6-tuliposide-b.yaml; Entire native YAML read after063 initial capture. | supports | SEEDED/EXACT antibacterial record has one exact synonym, two parents, antibacterial and antifungal roles, neutral pyranose structure, four xrefs, one source concept and three seed/reseed events. Optional evidence, activity_spectrum, molecular_targets, producer, resistance and causal graph collections are absent. |
+| source | data/raw/chebi_antimicrobials.tsv; Row2367 in063-raw.json; conf/sources.yaml; extractor176–339; seeder790–809 and1483–1570; MANIFEST. | supports | Source fields reproduce the maintained ChEBI row. Seven citation leads are intentionally not seeded as claim-level evidence. Empty mechanism_role_ids explain the absent seeded mode of action. Source version2026-08-30 and three native histories agree with seeded provenance. All13 original captured hashes remain unchanged. |
+| identity | https://www.ebi.ac.uk/chebi/CHEBI:87124; Full official063-chebi.html/txt; PubChem CID25034024 property response063-pubchem.json. | supports | ChEBI and PubChem agree on pyranose full key FMHJNIRDGYFPEC-CHICSPHLSA-N, C11H18O9, neutral charge and native stereochemistry. The acyl3S centre is specified; the glucose anomeric centre is unspecified, matching the exact synonym and primary anomeric mixture. Parents51702 enoate ester and59475 6-O-acyl-D-glucose are broader; roles33282 antibacterial and35718 antifungal have primary support. CAS244105-18-8, MetaCycCPD-18286 and Reaxys18564462 are current source links with the stated independent-access limits. |
+| chemistry | Independent RDKit calculation; 063-chemistry.json/log and inspectedchem005.py. | supports | Both structures yield identical full key, single fragment, charge0, C11H18O9, average mass294.256 and exact mass294.095082156. One anomeric stereocentre is unspecified, with all other specified centres retained. SHA256 source mint antibioticmech:chebi-a115e4f3e4 matches. |
+| knapsack | https://www.knapsackfamily.com/knapsack_core/information.php?word=C00038312; Full official063-knapsack.html/txt and independent063-knapsack-chemistry.json. | context_only | Same label and CAS identify the related sugar ester, but the linked SMILES and InChI encode an open-chain aldehyde with zero rings. Both parse to MDHZAFUATLVBMS-JDDHQFAOSA-N and C11H18O9, distinct from native pyranose. The page instead displays MDHZAFUATLVBMS-ZLFKYAKFNA-N, formulaC11H19O9 and mass295.10290721, internally inconsistent with those structures. This is a cross-reference representation problem, not evidence that native identity is wrong. |
+| primary-origin | https://doi.org/10.2503/jjshs.74.469; 2005 Jstage full scanned paper063-2005.pdf, all seven pages visually inspected; Fig3 and Tables1–2. | supports | The isolate is6-tuliposide B, with interconverting alpha/beta peaks and matching NMR/MS. Table1 directly measures B at2.31% fresh weight in anthers and0.11–0.42% in petals,pistils,leaves,stems,bulb scales,roots. Thus anthers are enriched, not its exclusive location. Table2 reports bacterial MICs14–20mg/L in SCD medium,30°C24h dilution assay; E.coli IFO3972 is15±0.8mg/L. Candida albicans IFO1594 has no reported effect, without a numerical upper testing limit in the table. An active isolation fraction contained sucrose; report the published preparation and avoid an invented analytical purity. |
+| primary-fungal | PMID:21512240; DOI:10.1271/bbb.100845; full063-2011.pdf/txt; Table2 visually inspected063-2011-table2.png. | supports | Exact natural3S compound9 has MIC0.25mM for Pythium ultimum MAFF235799 and2.5mM for Rhizoctonia solani MAFF235845,F.oxysporum f.sp.tulipae MAFF235110,Gibberella zeae MAFF305135. Botrytis tulipae MAFF237887 has no activity at2.5mM. Microscopic growth assay used potato-dextrose medium,20°C for several days. Pigment effects at0.05mM are separate from MIC. The table and prose disagree about the non-native epimer against Fusarium; that epimer result is not assigned to native9. Antifungal mechanism remains an inference from analogues and lactonization. |
+| primary-mura | PMID:24317075; DOI:10.1271/bbb.130663; full063-2013.pdf/txt; Table1 and visually inspected Figs1–2. | supports | At0.1mM after10min preincubation, exact(+)-6-tuliposide B leaves25% E.coli and35% Enterobacter cloacae MurA activity with1mM UDP-GlcNAc; E.coli retains91% without it. These are residual-activity measurements, not IC50 or binding constants. At0.2mM, growth inhibition is enhanced in MurA-overexpressing E.coli BL21, particularly with UDP-GlcNAc; fosfomycin behaves differently. The UDP-GlcNAc–tulipalin B adduct and downstream MurB/MurC lethal mechanism are proposed, not measured. |
+| citations | https://www.ebi.ac.uk/europepmc/webservices/rest/search; All seven complete original abstracts and PMID/DOI metadata in063-epmc.json. | supports | PMID10385332 DOI10.1111/j.1600-0536.1999.tb06080.x supports exact isolation/NMR/MS and plant quantification, not a new antimicrobial assay. PMID19939419 DOI10.1016/j.phytochem.2009.10.008 supports antibacterial SAR and a proposed MurA hypothesis; full experimental details unavailable. PMID21512240 and24317075 were additionally read in full. PMID25126881 DOI10.1080/09168451.2014.946395 concerns enzyme production of tulipalin B from precursor6-tuliposide B; do not transfer product potency to precursor. PMID25997073 DOI10.1111/tpj.12883 concerns conversion enzyme/localization. PMID7600774 DOI10.1111/j.1600-0536.1995.tb00669.x establishes absence of6-tuliposide B in tested Alstroemeria extracts, not a producing source or B activity. |
+| plant-enzyme | PMID:25997073; Official complete abstract and Wiley introduction/Fig1 caption at https://onlinelibrary.wiley.com/doi/full/10.1111/tpj.12883 . | context_only | TgTCEB1 converts6-tuliposide B to tulipalin B. Pollen plastid enzyme localization is distinct from the substrate detected on pollen surfaces; enzyme is not an antimicrobial target. The figure caption explicitly recognizes both glucose anomers. Further full-text sections were not reliably retrieved; no BGC or uninspected enzyme measurements are adopted. |
+| adapter | https://imodulondb.org/api/datasets; Same-session055-imodulondb-datasets-retry.txt inventory and actual063-imodulondb-mura.txt search. | context_only | Inventory has E.coli coverage but no matching Tulipa context. Search e_coli/precise1k for murA returned e_coli/precise1k/b3189 with the correct enzyme product and no iModulon hits. The MG1655 context is not experimental BL21 evidence and does not establish direct binding, growth inhibition or a causal module. No relevant component summary applies. |
+| search | CultureBotAI/AntibioticMech; 063-local-hits.txt and063-maintained-search.txt; bounded exact-name source search. | context_only | Ignored-inclusive search found no maintained target-specific decision/overlay/prior review in the focused paths. Primary2005 tissue/assay study and2011/2013 complete papers were retrieved; the2010 full publisher route was unavailable. No registry or paper access was purchased. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Whole-record identity, classification, claim evidence and optional fields; CURATION/HARMONIZATION. | supports | Different ring-chain representations are not automatically exact structural aliases. Activity evidence must preserve preparation, strain, conditions and endpoint. Optional missing collections are enrichment opportunities rather than required-field failures. |
+| validation | Documented focused gates; 063-focused-results.json;063-schema.log,063-strict.log/tsv and063-chemistry.json. | supports | Schema,strict and chemistry commands exited0. Actual shared gate outcomes are recorded separately in this bundle. |
+
+## Limits And Additional Notes
+
+- CAS was corroborated in ChEBI/KNApSAcK but not independently in CAS; MetaCyc required account access and Reaxys remained uninspected. KNApSAcK conflicts do not invalidate native chemistry.
+- All seven adopted original abstracts were read. Full2005,2011 and2013 papers were inspected;2010 SAR full text was blocked,1995/1999/2014 biomass references remain abstract-level.2015 Wiley abstract/introduction were read but later sections could not be retrieved reliably.
+- The2005 scanned paper was visually inspected, including structure, assays and tissue table; text extraction yielded no text.2011 epimer table/prose disagreement is preserved and not assigned to the natural isomer.
+- iModulonDB search is contextual gene evidence only, using MG1655 dataset rather than BL21 experimental strain. All13 initial hashes remain unchanged.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T081921Z-6-tuliposide-b
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: '6-tuliposide B: supported activity with cross-reference and tissue-scope qualifications'
+started_at: '2026-10-21T08:05:11Z'
+finished_at: '2026-10-21T08:19:21Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the record. Captured exact target before judgment,
+    read the entire native record and maintained source row, and inspected official
+    chemistry plus original biological sources independently.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Native pyranose identity and antibacterial/antifungal roles are supported.
+  Two minor findings concern an external ring-chain representation mismatch and wording
+  that could imply exclusive anther occurrence. One informational follow-up identifies
+  exact assay and MurA evidence suitable for scoped enrichment; downstream lethal
+  targets remain hypothetical. Scientific assessment retains the stated evidence limits;
+  full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/6-tuliposide-b.yaml
+    sha256: 0a47b225d62eb607c56731cc7dcc8a31c544a393d2cabfc97cfa432b94a39f1d
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:87124
+  path: data/antibiotics/antibacterial/6-tuliposide-b.yaml
+  label: 6-tuliposide B
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire native record, source ownership, all seven adopted citation
+    abstracts, full 2005/2011/2013 primary papers and bounded official cross-reference
+    checks.
+  selection: Queue index063, CHEBI:87124 at its locked path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:87124
+  exclusions:
+  - target: 1-tuliposide B, 3-prime epimer, tuliposide A, tulipalin B and crude tissue
+      extracts
+    reason: Distinct structures or mixtures; their measurements are not assigned indiscriminately
+      to this pyranose structure.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Focused LinkML validation exited0.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/6-tuliposide-b.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: One-record strict scan has zero ERROR rows.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/6-tuliposide-b.yaml --out /private/tmp/am-review-session/063-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Both native structures parse consistently; full stereochemical key, neutral
+    formula, masses and source mint match.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - chemistry
+  command: .venv/bin/python /private/tmp/am-review-session/chem005.py 63
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: structured-context
+  name: structured-context
+  status: passed
+  required: false
+  summary: Covered E.coli gene search returned murA context and no iModulon hits;
+    no component summary applies.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism e_coli --dataset
+    precise1k --query murA
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: registry-limits
+  name: registry-limits
+  status: unavailable
+  required: false
+  summary: MetaCyc compound content required account access; Reaxys was not independently
+    inspected. CAS is source-corroborated, not directly checked in a CAS registry.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - identity
+  - knapsack
+- check_id: additional-fulltext
+  name: additional-fulltext
+  status: unavailable
+  required: false
+  summary: The2010 SAR publisher route returned403. The2015 Wiley abstract/introduction
+    were accessible, later sections timed out and direct download returned403. No
+    uninspected experimental detail is adopted.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - citations
+  - plant-enzyme
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:87124
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:87124
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:87124
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:87124
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:87124
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:87124
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:87124
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:87124
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:87124
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/6-tuliposide-b.yaml
+  locator: Entire native YAML read after063 initial capture.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: supports
+  summary: SEEDED/EXACT antibacterial record has one exact synonym, two parents, antibacterial
+    and antifungal roles, neutral pyranose structure, four xrefs, one source concept
+    and three seed/reseed events. Optional evidence, activity_spectrum, molecular_targets,
+    producer, resistance and causal graph collections are absent.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Row2367 in063-raw.json; conf/sources.yaml; extractor176–339; seeder790–809
+    and1483–1570; MANIFEST.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: supports
+  summary: Source fields reproduce the maintained ChEBI row. Seven citation leads
+    are intentionally not seeded as claim-level evidence. Empty mechanism_role_ids
+    explain the absent seeded mode of action. Source version2026-08-30 and three native
+    histories agree with seeded provenance. All13 original captured hashes remain
+    unchanged.
+  snapshot_sha256: 7302e884bd15e6633a9dfbd4deb1f39ef8922059b22205afa41d944773214442
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:87124
+  locator: Full official063-chebi.html/txt; PubChem CID25034024 property response063-pubchem.json.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: supports
+  summary: ChEBI and PubChem agree on pyranose full key FMHJNIRDGYFPEC-CHICSPHLSA-N,
+    C11H18O9, neutral charge and native stereochemistry. The acyl3S centre is specified;
+    the glucose anomeric centre is unspecified, matching the exact synonym and primary
+    anomeric mixture. Parents51702 enoate ester and59475 6-O-acyl-D-glucose are broader;
+    roles33282 antibacterial and35718 antifungal have primary support. CAS244105-18-8,
+    MetaCycCPD-18286 and Reaxys18564462 are current source links with the stated independent-access
+    limits.
+  snapshot_sha256: 79f66030ddb8771ecc2493883a32dd8b4df1b518cc6104fa5d09939443182cfb
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculation
+  locator: 063-chemistry.json/log and inspectedchem005.py.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: supports
+  summary: Both structures yield identical full key, single fragment, charge0, C11H18O9,
+    average mass294.256 and exact mass294.095082156. One anomeric stereocentre is
+    unspecified, with all other specified centres retained. SHA256 source mint antibioticmech:chebi-a115e4f3e4
+    matches.
+  snapshot_sha256: c481210018937b2e86c1f405e02c6947046887d2cf0d52264ea2fedc637df261
+- evidence_id: knapsack
+  kind: database
+  reference: https://www.knapsackfamily.com/knapsack_core/information.php?word=C00038312
+  locator: Full official063-knapsack.html/txt and independent063-knapsack-chemistry.json.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: context_only
+  summary: Same label and CAS identify the related sugar ester, but the linked SMILES
+    and InChI encode an open-chain aldehyde with zero rings. Both parse to MDHZAFUATLVBMS-JDDHQFAOSA-N
+    and C11H18O9, distinct from native pyranose. The page instead displays MDHZAFUATLVBMS-ZLFKYAKFNA-N,
+    formulaC11H19O9 and mass295.10290721, internally inconsistent with those structures.
+    This is a cross-reference representation problem, not evidence that native identity
+    is wrong.
+  snapshot_sha256: 4d0a16de0f6e95a8ef95d23d58088096f01ad9c9225f2228661d91090905ae09
+- evidence_id: primary-origin
+  kind: primary_source
+  reference: https://doi.org/10.2503/jjshs.74.469
+  locator: 2005 Jstage full scanned paper063-2005.pdf, all seven pages visually inspected;
+    Fig3 and Tables1–2.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: supports
+  summary: The isolate is6-tuliposide B, with interconverting alpha/beta peaks and
+    matching NMR/MS. Table1 directly measures B at2.31% fresh weight in anthers and0.11–0.42%
+    in petals,pistils,leaves,stems,bulb scales,roots. Thus anthers are enriched, not
+    its exclusive location. Table2 reports bacterial MICs14–20mg/L in SCD medium,30°C24h
+    dilution assay; E.coli IFO3972 is15±0.8mg/L. Candida albicans IFO1594 has no reported
+    effect, without a numerical upper testing limit in the table. An active isolation
+    fraction contained sucrose; report the published preparation and avoid an invented
+    analytical purity.
+  snapshot_sha256: 071266472644af9aec0580688e1f9ec053ad3a8d430224a087b076b888306a89
+- evidence_id: primary-fungal
+  kind: primary_source
+  reference: PMID:21512240
+  locator: DOI:10.1271/bbb.100845; full063-2011.pdf/txt; Table2 visually inspected063-2011-table2.png.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: supports
+  summary: Exact natural3S compound9 has MIC0.25mM for Pythium ultimum MAFF235799
+    and2.5mM for Rhizoctonia solani MAFF235845,F.oxysporum f.sp.tulipae MAFF235110,Gibberella
+    zeae MAFF305135. Botrytis tulipae MAFF237887 has no activity at2.5mM. Microscopic
+    growth assay used potato-dextrose medium,20°C for several days. Pigment effects
+    at0.05mM are separate from MIC. The table and prose disagree about the non-native
+    epimer against Fusarium; that epimer result is not assigned to native9. Antifungal
+    mechanism remains an inference from analogues and lactonization.
+  snapshot_sha256: b3d17f7e56bd63494d9264ae7311d35ff3564a4b4e44c68ac7d801a3901528fb
+- evidence_id: primary-mura
+  kind: primary_source
+  reference: PMID:24317075
+  locator: DOI:10.1271/bbb.130663; full063-2013.pdf/txt; Table1 and visually inspected
+    Figs1–2.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: supports
+  summary: At0.1mM after10min preincubation, exact(+)-6-tuliposide B leaves25% E.coli
+    and35% Enterobacter cloacae MurA activity with1mM UDP-GlcNAc; E.coli retains91%
+    without it. These are residual-activity measurements, not IC50 or binding constants.
+    At0.2mM, growth inhibition is enhanced in MurA-overexpressing E.coli BL21, particularly
+    with UDP-GlcNAc; fosfomycin behaves differently. The UDP-GlcNAc–tulipalin B adduct
+    and downstream MurB/MurC lethal mechanism are proposed, not measured.
+  snapshot_sha256: bf6d0c3e9db204e9eb5a03847ab36ca8c2b92b8be9fdaa01c143de1a0bc56789
+- evidence_id: citations
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: All seven complete original abstracts and PMID/DOI metadata in063-epmc.json.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: supports
+  summary: PMID10385332 DOI10.1111/j.1600-0536.1999.tb06080.x supports exact isolation/NMR/MS
+    and plant quantification, not a new antimicrobial assay. PMID19939419 DOI10.1016/j.phytochem.2009.10.008
+    supports antibacterial SAR and a proposed MurA hypothesis; full experimental details
+    unavailable. PMID21512240 and24317075 were additionally read in full. PMID25126881
+    DOI10.1080/09168451.2014.946395 concerns enzyme production of tulipalin B from
+    precursor6-tuliposide B; do not transfer product potency to precursor. PMID25997073
+    DOI10.1111/tpj.12883 concerns conversion enzyme/localization. PMID7600774 DOI10.1111/j.1600-0536.1995.tb00669.x
+    establishes absence of6-tuliposide B in tested Alstroemeria extracts, not a producing
+    source or B activity.
+  snapshot_sha256: e12d8b05990b27f73285e6b036e250d2b55e97f097f055d1eaf3ff6fce5f9f97
+- evidence_id: plant-enzyme
+  kind: primary_source
+  reference: PMID:25997073
+  locator: Official complete abstract and Wiley introduction/Fig1 caption at https://onlinelibrary.wiley.com/doi/full/10.1111/tpj.12883
+    .
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: context_only
+  summary: TgTCEB1 converts6-tuliposide B to tulipalin B. Pollen plastid enzyme localization
+    is distinct from the substrate detected on pollen surfaces; enzyme is not an antimicrobial
+    target. The figure caption explicitly recognizes both glucose anomers. Further
+    full-text sections were not reliably retrieved; no BGC or uninspected enzyme measurements
+    are adopted.
+  snapshot_sha256: e12d8b05990b27f73285e6b036e250d2b55e97f097f055d1eaf3ff6fce5f9f97
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Same-session055-imodulondb-datasets-retry.txt inventory and actual063-imodulondb-mura.txt
+    search.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: context_only
+  summary: Inventory has E.coli coverage but no matching Tulipa context. Search e_coli/precise1k
+    for murA returned e_coli/precise1k/b3189 with the correct enzyme product and no
+    iModulon hits. The MG1655 context is not experimental BL21 evidence and does not
+    establish direct binding, growth inhibition or a causal module. No relevant component
+    summary applies.
+  snapshot_sha256: df3767e9a9e306f90443c682fe9d3a70f2e64363f6188be21226448545f9ee09
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 063-local-hits.txt and063-maintained-search.txt; bounded exact-name source
+    search.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: context_only
+  summary: Ignored-inclusive search found no maintained target-specific decision/overlay/prior
+    review in the focused paths. Primary2005 tissue/assay study and2011/2013 complete
+    papers were retrieved; the2010 full publisher route was unavailable. No registry
+    or paper access was purchased.
+  search_scope: rg --no-ignore --hidden identifier,label,slug throughout007 excluding.git/.venv;
+    focused CHEBI:87124,FMHJNIRDGYFPEC-CHICSPHLSA-N,6-tuliposide-b,6-tuliposide B
+    across curation,reviews,reports/yaml_record_review,conf excluding queue. Web exact
+    name, CAS, KNApSAcK/MetaCyc identifiers and each adopted PMID/DOI, plus anther-specific2005
+    paper; inspected ChEBI,PubChem,KNApSAcK,EuropePMC,Jstage,Wiley and primary author-uploaded
+    paper.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Whole-record identity, classification, claim evidence and optional fields;
+    CURATION/HARMONIZATION.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: supports
+  summary: Different ring-chain representations are not automatically exact structural
+    aliases. Activity evidence must preserve preparation, strain, conditions and endpoint.
+    Optional missing collections are enrichment opportunities rather than required-field
+    failures.
+- evidence_id: validation
+  kind: validation
+  reference: Documented focused gates
+  locator: 063-focused-results.json;063-schema.log,063-strict.log/tsv and063-chemistry.json.
+  accessed_at: '2026-10-21T08:12:13Z'
+  support: supports
+  summary: Schema,strict and chemistry commands exited0. Actual shared gate outcomes
+    are recorded separately in this bundle.
+  snapshot_sha256: 47cd30dd47e153c2f7faf48a5f85b44f9f66ca5939a0737fefcdcaba8f2c3f28
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact chemical identity and synonym
+  outcome: supported
+  summary: Native pyranose and specified acyl stereochemistry are consistent with
+    official chemistry and primary structure characterization; retain unspecified
+    anomer.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - identity
+  - chemistry
+  - primary-origin
+- assessment_id: xref
+  area: grounding
+  topic: External identifiers and parents
+  outcome: concern
+  summary: Parents are chemically appropriate; KNApSAcK has a ring-chain and internal
+    metadata mismatch. Other registry access limits remain explicit.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - identity
+  - knapsack
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial filing and two roles
+  outcome: supported
+  summary: Exact-compound bacterial and fungal experiments support the role assignments
+    within their measured conditions. Pythium result must retain oomycete scope; fungal
+    role also has actual fungal assays.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - primary-origin
+  - primary-fungal
+  - primary-mura
+- assessment_id: origin
+  area: evidence
+  topic: Secondary metabolite and tissue occurrence
+  outcome: concern
+  summary: Tulip isolation and accumulation are supported, but exclusive-anther wording
+    would contradict direct tissue quantification.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - primary-origin
+  - plant-enzyme
+- assessment_id: mechanism
+  area: completeness
+  topic: Claim-level activity and targets
+  outcome: supported
+  summary: Measured MurA inhibition can be curated with enzyme conditions; downstream
+    cell-death mechanism remains hypothetical. Optional collections are currently
+    absent without violating schema.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - primary-mura
+  - adapter
+  - rubric
+- assessment_id: resistance
+  area: evidence
+  topic: Resistance and producer boundaries
+  outcome: unknown
+  summary: Negative growth observations do not establish a molecular resistance determinant.
+    TCEB converts precursor to product and is not a bacterial target or proof of the
+    precursor biosynthetic pathway.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - primary-fungal
+  - plant-enzyme
+  - citations
+- assessment_id: ownership
+  area: ownership
+  topic: Generated ownership/history
+  outcome: supported
+  summary: Maintained row and native histories agree; scientific additions belong
+    to actual record through validated writer/history. All13 input hashes are unchanged.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - source
+  - rubric
+- assessment_id: schema
+  area: schema
+  topic: Focused checks
+  outcome: supported
+  summary: All three focused gates passed.
+  target_ids:
+  - CHEBI:87124
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-87124-knapsack-ring-chain-cross-reference
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the KNApSAcK structural cross-reference
+  description: The linked entry is a related open-chain representation and has internally
+    inconsistent formula/key metadata. It must not be treated as independent exact
+    pyranose corroboration. Native SMILES/InChI themselves are coherent.
+  target_ids:
+  - CHEBI:87124
+  field_paths:
+  - xrefs
+  evidence_ids:
+  - knapsack
+  - chemistry
+  - source
+  rule_id: 'native-review-checklist: Identity/Evidence/Completeness'
+  native_severity: minor
+  normalization_reason: A bounded external cross-reference qualification, not a wrong-native-identity
+    assertion.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI definition and cross-references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and inventory reproduction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field selection
+- finding_id: F2
+  issue_key: chebi-87124-anther-occurrence-wording
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Express preferential anther accumulation without exclusivity
+  description: The source phrase occurring specifically in tulip anthers can imply
+    exclusive location, whereas direct tissue analysis detects B elsewhere. Qualify
+    as especially abundant in anthers and retain the measured developmental context.
+  target_ids:
+  - CHEBI:87124
+  field_paths:
+  - definition
+  evidence_ids:
+  - primary-origin
+  - source
+  - plant-enzyme
+  rule_id: 'native-review-checklist: Identity/Evidence/Completeness'
+  native_severity: minor
+  normalization_reason: Weak or ambiguous source wording; plant identity and anther
+    occurrence remain supported.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI definition and cross-references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and inventory reproduction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field selection
+- finding_id: F3
+  issue_key: chebi-87124-scoped-primary-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Consider qualified assay and MurA evidence enrichment
+  description: Primary evidence can populate optional activity and mechanism objects
+    with exact compound, organism, condition and endpoint. Do not turn proposed adduct/downstream
+    Mur targets into established mechanism edges or copy tulipalin B results.
+  target_ids:
+  - CHEBI:87124
+  field_paths:
+  - activity_spectrum
+  - molecular_targets
+  - evidence
+  - causal_graphs
+  evidence_ids:
+  - primary-origin
+  - primary-fungal
+  - primary-mura
+  - adapter
+  - rubric
+  rule_id: 'native-review-checklist: Identity/Evidence/Completeness'
+  native_severity: informational
+  normalization_reason: Optional enrichment opportunity; no required representation
+    is missing.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/6-tuliposide-b.yaml
+    role: Curator-owned claim evidence/discussion through write_validated_antibiotic
+      and native history
+actions:
+- action_id: A1
+  description: Adjudicate KNApSAcK link semantics and preserve ring-chain scope through
+    maintained source handling.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:87124
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI definition and cross-references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and inventory reproduction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field selection
+  acceptance_checks:
+  - Document the official open-chain structure and internal key/formula conflicts.
+    Retain the native pyranose representation unless separate evidence warrants change.
+  - If excluding or qualifying the link, use an authorized reproducible source/extractor/seeder
+    mechanism; do not hand-patch a regenerated xref.
+  - Run focused schema/strict, chemistry and corpus reproduction after any authorized
+    change.
+- action_id: A2
+  description: Qualify the generated occurrence sentence using the original tissue
+    measurements.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:87124
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI definition and cross-references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and inventory reproduction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field selection
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/6-tuliposide-b.yaml
+    role: Curator-owned claim evidence/discussion through write_validated_antibiotic
+      and native history
+  acceptance_checks:
+  - Describe enrichment in tulip anthers without denying occurrence in the other directly
+    assayed tissues.
+  - Retain2005 Table1 preparation/species/cultivar scope and distinguish substrate
+    localization from TCEB localization.
+  - Use maintained source ownership plus native validated discussion/history for scientific
+    additions; rerun focused and corpus gates.
+- action_id: A3
+  description: Optionally curate exact antibacterial/antifungal observations and measured
+    MurA inhibition with their limits.
+  finding_ids:
+  - F3
+  target_ids:
+  - CHEBI:87124
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/6-tuliposide-b.yaml
+    role: Curator-owned claim evidence/discussion through write_validated_antibiotic
+      and native history
+  acceptance_checks:
+  - Keep2005 MIC mg/L and original dilution conditions separate from crude-anther
+    inhibition zones; preserve uncertain analytical purity.
+  - Keep2011 pigment responses at0.05mM separate from growth MICs; no Botrytis activity
+    at2.5mM is a bounded negative observation, not a proven resistance mechanism.
+  - Treat2013 residual MurA activities as measurements, not IC50/binding constants.
+    The proposed adduct/MurB/MurC mechanism remains explicitly hypothetical.
+  - Retain native unspecified anomer and3S side chain, and ground any organism/protein
+    identifiers to the actual experimental context before writing. Use validated native
+    writer/history and required gates.
+limitations:
+- CAS was corroborated in ChEBI/KNApSAcK but not independently in CAS; MetaCyc required
+  account access and Reaxys remained uninspected. KNApSAcK conflicts do not invalidate
+  native chemistry.
+- All seven adopted original abstracts were read. Full2005,2011 and2013 papers were
+  inspected;2010 SAR full text was blocked,1995/1999/2014 biomass references remain
+  abstract-level.2015 Wiley abstract/introduction were read but later sections could
+  not be retrieved reliably.
+- The2005 scanned paper was visually inspected, including structure, assays and tissue
+  table; text extraction yielded no text.2011 epimer table/prose disagreement is preserved
+  and not assigned to the natural isomer.
+- iModulonDB search is contextual gene evidence only, using MG1655 dataset rather
+  than BL21 experimental strain. All13 initial hashes remain unchanged.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

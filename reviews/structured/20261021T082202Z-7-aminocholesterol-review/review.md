@@ -1,0 +1,729 @@
+# 7-Aminocholesterol: unspecified C7 identity and bounded primary activity
+
+- Review: 20261021T082202Z-7-aminocholesterol-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T08:07:35Z
+- Finished UTC: 2026-10-21T08:22:02Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The native neutral structure, source-derived name and chemical groundings are coherent, with C7 intentionally unspecified. The adopted primary abstract supports broad antibacterial filing. Optional activity and fungal-resistance enrichment requires preserving epimer, assay and mechanistic scope; no bacterial molecular target is established. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position067; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:77845 | data/antibiotics/antibacterial/7-aminocholesterol.yaml | generated | 7-aminocholesterol |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema verification | passed | True | CHEBI:77845 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:77845 | Actual focused execution exited 0. |
+| Focused chemistry verification | passed | False | CHEBI:77845 | Actual focused execution exited 0. |
+| Structured expression-context applicability | not_applicable | False | CHEBI:77845 | No native gene, protein, regulator, pathway, stress-response or expression dataset is asserted. RTA1 and associated regulatory genes occur only in uncurated literature leads assessed here. |
+| Authoritative full QC | failed | True | CHEBI:77845 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:77845 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:77845 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:77845 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:77845 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:77845 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:77845 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:77845 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:77845 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Neutral C7-unspecified aminosterol
+
+identity: supported. Targets: CHEBI:77845.
+
+Native encodings and PubChem full InChI agree. Names specify3beta and cholesterol stereochemistry while leavingC7 unspecified. Epimer-specific or mixed-material measurements must preserve that boundary.
+
+### All parents, role and xrefs
+
+grounding: supported. Targets: CHEBI:77845.
+
+Four structural parents fit; antibacterial role has primary support. CAS/Reaxys strings match the official source, while independent registry detail remains limited.
+
+### Broad antibacterial classification
+
+evidence: supported. Targets: CHEBI:77845.
+
+Primary1995 abstract supports activity; its3micromolar50% growth endpoint is not a standardized MIC. Missing assay context precludes invented strain-level measurements.
+
+### Fungal mechanism and resistance scope
+
+evidence: unknown. Targets: CHEBI:77845.
+
+Cellular sterol profiles and RTA1 genetic phenotypes support qualified fungal hypotheses. No bacterial target, direct unmodified-drug efflux measurement or pure-epimer equivalence is established.
+
+### Producer, clinical, graph and dataset annotations
+
+representation: not_applicable. Targets: CHEBI:77845.
+
+Optional blanks alone are not defects. Chemical synthesis does not imply biological production; fungal laboratory rescue and animal-adjacent references do not establish human clinical efficacy.
+
+### Source and native status
+
+ownership: supported. Targets: CHEBI:77845.
+
+Source fields, mint and three history events reproduce. Review adds no native evidence or status promotion.
+
+## Findings
+
+### F1: Optional primary evidence enrichment requires epimer and endpoint qualification
+
+informational / open / confirmed; issue key: chebi-77845-primary-activity-epimer-and-resistance-scope.
+
+The native broad classification is supported and no false quantitative or molecular-target assertion is present. Primary antibacterial and fungal-resistance papers provide concrete enrichment leads, but exact tested material and assay scope must remain explicit.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+If curated, attach bounded primary evidence while preserving C7 material and taxon scope.
+
+- Retrieve original1994/1995 methods and table images; verify assayed epimer composition before numerical transfer. Do not convert50% growth inhibition to MIC or infer alpha/beta proportions from unresolved caption text.
+- Retain the correct C7-unspecified native encoding; do not assign an epimer or racemate solely to fit a literature assay. Keep2022 pure-alphaLeishmania activity separate from native unspecified material.
+- Represent fungal sterol-profile mechanisms andRTA1 resistance with measured evidence types; distinguish genetic complementation, labelled-probe accumulation and homology models from direct target binding or proven free-drug efflux.
+- Do not transfer unnamedASD, squalamine or acetone-imine structure to this record. Preserve the2022 alpha-control, genetic background, YPD37C3day spot assay and lack of a clinical breakpoint.
+- Use validated writer/history and required native gates; do not mark REVIEWED solely because a structured bundle exists.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/7-aminocholesterol.yaml; Entire native YAML | supports | Read definition, both exact synonyms, four structural parents, antibacterial role, full chemical structure, CAS/Reaxys xrefs, source concept and three seed/reseed events. No direct target, quantitative activity, resistance, producer, clinical, graph or expression assertion is present. Native SEEDED and EXACT statuses remain unchanged. |
+| owner | data/raw/chebi_antimicrobials.tsv; Complete CHEBI:77845 row, manifest, source configuration, extractor and seeder | supports | Maintained row reproduces native identity and three adopted PMID leads22129104,7896083,8056288. Mechanism-role list is empty. Source version2026-08-30 and mint antibioticmech:chebi-1a1ba07537 agree. New biological evidence belongs to curator-owned native fields, while source-owned identity changes would need reproducible source handling. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:77845; Complete current visible entry and OLS definitions for each asserted parent/role | supports | Current ChEBI agrees with native definition, two synonyms, CAS156856-03-0, Reaxys9165538 and all structure fields. Four parents denote3beta-hydroxy-Delta5-steroid,3beta-sterol,cholestanoid and primary amino compound; all fit the native graph. Role33282 denotes antibacterial agent. Reaxys and independent CAS registry details were not inspected. |
+| chemistry | RDKit calculation; chem005.py67;067-chemistry.json | supports | SMILES and InChI independently yield WLHQSAYHIOPMMJ-UOQFGJKXSA-N,C27H47NO,charge0,one fragment,mass401.679 and exact mass401.365765124. Eight of nine tetrahedral centres are assigned; the nitrogen-bearing C7 centre is unspecified, matching both names. Unspecified C7 does not imply a pure epimer or a racemic mixture. Mint reproduces. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/133019/property/InChI,InChIKey,MolecularFormula,MolecularWeight,Charge,CanonicalSMILES/JSON; Complete CID133019 response | supports | Independent PubChem complete InChI/key, formula and neutral charge agree with native, including the C7 uncertainty marker. Its returned connectivity-only SMILES was not used to claim complete stereochemical agreement; the full InChI was compared. |
+| bacterial1995 | PMID:7896083; DOI10.1111/j.1574-6968.1995.tb07396.x; complete original abstract, publisher page and indexed PDF fragments | supports | The original abstract reports50% growth inhibition at3micromolar for strains of Listeria innocua,L.monocytogenes,Staphylococcus aureus,Enterococcus hirae and Bacillus cereus. This is a growth-inhibition endpoint, not automatically MIC, MBC or clinical susceptibility. It supports broad antibacterial filing. Full table pixels and methods could not be retrieved; no strain identifiers, medium, exposure time or exact epimer ratio are imported. Indexed PDF caption suggests an alpha/beta mixture but was not visually verified. |
+| yeast1994 | PMID:8056288; DOI10.1111/j.1574-6968.1994.tb07024.x; entire primary abstract | supports | The study reports yeast growth inhibition and sterol-auxotroph/sterol-profile evidence consistent with interference in ergosterol biosynthesis at Delta8-to-Delta7 isomerase and Delta14 reductase. These cellular biochemical profiles are not direct purified-enzyme binding or a demonstrated bacterial mechanism. Full methods and table images remained inaccessible. |
+| yeast2012 | PMID:22129104; DOI10.1111/j.1567-1364.2011.00768.x; entire adopted primary abstract | supports | The paper reports plasma-membrane localization and turnover of yeast Rta1p, promoter regulation by Tup1,Rox1p,Mot3p,Pdr1p and Upc2p, and increased RTA1-associated7-ACH resistance under hypoxia. It expressly leaves Rta1 function and precise7-ACH action unresolved. This is fungal genetic/regulatory evidence, not a direct bacterial drug target or demonstrated drug-export rate. |
+| yeast1996 | PMID:8660468; DOI10.1007/s002940050110; complete primary abstract in067-additional-core.json | context_only | RTA1 overexpression confers strong yeast resistance; sequence predicts seven membrane-spanning segments and the gene is nonessential. Resistance-gene rescue does not establish Rta1 as the inhibited molecular target or directly demonstrate transport. The Springer route returned a browser challenge rather than full text. |
+| cryptococcus2022 | PMID:36364991; DOI10.3390/pathogens11111239; PMC9697666 entire main text and Figure3 | context_only | C.neoformans H99S-background rta1 deletionKO22 is more sensitive to synthesized7-aminocholesterol and complementationKI66 restores resistance in YPD plate spots at37C for3days. At1microgram/mL deletion growth is inhibited while wild type/complemented grow. This is a spot-growth phenotype, not standardized MIC or a clinical breakpoint. The alpha7-aminocholesterol control is separately inactive at this dose. Dansyl-labelled compound accumulation and homology models support a transport hypothesis, not direct transport proof for unmodified native material. Crystal analysis uses an acetone-derived imine; it is not the native free amine. Exact active-material epimer characterization needs source/supplement adjudication before quantitative transfer. |
+| epimer2022 | PMID:36144626; DOI10.3390/molecules27185890; complete primary abstract and original publisher indexed Tables2/3 | context_only | The tested material is explicitly7-alpha-aminocholesterol, with Leishmania eIF4A ATPase inhibition and promastigote activity. It cannot be treated as a quantitative assay of an unspecified C7 material, the opposite epimer or a bacterial target. Docking is not direct binding. Full main article was not inspected for this review. |
+| other-aminosterol | PMID:20662632; DOI10.3109/13693786.2010.502189; complete primary abstract | context_only | The study tests squalamine and an unnamed synthetic aminosterol derivativeASD. The abstract does not establish ASD as native7-aminocholesterol; its yeast MICs, ATP leakage and haemolysis are not transferred. A citation in the2022 paper does not repair this exact-compound mapping gap. |
+| search | Ignored-inclusive local and bounded free primary discovery; 067-local-hits.txt,067-maintained-search.txt,067-extra-fetch-results.json and067-final-fetch-results.json | context_only | All three adopted complete abstracts were read and selected exact-compound resistance/stereoisomer leads followed. Ignored-inclusive maintained-path search found no target override outside the readiness queue. Publisher1994/1995 PDF URLs returned400,2012 PDF403; search-indexed fragments were not treated as inspected full papers. No paid source or author contact was used. |
+
+## Limits And Additional Notes
+
+- All three adopted abstracts were read;1994,1995 and2012 full original PDFs were inaccessible through attempted free routes. Search-indexed fragments do not substitute for full method and table inspection.
+- The2022 Cryptococcus main text was read in full, but detailed supplementary chemical characterization and crystal coordinates were not re-elucidated. Its stated imine derivative and separate alpha-control constrain exact-material transfer.
+- The1996RTA1,2011aminosterol and2022Leishmania leads were assessed at abstract level, with indexed original tables used only to identify the explicit alpha-epimer boundary. Reaxys and independentCASregistry detail were not inspected.
+- Bounded discovery cannot prove absence of further exact-compound activity or mechanisms. No native edits, paid research or external messages occurred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Root visually inspected Figure3 of the2022Cryptococcus paper: the deletion KO22 row is inhibited at1microgram/mL, and wild typeH99/complementKI66 retain growth; all three grow with the separate alpha-control. The figure does not establish a standardized MIC or the full epimer composition of the active preparation.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T082202Z-7-aminocholesterol-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: '7-Aminocholesterol: unspecified C7 identity and bounded primary activity'
+started_at: '2026-10-21T08:07:35Z'
+finished_at: '2026-10-21T08:22:02Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The native neutral structure, source-derived name and chemical groundings
+  are coherent, with C7 intentionally unspecified. The adopted primary abstract supports
+  broad antibacterial filing. Optional activity and fungal-resistance enrichment requires
+  preserving epimer, assay and mechanistic scope; no bacterial molecular target is
+  established. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/7-aminocholesterol.yaml
+    sha256: fc08d67dc41965726f624cc5c1c0db11aaabf0881fd9a786e4944559e4ee96a5
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:77845
+  path: data/antibiotics/antibacterial/7-aminocholesterol.yaml
+  label: 7-aminocholesterol
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position067; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:77845
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:77845
+  command: just validate data/antibiotics/antibacterial/7-aminocholesterol.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:77845
+  command: just validate-strict data/antibiotics/antibacterial/7-aminocholesterol.yaml
+    --out /private/tmp/am-review-session/067-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:77845
+  command: .venv/bin/python /private/tmp/am-review-session/chem005.py 67
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter
+  name: Structured expression-context applicability
+  status: not_applicable
+  required: false
+  summary: No native gene, protein, regulator, pathway, stress-response or expression
+    dataset is asserted. RTA1 and associated regulatory genes occur only in uncurated
+    literature leads assessed here.
+  target_ids:
+  - CHEBI:77845
+  evidence_ids:
+  - record
+  - yeast2012
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:77845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:77845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:77845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:77845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:77845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:77845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:77845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:77845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:77845
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/7-aminocholesterol.yaml
+  locator: Entire native YAML
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: supports
+  summary: Read definition, both exact synonyms, four structural parents, antibacterial
+    role, full chemical structure, CAS/Reaxys xrefs, source concept and three seed/reseed
+    events. No direct target, quantitative activity, resistance, producer, clinical,
+    graph or expression assertion is present. Native SEEDED and EXACT statuses remain
+    unchanged.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Complete CHEBI:77845 row, manifest, source configuration, extractor and
+    seeder
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: supports
+  summary: Maintained row reproduces native identity and three adopted PMID leads22129104,7896083,8056288.
+    Mechanism-role list is empty. Source version2026-08-30 and mint antibioticmech:chebi-1a1ba07537
+    agree. New biological evidence belongs to curator-owned native fields, while source-owned
+    identity changes would need reproducible source handling.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:77845
+  locator: Complete current visible entry and OLS definitions for each asserted parent/role
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: supports
+  summary: Current ChEBI agrees with native definition, two synonyms, CAS156856-03-0,
+    Reaxys9165538 and all structure fields. Four parents denote3beta-hydroxy-Delta5-steroid,3beta-sterol,cholestanoid
+    and primary amino compound; all fit the native graph. Role33282 denotes antibacterial
+    agent. Reaxys and independent CAS registry details were not inspected.
+  snapshot_sha256: 5c18662b9233ab88c721a4759f1867c7fc03bbc7757a8aec22764e3c3eacf9b5
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit calculation
+  locator: chem005.py67;067-chemistry.json
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: supports
+  summary: SMILES and InChI independently yield WLHQSAYHIOPMMJ-UOQFGJKXSA-N,C27H47NO,charge0,one
+    fragment,mass401.679 and exact mass401.365765124. Eight of nine tetrahedral centres
+    are assigned; the nitrogen-bearing C7 centre is unspecified, matching both names.
+    Unspecified C7 does not imply a pure epimer or a racemic mixture. Mint reproduces.
+  snapshot_sha256: befbdab779a423915ceef4aa452f6c330a64806d2c0b1802b3fa35969de7f0c4
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/133019/property/InChI,InChIKey,MolecularFormula,MolecularWeight,Charge,CanonicalSMILES/JSON
+  locator: Complete CID133019 response
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: supports
+  summary: Independent PubChem complete InChI/key, formula and neutral charge agree
+    with native, including the C7 uncertainty marker. Its returned connectivity-only
+    SMILES was not used to claim complete stereochemical agreement; the full InChI
+    was compared.
+  snapshot_sha256: 07948a64492abc0afde693701ffd28b4438ae1168cb061c8160fdf4a2c3a767d
+- evidence_id: bacterial1995
+  kind: primary_source
+  reference: PMID:7896083
+  locator: DOI10.1111/j.1574-6968.1995.tb07396.x; complete original abstract, publisher
+    page and indexed PDF fragments
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: supports
+  summary: The original abstract reports50% growth inhibition at3micromolar for strains
+    of Listeria innocua,L.monocytogenes,Staphylococcus aureus,Enterococcus hirae and
+    Bacillus cereus. This is a growth-inhibition endpoint, not automatically MIC,
+    MBC or clinical susceptibility. It supports broad antibacterial filing. Full table
+    pixels and methods could not be retrieved; no strain identifiers, medium, exposure
+    time or exact epimer ratio are imported. Indexed PDF caption suggests an alpha/beta
+    mixture but was not visually verified.
+  snapshot_sha256: 692fb2a4d624fe449a646736915f97851496222316e58dd61a40ad2dc376a8cf
+- evidence_id: yeast1994
+  kind: primary_source
+  reference: PMID:8056288
+  locator: DOI10.1111/j.1574-6968.1994.tb07024.x; entire primary abstract
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: supports
+  summary: The study reports yeast growth inhibition and sterol-auxotroph/sterol-profile
+    evidence consistent with interference in ergosterol biosynthesis at Delta8-to-Delta7
+    isomerase and Delta14 reductase. These cellular biochemical profiles are not direct
+    purified-enzyme binding or a demonstrated bacterial mechanism. Full methods and
+    table images remained inaccessible.
+  snapshot_sha256: 692fb2a4d624fe449a646736915f97851496222316e58dd61a40ad2dc376a8cf
+- evidence_id: yeast2012
+  kind: primary_source
+  reference: PMID:22129104
+  locator: DOI10.1111/j.1567-1364.2011.00768.x; entire adopted primary abstract
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: supports
+  summary: The paper reports plasma-membrane localization and turnover of yeast Rta1p,
+    promoter regulation by Tup1,Rox1p,Mot3p,Pdr1p and Upc2p, and increased RTA1-associated7-ACH
+    resistance under hypoxia. It expressly leaves Rta1 function and precise7-ACH action
+    unresolved. This is fungal genetic/regulatory evidence, not a direct bacterial
+    drug target or demonstrated drug-export rate.
+  snapshot_sha256: 692fb2a4d624fe449a646736915f97851496222316e58dd61a40ad2dc376a8cf
+- evidence_id: yeast1996
+  kind: primary_source
+  reference: PMID:8660468
+  locator: DOI10.1007/s002940050110; complete primary abstract in067-additional-core.json
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: context_only
+  summary: RTA1 overexpression confers strong yeast resistance; sequence predicts
+    seven membrane-spanning segments and the gene is nonessential. Resistance-gene
+    rescue does not establish Rta1 as the inhibited molecular target or directly demonstrate
+    transport. The Springer route returned a browser challenge rather than full text.
+  snapshot_sha256: c31352887c0d7b5b132809424154ea5726d28a7e162eb6c213f0ee3c9b80f45f
+- evidence_id: cryptococcus2022
+  kind: primary_source
+  reference: PMID:36364991
+  locator: DOI10.3390/pathogens11111239; PMC9697666 entire main text and Figure3
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: context_only
+  summary: C.neoformans H99S-background rta1 deletionKO22 is more sensitive to synthesized7-aminocholesterol
+    and complementationKI66 restores resistance in YPD plate spots at37C for3days.
+    At1microgram/mL deletion growth is inhibited while wild type/complemented grow.
+    This is a spot-growth phenotype, not standardized MIC or a clinical breakpoint.
+    The alpha7-aminocholesterol control is separately inactive at this dose. Dansyl-labelled
+    compound accumulation and homology models support a transport hypothesis, not
+    direct transport proof for unmodified native material. Crystal analysis uses an
+    acetone-derived imine; it is not the native free amine. Exact active-material
+    epimer characterization needs source/supplement adjudication before quantitative
+    transfer.
+  snapshot_sha256: 0722655b9747317dd885c942842c756e2de8e57cec212bc1b73679be4d54dbaf
+- evidence_id: epimer2022
+  kind: primary_source
+  reference: PMID:36144626
+  locator: DOI10.3390/molecules27185890; complete primary abstract and original publisher
+    indexed Tables2/3
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: context_only
+  summary: The tested material is explicitly7-alpha-aminocholesterol, with Leishmania
+    eIF4A ATPase inhibition and promastigote activity. It cannot be treated as a quantitative
+    assay of an unspecified C7 material, the opposite epimer or a bacterial target.
+    Docking is not direct binding. Full main article was not inspected for this review.
+  snapshot_sha256: c31352887c0d7b5b132809424154ea5726d28a7e162eb6c213f0ee3c9b80f45f
+- evidence_id: other-aminosterol
+  kind: primary_source
+  reference: PMID:20662632
+  locator: DOI10.3109/13693786.2010.502189; complete primary abstract
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: context_only
+  summary: The study tests squalamine and an unnamed synthetic aminosterol derivativeASD.
+    The abstract does not establish ASD as native7-aminocholesterol; its yeast MICs,
+    ATP leakage and haemolysis are not transferred. A citation in the2022 paper does
+    not repair this exact-compound mapping gap.
+  snapshot_sha256: c31352887c0d7b5b132809424154ea5726d28a7e162eb6c213f0ee3c9b80f45f
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local and bounded free primary discovery
+  locator: 067-local-hits.txt,067-maintained-search.txt,067-extra-fetch-results.json
+    and067-final-fetch-results.json
+  accessed_at: '2026-10-21T08:15:37Z'
+  support: context_only
+  summary: All three adopted complete abstracts were read and selected exact-compound
+    resistance/stereoisomer leads followed. Ignored-inclusive maintained-path search
+    found no target override outside the readiness queue. Publisher1994/1995 PDF URLs
+    returned400,2012 PDF403; search-indexed fragments were not treated as inspected
+    full papers. No paid source or author contact was used.
+  search_scope: prepare.py67 searched rg --no-ignore --hidden across batch007 excluding.git/.venv.
+    Follow-up searched curation,conf,reviews,reports/yaml_record_review excluding
+    record_review_queue.tsv for CHEBI:77845,full key and exact labels. Web searches
+    used7-aminocholesterol, exact primary titles, adopted PMIDs and original DOIs;
+    primary access included EuropePMC,PubMed,OUP,Springer and PMC. This is bounded
+    discovery, not a global absence claim.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral C7-unspecified aminosterol
+  outcome: supported
+  summary: Native encodings and PubChem full InChI agree. Names specify3beta and cholesterol
+    stereochemistry while leavingC7 unspecified. Epimer-specific or mixed-material
+    measurements must preserve that boundary.
+  target_ids:
+  - CHEBI:77845
+  evidence_ids:
+  - record
+  - chebi
+  - chemistry
+  - pubchem
+  - epimer2022
+- assessment_id: grounding
+  area: grounding
+  topic: All parents, role and xrefs
+  outcome: supported
+  summary: Four structural parents fit; antibacterial role has primary support. CAS/Reaxys
+    strings match the official source, while independent registry detail remains limited.
+  target_ids:
+  - CHEBI:77845
+  evidence_ids:
+  - chebi
+  - bacterial1995
+- assessment_id: activity
+  area: evidence
+  topic: Broad antibacterial classification
+  outcome: supported
+  summary: Primary1995 abstract supports activity; its3micromolar50% growth endpoint
+    is not a standardized MIC. Missing assay context precludes invented strain-level
+    measurements.
+  target_ids:
+  - CHEBI:77845
+  evidence_ids:
+  - bacterial1995
+- assessment_id: mechanism
+  area: evidence
+  topic: Fungal mechanism and resistance scope
+  outcome: unknown
+  summary: Cellular sterol profiles and RTA1 genetic phenotypes support qualified
+    fungal hypotheses. No bacterial target, direct unmodified-drug efflux measurement
+    or pure-epimer equivalence is established.
+  target_ids:
+  - CHEBI:77845
+  evidence_ids:
+  - yeast1994
+  - yeast2012
+  - yeast1996
+  - cryptococcus2022
+- assessment_id: optional
+  area: representation
+  topic: Producer, clinical, graph and dataset annotations
+  outcome: not_applicable
+  summary: Optional blanks alone are not defects. Chemical synthesis does not imply
+    biological production; fungal laboratory rescue and animal-adjacent references
+    do not establish human clinical efficacy.
+  target_ids:
+  - CHEBI:77845
+  evidence_ids:
+  - record
+  - cryptococcus2022
+  - other-aminosterol
+- assessment_id: ownership
+  area: ownership
+  topic: Source and native status
+  outcome: supported
+  summary: Source fields, mint and three history events reproduce. Review adds no
+    native evidence or status promotion.
+  target_ids:
+  - CHEBI:77845
+  evidence_ids:
+  - record
+  - owner
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-77845-primary-activity-epimer-and-resistance-scope
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Optional primary evidence enrichment requires epimer and endpoint qualification
+  description: The native broad classification is supported and no false quantitative
+    or molecular-target assertion is present. Primary antibacterial and fungal-resistance
+    papers provide concrete enrichment leads, but exact tested material and assay
+    scope must remain explicit.
+  target_ids:
+  - CHEBI:77845
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - resistance_mechanisms
+  - mode_of_action_notes
+  evidence_ids:
+  - bacterial1995
+  - yeast1994
+  - yeast2012
+  - cryptococcus2022
+  - epimer2022
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/7-aminocholesterol.yaml
+    role: Curator-owned evidence, activity, resistance and qualified mechanism notes
+      through validated writer/history
+  rule_id: native-review-checklist:Identity, Evidence, Activity and Resistance
+  native_severity: informational optional primary-evidence enrichment
+  normalization_reason: No confirmed native identity or claim defect; optional fields
+    are not mandatory merely because related literature exists.
+actions:
+- action_id: A1
+  description: If curated, attach bounded primary evidence while preserving C7 material
+    and taxon scope.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:77845
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/7-aminocholesterol.yaml
+    role: Curator-owned evidence, activity, resistance and qualified mechanism notes
+      through validated writer/history
+  acceptance_checks:
+  - Retrieve original1994/1995 methods and table images; verify assayed epimer composition
+    before numerical transfer. Do not convert50% growth inhibition to MIC or infer
+    alpha/beta proportions from unresolved caption text.
+  - Retain the correct C7-unspecified native encoding; do not assign an epimer or
+    racemate solely to fit a literature assay. Keep2022 pure-alphaLeishmania activity
+    separate from native unspecified material.
+  - Represent fungal sterol-profile mechanisms andRTA1 resistance with measured evidence
+    types; distinguish genetic complementation, labelled-probe accumulation and homology
+    models from direct target binding or proven free-drug efflux.
+  - Do not transfer unnamedASD, squalamine or acetone-imine structure to this record.
+    Preserve the2022 alpha-control, genetic background, YPD37C3day spot assay and
+    lack of a clinical breakpoint.
+  - Use validated writer/history and required native gates; do not mark REVIEWED solely
+    because a structured bundle exists.
+limitations:
+- All three adopted abstracts were read;1994,1995 and2012 full original PDFs were
+  inaccessible through attempted free routes. Search-indexed fragments do not substitute
+  for full method and table inspection.
+- The2022 Cryptococcus main text was read in full, but detailed supplementary chemical
+  characterization and crystal coordinates were not re-elucidated. Its stated imine
+  derivative and separate alpha-control constrain exact-material transfer.
+- The1996RTA1,2011aminosterol and2022Leishmania leads were assessed at abstract level,
+  with indexed original tables used only to identify the explicit alpha-epimer boundary.
+  Reaxys and independentCASregistry detail were not inspected.
+- Bounded discovery cannot prove absence of further exact-compound activity or mechanisms.
+  No native edits, paid research or external messages occurred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- 'Root visually inspected Figure3 of the2022Cryptococcus paper: the deletion KO22
+  row is inhibited at1microgram/mL, and wild typeH99/complementKI66 retain growth;
+  all three grow with the separate alpha-control. The figure does not establish a
+  standardized MIC or the full epimer composition of the active preparation.'
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

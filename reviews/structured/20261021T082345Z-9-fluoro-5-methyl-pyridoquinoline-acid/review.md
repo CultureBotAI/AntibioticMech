@@ -1,0 +1,899 @@
+# Stereo-unspecified flumequine structure: supported identity with bounded assay and racemate scope
+
+- Review: 20261021T082345Z-9-fluoro-5-methyl-pyridoquinoline-acid
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T08:14:38Z
+- Finished UTC: 2026-10-21T08:23:45Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Native chemistry is internally consistent and matches official ChEBI, PubChem and ChEMBL representations. Antibacterial filing and the fluoroquinolone class are supported. Two informational follow-ups preserve the unspecified-structure/racemate boundary and identify scoped experimental enrichment without treating optional fields as required or resistance association as direct binding. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole exact native record; ChEBI, ARO and PubChem maintained rows; adopted citation and full 2021 EFSA opinion; original 2024 full article; bounded official identity and structured-context checks.
+
+Selection: Queue index070, CHEBI:85269 at the locked native path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:85269 | data/antibiotics/antibacterial/9-fluoro-5-methyl-1-oxo-6-7-dihydro-1h-5h-pyrido-3-2-1-ij-quinoline-2-.yaml | generated | 9-fluoro-5-methyl-1-oxo-6,7-dihydro-1H,5H-pyrido[3,2,1-ij]quinoline-2-carboxylic acid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:85269 | Focused LinkML validation exited0. |
+| strict | passed | True | CHEBI:85269 | Focused strict scan has zero ERROR rows. |
+| initial-chemistry-helper | failed | False | CHEBI:85269 | Helper wrongly assumed the first source_concept was CHEBI. It compared the correct CHEBI mint with the ARO mint; chemical parsing itself passed. Retained initial failure is a helper error, not a native identity defect. |
+| corrected-chemistry | passed | False | CHEBI:85269 | Corrected helper checks both source-specific mints; full structure, formula, charge, masses and mints pass. |
+| structured-context | passed | False | CHEBI:85269 | Reused inspected session dataset inventory; exact gyrA query returned gene b2231 in E.coli MG1655 precise1k and zero iModulons. No component summary applies. This is bounded gene context, not direct drug evidence. |
+| Authoritative full QC | failed | True | CHEBI:85269 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:85269 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:85269 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:85269 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:85269 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:85269 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:85269 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:85269 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:85269 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Native exact chemical representation
+
+identity: supported. Targets: CHEBI:85269.
+
+Official structures and independent parsing agree; the record is explicitly stereo-unspecified, not an assigned enantiomer or necessarily a racemate.
+
+### Source fold and chemical-form boundary
+
+grounding: supported. Targets: CHEBI:85269.
+
+Maintained ARO/PubChem full-key fold is reproducible under documented policy. Racemate versus unspecified-skeleton semantics warrant a curator note before experimental enrichment, without asserting an unproved wrong structure.
+
+### Antibacterial role and filing
+
+evidence: supported. Targets: CHEBI:85269.
+
+Official classification, adopted opinion and original flumequine antibacterial/resistance observations support broad filing. No individual-enantiomer activity is inferred.
+
+### Mechanism and resistance enrichment
+
+completeness: unknown. Targets: CHEBI:85269.
+
+Optional mechanism/resistance fields are absent; selected-mutant association and quinolone reviews provide bounded leads, not direct binding or allele causality. Own-concept ChEBI role priority explains absent inherited mechanism.
+
+### Producer,clinical,graph and dataset scope
+
+completeness: not_applicable. Targets: CHEBI:85269.
+
+No such objects are asserted. Synthetic class identity does not imply a biological producer; no current clinical status was imported.
+
+### Maintained inputs/history
+
+ownership: supported. Targets: CHEBI:85269.
+
+Captured sources explain structure, class, references and source mints. All17 inputs unchanged; four native generated history events remain untouched.
+
+### Focused deterministic checks
+
+schema: supported. Targets: CHEBI:85269.
+
+Schema/strict and corrected chemistry pass; initial helper error is transparently retained.
+
+## Findings
+
+### F1: Preserve the racemate versus unspecified-structure boundary during enrichment
+
+informational / open / confirmed; issue key: chebi-85269-flumequine-racemate-assay-boundary.
+
+The generated full-key merge is reproducible, but ARO links the separately defined ChEBI racemate while this native structure has unassigned stereo. Official PubChem/ChEMBL match the native representation. A curator should document which source/assay form each future claim denotes, rather than infer racemate or enantiomer equivalence from shared connectivity.
+
+### F2: Add bounded primary activity and resistance evidence after form adjudication
+
+informational / open / confirmed; issue key: chebi-85269-primary-assay-resistance-enrichment.
+
+Original flumequine experiments provide strain-level MIC and selected-mutant leads. Curate them with exact compound-form qualification, strain/replicate and assay details; keep ECOFF non-wildtype selection distinct from clinical resistance and mutant association distinct from direct target binding.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Document assay-form mapping and retain the ChEBI scaffold/racemate/enantiomer distinctions. Change a generated mapping only if specific evidence establishes a mismatch.
+
+- Inspect exact supplier/form/structure in any proposed primary assay, do not infer racemate from unspecified SMILES.
+- If a source mapping correction is justified, update maintained source/extractor or decision owner and reseed; otherwise use an evidence-backed native discussion through the validated writer.
+- Revalidate full structure key, source concepts, schema/strict and required shared gates.
+
+### A2
+
+Optionally curate exact-form primary MIC and resistance-selection observations, retaining the experiment limits.
+
+- Capture original strain identifier, each replicate, measured endpoint, unit, qualifier, medium, inoculum, temperature/time and assay reference; resolve ambiguous zero MIC entries before numeric import.
+- Keep published ECOFF/clinical thresholds versioned and scoped to the study; do not label all growth above ECOFF clinically resistant.
+- Represent S83L/D87G selected-isolate associations with their genomic/experimental limits; do not claim a purified-target assay, isogenic allele proof, in-vivo de-novo mutation or exact enantiomer effect.
+- Use write_validated_antibiotic and record_curation_event at the actual target path; run focused and required shared gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/9-fluoro-5-methyl-1-oxo-6-7-dihydro-1h-5h-pyrido-3-2-1-ij-quinoline-2-.yaml; Entire YAML, initial capture and reread. | supports | SEEDED/EXACT neutral one-centre stereo-unspecified acid, purely structural ChEBI definition, five parents, antimicrobial role33281, ARO fluoroquinolone structural class, four xrefs, two source concepts and four seed/reseed events. No optional mechanism, targets, activity_spectrum, resistance, producer, clinical status or causal graphs are asserted. |
+| source | data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; ChEBI row2296, ARO row447 and PubChem row163 in070-raw.json/070-pubchem-raw.json; extractor176–475; seeder790–855,1061 onward,1150–1275,1483–1660. | supports | ARO3007521 points to structureless ChEBI85267; fallback PubChem3374 supplies the same full key as ChEBI85269, explaining the documented cross-source key fold. The native own ChEBI concept has no mechanism_role_ids, so seeder priority deliberately does not import the racemate row gyrase/topoisomerase roles. Complete target/resistance-edge TSV scans found zero exact flumequine rows. Only adopted citation is PMID34729090. All17 captured maintained-input hashes remain unchanged. |
+| identity | https://www.ebi.ac.uk/chebi/CHEBI:85269; Complete070-chebi.html/txt,070-pubchem.json CID3374 and070-chembl.json CHEMBL370252. | supports | Official sources match full native InChI/key DPSPPJIUMHPXMA-UHFFFAOYSA-N, neutral C14H12FNO3 and unspecified stereocentre. ChEBI parents37143 organofluorine compound,38921 pyridoquinoline,47881 3-oxo monocarboxylic acid and86324 quinolone antibiotic are broader; ARO0000001 is fluoroquinolone antibiotic. PubChem and ChEMBL present this connectivity without assigned enantiomer. The native definition is chemically consistent. |
+| boundary | https://www.ebi.ac.uk/chebi/CHEBI:85267; Complete070-racemate.html/txt and official ARO OBO term3007521. | context_only | ChEBI separately defines85267 as equal R/S flumequine and gives CAS42835-25-6, whereas85269 is its unspecified scaffold and parent of the individual enantiomers. ARO3007521 cross-references85267, CAS42835-25-6, ChEMBL370252 and PubChem3374. This is an explicit conceptual boundary to preserve; lack of stereo on native SMILES does not itself prove racemate or wrong identity. CAS was corroborated in official ChEBI/ARO, not independently in a CAS registry. |
+| aro | https://purl.obolibrary.org/obo/aro.obo; Exact terms ARO3007521 and0000001;070-aro.obo. | supports | Official OBO SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4 matches the adopted manifest. It reproduces source flumequine class/xrefs and PMID34729090. The source definition includes no-longer-marketed wording; native definition does not import it, and inspected EFSA2021/primary2024 animal-use context should prevent adopting that blanket statement as current clinical status. |
+| chemistry | Independent RDKit parsing; 070-chemistry.json/log,070-chemistry-check.py; retained070-initial-chemistry.json/log. | supports | SMILES and InChI parse to the same full key, one neutral fragment,C14H12FNO3,average mass261.252,exact261.080121464 and one unspecified centre. Corrected checks reproduce antibioticmech:aro-84504339c8 and antibioticmech:chebi-ce888b444e. Initial helper assumed first-source CHEBI, causing a false mint mismatch; corrected command exited0. |
+| adopted | PMID:34729090; DOI10.2903/j.efsa.2021.6862; complete abstract070-epmc-adopted.json and full opinion070-efsa.xml, Sections1–4 and relevant tables. | supports | The sole adopted citation is an EFSA scientific opinion, not a primary experiment. It supports broad flumequine antibacterial use and reviews quinolone mechanisms; many low-dose examples are other quinolones. Its lack of suitable MSC/PK and growth-promotion data concerns those narrow feed-risk questions, not absence of antibacterial activity. Table1 MIC_lowest0.064mg/L is database-derived, not a newly measured strain-specific endpoint. No class-wide gyrase/ROS/SOS claim is automatically direct exact-compound evidence. |
+| primary | https://doi.org/10.1038/s44259-024-00044-5; Swinkels et al2024, full main article070-2024.pdf/text; Table1 visually inspected070-2024-table1.png; Tables2–3,Figures1–3,Methods. | supports | Original experiments show flumequine-associated E.coli resistance selection and cross-resistance to enrofloxacin. Direct-exposure Table1 reports flumequine MICs2–4mg/L for selected GyrA S83L/D87G isolates, with strain-specific replicates and parent values; broth microdilution is referenced, while selection uses MacConkey at37°C overnight and flumequine2mg/L. Stepwise experiment retained10 of24 strains after excluding14 with different sequence types. Broiler before/after clones did not match, so the authors could not demonstrate de novo mutations in vivo. ECOFF-defined non-wildtype growth differs from clinical resistance; thresholds are study-specific. Commercial flumequine stereochemical composition is not established in inspected main text, and no direct enzyme binding/inhibition assay or isogenic allele proof is shown. |
+| older-primary | PMID:984753; DOI10.1128/AAC.10.1.20; complete official original abstract,1976 bioevaluation. | context_only | The original abstract reports antibacterial flumequine testing of321 clinical isolates and88% of Gram-negative isolates with MIC6.2µg/mL or less, plus laboratory mutant cross-resistance. R802 is a laboratory compound designation, not proof of R stereochemistry. Full methods and exact experimental form were unavailable in this pass; these aggregate data were not promoted to structured strain measurements. |
+| adapter | iModulonDB e_coli/precise1k; Inspected session055 dataset inventory and070-imodulondb-gyra.txt. | context_only | gyrA resolves to e_coli/precise1k/b2231; additional gene hits include gyrB b3699 and inhibitors. Zero module hits means no informative component summary. The covered MG1655 transcriptomic dataset is not the2024 experimental broiler isolates and establishes neither flumequine binding nor resistance causality. |
+| search | CultureBotAI/AntibioticMech; 070-local-hits.txt,070-maintained-search.txt,070-exact-maintained-search.txt and exact TSV scans. | context_only | Ignored-inclusive searches found no target-specific maintained override or overlay; queue rows and historical adjacent R/S reports were only context. Bounded exact flumequine/identifiers/DOI searches found the adopted opinion and original1976/2024 experiments. No absence of all literature, producers or mechanisms is claimed. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Whole-record checklist; CURATION/HARMONIZATION; schema optional claim collections. | supports | One operational structure key is not universal proof of chemical-form equivalence. Preserve ChEBI internal boundaries and exact-assay form; gene association, ECOFF growth and class mechanisms must remain distinct from direct biochemical target evidence. Optional scientific enrichment is not a required-field defect. |
+| validation | Documented focused native checks; 070-focused-results.json,070-schema.log,070-strict.log/tsv and corrected chemistry output. | supports | Schema and strict exited0. Initial helper failure is retained alongside corrected chemistry exit0; actual shared gate outcomes are recorded separately. |
+
+## Limits And Additional Notes
+
+- All17 captured maintained-input hashes are unchanged. Initial chemistry helper assumed CHEBI first and failed only mint comparison; corrected helper independently checked both source mints and passed.
+- CAS42835-25-6 was corroborated in official ChEBI/ARO, not independently through CAS. Exact experimental stereochemical composition was not resolved; unspecified structure must not be called racemate by inference.
+- The sole adopted2021 citation is an authority synthesis. Full2024 main article and Table1 image were inspected, but supplementary exact material details were not.1976 only complete abstract was accessible. Individual enantiomer literature and all quinolone mechanisms were outside this bounded review.
+- iModulonDB MG1655 gene context differs from experimental isolates and is not a target/phenotype proof. No native transcriptomics assertion exists.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T082345Z-9-fluoro-5-methyl-pyridoquinoline-acid
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Stereo-unspecified flumequine structure: supported identity with bounded assay
+  and racemate scope'
+started_at: '2026-10-21T08:14:38Z'
+finished_at: '2026-10-21T08:23:45Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the record. Inspected captured full native record,
+    maintained source rows, transform and seeder before judgment; independently checked
+    official chemical sources, adopted opinion and an original resistance study.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Native chemistry is internally consistent and matches official ChEBI, PubChem
+  and ChEMBL representations. Antibacterial filing and the fluoroquinolone class are
+  supported. Two informational follow-ups preserve the unspecified-structure/racemate
+  boundary and identify scoped experimental enrichment without treating optional fields
+  as required or resistance association as direct binding. Scientific assessment retains
+  the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/9-fluoro-5-methyl-1-oxo-6-7-dihydro-1h-5h-pyrido-3-2-1-ij-quinoline-2-.yaml
+    sha256: 31743b93ac53e8183571cfdef81cce209fa1bce9cf7e595f4cea21c8f404d6b4
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+targets:
+- target_id: CHEBI:85269
+  path: data/antibiotics/antibacterial/9-fluoro-5-methyl-1-oxo-6-7-dihydro-1h-5h-pyrido-3-2-1-ij-quinoline-2-.yaml
+  label: 9-fluoro-5-methyl-1-oxo-6,7-dihydro-1H,5H-pyrido[3,2,1-ij]quinoline-2-carboxylic
+    acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO concept and external references
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: ARO fallback structure and merge key
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Target-edge inventory
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Resistance-edge inventory
+scope:
+  description: Whole exact native record; ChEBI, ARO and PubChem maintained rows;
+    adopted citation and full 2021 EFSA opinion; original 2024 full article; bounded
+    official identity and structured-context checks.
+  selection: Queue index070, CHEBI:85269 at the locked native path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:85269
+  exclusions:
+  - target: CHEBI:85267 flumequine racemate; CHEBI:85272 S and CHEBI:85273 R enantiomers;
+      other quinolones
+    reason: Distinct ChEBI concepts and experimental forms; shared connectivity does
+      not authorize arbitrary claim transfer.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Focused LinkML validation exited0.
+  target_ids:
+  - CHEBI:85269
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/9-fluoro-5-methyl-1-oxo-6-7-dihydro-1h-5h-pyrido-3-2-1-ij-quinoline-2-.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Focused strict scan has zero ERROR rows.
+  target_ids:
+  - CHEBI:85269
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/9-fluoro-5-methyl-1-oxo-6-7-dihydro-1h-5h-pyrido-3-2-1-ij-quinoline-2-.yaml
+    --out /private/tmp/am-review-session/070-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: initial-chemistry-helper
+  name: initial-chemistry-helper
+  status: failed
+  required: false
+  summary: Helper wrongly assumed the first source_concept was CHEBI. It compared
+    the correct CHEBI mint with the ARO mint; chemical parsing itself passed. Retained
+    initial failure is a helper error, not a native identity defect.
+  target_ids:
+  - CHEBI:85269
+  evidence_ids:
+  - chemistry
+  command: .venv/bin/python /private/tmp/am-review-session/chem005.py 70
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: corrected-chemistry
+  name: corrected-chemistry
+  status: passed
+  required: false
+  summary: Corrected helper checks both source-specific mints; full structure, formula,
+    charge, masses and mints pass.
+  target_ids:
+  - CHEBI:85269
+  evidence_ids:
+  - chemistry
+  command: .venv/bin/python /private/tmp/am-review-session/070-chemistry-check.py
+    70
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: structured-context
+  name: structured-context
+  status: passed
+  required: false
+  summary: Reused inspected session dataset inventory; exact gyrA query returned gene
+    b2231 in E.coli MG1655 precise1k and zero iModulons. No component summary applies.
+    This is bounded gene context, not direct drug evidence.
+  target_ids:
+  - CHEBI:85269
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism e_coli --dataset
+    precise1k --query gyrA
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:85269
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:85269
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:85269
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:85269
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:85269
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:85269
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:85269
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:85269
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:85269
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/9-fluoro-5-methyl-1-oxo-6-7-dihydro-1h-5h-pyrido-3-2-1-ij-quinoline-2-.yaml
+  locator: Entire YAML, initial capture and reread.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: supports
+  summary: SEEDED/EXACT neutral one-centre stereo-unspecified acid, purely structural
+    ChEBI definition, five parents, antimicrobial role33281, ARO fluoroquinolone structural
+    class, four xrefs, two source concepts and four seed/reseed events. No optional
+    mechanism, targets, activity_spectrum, resistance, producer, clinical status or
+    causal graphs are asserted.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv
+  locator: ChEBI row2296, ARO row447 and PubChem row163 in070-raw.json/070-pubchem-raw.json;
+    extractor176–475; seeder790–855,1061 onward,1150–1275,1483–1660.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: supports
+  summary: ARO3007521 points to structureless ChEBI85267; fallback PubChem3374 supplies
+    the same full key as ChEBI85269, explaining the documented cross-source key fold.
+    The native own ChEBI concept has no mechanism_role_ids, so seeder priority deliberately
+    does not import the racemate row gyrase/topoisomerase roles. Complete target/resistance-edge
+    TSV scans found zero exact flumequine rows. Only adopted citation is PMID34729090.
+    All17 captured maintained-input hashes remain unchanged.
+  snapshot_sha256: 4e369e50352f1f6ac8fc4580eaf0f1894355bc8458451991e3942410dfa91885
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:85269
+  locator: Complete070-chebi.html/txt,070-pubchem.json CID3374 and070-chembl.json
+    CHEMBL370252.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: supports
+  summary: Official sources match full native InChI/key DPSPPJIUMHPXMA-UHFFFAOYSA-N,
+    neutral C14H12FNO3 and unspecified stereocentre. ChEBI parents37143 organofluorine
+    compound,38921 pyridoquinoline,47881 3-oxo monocarboxylic acid and86324 quinolone
+    antibiotic are broader; ARO0000001 is fluoroquinolone antibiotic. PubChem and
+    ChEMBL present this connectivity without assigned enantiomer. The native definition
+    is chemically consistent.
+  snapshot_sha256: 999de7978043c8a1c0bb30da67842115ac3db297e91431994a12e2073cb23be9
+- evidence_id: boundary
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:85267
+  locator: Complete070-racemate.html/txt and official ARO OBO term3007521.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: context_only
+  summary: ChEBI separately defines85267 as equal R/S flumequine and gives CAS42835-25-6,
+    whereas85269 is its unspecified scaffold and parent of the individual enantiomers.
+    ARO3007521 cross-references85267, CAS42835-25-6, ChEMBL370252 and PubChem3374.
+    This is an explicit conceptual boundary to preserve; lack of stereo on native
+    SMILES does not itself prove racemate or wrong identity. CAS was corroborated
+    in official ChEBI/ARO, not independently in a CAS registry.
+  snapshot_sha256: d767e7a4444afc85732284d0a54ab3fad804d21562cbcc545c64296555f23bae
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Exact terms ARO3007521 and0000001;070-aro.obo.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: supports
+  summary: Official OBO SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+    matches the adopted manifest. It reproduces source flumequine class/xrefs and
+    PMID34729090. The source definition includes no-longer-marketed wording; native
+    definition does not import it, and inspected EFSA2021/primary2024 animal-use context
+    should prevent adopting that blanket statement as current clinical status.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit parsing
+  locator: 070-chemistry.json/log,070-chemistry-check.py; retained070-initial-chemistry.json/log.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: supports
+  summary: SMILES and InChI parse to the same full key, one neutral fragment,C14H12FNO3,average
+    mass261.252,exact261.080121464 and one unspecified centre. Corrected checks reproduce
+    antibioticmech:aro-84504339c8 and antibioticmech:chebi-ce888b444e. Initial helper
+    assumed first-source CHEBI, causing a false mint mismatch; corrected command exited0.
+  snapshot_sha256: f5bc7185a2cfe38f73f1b876f9aebb5b589a0c366c6fe10ddb17d936ea61b760
+- evidence_id: adopted
+  kind: authority
+  reference: PMID:34729090
+  locator: DOI10.2903/j.efsa.2021.6862; complete abstract070-epmc-adopted.json and
+    full opinion070-efsa.xml, Sections1–4 and relevant tables.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: supports
+  summary: The sole adopted citation is an EFSA scientific opinion, not a primary
+    experiment. It supports broad flumequine antibacterial use and reviews quinolone
+    mechanisms; many low-dose examples are other quinolones. Its lack of suitable
+    MSC/PK and growth-promotion data concerns those narrow feed-risk questions, not
+    absence of antibacterial activity. Table1 MIC_lowest0.064mg/L is database-derived,
+    not a newly measured strain-specific endpoint. No class-wide gyrase/ROS/SOS claim
+    is automatically direct exact-compound evidence.
+  snapshot_sha256: 53e8a82542df390dc5fa5ec3c53120e7b4f36e9649485694ac98620a00207676
+- evidence_id: primary
+  kind: primary_source
+  reference: https://doi.org/10.1038/s44259-024-00044-5
+  locator: Swinkels et al2024, full main article070-2024.pdf/text; Table1 visually
+    inspected070-2024-table1.png; Tables2–3,Figures1–3,Methods.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: supports
+  summary: Original experiments show flumequine-associated E.coli resistance selection
+    and cross-resistance to enrofloxacin. Direct-exposure Table1 reports flumequine
+    MICs2–4mg/L for selected GyrA S83L/D87G isolates, with strain-specific replicates
+    and parent values; broth microdilution is referenced, while selection uses MacConkey
+    at37°C overnight and flumequine2mg/L. Stepwise experiment retained10 of24 strains
+    after excluding14 with different sequence types. Broiler before/after clones did
+    not match, so the authors could not demonstrate de novo mutations in vivo. ECOFF-defined
+    non-wildtype growth differs from clinical resistance; thresholds are study-specific.
+    Commercial flumequine stereochemical composition is not established in inspected
+    main text, and no direct enzyme binding/inhibition assay or isogenic allele proof
+    is shown.
+  snapshot_sha256: de6a336a299d359dfb023e45dfc6e4d7214983c7f9b8e636aead9e1fccc2e4fa
+- evidence_id: older-primary
+  kind: primary_source
+  reference: PMID:984753
+  locator: DOI10.1128/AAC.10.1.20; complete official original abstract,1976 bioevaluation.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: context_only
+  summary: The original abstract reports antibacterial flumequine testing of321 clinical
+    isolates and88% of Gram-negative isolates with MIC6.2µg/mL or less, plus laboratory
+    mutant cross-resistance. R802 is a laboratory compound designation, not proof
+    of R stereochemistry. Full methods and exact experimental form were unavailable
+    in this pass; these aggregate data were not promoted to structured strain measurements.
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/precise1k
+  locator: Inspected session055 dataset inventory and070-imodulondb-gyra.txt.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: context_only
+  summary: gyrA resolves to e_coli/precise1k/b2231; additional gene hits include gyrB
+    b3699 and inhibitors. Zero module hits means no informative component summary.
+    The covered MG1655 transcriptomic dataset is not the2024 experimental broiler
+    isolates and establishes neither flumequine binding nor resistance causality.
+  snapshot_sha256: 424b867c86f081f31f7cce9346e736715e30d1de662965620bbdb8b547d23f99
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 070-local-hits.txt,070-maintained-search.txt,070-exact-maintained-search.txt
+    and exact TSV scans.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: context_only
+  summary: Ignored-inclusive searches found no target-specific maintained override
+    or overlay; queue rows and historical adjacent R/S reports were only context.
+    Bounded exact flumequine/identifiers/DOI searches found the adopted opinion and
+    original1976/2024 experiments. No absence of all literature, producers or mechanisms
+    is claimed.
+  search_scope: rg --no-ignore --hidden across batch007 excluding.git/.venv, followed
+    by curation,reviews,reports/yaml_record_review,conf identifier/label/slug checks;
+    direct complete target/resistance-edge TSV scan. Official ChEBI,PubChem,ChEMBL,ARO,PubMed/PMC,EFSA,EuropePMC
+    and Nature sources inspected; other quinolones and individual enantiomers excluded
+    from transferred claims.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Whole-record checklist; CURATION/HARMONIZATION; schema optional claim collections.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: supports
+  summary: One operational structure key is not universal proof of chemical-form equivalence.
+    Preserve ChEBI internal boundaries and exact-assay form; gene association, ECOFF
+    growth and class mechanisms must remain distinct from direct biochemical target
+    evidence. Optional scientific enrichment is not a required-field defect.
+- evidence_id: validation
+  kind: validation
+  reference: Documented focused native checks
+  locator: 070-focused-results.json,070-schema.log,070-strict.log/tsv and corrected
+    chemistry output.
+  accessed_at: '2026-10-21T08:20:54Z'
+  support: supports
+  summary: Schema and strict exited0. Initial helper failure is retained alongside
+    corrected chemistry exit0; actual shared gate outcomes are recorded separately.
+  snapshot_sha256: 3465daff6f303d5eeea54ff5867c2a2499559a4df83896c0ffc122ab5e3dea90
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Native exact chemical representation
+  outcome: supported
+  summary: Official structures and independent parsing agree; the record is explicitly
+    stereo-unspecified, not an assigned enantiomer or necessarily a racemate.
+  target_ids:
+  - CHEBI:85269
+  evidence_ids:
+  - record
+  - identity
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Source fold and chemical-form boundary
+  outcome: supported
+  summary: Maintained ARO/PubChem full-key fold is reproducible under documented policy.
+    Racemate versus unspecified-skeleton semantics warrant a curator note before experimental
+    enrichment, without asserting an unproved wrong structure.
+  target_ids:
+  - CHEBI:85269
+  evidence_ids:
+  - source
+  - boundary
+  - aro
+  - rubric
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and filing
+  outcome: supported
+  summary: Official classification, adopted opinion and original flumequine antibacterial/resistance
+    observations support broad filing. No individual-enantiomer activity is inferred.
+  target_ids:
+  - CHEBI:85269
+  evidence_ids:
+  - identity
+  - adopted
+  - primary
+  - older-primary
+- assessment_id: mechanism
+  area: completeness
+  topic: Mechanism and resistance enrichment
+  outcome: unknown
+  summary: Optional mechanism/resistance fields are absent; selected-mutant association
+    and quinolone reviews provide bounded leads, not direct binding or allele causality.
+    Own-concept ChEBI role priority explains absent inherited mechanism.
+  target_ids:
+  - CHEBI:85269
+  evidence_ids:
+  - source
+  - adopted
+  - primary
+  - adapter
+- assessment_id: other
+  area: completeness
+  topic: Producer,clinical,graph and dataset scope
+  outcome: not_applicable
+  summary: No such objects are asserted. Synthetic class identity does not imply a
+    biological producer; no current clinical status was imported.
+  target_ids:
+  - CHEBI:85269
+  evidence_ids:
+  - record
+  - aro
+  - rubric
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained inputs/history
+  outcome: supported
+  summary: Captured sources explain structure, class, references and source mints.
+    All17 inputs unchanged; four native generated history events remain untouched.
+  target_ids:
+  - CHEBI:85269
+  evidence_ids:
+  - source
+  - chemistry
+- assessment_id: gates
+  area: schema
+  topic: Focused deterministic checks
+  outcome: supported
+  summary: Schema/strict and corrected chemistry pass; initial helper error is transparently
+    retained.
+  target_ids:
+  - CHEBI:85269
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-85269-flumequine-racemate-assay-boundary
+  category: identity
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Preserve the racemate versus unspecified-structure boundary during enrichment
+  description: The generated full-key merge is reproducible, but ARO links the separately
+    defined ChEBI racemate while this native structure has unassigned stereo. Official
+    PubChem/ChEMBL match the native representation. A curator should document which
+    source/assay form each future claim denotes, rather than infer racemate or enantiomer
+    equivalence from shared connectivity.
+  target_ids:
+  - CHEBI:85269
+  field_paths:
+  - xrefs
+  - source_concepts
+  - chemical_structure
+  - discussions
+  evidence_ids:
+  - source
+  - identity
+  - boundary
+  - rubric
+  rule_id: 'native-review-checklist: Exact identity/Cross-references'
+  native_severity: informational chemical-form qualification
+  normalization_reason: No opposite enantiomer, wrong formula or unsupported explicit
+    racemate claim occurs in the native record; this is an evidence-boundary question,
+    not a confirmed identity error.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO concept and external references
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: ARO fallback structure and merge key
+- finding_id: F2
+  issue_key: chebi-85269-primary-assay-resistance-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Add bounded primary activity and resistance evidence after form adjudication
+  description: Original flumequine experiments provide strain-level MIC and selected-mutant
+    leads. Curate them with exact compound-form qualification, strain/replicate and
+    assay details; keep ECOFF non-wildtype selection distinct from clinical resistance
+    and mutant association distinct from direct target binding.
+  target_ids:
+  - CHEBI:85269
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - resistance_mechanisms
+  - discussions
+  evidence_ids:
+  - primary
+  - older-primary
+  - adopted
+  - adapter
+  - rubric
+  rule_id: 'native-review-checklist: Activity/Resistance/Evidence'
+  native_severity: informational optional enrichment
+  normalization_reason: Optional collections are not required; no native direct-target
+    or quantitative assay claim was shown wrong.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/9-fluoro-5-methyl-1-oxo-6-7-dihydro-1h-5h-pyrido-3-2-1-ij-quinoline-2-.yaml
+    role: Curator-owned claims through write_validated_antibiotic and native history
+actions:
+- action_id: A1
+  description: Document assay-form mapping and retain the ChEBI scaffold/racemate/enantiomer
+    distinctions. Change a generated mapping only if specific evidence establishes
+    a mismatch.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:85269
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO concept and external references
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: ARO fallback structure and merge key
+  acceptance_checks:
+  - Inspect exact supplier/form/structure in any proposed primary assay, do not infer
+    racemate from unspecified SMILES.
+  - If a source mapping correction is justified, update maintained source/extractor
+    or decision owner and reseed; otherwise use an evidence-backed native discussion
+    through the validated writer.
+  - Revalidate full structure key, source concepts, schema/strict and required shared
+    gates.
+- action_id: A2
+  description: Optionally curate exact-form primary MIC and resistance-selection observations,
+    retaining the experiment limits.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:85269
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/9-fluoro-5-methyl-1-oxo-6-7-dihydro-1h-5h-pyrido-3-2-1-ij-quinoline-2-.yaml
+    role: Curator-owned claims through write_validated_antibiotic and native history
+  acceptance_checks:
+  - Capture original strain identifier, each replicate, measured endpoint, unit, qualifier,
+    medium, inoculum, temperature/time and assay reference; resolve ambiguous zero
+    MIC entries before numeric import.
+  - Keep published ECOFF/clinical thresholds versioned and scoped to the study; do
+    not label all growth above ECOFF clinically resistant.
+  - Represent S83L/D87G selected-isolate associations with their genomic/experimental
+    limits; do not claim a purified-target assay, isogenic allele proof, in-vivo de-novo
+    mutation or exact enantiomer effect.
+  - Use write_validated_antibiotic and record_curation_event at the actual target
+    path; run focused and required shared gates.
+limitations:
+- All17 captured maintained-input hashes are unchanged. Initial chemistry helper assumed
+  CHEBI first and failed only mint comparison; corrected helper independently checked
+  both source mints and passed.
+- CAS42835-25-6 was corroborated in official ChEBI/ARO, not independently through
+  CAS. Exact experimental stereochemical composition was not resolved; unspecified
+  structure must not be called racemate by inference.
+- The sole adopted2021 citation is an authority synthesis. Full2024 main article and
+  Table1 image were inspected, but supplementary exact material details were not.1976
+  only complete abstract was accessible. Individual enantiomer literature and all
+  quinolone mechanisms were outside this bounded review.
+- iModulonDB MG1655 gene context differs from experimental isolates and is not a target/phenotype
+  proof. No native transcriptomics assertion exists.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
