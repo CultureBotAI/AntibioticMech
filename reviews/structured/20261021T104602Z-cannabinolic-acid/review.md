@@ -1,0 +1,813 @@
+# Cannabinolic acid: exact identity and compound-specific antibacterial assays
+
+- Review: 20261021T104602Z-cannabinolic-acid
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T10:32:37Z
+- Finished UTC: 2026-10-21T10:46:02Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+No confirmed native defect. Neutral cannabinolic acid identity, source mint, retained cross-references and antibacterial filing are supported. Two primary studies report exact-compound MICs under distinct strain and material conditions. The wording about biosynthesis remains qualified because the inspected evidence does not establish an enzymatic CBNA-to-cannabinol pathway. No direct antibacterial molecular target was verified. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole-record review of exact cannabinolic acid.
+
+Selection: Queue 192 in isolated batch 020; initial coordinator input capture preserved.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:234469 | data/antibiotics/antibacterial/cannabinolic-acid.yaml | generated | cannabinolic acid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema | passed | True | CHEBI:234469 | Actual batch 020 focused command passed with no record errors. |
+| Focused strict | passed | True | CHEBI:234469 | Actual batch 020 focused command passed with no record errors. |
+| Independent structure and mint | passed | True | CHEBI:234469 | Existing locked batch 019 RDKit interpreter against batch 020 cwd passed both native encodings and exact source mint; no new dependency installation. |
+| Authoritative full QC | failed | True | CHEBI:234469 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:234469 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:234469 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:234469 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:234469 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:234469 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:234469 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:234469 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:234469 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral cannabinolic acid
+
+identity: supported. Targets: CHEBI:234469.
+
+The native structure, charge, masses and exact mint agree internally and with current ChEBI, LIPID MAPS and CAS-resolved PubChem. Primary isolation and the 2025 compound drawing support exact free-acid mapping.
+
+### Parents, filing and role
+
+grounding: supported. Targets: CHEBI:234469.
+
+Polyketide, hydroxymonocarboxylic acid, benzochromene and phytocannabinoid parents are compatible. Exact CBNA primary MIC observations support the antibacterial role and filing.
+
+### Structural definition and biosynthetic wording
+
+evidence: unknown. Targets: CHEBI:234469.
+
+The structural definition is correct. The asserted precursor relationship is chemically plausible, but the inspected sources do not establish an enzymatic CBNA-to-CBN biosynthetic pathway. Chemical synthesis, analytical conversion of an ester and a historical artefact-paper title do not settle that wording. No confirmed contradictory native fact is inferred from incomplete access.
+
+### Compound-specific strain and assay scope
+
+evidence: supported. Targets: CHEBI:234469.
+
+Commercial CBNA in 2021 and the 2025 isolated material have exact-compound positive MIC observations. Their different strains, preparations and methods explain why values must be retained separately; the &gt;128 µg/mL V. harveyi result remains a tested upper-limit observation and is not species-wide resistance.
+
+### CBNA molecular mechanism
+
+evidence: unknown. Targets: CHEBI:234469.
+
+No direct CBNA antibacterial molecular target was verified. CBD membrane results, Fe-S docking and context-dependent luminescence changes cannot establish a CBNA mechanism. Empty optional mode and target fields are not themselves defects.
+
+### Related cannabinoid and ester boundaries
+
+evidence: supported. Targets: CHEBI:234469.
+
+Free CBNA is distinct from the antifungal cannabinolate ester and from cannabidiolic acid despite a conflicting abstract abbreviation. Host LDHA/antinociceptive results, analytical detection and viral docking do not establish bacterial targets or clinical antibacterial use.
+
+### Adapters, clinical status and resistance
+
+scope: not_applicable. Targets: CHEBI:234469.
+
+No native named protein, gene, regulator, pathway or transcriptomic dataset requires a structured source adapter. There are no native clinical, resistance or causal-graph assertions. No clinical breakpoint, approval or broad resistance claim is inferred from the assays.
+
+### Generated owners and native status
+
+provenance: supported. Targets: CHEBI:234469.
+
+The exact ChEBI source concept, deterministic mint and three seed events are coherent. SEEDED status remains unchanged; scientific review is separate from native curation.
+
+### Optional assay enrichment and definition clarification
+
+completeness: supported. Targets: CHEBI:234469.
+
+Exact activity_spectrum enrichment is actionable with material/strain/method boundaries. Mechanistic or biosynthetic additions require additional evidence. Optional fields do not generate blanket findings.
+
+### Focused deterministic checks
+
+schema: supported. Targets: CHEBI:234469.
+
+Schema, strict and alternate-environment chemistry pass; deterministic success is not evidence for the biological mechanism.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Optionally curate exact CBNA activity_spectrum observations with compound, strain and assay provenance.
+
+- Retain 2021 Table 2 row 24 ranges, both exact ATCC strains, n=4 and commercial Cerilliant preparation; resolve row-specific laboratory/media mapping before populating detailed assay fields.
+- Keep 2025 isolated compound 7, MRSA 7112 MIC 128 µg/mL and V. harveyi MM30 &gt;128 µg/mL separate from the 2021 observations; preserve 24 h, medium, temperature and controls.
+- Do not transfer CBD mechanism, model docking as experimental binding, or infer clinical resistance from an upper-limit MIC.
+- Run native schema, strict, term/reference/history and applicable corpus checks after any separately authorized curation.
+
+### A2
+
+Resolve the precise source support for the native biosynthesis wording before strengthening or revising it.
+
+- Inspect direct CBNA-to-CBN conversion evidence and distinguish spontaneous/analytical decarboxylation from an enzymatic biosynthetic pathway.
+- The inaccessible 1985 paper title and synthesis abstract are discovery leads, not proof of an in-plant mechanism or of a false native statement.
+- If wording is clarified, preserve exact free-acid identity and avoid transferring a CBDA, THCA or ester transformation to CBNA.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/cannabinolic-acid.yaml; Entire YAML | supports | Read complete definition, synonyms, four chemical parents, antibacterial role, neutral structure, CAS and LIPID MAPS xrefs, exact source concept and three seed events. No populated mode, molecular targets, activity_spectrum, resistance, producer, clinical or causal-graph claims. |
+| owners | data/raw/chebi_antimicrobials.tsv; Exact row 2942; source configuration, role table and extraction/seeding ownership | supports | Raw ChEBI row owns the definition, graph, parents, role, xrefs and ten PMID leads. Ignored-inclusive search found no exact additional curator input. Source-owned changes belong in maintained source/extractor or decisions; optional curated activity belongs in the native record through its validated writer. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:234469; Current entry: identity, parents, role, xrefs and definition | supports | Current ChEBI matches cannabinolic acid C22H26O4, neutral charge, KXKOBIRSQLNUPS-UHFFFAOYSA-N, masses and all four chemical parents. It repeats the native precursor-in-biosynthesis wording, which is an authority assertion rather than an independently demonstrated enzymatic pathway. |
+| chemistry | Independent RDKit 2026.03.5 encodings and mint; 192-chemistry.json; batch 019 interpreter against batch 020 cwd | supports | SMILES and InChI both parse and yield the retained full InChIKey, neutral C22H26O4, one fragment, average mass 354.446 and exact mass 354.1831093. No tetrahedral stereocentres are present; exact CHEBI source mint agrees. |
+| lipidmaps | https://www.lipidmaps.org/rest/compound/lm_id/LMPK13120007/all/json; Current exact entry and independent structure fields | supports | LMPK13120007 resolves to cannabinolic acid with the same full InChI/key, formula and exact mass; it independently links PubChem CID 3081990. Biological contextual prose on the HTML page is not treated as primary biosynthesis evidence. |
+| cas | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/2808-39-1/property/InChIKey,IUPACName/JSON; CAS-name query and exact returned key | supports | CAS 2808-39-1 resolves to CID 3081990 with the native full InChIKey, agreeing with current ChEBI. NIST returned no registry entry; that lack of coverage is not a demonstrated CAS mismatch. |
+| adopted-references | EuropePMC MED core records; Ten adopted PMIDs; identifiers, titles and available abstracts | context_only | All ten PMIDs resolve: 17354173 chemical synthesis; 18303850 isolated cannabinoids/esters; 3161287 a 1985 GC artefact paper with no accessible abstract; 33839545 cannabinoid profiling; 33887133 LDHA screening; 33964342 antioxidant chemistry; 34068332 serum detection; 34897062 mouse antinociceptive tolerance; 35566148 SARS-CoV-2 docking; 35939416 cattle-tissue quantification. The antioxidant abstract calls CBDA cannabinolic acid, while its title concerns cannabidiolic acid; this name conflict cannot ground CBNA antioxidant evidence. Extracts, host assays and docking are not bacterial mechanism evidence. |
+| isolation | https://doi.org/10.1021/np070454a; PMID 18303850 / PMC4883103; isolation, Table 3 and ester characterization | supports | The primary report separately isolated free CBNA (5 mg), identified it by comparison with published data and reported its NMR assignments. Compound 8 is 4-terpenyl cannabinolate: its Candida IC50 and GC-MS hydrolysis/decarboxylation observations cannot be assigned directly to free CBNA. This paper supports the free-acid versus ester boundary. |
+| activity-2021 | https://doi.org/10.1038/s42003-020-01530-y; PMC7815910; Table 2 row 24, General chemical methods and MIC methods | supports | Commercial natural analogue 24, cannabinolic acid A (CBNA), was purchased through Kinesis Australia/Cerilliant. Table 2 reports MIC ranges of 4–16 µg/mL against S. aureus MRSA ATCC 43300 and 0.25–4 µg/mL against N. gonorrhoeae ATCC 19424 (n=4). Multiple laboratory MIC protocols are described; exact per-row laboratory/media assignment was not fully resolved. The detailed membrane, resistance and animal experiments concern CBD and are not CBNA evidence. |
+| activity-2025 | https://doi.org/10.3390/microorganisms13020287; PMID 40005654 / PMC11857621; Methods 2.1–2.2, Table 1 row 7 and QS results | supports | CBNA 7 was isolated from THC-rich Cannabis sativa by extraction/chromatographic purification and identified by HPLC-UV/MS. Table 1 reports MIC 128 µg/mL against MRSA 7112 and &gt;128 µg/mL against V. harveyi MM30. The modified EUCAST microdilution used twofold 128-to-2 µg/mL dilutions, DMSO controls and 24 h endpoints; MRSA used Mueller-Hinton medium at 37 °C and V. harveyi 30 °C. CBNA was not one of the compounds selected for the MRSA AI-2-production assay; its high-concentration stimulation of V. harveyi luminescence without supplied AI-2 is not general quorum-sensing inhibition or a direct molecular target. |
+| drawing-2025 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d416/11857621/ab31c239e887/microorganisms-13-00287-g001.jpg; Figure 1, compound 7; inspected drawing | supports | The aromatic dibenzopyran acid drawing for compound 7 has the phenolic OH, adjacent carboxy group, pentyl chain and methyl substitutions of the native graph. It distinguishes CBNA from CBN 3, THCA 4 and CBDA 6. |
+| computational-boundary | https://pmc.ncbi.nlm.nih.gov/articles/PMC12467043/; 2025 computational Neisseria paper; methods and section 3.3.3 | context_only | The paper models CBNA docking to a Fe-S-domain protein and reuses the 2021 MIC range. It contains no inspected direct CBNA binding or target-inhibition experiment. Its language about inhibition and resistance is not adopted as experimentally established mechanism. |
+| search | Ignored-inclusive repository search and free primary follow-up; CHEBI:234469, label, slug and full InChIKey; primary cannabinoid leads | context_only | Ignored-inclusive search covered the repository outside .git/.venv, including raw inputs, curation tables, generated products and historical research ledgers. Primary follow-up separated exact CBNA, related acids, esters and extracts. No native named gene, protein, regulator or pathway triggered a structured adapter query. |
+| gates | Actual focused validation and alternate chemistry environment; 192-focused-results.json; 192-validation.tsv; 192-chemistry.json | supports | Batch 020 schema and strict checks passed, one record with no errors. The pre-existing locked batch 019 RDKit environment checked the batch 020 target; all original captured input hashes were rechecked unchanged. |
+
+## Limits And Additional Notes
+
+- All ten adopted PMID records were checked, but full text was not inspected for every paper. The 1985 artefact study had no accessible abstract; no mechanistic conclusion is drawn from its title.
+- Detailed per-row laboratory/media mapping and all supplementary raw data for the 2021 analogue MIC panel were not independently resolved. The two primary MIC studies remain separate strain/material observations.
+- No directly verified CBNA antibacterial target or enzymatic CBNA-to-cannabinol biosynthetic pathway was located in the inspected evidence. This bounded evidence gap is not proof that such a pathway cannot exist.
+- The 2021 table scaffold graphic was only available at low resolution in the accessed PMC HTML. Its explicit named commercial CBNA row and the separately inspected 2025 compound 7 drawing support compound mapping; no unseen spectral assignment is claimed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 13 original captured input hashes rechecked unchanged; no native/source/status/history edits.
+- Schema and strict used the batch 020 environment. Chemistry used the existing locked batch 019 RDKit 2026.03.5 interpreter against batch 020 cwd because batch 020 lacks RDKit.
+- No alias-only or optional-field finding; no blanket inactivity claim from an above-limit assay.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T104602Z-cannabinolic-acid
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cannabinolic acid: exact identity and compound-specific antibacterial assays'
+started_at: '2026-10-21T10:32:37Z'
+finished_at: '2026-10-21T10:46:02Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent full native/raw-owner review, current exact identity
+    and cross-reference checks, all ten adopted citation records, and inspection of
+    compound-specific primary antibacterial tables and material descriptions.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: No confirmed native defect. Neutral cannabinolic acid identity, source mint,
+  retained cross-references and antibacterial filing are supported. Two primary studies
+  report exact-compound MICs under distinct strain and material conditions. The wording
+  about biosynthesis remains qualified because the inspected evidence does not establish
+  an enzymatic CBNA-to-cannabinol pathway. No direct antibacterial molecular target
+  was verified. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cannabinolic-acid.yaml
+    sha256: 0b0849ad37c04033aec196736c70a749465e4ab11a15ae0cfe3abd32547e0719
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:234469
+  path: data/antibiotics/antibacterial/cannabinolic-acid.yaml
+  label: cannabinolic acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Whole-record review of exact cannabinolic acid.
+  selection: Queue 192 in isolated batch 020; initial coordinator input capture preserved.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:234469
+  exclusions:
+  - target: Cannabinol, cannabidiolic acid, other cannabinoid acids, cannabinolate
+      esters and extracts
+    reason: Separate molecules or preparations; their assays, host targets and mechanisms
+      are not transferred.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual batch 020 focused command passed with no record errors.
+  target_ids:
+  - CHEBI:234469
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cannabinolic-acid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual batch 020 focused command passed with no record errors.
+  target_ids:
+  - CHEBI:234469
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cannabinolic-acid.yaml --out /private/tmp/am-review-session/192-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Independent structure and mint
+  status: passed
+  required: true
+  summary: Existing locked batch 019 RDKit interpreter against batch 020 cwd passed
+    both native encodings and exact source mint; no new dependency installation.
+  target_ids:
+  - CHEBI:234469
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/chem005.py
+    192 (cwd /private/tmp/antibioticmech-record-reviews-020)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+  - gates
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:234469
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:234469
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:234469
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:234469
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:234469
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:234469
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:234469
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:234469
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:234469
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cannabinolic-acid.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T10:42:24Z'
+  support: supports
+  summary: Read complete definition, synonyms, four chemical parents, antibacterial
+    role, neutral structure, CAS and LIPID MAPS xrefs, exact source concept and three
+    seed events. No populated mode, molecular targets, activity_spectrum, resistance,
+    producer, clinical or causal-graph claims.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Exact row 2942; source configuration, role table and extraction/seeding
+    ownership
+  accessed_at: '2026-10-21T10:42:24Z'
+  support: supports
+  summary: Raw ChEBI row owns the definition, graph, parents, role, xrefs and ten
+    PMID leads. Ignored-inclusive search found no exact additional curator input.
+    Source-owned changes belong in maintained source/extractor or decisions; optional
+    curated activity belongs in the native record through its validated writer.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:234469
+  locator: 'Current entry: identity, parents, role, xrefs and definition'
+  accessed_at: '2026-10-21T10:37:44Z'
+  support: supports
+  summary: Current ChEBI matches cannabinolic acid C22H26O4, neutral charge, KXKOBIRSQLNUPS-UHFFFAOYSA-N,
+    masses and all four chemical parents. It repeats the native precursor-in-biosynthesis
+    wording, which is an authority assertion rather than an independently demonstrated
+    enzymatic pathway.
+  snapshot_sha256: 65f4f12006d6f24c2c0a115a4724564687077252214703b61467b07974a22356
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit 2026.03.5 encodings and mint
+  locator: 192-chemistry.json; batch 019 interpreter against batch 020 cwd
+  accessed_at: '2026-10-21T10:37:29Z'
+  support: supports
+  summary: SMILES and InChI both parse and yield the retained full InChIKey, neutral
+    C22H26O4, one fragment, average mass 354.446 and exact mass 354.1831093. No tetrahedral
+    stereocentres are present; exact CHEBI source mint agrees.
+  snapshot_sha256: 10a69ba6a2d979f1619622e3ef375435901e3a464c548e4bfe63e3f1201259a1
+- evidence_id: lipidmaps
+  kind: database
+  reference: https://www.lipidmaps.org/rest/compound/lm_id/LMPK13120007/all/json
+  locator: Current exact entry and independent structure fields
+  accessed_at: '2026-10-21T10:37:44Z'
+  support: supports
+  summary: LMPK13120007 resolves to cannabinolic acid with the same full InChI/key,
+    formula and exact mass; it independently links PubChem CID 3081990. Biological
+    contextual prose on the HTML page is not treated as primary biosynthesis evidence.
+  snapshot_sha256: 266d408a8ac6c9862c793727139a17e2ae85ec1b3df4ab89b098ce37baa3eb06
+- evidence_id: cas
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/2808-39-1/property/InChIKey,IUPACName/JSON
+  locator: CAS-name query and exact returned key
+  accessed_at: '2026-10-21T10:38:12Z'
+  support: supports
+  summary: CAS 2808-39-1 resolves to CID 3081990 with the native full InChIKey, agreeing
+    with current ChEBI. NIST returned no registry entry; that lack of coverage is
+    not a demonstrated CAS mismatch.
+  snapshot_sha256: a74d9b0f845252f56fc4312affe265864113754f44dc6af380e8045888225335
+- evidence_id: adopted-references
+  kind: primary_source
+  reference: EuropePMC MED core records
+  locator: Ten adopted PMIDs; identifiers, titles and available abstracts
+  accessed_at: '2026-10-21T10:37:45Z'
+  support: context_only
+  summary: 'All ten PMIDs resolve: 17354173 chemical synthesis; 18303850 isolated
+    cannabinoids/esters; 3161287 a 1985 GC artefact paper with no accessible abstract;
+    33839545 cannabinoid profiling; 33887133 LDHA screening; 33964342 antioxidant
+    chemistry; 34068332 serum detection; 34897062 mouse antinociceptive tolerance;
+    35566148 SARS-CoV-2 docking; 35939416 cattle-tissue quantification. The antioxidant
+    abstract calls CBDA cannabinolic acid, while its title concerns cannabidiolic
+    acid; this name conflict cannot ground CBNA antioxidant evidence. Extracts, host
+    assays and docking are not bacterial mechanism evidence.'
+  snapshot_sha256: e999dba834db290d7870dfe20de58e1cb2f54a5ab617677e1b150be174704f62
+- evidence_id: isolation
+  kind: primary_source
+  reference: https://doi.org/10.1021/np070454a
+  locator: PMID 18303850 / PMC4883103; isolation, Table 3 and ester characterization
+  accessed_at: '2026-10-21T10:38:12Z'
+  support: supports
+  summary: 'The primary report separately isolated free CBNA (5 mg), identified it
+    by comparison with published data and reported its NMR assignments. Compound 8
+    is 4-terpenyl cannabinolate: its Candida IC50 and GC-MS hydrolysis/decarboxylation
+    observations cannot be assigned directly to free CBNA. This paper supports the
+    free-acid versus ester boundary.'
+  snapshot_sha256: e77a900266e14d2499e807f0fad8f55f036d53753923a0bf19acbda340d716d2
+- evidence_id: activity-2021
+  kind: primary_source
+  reference: https://doi.org/10.1038/s42003-020-01530-y
+  locator: PMC7815910; Table 2 row 24, General chemical methods and MIC methods
+  accessed_at: '2026-10-21T10:38:12Z'
+  support: supports
+  summary: Commercial natural analogue 24, cannabinolic acid A (CBNA), was purchased
+    through Kinesis Australia/Cerilliant. Table 2 reports MIC ranges of 4–16 µg/mL
+    against S. aureus MRSA ATCC 43300 and 0.25–4 µg/mL against N. gonorrhoeae ATCC
+    19424 (n=4). Multiple laboratory MIC protocols are described; exact per-row laboratory/media
+    assignment was not fully resolved. The detailed membrane, resistance and animal
+    experiments concern CBD and are not CBNA evidence.
+  snapshot_sha256: 6bc756cdc6b795b2133d4195d82a18d2d66b8705f1ffe3b1399addc78465c9d9
+- evidence_id: activity-2025
+  kind: primary_source
+  reference: https://doi.org/10.3390/microorganisms13020287
+  locator: PMID 40005654 / PMC11857621; Methods 2.1–2.2, Table 1 row 7 and QS results
+  accessed_at: '2026-10-21T10:38:12Z'
+  support: supports
+  summary: CBNA 7 was isolated from THC-rich Cannabis sativa by extraction/chromatographic
+    purification and identified by HPLC-UV/MS. Table 1 reports MIC 128 µg/mL against
+    MRSA 7112 and >128 µg/mL against V. harveyi MM30. The modified EUCAST microdilution
+    used twofold 128-to-2 µg/mL dilutions, DMSO controls and 24 h endpoints; MRSA
+    used Mueller-Hinton medium at 37 °C and V. harveyi 30 °C. CBNA was not one of
+    the compounds selected for the MRSA AI-2-production assay; its high-concentration
+    stimulation of V. harveyi luminescence without supplied AI-2 is not general quorum-sensing
+    inhibition or a direct molecular target.
+  snapshot_sha256: 08761a8130fa8ad9e2895121664c78a9272adbb0159dd23ea1d91a9b8e577e87
+- evidence_id: drawing-2025
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d416/11857621/ab31c239e887/microorganisms-13-00287-g001.jpg
+  locator: Figure 1, compound 7; inspected drawing
+  accessed_at: '2026-10-21T10:38:56Z'
+  support: supports
+  summary: The aromatic dibenzopyran acid drawing for compound 7 has the phenolic
+    OH, adjacent carboxy group, pentyl chain and methyl substitutions of the native
+    graph. It distinguishes CBNA from CBN 3, THCA 4 and CBDA 6.
+  snapshot_sha256: 0a33a86234285785bfba6e6c9f85524970f5d92723e22ec26253e6e2795bc7bc
+- evidence_id: computational-boundary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12467043/
+  locator: 2025 computational Neisseria paper; methods and section 3.3.3
+  accessed_at: '2026-10-21T10:38:13Z'
+  support: context_only
+  summary: The paper models CBNA docking to a Fe-S-domain protein and reuses the 2021
+    MIC range. It contains no inspected direct CBNA binding or target-inhibition experiment.
+    Its language about inhibition and resistance is not adopted as experimentally
+    established mechanism.
+  snapshot_sha256: d09a311d4df43ecf343ea87670bbbc7f1a7b892c625faf1ca35ea624c3b2e511
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive repository search and free primary follow-up
+  locator: CHEBI:234469, label, slug and full InChIKey; primary cannabinoid leads
+  accessed_at: '2026-10-21T10:37:27Z'
+  support: context_only
+  summary: Ignored-inclusive search covered the repository outside .git/.venv, including
+    raw inputs, curation tables, generated products and historical research ledgers.
+    Primary follow-up separated exact CBNA, related acids, esters and extracts. No
+    native named gene, protein, regulator or pathway triggered a structured adapter
+    query.
+  snapshot_sha256: 06a5441832d14a629e1b2d6325533127c2437172e00458998cf8be6961f4637c
+  search_scope: rg --no-ignore --hidden exact identifier/label/key across batch 020
+    excluding .git/.venv; free EPMC MED core, PMC primary text, current ChEBI/LIPID
+    MAPS/PubChem/NIST and limited primary publisher discovery on 2026-10-21.
+- evidence_id: gates
+  kind: validation
+  reference: Actual focused validation and alternate chemistry environment
+  locator: 192-focused-results.json; 192-validation.tsv; 192-chemistry.json
+  accessed_at: '2026-10-21T10:41:00Z'
+  support: supports
+  summary: Batch 020 schema and strict checks passed, one record with no errors. The
+    pre-existing locked batch 019 RDKit environment checked the batch 020 target;
+    all original captured input hashes were rechecked unchanged.
+  snapshot_sha256: 3aa85845dadb7e7a11255ef50821826e398aef38ca613560b01d0c09f06d7220
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral cannabinolic acid
+  outcome: supported
+  summary: The native structure, charge, masses and exact mint agree internally and
+    with current ChEBI, LIPID MAPS and CAS-resolved PubChem. Primary isolation and
+    the 2025 compound drawing support exact free-acid mapping.
+  target_ids:
+  - CHEBI:234469
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - lipidmaps
+  - cas
+  - isolation
+  - drawing-2025
+- assessment_id: grounding
+  area: grounding
+  topic: Parents, filing and role
+  outcome: supported
+  summary: Polyketide, hydroxymonocarboxylic acid, benzochromene and phytocannabinoid
+    parents are compatible. Exact CBNA primary MIC observations support the antibacterial
+    role and filing.
+  target_ids:
+  - CHEBI:234469
+  evidence_ids:
+  - chebi
+  - activity-2021
+  - activity-2025
+- assessment_id: definition
+  area: evidence
+  topic: Structural definition and biosynthetic wording
+  outcome: unknown
+  summary: The structural definition is correct. The asserted precursor relationship
+    is chemically plausible, but the inspected sources do not establish an enzymatic
+    CBNA-to-CBN biosynthetic pathway. Chemical synthesis, analytical conversion of
+    an ester and a historical artefact-paper title do not settle that wording. No
+    confirmed contradictory native fact is inferred from incomplete access.
+  target_ids:
+  - CHEBI:234469
+  evidence_ids:
+  - native
+  - chebi
+  - adopted-references
+  - isolation
+- assessment_id: activity
+  area: evidence
+  topic: Compound-specific strain and assay scope
+  outcome: supported
+  summary: Commercial CBNA in 2021 and the 2025 isolated material have exact-compound
+    positive MIC observations. Their different strains, preparations and methods explain
+    why values must be retained separately; the >128 µg/mL V. harveyi result remains
+    a tested upper-limit observation and is not species-wide resistance.
+  target_ids:
+  - CHEBI:234469
+  evidence_ids:
+  - activity-2021
+  - activity-2025
+  - drawing-2025
+- assessment_id: mechanism
+  area: evidence
+  topic: CBNA molecular mechanism
+  outcome: unknown
+  summary: No direct CBNA antibacterial molecular target was verified. CBD membrane
+    results, Fe-S docking and context-dependent luminescence changes cannot establish
+    a CBNA mechanism. Empty optional mode and target fields are not themselves defects.
+  target_ids:
+  - CHEBI:234469
+  evidence_ids:
+  - native
+  - activity-2021
+  - activity-2025
+  - computational-boundary
+- assessment_id: source-scope
+  area: evidence
+  topic: Related cannabinoid and ester boundaries
+  outcome: supported
+  summary: Free CBNA is distinct from the antifungal cannabinolate ester and from
+    cannabidiolic acid despite a conflicting abstract abbreviation. Host LDHA/antinociceptive
+    results, analytical detection and viral docking do not establish bacterial targets
+    or clinical antibacterial use.
+  target_ids:
+  - CHEBI:234469
+  evidence_ids:
+  - isolation
+  - adopted-references
+- assessment_id: optional-domains
+  area: scope
+  topic: Adapters, clinical status and resistance
+  outcome: not_applicable
+  summary: No native named protein, gene, regulator, pathway or transcriptomic dataset
+    requires a structured source adapter. There are no native clinical, resistance
+    or causal-graph assertions. No clinical breakpoint, approval or broad resistance
+    claim is inferred from the assays.
+  target_ids:
+  - CHEBI:234469
+  evidence_ids:
+  - native
+  - activity-2021
+  - activity-2025
+- assessment_id: history
+  area: provenance
+  topic: Generated owners and native status
+  outcome: supported
+  summary: The exact ChEBI source concept, deterministic mint and three seed events
+    are coherent. SEEDED status remains unchanged; scientific review is separate from
+    native curation.
+  target_ids:
+  - CHEBI:234469
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+- assessment_id: completeness
+  area: completeness
+  topic: Optional assay enrichment and definition clarification
+  outcome: supported
+  summary: Exact activity_spectrum enrichment is actionable with material/strain/method
+    boundaries. Mechanistic or biosynthetic additions require additional evidence.
+    Optional fields do not generate blanket findings.
+  target_ids:
+  - CHEBI:234469
+  evidence_ids:
+  - activity-2021
+  - activity-2025
+  - owners
+- assessment_id: schema
+  area: schema
+  topic: Focused deterministic checks
+  outcome: supported
+  summary: Schema, strict and alternate-environment chemistry pass; deterministic
+    success is not evidence for the biological mechanism.
+  target_ids:
+  - CHEBI:234469
+  evidence_ids:
+  - gates
+  - chemistry
+findings: []
+actions:
+- action_id: A1
+  description: Optionally curate exact CBNA activity_spectrum observations with compound,
+    strain and assay provenance.
+  finding_ids: []
+  target_ids:
+  - CHEBI:234469
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cannabinolic-acid.yaml
+    role: Curator-owned activity_spectrum through validated writer
+  acceptance_checks:
+  - Retain 2021 Table 2 row 24 ranges, both exact ATCC strains, n=4 and commercial
+    Cerilliant preparation; resolve row-specific laboratory/media mapping before populating
+    detailed assay fields.
+  - Keep 2025 isolated compound 7, MRSA 7112 MIC 128 µg/mL and V. harveyi MM30 >128
+    µg/mL separate from the 2021 observations; preserve 24 h, medium, temperature
+    and controls.
+  - Do not transfer CBD mechanism, model docking as experimental binding, or infer
+    clinical resistance from an upper-limit MIC.
+  - Run native schema, strict, term/reference/history and applicable corpus checks
+    after any separately authorized curation.
+- action_id: A2
+  description: Resolve the precise source support for the native biosynthesis wording
+    before strengthening or revising it.
+  finding_ids: []
+  target_ids:
+  - CHEBI:234469
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source-owned definition through ChEBI extraction or a maintained adjudication
+  acceptance_checks:
+  - Inspect direct CBNA-to-CBN conversion evidence and distinguish spontaneous/analytical
+    decarboxylation from an enzymatic biosynthetic pathway.
+  - The inaccessible 1985 paper title and synthesis abstract are discovery leads,
+    not proof of an in-plant mechanism or of a false native statement.
+  - If wording is clarified, preserve exact free-acid identity and avoid transferring
+    a CBDA, THCA or ester transformation to CBNA.
+limitations:
+- All ten adopted PMID records were checked, but full text was not inspected for every
+  paper. The 1985 artefact study had no accessible abstract; no mechanistic conclusion
+  is drawn from its title.
+- Detailed per-row laboratory/media mapping and all supplementary raw data for the
+  2021 analogue MIC panel were not independently resolved. The two primary MIC studies
+  remain separate strain/material observations.
+- No directly verified CBNA antibacterial target or enzymatic CBNA-to-cannabinol biosynthetic
+  pathway was located in the inspected evidence. This bounded evidence gap is not
+  proof that such a pathway cannot exist.
+- The 2021 table scaffold graphic was only available at low resolution in the accessed
+  PMC HTML. Its explicit named commercial CBNA row and the separately inspected 2025
+  compound 7 drawing support compound mapping; no unseen spectral assignment is claimed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 13 original captured input hashes rechecked unchanged; no native/source/status/history
+  edits.
+- Schema and strict used the batch 020 environment. Chemistry used the existing locked
+  batch 019 RDKit 2026.03.5 interpreter against batch 020 cwd because batch 020 lacks
+  RDKit.
+- No alias-only or optional-field finding; no blanket inactivity claim from an above-limit
+  assay.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:234469
+- https://doi.org/10.1038/s42003-020-01530-y
+- https://doi.org/10.3390/microorganisms13020287
+tags:
+- cannabinolic-acid
+- exact-compound
+- primary-evidence
+- assay-scope
+```
