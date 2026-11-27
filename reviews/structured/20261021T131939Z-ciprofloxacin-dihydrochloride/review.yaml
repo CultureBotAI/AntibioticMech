@@ -1,0 +1,611 @@
+schema_version: 1.0.0
+review_id: 20261021T131939Z-ciprofloxacin-dihydrochloride
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Ciprofloxacin dihydrochloride: coherent exact salt and qualified database
+  mechanism; primary material scope remains limited'
+started_at: '2026-10-21T13:04:56Z'
+finished_at: '2026-10-21T13:19:39Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the seed. Preserved initial hashes, confirmed
+    actual ChEBI/configuration/seeder ownership before assessment, read the entire
+    native record and source row, checked official entries, used structured biological-context
+    lookup before web research, and assessed primary literature without transferring
+    unspecified ciprofloxacin material to this exact two-HCl salt.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The native graph, two-HCl stoichiometry, names, broader hydrochloride parent
+  and source identifier agree with official ChEBI and independently parsed PubChem
+  structures. ChEBI explicitly assigns antibacterial and topoisomerase-inhibitor roles
+  to this exact entry, and the native mechanism notes honestly preserve their database
+  origin. No corrective defect was established. The bounded primary-literature search
+  did not resolve a directly tested dihydrochloride material; general ciprofloxacin
+  and derivative experiments remain contextual, so scientific completion is partial.
+  Scientific assessment retains the stated evidence limits; full verification is blocked
+  by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ciprofloxacin-dihydrochloride.yaml
+    sha256: 007f91735fc108f66ada904d8eea9393b3212a4a96a5ed1b0f705115cc2c68ea
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:59938
+  path: data/antibiotics/antibacterial/ciprofloxacin-dihydrochloride.yaml
+  label: ciprofloxacin dihydrochloride
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: Actual maintained source input for the record
+scope:
+  description: 'Whole exact record: definition, two typed synonyms, broader parent,
+    activity role, mechanism/notes/target scope, chemical structure, sole source concept
+    and all three history events. The source row has no adopted citation or chemical
+    xref.'
+  selection: Queue 302, exact CHEBI:59938; all thirteen initial input hashes preserved.
+    Existing configuration and role-name inputs were confirmed as actual mechanism
+    owners before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:59938
+  exclusions:
+  - target: Ciprofloxacin free base, monohydrochloride anhydrous/hydrated forms, other
+      salts and covalent derivatives
+    reason: Their quantitative activity, material composition, clinical product status
+      and exact mechanism measurements are not silently transferred to the two-HCl
+      salt.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: No schema issues.
+  target_ids:
+  - CHEBI:59938
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ciprofloxacin-dihydrochloride.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: One file, zero errors.
+  target_ids:
+  - CHEBI:59938
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ciprofloxacin-dihydrochloride.yaml --out /private/tmp/am-review-session/302-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: initial-chemistry
+  name: initial-chemistry
+  status: failed
+  required: false
+  summary: 'The scratch helper compared formula strings literally: native C17H18FN3O3.2HCl
+    versus expanded C17H20Cl2FN3O3. Keys, masses, charge and mint matched. This diagnostic
+    limitation is resolved by the next explicit stoichiometric check; it is not a
+    native formula defect.'
+  target_ids:
+  - CHEBI:59938
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 302
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: normalized-chemistry
+  name: normalized-chemistry
+  status: passed
+  required: false
+  summary: Accounting for two HCl units gives C17H20Cl2FN3O3. Both native encodings
+    reproduce the full key, three fragments, zero total charge, masses and source-ID
+    mint.
+  target_ids:
+  - CHEBI:59938
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/302-chemistry-normalized.py 302
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: external-chemistry
+  name: external-chemistry
+  status: passed
+  required: false
+  summary: PubChem20848875 SMILES and InChI independently reproduce the exact native
+    full key and composition.
+  target_ids:
+  - CHEBI:59938
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/302-external-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:59938
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:59938
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:59938
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:59938
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:59938
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:59938
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:59938
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:59938
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:59938
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ciprofloxacin-dihydrochloride.yaml
+  locator: Entire YAML.
+  accessed_at: '2026-10-21T13:19:07Z'
+  support: supports
+  summary: SEEDED/EXACT/ANTIBACTERIAL; one ciprofloxacin component and two HCl components,
+    no water. The record asserts a source-derived nucleic-acid-synthesis mechanism
+    with MICROBIAL_TARGET scope, explicitly not a curator mechanism review. It has
+    no direct-binding target object, numeric activity, resistance determinant, clinical
+    status, producer or causal graph.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/chebi_role_names.tsv; conf/sources.yaml;
+    data/raw/MANIFEST.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  locator: Complete ChEBI row 1059 and relevant extraction, source qualification,
+    identity, mechanism and assembly code.
+  accessed_at: '2026-10-21T13:19:07Z'
+  support: supports
+  summary: 'ChEBI is the sole adopted source. The raw row reproduces the entire native
+    identity, parent, antibacterial role and two mechanism roles CHEBI:50750/53559,
+    with empty citations/xrefs. The configuration maps both mechanism roles to NUCLEIC_ACID_SYNTHESIS_INHIBITION.
+    The documented aggregate scope uses MICROBIAL_TARGET if any contributing role
+    names a microbial target: topoisomerase IV supplies that basis, while the generic
+    ATP-dependent DNA-topoisomerase role is host-shared. No ARO, PubChem enrichment,
+    FDA or MIBiG exact-source row was found.'
+  snapshot_sha256: 1c67018402aaa7a4603a4bdae5dde5817bdef44ff29df00d8f8f0aaf94a5c07c
+- evidence_id: chebi-identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:59938
+  locator: Full official entry, definition, two names, chemical representations and
+    outgoing relations.
+  accessed_at: '2026-10-21T13:15:38Z'
+  support: supports
+  summary: Current ChEBI agrees with the native dihydrochloride definition, exact
+    synonyms, structure, formula, neutral total charge, masses and key PWRKLYZVCZMDTC-UHFFFAOYSA-N.
+    Its hydrochloride parent is broader. The has-part relation to anhydrous ciprofloxacin
+    monohydrochloride is not an exact identity relation and has not been emitted as
+    a native parent or xref.
+  snapshot_sha256: baca42c2e6ce769de1c5f7b8e527dcd8f5edb5c2dbc24528c26be9f55e27eb35
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/20848875; https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/PWRKLYZVCZMDTC-UHFFFAOYSA-N/property/InChI,InChIKey,MolecularFormula,SMILES/JSON
+  locator: Complete official structure response and independent chemical parsing.
+  accessed_at: '2026-10-21T13:15:40Z'
+  support: supports
+  summary: PubChem20848875 independently represents the same three-component graph,
+    two equivalents of HCl, full key and expanded formula C17H20Cl2FN3O3. This is
+    an external cross-check, not an unasserted native exact xref. Dotted and expanded
+    formula notation are equivalent; no hydrate, mixture of alternative structures
+    or opposite stereoisomer is implied.
+  snapshot_sha256: 224329e8991ddc5d15607fc8cf78a2aa6b70ca96ccfb056855a993553d9d717a
+- evidence_id: roles
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:36807; https://www.ebi.ac.uk/chebi/CHEBI:36047;
+    https://www.ebi.ac.uk/chebi/CHEBI:50750; https://www.ebi.ac.uk/chebi/CHEBI:53559
+  locator: Official parent/role definitions and exact-entry outgoing role assertions.
+  accessed_at: '2026-10-21T13:15:38Z'
+  support: supports
+  summary: CHEBI:36807 denotes hydrochloride salts broadly, fitting the two-HCl salt.
+    CHEBI:36047 is antibacterial drug. ChEBI directly assigns both ATP-dependent DNA-topoisomerase
+    inhibition and topoisomerase IV inhibition to CHEBI:59938. The mode and scope
+    are faithful qualified database restatements, not inferred merely from a fluoroquinolone
+    scaffold. The entry exposes no primary publication supporting the exact salt assays.
+  snapshot_sha256: f1441b4a8eeb1f9081b4179dc3294d88364d9396e7786406caa3246d83560b51
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/precise1k/b3019 and e_coli/precise1k/b3030
+  locator: Dataset discovery and topoisomerase search before web literature research.
+  accessed_at: '2026-10-21T13:19:07Z'
+  support: context_only
+  summary: The adapter resolves parC and parE as E. coli topoisomerase IV subunits,
+    alongside other topoisomerases, with zero iModulon hits. The native record names
+    no organism or transcriptomic dataset; these are representative enzyme context
+    only, not direct binding or exact-salt activity evidence. Absence of a module
+    is not negative mechanistic evidence.
+  snapshot_sha256: 2d6e77b9df00b6c2b206c28fa3400761074d046f886b9c25a8a93229cb63392e
+- evidence_id: primary-gyrase-context
+  kind: primary_source
+  reference: PMID:3010848; DOI:10.1128/AAC.29.4.598; https://pmc.ncbi.nlm.nih.gov/articles/PMC180449/
+  locator: Full original four-page article read in the preceding cinoxacin review;
+    material and Table1 pages598–599 visually reinspected for this exact review.
+  accessed_at: '2026-10-21T13:08:48Z'
+  support: context_only
+  summary: Miles Laboratories ciprofloxacin was dissolved in 0.05 N NaOH and tested
+    against M. luteus MB1784/ATCC4698 and its purified assembled gyrase. Table1 reports
+    ciprofloxacin MIC0.8 micrograms/mL and partial-supercoiling-inhibition Ip78 micrograms/mL,
+    distinct endpoints with large potency differences. The authors do not identify
+    that ciprofloxacin material as the dihydrochloride. These results support active-moiety
+    context only and must not become exact-salt numeric observations or a physical-binding
+    constant.
+  snapshot_sha256: 728621f54ce4968b48c56b3d8f1785cb44c9d00f9676f457ffcdcfbc5379e7ac
+- evidence_id: primary-topoiv-context
+  kind: primary_source
+  reference: PMID:10585479; DOI:10.1074/jbc.274.50.35927
+  locator: Complete original indexed abstract.
+  accessed_at: '2026-10-21T13:16:37Z'
+  support: context_only
+  summary: The original S. aureus topoisomerase IV study reports ciprofloxacin-enhanced
+    DNA cleavage and inhibited religation. It supports the relevant enzyme mechanism
+    for the named ciprofloxacin material but does not identify a dihydrochloride starting
+    salt in the inspected abstract. Full publisher text was not accessible through
+    the attempted DOI route. No exact-salt assay, strain or subunit-binding measurement
+    is inferred.
+  snapshot_sha256: d3b8f5fcfed0373cb38f7ce9a6802db904ff91b52c3f9f8d4cfc9a59484852fc
+- evidence_id: primary-derivative-boundary
+  kind: primary_source
+  reference: PMID:37513185; https://pmc.ncbi.nlm.nih.gov/articles/PMC10386341/
+  locator: Original abstract, Materials and Methods, antibacterial-assay material
+    passage and bounded exact-name search of the full XML.
+  accessed_at: '2026-10-21T13:16:37Z'
+  support: context_only
+  summary: This study chiefly concerns adamantyl ciprofloxacin derivatives and cyclodextrin/Dispersin
+    B assemblies. Materials say ciprofloxacin and ciprofloxacin hydrochlorides from
+    Sigma; the MIC method says CIP hydrochloride without identifying two-HCl stoichiometry.
+    No dihydrochloride string occurs in the inspected main XML. Neither the modified
+    compounds nor ambiguous comparator material establishes an exact CHEBI:59938 assay.
+  snapshot_sha256: 9d8ab1e4b5734459c3a210cc0d468a73794e323dd44fb34a057cab1d67ae6429
+- evidence_id: literature-search
+  kind: search
+  reference: 302-literature.json; 302-exact-titleabs.json; public web exact-name/key
+    searches
+  locator: Bounded exact-salt literature discovery and screening on 2026-10-21.
+  accessed_at: '2026-10-21T13:16:37Z'
+  support: unknown
+  summary: Europe PMC returned fifteen broadly indexed hits for the quoted name, including
+    ceftaroline, unrelated dihydrochlorides and ciprofloxacin derivatives; the explicit
+    TITLE_ABS exact-phrase query returned zero hits. Web queries by exact name, full
+    key, antibacterial/MIC, synthesis and crystal structure did not establish an inspected
+    primary experiment that identifies this two-HCl material. Search misses do not
+    prove inactivity or absence of all literature. Commercial compilations were not
+    accepted as exact primary support.
+  snapshot_sha256: ef6ad5df476df99e80bb7d336071b2bf9f4d274d077c893489fa651638f6b6cd
+  search_scope: Europe PMC query "ciprofloxacin dihydrochloride" and TITLE_ABS:"ciprofloxacin
+    dihydrochloride"; web queries exact name plus antibacterial/topoisomerase, crystal
+    structure, MIC, synthesis, and PWRKLYZVCZMDTC; 2026-10-21. No broad ciprofloxacin
+    efficacy or regulatory corpus was transferred.
+- evidence_id: access-limits
+  kind: search
+  reference: 302-fetch2-results.json; 302-fetch3-results.json
+  locator: Legitimate Europe PMC XML, standard PMC and page-parameter routes; publisher
+    DOI open attempt.
+  accessed_at: '2026-10-21T13:19:07Z'
+  support: unknown
+  summary: PMC5942560 and PMC3339908 XML routes returned500 and PMC routes exposed
+    browser challenges. Search previews suggest other ciprofloxacin material forms,
+    but those previews are not treated as inspected full primary evidence. The original
+    JBC DOI was inaccessible through the web tool; only its complete indexed abstract
+    was read.
+  snapshot_sha256: d157351c2237fc5dc32c60ad0a29db26ce5103300271d5e42731da3498b6d8b0
+  search_scope: Public PMC/Europe PMC routes for two discovered formulation papers
+    and original publisher DOI for PMID10585479; no challenge bypass or paid access.
+- evidence_id: inclusive-search
+  kind: search
+  reference: 302-inclusive-hits.txt
+  locator: Exact identifier, full label, slug and key across maintained/local generated
+    content; hidden and ignored files included.
+  accessed_at: '2026-10-21T13:19:07Z'
+  support: context_only
+  summary: The maintained matches are native and ChEBI inventory, queue/PATHS and
+    generated embedding files; no exact curator decision or local maintained claim
+    overlay was found in this scope. Initial wider filename discovery also revealed
+    historical research files, treated only as leads rather than primary evidence.
+    No optional-field absence is converted into a defect.
+  snapshot_sha256: ba2ca42c56e18e20b1d6b561f43c959c58248a7d705e2c9c259cd8e6af522a5c
+  search_scope: rg --no-ignore --hidden -n -F for CHEBI:59938, ciprofloxacin dihydrochloride,
+    ciprofloxacin-dihydrochloride and PWRKLYZVCZMDTC-UHFFFAOYSA-N across data, curation,
+    conf, scripts, src, docs, .claude, reviews and reports; initial whole-worktree
+    inclusive discovery retained separately.
+- evidence_id: validation
+  kind: validation
+  reference: 302-schema.log; 302-strict.log; 302-chemistry.json; 302-chemistry-normalized.json;
+    302-external-chemistry.json
+  locator: Actual focused and chemistry outputs, including retained initial helper
+    failure.
+  accessed_at: '2026-10-21T13:19:07Z'
+  support: supports
+  summary: Schema/strict gates pass. The initial helper exit1 was solely literal formula
+    notation comparison and is retained. Explicitly accounting for C17H18FN3O3 plus
+    two HCl units resolves it; native and external encodings, masses, charge and mint
+    agree. All thirteen captured input hashes remain unchanged.
+  snapshot_sha256: 50643279755a3ee348c220c533fc0d79433126c97096b96a5f0240fc7183cfb7
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact two-HCl salt and chemical equivalence
+  outcome: supported
+  summary: Native encodings, formula, names and source concept consistently identify
+    this salt and remain distinct from monohydrochloride/hydrate/free base forms.
+    The initial formula-string diagnostic failure does not indicate a chemical mismatch.
+  target_ids:
+  - CHEBI:59938
+  evidence_ids:
+  - native
+  - owners
+  - chebi-identity
+  - pubchem
+  - validation
+- assessment_id: classification
+  area: scope
+  topic: Antibacterial role and broader parent
+  outcome: supported
+  summary: The broader hydrochloride class fits and ChEBI directly asserts an antibacterial
+    role on this exact entry. No optional clinical approval or exact quantitative
+    antibacterial observation is fabricated from the drug role.
+  target_ids:
+  - CHEBI:59938
+  evidence_ids:
+  - roles
+  - chebi-identity
+  - owners
+- assessment_id: mode
+  area: evidence
+  topic: Source-qualified mechanism and microbial target scope
+  outcome: supported
+  summary: The enum and notes faithfully restate two direct ChEBI role assertions.
+    Topoisomerase IV supports the documented aggregate microbial-target scope; the
+    generic ATP-dependent topoisomerase role alone would not justify that scope. The
+    record does not claim a curator-reviewed direct-binding measurement.
+  target_ids:
+  - CHEBI:59938
+  evidence_ids:
+  - roles
+  - owners
+  - adapter
+  - primary-topoiv-context
+- assessment_id: primary-material
+  area: evidence
+  topic: Exact-salt primary experimental confirmation
+  outcome: unknown
+  summary: Inspected original gyrase and topoisomerase IV evidence concerns ciprofloxacin
+    without establishing this two-HCl material. The derivative paper does not resolve
+    the comparator stoichiometry. Scientific completion remains partial without treating
+    this bounded gap as a confirmed false source assertion.
+  target_ids:
+  - CHEBI:59938
+  evidence_ids:
+  - primary-gyrase-context
+  - primary-topoiv-context
+  - primary-derivative-boundary
+  - literature-search
+  - access-limits
+- assessment_id: completeness
+  area: completeness
+  topic: Optional claim-level enrichment and curation status
+  outcome: unknown
+  summary: No adopted citations require disposition beyond confirming the empty source
+    field. Exact primary target/activity enrichment could be useful if material identity
+    is resolved; absent optional targets, resistance, producer, clinical status and
+    causal graphs are not defects. SEEDED is appropriate.
+  target_ids:
+  - CHEBI:59938
+  evidence_ids:
+  - native
+  - owners
+  - inclusive-search
+  - literature-search
+findings: []
+actions:
+- action_id: A1
+  description: If pursuing primary-evidence enrichment, first resolve the exact two-HCl
+    experimental material and preserve source-qualified status meanwhile.
+  finding_ids: []
+  target_ids:
+  - CHEBI:59938
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/ciprofloxacin-dihydrochloride.yaml
+    role: Curator-owned primary evidence/activity additions
+  acceptance_checks:
+  - Inspect an original material description, chemical characterization or explicit
+    catalog/stoichiometry that establishes ciprofloxacin dihydrochloride; do not use
+    the free base, monohydrochloride, hydrate or derivative as an exact match.
+  - Attach any added measurement to its strain, medium, endpoint, material and reference.
+    Distinguish whole-cell MIC from enzyme inhibition, partial-supercoiling Ip, DNA-cleavage
+    response and direct physical binding.
+  - Retain the explicit ChEBI-derived mechanism provenance unless an authorized curator
+    revision supplies stronger exact evidence. Do not promote native scientific status
+    solely because deterministic checks pass.
+limitations:
+- No exact dihydrochloride primary activity or mechanism experiment was established
+  in the bounded search. This is an unresolved evidence-depth limit, not evidence
+  that the salt is inactive or that the ChEBI role assertion is false.
+- The original gyrase article was read fully for the preceding record and its material/Table1
+  pages were reinspected here; its ciprofloxacin counterion is not specified. The
+  topoisomerase IV article was inspected at complete-original-abstract depth only.
+- The derivative-study XML was read for abstract, material and assay scope, not claimed
+  as a complete article review. Two formulation-paper full-text routes failed or exposed
+  challenges; their previews were not promoted to inspected primary evidence.
+- The initial scratch chemistry helper exit1 is retained. Its literal comparison of
+  dotted and expanded formula strings was corrected by an explicit stoichiometric
+  check; no native change was needed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

@@ -1,0 +1,735 @@
+# Clerocidin: source-consistent dimer graph with an unresolved molecular-form boundary
+
+- Review: 20261021T132750Z-clerocidin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T13:05:02Z
+- Finished UTC: 2026-10-21T13:27:50Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The native C40 dimer graph exactly reproduces its adopted PubChem and current ChEBI entries. Original studies substantiate clerocidin antibacterial activity and gyrase inhibition, while early isolation work demonstrates interconverting material forms. The difference from C20 structures in mechanism papers is a qualification to resolve, not sufficient evidence to replace the native dimer. One informational follow-up addresses molecular-form and stereochemical scope. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position309; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-df383601e2 | data/antibiotics/antibacterial/clerocidin.yaml | generated | clerocidin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | antibioticmech:aro-df383601e2 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | antibioticmech:aro-df383601e2 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | antibioticmech:aro-df383601e2 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | antibioticmech:aro-df383601e2 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-df383601e2 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-df383601e2 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-df383601e2 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-df383601e2 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-df383601e2 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-df383601e2 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-df383601e2 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-df383601e2 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Source concordance and molecular-form boundary
+
+identity: unknown. Targets: antibioticmech:aro-df383601e2.
+
+The native graph matches both asserted structure authorities, but a fully specified natural stereoisomer and the relation of the stored dimer to the assayed interconverting material remain unresolved. No wrong-compound substitution is confirmed.
+
+### Antibacterial eligibility and class
+
+scope: supported. Targets: antibioticmech:aro-df383601e2.
+
+Original named-material antibacterial experiments and the broader class support filing. Derivative, methanol-adduct, host-cytotoxicity and separate MF730-N6 claims remain distinct.
+
+### Definition and primary evidence placement
+
+evidence: supported. Targets: antibioticmech:aro-df383601e2.
+
+The adopted paper supports intrinsic epoxide-dependent DNA chemistry; separate original bacterial studies support gyrase function and cellular target engagement. The definition is qualitative. No unmeasured subunit affinity, universal cross-species resistance or exact dimer potency is added.
+
+### Maintained ownership and citation disposition
+
+provenance: supported. Targets: antibioticmech:aro-df383601e2.
+
+All native fields and the sole adopted PMID were reviewed at stated read depths. The minted identity and existing identity queue are retained. Original inputs remain immutable.
+
+### Sign-off and optional enrichment
+
+completeness: unknown. Targets: antibioticmech:aro-df383601e2.
+
+SEEDED remains appropriate. Molecular-form clarification is needed before exact-form primary enrichment; absent optional targets, producer, numerical activities, resistance and causal graph are not independently false claims.
+
+## Findings
+
+### F1: Resolve the stored dimer and natural stereochemical scope before exact-form enrichment
+
+informational / open / provisional; issue key: clerocidin-interconverting-form-and-stereochemistry.
+
+The native graph and both structure authorities consistently represent an unstereospecified C40 dimer, whereas original mechanism papers depict a stereochemical C20 form. Original isolation experiments show interconverting material, and patent background explicitly describes monomer/hemiacetal/dimer equilibrium. This defeats an automatic wrong-dimer conclusion but leaves the exact-form boundary unresolved. State which molecular representation the record intends and support any stereochemical refinement from original structural evidence; do not call unspecified stereo a racemate or replace the dimer solely because a mechanism figure depicts a monomer.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Resolve exact molecular-form and stereochemical intent through maintained source curation before adding form-specific claims.
+
+- Inspect the original structural assignment or equivalent experimental evidence and distinguish dimer, open carbonyl, hemiacetal and methanol-adduct forms; preserve assay solvent and material limits.
+- If structure/name selection changes, update maintained inputs or a supported identity decision, reseed and rerun focused chemistry, schema, strict and source-reproduction checks. Do not silently collapse different component stoichiometries or invent missing stereochemistry.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/clerocidin.yaml; Entire 46-line native record, including all three history events | supports | SEEDED/MINTED ANTIBACTERIAL record with one ARO concept, a broad terpene class, one adopted PMID and three chemical xrefs. Its single connected C40H56O10 graph has no specified stereochemistry; no racemate is inferred. No target object, resistance determinant, quantitative activity, producer, clinical claim or causal graph is asserted. |
+| owners | data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; scripts/enrich_pubchem_structures.py; scripts/seed_from_sources.py; ARO row517 and PubChem row222, enrichment and seeding ownership | supports | ARO supplies the identity, definition, broad class, three xrefs and PMID12930966. The PubChem inventory supplies CID9896400 chemistry and retrieval date2026-08-29. Native values reproduce both exact rows. The deterministic ARO identifier mint agrees. The readiness queue already requests identity review for this MINTED entry; no automatic ChEBI reassignment is warranted. |
+| chemistry | 309-chemistry.json;309-schema.log;309-strict.log; Independent RDKit calculations and actual focused validators | supports | Native SMILES and InChI give LKJYEAJRWPUOGW-UHFFFAOYSA-N, C40H56O10, neutral charge, one component and matching masses. Stereocenters remain unassigned, not racemic by implication. Schema and strict validation pass. |
+| authority | https://pubchem.ncbi.nlm.nih.gov/compound/9896400;https://www.ebi.ac.uk/chebi/CHEBI:199447;https://card.mcmaster.ca/aro/3007660; Complete official API structures and current ARO entry | supports | PubChem9896400 and two-star ChEBI199447 both encode the same native C40 dimer and unspecified stereochemistry. ARO attests the same links and definition. ChEBI attaches CAS87501-14-2 and an Oidiodendron truncatum origin citing the1984 constitution paper; those source metadata do not prove an exact stereoisomer or an assay-specific molecular form. |
+| class | https://card.mcmaster.ca/aro/3005172; Official class entry | supports | Terpene with antibiotic activity is a broad class compatible with a dimer built from clerodane diterpenoid units. Antibacterial eligibility has independent original-study support; it is not inferred from the class alone. |
+| adapter | iModulonDB s_pneumoniae/precise718; e_coli/precise1k; Catalog and gyrA/gyrB searches before detailed mechanism follow-up | context_only | Queries resolve pneumococcal SP_1219/gyrA and SP_0806/gyrB and E. coli b2231/gyrA and b3699/gyrB, with zero matching iModulons. These are organism-specific context keys, not binding, phenotype or exact material evidence. |
+| adopted-primary | PMID:12930966;DOI:10.1093/nar/gkg696;https://academic.oup.com/nar/article-pdf/31/17/5149/4023460/gkg696.pdf; Original indexed abstract and publisher PDF text: introduction, material, substrate assays and mass-adduct results; not a complete visual figure audit | supports | Leo Pharmaceutical clerocidin and separately synthesized naphthalene analogues were compared. Original results support guanine alkylation through an intact epoxide and distinguish unpaired substrate accessibility from an unqualified universal DNA-binding claim. The authors explicitly discuss carbonyl/hemiacetal equilibrium. This paper concerns intrinsic DNA chemistry and eukaryotic-topoisomerase context, not a newly measured bacterial gyrase-binding constant. |
+| isolation | PMID:6684107;DOI:10.7164/antibiotics.36.753;https://www.jstage.jst.go.jp/article/antibiotics1968/36/7/36_7_753/_pdf; Original1983 abstract, physicochemical section pp753–755, biological section and isolation/material passages pp759–760 | supports | Oidiodendron truncatum produces PR-1350. The paper observes changing optical rotation/NMR and rapidly interconverting chromatographic forms; crystalline PR-1381 is a methanol adduct that regenerates parent material. Antibacterial assays use PR-1350/PR-1381, with reported biological equivalence. Reduced PR-1383 and its C20H34O5 formula are separate derivative evidence. The study directly cautions against assuming a single invariant solution species. |
+| equilibrium-context | https://patents.google.com/patent/EP0205981A2/en; Original patent background explicitly discussing PR-1350 before its distinct MF730-N6 invention | context_only | The patent describes clerocidin monomer, hemiacetal and dimer equilibrium, attributing this to the1984 constitution work. Its new compound, production and efficacy examples concern MF730-N6, so those results do not transfer to clerocidin. This corroborates the naming/form issue at background-evidence depth; the inaccessible1984 paper has not been treated as directly inspected. |
+| gyrase1993 | PMID:8386713;DOI:10.7164/antibiotics.46.526;https://www.jstage.jst.go.jp/article/antibiotics1968/46/3/46_3_526/_pdf; Original five-page study text, Figure1 visually inspected, supercoiling/cleavage experiments and Tables2–5 | supports | The isolated Fusidium viride material is identified as clerocidin and depicted as a stereochemical C20 hemiacetal. Purified E. coli gyrase is inhibited and DNA cleavage stimulated; gyrA complementation supports the selected resistance phenotype. The reported approximate10µM supercoiling half-inhibition is not a binding constant. Whole-cell activities and zone diameters are separate endpoints. The paper does not certify that the unassigned C40 graph alone is the reacting species. |
+| gyrase2008 | PMID:18723572;DOI:10.1093/nar/gkn539;https://pmc.ncbi.nlm.nih.gov/articles/PMC2553588/; Original XML Methods, Results, Discussion and figure captions; figures not all visually inspected | supports | S. pneumoniae7785/R6 resistance selection, gyrA G79A transfer and purified-enzyme cleavage establish gyrase as a primary cellular target in that system. Leo material was dissolved in DMSO. Reversible and irreversible DNA breaks are distinguished; earlier topoIV interpretation is revised. The authors infer a ternary-complex model, not isolated GyrA/GyrB binding. Assays support named-material mechanism while leaving the C40-versus-C20 reacting-form assignment unresolved. |
+| access | 309-fetch-results.json;309-extra-fetch-results.json;309-307-correct-results.json; Public original-paper and official-structure retrieval ledger | unknown | The1984 constitution and stereochemistry publisher routes returned403. The initially guessed1983 issue6 URL failed; correct issue7 PDF succeeded. EuropePMC2003 XML returned500, direct PMC was a browser challenge, and direct publisher PDF download returned403; publisher-indexed PDF text was read through the browser tool. Its screenshot attempt failed. The2008 XML and1993/1983 PDFs were directly retrieved. No paid source or challenge bypass was used. |
+| local-search | 309-inclusive-hits.txt; Ignored-inclusive search of exact name, ARO identifier and CID | context_only | Exact adopted ARO/PubChem rows and the existing identity-review queue were located. This bounded scope does not establish absence of other local or public literature. |
+
+## Limits And Additional Notes
+
+- The1984 constitution/stereochemistry full papers were inaccessible. The original1983 study and later patent background support interconversion, but no exact natural dimer stereoisomer was reconstructed.
+- Read depths are explicit:1983 selected physicochemical/biological/material sections,1993 full text plus its structure figure,2003 original abstract and selected publisher PDF text,2008 main textual mechanism sections/captions. No claim is made to have visually audited every mechanistic figure or the unavailable1984 structure data.
+- The2003 publisher screenshot failed and direct download was403; its successfully indexed text is distinguishable from directly downloaded full PDFs.
+- No exact dimer-specific MIC, binding constant, resistant-strain annotation, producer assertion or causal graph has been imported into the native record.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T132750Z-clerocidin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Clerocidin: source-consistent dimer graph with an unresolved molecular-form
+  boundary'
+started_at: '2026-10-21T13:05:02Z'
+finished_at: '2026-10-21T13:27:50Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The native C40 dimer graph exactly reproduces its adopted PubChem and current
+  ChEBI entries. Original studies substantiate clerocidin antibacterial activity and
+  gyrase inhibition, while early isolation work demonstrates interconverting material
+  forms. The difference from C20 structures in mechanism papers is a qualification
+  to resolve, not sufficient evidence to replace the native dimer. One informational
+  follow-up addresses molecular-form and stereochemical scope. Scientific assessment
+  retains the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/clerocidin.yaml
+    sha256: 967a1d77457199ee61fb1ae8d0d3ee66aa06f119d094fa3b343f939038445ad9
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: Adopted definition, class and xrefs
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: Adopted exact PubChem structure
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: Structure enrichment owner
+targets:
+- target_id: antibioticmech:aro-df383601e2
+  path: data/antibiotics/antibacterial/clerocidin.yaml
+  label: clerocidin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition, class and xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact PubChem structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Structure enrichment owner
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position309; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-df383601e2
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    309
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/clerocidin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/clerocidin.yaml --out /private/tmp/am-review-session/309-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/clerocidin.yaml
+  locator: Entire 46-line native record, including all three history events
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: supports
+  summary: SEEDED/MINTED ANTIBACTERIAL record with one ARO concept, a broad terpene
+    class, one adopted PMID and three chemical xrefs. Its single connected C40H56O10
+    graph has no specified stereochemistry; no racemate is inferred. No target object,
+    resistance determinant, quantitative activity, producer, clinical claim or causal
+    graph is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; scripts/enrich_pubchem_structures.py;
+    scripts/seed_from_sources.py
+  locator: ARO row517 and PubChem row222, enrichment and seeding ownership
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: supports
+  summary: ARO supplies the identity, definition, broad class, three xrefs and PMID12930966.
+    The PubChem inventory supplies CID9896400 chemistry and retrieval date2026-08-29.
+    Native values reproduce both exact rows. The deterministic ARO identifier mint
+    agrees. The readiness queue already requests identity review for this MINTED entry;
+    no automatic ChEBI reassignment is warranted.
+  snapshot_sha256: 6346f3586e1d32418a032b63484b1c70f2d30fdb291f1784688a1641c6e7fa03
+- evidence_id: chemistry
+  kind: validation
+  reference: 309-chemistry.json;309-schema.log;309-strict.log
+  locator: Independent RDKit calculations and actual focused validators
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: supports
+  summary: Native SMILES and InChI give LKJYEAJRWPUOGW-UHFFFAOYSA-N, C40H56O10, neutral
+    charge, one component and matching masses. Stereocenters remain unassigned, not
+    racemic by implication. Schema and strict validation pass.
+  snapshot_sha256: 982e99defcb92d4a68e4f5904311d020e461cec39baf18c58362c5f1e84e52b0
+- evidence_id: authority
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/9896400;https://www.ebi.ac.uk/chebi/CHEBI:199447;https://card.mcmaster.ca/aro/3007660
+  locator: Complete official API structures and current ARO entry
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: supports
+  summary: PubChem9896400 and two-star ChEBI199447 both encode the same native C40
+    dimer and unspecified stereochemistry. ARO attests the same links and definition.
+    ChEBI attaches CAS87501-14-2 and an Oidiodendron truncatum origin citing the1984
+    constitution paper; those source metadata do not prove an exact stereoisomer or
+    an assay-specific molecular form.
+  snapshot_sha256: f11acd6ea39a72f36a9e2c19ccf6ce4b1f749bd602d495d9e9c01e57f1fd84d3
+- evidence_id: class
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3005172
+  locator: Official class entry
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: supports
+  summary: Terpene with antibiotic activity is a broad class compatible with a dimer
+    built from clerodane diterpenoid units. Antibacterial eligibility has independent
+    original-study support; it is not inferred from the class alone.
+  snapshot_sha256: 0d3c0d29067cbfc20a5533c8518d051034a6fdc4c775ac1453ce2b47184b4aa3
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB s_pneumoniae/precise718; e_coli/precise1k
+  locator: Catalog and gyrA/gyrB searches before detailed mechanism follow-up
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: context_only
+  summary: Queries resolve pneumococcal SP_1219/gyrA and SP_0806/gyrB and E. coli
+    b2231/gyrA and b3699/gyrB, with zero matching iModulons. These are organism-specific
+    context keys, not binding, phenotype or exact material evidence.
+  snapshot_sha256: 52bef6e50be5a752d573457ebf889f5bf59ca8015bfcdb84674f4807c060eb86
+- evidence_id: adopted-primary
+  kind: primary_source
+  reference: PMID:12930966;DOI:10.1093/nar/gkg696;https://academic.oup.com/nar/article-pdf/31/17/5149/4023460/gkg696.pdf
+  locator: 'Original indexed abstract and publisher PDF text: introduction, material,
+    substrate assays and mass-adduct results; not a complete visual figure audit'
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: supports
+  summary: Leo Pharmaceutical clerocidin and separately synthesized naphthalene analogues
+    were compared. Original results support guanine alkylation through an intact epoxide
+    and distinguish unpaired substrate accessibility from an unqualified universal
+    DNA-binding claim. The authors explicitly discuss carbonyl/hemiacetal equilibrium.
+    This paper concerns intrinsic DNA chemistry and eukaryotic-topoisomerase context,
+    not a newly measured bacterial gyrase-binding constant.
+  snapshot_sha256: 04676672753e5c4214f007e35949800691708bda82592a486fd3b8090df98b31
+- evidence_id: isolation
+  kind: primary_source
+  reference: PMID:6684107;DOI:10.7164/antibiotics.36.753;https://www.jstage.jst.go.jp/article/antibiotics1968/36/7/36_7_753/_pdf
+  locator: Original1983 abstract, physicochemical section pp753–755, biological section
+    and isolation/material passages pp759–760
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: supports
+  summary: Oidiodendron truncatum produces PR-1350. The paper observes changing optical
+    rotation/NMR and rapidly interconverting chromatographic forms; crystalline PR-1381
+    is a methanol adduct that regenerates parent material. Antibacterial assays use
+    PR-1350/PR-1381, with reported biological equivalence. Reduced PR-1383 and its
+    C20H34O5 formula are separate derivative evidence. The study directly cautions
+    against assuming a single invariant solution species.
+  snapshot_sha256: 9c7654c2e003ffa73a619fe18ef1530fc22b12b34cca8e7f9f436590b3f2132e
+- evidence_id: equilibrium-context
+  kind: primary_source
+  reference: https://patents.google.com/patent/EP0205981A2/en
+  locator: Original patent background explicitly discussing PR-1350 before its distinct
+    MF730-N6 invention
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: context_only
+  summary: The patent describes clerocidin monomer, hemiacetal and dimer equilibrium,
+    attributing this to the1984 constitution work. Its new compound, production and
+    efficacy examples concern MF730-N6, so those results do not transfer to clerocidin.
+    This corroborates the naming/form issue at background-evidence depth; the inaccessible1984
+    paper has not been treated as directly inspected.
+  snapshot_sha256: c1b19c9cbb43ad01602bf8bd1761086b7d3e17ce9eff496643fe8e1daa4561c8
+- evidence_id: gyrase1993
+  kind: primary_source
+  reference: PMID:8386713;DOI:10.7164/antibiotics.46.526;https://www.jstage.jst.go.jp/article/antibiotics1968/46/3/46_3_526/_pdf
+  locator: Original five-page study text, Figure1 visually inspected, supercoiling/cleavage
+    experiments and Tables2–5
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: supports
+  summary: The isolated Fusidium viride material is identified as clerocidin and depicted
+    as a stereochemical C20 hemiacetal. Purified E. coli gyrase is inhibited and DNA
+    cleavage stimulated; gyrA complementation supports the selected resistance phenotype.
+    The reported approximate10µM supercoiling half-inhibition is not a binding constant.
+    Whole-cell activities and zone diameters are separate endpoints. The paper does
+    not certify that the unassigned C40 graph alone is the reacting species.
+  snapshot_sha256: 8e809c6ee817921731cc0789a4e5817e6b7d53175724d70d74fb3a495a5d7fb0
+- evidence_id: gyrase2008
+  kind: primary_source
+  reference: PMID:18723572;DOI:10.1093/nar/gkn539;https://pmc.ncbi.nlm.nih.gov/articles/PMC2553588/
+  locator: Original XML Methods, Results, Discussion and figure captions; figures
+    not all visually inspected
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: supports
+  summary: S. pneumoniae7785/R6 resistance selection, gyrA G79A transfer and purified-enzyme
+    cleavage establish gyrase as a primary cellular target in that system. Leo material
+    was dissolved in DMSO. Reversible and irreversible DNA breaks are distinguished;
+    earlier topoIV interpretation is revised. The authors infer a ternary-complex
+    model, not isolated GyrA/GyrB binding. Assays support named-material mechanism
+    while leaving the C40-versus-C20 reacting-form assignment unresolved.
+  snapshot_sha256: accc107a139799e42d72c372745277124346cbea71b7ee5431d11e4fd936cf56
+- evidence_id: access
+  kind: search
+  reference: 309-fetch-results.json;309-extra-fetch-results.json;309-307-correct-results.json
+  locator: Public original-paper and official-structure retrieval ledger
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: unknown
+  summary: The1984 constitution and stereochemistry publisher routes returned403.
+    The initially guessed1983 issue6 URL failed; correct issue7 PDF succeeded. EuropePMC2003
+    XML returned500, direct PMC was a browser challenge, and direct publisher PDF
+    download returned403; publisher-indexed PDF text was read through the browser
+    tool. Its screenshot attempt failed. The2008 XML and1993/1983 PDFs were directly
+    retrieved. No paid source or challenge bypass was used.
+  search_scope: Bounded exact clerocidin name, identifiers, original cited article
+    and monomer/dimer questions on2026-10-21.
+  snapshot_sha256: b211f2d97fc026095955880a9dd6a9f9a670cb00fdd460d323594e187cc0cad8
+- evidence_id: local-search
+  kind: search
+  reference: 309-inclusive-hits.txt
+  locator: Ignored-inclusive search of exact name, ARO identifier and CID
+  accessed_at: '2026-10-21T13:22:37Z'
+  support: context_only
+  summary: Exact adopted ARO/PubChem rows and the existing identity-review queue were
+    located. This bounded scope does not establish absence of other local or public
+    literature.
+  search_scope: rg --no-ignore --hidden across the exact ARO/PubChem inventories,
+    conf/sources.yaml, enrichment script, curation, docs and .claude.
+  snapshot_sha256: 6346f3586e1d32418a032b63484b1c70f2d30fdb291f1784688a1641c6e7fa03
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Source concordance and molecular-form boundary
+  outcome: unknown
+  summary: The native graph matches both asserted structure authorities, but a fully
+    specified natural stereoisomer and the relation of the stored dimer to the assayed
+    interconverting material remain unresolved. No wrong-compound substitution is
+    confirmed.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  evidence_ids:
+  - native
+  - authority
+  - chemistry
+  - isolation
+  - equilibrium-context
+  - gyrase1993
+- assessment_id: scope
+  area: scope
+  topic: Antibacterial eligibility and class
+  outcome: supported
+  summary: Original named-material antibacterial experiments and the broader class
+    support filing. Derivative, methanol-adduct, host-cytotoxicity and separate MF730-N6
+    claims remain distinct.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  evidence_ids:
+  - class
+  - isolation
+  - gyrase1993
+- assessment_id: mechanism
+  area: evidence
+  topic: Definition and primary evidence placement
+  outcome: supported
+  summary: The adopted paper supports intrinsic epoxide-dependent DNA chemistry; separate
+    original bacterial studies support gyrase function and cellular target engagement.
+    The definition is qualitative. No unmeasured subunit affinity, universal cross-species
+    resistance or exact dimer potency is added.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  evidence_ids:
+  - adopted-primary
+  - gyrase1993
+  - gyrase2008
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained ownership and citation disposition
+  outcome: supported
+  summary: All native fields and the sole adopted PMID were reviewed at stated read
+    depths. The minted identity and existing identity queue are retained. Original
+    inputs remain immutable.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  evidence_ids:
+  - owners
+  - authority
+  - adopted-primary
+  - local-search
+- assessment_id: completeness
+  area: completeness
+  topic: Sign-off and optional enrichment
+  outcome: unknown
+  summary: SEEDED remains appropriate. Molecular-form clarification is needed before
+    exact-form primary enrichment; absent optional targets, producer, numerical activities,
+    resistance and causal graph are not independently false claims.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  evidence_ids:
+  - native
+  - isolation
+  - gyrase1993
+  - gyrase2008
+  - access
+findings:
+- finding_id: F1
+  issue_key: clerocidin-interconverting-form-and-stereochemistry
+  category: identity
+  severity: informational
+  status: open
+  certainty: provisional
+  title: Resolve the stored dimer and natural stereochemical scope before exact-form
+    enrichment
+  description: The native graph and both structure authorities consistently represent
+    an unstereospecified C40 dimer, whereas original mechanism papers depict a stereochemical
+    C20 form. Original isolation experiments show interconverting material, and patent
+    background explicitly describes monomer/hemiacetal/dimer equilibrium. This defeats
+    an automatic wrong-dimer conclusion but leaves the exact-form boundary unresolved.
+    State which molecular representation the record intends and support any stereochemical
+    refinement from original structural evidence; do not call unspecified stereo a
+    racemate or replace the dimer solely because a mechanism figure depicts a monomer.
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  field_paths:
+  - label
+  - definition
+  - chemical_structure
+  - grounding_status
+  evidence_ids:
+  - native
+  - authority
+  - isolation
+  - equilibrium-context
+  - gyrase1993
+  - gyrase2008
+  rule_id: 'native-review-checklist: Identity, Structure and Equivalence'
+  native_severity: informational
+  normalization_reason: Source agreement and documented material interconversion preclude
+    a confirmed wrong-structure finding; the remaining question is a bounded identity
+    qualification already anticipated by the MINTED readiness queue.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Name and definition scope
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Exact molecular representation
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Reproducible structure selection
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Evidence-backed exact identity decision
+actions:
+- action_id: A1
+  description: Resolve exact molecular-form and stereochemical intent through maintained
+    source curation before adding form-specific claims.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-df383601e2
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Name and definition scope
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Exact molecular representation
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Reproducible structure selection
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Evidence-backed exact identity decision
+  acceptance_checks:
+  - Inspect the original structural assignment or equivalent experimental evidence
+    and distinguish dimer, open carbonyl, hemiacetal and methanol-adduct forms; preserve
+    assay solvent and material limits.
+  - If structure/name selection changes, update maintained inputs or a supported identity
+    decision, reseed and rerun focused chemistry, schema, strict and source-reproduction
+    checks. Do not silently collapse different component stoichiometries or invent
+    missing stereochemistry.
+limitations:
+- The1984 constitution/stereochemistry full papers were inaccessible. The original1983
+  study and later patent background support interconversion, but no exact natural
+  dimer stereoisomer was reconstructed.
+- Read depths are explicit:1983 selected physicochemical/biological/material sections,1993
+  full text plus its structure figure,2003 original abstract and selected publisher
+  PDF text,2008 main textual mechanism sections/captions. No claim is made to have
+  visually audited every mechanistic figure or the unavailable1984 structure data.
+- The2003 publisher screenshot failed and direct download was403; its successfully
+  indexed text is distinguishable from directly downloaded full PDFs.
+- No exact dimer-specific MIC, binding constant, resistant-strain annotation, producer
+  assertion or causal graph has been imported into the native record.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
