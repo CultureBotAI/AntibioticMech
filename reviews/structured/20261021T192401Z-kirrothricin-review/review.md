@@ -1,0 +1,876 @@
+# Kirrothricin: supported primary biology with a stereochemical scope conflict
+
+- Review: 20261021T192401Z-kirrothricin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T18:53:55Z
+- Finished UTC: 2026-10-21T19:24:01Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The complete original discovery paper supports production by Streptomyces cinnamoneus Tü89, narrow antibacterial activity and inhibition of bacterial cell-free protein synthesis. Native chemistry is valid and reproduces its adopted PubChem source. Current ChEBI assigns five tetrahedral centres that the native graph leaves unspecified and leaves an enol double bond unspecified that the native graph fixes. One major exact-reference scope finding is retained without inventing an opposite natural stereoisomer or a mixture.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 577; one entire exact native record. All thirteen initial input hashes were verified unchanged; actual ARO/PubChem owner inputs were appended before assessment, giving sixteen captured inputs.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-45efa31311 | data/antibiotics/antibacterial/kirrothricin.yaml | generated | kirrothricin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema verification | passed | True | antibioticmech:aro-45efa31311 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | antibioticmech:aro-45efa31311 | Actual focused execution exited 0. |
+| Focused chemistry verification | passed | False | antibioticmech:aro-45efa31311 | Actual focused execution exited 0. |
+| Independent chemical authority comparison | passed | False | antibioticmech:aro-45efa31311 | Native and current PubChem serializations agree. Both ChEBI serializations agree with each other but assign five additional centres and leave the exocyclic enol bond unspecified. Clearing only those five centres and assigning the native E bond reproduces the native full key. |
+| Authoritative full QC | failed | True | antibioticmech:aro-45efa31311 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-45efa31311 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-45efa31311 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-45efa31311 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-45efa31311 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-45efa31311 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-45efa31311 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-45efa31311 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-45efa31311 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Constitution and incompletely assigned stereochemistry
+
+identity: supported. Targets: antibioticmech:aro-45efa31311.
+
+The native graph is chemically valid, source-reproduced and consistent with the original constitution and known assigned portion. The five unknown centres and tautomerism remain explicit limits; no opposite natural isomer or racemate is established.
+
+### All exact chemical references and broader class
+
+grounding: concern. Targets: antibioticmech:aro-45efa31311.
+
+ARO and PubChem reproduce the source entity, while CHEBI223261 has different tetrahedral and alkene specificity. This exact link needs reconciliation. The elfamycin class and parent are appropriate at source and experimental scope.
+
+### Producer and related spectrum
+
+evidence: supported. Targets: antibioticmech:aro-45efa31311.
+
+The cited full original supports fermentation by Tü89 and a related narrow spectrum with quantitative exceptions. The native wording says similar, not identical, so the exceptions do not make it false. Current taxonomic spelling is corroborated.
+
+### Translation inhibition and limits of EF-Tu inference
+
+evidence: supported. Targets: antibioticmech:aro-45efa31311.
+
+Exact-compound cell-free translation inhibition supports the family classification. The original infers the same EF-Tu action; it does not measure a direct Kd or resolve the binding site. No native direct-binding assertion requires correction.
+
+### Source concept, history and actual maintained owners
+
+provenance: supported. Targets: antibioticmech:aro-45efa31311.
+
+The sole adopted citation, both chemical authorities and the source concept are accounted for. All thirteen initial hashes are retained, actual fallback owners appended and source/status history preserved.
+
+### All asserted fields and bounded further research
+
+completeness: supported. Targets: antibioticmech:aro-45efa31311.
+
+The complete record and its only adopted original paper were read, with the decisive structure and activity table visually checked. All asserted chemical IDs were inspected. Optional target, MIC, producer-object and graph gaps are not counted as defects. Later congener and resistance studies remain scoped to their exact materials.
+
+## Findings
+
+### F1: Reconcile the ChEBI exact reference with the native stereo scope
+
+major / open / confirmed; issue key: kirrothricin-chebi-exact-stereo-scope.
+
+CHEBI223261 fixes five chain stereocentres that the native PubChem graph leaves unspecified, while leaving the exocyclic enol C37=C38 unspecified where native fixes E. Both ChEBI serializations independently reproduce this different scope. The shared constitution and three shared fixed centres do not make these exact representations equivalent. Review the underlying absolute-configuration evidence and tautomer policy before choosing a retained exact grounding. A qualified related association may remain useful; do not automatically replace the native graph, call it a mixture or claim an opposite natural enantiomer.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Resolve exact-reference scope through the maintained source pipeline.
+
+- Document all five canonical atom assignments and the exocyclic enol bond separately. Retained exact links must agree with the selected stereo and tautomer scope, or use an explicitly permitted qualified association.
+- Obtain primary absolute-configuration evidence before narrowing unspecified centres. Do not infer an opposite stereoisomer or mixture from unknown stereo.
+- Regenerate from the maintained source, preserve provenance and rerun schema, strict, chemistry and source-reproduction gates.
+
+### A2
+
+Keep any optional biological enrichment tied to the original material and assay.
+
+- Preserve Tü89 and the neutral-material versus sodium-salt distinction. Add exact strain, medium, inoculum and qualifier to any MIC observation.
+- Inspect the original Table3 rather than OCR and preserve its printed Clostridium qualifier or record a source ambiguity; do not silently repair it.
+- Keep E. coli cell-free protein-synthesis inhibition separate from direct EF-Tu binding and from kirromycin resistance assays. Map any later compound5 to the exact record before transferring a CRAB MIC.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/kirrothricin.yaml; Entire native file: identifier, definition, class and parent, all structural properties, three xrefs, one source concept and three history entries. | supports | The SEEDED MINTED ARO record has neutral C44H64N2O10 and key SUMCRDMQIVHXRY-XRAYCMFKSA-N. Both serializations contain three assigned and five unspecified tetrahedral centres, eight E double bonds and one terminal Z bond. Its definition names the producer and related antibacterial spectrum. No direct target, mode enum, resistance, MIC, clinical, dataset or causal-graph objects are asserted. |
+| owners | data/raw/aro_antibiotics.tsv:227; data/raw/pubchem_structures.tsv:62; conf/sources.yaml; scripts/extract_source_inventory.py; scripts/enrich_pubchem_structures.py; scripts/seed_from_sources.py; Exact source rows and applicable ARO extraction, PubChem fallback, class and definition/xref seeding branches. | supports | ARO3001246 supplies the definition and sole adopted PMID7142013. CID54679291 supplies all native chemical fields because no adopted ChEBI inventory row supplies this concept. The native source mint and history are reproducible. The later current ChEBI entry does not retroactively invalidate the historical MINTED status. No target or resistance row exists for this exact source ID in the inspected maintained inventories. |
+| search | /private/tmp/am-review-session/577-local-hits.txt; /private/tmp/am-review-session/577-additional-local-search.txt; Initial hidden-inclusive, ignored-inclusive label/identifier/slug search and exact later-paper title/DOI search. | context_only | The inclusive search found native and generated records, raw source rows and historical research ledgers. These historical ledgers were discovery leads only. The later-paper search covered research, data and .claude with ignored and hidden files included. Whole-native inspection, rather than a rendered projection, determined which claims are actually present. |
+| aro | https://purl.obolibrary.org/obo/aro.obo; Current ARO3001246, its parent3001310 and class3001219, independently extracted and read. | supports | Current ARO reproduces the exact compound definition, CHEBI223261/PubChem54679291 links and PMID7142013. Its elfamycin class is target-based; it does not require one conserved molecular backbone. The broader parent contains a mechanistic definition, but that parent text is not imported into this native definition as a direct domain-binding claim. Original snapshot retrieval was 2026-10-21T15:57:42Z. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/54679291; Complete current structure-property response and independent SMILES/InChI parsing. | supports | Current PubChem reproduces the native formula, structural strings and XRAYCMFK key. The native masses, neutral charge, single connected component and source-derived mint pass independent checks. The five unspecified centres are not evidence for a racemate or mixture. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/223261/; Complete official response, including both structural strings, systematic name, source origin and parent. | supports | Current two-star CHEBI223261 is Kirrothricin and gives the same constitution but key SUMCRDMQIVHXRY-SUHFUJLHSA-N. Its valid SMILES and InChI assign eight tetrahedral centres and leave the exocyclic enol double bond unspecified. The systematic name alone does not prove an experimental absolute assignment. The broader piperidone parent and source PMID7142013 are compatible with the scaffold. |
+| diagnostic | /private/tmp/am-review-session/577-authority-chemistry.json; Independent exact graph parsing and canonical-atom scope diagnostic. | supports | The native graph leaves canonical InChI C31,C32,C34,C39,C40 unspecified; ChEBI assigns these five centres. Both agree at the three specified native centres and all shared defined alkenes. ChEBI leaves C37=C38 unspecified whereas native fixes E. Clearing only the five extra ChEBI assignments and setting that bond to E reproduces XRAYCMFK exactly. An initial diagnostic mistakenly set Z; its nonmatching result is retained separately and was corrected before the reported successful comparison. |
+| original-identity | PMID:7142013; DOI:10.7164/antibiotics.35.948; Complete nine-page1982 original read; Figure5 on p952 visually inspected. | supports | The original material is C44H64N2O10, with a linear tetraene/vicinal-diol segment rather than the central tetrahydrofuran of kirromycin, a hydrogenated N-heterocycle and a deoxy goldinonic-acid unit. Figure 5 leaves the five relevant chain stereocentres unassigned. The authors discuss significant beta-triketo tautomerism, instability and interconverting TLC spots. Their alternate drawn enol form is not evidence for a different underlying constitution or for a stable stereoisomer mixture. |
+| original-producer | PMID:7142013; DOI:10.7164/antibiotics.35.948; Original pp948-950 fermentation, isolation and characterization sections. | supports | S. cinnamomeus/cinnamoneus strain Tü89 was fermented at 27°C, and the antibiotic was recovered from culture filtrate, separated from aureothin and an indolyl oxazole, and purified chromatographically. This directly supports biosynthesis rather than merely extraction from an exposed organism. The paper distinguishes neutral antibiotic from a sodium salt produced by NaOH treatment; no native sodium salt is inferred. |
+| original-activity | PMID:7142013; DOI:10.7164/antibiotics.35.948; Original Table3 p953 and Figures6-7; Table3 visually inspected after OCR proved unreliable. | supports | Serial dilution used 0.5 mL inoculum at E578=0.5 in 4.5 mL medium. Exact kirrothricin MICs include B. brevis 0.05 µg/mL, Chromobacterium violaceum 0.1 µg/mL and Corynebacterium ATCC23830 1 µg/mL; E. coli K12, B. subtilis and S. aureus are &gt;100 µg/mL. Related compounds share the broad narrow-spectrum pattern with explicit species-specific differences. The printed Clostridium pasteurianum row reads &gt;0.1, despite surrounding susceptibility language; that qualifier must not be silently reversed. |
+| original-mechanism | PMID:7142013; DOI:10.7164/antibiotics.35.948; Original p953 mechanism paragraph, p954 discussion and Figure8 p955. | supports | Kirrothricin inhibited E. coli poly(U)-directed poly(Phe) synthesis by 50% at 5 µM and 96% at 50 µM. The authors infer a similar EF-Tu site from comparison with kirromycin; this is not a direct binding measurement or an atomic contact map. Proposed metal chelation is explicitly speculative. The native class is consistent with this evidence; no missing optional direct-target object is treated as a defect. |
+| taxonomy | https://www.ebi.ac.uk/ena/taxonomy/rest/any-name/Streptomyces%20cinnamoneus; Complete official taxon response53446 and synonyms. | supports | The current scientific name is Streptomyces cinnamoneus; listed historical synonyms include cinnamomeus forms and Streptoverticillium names. The old spelling in the discovery paper does not establish a wrong native producer. The original strain qualifier should be retained in any future producer object. |
+| related1997 | PMID:9043138; DOI:10.1099/00221287-143-2-617; Complete original abstract, independently read in the current bounded search. | context_only | The study calls S. cinnamoneus the kirrothricin producer but tests resistance of its EF-Tu to kirromycin. Its Thr378 substitution and GE2270 comparison cannot be transferred as exact kirrothricin resistance or binding observations. The native record correctly has no such transferred edge. |
+| related2018 | PMID:29459765; DOI:10.1038/s41598-018-21507-6; Complete abstract and previously inspected original kirromycin biosynthesis sections and Figure1. | context_only | The S. collinus kirromycin mutant study concerns kirromycin and characterized derivatives. A kirrothricin-like open-chain scaffold does not by itself establish the identity, producer or antibacterial measurements of the exact native compound. |
+| followup2026 | PMID:41671746; DOI:10.1016/j.bioorg.2026.109606; Complete indexed and publisher abstract; official32-page SI contents/captions inspected and p26 viewed; main article returned403. | context_only | The article reports four new elfamycin analogues and a known compound 5 from Streptomyces sp. A3-7, with anti-CRAB activity. The inspected abstract does not securely name 5 as this exact record. SI contains numbered NMR/MS spectra and biosynthetic annotations, not an independently verified name-to-native mapping here. Its 0.4 µg/mL result is not transferred to kirrothricin, and its source does not settle the five absolute configurations in this review. |
+| other-search-leads | Europe PMC exact query kirrothricin,2026-10-21; publisher search for Die Konstitution des Kirrothricins; All eight retrieved result titles and available complete abstracts inspected; bounded publisher follow-up. | context_only | Other hits concern 2020 proteomic classification, 1997 extracellular lipase, 2002 kirromycin-producer tuf2 and 1988 novobiocin gyrB work. Their abstracts do not establish an exact kirrothricin direct target. The1981 constitution paper is cited by the fully read1982 paper and has a publisher-indexed abstract describing chemical degradation; its full text was not obtained. No universal absence-of-evidence claim is made. |
+| adapter-scope | iModulonDB dataset catalog, actual same-session query before this record web follow-up; 576-adapter-datasets.txt and576-adapter.json; catalog inspected for the native producer. | context_only | The official 28-dataset catalog does not cover S. cinnamoneus. This native record has no named gene, locus, stress-response, transcriptomic dataset or exact protein target object requiring a matched query. E. coli tufA/tufB searches for kirromycin are not treated as kirrothricin target evidence. |
+
+## Limits And Additional Notes
+
+- The 1982 article was read fully as nine-page original text, with Figure 5 and Table 3 viewed. Raw spectra were not reprocessed, and the 1981 constitution article and theses were not obtained in full. The original supports constitution but does not independently establish all five additional current ChEBI assignments.
+- The original explicitly reports tautomerism and instability. The different drawn/enumerated enol forms are not automatically a wrong-constitution finding; the confirmed finding is the exact-reference stereo-scope mismatch.
+- The 2026 main article returned 403. Its official SI was available; contents and relevant numbered spectrum captions were inspected and page 26 viewed, but those spectra were not reinterpreted to identify compound 5 or establish absolute stereochemistry. No modern MIC was transferred.
+- The native definition gives a broad similar spectrum supported by the original comparison. The paper has organism-specific differences and a printed &gt;0.1 µg/mL Clostridium entry that needs preservation or explicit source qualification in any quantitative curation.
+- All focused checks passed. The initial scratch authority diagnostic used the wrong candidate alkene geometry and did not match; its output is retained, and the corrected E assignment reproduces the native key. This was a diagnostic iteration, not a native edit or a failed required gate.
+- The structured catalog has no matching producer dataset. Other-organism annotations and family-level mechanisms cannot supply exact binding or resistance evidence. The search was bounded and does not prove that no later structural or biological evidence exists.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All initial input hashes remain unchanged. Retrieval manifests preserve actual URLs, UTC timestamps, response status and SHA256 values. The current ARO snapshot uses its original shared retrieval timestamp.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T192401Z-kirrothricin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Kirrothricin: supported primary biology with a stereochemical scope conflict'
+started_at: '2026-10-21T18:53:55Z'
+finished_at: '2026-10-21T19:24:01Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The complete original discovery paper supports production by Streptomyces
+  cinnamoneus Tü89, narrow antibacterial activity and inhibition of bacterial cell-free
+  protein synthesis. Native chemistry is valid and reproduces its adopted PubChem
+  source. Current ChEBI assigns five tetrahedral centres that the native graph leaves
+  unspecified and leaves an enol double bond unspecified that the native graph fixes.
+  One major exact-reference scope finding is retained without inventing an opposite
+  natural stereoisomer or a mixture.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/kirrothricin.yaml
+    sha256: 18eaee607eb5869be13f97449b8eb982719975c5c4a7896bb228d1c2ff1990f1
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-45efa31311
+  path: data/antibiotics/antibacterial/kirrothricin.yaml
+  label: kirrothricin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Actual maintained source input for the record
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 577; one entire exact native record. All thirteen initial
+    input hashes were verified unchanged; actual ARO/PubChem owner inputs were appended
+    before assessment, giving sixteen captured inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-45efa31311
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/kirrothricin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/kirrothricin.yaml --out /private/tmp/am-review-session/577-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 577
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-comparison
+  name: Independent chemical authority comparison
+  status: passed
+  required: false
+  summary: Native and current PubChem serializations agree. Both ChEBI serializations
+    agree with each other but assign five additional centres and leave the exocyclic
+    enol bond unspecified. Clearing only those five centres and assigning the native
+    E bond reproduces the native full key.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/577-compare.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/kirrothricin.yaml
+  locator: 'Entire native file: identifier, definition, class and parent, all structural
+    properties, three xrefs, one source concept and three history entries.'
+  accessed_at: '2026-10-21T19:23:00Z'
+  support: supports
+  summary: The SEEDED MINTED ARO record has neutral C44H64N2O10 and key SUMCRDMQIVHXRY-XRAYCMFKSA-N.
+    Both serializations contain three assigned and five unspecified tetrahedral centres,
+    eight E double bonds and one terminal Z bond. Its definition names the producer
+    and related antibacterial spectrum. No direct target, mode enum, resistance, MIC,
+    clinical, dataset or causal-graph objects are asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv:227; data/raw/pubchem_structures.tsv:62;
+    conf/sources.yaml; scripts/extract_source_inventory.py; scripts/enrich_pubchem_structures.py;
+    scripts/seed_from_sources.py
+  locator: Exact source rows and applicable ARO extraction, PubChem fallback, class
+    and definition/xref seeding branches.
+  accessed_at: '2026-10-21T19:23:00Z'
+  support: supports
+  summary: ARO3001246 supplies the definition and sole adopted PMID7142013. CID54679291
+    supplies all native chemical fields because no adopted ChEBI inventory row supplies
+    this concept. The native source mint and history are reproducible. The later current
+    ChEBI entry does not retroactively invalidate the historical MINTED status. No
+    target or resistance row exists for this exact source ID in the inspected maintained
+    inventories.
+  snapshot_sha256: 70d5537af03cca8dddaf0577ddf97be65793bb0f1e103f4f8a25d373db021d79
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/577-local-hits.txt; /private/tmp/am-review-session/577-additional-local-search.txt
+  locator: Initial hidden-inclusive, ignored-inclusive label/identifier/slug search
+    and exact later-paper title/DOI search.
+  accessed_at: '2026-10-21T19:23:00Z'
+  support: context_only
+  summary: The inclusive search found native and generated records, raw source rows
+    and historical research ledgers. These historical ledgers were discovery leads
+    only. The later-paper search covered research, data and .claude with ignored and
+    hidden files included. Whole-native inspection, rather than a rendered projection,
+    determined which claims are actually present.
+  snapshot_sha256: 37d92d8ec4c4a2abc61038feda684b13a3600694fcbf027535c59b49d0aa02a1
+  search_scope: 2026-10-21; exact kirrothricin label, source IDs and native slug;
+    local searches included ignored and hidden files. Europe PMC query kirrothricin
+    returned eight results, all titles and available abstracts inspected. Publisher
+    follow-up for the 1981 constitution title and 2026 DOI was bounded; no global
+    absence claim.
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Current ARO3001246, its parent3001310 and class3001219, independently extracted
+    and read.
+  accessed_at: '2026-10-21T15:57:42Z'
+  support: supports
+  summary: Current ARO reproduces the exact compound definition, CHEBI223261/PubChem54679291
+    links and PMID7142013. Its elfamycin class is target-based; it does not require
+    one conserved molecular backbone. The broader parent contains a mechanistic definition,
+    but that parent text is not imported into this native definition as a direct domain-binding
+    claim. Original snapshot retrieval was 2026-10-21T15:57:42Z.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/54679291
+  locator: Complete current structure-property response and independent SMILES/InChI
+    parsing.
+  accessed_at: '2026-10-21T19:19:42Z'
+  support: supports
+  summary: Current PubChem reproduces the native formula, structural strings and XRAYCMFK
+    key. The native masses, neutral charge, single connected component and source-derived
+    mint pass independent checks. The five unspecified centres are not evidence for
+    a racemate or mixture.
+  snapshot_sha256: c060046f97febe7d81461e3250fd3625864809dd89bda60c533e3ade63bd5e08
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/223261/
+  locator: Complete official response, including both structural strings, systematic
+    name, source origin and parent.
+  accessed_at: '2026-10-21T19:19:42Z'
+  support: supports
+  summary: Current two-star CHEBI223261 is Kirrothricin and gives the same constitution
+    but key SUMCRDMQIVHXRY-SUHFUJLHSA-N. Its valid SMILES and InChI assign eight tetrahedral
+    centres and leave the exocyclic enol double bond unspecified. The systematic name
+    alone does not prove an experimental absolute assignment. The broader piperidone
+    parent and source PMID7142013 are compatible with the scaffold.
+  snapshot_sha256: d51ed97453724f547cc15a27cd34f2777ec4532cf4254174810c0b1d3a889cdf
+- evidence_id: diagnostic
+  kind: validation
+  reference: /private/tmp/am-review-session/577-authority-chemistry.json
+  locator: Independent exact graph parsing and canonical-atom scope diagnostic.
+  accessed_at: '2026-10-21T19:23:00Z'
+  support: supports
+  summary: The native graph leaves canonical InChI C31,C32,C34,C39,C40 unspecified;
+    ChEBI assigns these five centres. Both agree at the three specified native centres
+    and all shared defined alkenes. ChEBI leaves C37=C38 unspecified whereas native
+    fixes E. Clearing only the five extra ChEBI assignments and setting that bond
+    to E reproduces XRAYCMFK exactly. An initial diagnostic mistakenly set Z; its
+    nonmatching result is retained separately and was corrected before the reported
+    successful comparison.
+  snapshot_sha256: 6b773ff81ca6abff3ed8b6041457be299b05d8b1ab357e504225909fa3d3c9c9
+- evidence_id: original-identity
+  kind: primary_source
+  reference: PMID:7142013; DOI:10.7164/antibiotics.35.948
+  locator: Complete nine-page1982 original read; Figure5 on p952 visually inspected.
+  accessed_at: '2026-10-21T19:23:00Z'
+  support: supports
+  summary: The original material is C44H64N2O10, with a linear tetraene/vicinal-diol
+    segment rather than the central tetrahydrofuran of kirromycin, a hydrogenated
+    N-heterocycle and a deoxy goldinonic-acid unit. Figure 5 leaves the five relevant
+    chain stereocentres unassigned. The authors discuss significant beta-triketo tautomerism,
+    instability and interconverting TLC spots. Their alternate drawn enol form is
+    not evidence for a different underlying constitution or for a stable stereoisomer
+    mixture.
+  snapshot_sha256: 7b44bf1ef8c21f2afd984d9593685a3d12aee4ffd9591738ed009211fbff2efb
+- evidence_id: original-producer
+  kind: primary_source
+  reference: PMID:7142013; DOI:10.7164/antibiotics.35.948
+  locator: Original pp948-950 fermentation, isolation and characterization sections.
+  accessed_at: '2026-10-21T19:19:55Z'
+  support: supports
+  summary: S. cinnamomeus/cinnamoneus strain Tü89 was fermented at 27°C, and the antibiotic
+    was recovered from culture filtrate, separated from aureothin and an indolyl oxazole,
+    and purified chromatographically. This directly supports biosynthesis rather than
+    merely extraction from an exposed organism. The paper distinguishes neutral antibiotic
+    from a sodium salt produced by NaOH treatment; no native sodium salt is inferred.
+  snapshot_sha256: 92addc45d8df5994a9e1592ceb3d792567d7b813d7cb8bbeaad110eefb3817fb
+- evidence_id: original-activity
+  kind: primary_source
+  reference: PMID:7142013; DOI:10.7164/antibiotics.35.948
+  locator: Original Table3 p953 and Figures6-7; Table3 visually inspected after OCR
+    proved unreliable.
+  accessed_at: '2026-10-21T19:23:00Z'
+  support: supports
+  summary: Serial dilution used 0.5 mL inoculum at E578=0.5 in 4.5 mL medium. Exact
+    kirrothricin MICs include B. brevis 0.05 µg/mL, Chromobacterium violaceum 0.1
+    µg/mL and Corynebacterium ATCC23830 1 µg/mL; E. coli K12, B. subtilis and S. aureus
+    are >100 µg/mL. Related compounds share the broad narrow-spectrum pattern with
+    explicit species-specific differences. The printed Clostridium pasteurianum row
+    reads >0.1, despite surrounding susceptibility language; that qualifier must not
+    be silently reversed.
+  snapshot_sha256: 0553c6a075b74dc4d2bc49bfbf3c7782b653bb500e3c946b15b5bf066ae99006
+- evidence_id: original-mechanism
+  kind: primary_source
+  reference: PMID:7142013; DOI:10.7164/antibiotics.35.948
+  locator: Original p953 mechanism paragraph, p954 discussion and Figure8 p955.
+  accessed_at: '2026-10-21T19:19:55Z'
+  support: supports
+  summary: Kirrothricin inhibited E. coli poly(U)-directed poly(Phe) synthesis by
+    50% at 5 µM and 96% at 50 µM. The authors infer a similar EF-Tu site from comparison
+    with kirromycin; this is not a direct binding measurement or an atomic contact
+    map. Proposed metal chelation is explicitly speculative. The native class is consistent
+    with this evidence; no missing optional direct-target object is treated as a defect.
+  snapshot_sha256: 92addc45d8df5994a9e1592ceb3d792567d7b813d7cb8bbeaad110eefb3817fb
+- evidence_id: taxonomy
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/any-name/Streptomyces%20cinnamoneus
+  locator: Complete official taxon response53446 and synonyms.
+  accessed_at: '2026-10-21T19:20:59Z'
+  support: supports
+  summary: The current scientific name is Streptomyces cinnamoneus; listed historical
+    synonyms include cinnamomeus forms and Streptoverticillium names. The old spelling
+    in the discovery paper does not establish a wrong native producer. The original
+    strain qualifier should be retained in any future producer object.
+  snapshot_sha256: ae2afedec62bf2c0fd6601420037b9906f242bcab541679e1a625187ee95fd92
+- evidence_id: related1997
+  kind: primary_source
+  reference: PMID:9043138; DOI:10.1099/00221287-143-2-617
+  locator: Complete original abstract, independently read in the current bounded search.
+  accessed_at: '2026-10-21T19:19:42Z'
+  support: context_only
+  summary: The study calls S. cinnamoneus the kirrothricin producer but tests resistance
+    of its EF-Tu to kirromycin. Its Thr378 substitution and GE2270 comparison cannot
+    be transferred as exact kirrothricin resistance or binding observations. The native
+    record correctly has no such transferred edge.
+  snapshot_sha256: 6d884637f0e8b5a7c760fbe247d9e62e885e8e6ccec1963394098bbd4d927608
+- evidence_id: related2018
+  kind: primary_source
+  reference: PMID:29459765; DOI:10.1038/s41598-018-21507-6
+  locator: Complete abstract and previously inspected original kirromycin biosynthesis
+    sections and Figure1.
+  accessed_at: '2026-10-21T19:19:42Z'
+  support: context_only
+  summary: The S. collinus kirromycin mutant study concerns kirromycin and characterized
+    derivatives. A kirrothricin-like open-chain scaffold does not by itself establish
+    the identity, producer or antibacterial measurements of the exact native compound.
+  snapshot_sha256: 6d884637f0e8b5a7c760fbe247d9e62e885e8e6ccec1963394098bbd4d927608
+- evidence_id: followup2026
+  kind: primary_source
+  reference: PMID:41671746; DOI:10.1016/j.bioorg.2026.109606
+  locator: Complete indexed and publisher abstract; official32-page SI contents/captions
+    inspected and p26 viewed; main article returned403.
+  accessed_at: '2026-10-21T19:20:59Z'
+  support: context_only
+  summary: The article reports four new elfamycin analogues and a known compound 5
+    from Streptomyces sp. A3-7, with anti-CRAB activity. The inspected abstract does
+    not securely name 5 as this exact record. SI contains numbered NMR/MS spectra
+    and biosynthetic annotations, not an independently verified name-to-native mapping
+    here. Its 0.4 µg/mL result is not transferred to kirrothricin, and its source
+    does not settle the five absolute configurations in this review.
+  snapshot_sha256: a988ff80a64bfc9fd585cfb0c1d204b981b2cb910dacfc3d0fca03e1a1c93c7a
+- evidence_id: other-search-leads
+  kind: search
+  reference: Europe PMC exact query kirrothricin,2026-10-21; publisher search for
+    Die Konstitution des Kirrothricins
+  locator: All eight retrieved result titles and available complete abstracts inspected;
+    bounded publisher follow-up.
+  accessed_at: '2026-10-21T19:19:42Z'
+  support: context_only
+  summary: Other hits concern 2020 proteomic classification, 1997 extracellular lipase,
+    2002 kirromycin-producer tuf2 and 1988 novobiocin gyrB work. Their abstracts do
+    not establish an exact kirrothricin direct target. The1981 constitution paper
+    is cited by the fully read1982 paper and has a publisher-indexed abstract describing
+    chemical degradation; its full text was not obtained. No universal absence-of-evidence
+    claim is made.
+  snapshot_sha256: 6d884637f0e8b5a7c760fbe247d9e62e885e8e6ccec1963394098bbd4d927608
+  search_scope: 2026-10-21; exact kirrothricin label, source IDs and native slug;
+    local searches included ignored and hidden files. Europe PMC query kirrothricin
+    returned eight results, all titles and available abstracts inspected. Publisher
+    follow-up for the 1981 constitution title and 2026 DOI was bounded; no global
+    absence claim.
+- evidence_id: adapter-scope
+  kind: database
+  reference: iModulonDB dataset catalog, actual same-session query before this record
+    web follow-up
+  locator: 576-adapter-datasets.txt and576-adapter.json; catalog inspected for the
+    native producer.
+  accessed_at: '2026-10-21T19:23:00Z'
+  support: context_only
+  summary: The official 28-dataset catalog does not cover S. cinnamoneus. This native
+    record has no named gene, locus, stress-response, transcriptomic dataset or exact
+    protein target object requiring a matched query. E. coli tufA/tufB searches for
+    kirromycin are not treated as kirrothricin target evidence.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Constitution and incompletely assigned stereochemistry
+  outcome: supported
+  summary: The native graph is chemically valid, source-reproduced and consistent
+    with the original constitution and known assigned portion. The five unknown centres
+    and tautomerism remain explicit limits; no opposite natural isomer or racemate
+    is established.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  evidence_ids:
+  - native
+  - pubchem
+  - original-identity
+  - diagnostic
+- assessment_id: equivalence
+  area: grounding
+  topic: All exact chemical references and broader class
+  outcome: concern
+  summary: ARO and PubChem reproduce the source entity, while CHEBI223261 has different
+    tetrahedral and alkene specificity. This exact link needs reconciliation. The
+    elfamycin class and parent are appropriate at source and experimental scope.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  evidence_ids:
+  - aro
+  - pubchem
+  - chebi
+  - diagnostic
+  - original-mechanism
+- assessment_id: definition
+  area: evidence
+  topic: Producer and related spectrum
+  outcome: supported
+  summary: The cited full original supports fermentation by Tü89 and a related narrow
+    spectrum with quantitative exceptions. The native wording says similar, not identical,
+    so the exceptions do not make it false. Current taxonomic spelling is corroborated.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  evidence_ids:
+  - original-producer
+  - original-activity
+  - taxonomy
+- assessment_id: mechanism
+  area: evidence
+  topic: Translation inhibition and limits of EF-Tu inference
+  outcome: supported
+  summary: Exact-compound cell-free translation inhibition supports the family classification.
+    The original infers the same EF-Tu action; it does not measure a direct Kd or
+    resolve the binding site. No native direct-binding assertion requires correction.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  evidence_ids:
+  - original-mechanism
+  - related1997
+  - adapter-scope
+- assessment_id: provenance
+  area: provenance
+  topic: Source concept, history and actual maintained owners
+  outcome: supported
+  summary: The sole adopted citation, both chemical authorities and the source concept
+    are accounted for. All thirteen initial hashes are retained, actual fallback owners
+    appended and source/status history preserved.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  evidence_ids:
+  - owners
+  - native
+  - aro
+- assessment_id: coverage
+  area: completeness
+  topic: All asserted fields and bounded further research
+  outcome: supported
+  summary: The complete record and its only adopted original paper were read, with
+    the decisive structure and activity table visually checked. All asserted chemical
+    IDs were inspected. Optional target, MIC, producer-object and graph gaps are not
+    counted as defects. Later congener and resistance studies remain scoped to their
+    exact materials.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  evidence_ids:
+  - owners
+  - search
+  - original-identity
+  - original-activity
+  - followup2026
+  - other-search-leads
+findings:
+- finding_id: F1
+  issue_key: kirrothricin-chebi-exact-stereo-scope
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Reconcile the ChEBI exact reference with the native stereo scope
+  description: CHEBI223261 fixes five chain stereocentres that the native PubChem
+    graph leaves unspecified, while leaving the exocyclic enol C37=C38 unspecified
+    where native fixes E. Both ChEBI serializations independently reproduce this different
+    scope. The shared constitution and three shared fixed centres do not make these
+    exact representations equivalent. Review the underlying absolute-configuration
+    evidence and tautomer policy before choosing a retained exact grounding. A qualified
+    related association may remain useful; do not automatically replace the native
+    graph, call it a mixture or claim an opposite natural enantiomer.
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  field_paths:
+  - xrefs[1]
+  evidence_ids:
+  - chebi
+  - pubchem
+  - diagnostic
+  - original-identity
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Imported compound-to-ChEBI exact association
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Authority-reference extraction and normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Exact-reference emission and supported scope adjudication
+  rule_id: 'Native checklist: every exact xref denotes the same chemical structure
+    and stereo scope'
+  native_severity: major
+  normalization_reason: Positive differences in assigned versus unassigned stereochemistry
+    establish an exact-grounding scope conflict. The native graph is valid and the
+    original structure does not independently justify replacing its unspecified centres,
+    so no wrong-native-identity blocker is asserted.
+actions:
+- action_id: A1
+  description: Resolve exact-reference scope through the maintained source pipeline.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Imported compound-to-ChEBI exact association
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Authority-reference extraction and normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Exact-reference emission and supported scope adjudication
+  acceptance_checks:
+  - Document all five canonical atom assignments and the exocyclic enol bond separately.
+    Retained exact links must agree with the selected stereo and tautomer scope, or
+    use an explicitly permitted qualified association.
+  - Obtain primary absolute-configuration evidence before narrowing unspecified centres.
+    Do not infer an opposite stereoisomer or mixture from unknown stereo.
+  - Regenerate from the maintained source, preserve provenance and rerun schema, strict,
+    chemistry and source-reproduction gates.
+- action_id: A2
+  description: Keep any optional biological enrichment tied to the original material
+    and assay.
+  finding_ids: []
+  target_ids:
+  - antibioticmech:aro-45efa31311
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/kirrothricin.yaml
+    role: Curator-owned activity, producer and mechanism evidence through the validated
+      writer
+  acceptance_checks:
+  - Preserve Tü89 and the neutral-material versus sodium-salt distinction. Add exact
+    strain, medium, inoculum and qualifier to any MIC observation.
+  - Inspect the original Table3 rather than OCR and preserve its printed Clostridium
+    qualifier or record a source ambiguity; do not silently repair it.
+  - Keep E. coli cell-free protein-synthesis inhibition separate from direct EF-Tu
+    binding and from kirromycin resistance assays. Map any later compound5 to the
+    exact record before transferring a CRAB MIC.
+limitations:
+- The 1982 article was read fully as nine-page original text, with Figure 5 and Table
+  3 viewed. Raw spectra were not reprocessed, and the 1981 constitution article and
+  theses were not obtained in full. The original supports constitution but does not
+  independently establish all five additional current ChEBI assignments.
+- The original explicitly reports tautomerism and instability. The different drawn/enumerated
+  enol forms are not automatically a wrong-constitution finding; the confirmed finding
+  is the exact-reference stereo-scope mismatch.
+- The 2026 main article returned 403. Its official SI was available; contents and
+  relevant numbered spectrum captions were inspected and page 26 viewed, but those
+  spectra were not reinterpreted to identify compound 5 or establish absolute stereochemistry.
+  No modern MIC was transferred.
+- The native definition gives a broad similar spectrum supported by the original comparison.
+  The paper has organism-specific differences and a printed >0.1 µg/mL Clostridium
+  entry that needs preservation or explicit source qualification in any quantitative
+  curation.
+- All focused checks passed. The initial scratch authority diagnostic used the wrong
+  candidate alkene geometry and did not match; its output is retained, and the corrected
+  E assignment reproduces the native key. This was a diagnostic iteration, not a native
+  edit or a failed required gate.
+- The structured catalog has no matching producer dataset. Other-organism annotations
+  and family-level mechanisms cannot supply exact binding or resistance evidence.
+  The search was bounded and does not prove that no later structural or biological
+  evidence exists.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All initial input hashes remain unchanged. Retrieval manifests preserve actual URLs,
+  UTC timestamps, response status and SHA256 values. The current ARO snapshot uses
+  its original shared retrieval timestamp.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
