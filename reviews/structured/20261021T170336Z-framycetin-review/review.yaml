@@ -1,0 +1,833 @@
+schema_version: 1.0.0
+review_id: 20261021T170336Z-framycetin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of framycetin
+started_at: '2026-10-21T16:45:52Z'
+finished_at: '2026-10-21T17:03:36Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The fully specified neutral structure agrees with exact neomycin B authorities.
+  Two minor defects concern ester terminology in the definition and the Soframycin
+  brand typed as an exact synonym. The 16S rRNA target and all 29 resistance rows
+  preserve honest database provenance; selected primary papers require explicit mixture,
+  host, mutation and assay boundaries. Several exact registry mappings remain unresolved.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/framycetin.yaml
+    sha256: 91daf6ad3d0921befa88fabaa8c0fa2e078059b8778d176e637a159a68f2b0ac
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+targets:
+- target_id: CHEBI:7508
+  path: data/antibiotics/antibacterial/framycetin.yaml
+  label: framycetin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, definition, structure, role, synonyms and leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO neomycin source concept and imported aliases/xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted database molecular target edge
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted resistance assertions and primary leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI and CARD/ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated native fields and claim provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Source identity grounding decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-scoped synonym_exclusions maintained override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 476; original 13 hashes preserved
+    and three actual ARO owner inputs appended before detailed assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:7508
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:7508
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    476
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:7508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/framycetin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:7508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/framycetin.yaml --out /private/tmp/am-review-session/476-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent exact structure and authority comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/476-authority-check.py
+    > /private/tmp/am-review-session/476-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Nine asserted encodings and the separate CHEMBL184618 candidate agree.
+    All 19 tetrahedral centres, formula, neutral charge and masses match; no ester/carbonyl
+    exists.
+  target_ids:
+  - CHEBI:7508
+- check_id: ledger
+  name: Source, reference and history ledger
+  command: .venv/bin/python /private/tmp/am-review-session/476-ledger.py > /private/tmp/am-review-session/476-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All 16 captured inputs unchanged, original 13 retained; 39 leads, 29 resistance
+    rows, one target and seven chronological histories checked.
+  target_ids:
+  - CHEBI:7508
+- check_id: adapter-catalog
+  name: Structured source catalog
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/476-imodulon-datasets.json
+    2> /private/tmp/am-review-session/476-imodulon-datasets.err
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Catalog executed before protein follow-up; covered E. coli and P. aeruginosa
+    datasets identified.
+  target_ids:
+  - CHEBI:7508
+- check_id: adapter-acrD
+  name: Structured acrD search
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query acrD
+    > /private/tmp/am-review-session/476-imodulon-acrD.json 2> /private/tmp/am-review-session/476-imodulon-acrD.err
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: b2470 gene hit; zero iModulon hits, so no component summary applicable.
+  target_ids:
+  - CHEBI:7508
+- check_id: adapter-rrsB
+  name: Structured rrsB search
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query rrsB
+    > /private/tmp/am-review-session/476-imodulon-rrsB.json 2> /private/tmp/am-review-session/476-imodulon-rrsB.err
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No gene hit; zero iModulon hits, so no component summary applicable.
+  target_ids:
+  - CHEBI:7508
+- check_id: adapter-PmpM
+  name: Structured PmpM search
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism p_aeruginosa --dataset precise364 --query
+    PmpM > /private/tmp/am-review-session/476-imodulon-PmpM.json 2> /private/tmp/am-review-session/476-imodulon-PmpM.err
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: PA1361 gene hit; zero iModulon hits, so no component summary applicable.
+  target_ids:
+  - CHEBI:7508
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:7508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:7508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:7508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:7508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:7508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:7508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:7508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:7508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:7508
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/framycetin.yaml
+  locator: Entire 349-line native record
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: All 14 aliases, two parents, two roles, ten exact xrefs, three drug-context
+    xrefs, two source concepts, one 16S rRNA target, 29 resistance rows and seven
+    history entries were read. The record is SEEDED, has no primary-labeled resistance
+    citation or quantitative MIC, and does not assert a pure-B assay for each database
+    edge.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:7508; PubChem:8378; KEGG:C01737; pdb-ccd:NMY
+  locator: 476-authority-chemistry.json; official snapshots and 476-fetch.json
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: Native SMILES/InChI, current ChEBI SMILES/InChI/molfile, PubChem SMILES/InChI,
+    KEGG molfile and CCD InChI all yield PGBHMTALBVVCIT-VCIWKGPPSA-N, C23H46N6O13
+    and neutral charge with reciprocal chirality-aware graph matches. All 19 tetrahedral
+    centres are specified; four rings have sizes 5/6/6/6. Every bond is single and
+    there is no carbonyl or ester. The graph denotes neomycin B, not an inferred B/C
+    mixture.
+  snapshot_sha256: 92cba672e33f9ed07a8255ad67a8b47cfa097dea388d314adf37756cd6b1b61b
+- evidence_id: terms
+  kind: authority
+  reference: CHEBI:7508; CHEBI:47779; CHEBI:36047; CHEBI:33281; ARO:0000016
+  locator: 476-chebi.json; 476-chebi47779/36047.json; shared 475-chebi33281.json;
+    476-aro-blocks.json
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: The aminoglycoside parents match amino sugars attached to the aminocyclitol.
+    Antibacterial-drug and antimicrobial-agent roles are supported by source classifications
+    and bounded primary activity evidence. Current ChEBI repeats the ester wording,
+    CAS119-04-0 and retained chemical aliases, so the definition error originates
+    upstream.
+  snapshot_sha256: 889f280195758375f42147b98937915d9b8dabb24989c16f89c555b058dd058d
+- evidence_id: glycoside
+  kind: primary_source
+  reference: PMID:30736311; DOI:10.3390/molecules24030580
+  locator: 476-PMC6385478.xml; original introduction, synthesis rationale and conclusion
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: The original explicitly describes glycosidic connections between neamine
+    and neobiosamine cores and prepares site-isomer glycosides by glycosylation. This
+    corroborates the native O-glycosidic skeleton and contradicts calling its linkage
+    an ester. The paper studies derivative binding to nucleic-acid triplex models;
+    those results are not transferred to parent antibacterial potency.
+  snapshot_sha256: 2bbe7e2e4c5261934cce13a503bc23591cc78c8e94db68f764816118b3759dc3
+- evidence_id: brand
+  kind: authority
+  reference: Australian Commission on Safety and Quality in Health Care, Soframycin
+    CMI
+  locator: https://www.safetyandquality.gov.au/medicine-finder/soframycin ; Brand
+    Information and Product Details; linked January 2025 CMI pp1/4
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: The official page identifies Soframycin as a brand with framycetin sulfate
+    active ingredient; the drops contain 5 mg/mL. Native synonyms[12] imports the
+    name as EXACT_SYNONYM from ARO. BRAND_NAME with the product/salt qualification
+    is the appropriate type. Browser source was read successfully; separate local
+    downloads timed out, so no nonexistent cached PDF is claimed.
+- evidence_id: registry
+  kind: database
+  reference: ChEMBL:CHEMBL3989751; ChEMBL:CHEMBL184618; ARO:0000005
+  locator: 476-chembl.json; 476-chembl184618.json; 476-chebi7507.json; 476-aro-blocks.json
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: The asserted ChEMBL3989751 NEOMYCIN entry has structure_type NONE and no
+    molecular graph; exact equivalence cannot be independently established. The distinct
+    candidate CHEMBL184618 FRAMYCETIN has the exact native graph. Current ARO0000005
+    also points to generic neomycin CHEBI7507/CAS1404-04-2 and exact-B PubChem8378.
+    This exposes a source-concept breadth boundary, not proof that every imported
+    biological edge is false or that the native graph represents a mixture.
+  snapshot_sha256: 74bc677bbb3cb64713651c5524a7083e81a349ad76d2a0212f633b0662f4d960
+- evidence_id: target
+  kind: primary_source
+  reference: PMID:16214802; DOI:10.1093/nar/gki862; PDB:2ET4
+  locator: 476-PMC1251667.xml; original methods, exact neomycin B Results and Figure4;
+    476-2ET4.json
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: The study directly resolves neomycin B bound to a synthetic 22-nt 16S-rRNA
+    A-site model at 2.4 Å. It uses E. coli residue numbering and Sigma antibiotic
+    material. The exact ligand identity is corroborated by NMY and 2ET4; this is not
+    a whole-cell phenotype or an intact 30S ribosome experiment. It supports the molecular
+    binding target while preserving the native imported edge as database-tier until
+    separately curated.
+  snapshot_sha256: 1999a8a9aa83f35c77300c7006ad609ee09d7d83ff1095bb028286d92ae442d8
+- evidence_id: acrD
+  kind: primary_source
+  reference: PMID:10692383; DOI:10.1128/JB.182.6.1754-1756.2000
+  locator: 476-PMC94475.html; complete original main text, methods, Table1 and discussion
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: E. coli JC7623 acrD deletion and complementation change generic-neomycin
+    MIC, with pronounced medium dependence. Direct accumulation experiments measured
+    dihydrostreptomycin/gentamicin, not neomycin. This original found no increased
+    aminoglycoside susceptibility after acrA/tolC disruption under its conditions;
+    it alone does not establish the full AcrAD-TolC exact-B transport claim. The latter
+    also cites a review and remains a bounded follow-up rather than universal refutation.
+  snapshot_sha256: c9ce430db7f0ec82241a886c779b6073b1623890acd39bef84b02f4956d1bc1b
+- evidence_id: pmpM
+  kind: primary_source
+  reference: PMID:14679249; DOI:10.1128/JB.186.1.262-265.2004
+  locator: 476-PMC303449.html; original methods and Tables1–2
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: Heterologous PmpM expression in E. coli KAM32 raises reported fradiomycin
+    MIC from 0.5 to 2 µg/mL. Native P. aeruginosa deletion/complement strains are
+    all 4 µg/mL in Table2. Direct transport experiments concern ethidium. These distinct
+    host results coexist; neither universal Pseudomonas fradiomycin resistance nor
+    exact pure-B assay material is inferred.
+  snapshot_sha256: d38577e99dd59a482068e381ac25c79442631ae7007de4c02995c24ff4abd29e
+- evidence_id: rrsB
+  kind: primary_source
+  reference: PMID:11502507; DOI:10.1128/AAC.45.9.2414-2419.2001
+  locator: 476-PMC90670.html; original methods, Tables2–4 and results
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: The methods specify a neomycin B/C mixture, while a later table calls the
+    material neomycin B. U1406A does not confer neomycin resistance, whereas A1408G
+    has a positive resistance phenotype in the specified E. coli ribosomal backgrounds.
+    A generic mutation-bearing rrsB database edge is therefore not disproved by the
+    negative U1406A result; mutation and material boundaries prevent pure-B quantitative
+    transfer.
+  snapshot_sha256: aad1c9d5055754a8521dba28d0a400a10334ee286fcec77dec54d2ddc1e1deba
+- evidence_id: aph
+  kind: primary_source
+  reference: PMID:14638496; DOI:10.1128/AAC.47.12.3867-3876.2003
+  locator: 476-PMC296182.html; original methods, Table2 and associated results/discussion
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: P. aeruginosa PAK aph/hpaA mutants and 4-hydroxyphenylacetate induction
+    demonstrate context-dependent generic-neomycin susceptibility. The exact neomycin
+    B/C substrate specificity statement cites earlier work. The present assay is not
+    silently recast as a verified pure-B free-base experiment.
+  snapshot_sha256: 817cbab89b0e27de9152a3c83489370c77b4053a7c644a163aa014381198882a
+- evidence_id: leads
+  kind: database
+  reference: All 39 adopted/current ARO PMID leads
+  locator: 476-adopted-core.json; complete per-lead and per-edge dispositions in 476-source-audit.json
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: All 39 identifiers resolve to MED records. The 36 supplied abstracts were
+    read; PMID10103173,11083623 and6270337 have no supplied abstract and remain metadata-only.
+    Five frozen ChEBI leads concern combination therapy, biosynthesis, membrane mimics
+    or allergy rather than a uniform exact-parent antibacterial assay. PMID20387903
+    explicitly studies neomycin B as an AAC(3)-IIIb substrate. Remaining gene-sequence,
+    clone, methyltransferase and mutation reports are not promoted beyond their inspected
+    abstract scope.
+  snapshot_sha256: 48f041903483db9efab85fd66e8e674abf16da43a20eaa078057f094a1e6a3eb
+- evidence_id: aro
+  kind: database
+  reference: Native target and 29 resistance ARO identifiers
+  locator: 476-aro-blocks.json; full official ontology snapshot 426-current-aro.obo
+    and provenance 426-fetch2-results.json
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: All 29 native resistance identifiers retain their current confers_resistance_to_antibiotic
+    ARO0000005 edges; the 16S-rRNA target retains targeted_by_antibiotic. Every native
+    resistance row explicitly states database provenance, and the target has PRIMARY_EVIDENCE_NEEDED.
+    Source neomycin breadth and limited primary-read depth require material/host/mutation
+    qualification before primary promotion, not blanket removal of current database
+    assertions.
+  snapshot_sha256: a66475553f0d7adbfdb436ccf95989216b027e99674d02dde9b72bb3a2bd17a9
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/precise1k/b2470 and p_aeruginosa/precise364/PA1361
+  locator: 476-imodulon-datasets.json and 476-imodulon-acrD/rrsB/PmpM.json
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: Pre-web adapter queries found acrD b2470 and PmpM PA1361 gene records but
+    no iModulon components; rrsB had no gene hit. No covered Mycobacterial dataset
+    was used. These computational catalog results are not drug-transport, resistance
+    or negative biological evidence.
+  snapshot_sha256: 9fea10b076e6c8ff77b7d9844336b12c7ce37395d8efd8536d5cf9a5aa760916
+- evidence_id: other-xrefs
+  kind: database
+  reference: DrugCentral:1896; KEGG:D05140; DrugBank:DB00452; remaining exact registries
+  locator: 476-drugcentral.html; 476-kegg-D05140.txt; 476-fetch.json through476-fetch4.json
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: DrugCentral1896 and KEGG D05140 identify framycetin in drug context; their
+    placement does not require exact molecular equivalence. DrugBank returned403.
+    MetaCyc returned account/login content, LINCS returned500, and the attempted old
+    VSDB host failed DNS. Reaxys is corroborated through ChEBI only. LSM-5787 is absent
+    from a limited 639-record HMS collection snapshot; that is not evidence of global
+    identifier absence or a false mapping.
+  snapshot_sha256: 0a0cf85df8e553e28e99d8feceda7fc28518b426a2beb87c4f1d0c9c4273cc29
+- evidence_id: owners
+  kind: validation
+  reference: Maintained ChEBI/ARO and source-scoped override lanes
+  locator: 476-source-audit.json; 476-inspect.json; 476-raw-rows.json; ignored-inclusive
+    476-owners-search.json
+  accessed_at: '2026-10-21T17:03:01Z'
+  support: supports
+  summary: All 16 captured input hashes remain unchanged, including original13. The
+    32 matched source rows, seven chronological histories and source mints were checked.
+    ChEBI owns the definition; ARO owns the brand alias, with source-scoped synonym_exclusions
+    in conf/sources.yaml available to suppress its erroneous exact typing. The seeder
+    reproduces these source assertions.
+  snapshot_sha256: 48f041903483db9efab85fd66e8e674abf16da43a20eaa078057f094a1e6a3eb
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral neomycin B identity
+  outcome: supported
+  summary: Nine asserted graph encodings, stereochemistry, formula, charge and masses
+    agree. The graph is not an inferred mixture.
+  target_ids:
+  - CHEBI:7508
+  evidence_ids:
+  - record
+  - chemistry
+- assessment_id: definition
+  area: evidence
+  topic: Glycosidic linkage terminology
+  outcome: concern
+  summary: The exact supported graph has no ester; the inherited definition should
+    describe the O-glycosidic linkage.
+  target_ids:
+  - CHEBI:7508
+  evidence_ids:
+  - record
+  - chemistry
+  - glycoside
+  - terms
+- assessment_id: classification
+  area: grounding
+  topic: Aminoglycoside parents and antibacterial roles
+  outcome: supported
+  summary: Chemical parents and broader roles agree with the exact skeleton and bounded
+    activity evidence. No whole-spectrum or clinical approval claim is inferred.
+  target_ids:
+  - CHEBI:7508
+  evidence_ids:
+  - terms
+  - target
+  - acrD
+  - leads
+- assessment_id: brand-type
+  area: grounding
+  topic: Soframycin synonym type
+  outcome: concern
+  summary: Official product identity demonstrates a brand for sulfate material, whereas
+    the native enum asserts an exact chemical synonym.
+  target_ids:
+  - CHEBI:7508
+  evidence_ids:
+  - record
+  - brand
+- assessment_id: xrefs
+  area: grounding
+  topic: Broad source concepts and inaccessible exact registries
+  outcome: unknown
+  summary: The ARO generic-neomycin bridge and ChEMBL3989751 graph-free entry need
+    source reconciliation. MetaCyc, LINCS, VSDB and Reaxys lack independent exact
+    graph verification; no incompatible structure has been demonstrated. Drug-context
+    links are assessed by their stated contract.
+  target_ids:
+  - CHEBI:7508
+  evidence_ids:
+  - registry
+  - other-xrefs
+- assessment_id: binding
+  area: evidence
+  topic: 16S-rRNA target
+  outcome: supported
+  summary: Exact neomycin B directly binds the synthetic A-site model in original
+    crystallography; native database provenance remains accurately qualified.
+  target_ids:
+  - CHEBI:7508
+  evidence_ids:
+  - target
+  - aro
+- assessment_id: resistance
+  area: evidence
+  topic: All 29 database resistance assertions
+  outcome: unknown
+  summary: Current database edges and source labels are verified. Exact B material,
+    mutation, strain and host context are not uniformly proven across primary papers;
+    selected experiments expose specific limits without justifying blanket deletion.
+  target_ids:
+  - CHEBI:7508
+  evidence_ids:
+  - aro
+  - acrD
+  - pmpM
+  - rrsB
+  - aph
+  - leads
+  - adapter
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary and quantitative enrichment
+  outcome: supported
+  summary: A SEEDED record need not add MICs, a causal graph or primary evidence merely
+    because useful sources exist. Combination studies, mixtures and sulfate product
+    claims should retain their own material/context before enrichment.
+  target_ids:
+  - CHEBI:7508
+  evidence_ids:
+  - record
+  - leads
+  - brand
+- assessment_id: provenance
+  area: ownership
+  topic: Maintained ownership and history
+  outcome: supported
+  summary: Captured hashes, raw assertions, current terms and seven chronological
+    events were checked; exact correction lanes are identified.
+  target_ids:
+  - CHEBI:7508
+  evidence_ids:
+  - owners
+findings:
+- finding_id: F1
+  issue_key: framycetin-definition-glycoside-ester-wording
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Definition misnames a glycosidic linkage as an ester
+  description: The definition calls framycetin a glycoside ester of neamine and neobiosamine
+    B. Its exact native and official structures contain only single bonds and no carbonyl/ester
+    group; original glycoside synthesis work describes the connection between these
+    cores as glycosidic. The inherited chemical terminology is wrong while the exact
+    compound identity and graph remain consistent.
+  target_ids:
+  - CHEBI:7508
+  field_paths:
+  - definition
+  evidence_ids:
+  - record
+  - chemistry
+  - glycoside
+  - terms
+  - owners
+  rule_id: '.claude/skills/curate-yaml-record/references/review-checklist.md: Identity
+    and Evidence standard'
+  normalization_reason: Minor nonblocking wording error; no wrong native structure,
+    formula or exact identity is demonstrated.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native definition generation
+- finding_id: F2
+  issue_key: framycetin-soframycin-brand-exact-synonym
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Soframycin is imported as an exact chemical synonym
+  description: synonyms[12] gives Soframycin the EXACT_SYNONYM enum. Official Australian
+    information identifies it as a brand containing framycetin sulfate. Preserve the
+    useful product association with BRAND_NAME and material qualification, or suppress
+    the incorrect exact alias through its maintained ARO source lane until the type
+    can be represented.
+  target_ids:
+  - CHEBI:7508
+  field_paths:
+  - synonyms[12]
+  evidence_ids:
+  - record
+  - brand
+  - aro
+  - owners
+  rule_id: 'src/antibioticmech/schema/antibioticmech.yaml: SynonymTypeEnum BRAND_NAME
+    and EXACT_SYNONYM'
+  normalization_reason: Minor synonym-type/provenance defect; the native exact parent
+    identity remains supported.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-scoped synonym_exclusions override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO source synonym assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Synonym exclusion and enum generation
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:7508
+  description: Correct the maintained ChEBI definition through the source-refresh
+    or reviewed-definition lane to describe a glycoside/O-glycosidic connection of
+    neamine and neobiosamine B, removing ester. Preserve the exact neomycin B graph
+    and all stereochemistry; do not hand-edit generated native output.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native definition generation
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - Compare wording with original PMID30736311 and the exact native/official graphs.
+  - Regenerate through the documented source/curation workflow, then run native schema/strict,
+    reference/history/corpus and QC gates.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:7508
+  description: Resolve the ARO0000005 Soframycin alias in its maintained source/synonym
+    override lane. Suppress the erroneous EXACT_SYNONYM using conf/sources.yaml synonym_exclusions
+    if an upstream type fix cannot be adopted; retain a source-backed BRAND_NAME with
+    explicit sulfate/product qualification through a supported curation representation.
+    Do not assume the other unresolved trade-like aliases have identical product definitions.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-scoped synonym_exclusions override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO source synonym assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Synonym exclusion and enum generation
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - Confirm Soframycin no longer asserts exact free-base equivalence and any retained
+    brand association cites the official sulfate product.
+  - Run documented regeneration and schema/strict, source provenance, history/reference/corpus
+    and QC checks; preserve unrelated aliases and exact graph.
+limitations:
+- Of 39 adopted/current ARO leads, 36 supplied abstracts were read and three supplied
+  no abstract; the latter remain metadata-only. Four selected resistance originals
+  and the separate exact-target/glycoside originals received additional section/table
+  inspection, not an assertion that every cited paper was read in full.
+- Most original resistance experiments call their drug neomycin/fradiomycin without
+  a verified exact B/free-base reagent; one explicitly uses a B/C mixture. Mutation,
+  host, medium and induction boundaries remain unresolved for quantitative exact-parent
+  adoption.
+- The 2000 AcrD study does not itself support every component of the AcrAD-TolC exact-B
+  transport claim. Later complete primary coverage was not exhausted; no universal
+  absence or blanket database-edge invalidation is concluded.
+- ChEMBL3989751 supplies no graph; its exact equivalence is unresolved despite a verified
+  separate CHEMBL184618 candidate. ARO0000005 combines generic-neomycin and exact-B
+  identifiers.
+- MetaCyc returned login content, LINCS returned500, VSDB DNS resolution failed and
+  DrugBank returned403; Reaxys was not independently inspected. The limited HMS archive
+  does not resolve global LINCS identity.
+- The official Soframycin page and linked CMI were readable in the browser, but local
+  page/PDF downloads timed out. No successful local PDF snapshot is claimed. Other
+  potentially product-associated native aliases lack an independently resolved exact
+  product definition.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Native schema/strict and ledger used batch048; standalone chemistry used the batch019
+  interpreter against batch048.
+- No native/source bytes, scientific status or previous review bundle was altered.
+  Source access failures and restricted primary read depth remain explicit.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:7508
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC1251667/
+- https://www.safetyandquality.gov.au/medicine-finder/soframycin
+tags:
+- record-review
+- framycetin

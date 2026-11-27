@@ -1,0 +1,667 @@
+schema_version: 1.0.0
+review_id: 20261021T170324Z-fosmidomycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of fosmidomycin
+started_at: '2026-10-21T16:45:52Z'
+finished_at: '2026-10-21T17:03:24Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The neutral fosmidomycin identity, strictly broader parents, source roles
+  and directly observed E. coli DXR target are supported. One minor protein-example
+  wording error calls the cited quaternary complex ternary. The original isolation
+  and structure papers concern sodium-salt material, so their assay values are not
+  presented as neutral free-acid measurements.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/fosmidomycin.yaml
+    sha256: ffb23130ec8bd457f6325b4a0b1bace997c0941ab2bdc23d0d9a368afc08024d
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: curation/uniprot_protein_examples.yaml
+    sha256: 536ab4cc7ba9be95c80242bcc25321d67a5bdbfecbc50f3be5a449000abfe5f5
+    role: context
+  - path: curation/uniprot_protein_examples_transition.json
+    sha256: 7829b35a58de3b6480fb33814f42d48341d970d2db78dca56979b1f8b23aaf9c
+    role: context
+  - path: src/antibioticmech/uniprot_examples.py
+    sha256: eb91473cccd9c24c533dc368d009de2141c5936b24d761fe8a70a4e71edbb5a0
+    role: context
+  - path: scripts/curate_uniprot_protein_examples.py
+    sha256: 3399882f3f23e95f717eb94081666022545e1ed999e99b5425d1a3c95bf9e54e
+    role: context
+targets:
+- target_id: CHEBI:443725
+  path: data/antibiotics/antibacterial/fosmidomycin.yaml
+  label: fosmidomycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, definition, structure, roles, synonyms and citation
+      leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO classification and identifier mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted database molecular target edge
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI and CARD/ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated imported native fields; curator-owned primary evidence preserved
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Maintained curated UniProt protein example overlay
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples_transition.json
+    role: Protein-example transition receipt
+  - repository: CultureBotAI/AntibioticMech
+    path: src/antibioticmech/uniprot_examples.py
+    role: Validated protein-example writer
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/curate_uniprot_protein_examples.py
+    role: Protein-example curation entrypoint
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 475; original 13 hashes retained and
+    six actual ARO/UniProt owner inputs appended before detailed assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:443725
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:443725
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    475
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:443725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/fosmidomycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:443725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/fosmidomycin.yaml --out /private/tmp/am-review-session/475-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent authority chemistry
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/475-authority-check.py
+    > /private/tmp/am-review-session/475-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Nine native and official encodings agree in graph, neutral charge, formula,
+    masses and InChIKey.
+  target_ids:
+  - CHEBI:443725
+- check_id: ledger
+  name: Source, reference and history ledger
+  command: .venv/bin/python /private/tmp/am-review-session/475-ledger.py > /private/tmp/am-review-session/475-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All 19 input hashes unchanged; original 13 preserved; all eight adopted/native
+    citation abstracts disposed, seven histories chronological.
+  target_ids:
+  - CHEBI:443725
+- check_id: adapter-catalog
+  name: Structured source catalog
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/475-imodulon-datasets.json
+    2> /private/tmp/am-review-session/475-imodulon-datasets.err
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual catalog request exited 0 before protein literature research.
+  target_ids:
+  - CHEBI:443725
+- check_id: adapter-search
+  name: Structured dxr source search
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query dxr
+    > /private/tmp/am-review-session/475-imodulon-search.json 2> /private/tmp/am-review-session/475-imodulon-search.err
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One exact dxr gene hit, no iModulon hit; no component summary was needed.
+  target_ids:
+  - CHEBI:443725
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:443725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:443725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:443725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:443725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:443725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:443725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:443725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:443725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:443725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/fosmidomycin.yaml
+  locator: Entire 152-line native record
+  accessed_at: '2026-10-21T16:54:09Z'
+  support: supports
+  summary: All five synonyms, three parents, six exact xrefs, one drug-context xref,
+    two source concepts, two molecular targets, the protein example and seven history
+    entries were read. Native primary DXR/mode text already describes a quaternary
+    complex; the protein-example role alone says ternary.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:443725; PubChem:572; ChEMBL:CHEMBL203125; pdb-ccd:FOM
+  locator: 475-authority-chemistry.json; official JSON/molfile/CCD snapshots
+  accessed_at: '2026-10-21T16:54:09Z'
+  support: supports
+  summary: Nine encodings yield GJXWDTUCERCKIX-UHFFFAOYSA-N, C4H10NO5P, charge 0,
+    no tetrahedral stereocentres, average mass 183.1 and exact mass 183.029659. Native
+    SMILES/InChI, current ChEBI SMILES/InChI/molfile, PubChem SMILES/InChI, ChEMBL
+    SMILES and CCD InChI have reciprocal graph matches. No salt or neighboring compound
+    is substituted.
+  snapshot_sha256: 4f87824f0aea41132110cccd1571f5caf53c4e0444ee05976137b9b85fd8ebde
+- evidence_id: terms
+  kind: authority
+  reference: CHEBI:443725; CHEBI:24650; CHEBI:26069; CHEBI:33281; ARO:3007149
+  locator: 475-chebi.json; 475-chebi24650/26069/33281.json; 475-aro-blocks.json
+  accessed_at: '2026-10-21T16:54:09Z'
+  support: supports
+  summary: The two chemical parents describe hydroxamic-acid derivatives and phosphonic
+    acids, matching the native N-hydroxyformamide and C-P(=O)(OH)2 groups; ARO supplies
+    the broader phosphonic-acid antibiotic class. Current ChEBI repeats all five retained
+    aliases, CAS66508-53-0 and Reaxys4133006. The source role is antimicrobial agent,
+    not an erased antibacterial-specific role.
+  snapshot_sha256: 0b027a040f664a4e02365f51600c1d91f9b9f3bd26288836e6ba2683f7222b30
+- evidence_id: aro
+  kind: database
+  reference: ARO:3000758; ARO:3000743
+  locator: Exact blocks from official 426-current-aro.obo; retrieval provenance 426-fetch2-results.json
+  accessed_at: '2026-10-21T16:54:09Z'
+  support: supports
+  summary: Current ARO preserves the exact identity mappings and DXR targeted_by_antibiotic
+    edge. The native imported target honestly labels this as CARD_ARO with PRIMARY_EVIDENCE_NEEDED
+    and no assay organism. ARO spectrum prose is not adopted in the native definition;
+    its broad Gram-positive-negative generalization should not override the original
+    tested panel.
+  snapshot_sha256: 361a49e006ed4ae38f8ff1d3a8c4c30657b1696a3dfde12d8c0d4a491a14acf0
+- evidence_id: crystal
+  kind: primary_source
+  reference: PMID:17554164; DOI:10.1107/S1744309107024475
+  locator: Author-uploaded original Methods, Table 1 and Results 3.1–3.2 at https://www.researchgate.net/publication/6282986_Structure_of_1-deoxy-d-xylulose_5-phosphate_reductoisomerase_in_a_quaternary_complex_with_a_magnesium_ion_NADPH_and_the_antimalarial_drug_fosmidomycin;
+    independently checked 2EGH
+  accessed_at: '2026-10-21T16:54:09Z'
+  support: supports
+  summary: The 2.2 Å study soaked recombinant DXR crystals with fosmidomycin, Mg2+
+    and NADPH, directly resolving inhibitor binding and an ordered active-site loop.
+    It explicitly distinguishes this quaternary complex from earlier ternary 1Q0L.
+    Half of NADPH lacked visible density; this does not negate the observed fosmidomycin
+    binding. The target and OTHER mechanism notes are supported, while the example
+    should use the cited complex terminology.
+  snapshot_sha256: fdb05b6ae8f866694ec936e6b34ae108dd7175c0e5b4fe74a0fa1079909dd0b3
+- evidence_id: protein
+  kind: authority
+  reference: UniProtKB:P45568; NCBITaxon:83333; PDB:2EGH
+  locator: 475-uniprot.json and 475-2EGH-polymer.json
+  accessed_at: '2026-10-21T16:54:09Z'
+  support: supports
+  summary: Current reviewed P45568 is E. coli K-12 dxr/ispC/yaeM, locus b0173, EC1.1.1.267.
+    The actual 2EGH polymer deposit identifies W3110 source protein, E. coli M15 expression
+    host and SIFTS alignment to P45568. The native K-12 reference example is justified;
+    it does not replace the taxon-agnostic imported DXR target or imply an MG1655
+    assay.
+  snapshot_sha256: 2cf396480168d3087bc2dc8dd60b4f8d54df509b8010517bff18a5d3141bb048
+- evidence_id: isolation
+  kind: primary_source
+  reference: PMID:6768705; DOI:10.7164/antibiotics.33.24
+  locator: Original 1980 paper pp24–28, fermentation, Table 3 and Table 4; 475-isolation.pdf
+  accessed_at: '2026-10-21T16:54:09Z'
+  support: supports
+  summary: S. lavendulae No.8006 produced FR-31564 and FR-32863. FR-31564 was characterized
+    as C4H9NO5PNa. Its nutrient-agar dilution panel includes E. coli NIHJ JC2 at 12.5
+    µg/mL, B. subtilis ATCC6633 at 6.25 µg/mL and S. aureus FDA209P above 100 µg/mL.
+    These results support the antibiotic description at tested material/strain scope,
+    not universal Gram-positive inactivity or a neutral free-acid MIC.
+  snapshot_sha256: a55b043215c7d2cf5673f508ee6c1ac6bbedd11578a1150e94df363648d90a13
+- evidence_id: structure-original
+  kind: primary_source
+  reference: DOI:10.7164/antibiotics.33.29
+  locator: Original 1980 structure paper, FR-31564 section pp32–33 and experimental
+    data; 475-structure1980.pdf
+  accessed_at: '2026-10-21T16:54:09Z'
+  support: supports
+  summary: FR-31564 is assigned the 3-(N-formyl-N-hydroxy)aminopropylphosphonic-acid
+    skeleton, with sodium-salt formula and spectroscopic comparison to a synthetic
+    sample. This corroborates the parent skeleton while preserving the isolated salt
+    form.
+  snapshot_sha256: ced844c2c2f70e46d78edf7c63cd372be57aea346411c79b407c2507c0f60ce3
+- evidence_id: leads
+  kind: database
+  reference: Eight adopted/native PMIDs
+  locator: 475-adopted-core.json; per-PMID dispositions in 475-source-audit.json
+  accessed_at: '2026-10-21T16:54:09Z'
+  support: supports
+  summary: All six frozen ChEBI leads, ARO PMID10477522 and native PMID17554164 resolve
+    to MED records and their complete abstracts were read. Five ChEBI leads concern
+    substituted analogues or bisphosphonate binding; PMID17149863 studies a bisphosphonate/fosmidomycin
+    combination. PMID10477522 supplies parasite DXR/culture/mouse evidence. None is
+    silently used as an exact-parent bacterial potency, FPPS target or clinical-product
+    assertion.
+  snapshot_sha256: 4878616fde6461560a72ebfb94f5441da0bd7ce2851cf0943e04fd2035871845
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/precise1k/b0173
+  locator: 475-imodulon-datasets.json; 475-imodulon-search.json
+  accessed_at: '2026-10-21T16:54:09Z'
+  support: supports
+  summary: The pre-web structured query resolved dxr to b0173 with zero iModulon hits.
+    This is a gene-context cross-check, not independent inhibitor-binding evidence.
+  snapshot_sha256: 2f4a48fc141984eb0e5b541467d3652d77373ab34d62c2e7b28c0f0eadb4b858
+- evidence_id: owners
+  kind: validation
+  reference: Maintained ChEBI/ARO and UniProt lanes
+  locator: 475-inspect.json; 475-raw-rows.json; 475-source-audit.json; curation/uniprot_protein_examples.yaml
+    fosmidomycin entry
+  accessed_at: '2026-10-21T16:54:09Z'
+  support: supports
+  summary: Original 13 input hashes remain unchanged within 19 captured inputs. Source
+    mints, imported fields, two target provenance types and seven chronological histories
+    agree. The incorrect ternary wording is reproduced by the maintained protein-example
+    overlay and transition receipt; its repair belongs in that overlay and validated
+    writer, not the seeder-owned identity fields.
+  snapshot_sha256: 4878616fde6461560a72ebfb94f5441da0bd7ce2851cf0943e04fd2035871845
+- evidence_id: access
+  kind: search
+  reference: Public exact-source and identifier investigation
+  locator: 475-fetch.json through 475-fetch4.json; ignored-inclusive 475-owners-search.json
+  accessed_at: '2026-10-21T16:54:09Z'
+  support: context_only
+  summary: Europe PMC full XML failed with HTTP500; PMC returned a browser challenge,
+    not article text; IUCr PDF returned403. The author-uploaded original text was
+    readable in the browser. DrugBank returned403; its drug-context link is corroborated
+    by current ChEBI without claiming exact molecular equivalence. Reaxys is corroborated
+    only through ChEBI; no direct registry structure was inspected.
+  search_scope: Exact fosmidomycin, PMID17554164, FR-31564 and native identifiers;
+    local rg --no-ignore --hidden across maintained sources, curation, scripts and
+    src.
+  snapshot_sha256: b2c22b60fac4e1a63e49ca02b6334228dd2faef1375b458bb28d00ad7908b939
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral fosmidomycin
+  outcome: supported
+  summary: Nine encodings and original parent-skeleton work agree. Sodium-salt material
+    is distinguished from the native neutral parent.
+  target_ids:
+  - CHEBI:443725
+  evidence_ids:
+  - record
+  - chemistry
+  - structure-original
+- assessment_id: classification
+  area: grounding
+  topic: Parents, role and biological definition
+  outcome: supported
+  summary: Strictly broader chemical classes and source antimicrobial role are consistent;
+    original producer and tested antibacterial material support the bounded definition.
+  target_ids:
+  - CHEBI:443725
+  evidence_ids:
+  - terms
+  - aro
+  - isolation
+- assessment_id: target
+  area: evidence
+  topic: Direct DXR binding and mechanism
+  outcome: supported
+  summary: Exact primary crystallography supports E. coli DXR direct binding and a
+    microbial isoprenoid-pathway mechanism. OTHER is explicitly justified by the absent
+    dedicated enum; protein examples remain organism-specific examples.
+  target_ids:
+  - CHEBI:443725
+  evidence_ids:
+  - crystal
+  - protein
+  - adapter
+- assessment_id: example-wording
+  area: evidence
+  topic: Protein-example complex terminology
+  outcome: concern
+  summary: The maintained role calls the cited experiment ternary despite the paper
+    and other native fields describing DXR, Mg2+, NADPH and fosmidomycin as quaternary.
+  target_ids:
+  - CHEBI:443725
+  evidence_ids:
+  - record
+  - crystal
+  - owners
+- assessment_id: registry
+  area: grounding
+  topic: Restricted registry and drug-context scope
+  outcome: unknown
+  summary: Current ChEBI corroborates CAS, Reaxys and DrugBank association; DrugBank
+    direct access failed and independent Reaxys structure verification remains unresolved.
+    No contradictory mapping was established.
+  target_ids:
+  - CHEBI:443725
+  evidence_ids:
+  - terms
+  - access
+- assessment_id: completeness
+  area: completeness
+  topic: Optional quantitative and causal enrichment
+  outcome: supported
+  summary: No native MIC, resistance, clinical approval, producer-object or causal
+    graph requires completion. Original salt assays, parasite experiments and analogue/combination
+    studies are retained at their own scope.
+  target_ids:
+  - CHEBI:443725
+  evidence_ids:
+  - isolation
+  - leads
+  - record
+- assessment_id: provenance
+  area: ownership
+  topic: Maintained owners and audit trail
+  outcome: supported
+  summary: All 19 input hashes and seven chronological events were checked. The exact
+    owner for the minor correction is captured.
+  target_ids:
+  - CHEBI:443725
+  evidence_ids:
+  - owners
+findings:
+- finding_id: F1
+  issue_key: fosmidomycin-protein-example-quaternary-complex-wording
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Protein example misnames the cited quaternary crystal complex
+  description: molecular_targets[1].protein_examples[0].role describes the PMID17554164
+    experiment as a ternary complex with NADPH and fosmidomycin. The original explicitly
+    reports DXR with Mg2+, NADPH and fosmidomycin as a quaternary complex and distinguishes
+    it from an earlier ternary structure. The native mode and target experimental
+    context already use the correct terminology. This is a bounded wording/provenance
+    inconsistency, not an incorrect protein identity or unsupported direct-binding
+    relation.
+  target_ids:
+  - CHEBI:443725
+  field_paths:
+  - molecular_targets[1].protein_examples[0].role
+  evidence_ids:
+  - record
+  - crystal
+  - protein
+  - owners
+  rule_id: '.claude/skills/curate-yaml-record/references/review-checklist.md: Molecular
+    targets and Evidence standard'
+  normalization_reason: Minor wording inconsistency in the example description; exact
+    compound, protein mapping and directly observed target remain supported.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Maintained exact protein-example role
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/curate_uniprot_protein_examples.py
+    role: Validated overlay curation entrypoint
+  - repository: CultureBotAI/AntibioticMech
+    path: src/antibioticmech/uniprot_examples.py
+    role: Validated writer and receipt handling
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:443725
+  description: Change the maintained fosmidomycin protein-example role to describe
+    the quaternary DXR–Mg2+–NADPH–fosmidomycin complex, preserving P45568, K-12 reference
+    context and PMID17554164. Apply through the validated protein-example curation
+    workflow with a new curation event and appropriately regenerated transition receipt;
+    retain earlier history.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Maintained exact protein-example role
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/curate_uniprot_protein_examples.py
+    role: Validated overlay curation entrypoint
+  - repository: CultureBotAI/AntibioticMech
+    path: src/antibioticmech/uniprot_examples.py
+    role: Validated writer and receipt handling
+  generator: scripts/curate_uniprot_protein_examples.py
+  acceptance_checks:
+  - Compare the corrected role with original PMID17554164 and PDB2EGH; retain species/strain
+    and direct-binding boundaries.
+  - Run the documented protein-example curation validation, native schema/strict checks,
+    full history/reference/corpus gates and just qc; preserve byte-identical unrelated
+    records.
+limitations:
+- Direct DrugBank access returned403 and the proprietary Reaxys structure was not
+  independently inspected; current ChEBI corroborates their associations. DrugBank
+  remains a drug-context reference.
+- The six frozen ChEBI literature leads and ARO/native PMIDs were all resolved and
+  read at abstract depth; only the exact 2007 crystal study received additional original
+  Methods/Results inspection. Current ChEBI additional unadopted bibliography was
+  not exhaustively reviewed.
+- The 2007 full-text cache routes failed or returned a challenge; the author-uploaded
+  original was inspected in the browser, while the local snapshots retain its abstract
+  and official deposit.
+- Original isolation assays concern characterized sodium-salt material and named test
+  strains. No neutral free-acid quantitative observation, clinical approval or universal
+  spectrum is inferred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Standalone chemistry used the batch019 interpreter against batch048; native checks,
+  ledger and contract used batch048.
+- No native/source bytes or scientific status were changed. The missing optional fields
+  are not treated as defects.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:443725
+- https://pubmed.ncbi.nlm.nih.gov/17554164/
+- https://www.rcsb.org/structure/2EGH
+tags:
+- record-review
+- fosmidomycin

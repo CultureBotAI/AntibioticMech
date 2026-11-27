@@ -1,0 +1,1251 @@
+# Fumimycin: natural-enantiomer identity failure and two incorrect source groundings
+
+- Review: 20261021T170353Z-fumimycin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T16:45:54Z
+- Finished UTC: 2026-10-21T17:03:53Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The native structure and exact synonym encode R fumimycin, whereas the inspected original 2019 synthesis explicitly distinguishes natural (−)-fumimycin from its (+) enantiomer and draws the natural compound as S; the 2023 synthesis independently names the S product. Natural isolate enantiomeric purity remains unresolved. The polyphenol parent also fails its explicit ontology definition, and the ChemSpider exact xref has an unassigned stereocentre. Internal chemistry and focused native validators pass, illustrating that source agreement does not establish natural-product identity.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 479; all thirteen original input hashes preserved within twenty-one expanded inputs (readiness plus seven guidance/contract files).
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:65931 | data/antibiotics/antibacterial/fumimycin.yaml | generated | fumimycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:65931 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:65931 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:65931 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:65931 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:65931 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:65931 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:65931 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:65931 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:65931 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:65931 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:65931 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:65931 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Natural compound versus stored enantiomer
+
+identity: concern. Targets: CHEBI:65931.
+
+The stored R graph and exact synonym conflict with the S natural-compound assignment explicitly made by the 2019 authors and corroborated by the 2023 final systematic name. This is a wrong natural-product identity, while the natural isolate ee remains unresolved. Agreement between current ChEBI and PubChem retains the same R annotation.
+
+### Exact chemical xrefs and ontology parents
+
+grounding: concern. Targets: CHEBI:65931.
+
+ChemSpider 20557857 has an unassigned centre and cannot be an exact equivalence to native R. The polyphenol parent requires two benzene rings, but the graph has one. The other four parents resolve coherently; the Reaxys accession remains unverified because of HTTP 403.
+
+### Antibacterial eligibility and exact material
+
+evidence: unknown. Targets: CHEBI:65931.
+
+The original natural isolate has bounded antibacterial activity; its MIC and MRC endpoints differ. Those data do not establish an R-enantiomer MIC or inactivity. Antibacterial filing and role are supported for the named natural material, but exact-graph transfer must follow identity adjudication.
+
+### Peptide deformylase inhibition and cellular causality
+
+evidence: unknown. Targets: CHEBI:65931.
+
+The natural preparation inhibits S. aureus PDF in an enzyme assay with mixed-type kinetics. That supports a bounded functional inhibition claim after material adjudication, not direct binding, a particular UniProt identity or proof that PDF alone mediates whole-cell growth effects. No native mode, target or causal claim is present.
+
+### Resistant test strains versus resistance mechanism
+
+scope: unknown. Targets: CHEBI:65931.
+
+Activity against MRSA and QRSA test strains is not a fumimycin resistance mechanism or a clinical susceptibility classification. No resistance determinant, breakpoint or species-wide phenotype is asserted or inferred.
+
+### F746 natural-production statement
+
+evidence: supported. Targets: CHEBI:65931.
+
+The 2007 primary supports production by the source-identified A. fumisynnematus F746. The later A. lentulus work is a separate producer context and does not revise that strain assignment. Absolute hand and ee of the original isolate remain distinct from producer identification.
+
+### Optional collections and all adopted leads
+
+completeness: unknown. Targets: CHEBI:65931.
+
+All four adopted abstracts were read and assigned exact intermediate/racemate/enantiomer/natural-material scope. Optional activity, target, producer and controversy annotations could be curated after identity and source adjudication; their absence is not a schema error. There are no clinical, regulatory, causal, dataset or discussion assertions to validate.
+
+### Maintained ownership, status and history
+
+provenance: supported. Targets: CHEBI:65931.
+
+The entire generated record, raw row, readiness lead, schema semantics and all three history events were read. The original thirteen hashes remain unchanged in twenty-one captured inputs; SEEDED status is retained. Source evidence is distinguished from current authority agreement.
+
+### Deterministic integrity and scientific limits
+
+schema: supported. Targets: CHEBI:65931.
+
+Focused schema, strict, internal molecular consistency and source mint checks pass. They do not detect the wrong natural enantiomer, narrower exact-xref mismatch or chemically inappropriate broader parent.
+
+## Findings
+
+### F1: The record represents natural fumimycin with the opposite enantiomer
+
+blocker / open / confirmed; issue key: fumimycin-natural-s-enantiomer-stored-as-r.
+
+The native definition identifies the F746 natural product, but its structure and exact systematic synonym encode R. The original 2019 authors explicitly identify natural (−)-fumimycin as 1 and (+)-fumimycin as ent-1; their Scheme 1 drawing assigns S by CIP. The 2023 primary independently names its final (−)-fumimycin product S. Thus the record conflates the natural-product identity with the opposite synthetic enantiomer. This conclusion does not assert that the 2007 or 2023 natural isolates were enantiopure, nor that R is inactive. Current ChEBI/PubChem agreement reflects the same R assignment and does not resolve the conflict.
+
+### F2: The polyphenol parent requires at least two benzene rings
+
+major / open / confirmed; issue key: fumimycin-single-benzene-polyphenol-parent.
+
+Native parent_compounds[1] is CHEBI:26195 polyphenol. The exact current ontology definition requires at least two benzene rings, each hydroxylated. Native fumimycin has one benzene ring with two phenolic hydroxyl groups and a fused five-membered lactone; the second ring is not benzene. The imported parent relation is therefore incorrect under the retained ontology meaning.
+
+### F3: The ChemSpider xref lacks the native assigned stereocentre
+
+major / open / confirmed; issue key: fumimycin-chemspider-unspecified-stereo-exact-link.
+
+Native xrefs[0] asserts exact structure equivalence to ChemSpider 20557857. Its official current InChI has no tetrahedral stereo and key QWMZGLCXYLPQAZ-VNKDHWASSA-N, whereas the native R graph has key QWMZGLCXYLPQAZ-CJWQODIFSA-N. The schema requires xrefs to denote the same structure. Unassigned stereo does not mean racemate, but it also does not denote one exact R or S enantiomer.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Reconcile the natural S identity, existing R source concept and exact structure ownership before importing natural-material biological claims.
+
+- Use the original 2019 natural 1/ent-1 assignment and 2023 explicit S product, retaining the 2007 planar assignment and unresolved natural ee. Do not claim a crystal of final fumimycin or infer an R-specific MIC from the natural preparation.
+- Reconcile whether the existing source concept is corrected upstream or an independently grounded natural S record is needed; do not change R to S while falsely claiming unchanged ChEBI/PubChem provenance.
+- Regenerate all structure strings and the exact synonym consistently from adjudicated primary evidence. The diagnostic S key is a chemistry check, not an automatic authority accession.
+- Run schema/strict, chemical identity, term/reference/history, corpus reproduction and QC gates after the separately authorized maintained-source correction.
+
+### A2
+
+Remove or correct the unsupported polyphenol parent through the ChEBI source handling.
+
+- Verify the retained parent definitions against the adjudicated molecular graph; do not replace the term merely because another label sounds similar.
+- Re-seed reproducibly and verify that the one-benzene graph no longer inherits CHEBI:26195 while its supported parents remain. Run focused and corpus gates.
+
+### A3
+
+Reconcile the ChemSpider exact xref with the eventual adjudicated stereochemical identity.
+
+- Retain 20557857 only in a supported non-equivalence context or remove it from exact xrefs unless its authoritative structure is resolved to the same assigned enantiomer. Do not call its unspecified graph a racemate.
+- Check any replacement accession by actual graph, charge and stereo, then run xref conflict, strict and corpus gates.
+
+### A4
+
+Optional future curation: record natural-material enzyme/activity evidence and producer context with explicit assay and stereochemical boundaries.
+
+- Resolve the identity blocker before assigning primary natural-material measurements to an exact enantiomer. Preserve 100 µg/mL MRSA MIC versus 100 µg/mL MRC for ordinary/quinolone-resistant S. aureus.
+- Preserve the limited enzyme method, substrate, mixed-type kinetics and missing construct/metal details. Functional inhibition is not direct binding or a completed cellular mechanism chain.
+- Use narrow claim-level citations and the validated writer with an accurate curation event only in a separately authorized task; no optional collection is required merely by this review.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/fumimycin.yaml; Entire native record, exact systematic synonym and all three seed/reseed events | supports | CHEBI:65931 is a SEEDED, EXACT antibacterial with neutral C16H15NO7, one R stereocentre, two E alkenes, five parents, one antibacterial role, two exact xrefs and one ChEBI source concept. Its definition attributes the substance to A. fumisynnematus F746. No mode, target, activity observation, resistance item, producer collection, clinical product, dataset or causal graph is present. |
+| owners | data/raw/chebi_antimicrobials.tsv; curation/record_review_queue.tsv; Entire exact ChEBI inventory row and readiness row | supports | The raw ChEBI row reproduces the native fields and adopts four PMID leads. No mechanism role is imported. The actual source and extraction/seeding owners were inspected; readiness is a lead, not evidence that a mechanism review was completed. Original thirteen hashes were preserved and eight context inputs appended. |
+| search | 479-local-hits.txt; Initial ignored-inclusive repository search, followed by exact maintained override inspection | context_only | The initial search included hidden and ignored files across the worktree except .git and .venv. Exact matches in the source/readiness rows were read; a subsequent ignored-inclusive search of curator_antibiotics.tsv and decisions.tsv found no target override. Historical research ledgers and rendered pages were treated as leads, not primary scientific evidence. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/65931/; Current CHEBI:65931 name, definition, default structure, parents, xrefs and citations | supports | The current ChEBI source repeats the R structure and systematic synonym, key QWMZGLCXYLPQAZ-CJWQODIFSA-N, neutral formula and natural-producer definition. It also retains the polyphenol parent and ChemSpider link. These are corroborated source assertions, not independent validation of the natural enantiomer. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/fumimycin/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON; Name lookup CID 50907655 molecular properties | supports | Current PubChem name resolution gives the same R structure and key as native. This accession is an independent lookup, not an additional native xref; its agreement does not resolve the primary natural-enantiomer conflict. |
+| polyphenol | https://www.ebi.ac.uk/chebi/backend/api/public/compound/26195/; CHEBI:26195 exact class definition | refutes | The parent polyphenol requires at least two benzene rings, each carrying at least one hydroxy group. Two hydroxyl groups on a single benzene do not meet this specific ontology definition. The current term still lists fumimycin as an incoming subclass. |
+| term-25384 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/25384/; CHEBI:25384 label and available definition | supports | The asserted term resolves to monocarboxylic acid. Its structural or role scope was compared with the native graph and natural-product evidence. No separate grounding error is identified for this term; antibacterial support is for the studied natural material, subject to the enantiomer finding. |
+| term-35735 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/35735/; CHEBI:35735 label and available definition | supports | The asserted term resolves to dicarboxylic acid monoamide. Its structural or role scope was compared with the native graph and natural-product evidence. No separate grounding error is identified for this term; antibacterial support is for the studied natural material, subject to the enantiomer finding. |
+| term-37581 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/37581/; CHEBI:37581 label and available definition | supports | The asserted term resolves to gamma-lactone. Its structural or role scope was compared with the native graph and natural-product evidence. No separate grounding error is identified for this term; antibacterial support is for the studied natural material, subject to the enantiomer finding. |
+| term-38830 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/38830/; CHEBI:38830 label and available definition | supports | The asserted term resolves to 1-benzofurans. Its structural or role scope was compared with the native graph and natural-product evidence. No separate grounding error is identified for this term; antibacterial support is for the studied natural material, subject to the enantiomer finding. |
+| term-33282 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/33282/; CHEBI:33282 label and available definition | supports | The asserted term resolves to antibacterial agent. Its structural or role scope was compared with the native graph and natural-product evidence. No separate grounding error is identified for this term; antibacterial support is for the studied natural material, subject to the enantiomer finding. |
+| chemistry | 479-chemistry.json; RDKit 2026.03.5; existing 019 interpreter against 048 cwd | supports | Native SMILES and InChI independently reproduce the stored key, formula, charge, one fragment, reported masses and R centre. The source-id mint reproduces antibioticmech:chebi-6909500009. These are internal-consistency checks, not proof of the natural absolute configuration. |
+| ring-check | 479-ring-check.json; Independent atom/ring and alkene map | supports | The native graph has exactly one six-membered all-carbon aromatic ring (zero-based atoms 3,10,9,8,6,4), one five-membered lactone ring, and two phenolic OH groups. Its sole stereocentre is atom 11, R; both carbon–carbon double bonds are E. This confirms the polyphenol mismatch without relying on the label. |
+| chemspider | https://www.chemspider.com/Chemical-Structure.20557857.html; Official ChemSpider 20557857 JSON-LD MolecularEntity | refutes | ChemSpider identifies fumimycin with InChIKey QWMZGLCXYLPQAZ-VNKDHWASSA-N. Its InChI retains both E alkenes but has no tetrahedral /t layer. The linked PubChem CID is 16726052. This is a stereochemically unspecified graph, not an asserted racemate, and it is not the same exact structure as native R. |
+| xref-check | 479-xref-check.json; Independent ChemSpider InChI parsing and diagnostic mirror image | supports | RDKit assigns native atom 11 as R and the ChemSpider centre as unassigned. Flipping only the native centre gives diagnostic S key QWMZGLCXYLPQAZ-GGXDDXSJSA-N with unchanged connectivity. This scratch graph is not an independently accepted source accession or authorization to replace a generated record. |
+| reaxys-access | https://www.reaxys.com/reaxys/secured/search.do?query=21037523; Actual Reaxys 21037523 public retrieval | context_only | The public request returned HTTP 403. The exact chemical identity of this retained Reaxys accession was not independently verified; no wrong-identifier finding is inferred from access failure. |
+| adopted | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A17523650%20OR%20EXT_ID%3A20024097%20OR%20EXT_ID%3A20859963%20OR%20EXT_ID%3A21031188%29%20AND%20SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; Complete original abstracts for all four adopted leads | supports | PMID:17523650 (2007, DOI:10.1021/ol0703231) reports natural isolation, S. aureus PDF inhibition and antibacterial activity; its full paper was inspected below. PMID:20024097 (DOI:10.1039/b916372g) reaches an advanced intermediate, not completed fumimycin. PMID:20859963 (DOI:10.1002/chem.201001036) reports racemic total synthesis. PMID:21031188 (DOI:10.1039/c0cc03399e) reports asymmetric (+)-fumimycin and CD/TDDFT absolute-configuration determination. The latter three abstracts do not establish exact natural-material antibacterial potency or a complete cellular causal chain. |
+| primary2007 | https://pharmacy.hebmu.edu.cn/trywhx/resources/43/201962692446.pdf; All three original pages 2449–2451; structure drawing p.2449, footnotes 5–6 and Table 1 p.2450, Figure 1 and assays p.2451 | supports | F746 from Korean soil yielded 11 mg fumimycin from 12 L culture; taxonomy used biological/physiological tests. Production used YPS at 28°C, 150 rpm for 7 days after a 3-day seed. The original planar/E,E structure was assigned by spectroscopy; natural rotation was −11.9 (c 0.26, MeOH), without an absolute-hand or ee measurement. Figure 1 and text report S. aureus PDF IC50 4.1 µM, mixed-type inhibition versus f-MAS, Ki 3.1 µM and Km 0.49 mM; plotted data are triplicate means ±SD. Broth microdilution at 37°C for 18 h gave MRSA MIC 100 µg/mL, while ordinary S. aureus and QRSA had MRC 100 µg/mL. MRC means at least 50% growth reduction, not complete-inhibition MIC. MRSA strains were CCARM3167/3506 and QRSA CCARM3505/3519; ordinary S. aureus identifiers were not stated. Enzyme metal/construct and complete media/inoculum conditions are not supplied in this main text; methods refer to earlier work. No final-product target-binding structure or genetic cellular target validation is provided. |
+| primary2019 | https://ora.uniurb.it/retrieve/9ea59d34-f973-4949-9da8-12176721df48/FUMIMICINA_Final%20Version.docx; Exact accepted author manuscript; introduction, Scheme 1 actually rendered/viewed, synthesis/conclusion and reference 4 | supports | The original authors explicitly call compound 1 natural (−)-fumimycin and (+)-fumimycin ent-1, citing the original isolation and 2010 asymmetric synthesis. Scheme 1 draws natural 1 with Me toward and NH away; CIP N &gt; lactone carbonyl C &gt; aryl C &gt; Me assigns S. The synthesis prepares both enantiomers and reports 99% ee; this does not establish the ee of the 2007 natural isolate. The manuscript leaves biological evaluation of these preparations for future work, so it does not measure an R-specific MIC. |
+| primary2019-si | https://ndownloader.figshare.com/files/17519756; Original SI S2 Table S1 and compound 1 spectral captions | supports | Table S1 explicitly compares natural (−)-fumimycin from the 2007 report with synthesized (−)-fumimycin and preserves the matching planar NMR assignment. Achiral NMR matching alone does not distinguish enantiomers; the hand mapping relies on the primary Scheme 1 assignment plus the later explicit S name, not this table alone. |
+| primary2023 | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10598217/fullTextXML; DOI:10.1038/s41467-023-42603-w; synthesis paragraph and Figure 6 | supports | The original electrosynthesis prepares (−)-fumimycin. Figure 6 was actually viewed and traces the same centre through intermediate 9; its X-ray deposition is CCDC 2249498. The crystal is of intermediate 9, not final fumimycin. The source supplies synthetic stereochemical corroboration, not an antibacterial assay of either enantiomer. |
+| primary2023-si | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10598217/supplementaryFiles; SI section 2.4, S34–S36; final S36 drawing and systematic name actually viewed | supports | The final product is explicitly named with (S) configuration and reported as (−)-fumimycin, rotation −110 (c 0.17, MeOH). The authors assign its hand by comparison with the literature and consistency with the X-ray of intermediate 9. They state that final-product polarity prevented ee determination; 93% ee was measured for preceding intermediates. Do not report 93% as a directly measured final-product ee. |
+| biosyn-abstract | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A%2836706030%20OR%2031476858%20OR%2031555018%29%20AND%20SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; Complete additional original abstracts PMID:36706030, 31476858 and 31555018 | context_only | The 2023 biosynthesis abstract reports isolation of fumimycin and a related new racemic compound, lentofuranine, from A. lentulus and proposes nonenzymatic cross-pathway assembly. Its explicit racemic label applies to lentofuranine. The 2019 Tetrahedron paper concerns racemic fumimycin and analogues tested against PDF; its abstract does not provide exact R antibacterial values. These distinct materials are not pooled with the natural F746 sample. |
+| biosyn-si | https://ndownloader.figshare.com/files/39005185; DOI:10.1021/jacs.2c13188 SI; S10–11 Marfey analysis and S35–36 compound 1 characterization | context_only | Original SI compound 1 is fumimycin with rotation −10.2 (c 0.09, MeOH), C16H15NO7 and a drawing without assigned absolute hand. The explicit Marfey racemic determination concerns compound 2 lentofuranine, not compound 1. This corroborates later natural production and a small negative rotation, but supplies no measured fumimycin ee or direct assignment of all natural molecules as pure S. |
+| adapter | kg-microbe-sources imodulondb search --organism s_aureus --dataset staph_precise108 --query peptide deformylase; iModulonDB s_aureus/staph_precise108 search after covered-dataset catalog inspection | context_only | Before open follow-up of the PDF mechanism lead, the structured adapter returned two gene hits, USA300HOU_RS05445 and USA300HOU_RS06105, and zero iModulon hits. These covered-dataset annotations are not the original 2007 enzyme identity, strain assignment or functional inhibition evidence. No native named protein or pathway is asserted. |
+| access | 479-fetch2.json; Actual original-source retrieval attempts and retained response hashes | context_only | Direct 2010 RSC main/SI routes returned HTTP 403 or HTTP 404, so the complete original 2010 configuration argument was not inspected. The 2019 racemic-paper PMC page returned a browser challenge despite HTTP 200; Europe PMC XML returned HTTP 500. The adopted 2009-intermediate and 2010-racemate papers were read at complete-abstract depth only. The independent 2019 accepted manuscript and 2023 synthesis/SI provide the inspected stereochemical evidence. |
+| gates | 479-focused-results.json; Actual focused schema, strict and chemistry results | supports | All three focused commands exited 0. Native schema/strict ran against 048; chemistry used the existing 019 RDKit interpreter against 048 cwd. The independent ring/xref checks confirm scientific errors beyond those deterministic checks. |
+
+## Limits And Additional Notes
+
+- The full 2007 main paper was read; its original structure and kinetic figure were viewed. The 2019 accepted manuscript was fully text-read and Scheme 1 viewed, with the original SI comparison table. The 2023 electrosynthesis relevant original text/Figure 6 and SI S34–36 were read; raw crystal coordinates and spectra were not independently re-refined.
+- Absolute hand of the natural product is mapped by the explicit 2019 natural 1 versus ent-1 assignment and corroborating 2023 S synthesis. Natural isolate ee is not measured in the inspected sources. The 2023 final synthetic ee was not directly measured either; its preceding intermediates were 93% ee.
+- The original 2010 asymmetric synthesis main/SI could not be retrieved from public RSC routes. All four adopted abstracts were read, with the 2009 intermediate and 2010 racemate sources limited to abstract depth. Search-indexed fragments are not used as primary evidence.
+- The 2019 racemic biological-evaluation paper could not be fully inspected because of PMC challenge and Europe PMC 500; no racemic/analogue potency is transferred to R or S. The 2023 biosynthesis abstract and relevant SI chemical-characterization/Marfey sections were read, not the complete main paper; the racemic determination there applies to lentofuranine.
+- Reaxys 21037523 remains unresolved after HTTP 403. The exact authority mismatch finding concerns only the independently inspected ChemSpider link.
+- The original enzyme main text refers to earlier methods and does not fully specify construct/metal, broth medium or inoculum. Original natural MIC/MRC evidence supports no clinical breakpoint, broad spectrum, animal efficacy or proven cellular PDF causal chain.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native or maintained file was edited. All twenty-one inputs and original thirteen capture hashes were rechecked. Optional links, tags, notes and every finding path were checked specifically for fumimycin.
+- Public-source fetch manifests retain the actual URLs, UTC access times, response outcomes and hashes. The unrelated KIT proceedings page and 2018 methodology manuscript discovered during retrieval were excluded; their presence in scratch is not evidence of 2010/2019 full-text access.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T170353Z-fumimycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Fumimycin: natural-enantiomer identity failure and two incorrect source groundings'
+started_at: '2026-10-21T16:45:54Z'
+finished_at: '2026-10-21T17:03:53Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The native structure and exact synonym encode R fumimycin, whereas the inspected
+  original 2019 synthesis explicitly distinguishes natural (−)-fumimycin from its
+  (+) enantiomer and draws the natural compound as S; the 2023 synthesis independently
+  names the S product. Natural isolate enantiomeric purity remains unresolved. The
+  polyphenol parent also fails its explicit ontology definition, and the ChemSpider
+  exact xref has an unassigned stereocentre. Internal chemistry and focused native
+  validators pass, illustrating that source agreement does not establish natural-product
+  identity.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/fumimycin.yaml
+    sha256: 103495a8c1751fc4a7fffef5f5119848d3593819dda692d5ea6ae6ca18fb97a5
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    role: context
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+targets:
+- target_id: CHEBI:65931
+  path: data/antibiotics/antibacterial/fumimycin.yaml
+  label: fumimycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 479; all thirteen original input hashes preserved within
+    twenty-one expanded inputs (readiness plus seven guidance/contract files).
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:65931
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:65931
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    479
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:65931
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/fumimycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:65931
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/fumimycin.yaml --out /private/tmp/am-review-session/479-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:65931
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:65931
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:65931
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:65931
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:65931
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:65931
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:65931
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:65931
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:65931
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/fumimycin.yaml
+  locator: Entire native record, exact systematic synonym and all three seed/reseed
+    events
+  accessed_at: '2026-10-21T17:00:52Z'
+  support: supports
+  summary: CHEBI:65931 is a SEEDED, EXACT antibacterial with neutral C16H15NO7, one
+    R stereocentre, two E alkenes, five parents, one antibacterial role, two exact
+    xrefs and one ChEBI source concept. Its definition attributes the substance to
+    A. fumisynnematus F746. No mode, target, activity observation, resistance item,
+    producer collection, clinical product, dataset or causal graph is present.
+  snapshot_sha256: 103495a8c1751fc4a7fffef5f5119848d3593819dda692d5ea6ae6ca18fb97a5
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; curation/record_review_queue.tsv
+  locator: Entire exact ChEBI inventory row and readiness row
+  accessed_at: '2026-10-21T17:00:52Z'
+  support: supports
+  summary: The raw ChEBI row reproduces the native fields and adopts four PMID leads.
+    No mechanism role is imported. The actual source and extraction/seeding owners
+    were inspected; readiness is a lead, not evidence that a mechanism review was
+    completed. Original thirteen hashes were preserved and eight context inputs appended.
+  snapshot_sha256: fb255bb363416f629e31968984dbc6ff8d4181a35626f46808d0e2166ecc601a
+- evidence_id: search
+  kind: search
+  reference: 479-local-hits.txt
+  locator: Initial ignored-inclusive repository search, followed by exact maintained
+    override inspection
+  accessed_at: '2026-10-21T17:00:52Z'
+  support: context_only
+  summary: The initial search included hidden and ignored files across the worktree
+    except .git and .venv. Exact matches in the source/readiness rows were read; a
+    subsequent ignored-inclusive search of curator_antibiotics.tsv and decisions.tsv
+    found no target override. Historical research ledgers and rendered pages were
+    treated as leads, not primary scientific evidence.
+  search_scope: rg --no-ignore --hidden -l -F -e CHEBI:65931 -e fumimycin --glob '!.git/**'
+    --glob '!.venv/**' .; rg --no-ignore --hidden -n 'CHEBI:65931|fumimycin' curation/curator_antibiotics.tsv
+    curation/decisions.tsv
+  snapshot_sha256: 79bcdb66a5556710ab59a75900b6b58340bb35c0b12ded40dc1189ba24f4703c
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/65931/
+  locator: Current CHEBI:65931 name, definition, default structure, parents, xrefs
+    and citations
+  accessed_at: '2026-10-21T16:47:26Z'
+  support: supports
+  summary: The current ChEBI source repeats the R structure and systematic synonym,
+    key QWMZGLCXYLPQAZ-CJWQODIFSA-N, neutral formula and natural-producer definition.
+    It also retains the polyphenol parent and ChemSpider link. These are corroborated
+    source assertions, not independent validation of the natural enantiomer.
+  snapshot_sha256: 6ed9bd4ec97b0bcdca6c7d2cb3ffaf8b49bf38e08c12970537ea73e6a7b1f928
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/fumimycin/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: Name lookup CID 50907655 molecular properties
+  accessed_at: '2026-10-21T16:47:28Z'
+  support: supports
+  summary: Current PubChem name resolution gives the same R structure and key as native.
+    This accession is an independent lookup, not an additional native xref; its agreement
+    does not resolve the primary natural-enantiomer conflict.
+  snapshot_sha256: ddb64d73c7f6870f0751253783d53b3ff0c4e789a6ac535c6bfd3830f04d3b3f
+- evidence_id: polyphenol
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/26195/
+  locator: CHEBI:26195 exact class definition
+  accessed_at: '2026-10-21T16:47:31Z'
+  support: refutes
+  summary: The parent polyphenol requires at least two benzene rings, each carrying
+    at least one hydroxy group. Two hydroxyl groups on a single benzene do not meet
+    this specific ontology definition. The current term still lists fumimycin as an
+    incoming subclass.
+  snapshot_sha256: c0e8c956eae32deb6344f042dd56b0a4cd5ac428a15eb683b11ac6b791069bab
+- evidence_id: term-25384
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/25384/
+  locator: CHEBI:25384 label and available definition
+  accessed_at: '2026-10-21T16:47:30Z'
+  support: supports
+  summary: The asserted term resolves to monocarboxylic acid. Its structural or role
+    scope was compared with the native graph and natural-product evidence. No separate
+    grounding error is identified for this term; antibacterial support is for the
+    studied natural material, subject to the enantiomer finding.
+  snapshot_sha256: 342f6e158d906689ac0ad191f2377556d04e221b83c9e43521fb4ceb1a4e2cc4
+- evidence_id: term-35735
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/35735/
+  locator: CHEBI:35735 label and available definition
+  accessed_at: '2026-10-21T16:47:32Z'
+  support: supports
+  summary: The asserted term resolves to dicarboxylic acid monoamide. Its structural
+    or role scope was compared with the native graph and natural-product evidence.
+    No separate grounding error is identified for this term; antibacterial support
+    is for the studied natural material, subject to the enantiomer finding.
+  snapshot_sha256: 5eba8200edba4e8008f0a5193e3836e88f4d7e3d16f23d0497565bb88f112e06
+- evidence_id: term-37581
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/37581/
+  locator: CHEBI:37581 label and available definition
+  accessed_at: '2026-10-21T16:47:33Z'
+  support: supports
+  summary: The asserted term resolves to gamma-lactone. Its structural or role scope
+    was compared with the native graph and natural-product evidence. No separate grounding
+    error is identified for this term; antibacterial support is for the studied natural
+    material, subject to the enantiomer finding.
+  snapshot_sha256: 428dcb85d1550a725868c00745aeaa879ad02efc495442ab2153e2b7c0940047
+- evidence_id: term-38830
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/38830/
+  locator: CHEBI:38830 label and available definition
+  accessed_at: '2026-10-21T16:47:33Z'
+  support: supports
+  summary: The asserted term resolves to 1-benzofurans. Its structural or role scope
+    was compared with the native graph and natural-product evidence. No separate grounding
+    error is identified for this term; antibacterial support is for the studied natural
+    material, subject to the enantiomer finding.
+  snapshot_sha256: 66ee47805cc2ce568f301413c9d33c2d0459ccfd98ecbcb2db98a314d2758f37
+- evidence_id: term-33282
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/33282/
+  locator: CHEBI:33282 label and available definition
+  accessed_at: '2026-10-21T16:47:31Z'
+  support: supports
+  summary: The asserted term resolves to antibacterial agent. Its structural or role
+    scope was compared with the native graph and natural-product evidence. No separate
+    grounding error is identified for this term; antibacterial support is for the
+    studied natural material, subject to the enantiomer finding.
+  snapshot_sha256: 20d92ce7e00c204b1753184671c043160821d692438278344335446aadcd5082
+- evidence_id: chemistry
+  kind: validation
+  reference: 479-chemistry.json
+  locator: RDKit 2026.03.5; existing 019 interpreter against 048 cwd
+  accessed_at: '2026-10-21T17:00:52Z'
+  support: supports
+  summary: Native SMILES and InChI independently reproduce the stored key, formula,
+    charge, one fragment, reported masses and R centre. The source-id mint reproduces
+    antibioticmech:chebi-6909500009. These are internal-consistency checks, not proof
+    of the natural absolute configuration.
+  snapshot_sha256: 4890183e7a9c9d6471b72d953ade3df6bae2a0c386e5d5803b5fd44b0840673d
+- evidence_id: ring-check
+  kind: validation
+  reference: 479-ring-check.json
+  locator: Independent atom/ring and alkene map
+  accessed_at: '2026-10-21T17:00:52Z'
+  support: supports
+  summary: The native graph has exactly one six-membered all-carbon aromatic ring
+    (zero-based atoms 3,10,9,8,6,4), one five-membered lactone ring, and two phenolic
+    OH groups. Its sole stereocentre is atom 11, R; both carbon–carbon double bonds
+    are E. This confirms the polyphenol mismatch without relying on the label.
+  snapshot_sha256: d45d3611547d714b0d546add378b131eaba7b4f6f46acb4b8c390c63a8d61c57
+- evidence_id: chemspider
+  kind: authority
+  reference: https://www.chemspider.com/Chemical-Structure.20557857.html
+  locator: Official ChemSpider 20557857 JSON-LD MolecularEntity
+  accessed_at: '2026-10-21T16:51:21.554161Z'
+  support: refutes
+  summary: ChemSpider identifies fumimycin with InChIKey QWMZGLCXYLPQAZ-VNKDHWASSA-N.
+    Its InChI retains both E alkenes but has no tetrahedral /t layer. The linked PubChem
+    CID is 16726052. This is a stereochemically unspecified graph, not an asserted
+    racemate, and it is not the same exact structure as native R.
+  snapshot_sha256: e9b21f4cb500f2955a7e4ad70382004f1771fdd2a519ac333e3afb51cec5b22b
+- evidence_id: xref-check
+  kind: validation
+  reference: 479-xref-check.json
+  locator: Independent ChemSpider InChI parsing and diagnostic mirror image
+  accessed_at: '2026-10-21T17:00:52Z'
+  support: supports
+  summary: RDKit assigns native atom 11 as R and the ChemSpider centre as unassigned.
+    Flipping only the native centre gives diagnostic S key QWMZGLCXYLPQAZ-GGXDDXSJSA-N
+    with unchanged connectivity. This scratch graph is not an independently accepted
+    source accession or authorization to replace a generated record.
+  snapshot_sha256: e5850754f7660e06117492a90d29fa0a8b368637061a15919ab047487d26d800
+- evidence_id: reaxys-access
+  kind: search
+  reference: https://www.reaxys.com/reaxys/secured/search.do?query=21037523
+  locator: Actual Reaxys 21037523 public retrieval
+  accessed_at: '2026-10-21T16:51:21.828052Z'
+  support: context_only
+  summary: The public request returned HTTP 403. The exact chemical identity of this
+    retained Reaxys accession was not independently verified; no wrong-identifier
+    finding is inferred from access failure.
+  search_scope: Direct public retrieval of the asserted Reaxys identifier; no login,
+    paid search or subscriber access.
+  snapshot_sha256: f42beae551e731c8737205f9dd47c2c6318b03fb733ce46e7a2c507e7cf7b54b
+- evidence_id: adopted
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A17523650%20OR%20EXT_ID%3A20024097%20OR%20EXT_ID%3A20859963%20OR%20EXT_ID%3A21031188%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Complete original abstracts for all four adopted leads
+  accessed_at: '2026-10-21T16:47:26Z'
+  support: supports
+  summary: PMID:17523650 (2007, DOI:10.1021/ol0703231) reports natural isolation,
+    S. aureus PDF inhibition and antibacterial activity; its full paper was inspected
+    below. PMID:20024097 (DOI:10.1039/b916372g) reaches an advanced intermediate,
+    not completed fumimycin. PMID:20859963 (DOI:10.1002/chem.201001036) reports racemic
+    total synthesis. PMID:21031188 (DOI:10.1039/c0cc03399e) reports asymmetric (+)-fumimycin
+    and CD/TDDFT absolute-configuration determination. The latter three abstracts
+    do not establish exact natural-material antibacterial potency or a complete cellular
+    causal chain.
+  snapshot_sha256: 9b9f66c014cbdc164b69be46f16bcc3c0890b3c0f5014d853bb3b1b36447cf66
+- evidence_id: primary2007
+  kind: primary_source
+  reference: https://pharmacy.hebmu.edu.cn/trywhx/resources/43/201962692446.pdf
+  locator: All three original pages 2449–2451; structure drawing p.2449, footnotes
+    5–6 and Table 1 p.2450, Figure 1 and assays p.2451
+  accessed_at: '2026-10-21T16:51:21.483630Z'
+  support: supports
+  summary: F746 from Korean soil yielded 11 mg fumimycin from 12 L culture; taxonomy
+    used biological/physiological tests. Production used YPS at 28°C, 150 rpm for
+    7 days after a 3-day seed. The original planar/E,E structure was assigned by spectroscopy;
+    natural rotation was −11.9 (c 0.26, MeOH), without an absolute-hand or ee measurement.
+    Figure 1 and text report S. aureus PDF IC50 4.1 µM, mixed-type inhibition versus
+    f-MAS, Ki 3.1 µM and Km 0.49 mM; plotted data are triplicate means ±SD. Broth
+    microdilution at 37°C for 18 h gave MRSA MIC 100 µg/mL, while ordinary S. aureus
+    and QRSA had MRC 100 µg/mL. MRC means at least 50% growth reduction, not complete-inhibition
+    MIC. MRSA strains were CCARM3167/3506 and QRSA CCARM3505/3519; ordinary S. aureus
+    identifiers were not stated. Enzyme metal/construct and complete media/inoculum
+    conditions are not supplied in this main text; methods refer to earlier work.
+    No final-product target-binding structure or genetic cellular target validation
+    is provided.
+  snapshot_sha256: 8fc61a6725349ac7585e1abbe2890565b8e88cc95c8907b5d5a35b33f38468db
+- evidence_id: primary2019
+  kind: primary_source
+  reference: https://ora.uniurb.it/retrieve/9ea59d34-f973-4949-9da8-12176721df48/FUMIMICINA_Final%20Version.docx
+  locator: Exact accepted author manuscript; introduction, Scheme 1 actually rendered/viewed,
+    synthesis/conclusion and reference 4
+  accessed_at: '2026-10-21T16:57:31.351947Z'
+  support: supports
+  summary: The original authors explicitly call compound 1 natural (−)-fumimycin and
+    (+)-fumimycin ent-1, citing the original isolation and 2010 asymmetric synthesis.
+    Scheme 1 draws natural 1 with Me toward and NH away; CIP N > lactone carbonyl
+    C > aryl C > Me assigns S. The synthesis prepares both enantiomers and reports
+    99% ee; this does not establish the ee of the 2007 natural isolate. The manuscript
+    leaves biological evaluation of these preparations for future work, so it does
+    not measure an R-specific MIC.
+  snapshot_sha256: 7354643499406951f42e457e20f1344d7dfb01eafbe51658c264db01e4330e28
+- evidence_id: primary2019-si
+  kind: primary_source
+  reference: https://ndownloader.figshare.com/files/17519756
+  locator: Original SI S2 Table S1 and compound 1 spectral captions
+  accessed_at: '2026-10-21T16:55:43.715056Z'
+  support: supports
+  summary: Table S1 explicitly compares natural (−)-fumimycin from the 2007 report
+    with synthesized (−)-fumimycin and preserves the matching planar NMR assignment.
+    Achiral NMR matching alone does not distinguish enantiomers; the hand mapping
+    relies on the primary Scheme 1 assignment plus the later explicit S name, not
+    this table alone.
+  snapshot_sha256: 06572880b1d1fb872a2835db3184479187673552e5871917d34585a92af89698
+- evidence_id: primary2023
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10598217/fullTextXML
+  locator: DOI:10.1038/s41467-023-42603-w; synthesis paragraph and Figure 6
+  accessed_at: '2026-10-21T16:51:21.551745Z'
+  support: supports
+  summary: The original electrosynthesis prepares (−)-fumimycin. Figure 6 was actually
+    viewed and traces the same centre through intermediate 9; its X-ray deposition
+    is CCDC 2249498. The crystal is of intermediate 9, not final fumimycin. The source
+    supplies synthetic stereochemical corroboration, not an antibacterial assay of
+    either enantiomer.
+  snapshot_sha256: d3d8e79514fe4add7601baec660b98ab065cd5f2c0fb928d0b5b10dbbe926d59
+- evidence_id: primary2023-si
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10598217/supplementaryFiles
+  locator: SI section 2.4, S34–S36; final S36 drawing and systematic name actually
+    viewed
+  accessed_at: '2026-10-21T16:52:02.439232Z'
+  support: supports
+  summary: The final product is explicitly named with (S) configuration and reported
+    as (−)-fumimycin, rotation −110 (c 0.17, MeOH). The authors assign its hand by
+    comparison with the literature and consistency with the X-ray of intermediate
+    9. They state that final-product polarity prevented ee determination; 93% ee was
+    measured for preceding intermediates. Do not report 93% as a directly measured
+    final-product ee.
+  snapshot_sha256: 0045b2862e8f63af6d55464f585f0a01aa6cabbdb4d3344b4a93a23e12ec27ec
+- evidence_id: biosyn-abstract
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A%2836706030%20OR%2031476858%20OR%2031555018%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Complete additional original abstracts PMID:36706030, 31476858 and 31555018
+  accessed_at: '2026-10-21T16:55:04.592156Z'
+  support: context_only
+  summary: The 2023 biosynthesis abstract reports isolation of fumimycin and a related
+    new racemic compound, lentofuranine, from A. lentulus and proposes nonenzymatic
+    cross-pathway assembly. Its explicit racemic label applies to lentofuranine. The
+    2019 Tetrahedron paper concerns racemic fumimycin and analogues tested against
+    PDF; its abstract does not provide exact R antibacterial values. These distinct
+    materials are not pooled with the natural F746 sample.
+  snapshot_sha256: ecf325931c47e2ec22ba2046431a46469eade5be76d3e3500223fbe0f22c2f1f
+- evidence_id: biosyn-si
+  kind: primary_source
+  reference: https://ndownloader.figshare.com/files/39005185
+  locator: DOI:10.1021/jacs.2c13188 SI; S10–11 Marfey analysis and S35–36 compound
+    1 characterization
+  accessed_at: '2026-10-21T16:55:43.713092Z'
+  support: context_only
+  summary: Original SI compound 1 is fumimycin with rotation −10.2 (c 0.09, MeOH),
+    C16H15NO7 and a drawing without assigned absolute hand. The explicit Marfey racemic
+    determination concerns compound 2 lentofuranine, not compound 1. This corroborates
+    later natural production and a small negative rotation, but supplies no measured
+    fumimycin ee or direct assignment of all natural molecules as pure S.
+  snapshot_sha256: d53904975ea3384276d90996511acfb825da9cb46f7e46b49d46f41c340fd11b
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb search --organism s_aureus --dataset staph_precise108
+    --query peptide deformylase
+  locator: iModulonDB s_aureus/staph_precise108 search after covered-dataset catalog
+    inspection
+  accessed_at: '2026-10-21T17:00:52Z'
+  support: context_only
+  summary: Before open follow-up of the PDF mechanism lead, the structured adapter
+    returned two gene hits, USA300HOU_RS05445 and USA300HOU_RS06105, and zero iModulon
+    hits. These covered-dataset annotations are not the original 2007 enzyme identity,
+    strain assignment or functional inhibition evidence. No native named protein or
+    pathway is asserted.
+  snapshot_sha256: 60de3fee4c765736c6ecab784fe3d3d719ed89e654b96e1d5465bf91694f8409
+- evidence_id: access
+  kind: search
+  reference: 479-fetch2.json
+  locator: Actual original-source retrieval attempts and retained response hashes
+  accessed_at: '2026-10-21T17:00:52Z'
+  support: context_only
+  summary: Direct 2010 RSC main/SI routes returned HTTP 403 or HTTP 404, so the complete
+    original 2010 configuration argument was not inspected. The 2019 racemic-paper
+    PMC page returned a browser challenge despite HTTP 200; Europe PMC XML returned
+    HTTP 500. The adopted 2009-intermediate and 2010-racemate papers were read at
+    complete-abstract depth only. The independent 2019 accepted manuscript and 2023
+    synthesis/SI provide the inspected stereochemical evidence.
+  search_scope: Free publisher, Europe PMC, PMC and institutional author-deposit retrievals;
+    manifests 479-fetch1.json through 479-fetch9.json retain URLs, actual UTC times,
+    status and SHA256. A guessed KIT page and one retrieved 2018 methodology manuscript
+    were identified as unrelated and excluded.
+  snapshot_sha256: 422f2e69d3290a0650b4437c8279dc3d7ac843f29eeaa18d838e442bbfa4593e
+- evidence_id: gates
+  kind: validation
+  reference: 479-focused-results.json
+  locator: Actual focused schema, strict and chemistry results
+  accessed_at: '2026-10-21T17:00:52Z'
+  support: supports
+  summary: All three focused commands exited 0. Native schema/strict ran against 048;
+    chemistry used the existing 019 RDKit interpreter against 048 cwd. The independent
+    ring/xref checks confirm scientific errors beyond those deterministic checks.
+  snapshot_sha256: 8bcea3f1d95269c7130893bb0c95fb6acd2052d055d9daf3494ad0ce0bbb096c
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Natural compound versus stored enantiomer
+  outcome: concern
+  summary: The stored R graph and exact synonym conflict with the S natural-compound
+    assignment explicitly made by the 2019 authors and corroborated by the 2023 final
+    systematic name. This is a wrong natural-product identity, while the natural isolate
+    ee remains unresolved. Agreement between current ChEBI and PubChem retains the
+    same R annotation.
+  target_ids:
+  - CHEBI:65931
+  evidence_ids:
+  - native
+  - chebi
+  - pubchem
+  - chemistry
+  - primary2019
+  - primary2023-si
+  - primary2007
+  - biosyn-si
+- assessment_id: grounding
+  area: grounding
+  topic: Exact chemical xrefs and ontology parents
+  outcome: concern
+  summary: ChemSpider 20557857 has an unassigned centre and cannot be an exact equivalence
+    to native R. The polyphenol parent requires two benzene rings, but the graph has
+    one. The other four parents resolve coherently; the Reaxys accession remains unverified
+    because of HTTP 403.
+  target_ids:
+  - CHEBI:65931
+  evidence_ids:
+  - chemspider
+  - xref-check
+  - polyphenol
+  - ring-check
+  - reaxys-access
+  - term-25384
+  - term-35735
+  - term-37581
+  - term-38830
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial eligibility and exact material
+  outcome: unknown
+  summary: The original natural isolate has bounded antibacterial activity; its MIC
+    and MRC endpoints differ. Those data do not establish an R-enantiomer MIC or inactivity.
+    Antibacterial filing and role are supported for the named natural material, but
+    exact-graph transfer must follow identity adjudication.
+  target_ids:
+  - CHEBI:65931
+  evidence_ids:
+  - primary2007
+  - primary2019
+  - primary2019-si
+  - term-33282
+- assessment_id: mechanism
+  area: evidence
+  topic: Peptide deformylase inhibition and cellular causality
+  outcome: unknown
+  summary: The natural preparation inhibits S. aureus PDF in an enzyme assay with
+    mixed-type kinetics. That supports a bounded functional inhibition claim after
+    material adjudication, not direct binding, a particular UniProt identity or proof
+    that PDF alone mediates whole-cell growth effects. No native mode, target or causal
+    claim is present.
+  target_ids:
+  - CHEBI:65931
+  evidence_ids:
+  - native
+  - primary2007
+  - adapter
+  - adopted
+- assessment_id: resistance
+  area: scope
+  topic: Resistant test strains versus resistance mechanism
+  outcome: unknown
+  summary: Activity against MRSA and QRSA test strains is not a fumimycin resistance
+    mechanism or a clinical susceptibility classification. No resistance determinant,
+    breakpoint or species-wide phenotype is asserted or inferred.
+  target_ids:
+  - CHEBI:65931
+  evidence_ids:
+  - native
+  - primary2007
+- assessment_id: producer
+  area: evidence
+  topic: F746 natural-production statement
+  outcome: supported
+  summary: The 2007 primary supports production by the source-identified A. fumisynnematus
+    F746. The later A. lentulus work is a separate producer context and does not revise
+    that strain assignment. Absolute hand and ee of the original isolate remain distinct
+    from producer identification.
+  target_ids:
+  - CHEBI:65931
+  evidence_ids:
+  - native
+  - primary2007
+  - biosyn-abstract
+  - biosyn-si
+- assessment_id: completeness
+  area: completeness
+  topic: Optional collections and all adopted leads
+  outcome: unknown
+  summary: All four adopted abstracts were read and assigned exact intermediate/racemate/enantiomer/natural-material
+    scope. Optional activity, target, producer and controversy annotations could be
+    curated after identity and source adjudication; their absence is not a schema
+    error. There are no clinical, regulatory, causal, dataset or discussion assertions
+    to validate.
+  target_ids:
+  - CHEBI:65931
+  evidence_ids:
+  - native
+  - adopted
+  - search
+  - access
+  - primary2007
+  - primary2019
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained ownership, status and history
+  outcome: supported
+  summary: The entire generated record, raw row, readiness lead, schema semantics
+    and all three history events were read. The original thirteen hashes remain unchanged
+    in twenty-one captured inputs; SEEDED status is retained. Source evidence is distinguished
+    from current authority agreement.
+  target_ids:
+  - CHEBI:65931
+  evidence_ids:
+  - native
+  - owners
+  - search
+  - gates
+- assessment_id: validation
+  area: schema
+  topic: Deterministic integrity and scientific limits
+  outcome: supported
+  summary: Focused schema, strict, internal molecular consistency and source mint
+    checks pass. They do not detect the wrong natural enantiomer, narrower exact-xref
+    mismatch or chemically inappropriate broader parent.
+  target_ids:
+  - CHEBI:65931
+  evidence_ids:
+  - gates
+  - chemistry
+  - ring-check
+  - xref-check
+findings:
+- finding_id: F1
+  issue_key: fumimycin-natural-s-enantiomer-stored-as-r
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: The record represents natural fumimycin with the opposite enantiomer
+  description: The native definition identifies the F746 natural product, but its
+    structure and exact systematic synonym encode R. The original 2019 authors explicitly
+    identify natural (−)-fumimycin as 1 and (+)-fumimycin as ent-1; their Scheme 1
+    drawing assigns S by CIP. The 2023 primary independently names its final (−)-fumimycin
+    product S. Thus the record conflates the natural-product identity with the opposite
+    synthetic enantiomer. This conclusion does not assert that the 2007 or 2023 natural
+    isolates were enantiopure, nor that R is inactive. Current ChEBI/PubChem agreement
+    reflects the same R assignment and does not resolve the conflict.
+  target_ids:
+  - CHEBI:65931
+  field_paths:
+  - definition
+  - synonyms[0].synonym_text
+  - chemical_structure.smiles
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  - chemical_structure.structure_source
+  - grounding_status
+  - source_concepts[0]
+  evidence_ids:
+  - native
+  - owners
+  - chebi
+  - pubchem
+  - chemistry
+  - primary2019
+  - primary2019-si
+  - primary2023-si
+  - primary2007
+  - biosyn-si
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, structure, parent and xref row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and source assertion handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-yaml-record:Workflow:identity
+  native_severity: blocker
+  normalization_reason: The native rubric classifies a demonstrably wrong molecular
+    identity as blocker. The natural 1 versus ent-1 mapping is explicit primary-source
+    evidence; this is not inferred solely from optical-rotation sign.
+- finding_id: F2
+  issue_key: fumimycin-single-benzene-polyphenol-parent
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The polyphenol parent requires at least two benzene rings
+  description: Native parent_compounds[1] is CHEBI:26195 polyphenol. The exact current
+    ontology definition requires at least two benzene rings, each hydroxylated. Native
+    fumimycin has one benzene ring with two phenolic hydroxyl groups and a fused five-membered
+    lactone; the second ring is not benzene. The imported parent relation is therefore
+    incorrect under the retained ontology meaning.
+  target_ids:
+  - CHEBI:65931
+  field_paths:
+  - parent_compounds[1]
+  evidence_ids:
+  - native
+  - owners
+  - polyphenol
+  - ring-check
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, structure, parent and xref row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and source assertion handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-checklist:Equivalence
+  native_severity: major
+  normalization_reason: Wrong ontology grounding is major; the molecular graph is
+    internally valid and the other broader classes need not be removed.
+- finding_id: F3
+  issue_key: fumimycin-chemspider-unspecified-stereo-exact-link
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The ChemSpider xref lacks the native assigned stereocentre
+  description: Native xrefs[0] asserts exact structure equivalence to ChemSpider 20557857.
+    Its official current InChI has no tetrahedral stereo and key QWMZGLCXYLPQAZ-VNKDHWASSA-N,
+    whereas the native R graph has key QWMZGLCXYLPQAZ-CJWQODIFSA-N. The schema requires
+    xrefs to denote the same structure. Unassigned stereo does not mean racemate,
+    but it also does not denote one exact R or S enantiomer.
+  target_ids:
+  - CHEBI:65931
+  field_paths:
+  - xrefs[0]
+  evidence_ids:
+  - native
+  - owners
+  - chemspider
+  - xref-check
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, structure, parent and xref row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and source assertion handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-checklist:Equivalence
+  native_severity: major
+  normalization_reason: An exact-equivalence link to a less stereospecified structure
+    is a major grounding error under the native xrefs contract; it is not a broad
+    drug_xrefs association.
+actions:
+- action_id: A1
+  description: Reconcile the natural S identity, existing R source concept and exact
+    structure ownership before importing natural-material biological claims.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:65931
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, structure, parent and xref row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and source assertion handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Publication-backed exact structure if a distinct curated identity is needed
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion decision, not a direct xref/structure override
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Use the original 2019 natural 1/ent-1 assignment and 2023 explicit S product,
+    retaining the 2007 planar assignment and unresolved natural ee. Do not claim a
+    crystal of final fumimycin or infer an R-specific MIC from the natural preparation.
+  - Reconcile whether the existing source concept is corrected upstream or an independently
+    grounded natural S record is needed; do not change R to S while falsely claiming
+    unchanged ChEBI/PubChem provenance.
+  - Regenerate all structure strings and the exact synonym consistently from adjudicated
+    primary evidence. The diagnostic S key is a chemistry check, not an automatic
+    authority accession.
+  - Run schema/strict, chemical identity, term/reference/history, corpus reproduction
+    and QC gates after the separately authorized maintained-source correction.
+- action_id: A2
+  description: Remove or correct the unsupported polyphenol parent through the ChEBI
+    source handling.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:65931
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, structure, parent and xref row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and source assertion handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Verify the retained parent definitions against the adjudicated molecular graph;
+    do not replace the term merely because another label sounds similar.
+  - Re-seed reproducibly and verify that the one-benzene graph no longer inherits
+    CHEBI:26195 while its supported parents remain. Run focused and corpus gates.
+- action_id: A3
+  description: Reconcile the ChemSpider exact xref with the eventual adjudicated stereochemical
+    identity.
+  finding_ids:
+  - F3
+  target_ids:
+  - CHEBI:65931
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, structure, parent and xref row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and source assertion handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Retain 20557857 only in a supported non-equivalence context or remove it from
+    exact xrefs unless its authoritative structure is resolved to the same assigned
+    enantiomer. Do not call its unspecified graph a racemate.
+  - Check any replacement accession by actual graph, charge and stereo, then run xref
+    conflict, strict and corpus gates.
+- action_id: A4
+  description: 'Optional future curation: record natural-material enzyme/activity
+    evidence and producer context with explicit assay and stereochemical boundaries.'
+  finding_ids: []
+  target_ids:
+  - CHEBI:65931
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/fumimycin.yaml
+    role: Future curator-owned activity_spectrum, molecular_targets, producer and
+      discussion annotations
+  acceptance_checks:
+  - Resolve the identity blocker before assigning primary natural-material measurements
+    to an exact enantiomer. Preserve 100 µg/mL MRSA MIC versus 100 µg/mL MRC for ordinary/quinolone-resistant
+    S. aureus.
+  - Preserve the limited enzyme method, substrate, mixed-type kinetics and missing
+    construct/metal details. Functional inhibition is not direct binding or a completed
+    cellular mechanism chain.
+  - Use narrow claim-level citations and the validated writer with an accurate curation
+    event only in a separately authorized task; no optional collection is required
+    merely by this review.
+limitations:
+- The full 2007 main paper was read; its original structure and kinetic figure were
+  viewed. The 2019 accepted manuscript was fully text-read and Scheme 1 viewed, with
+  the original SI comparison table. The 2023 electrosynthesis relevant original text/Figure
+  6 and SI S34–36 were read; raw crystal coordinates and spectra were not independently
+  re-refined.
+- Absolute hand of the natural product is mapped by the explicit 2019 natural 1 versus
+  ent-1 assignment and corroborating 2023 S synthesis. Natural isolate ee is not measured
+  in the inspected sources. The 2023 final synthetic ee was not directly measured
+  either; its preceding intermediates were 93% ee.
+- The original 2010 asymmetric synthesis main/SI could not be retrieved from public
+  RSC routes. All four adopted abstracts were read, with the 2009 intermediate and
+  2010 racemate sources limited to abstract depth. Search-indexed fragments are not
+  used as primary evidence.
+- The 2019 racemic biological-evaluation paper could not be fully inspected because
+  of PMC challenge and Europe PMC 500; no racemic/analogue potency is transferred
+  to R or S. The 2023 biosynthesis abstract and relevant SI chemical-characterization/Marfey
+  sections were read, not the complete main paper; the racemic determination there
+  applies to lentofuranine.
+- Reaxys 21037523 remains unresolved after HTTP 403. The exact authority mismatch
+  finding concerns only the independently inspected ChemSpider link.
+- The original enzyme main text refers to earlier methods and does not fully specify
+  construct/metal, broth medium or inoculum. Original natural MIC/MRC evidence supports
+  no clinical breakpoint, broad spectrum, animal efficacy or proven cellular PDF causal
+  chain.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native or maintained file was edited. All twenty-one inputs and original thirteen
+  capture hashes were rechecked. Optional links, tags, notes and every finding path
+  were checked specifically for fumimycin.
+- Public-source fetch manifests retain the actual URLs, UTC access times, response
+  outcomes and hashes. The unrelated KIT proceedings page and 2018 methodology manuscript
+  discovered during retrieval were excluded; their presence in scratch is not evidence
+  of 2010/2019 full-text access.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1021/ol0703231
+- https://doi.org/10.1021/acs.joc.9b02020
+- https://doi.org/10.1038/s41467-023-42603-w
+tags:
+- fumimycin
+- natural-enantiomer
+- exact-xref
+- ontology-parent
+```
