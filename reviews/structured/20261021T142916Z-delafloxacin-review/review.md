@@ -1,0 +1,745 @@
+# Review of delafloxacin
+
+- Review: 20261021T142916Z-delafloxacin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T14:11:33Z
+- Finished UTC: 2026-10-21T14:29:16Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The neutral delafloxacin parent, its fluoroquinolone class and three external identifiers reconcile. The adopted review and an independently inspected original pH study support the definition within the tested staphylococcal and cell models. The CDC row independently confirms Pseudomonas aeruginosa isolate 1269, BioSample SAMN33435242 and a delafloxacin MIC greater than 4 mg/L with its FDA-breakpoint footnote. No confirmed corrective finding was established. Optional protein-mechanism enrichment and inaccessible early enzyme-study details remain bounded. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire SEEDED, MINTED record: definition and adopted PMID, exact structure, class and parent, three xrefs, source concept, one curator-owned MIC observation and five history events. No native synonym, molecular-target, clinical-use, producer or causal-graph assertion is present.
+
+Selection: Queue 351 in isolated batch 036. Thirteen original input hashes preserved and six actual maintained-owner hashes appended before detailed assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-edae5f55a0 | data/antibiotics/antibacterial/delafloxacin.yaml | generated | delafloxacin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema validation | passed | True | antibioticmech:aro-edae5f55a0 | Exit 0. |
+| Documented strict validation | passed | True | antibioticmech:aro-edae5f55a0 | Exit 0; no ERROR rows. |
+| Native molecular consistency | passed | False | antibioticmech:aro-edae5f55a0 | Native encodings, recorded key, formula, charge, masses and deterministic mint reconcile. |
+| Supplemental direct tautomer-sensitive graph comparison | failed | False | antibioticmech:aro-edae5f55a0 | Exit 1 at native-inchi reciprocal graph assertion: standard InChI reconstructs an iminodihydropyridine tautomer, while SMILES uses aminopyridine. Standard key already agrees. This is a comparison limitation, not a failed native validator or demonstrated isomer defect. |
+| Explicit tautomer-normalized authority comparison | passed | False | antibioticmech:aro-edae5f55a0 | Seven encodings agree after documented canonical-tautomer normalization; original representations, unchanged keys, formula, charge and reciprocal mappings are retained. |
+| Structured target-context lookup before primary follow-up | passed | False | antibioticmech:aro-edae5f55a0 | Dataset discovery and gyrA/parC searches exit 0; catalog hits are context only. |
+| Maintained source fields, MIC and unchanged input hashes | passed | False | antibioticmech:aro-edae5f55a0 | Nineteen hashes, one adopted PMID disposition, one MIC and five ordered events reconcile. |
+| Authoritative full QC | failed | True | antibioticmech:aro-edae5f55a0 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-edae5f55a0 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-edae5f55a0 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-edae5f55a0 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-edae5f55a0 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-edae5f55a0 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-edae5f55a0 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-edae5f55a0 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-edae5f55a0 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral delafloxacin
+
+identity: supported. Targets: antibioticmech:aro-edae5f55a0.
+
+Native and official graphs reconcile with an explicit tautomer comparison; no stereochemical or formula defect is established.
+
+### Three xrefs and fluoroquinolone class
+
+grounding: supported. Targets: antibioticmech:aro-edae5f55a0.
+
+ARO, PubChem and ChEMBL identify the exact parent; class and deterministic mint reconcile.
+
+### Acidic-character and pH-dependent uptake description
+
+evidence: supported. Targets: antibioticmech:aro-edae5f55a0.
+
+Adopted review and original methods/results support the claim within the tested pH and staphylococcal/cell models; proposed diffusion is not equated with proven exclusive transport mechanism.
+
+### Single resistant-isolate MIC
+
+evidence: supported. Targets: antibioticmech:aro-edae5f55a0.
+
+Value, inequality, unit conversion, organism, strain, BioSample and FDA-footnote provenance match the original CDC record.
+
+### Optional gyrase/topoisomerase enrichment
+
+completeness: unknown. Targets: antibioticmech:aro-edae5f55a0.
+
+Native asserts no protein target. The retrieved review and 2011 discussion point to dual-target literature, but inaccessible original enzyme detail and catalog membership do not justify an invented exact binding edge.
+
+### Maintained owners and curation history
+
+provenance: supported. Targets: antibioticmech:aro-edae5f55a0.
+
+All 19 input hashes, adopted lead disposition, generated source fields and five history events reconcile; curated activity is preserved separately from source projections.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/delafloxacin.yaml; Entire native YAML | supports | The record is the neutral delafloxacin parent, with one CDC activity observation and retained SEEDED status. It makes no specific protein-binding, clinical-approval, product-salt or producer assertion. |
+| card | ARO:3004462; ARO:0000001; 351-card.html; maintained ARO row in 351-raw-rows.json | supports | Current CARD and frozen inventory agree on the delafloxacin definition and fluoroquinolone parent. The definition PMID29605887 is a review; its cited original pH experiment was independently inspected. The wording is read in the relevant physiological/experimental pH context, not as an assertion that no atom can ever be protonated. |
+| chemistry | PubChem CID487101; ChEMBL CHEMBL2105637; native molecular encodings; 351-pubchem.json; 351-chembl.json; 351-chemistry.json; 351-authority-chemistry.json; both supplemental comparison logs | supports | PubChem and ChEMBL identify neutral C18H12ClF3N4O4, zero charge and DYDCPNMLZGFQTM-UHFFFAOYSA-N. Seven representations agree after explicit aminopyridine/iminodihydropyridine tautomer normalization. The failed initial direct graph assertion is preserved. Masses reconcile, and the hydroxyazetidine carbon has symmetry-equivalent ring arms, not missing tetrahedral stereochemistry. No formulation salt is silently substituted. |
+| leads | PMID:29605887; DOI:10.1007/s40121-018-0198-x; 351-adopted-core.json; 351-review.xml; chemistry/mechanism, microbiology and resistance sections; 351-lead-dispositions.json | supports | The sole adopted MED record resolves to a 2018 review. Its complete abstract and relevant sections were read. It supports the acidic-character/uptake account but is not represented as an original experiment, and its historical clinical discussion is not used to assert present approval or universal activity. |
+| ph-primary | PMID:21135179; DOI:10.1128/AAC.01201-10; 351-primary2011.html/.txt, material and assay methods, Table1, results and discussion; Figures3–7 captions | supports | The original study used Rib-X delafloxacin microbiological standard. It measured pH-dependent accumulation and antibacterial effects in S.aureus and macrophage models, including ATCC25923. Acidification increased uptake and enhanced 24-hour activity in the tested conditions. The proposed diffusion explanation does not exclude transporter effects. This supports the native description without generalizing to every organism, infection, salt formulation or clinical outcome. |
+| mic | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10560&amp;PanelID=10; 351-cdc.html/.txt, Isolate Details, MIC table, Delafloxacin row, footnote1 and change history | supports | CDC identifies AR Bank 1269, Study ID NEW-35, P.aeruginosa and SAMN33435242. Broth-microdilution modal MIC is &gt;4 micrograms/mL with interpretation R; this equals &gt;4 mg/L and preserves the native greater-than qualifier. The delafloxacin footnote specifies FDA breakpoints despite the general CLSI 2025 M100 S35 footer. The native assay and evidence already retain this distinction. No other antibiotic result or resistance gene is reassigned to delafloxacin. |
+| biosample | BioSample:SAMN33435242; NCBITaxon:287; 351-biosample.xml, organism, sample name and attributes | supports | NCBI identifies P.aeruginosa taxonomy 287, sample AR-1269 and study NEW-35, independently confirming the isolate mapping. The BioSample antibiogram does not include delafloxacin; the delafloxacin MIC is supported by the CDC page, not by that antibiogram. |
+| adapter | iModulonDB e_coli/precise1k; 351-adapter-results.json, exact datasets/gyrA/parC commands | context_only | Structured discovery preceded protein follow-up. gyrA maps to b2231 and parC to b3019; the gyrA query also returns product-text matches for gyrB and gyrase inhibitors. Neither search returns an iModulon. These results establish catalog context only, not delafloxacin binding or a P.aeruginosa isolate mechanism. |
+| owners | Maintained CARD/PubChem projections and native curated activity preservation; 351-inspect.json; 351-owner-append.json; 351-source-audit.json; scripts/seed_from_sources.py activity preservation | supports | Thirteen original hashes and six appended actual-owner hashes remain unchanged. ARO definition/class and PubChem structural projections reconcile. The CDC observation is curator-owned native content preserved by reseeding, with future correction requiring the validated writer and an append-only curation event. Five native events are ordered; both LLM curation events are explicitly marked. |
+| validation | Actual focused native checks; 351-focused-results.json; 351-focused-run.log; 351-strict.tsv | supports | Native chemistry, schema and strict checks exit 0. The supplemental direct tautomer mapping failed and its explicit normalized follow-up passed; these outcomes are reported separately. |
+| search | Exact delafloxacin identifiers, primary pH and enzyme-study retrievals; 351-local-hits.txt includes ignored files; 351-fetch manifests; exact primary PMID/DOI/PMC retrievals on 2026-10-21 | context_only | The original 2011 full main text was retrieved through PMC after XML 500 and institutional PDF certificate failure. The additional 2003 enzyme-study XML returned500 and its PMC retrieval yielded a browser challenge, not full text. Review-level dual-target claims were therefore not promoted into a new direct-binding assertion. |
+
+## Limits And Additional Notes
+
+- The original 2011 pH study supports the specified in-vitro organism and cell models. Its main relevant methods/results and discussion were inspected; raw observations, every figure point and supplementary experiments were not reanalysed.
+- The additional 2003 enzyme-study retrieval failed with XML 500 and a PMC browser challenge. No new direct-binding edge or universal target-preference claim is adopted from the review alone.
+- The first supplemental direct graph comparison actually failed because standard InChI reconstructed a tautomer. Explicit canonical-tautomer mapping subsequently passed; this does not erase the first outcome and is not a native-validator failure.
+- The CDC MIC is an isolate-specific censored observation. BioSample supports identity but contains no delafloxacin MIC. No genotype is promoted to an experimentally established resistance mechanism.
+- Clinical indications, current approvals and formulation-specific pharmacology were outside the native asserted scope; historical review statements were not promoted into clinical-use claims.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No confirmed corrective finding was established. A future curator may add directly supported protein-mechanism evidence after inspecting its exact original assay, material and target taxon.
+- All native fields, maintained sources and append-only histories remain unchanged. Focused native validators used batch 036; standalone chemistry used the recorded batch 019 interpreter.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T142916Z-delafloxacin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of delafloxacin
+started_at: '2026-10-21T14:11:33Z'
+finished_at: '2026-10-21T14:29:16Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Whole-record reconciliation against frozen/current CARD, PubChem,
+    ChEMBL, original CDC isolate page, NCBI BioSample and original pH-study methods/results;
+    independent molecular mapping and source/history audit.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Exact delafloxacin identity, scoped definition and the single CDC
+  MIC observation supported
+scientific_review: true
+summary: The neutral delafloxacin parent, its fluoroquinolone class and three external
+  identifiers reconcile. The adopted review and an independently inspected original
+  pH study support the definition within the tested staphylococcal and cell models.
+  The CDC row independently confirms Pseudomonas aeruginosa isolate 1269, BioSample
+  SAMN33435242 and a delafloxacin MIC greater than 4 mg/L with its FDA-breakpoint
+  footnote. No confirmed corrective finding was established. Optional protein-mechanism
+  enrichment and inaccessible early enzyme-study details remain bounded. Scientific
+  assessment retains the stated evidence limits; full verification is blocked by the
+  shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/delafloxacin.yaml
+    sha256: cd63f7cd8dce97ddb257ab1e11bfa80bc81ff432e89c0cfbecceca4390b1afbe
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: src/antibioticmech/activity_collections.py
+    sha256: 71385cecc64b89a72d0fa3191400f86bcbb55360c22398c369b665a0d6d1f990
+    role: context
+  - path: src/antibioticmech/validation/write_validated.py
+    sha256: 7e75d39582e3a8c6d816c7927126b39948fbd2bf7650b579a71e93d912d659db
+    role: context
+  - path: src/antibioticmech/curate/curation_event.py
+    sha256: d080b25ad399a054d2f86636c1e9dc6847099ef4417dcd8f50e57661448f95a6
+    role: context
+scope:
+  description: 'Entire SEEDED, MINTED record: definition and adopted PMID, exact structure,
+    class and parent, three xrefs, source concept, one curator-owned MIC observation
+    and five history events. No native synonym, molecular-target, clinical-use, producer
+    or causal-graph assertion is present.'
+  selection: Queue 351 in isolated batch 036. Thirteen original input hashes preserved
+    and six actual maintained-owner hashes appended before detailed assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-edae5f55a0
+targets:
+- target_id: antibioticmech:aro-edae5f55a0
+  path: data/antibiotics/antibacterial/delafloxacin.yaml
+  label: delafloxacin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted CARD/ARO identity, definition and class
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: CARD/ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact PubChem structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated fields and preserved curator activity merge
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion overrides
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/delafloxacin.yaml
+    role: Curator-owned activity observation preserved by reseeding; changes only
+      through validated writer and curation event
+  - repository: CultureBotAI/AntibioticMech
+    path: src/antibioticmech/activity_collections.py
+    role: Native activity reader
+  - repository: CultureBotAI/AntibioticMech
+    path: src/antibioticmech/validation/write_validated.py
+    role: Required validated writer for future curator-owned correction
+  - repository: CultureBotAI/AntibioticMech
+    path: src/antibioticmech/curate/curation_event.py
+    role: Required curation event for future native mutation
+checks:
+- check_id: schema
+  name: Documented schema validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/delafloxacin.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/delafloxacin.yaml --out /private/tmp/am-review-session/351-strict.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; no ERROR rows.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - validation
+- check_id: native-chemistry
+  name: Native molecular consistency
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    351
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native encodings, recorded key, formula, charge, masses and deterministic
+    mint reconcile.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: direct-mapping
+  name: Supplemental direct tautomer-sensitive graph comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/351-chemistry-authorities.py
+    > /private/tmp/am-review-session/351-chemistry-authorities.log 2>&1
+  status: failed
+  required: false
+  exit_code: 1
+  expected_exit_code: 0
+  summary: 'Exit 1 at native-inchi reciprocal graph assertion: standard InChI reconstructs
+    an iminodihydropyridine tautomer, while SMILES uses aminopyridine. Standard key
+    already agrees. This is a comparison limitation, not a failed native validator
+    or demonstrated isomer defect.'
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - chemistry
+- check_id: normalized-mapping
+  name: Explicit tautomer-normalized authority comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/351-chemistry-normalized.py
+    > /private/tmp/am-review-session/351-chemistry-normalized.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Seven encodings agree after documented canonical-tautomer normalization;
+    original representations, unchanged keys, formula, charge and reciprocal mappings
+    are retained.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - chemistry
+- check_id: adapter
+  name: Structured target-context lookup before primary follow-up
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/351-adapter.py
+    > /private/tmp/am-review-session/351-adapter.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Dataset discovery and gyrA/parC searches exit 0; catalog hits are context
+    only.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - adapter
+- check_id: ledger
+  name: Maintained source fields, MIC and unchanged input hashes
+  command: .venv/bin/python /private/tmp/am-review-session/351-ledger.py > /private/tmp/am-review-session/351-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Nineteen hashes, one adopted PMID disposition, one MIC and five ordered
+    events reconcile.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - owners
+  - mic
+  - leads
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/delafloxacin.yaml
+  locator: Entire native YAML
+  accessed_at: '2026-10-21T14:16:52Z'
+  support: supports
+  summary: The record is the neutral delafloxacin parent, with one CDC activity observation
+    and retained SEEDED status. It makes no specific protein-binding, clinical-approval,
+    product-salt or producer assertion.
+- evidence_id: card
+  kind: authority
+  reference: ARO:3004462; ARO:0000001
+  locator: 351-card.html; maintained ARO row in 351-raw-rows.json
+  accessed_at: '2026-10-21T14:13:02.303380Z'
+  support: supports
+  summary: Current CARD and frozen inventory agree on the delafloxacin definition
+    and fluoroquinolone parent. The definition PMID29605887 is a review; its cited
+    original pH experiment was independently inspected. The wording is read in the
+    relevant physiological/experimental pH context, not as an assertion that no atom
+    can ever be protonated.
+  snapshot_sha256: 895160314e79452365a11e07c236fdf1e93fa7bdc167f06822c6f6dd44d95dff
+- evidence_id: chemistry
+  kind: validation
+  reference: PubChem CID487101; ChEMBL CHEMBL2105637; native molecular encodings
+  locator: 351-pubchem.json; 351-chembl.json; 351-chemistry.json; 351-authority-chemistry.json;
+    both supplemental comparison logs
+  accessed_at: '2026-10-21T14:16:52Z'
+  support: supports
+  summary: PubChem and ChEMBL identify neutral C18H12ClF3N4O4, zero charge and DYDCPNMLZGFQTM-UHFFFAOYSA-N.
+    Seven representations agree after explicit aminopyridine/iminodihydropyridine
+    tautomer normalization. The failed initial direct graph assertion is preserved.
+    Masses reconcile, and the hydroxyazetidine carbon has symmetry-equivalent ring
+    arms, not missing tetrahedral stereochemistry. No formulation salt is silently
+    substituted.
+  snapshot_sha256: 1b94d15e7e428ea20c64466dd06c79eb5904f6c5229d4fef97d2aa38f5f2aeb6
+- evidence_id: leads
+  kind: database
+  reference: PMID:29605887; DOI:10.1007/s40121-018-0198-x
+  locator: 351-adopted-core.json; 351-review.xml; chemistry/mechanism, microbiology
+    and resistance sections; 351-lead-dispositions.json
+  accessed_at: '2026-10-21T14:13:02.302656Z'
+  support: supports
+  summary: The sole adopted MED record resolves to a 2018 review. Its complete abstract
+    and relevant sections were read. It supports the acidic-character/uptake account
+    but is not represented as an original experiment, and its historical clinical
+    discussion is not used to assert present approval or universal activity.
+  snapshot_sha256: 0b61677436978d43534ef0a8f03c86b3d0ec6060746bd6ce89e4f7f2da70d23f
+- evidence_id: ph-primary
+  kind: primary_source
+  reference: PMID:21135179; DOI:10.1128/AAC.01201-10
+  locator: 351-primary2011.html/.txt, material and assay methods, Table1, results
+    and discussion; Figures3–7 captions
+  accessed_at: '2026-10-21T14:15:04.156636Z'
+  support: supports
+  summary: The original study used Rib-X delafloxacin microbiological standard. It
+    measured pH-dependent accumulation and antibacterial effects in S.aureus and macrophage
+    models, including ATCC25923. Acidification increased uptake and enhanced 24-hour
+    activity in the tested conditions. The proposed diffusion explanation does not
+    exclude transporter effects. This supports the native description without generalizing
+    to every organism, infection, salt formulation or clinical outcome.
+  snapshot_sha256: d09e89443de441450bae14b18b2ae4e0e791f7dd03fe6344bda7f90cf436f3ce
+- evidence_id: mic
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10560&PanelID=10
+  locator: 351-cdc.html/.txt, Isolate Details, MIC table, Delafloxacin row, footnote1
+    and change history
+  accessed_at: '2026-10-21T14:12:35.321405Z'
+  support: supports
+  summary: CDC identifies AR Bank 1269, Study ID NEW-35, P.aeruginosa and SAMN33435242.
+    Broth-microdilution modal MIC is >4 micrograms/mL with interpretation R; this
+    equals >4 mg/L and preserves the native greater-than qualifier. The delafloxacin
+    footnote specifies FDA breakpoints despite the general CLSI 2025 M100 S35 footer.
+    The native assay and evidence already retain this distinction. No other antibiotic
+    result or resistance gene is reassigned to delafloxacin.
+  snapshot_sha256: d58ac1083eca7fd513362c16a7cab3191116ad27cd715c6a19f948022858a04a
+- evidence_id: biosample
+  kind: authority
+  reference: BioSample:SAMN33435242; NCBITaxon:287
+  locator: 351-biosample.xml, organism, sample name and attributes
+  accessed_at: '2026-10-21T14:12:35.321458Z'
+  support: supports
+  summary: NCBI identifies P.aeruginosa taxonomy 287, sample AR-1269 and study NEW-35,
+    independently confirming the isolate mapping. The BioSample antibiogram does not
+    include delafloxacin; the delafloxacin MIC is supported by the CDC page, not by
+    that antibiogram.
+  snapshot_sha256: 6eef42ae60bba62864ecc8e27c6b1706ab34294d4c97940348bb1262ad58236b
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/precise1k
+  locator: 351-adapter-results.json, exact datasets/gyrA/parC commands
+  accessed_at: '2026-10-21T14:16:52Z'
+  support: context_only
+  summary: Structured discovery preceded protein follow-up. gyrA maps to b2231 and
+    parC to b3019; the gyrA query also returns product-text matches for gyrB and gyrase
+    inhibitors. Neither search returns an iModulon. These results establish catalog
+    context only, not delafloxacin binding or a P.aeruginosa isolate mechanism.
+  snapshot_sha256: 6b82c3dd6900febcea5cfeb1ae11e17721692c92c88ed7164536a95d1f9ac8d6
+- evidence_id: owners
+  kind: database
+  reference: Maintained CARD/PubChem projections and native curated activity preservation
+  locator: 351-inspect.json; 351-owner-append.json; 351-source-audit.json; scripts/seed_from_sources.py
+    activity preservation
+  accessed_at: '2026-10-21T14:16:52Z'
+  support: supports
+  summary: Thirteen original hashes and six appended actual-owner hashes remain unchanged.
+    ARO definition/class and PubChem structural projections reconcile. The CDC observation
+    is curator-owned native content preserved by reseeding, with future correction
+    requiring the validated writer and an append-only curation event. Five native
+    events are ordered; both LLM curation events are explicitly marked.
+  snapshot_sha256: a9665fb38445404e2ddb670b32551870d6617a6ce9c86416ea353ad252b6129a
+- evidence_id: validation
+  kind: validation
+  reference: Actual focused native checks
+  locator: 351-focused-results.json; 351-focused-run.log; 351-strict.tsv
+  accessed_at: '2026-10-21T14:16:52Z'
+  support: supports
+  summary: Native chemistry, schema and strict checks exit 0. The supplemental direct
+    tautomer mapping failed and its explicit normalized follow-up passed; these outcomes
+    are reported separately.
+  snapshot_sha256: ad3ea31dadee9df99f4ae36630ba68188f117670a5a91895854fafb45db4a54e
+- evidence_id: search
+  kind: search
+  reference: Exact delafloxacin identifiers, primary pH and enzyme-study retrievals
+  locator: 351-local-hits.txt includes ignored files; 351-fetch manifests; exact primary
+    PMID/DOI/PMC retrievals on 2026-10-21
+  accessed_at: '2026-10-21T14:16:52Z'
+  support: context_only
+  summary: The original 2011 full main text was retrieved through PMC after XML 500
+    and institutional PDF certificate failure. The additional 2003 enzyme-study XML
+    returned500 and its PMC retrieval yielded a browser challenge, not full text.
+    Review-level dual-target claims were therefore not promoted into a new direct-binding
+    assertion.
+  snapshot_sha256: cef560a1ad3ea333b27c04e8bee8a371e00daa6ccd19843cf932831b6ac2ffa2
+  search_scope: 351-local-hits.txt includes ignored files; 351-fetch manifests; exact
+    primary PMID/DOI/PMC retrievals on 2026-10-21
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral delafloxacin
+  outcome: supported
+  summary: Native and official graphs reconcile with an explicit tautomer comparison;
+    no stereochemical or formula defect is established.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - record
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Three xrefs and fluoroquinolone class
+  outcome: supported
+  summary: ARO, PubChem and ChEMBL identify the exact parent; class and deterministic
+    mint reconcile.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - card
+  - chemistry
+  - owners
+- assessment_id: definition
+  area: evidence
+  topic: Acidic-character and pH-dependent uptake description
+  outcome: supported
+  summary: Adopted review and original methods/results support the claim within the
+    tested pH and staphylococcal/cell models; proposed diffusion is not equated with
+    proven exclusive transport mechanism.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - leads
+  - ph-primary
+- assessment_id: activity
+  area: evidence
+  topic: Single resistant-isolate MIC
+  outcome: supported
+  summary: Value, inequality, unit conversion, organism, strain, BioSample and FDA-footnote
+    provenance match the original CDC record.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - mic
+  - biosample
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional gyrase/topoisomerase enrichment
+  outcome: unknown
+  summary: Native asserts no protein target. The retrieved review and 2011 discussion
+    point to dual-target literature, but inaccessible original enzyme detail and catalog
+    membership do not justify an invented exact binding edge.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - record
+  - adapter
+  - search
+  - ph-primary
+- assessment_id: history
+  area: provenance
+  topic: Maintained owners and curation history
+  outcome: supported
+  summary: All 19 input hashes, adopted lead disposition, generated source fields
+    and five history events reconcile; curated activity is preserved separately from
+    source projections.
+  target_ids:
+  - antibioticmech:aro-edae5f55a0
+  evidence_ids:
+  - owners
+  - leads
+  - validation
+findings: []
+actions: []
+limitations:
+- The original 2011 pH study supports the specified in-vitro organism and cell models.
+  Its main relevant methods/results and discussion were inspected; raw observations,
+  every figure point and supplementary experiments were not reanalysed.
+- The additional 2003 enzyme-study retrieval failed with XML 500 and a PMC browser
+  challenge. No new direct-binding edge or universal target-preference claim is adopted
+  from the review alone.
+- The first supplemental direct graph comparison actually failed because standard
+  InChI reconstructed a tautomer. Explicit canonical-tautomer mapping subsequently
+  passed; this does not erase the first outcome and is not a native-validator failure.
+- The CDC MIC is an isolate-specific censored observation. BioSample supports identity
+  but contains no delafloxacin MIC. No genotype is promoted to an experimentally established
+  resistance mechanism.
+- Clinical indications, current approvals and formulation-specific pharmacology were
+  outside the native asserted scope; historical review statements were not promoted
+  into clinical-use claims.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No confirmed corrective finding was established. A future curator may add directly
+  supported protein-mechanism evidence after inspecting its exact original assay,
+  material and target taxon.
+- All native fields, maintained sources and append-only histories remain unchanged.
+  Focused native validators used batch 036; standalone chemistry used the recorded
+  batch 019 interpreter.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://card.mcmaster.ca/ontology/41677
+- https://pubchem.ncbi.nlm.nih.gov/compound/487101
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC3028753/
+- https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10560&PanelID=10
+tags:
+- record-review
+- delafloxacin
+- cdc-mic
+```

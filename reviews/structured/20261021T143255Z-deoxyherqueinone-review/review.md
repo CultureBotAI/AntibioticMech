@@ -1,0 +1,678 @@
+# Deoxyherqueinone: supported identity, antibacterial activity and fungal origin
+
+- Review: 20261021T143255Z-deoxyherqueinone-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T14:11:40Z
+- Finished UTC: 2026-10-21T14:32:55Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The neutral R-configured structure and its source provenance are consistent. Original antibacterial and fungal-isolation work supports the imported role and origin. No corrective finding was established. Assay methods, exact historical material and several adopted-publication access limits remain explicit; biosynthetic enzymes are not antibacterial targets. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record: definition and source, all four exact synonyms, four broader parents, antibacterial role, complete chemical representation, sole CAS xref, source concept and mint, source version, grounding/status and all three history events; all six adopted citation leads disposed at their documented read depth.
+
+Selection: Queue position 356; all thirteen original input hashes verified before assessment and preserved. The captured ChEBI extraction and seeding inputs are the actual owners.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:145901 | data/antibiotics/antibacterial/deoxyherqueinone.yaml | generated | deoxyherqueinone |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:145901 | Actual focused schema validation found no issues. |
+| strict | passed | True | CHEBI:145901 | Actual strict validation scanned one file with zero errors. |
+| initial-chemistry | passed | False | CHEBI:145901 | Native SMILES and InChI independently reproduce the stored full key, elemental formula, charge, masses, assigned R centre and source mint. |
+| charge-aware-chemistry | passed | False | CHEBI:145901 | Independent native SMILES, native InChI and current ChEBI SMILES agree in full key, elemental formula, formal charge, masses and R centre. Formula and charge are tested separately. The additional PubChem tautomer comparison is contextual, not a new exact xref. |
+| Authoritative full QC | failed | True | CHEBI:145901 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:145901 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:145901 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:145901 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:145901 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:145901 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:145901 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:145901 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:145901 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact protonation, stereochemistry, names and registry scope
+
+identity: supported. Targets: CHEBI:145901.
+
+The neutral graph, one R centre, elemental formula, masses, names and ChEBI grounding agree. The sole CAS attestation is supported at official ChEBI depth. The contextual PubChem tautomer is not an asserted xref or a new native-structure defect.
+
+### Antibacterial role and exact experimental material
+
+evidence: supported. Targets: CHEBI:145901.
+
+The original 1965 pure named-parent report and 2001 activity-guided isolation support antibacterial activity. Historical methodological and material limits preclude transplanting the numerical observations into new fully specified native assays without further work. Atrovenetin and herqueichrysin results remain separate.
+
+### Microspecies statement, fungal provenance and biosynthetic context
+
+evidence: supported. Targets: CHEBI:145901.
+
+The qualified 1972 occurrence and 2017 pathway data support P. herquei origin; the 2001 isolate must remain genus-level. The imported structural classes fit the graph. No native molecular mechanism is asserted, and no biosynthetic enzyme is promoted to a drug target.
+
+### Generated ownership, source history, citation disposition and optional fields
+
+provenance: supported. Targets: CHEBI:145901.
+
+The entire record and actual maintained row/code were inspected. Original hashes and seed history are preserved; source mints reproduce. Missing optional quantitative activity, producer object, molecular target, resistance, clinical status or graph is not a defect by itself. No scientific-status promotion follows from passing checks.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/deoxyherqueinone.yaml; Entire native YAML and independently parsed chemical representation. | supports | CHEBI:145901 is neutral C20H20O6, key VZWSSCQUCMSKLE-MRVPVSSYSA-N, with one assigned R centre. Four exact synonyms and the chemical definition describe this form, including (+)-deoxyherqueinone. Its sole exact xref is CAS20887-73-4. No quantitative assay, molecular target, resistance, clinical-status or causal-graph object is asserted. SEEDED is not scientific sign-off. |
+| owners | data/raw/chebi_antimicrobials.tsv; conf/sources.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; curation/decisions.tsv; Complete exact ChEBI row 2686 and relevant role filtering, extraction, source-concept minting and seeding code; exact decision/curator follow-up. | supports | The maintained row reproduces the native definition, identity, structure, aliases, parent terms and antibacterial role. The source version is 2026-08-30; all three history entries are seed/reseed events. The source mint independently reproduces. The extractor restricts exported roles to configured antimicrobial roots; omission of a generic fungal-metabolite role is intentional. The citation inventory is discovery provenance, not automatic claim-level primary evidence. No exact curator or decision override was found in the ignored-inclusive search. |
+| authority | CHEBI:145901; Current complete official ChEBI entry, names, structure, relations and cross-references; independent native/authority parsing. | supports | Current ChEBI confirms all four native synonyms, neutral R-configured structure, masses, CAS20887-73-4 and the broader polyketide, phenol, organic heterotetracyclic compound and enone parents. Those official term definitions and the antibacterial role were read and agree with graph features. CAS is confirmed as the ChEBI/ChemIDplus-linked registry attestation; an independent CAS Registry record was not inspected. |
+| chemistry | 355356-chemistry-check.json; 356-chemistry.json; Independent full native/current-ChEBI SMILES and InChI comparisons; source mint and PubChem name-query context. | supports | Native and current ChEBI graphs agree exactly. Both adjacent records have the same R centre and differ in protonation/charge. PubChem name result CID26322709 has key KMPAOJFBQSXEAI-MRVPVSSYSA-N, a different keto/enol representation, not the native full key. Independent canonical tautomer enumeration converges; the original 2001 paper discusses tautomerism. PubChem is not an asserted native exact xref, so this is not a cross-reference defect or reason to overwrite the native form. Exact-key API queries returned 404, which is not proof of chemical absence. |
+| antibacterial1965 | PMID:5870759; DOI:10.1007/BF02139744; Entire one-page original communication on page 376, including its table, visually inspected; adjacent thiopental article excluded. | supports | The named deoxyherqueinone, prepared from herqueinone, has reported MICs of 20 micrograms/mL for B. mycoides, 18 for B. subtilis, 35 for S. lutea and 20 for S. aureus. The resistant subtilis-group and penicillin-resistant S. aureus entries are 18 and 20. K. pneumoniae is described as inactive without a stated ceiling. These are parent-compound results; the short report omits medium, pH, inoculum, incubation, strain accession and analytical purity. Its stronger atrovenetin values do not belong to deoxyherqueinone. No separate 4-olate material or mechanistic target is tested. |
+| isolation2001 | PMID:11676006; DOI:10.1271/bbb.65.1965; All five scanned original pages 1965–1969 visually read, including Figures 1–2, tables and experimental methods. | supports | Activity-guided Penicillium isolate A-23-2 yields 50 mg compound 2 from 2 L culture; MS, NMR and diacetyl-derivative comparison identify deoxyherqueinone. The authors explain NMR discrepancies by tautomerism. Culture/disc and TLC bioautography concern B. subtilis, Brevibacterium ammoniagenes and Arthrobacter simplex; these are not new purified-compound MIC measurements. The producing isolate is identified at genus level, not proven P. herquei. Figure 2 does not independently establish absolute configuration. Neither exact-ion antibacterial activity nor a pH 7.3 distribution is measured. |
+| origin1972 | PMID:4113758; DOI:10.7164/antibiotics.25.155; Complete original main text pages 155–162, including experimental section and Table 1, read. | supports | P. herquei strain I, PRL1838, produces a mixture containing deoxyherqueinone and atrovenetin. The authors could not isolate the free components separately by crystallization or chromatography, but recovered and identified diacetyldeoxyherqueinone after acetylation. This is qualified natural-occurrence support. The 1 microgram/mL antibacterial result in this paper belongs to herqueichrysin, not deoxyherqueinone. Herqueichrysin is a constitutional isomer and its biological results are not transferred. |
+| biosynthesis2017 | PMID:28240554; DOI:10.1021/jacs.7b01089; PMC5474393; Complete original main text and Figure 2 read; main Figure 2 visually inspected. | supports | The P. herquei NRRL1040 pathway and yeast reconstitution place deoxyherqueinone at compound 10, produced by PhnC methylation and converted onward by PhnG. The drawn R-configured neutral product supports the natural-parent identity. These enzymes concern biosynthesis, not antibacterial drug targets. The reported predicted pKa of 6.9 belongs to a phenol on prenylated precursor 6a, not deoxyherqueinone 10. No direct antibacterial assay or measured major-microspecies fraction for the native 4-olate is reported. |
+| biosynthesis-si | DOI:10.1021/jacs.7b01089.s001; https://api.figshare.com/v2/articles/4707601; Verified publisher Figshare PDF: selected methods S4–S7 and Figures S4/S34 on S20/S50 read; both figure pages visually inspected. | supports | S4 shows P. herquei chemical-complementation and yeast gene-combination product profiles, including compound 10. S34 is PhnH kinetics and pH response using precursor 6; panel D explicitly assigns calculator-derived pKa values to precursor tautomers 6a/6b. Neither panel establishes the native deoxyherqueinone 4-olate fraction at pH 7.3. The complete supporting PDF was downloaded, but only the specified sections and figures were assessed; no claim of complete spectral reprocessing is made. |
+| adopted | PMID:11676006; PMID:13269383; PMID:25079041; PMID:26978228; PMID:28240554; PMID:4113758; All six adopted PubMed records resolved. All four available indexed abstracts read; the two older records have no indexed abstract. Full texts additionally assessed as individually specified. | context_only | 11676006,4113758 and28240554 are assessed separately. For13269383, DOI10.1042/bj0610456, only the 1955 bibliographic/PMC landing metadata were inspected, not original scans.25079041 describes P. herquei PSU-RSPG93 metabolites and antioxidant/Vero observations, but its abstract does not map deoxyherqueinone to an exact compound number or provide antibacterial results.26978228, DOI10.1021/jacs.6b01528, was additionally read as full main text: it studies PhnA/PhnB and herqueinone biosynthesis, with deoxyherqueinone antibacterial activity appearing as cited context rather than a new assay. Compound numbers are paper-specific; its compound 10 is not the 2017 deoxyherqueinone 10. |
+| search | 355356-inclusive-hits.txt; public exact-name/identifier literature search; Gitignore-independent local search and bounded public primary/official follow-up. | context_only | The exact source/native rows and expected queue entries were found. Hidden and ignored files were included when checking for exact maintained decisions and curator additions. Searches did not establish an independently sourced exact 4-olate pKa or physiological microspecies fraction; this is a bounded search result, not proof no such evidence exists. Both records lack native protein, pathway, regulator or transcriptomic assertions, so the structured iModulonDB adapter is not applicable. Biosynthetic genes found in newly inspected papers are not converted to drug-target assertions. |
+| validation | 356-schema.log;356-strict.log;356-chemistry.json;355356-chemistry-check.json; Actual focused validation outputs and unchanged input-byte verification. | supports | Schema and strict checks exit 0. The explicit charge-aware chemistry comparison exits 0. The original thirteen captured input hashes remain unchanged. The anion generic-helper failure is retained with its corrected interpretation; the neutral generic helper passes. These deterministic results do not establish biological mechanism or clinical efficacy. |
+
+## Limits And Additional Notes
+
+- The 1965 original paper was read completely, including its table, but reports little assay-method or material characterization detail. Its named-parent antibacterial results do not independently establish a discrete ionic reagent, modern strain-specific susceptibility or a mechanistic target.
+- The 2001 paper was read completely from scanned pages. Its deoxyherqueinone assignment uses NMR, MS and derivatization; absolute configuration is not independently established by its unwedge drawing. The 1972 paper was read completely as text, but its derivative isolation does not amount to purification of the free parent from that culture.
+- The 2017 main text and Figure 2 were inspected; supporting information review was limited to S4–S7, S20 and S50, with the two specified figures viewed. Raw spectra, chromatographic integrations and all calculations were not reprocessed. Initial PMC supplement access returned an HTML challenge and direct ACS returned 403; the verified public publisher Figshare PDF supplied the assessed supplement.
+- No independent exact 4-olate pKa/speciation source was established in the bounded search. The pH 7.3 assertion remains ChEBI-attested; lack of an inspected primary determination is not proof it is chemically false.
+- Of six adopted leads, four available abstracts were read completely and two older records have no abstract. Original main texts were additionally read for11676006,4113758,26978228 and28240554. The 1955 source13269383 was inspected only at bibliographic/landing-page depth; the 2014 source25079041 at abstract depth. Exact compound-number mapping in the latter and original1955 experimental details are not claimed verified.
+- CAS20887-73-4 was confirmed through the complete official ChEBI entry and its registry-source attribution, not an independent CAS Registry service. PubChem name retrieval supplies a tautomeric representation and is contextual only.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Both records retain a single R stereocentre. Their principal distinction is protonation, not a stereochemical variant. Optional enrichment remains separate from corrective curation.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T143255Z-deoxyherqueinone-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Deoxyherqueinone: supported identity, antibacterial activity and fungal origin'
+started_at: '2026-10-21T14:11:40Z'
+finished_at: '2026-10-21T14:32:55Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The neutral R-configured structure and its source provenance are consistent.
+  Original antibacterial and fungal-isolation work supports the imported role and
+  origin. No corrective finding was established. Assay methods, exact historical material
+  and several adopted-publication access limits remain explicit; biosynthetic enzymes
+  are not antibacterial targets. Scientific assessment retains the stated evidence
+  limits; full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/deoxyherqueinone.yaml
+    sha256: 53d6addc4a334f042bd7a101c8a1fedc2a1413d9f75542251d4032d2673083d1
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:145901
+  path: data/antibiotics/antibacterial/deoxyherqueinone.yaml
+  label: deoxyherqueinone
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: 'Entire exact native record: definition and source, all four exact
+    synonyms, four broader parents, antibacterial role, complete chemical representation,
+    sole CAS xref, source concept and mint, source version, grounding/status and all
+    three history events; all six adopted citation leads disposed at their documented
+    read depth.'
+  selection: Queue position 356; all thirteen original input hashes verified before
+    assessment and preserved. The captured ChEBI extraction and seeding inputs are
+    the actual owners.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:145901
+  exclusions:
+  - target: Deoxyherqueinone(1−) CHEBI:145874
+    reason: The adjacent record is conjugate-acid/base context, not an exact interchangeable
+      identity. Both retain the same R stereocentre; no merge or assay transfer is
+      inferred.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused schema validation found no issues.
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/deoxyherqueinone.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual strict validation scanned one file with zero errors.
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/deoxyherqueinone.yaml --out /private/tmp/am-review-session/356-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: initial-chemistry
+  name: initial-chemistry
+  status: passed
+  required: false
+  summary: Native SMILES and InChI independently reproduce the stored full key, elemental
+    formula, charge, masses, assigned R centre and source mint.
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 356
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: charge-aware-chemistry
+  name: charge-aware-chemistry
+  status: passed
+  required: false
+  summary: Independent native SMILES, native InChI and current ChEBI SMILES agree
+    in full key, elemental formula, formal charge, masses and R centre. Formula and
+    charge are tested separately. The additional PubChem tautomer comparison is contextual,
+    not a new exact xref.
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/355356-chemistry-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:145901
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/deoxyherqueinone.yaml
+  locator: Entire native YAML and independently parsed chemical representation.
+  accessed_at: '2026-10-21T14:31:47Z'
+  support: supports
+  summary: CHEBI:145901 is neutral C20H20O6, key VZWSSCQUCMSKLE-MRVPVSSYSA-N, with
+    one assigned R centre. Four exact synonyms and the chemical definition describe
+    this form, including (+)-deoxyherqueinone. Its sole exact xref is CAS20887-73-4.
+    No quantitative assay, molecular target, resistance, clinical-status or causal-graph
+    object is asserted. SEEDED is not scientific sign-off.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; conf/sources.yaml; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py; curation/decisions.tsv
+  locator: Complete exact ChEBI row 2686 and relevant role filtering, extraction,
+    source-concept minting and seeding code; exact decision/curator follow-up.
+  accessed_at: '2026-10-21T14:31:47Z'
+  support: supports
+  summary: The maintained row reproduces the native definition, identity, structure,
+    aliases, parent terms and antibacterial role. The source version is 2026-08-30;
+    all three history entries are seed/reseed events. The source mint independently
+    reproduces. The extractor restricts exported roles to configured antimicrobial
+    roots; omission of a generic fungal-metabolite role is intentional. The citation
+    inventory is discovery provenance, not automatic claim-level primary evidence.
+    No exact curator or decision override was found in the ignored-inclusive search.
+  snapshot_sha256: 123dc533340d45e70b65d4d9a140d8ffd1432a0831e641764773343ce938a28e
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:145901
+  locator: Current complete official ChEBI entry, names, structure, relations and
+    cross-references; independent native/authority parsing.
+  accessed_at: '2026-10-21T14:24:44Z'
+  support: supports
+  summary: Current ChEBI confirms all four native synonyms, neutral R-configured structure,
+    masses, CAS20887-73-4 and the broader polyketide, phenol, organic heterotetracyclic
+    compound and enone parents. Those official term definitions and the antibacterial
+    role were read and agree with graph features. CAS is confirmed as the ChEBI/ChemIDplus-linked
+    registry attestation; an independent CAS Registry record was not inspected.
+  snapshot_sha256: d0d6e355baa62310d8b3161d38485365032f090abd33f4a1091713cac08c8fa2
+- evidence_id: chemistry
+  kind: validation
+  reference: 355356-chemistry-check.json; 356-chemistry.json
+  locator: Independent full native/current-ChEBI SMILES and InChI comparisons; source
+    mint and PubChem name-query context.
+  accessed_at: '2026-10-21T14:31:47Z'
+  support: supports
+  summary: Native and current ChEBI graphs agree exactly. Both adjacent records have
+    the same R centre and differ in protonation/charge. PubChem name result CID26322709
+    has key KMPAOJFBQSXEAI-MRVPVSSYSA-N, a different keto/enol representation, not
+    the native full key. Independent canonical tautomer enumeration converges; the
+    original 2001 paper discusses tautomerism. PubChem is not an asserted native exact
+    xref, so this is not a cross-reference defect or reason to overwrite the native
+    form. Exact-key API queries returned 404, which is not proof of chemical absence.
+  snapshot_sha256: 88aec2ebe1d20410e35ede211746a13269a1d36527c5fc09188859c7e464b574
+- evidence_id: antibacterial1965
+  kind: primary_source
+  reference: PMID:5870759; DOI:10.1007/BF02139744
+  locator: Entire one-page original communication on page 376, including its table,
+    visually inspected; adjacent thiopental article excluded.
+  accessed_at: '2026-10-21T14:25:20Z'
+  support: supports
+  summary: The named deoxyherqueinone, prepared from herqueinone, has reported MICs
+    of 20 micrograms/mL for B. mycoides, 18 for B. subtilis, 35 for S. lutea and 20
+    for S. aureus. The resistant subtilis-group and penicillin-resistant S. aureus
+    entries are 18 and 20. K. pneumoniae is described as inactive without a stated
+    ceiling. These are parent-compound results; the short report omits medium, pH,
+    inoculum, incubation, strain accession and analytical purity. Its stronger atrovenetin
+    values do not belong to deoxyherqueinone. No separate 4-olate material or mechanistic
+    target is tested.
+  snapshot_sha256: 98a9d1036821157bb67309e25584f790a762990a4657e12ec3c627cea4dc9fa6
+- evidence_id: isolation2001
+  kind: primary_source
+  reference: PMID:11676006; DOI:10.1271/bbb.65.1965
+  locator: All five scanned original pages 1965–1969 visually read, including Figures
+    1–2, tables and experimental methods.
+  accessed_at: '2026-10-21T14:25:46Z'
+  support: supports
+  summary: Activity-guided Penicillium isolate A-23-2 yields 50 mg compound 2 from
+    2 L culture; MS, NMR and diacetyl-derivative comparison identify deoxyherqueinone.
+    The authors explain NMR discrepancies by tautomerism. Culture/disc and TLC bioautography
+    concern B. subtilis, Brevibacterium ammoniagenes and Arthrobacter simplex; these
+    are not new purified-compound MIC measurements. The producing isolate is identified
+    at genus level, not proven P. herquei. Figure 2 does not independently establish
+    absolute configuration. Neither exact-ion antibacterial activity nor a pH 7.3
+    distribution is measured.
+  snapshot_sha256: 01c6f217bf84b3a8ba643e0dd95444d349632e8cbf6a6b34e0d7530994d7fed9
+- evidence_id: origin1972
+  kind: primary_source
+  reference: PMID:4113758; DOI:10.7164/antibiotics.25.155
+  locator: Complete original main text pages 155–162, including experimental section
+    and Table 1, read.
+  accessed_at: '2026-10-21T14:25:45Z'
+  support: supports
+  summary: P. herquei strain I, PRL1838, produces a mixture containing deoxyherqueinone
+    and atrovenetin. The authors could not isolate the free components separately
+    by crystallization or chromatography, but recovered and identified diacetyldeoxyherqueinone
+    after acetylation. This is qualified natural-occurrence support. The 1 microgram/mL
+    antibacterial result in this paper belongs to herqueichrysin, not deoxyherqueinone.
+    Herqueichrysin is a constitutional isomer and its biological results are not transferred.
+  snapshot_sha256: 58a57c6774119df0d20e135216a5cccbfeb5f48ec62df384fe03062692a28969
+- evidence_id: biosynthesis2017
+  kind: primary_source
+  reference: PMID:28240554; DOI:10.1021/jacs.7b01089; PMC5474393
+  locator: Complete original main text and Figure 2 read; main Figure 2 visually inspected.
+  accessed_at: '2026-10-21T14:25:45Z'
+  support: supports
+  summary: The P. herquei NRRL1040 pathway and yeast reconstitution place deoxyherqueinone
+    at compound 10, produced by PhnC methylation and converted onward by PhnG. The
+    drawn R-configured neutral product supports the natural-parent identity. These
+    enzymes concern biosynthesis, not antibacterial drug targets. The reported predicted
+    pKa of 6.9 belongs to a phenol on prenylated precursor 6a, not deoxyherqueinone
+    10. No direct antibacterial assay or measured major-microspecies fraction for
+    the native 4-olate is reported.
+  snapshot_sha256: 84f68ff839fac62f5bf6231ba69cde8cacc21ea15496c69f9ec940f07a913d40
+- evidence_id: biosynthesis-si
+  kind: primary_source
+  reference: DOI:10.1021/jacs.7b01089.s001; https://api.figshare.com/v2/articles/4707601
+  locator: 'Verified publisher Figshare PDF: selected methods S4–S7 and Figures S4/S34
+    on S20/S50 read; both figure pages visually inspected.'
+  accessed_at: '2026-10-21T14:27:43Z'
+  support: supports
+  summary: S4 shows P. herquei chemical-complementation and yeast gene-combination
+    product profiles, including compound 10. S34 is PhnH kinetics and pH response
+    using precursor 6; panel D explicitly assigns calculator-derived pKa values to
+    precursor tautomers 6a/6b. Neither panel establishes the native deoxyherqueinone
+    4-olate fraction at pH 7.3. The complete supporting PDF was downloaded, but only
+    the specified sections and figures were assessed; no claim of complete spectral
+    reprocessing is made.
+  snapshot_sha256: 27b387bb1eea01dff894c87b448bea2d2fabd2c36f937a3d5c4a4c9b007b6580
+- evidence_id: adopted
+  kind: database
+  reference: PMID:11676006; PMID:13269383; PMID:25079041; PMID:26978228; PMID:28240554;
+    PMID:4113758
+  locator: All six adopted PubMed records resolved. All four available indexed abstracts
+    read; the two older records have no indexed abstract. Full texts additionally
+    assessed as individually specified.
+  accessed_at: '2026-10-21T14:25:20Z'
+  support: context_only
+  summary: '11676006,4113758 and28240554 are assessed separately. For13269383, DOI10.1042/bj0610456,
+    only the 1955 bibliographic/PMC landing metadata were inspected, not original
+    scans.25079041 describes P. herquei PSU-RSPG93 metabolites and antioxidant/Vero
+    observations, but its abstract does not map deoxyherqueinone to an exact compound
+    number or provide antibacterial results.26978228, DOI10.1021/jacs.6b01528, was
+    additionally read as full main text: it studies PhnA/PhnB and herqueinone biosynthesis,
+    with deoxyherqueinone antibacterial activity appearing as cited context rather
+    than a new assay. Compound numbers are paper-specific; its compound 10 is not
+    the 2017 deoxyherqueinone 10.'
+  snapshot_sha256: 35e381cb116be75fd3514b88b2826a10cdb928fa5c3ec093aa2ac2d6092ade0d
+- evidence_id: search
+  kind: search
+  reference: 355356-inclusive-hits.txt; public exact-name/identifier literature search
+  locator: Gitignore-independent local search and bounded public primary/official
+    follow-up.
+  accessed_at: '2026-10-21T14:31:47Z'
+  support: context_only
+  summary: The exact source/native rows and expected queue entries were found. Hidden
+    and ignored files were included when checking for exact maintained decisions and
+    curator additions. Searches did not establish an independently sourced exact 4-olate
+    pKa or physiological microspecies fraction; this is a bounded search result, not
+    proof no such evidence exists. Both records lack native protein, pathway, regulator
+    or transcriptomic assertions, so the structured iModulonDB adapter is not applicable.
+    Biosynthetic genes found in newly inspected papers are not converted to drug-target
+    assertions.
+  search_scope: 2026-10-21; rg --no-ignore --hidden across data, curation, conf, scripts,
+    src, docs, .claude, reviews and reports for deoxyherqueinone, CHEBI:145874, CHEBI:145901
+    and VZWSSCQUCMSKLE. Public PubMed exact adopted IDs, ChEBI exact entries, PubChem
+    full keys/name, original DOI/PMC/author/publisher routes; web exact queries "deoxyherqueinone"
+    "pKa" and "deoxyherqueinone" "pH 7.3". Search snippets were not treated as experimental
+    proof.
+  snapshot_sha256: 8f08334df9735e5b830dfdc48732e94d1003d792c10572f0f03b4ddb2ead42aa
+- evidence_id: validation
+  kind: validation
+  reference: 356-schema.log;356-strict.log;356-chemistry.json;355356-chemistry-check.json
+  locator: Actual focused validation outputs and unchanged input-byte verification.
+  accessed_at: '2026-10-21T14:31:47Z'
+  support: supports
+  summary: Schema and strict checks exit 0. The explicit charge-aware chemistry comparison
+    exits 0. The original thirteen captured input hashes remain unchanged. The anion
+    generic-helper failure is retained with its corrected interpretation; the neutral
+    generic helper passes. These deterministic results do not establish biological
+    mechanism or clinical efficacy.
+  snapshot_sha256: 60f9c03da65ea0c3c369a75d5a481d88cf5d1d5015990379e5b5ac6f840f876a
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact protonation, stereochemistry, names and registry scope
+  outcome: supported
+  summary: The neutral graph, one R centre, elemental formula, masses, names and ChEBI
+    grounding agree. The sole CAS attestation is supported at official ChEBI depth.
+    The contextual PubChem tautomer is not an asserted xref or a new native-structure
+    defect.
+  target_ids:
+  - CHEBI:145901
+  evidence_ids:
+  - native
+  - authority
+  - chemistry
+  - validation
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and exact experimental material
+  outcome: supported
+  summary: The original 1965 pure named-parent report and 2001 activity-guided isolation
+    support antibacterial activity. Historical methodological and material limits
+    preclude transplanting the numerical observations into new fully specified native
+    assays without further work. Atrovenetin and herqueichrysin results remain separate.
+  target_ids:
+  - CHEBI:145901
+  evidence_ids:
+  - authority
+  - antibacterial1965
+  - isolation2001
+  - origin1972
+- assessment_id: mechanism
+  area: evidence
+  topic: Microspecies statement, fungal provenance and biosynthetic context
+  outcome: supported
+  summary: The qualified 1972 occurrence and 2017 pathway data support P. herquei
+    origin; the 2001 isolate must remain genus-level. The imported structural classes
+    fit the graph. No native molecular mechanism is asserted, and no biosynthetic
+    enzyme is promoted to a drug target.
+  target_ids:
+  - CHEBI:145901
+  evidence_ids:
+  - authority
+  - origin1972
+  - biosynthesis2017
+  - biosynthesis-si
+  - isolation2001
+- assessment_id: provenance
+  area: provenance
+  topic: Generated ownership, source history, citation disposition and optional fields
+  outcome: supported
+  summary: The entire record and actual maintained row/code were inspected. Original
+    hashes and seed history are preserved; source mints reproduce. Missing optional
+    quantitative activity, producer object, molecular target, resistance, clinical
+    status or graph is not a defect by itself. No scientific-status promotion follows
+    from passing checks.
+  target_ids:
+  - CHEBI:145901
+  evidence_ids:
+  - native
+  - owners
+  - search
+  - validation
+  - adopted
+findings: []
+actions: []
+limitations:
+- The 1965 original paper was read completely, including its table, but reports little
+  assay-method or material characterization detail. Its named-parent antibacterial
+  results do not independently establish a discrete ionic reagent, modern strain-specific
+  susceptibility or a mechanistic target.
+- The 2001 paper was read completely from scanned pages. Its deoxyherqueinone assignment
+  uses NMR, MS and derivatization; absolute configuration is not independently established
+  by its unwedge drawing. The 1972 paper was read completely as text, but its derivative
+  isolation does not amount to purification of the free parent from that culture.
+- The 2017 main text and Figure 2 were inspected; supporting information review was
+  limited to S4–S7, S20 and S50, with the two specified figures viewed. Raw spectra,
+  chromatographic integrations and all calculations were not reprocessed. Initial
+  PMC supplement access returned an HTML challenge and direct ACS returned 403; the
+  verified public publisher Figshare PDF supplied the assessed supplement.
+- No independent exact 4-olate pKa/speciation source was established in the bounded
+  search. The pH 7.3 assertion remains ChEBI-attested; lack of an inspected primary
+  determination is not proof it is chemically false.
+- Of six adopted leads, four available abstracts were read completely and two older
+  records have no abstract. Original main texts were additionally read for11676006,4113758,26978228
+  and28240554. The 1955 source13269383 was inspected only at bibliographic/landing-page
+  depth; the 2014 source25079041 at abstract depth. Exact compound-number mapping
+  in the latter and original1955 experimental details are not claimed verified.
+- CAS20887-73-4 was confirmed through the complete official ChEBI entry and its registry-source
+  attribution, not an independent CAS Registry service. PubChem name retrieval supplies
+  a tautomeric representation and is contextual only.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Both records retain a single R stereocentre. Their principal distinction is protonation,
+  not a stereochemical variant. Optional enrichment remains separate from corrective
+  curation.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
