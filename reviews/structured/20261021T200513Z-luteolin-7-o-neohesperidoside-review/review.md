@@ -1,0 +1,1000 @@
+# Luteolin 7-O-neohesperidoside: conflicting exact synonyms and KNApSAcK stereochemistry
+
+- Review: 20261021T200513Z-luteolin-7-o-neohesperidoside-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T19:52:47Z
+- Finished UTC: 2026-10-21T20:05:13Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The complete native record and adopted ChEBI source were assessed. The native neohesperidoside graph is internally coherent and agrees with current ChEBI, PubChem and KEGG, but the asserted KNApSAcK accession encodes a different sugar configuration. Three exact synonyms describe a monosaccharide conjugate or the distinct rutinoside. Two major curation findings are recorded. Primary evidence supports bounded antibacterial activity of the named neohesperidoside; host effects, pooled assay ranges and docking hypotheses are kept separate.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Assigned queue position 612; one exact native record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:31788 | data/antibiotics/antibacterial/luteolin-7-o-neohesperidoside.yaml | generated | luteolin 7-O-neohesperidoside |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:31788 | Actual focused execution exited 0. Execution used batch062 cwd; chemistry used the existing019 RDKit interpreter, with schema and strict checks in the062 environment. |
+| Focused schema verification | passed | True | CHEBI:31788 | Actual focused execution exited 0. Execution used batch062 cwd; chemistry used the existing019 RDKit interpreter, with schema and strict checks in the062 environment. |
+| Focused strict verification | passed | True | CHEBI:31788 | Actual focused execution exited 0. Execution used batch062 cwd; chemistry used the existing019 RDKit interpreter, with schema and strict checks in the062 environment. |
+| Authoritative full QC | failed | True | CHEBI:31788 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:31788 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:31788 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:31788 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:31788 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:31788 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:31788 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:31788 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:31788 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Native exact neohesperidoside and conflicting exact names
+
+identity: concern. Targets: CHEBI:31788.
+
+The native graph, systematic names and definition consistently specify the alpha-L-rhamnose-(1-to-2)-beta-D-glucose conjugate. The exact rhamnoside name omits a sugar, while rutinoside and scolymoside identify a distinct 1-to-6 conjugate. Primary isolation/structure evidence supports retaining the native neohesperidoside identity while correcting those names.
+
+### Chemical xrefs and parent terms
+
+grounding: concern. Targets: CHEBI:31788.
+
+Current ChEBI, additional PubChem and asserted KEGG graphs match. KNApSAcK has a confirmed opposite sugar centre and inconsistent encodings; the remaining restricted registries are unresolved rather than presumed correct or wrong. All four parent classes fit the actual graph.
+
+### Exact antibacterial versus fungal, host and extract endpoints
+
+evidence: supported. Targets: CHEBI:31788.
+
+The adopted 2009 original abstract supports E. coli inhibition for compound 5. It does not assign the gallic acid S. aureus result to lonicerin. Additional moss and antibiofilm leads remain bounded by pooled values or non-growth endpoints. The Candida arthritis paper and herbal patent do not support bacterial target claims.
+
+### Optional quantitative activity and protein mechanism
+
+completeness: unknown. Targets: CHEBI:31788.
+
+No missing optional field is treated as a schema defect. Exact strain-level MICs and material identity require original methods. Docking plus alginate/biofilm effects do not establish AlgE as a direct molecular target, and antioxidant assays are not antibacterial evidence.
+
+### Actual source ownership, entire record and adopted bibliography
+
+provenance: supported. Targets: CHEBI:31788.
+
+All three adopted PMIDs were read as complete original abstracts with access boundaries. All native chemical xrefs and the patent were individually disposed. Original 13 and expanded 21 input hashes are retained; maintained ChEBI extraction and seeding are the correction owners.
+
+## Findings
+
+### F1: The asserted KNApSAcK accession does not encode the exact native sugar configuration
+
+major / open / confirmed; issue key: luteolin-neohesperidoside-knapsack-sugar-epimer.
+
+C00004283 carries an opposite rhamnose C3 configuration in both retrievable structure encodings. Its SMILES additionally leaves four native centres unspecified, and its displayed key disagrees with its actual InChI. The native exact xref therefore lacks chemical equivalence despite a matching name and formula. Native identity itself is corroborated by other graphs and primary linkage evidence.
+
+### F2: Three exact synonyms name distinct glycosides
+
+major / open / confirmed; issue key: luteolin-neohesperidoside-distinct-glycoside-exact-names.
+
+Luteolin-7-O-rhamnoside denotes a monosaccharide conjugate, whereas the native molecule has a neohesperidose disaccharide. Luteolin-7-rutinoside and Scolymoside denote the glucose O6-linked rhamnose conjugate, distinguished from the native O2 linkage by original isolation/NMR reports. Current ChEBI and KEGG propagate the mixed names but do not resolve the chemical distinction.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Resolve or suppress the incompatible KNApSAcK exact association in maintained source handling and regenerate.
+
+- Compare actual registry structures with the native graph, including rhamnose C3 and all sugar stereocentres; do not accept matching names, formula or an internally inconsistent displayed key alone.
+- Retain the coherent native structure and other verified chemical associations. Record unresolved restricted xrefs without fabricating equivalence.
+- Regenerate and rerun focused and required shared validators.
+
+### A2
+
+Correct the exact-synonym list through maintained source handling, preserving primary linkage provenance.
+
+- Remove or explicitly qualify the rhamnoside, rutinoside and scolymoside labels so they no longer assert exact identity with the neohesperidoside.
+- Retain supported lonicerin/neohesperidoside naming and the native graph; do not replace it with the rutinoside comparator.
+- Verify regenerated synonym semantics and ensure exact antibacterial evidence stays with the material actually tested.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/luteolin-7-o-neohesperidoside.yaml; Entire native record, synonyms, xrefs and history | supports | The record defines luteolin bearing 2-O-(alpha-L-rhamnopyranosyl)-beta-D-glucopyranosyl at O7. It claims C27H30O15, zero charge and ten assigned sugar stereocentres. All nine synonyms, six chemical xrefs, one patent and four seed/history events were read. No separate structured target, resistance, activity spectrum, producer, product or causal graph objects occur. |
+| owners | data/raw/chebi_antimicrobials.tsv; Exact source row 661 and readiness row 1570 | context_only | ChEBI owns the adopted identity, structures, ontology, names, xrefs and three PMID leads. All original 13 captured hashes remain unchanged; context capture expanded the verified input set to 21 before detailed assessment. The extractor and seeder own generated propagation. |
+| search | /private/tmp/am-review-session/612-context-search.txt; Ignored-inclusive exact identity and alias search | context_only | CHEBI:31788, luteolin 7-O-neohesperidoside and lonicerin searches included hidden and ignored content in curation, conf, scripts and data/raw. No exact curator or decisions override was found in that scope. Initial local hits were also retained. |
+| adapter | Native structured-source applicability assessment; Full native definition and fields before open research | context_only | No native protein, gene, regulator or pathway is named. A structured protein/pathway adapter is therefore not applicable to these native claims. The later optional AlgE lead is explicitly treated as a docking/phenotype hypothesis, not adopted as a protein target. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/31788/; Complete current CHEBI:31788 response | partial | Current ChEBI reproduces the native encodings, full key SHPPXMGVUDNKLV-KMFFXDMSSA-N, formula, charge, masses, names, parent classes, xrefs and three adopted references. This documents inherited state; propagated contradictory names do not independently establish synonym equivalence. |
+| chemical-comparison | /private/tmp/am-review-session/612-authority-map.json; Actual native, ChEBI, PubChem, KEGG and comparator graphs | partial | Native SMILES/InChI, both ChEBI encodings, both PubChem lonicerin encodings and KEGG C12630 molfile give the same full native key and reciprocal chirality-aware matches. Formula, mass, charge and source mint pass. Native sugar centres are all assigned. KNApSAcK fails reciprocal chiral equivalence, whereas the rutinoside comparator differs in constitution. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/lonicerin/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass/JSON; Additional lonicerin name lookup, CID5282152 | context_only | The current PubChem comparator agrees with the exact native neohesperidoside. It is not an asserted native PubChem xref, so no native PubChem association is inferred or criticized. |
+| kegg | https://rest.kegg.jp/get/C12630; C12630 complete text and independently parsed molfile | partial | KEGG C12630 structure matches the native graph. Its name list also mixes the native neohesperidoside with scolymoside and luteolin 7-O-rhamnoside, so chemical graph agreement is distinguished from name-list correctness. |
+| knapsack | http://www.knapsackfamily.com/knapsack_core/information.php?word=C00004283; C00004283 actual SMILES, InChI and displayed key | refutes | The linked entry names lonicerin but its InChI gives SHPPXMGVUDNKLV-UQOIPWTISA-N: native SMILES atom 38, rhamnose C3, is S instead of R. Its SMILES gives SHPPXMGVUDNKLV-IPFKXTELSA-N, retaining that opposite centre and leaving four other native centres unspecified. The separately displayed key SHPPXMGVUDNKLV-DPFBLAHTNA-N is itself inconsistent with those encodings. Name and formula agreement do not validate an exact xref. |
+| rutinoside-comparator | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/luteolin%207-O-rutinoside/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight/JSON; Additional luteolin 7-O-rutinoside structure comparator | context_only | The rutinoside has rhamnose attached through glucose O6 rather than O2 and full key MGYBYJXAXUBTQF-FOBVWLSUSA-N. It shares the formula but is a different constitutional glycoside. This is a comparator for name adjudication, not a proposed replacement for the coherent native graph. |
+| parent-25495 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/25495/; Current parent definition compared with actual graph | supports | The definition specifies alpha-L-rhamnopyranosyl-(1 to 2)-beta-D-glucopyranosyl, matching the native neohesperidoside linkage. |
+| parent-27116 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/27116/; Current parent definition compared with actual graph | supports | The aglycone retains three free hydroxy groups at 5, 3-prime and 4-prime; the fourth luteolin hydroxy is glycosylated. |
+| parent-50018 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/50018/; Current parent definition compared with actual graph | supports | The flavone has an O-linked glycosyl group. |
+| parent-63353 | https://www.ebi.ac.uk/chebi/backend/api/public/compound/63353/; Current parent definition compared with actual graph | supports | The two linked sugar residues make the molecule a disaccharide derivative. |
+| restricted-xrefs | CAS:25694-72-8; HMDB:HMDB0005799; Reaxys:1361176; MetaCyc:LUTEOLIN-7-O-NEOHESPERIDOSIDE; All remaining asserted chemical groundings disposed | unknown | CAS returned 401, HMDB XML 403 and Reaxys 403. MetaCyc routes returned a login/account gate rather than a compound structure. Current ChEBI propagates these associations, but their independent chemical contents were not verified. No account was created and no exact equivalence was inferred from propagated names alone. |
+| metacyc-gate | https://biocyc.org/compound?orgid=META&amp;id=LUTEOLIN-7-O-NEOHESPERIDOSIDE; Actual response body, account requirement | unknown | The HTTP 200 response is an account gate, not successful retrieval of the asserted compound record. |
+| patent | https://patents.google.com/patent/KR20050005633A/en; KR20050005633A relevant background, claims 3/23 and herbal-extract experiments | context_only | The patent concerns a herbal composition intended to affect growth hormone secretion. Lonicerin is named among Lonicera components. Relevant experimental material comprises herbal extracts, including pituitary-cell tests at 1 mg/mL, not a purified lonicerin antibacterial assay. This is a related document link; its machine-translated text does not establish an exact bacterial target or clinical effect. |
+| adopted2009 | PMID:19771866; Complete original indexed abstract, exact compound 5 | partial | Bioassay-guided ether and n-butanol fractions of Discocleidion rufescens yielded seven isolates identified spectroscopically and chemically. Luteolin 7-O-neohesperidoside is compound 5; compounds 1–6 showed inhibition of E. coli. Only gallic acid 6 is additionally assigned S. aureus activity. The abstract gives no strains, MIC, medium or duration. Full publisher retrieval failed certificate verification, so no detailed methods were inspected. |
+| adopted2008 | PMID:18600298; DOI:10.1007/s11418-008-0274-8; Complete original indexed abstract | context_only | Urtica laetevirens aerial parts yielded known luteolin 7-O-neohesperidoside as compound 4 alongside a new pinoresinol glycoside. This is an isolation lead, not an antibacterial assay. The publisher response was challenge HTML rather than full text. |
+| adopted2011 | PMID:21656372; DOI:10.1007/s12272-011-0520-6; Complete original indexed abstract | context_only | Lonicerin was studied in mice with Candida albicans cell wall plus complete Freund adjuvant-induced arthritis, not a live bacterial infection. Intraperitoneal doses of 1 or 2 mg were given three times on alternate days; the abstract reports approximately 54% edema reduction at the higher dose on day 10. Anticandidal activity is also mentioned without an exact MIC. These host and fungal findings do not establish a bacterial protein target. Full publisher methods remained behind challenge HTML. |
+| identity2017 | PMID:28157166; DOI:10.3390/molecules22020229; https://pmc.ncbi.nlm.nih.gov/articles/PMC6155790/?pdf=1; Exact compound 2 isolation and identification, Methods 3.6 and Figure 1 | supports | Lonicerin 2 was isolated from Lonicera japonica leaves: 30.7 mg at 98.7% HPLC purity following n-butanol extraction and chromatographic separation. Its glucose C2/C6 shifts and two anomeric signals support the reported disaccharide assignment. The actual Figure 1 labels OGlc(2-1)Rha, separately from rutin linkage 6-1. Its biological endpoint is DPPH scavenging, not antibacterial activity. Relevant original text and figure were read; raw spectra were not reprocessed. |
+| identity2017-figure | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6cd1/6155790/fb3dae6a0d35/molecules-22-00229-g001.jpg; Actual Figure 1 viewed, compound 2 legend | supports | The figure explicitly distinguishes the lonicerin glucose O2-linked rhamnose from the O6-linked rutinosyl substituent. Abbreviated sugar labels do not independently display every absolute stereobond. |
+| scolymoside2023 | PMID:37298768; DOI:10.3390/molecules28114291; https://pmc.ncbi.nlm.nih.gov/articles/PMC10254351/; Compound 1 elucidation, Methods 3.3.1 and 3.4, actual Figure 1 | refutes | The original identifies luteolin 7-rutinoside as scolymoside, with the terminal rhamnose linked to glucose C6. Spectroscopic discussion and the rutinosyl figure legend support the 1-to-6 distinction from native lonicerin. The isolated material was reported above 95% purity. Host assays and other extract effects were not transferred to the native neohesperidoside. |
+| scolymoside2023-figure | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/b8e7/10254351/5a017db94d93/molecules-28-04291-g001.jpg; Actual Figure 1 viewed, compound 1 | partial | The drawing labels the substituent Rutinosyl; the corresponding original NMR discussion, rather than the abbreviated label alone, establishes the glucose O6 linkage. |
+| scolymoside-history | PMID:10896054; DOI:10.1007/BF02976451; PMID:5559090; DOI:10.1002/cber.19711040712; Complete 2000 original abstract and 1971 title/metadata only | partial | The 2000 original abstract explicitly identifies luteolin 7-O-rutinoside as scolymoside from Artemisia montana. Its endpoint is antioxidant/hepatocyte activity. The 1971 synthesis title separately identifies the rutinoside as scolymoside; no abstract or full original was recovered. Chemical indexing discrepancies are not treated as structural proof against those explicit primary identities. |
+| antibiofilm2019 | PMID:31026553; DOI:10.1016/j.jep.2019.111909; Complete original abstract; additional optional mechanism lead | context_only | Lonicerin reduced P. aeruginosa alginate at 25 micrograms/mL and biofilm at 12.5 micrograms/mL under sub-MIC conditions without inhibiting proliferation or changing AlgE expression. AlgE was a docking-selected hypothesis; the abstract does not demonstrate purified-enzyme binding/inhibition. An A549 infection assay provides a separate host-cell endpoint. Exact strain, reagent stereopurity and full methods were not inspected, so no direct AlgE target or bactericidal effect is asserted. |
+| moss1999 | PMID:10647220; DOI:10.1016/S0031-9422(99)00286-1; Complete original abstract; additional antibacterial lead | context_only | The study lists luteolin 7-O-neohesperidoside among seven moss flavonoids and reports a pooled MIC range of 4–2048 micrograms/mL against several Gram-negative bacteria. The abstract does not assign individual values to the exact compound. No pooled value is transferred as its MIC; the attempted publisher route returned 403. |
+| access | /private/tmp/am-review-session/612-fetch2.json; /private/tmp/am-review-session/612-fetch3.json; /private/tmp/am-review-session/612-fetch4.json; /private/tmp/am-review-session/612-fetch5.json; Actual free retrieval manifests and reading depths | context_only | The adopted publisher mains were inaccessible as full text. Additional 2017 and 2023 original XML and actual Figure 1 images were recovered. The 2017 supplementary archive timed out after a partial download and was not read. Discovery metadata were used to select exact sources, not as proof that every search result was read. |
+
+## Limits And Additional Notes
+
+- CAS, HMDB and Reaxys were access restricted; MetaCyc returned an account gate. Independent exact structures for those four asserted associations remain unverified.
+- All three adopted papers were read as complete original abstracts; publisher full methods were not recovered. Exact bacterial strains, MICs, incubation and material purity were not inferred.
+- Relevant 2017 and 2023 original structure sections and actual Figure 1 images were read, but raw spectra were not independently reprocessed and the 2017 supplementary download was incomplete. Their abbreviated sugar drawings do not independently establish every stereocentre.
+- The additional 1999 antibacterial and 2019 antibiofilm leads were read at abstract depth. No pooled MIC, direct AlgE inhibition or bactericidal action was inferred. Patent review covered relevant lonicerin background, claims and extract experiments, not every unrelated table or a legal status assessment.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All original 13 and expanded 21 input hashes remain unchanged. Native records, source inventories and history were not edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T200513Z-luteolin-7-o-neohesperidoside-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Luteolin 7-O-neohesperidoside: conflicting exact synonyms and KNApSAcK stereochemistry'
+started_at: '2026-10-21T19:52:47Z'
+finished_at: '2026-10-21T20:05:13Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The complete native record and adopted ChEBI source were assessed. The native
+  neohesperidoside graph is internally coherent and agrees with current ChEBI, PubChem
+  and KEGG, but the asserted KNApSAcK accession encodes a different sugar configuration.
+  Three exact synonyms describe a monosaccharide conjugate or the distinct rutinoside.
+  Two major curation findings are recorded. Primary evidence supports bounded antibacterial
+  activity of the named neohesperidoside; host effects, pooled assay ranges and docking
+  hypotheses are kept separate.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/luteolin-7-o-neohesperidoside.yaml
+    sha256: f13a86213a4d5afb860bfe682bcf4b2e56cdc55a5f77dd4a761dcb6bf63ba671
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+targets:
+- target_id: CHEBI:31788
+  path: data/antibiotics/antibacterial/luteolin-7-o-neohesperidoside.yaml
+  label: luteolin 7-O-neohesperidoside
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 612; one exact native record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:31788
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Execution used batch062 cwd; chemistry
+    used the existing019 RDKit interpreter, with schema and strict checks in the062
+    environment.
+  target_ids:
+  - CHEBI:31788
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    612
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Execution used batch062 cwd; chemistry
+    used the existing019 RDKit interpreter, with schema and strict checks in the062
+    environment.
+  target_ids:
+  - CHEBI:31788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/luteolin-7-o-neohesperidoside.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Execution used batch062 cwd; chemistry
+    used the existing019 RDKit interpreter, with schema and strict checks in the062
+    environment.
+  target_ids:
+  - CHEBI:31788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/luteolin-7-o-neohesperidoside.yaml --out /private/tmp/am-review-session/612-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:31788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:31788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:31788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:31788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:31788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:31788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:31788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:31788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:31788
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/luteolin-7-o-neohesperidoside.yaml
+  locator: Entire native record, synonyms, xrefs and history
+  accessed_at: '2026-10-21T20:03:44Z'
+  support: supports
+  summary: The record defines luteolin bearing 2-O-(alpha-L-rhamnopyranosyl)-beta-D-glucopyranosyl
+    at O7. It claims C27H30O15, zero charge and ten assigned sugar stereocentres.
+    All nine synonyms, six chemical xrefs, one patent and four seed/history events
+    were read. No separate structured target, resistance, activity spectrum, producer,
+    product or causal graph objects occur.
+  snapshot_sha256: f13a86213a4d5afb860bfe682bcf4b2e56cdc55a5f77dd4a761dcb6bf63ba671
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Exact source row 661 and readiness row 1570
+  accessed_at: '2026-10-21T20:03:44Z'
+  support: context_only
+  summary: ChEBI owns the adopted identity, structures, ontology, names, xrefs and
+    three PMID leads. All original 13 captured hashes remain unchanged; context capture
+    expanded the verified input set to 21 before detailed assessment. The extractor
+    and seeder own generated propagation.
+  snapshot_sha256: 77b432adde4766ba94b21cdc8c2e967fd956bf6001a11948a05c9a4c975ca23d
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/612-context-search.txt
+  locator: Ignored-inclusive exact identity and alias search
+  accessed_at: '2026-10-21T20:03:44Z'
+  support: context_only
+  summary: CHEBI:31788, luteolin 7-O-neohesperidoside and lonicerin searches included
+    hidden and ignored content in curation, conf, scripts and data/raw. No exact curator
+    or decisions override was found in that scope. Initial local hits were also retained.
+  snapshot_sha256: 859514375ea1e6db1ea488a52b4ca8c8daafe20a235f491f4a773927c131e209
+  search_scope: rg --no-ignore --hidden -n -i for the exact CHEBI ID and compound
+    aliases in curation, conf, scripts and data/raw, plus preserved initial local
+    hits.
+- evidence_id: adapter
+  kind: search
+  reference: Native structured-source applicability assessment
+  locator: Full native definition and fields before open research
+  accessed_at: '2026-10-21T20:03:44Z'
+  support: context_only
+  summary: No native protein, gene, regulator or pathway is named. A structured protein/pathway
+    adapter is therefore not applicable to these native claims. The later optional
+    AlgE lead is explicitly treated as a docking/phenotype hypothesis, not adopted
+    as a protein target.
+  snapshot_sha256: f13a86213a4d5afb860bfe682bcf4b2e56cdc55a5f77dd4a761dcb6bf63ba671
+  search_scope: Complete native definition and field set; no named molecular mechanism.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/31788/
+  locator: Complete current CHEBI:31788 response
+  accessed_at: '2026-10-21T19:59:17.702584Z'
+  support: partial
+  summary: Current ChEBI reproduces the native encodings, full key SHPPXMGVUDNKLV-KMFFXDMSSA-N,
+    formula, charge, masses, names, parent classes, xrefs and three adopted references.
+    This documents inherited state; propagated contradictory names do not independently
+    establish synonym equivalence.
+  snapshot_sha256: 178d897764c6e3dd2aed046e3bfede4ac00d6d27864abde3173e2985a597abbd
+- evidence_id: chemical-comparison
+  kind: validation
+  reference: /private/tmp/am-review-session/612-authority-map.json
+  locator: Actual native, ChEBI, PubChem, KEGG and comparator graphs
+  accessed_at: '2026-10-21T20:03:44Z'
+  support: partial
+  summary: Native SMILES/InChI, both ChEBI encodings, both PubChem lonicerin encodings
+    and KEGG C12630 molfile give the same full native key and reciprocal chirality-aware
+    matches. Formula, mass, charge and source mint pass. Native sugar centres are
+    all assigned. KNApSAcK fails reciprocal chiral equivalence, whereas the rutinoside
+    comparator differs in constitution.
+  snapshot_sha256: 027307b4c727113dd2edc3651c328c898d19ec4e3daee491ed8b33b72f1db077
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/lonicerin/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass/JSON
+  locator: Additional lonicerin name lookup, CID5282152
+  accessed_at: '2026-10-21T19:59:17.702793Z'
+  support: context_only
+  summary: The current PubChem comparator agrees with the exact native neohesperidoside.
+    It is not an asserted native PubChem xref, so no native PubChem association is
+    inferred or criticized.
+  snapshot_sha256: b6a4e015cdde3882a881721b2dd23e682a31e2075ef43dd95ee279a9602327c3
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/C12630
+  locator: C12630 complete text and independently parsed molfile
+  accessed_at: '2026-10-21T19:59:17.702892Z'
+  support: partial
+  summary: KEGG C12630 structure matches the native graph. Its name list also mixes
+    the native neohesperidoside with scolymoside and luteolin 7-O-rhamnoside, so chemical
+    graph agreement is distinguished from name-list correctness.
+  snapshot_sha256: f31abfede7766cc54992b3928e39cea4044abddbbe35390419c73305fad4c803
+- evidence_id: knapsack
+  kind: authority
+  reference: http://www.knapsackfamily.com/knapsack_core/information.php?word=C00004283
+  locator: C00004283 actual SMILES, InChI and displayed key
+  accessed_at: '2026-10-21T19:59:17.703009Z'
+  support: refutes
+  summary: 'The linked entry names lonicerin but its InChI gives SHPPXMGVUDNKLV-UQOIPWTISA-N:
+    native SMILES atom 38, rhamnose C3, is S instead of R. Its SMILES gives SHPPXMGVUDNKLV-IPFKXTELSA-N,
+    retaining that opposite centre and leaving four other native centres unspecified.
+    The separately displayed key SHPPXMGVUDNKLV-DPFBLAHTNA-N is itself inconsistent
+    with those encodings. Name and formula agreement do not validate an exact xref.'
+  snapshot_sha256: cd4de2bc5dac63412436ed51c24e8279f33f956f530c9fb9088a94e6cc2a12dc
+- evidence_id: rutinoside-comparator
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/luteolin%207-O-rutinoside/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight/JSON
+  locator: Additional luteolin 7-O-rutinoside structure comparator
+  accessed_at: '2026-10-21T19:59:43.569798Z'
+  support: context_only
+  summary: The rutinoside has rhamnose attached through glucose O6 rather than O2
+    and full key MGYBYJXAXUBTQF-FOBVWLSUSA-N. It shares the formula but is a different
+    constitutional glycoside. This is a comparator for name adjudication, not a proposed
+    replacement for the coherent native graph.
+  snapshot_sha256: bfe948e92b395e902aaf24b1eb1a9aec7848bcbd18eb5be1664eb3baf5402762
+- evidence_id: parent-25495
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/25495/
+  locator: Current parent definition compared with actual graph
+  accessed_at: '2026-10-21T19:59:18.428873Z'
+  support: supports
+  summary: The definition specifies alpha-L-rhamnopyranosyl-(1 to 2)-beta-D-glucopyranosyl,
+    matching the native neohesperidoside linkage.
+  snapshot_sha256: 89b81b9649a893fef2d3bf5e3773576bf7f43f4821cfed1bff436d9581082c00
+- evidence_id: parent-27116
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/27116/
+  locator: Current parent definition compared with actual graph
+  accessed_at: '2026-10-21T19:59:18.866462Z'
+  support: supports
+  summary: The aglycone retains three free hydroxy groups at 5, 3-prime and 4-prime;
+    the fourth luteolin hydroxy is glycosylated.
+  snapshot_sha256: e34b3566fbea1fc7ed3c87caff99f30267d170e9da995125f2355e6780037d30
+- evidence_id: parent-50018
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/50018/
+  locator: Current parent definition compared with actual graph
+  accessed_at: '2026-10-21T19:59:19.091438Z'
+  support: supports
+  summary: The flavone has an O-linked glycosyl group.
+  snapshot_sha256: 888a17e9f32c8c93d6771b2f892004ee5a7ba500f0fccd48a7b9ff1dae5a9d1d
+- evidence_id: parent-63353
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/63353/
+  locator: Current parent definition compared with actual graph
+  accessed_at: '2026-10-21T19:59:19.113595Z'
+  support: supports
+  summary: The two linked sugar residues make the molecule a disaccharide derivative.
+  snapshot_sha256: 3f0e0f845d4d513c7fa2b71ae0f4f190461ff049c119eb6064dcbf174046a21e
+- evidence_id: restricted-xrefs
+  kind: authority
+  reference: CAS:25694-72-8; HMDB:HMDB0005799; Reaxys:1361176; MetaCyc:LUTEOLIN-7-O-NEOHESPERIDOSIDE
+  locator: All remaining asserted chemical groundings disposed
+  accessed_at: '2026-10-21T20:03:44Z'
+  support: unknown
+  summary: CAS returned 401, HMDB XML 403 and Reaxys 403. MetaCyc routes returned
+    a login/account gate rather than a compound structure. Current ChEBI propagates
+    these associations, but their independent chemical contents were not verified.
+    No account was created and no exact equivalence was inferred from propagated names
+    alone.
+  snapshot_sha256: c7d8ca772882d3f7452746d59e2c4baaf58affc14bcb41769981e36f9e994d8b
+- evidence_id: metacyc-gate
+  kind: authority
+  reference: https://biocyc.org/compound?orgid=META&id=LUTEOLIN-7-O-NEOHESPERIDOSIDE
+  locator: Actual response body, account requirement
+  accessed_at: '2026-10-21T19:59:18.220231Z'
+  support: unknown
+  summary: The HTTP 200 response is an account gate, not successful retrieval of the
+    asserted compound record.
+  snapshot_sha256: 7c31f7080f0d3cf9d9fbd45c49780bb65e1e210855cff5bb395c5e72d05fd43d
+- evidence_id: patent
+  kind: primary_source
+  reference: https://patents.google.com/patent/KR20050005633A/en
+  locator: KR20050005633A relevant background, claims 3/23 and herbal-extract experiments
+  accessed_at: '2026-10-21T19:59:18.226398Z'
+  support: context_only
+  summary: The patent concerns a herbal composition intended to affect growth hormone
+    secretion. Lonicerin is named among Lonicera components. Relevant experimental
+    material comprises herbal extracts, including pituitary-cell tests at 1 mg/mL,
+    not a purified lonicerin antibacterial assay. This is a related document link;
+    its machine-translated text does not establish an exact bacterial target or clinical
+    effect.
+  snapshot_sha256: ce0b1437020fe99f03750e616c64e41564606fcb8c69030919ac1f47622a9eac
+- evidence_id: adopted2009
+  kind: primary_source
+  reference: PMID:19771866
+  locator: Complete original indexed abstract, exact compound 5
+  accessed_at: '2026-10-21T19:59:18.395914Z'
+  support: partial
+  summary: Bioassay-guided ether and n-butanol fractions of Discocleidion rufescens
+    yielded seven isolates identified spectroscopically and chemically. Luteolin 7-O-neohesperidoside
+    is compound 5; compounds 1–6 showed inhibition of E. coli. Only gallic acid 6
+    is additionally assigned S. aureus activity. The abstract gives no strains, MIC,
+    medium or duration. Full publisher retrieval failed certificate verification,
+    so no detailed methods were inspected.
+  snapshot_sha256: ed36ee20b2331c996a20f80ac6707b9c84874e3b501d95b1da2f18a5b50e5480
+- evidence_id: adopted2008
+  kind: primary_source
+  reference: PMID:18600298; DOI:10.1007/s11418-008-0274-8
+  locator: Complete original indexed abstract
+  accessed_at: '2026-10-21T19:59:18.395914Z'
+  support: context_only
+  summary: Urtica laetevirens aerial parts yielded known luteolin 7-O-neohesperidoside
+    as compound 4 alongside a new pinoresinol glycoside. This is an isolation lead,
+    not an antibacterial assay. The publisher response was challenge HTML rather than
+    full text.
+  snapshot_sha256: ed36ee20b2331c996a20f80ac6707b9c84874e3b501d95b1da2f18a5b50e5480
+- evidence_id: adopted2011
+  kind: primary_source
+  reference: PMID:21656372; DOI:10.1007/s12272-011-0520-6
+  locator: Complete original indexed abstract
+  accessed_at: '2026-10-21T19:59:18.395914Z'
+  support: context_only
+  summary: Lonicerin was studied in mice with Candida albicans cell wall plus complete
+    Freund adjuvant-induced arthritis, not a live bacterial infection. Intraperitoneal
+    doses of 1 or 2 mg were given three times on alternate days; the abstract reports
+    approximately 54% edema reduction at the higher dose on day 10. Anticandidal activity
+    is also mentioned without an exact MIC. These host and fungal findings do not
+    establish a bacterial protein target. Full publisher methods remained behind challenge
+    HTML.
+  snapshot_sha256: ed36ee20b2331c996a20f80ac6707b9c84874e3b501d95b1da2f18a5b50e5480
+- evidence_id: identity2017
+  kind: primary_source
+  reference: PMID:28157166; DOI:10.3390/molecules22020229; https://pmc.ncbi.nlm.nih.gov/articles/PMC6155790/?pdf=1
+  locator: Exact compound 2 isolation and identification, Methods 3.6 and Figure 1
+  accessed_at: '2026-10-21T19:59:43.473250Z'
+  support: supports
+  summary: 'Lonicerin 2 was isolated from Lonicera japonica leaves: 30.7 mg at 98.7%
+    HPLC purity following n-butanol extraction and chromatographic separation. Its
+    glucose C2/C6 shifts and two anomeric signals support the reported disaccharide
+    assignment. The actual Figure 1 labels OGlc(2-1)Rha, separately from rutin linkage
+    6-1. Its biological endpoint is DPPH scavenging, not antibacterial activity. Relevant
+    original text and figure were read; raw spectra were not reprocessed.'
+  snapshot_sha256: 75b4555214efb995c1f5022e75e28a93a6e4d78e76436547ccbd8ab8b472bf53
+- evidence_id: identity2017-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6cd1/6155790/fb3dae6a0d35/molecules-22-00229-g001.jpg
+  locator: Actual Figure 1 viewed, compound 2 legend
+  accessed_at: '2026-10-21T20:01:06.951621Z'
+  support: supports
+  summary: The figure explicitly distinguishes the lonicerin glucose O2-linked rhamnose
+    from the O6-linked rutinosyl substituent. Abbreviated sugar labels do not independently
+    display every absolute stereobond.
+  snapshot_sha256: 1e70afea2bc2dfe05c3e17aa76f1133a378bfe323945f2fdc0fbc23ea655866a
+- evidence_id: scolymoside2023
+  kind: primary_source
+  reference: PMID:37298768; DOI:10.3390/molecules28114291; https://pmc.ncbi.nlm.nih.gov/articles/PMC10254351/
+  locator: Compound 1 elucidation, Methods 3.3.1 and 3.4, actual Figure 1
+  accessed_at: '2026-10-21T20:00:05.540802Z'
+  support: refutes
+  summary: The original identifies luteolin 7-rutinoside as scolymoside, with the
+    terminal rhamnose linked to glucose C6. Spectroscopic discussion and the rutinosyl
+    figure legend support the 1-to-6 distinction from native lonicerin. The isolated
+    material was reported above 95% purity. Host assays and other extract effects
+    were not transferred to the native neohesperidoside.
+  snapshot_sha256: c49e542e9a730727a3b904ff76d4d426e95c906a079cbb16cfaa4299c4f805d9
+- evidence_id: scolymoside2023-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/b8e7/10254351/5a017db94d93/molecules-28-04291-g001.jpg
+  locator: Actual Figure 1 viewed, compound 1
+  accessed_at: '2026-10-21T20:01:06.951843Z'
+  support: partial
+  summary: The drawing labels the substituent Rutinosyl; the corresponding original
+    NMR discussion, rather than the abbreviated label alone, establishes the glucose
+    O6 linkage.
+  snapshot_sha256: 7e09746814bfdd0eb0985a2d26ee1f2609e1fa83300d0652002d9b83091b9ee9
+- evidence_id: scolymoside-history
+  kind: primary_source
+  reference: PMID:10896054; DOI:10.1007/BF02976451; PMID:5559090; DOI:10.1002/cber.19711040712
+  locator: Complete 2000 original abstract and 1971 title/metadata only
+  accessed_at: '2026-10-21T20:00:05.540883Z'
+  support: partial
+  summary: The 2000 original abstract explicitly identifies luteolin 7-O-rutinoside
+    as scolymoside from Artemisia montana. Its endpoint is antioxidant/hepatocyte
+    activity. The 1971 synthesis title separately identifies the rutinoside as scolymoside;
+    no abstract or full original was recovered. Chemical indexing discrepancies are
+    not treated as structural proof against those explicit primary identities.
+  snapshot_sha256: 878ba3ea549ce2e0dd20b28353587ccaeacefebdc043ff7b7fb4923df4bea819
+- evidence_id: antibiofilm2019
+  kind: primary_source
+  reference: PMID:31026553; DOI:10.1016/j.jep.2019.111909
+  locator: Complete original abstract; additional optional mechanism lead
+  accessed_at: '2026-10-21T19:59:43.475666Z'
+  support: context_only
+  summary: Lonicerin reduced P. aeruginosa alginate at 25 micrograms/mL and biofilm
+    at 12.5 micrograms/mL under sub-MIC conditions without inhibiting proliferation
+    or changing AlgE expression. AlgE was a docking-selected hypothesis; the abstract
+    does not demonstrate purified-enzyme binding/inhibition. An A549 infection assay
+    provides a separate host-cell endpoint. Exact strain, reagent stereopurity and
+    full methods were not inspected, so no direct AlgE target or bactericidal effect
+    is asserted.
+  snapshot_sha256: ba0bdb728e77417b343a5a92c5dea6496d34ae295389048d45ce39b9068b0587
+- evidence_id: moss1999
+  kind: primary_source
+  reference: PMID:10647220; DOI:10.1016/S0031-9422(99)00286-1
+  locator: Complete original abstract; additional antibacterial lead
+  accessed_at: '2026-10-21T19:59:18.423394Z'
+  support: context_only
+  summary: The study lists luteolin 7-O-neohesperidoside among seven moss flavonoids
+    and reports a pooled MIC range of 4–2048 micrograms/mL against several Gram-negative
+    bacteria. The abstract does not assign individual values to the exact compound.
+    No pooled value is transferred as its MIC; the attempted publisher route returned
+    403.
+  snapshot_sha256: 187deafdaa221efb5dc435dfb916b4f2c897235e1bf27df78ddce0f32378e5a4
+- evidence_id: access
+  kind: validation
+  reference: /private/tmp/am-review-session/612-fetch2.json; /private/tmp/am-review-session/612-fetch3.json;
+    /private/tmp/am-review-session/612-fetch4.json; /private/tmp/am-review-session/612-fetch5.json
+  locator: Actual free retrieval manifests and reading depths
+  accessed_at: '2026-10-21T20:03:44Z'
+  support: context_only
+  summary: The adopted publisher mains were inaccessible as full text. Additional
+    2017 and 2023 original XML and actual Figure 1 images were recovered. The 2017
+    supplementary archive timed out after a partial download and was not read. Discovery
+    metadata were used to select exact sources, not as proof that every search result
+    was read.
+  snapshot_sha256: d755e6eb207cde861c3dfef901b1e79dd18e1a88ce1bb275a16be7ab0249ee10
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Native exact neohesperidoside and conflicting exact names
+  outcome: concern
+  summary: The native graph, systematic names and definition consistently specify
+    the alpha-L-rhamnose-(1-to-2)-beta-D-glucose conjugate. The exact rhamnoside name
+    omits a sugar, while rutinoside and scolymoside identify a distinct 1-to-6 conjugate.
+    Primary isolation/structure evidence supports retaining the native neohesperidoside
+    identity while correcting those names.
+  target_ids:
+  - CHEBI:31788
+  evidence_ids:
+  - native
+  - chemical-comparison
+  - identity2017
+  - identity2017-figure
+  - scolymoside2023
+  - scolymoside-history
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical xrefs and parent terms
+  outcome: concern
+  summary: Current ChEBI, additional PubChem and asserted KEGG graphs match. KNApSAcK
+    has a confirmed opposite sugar centre and inconsistent encodings; the remaining
+    restricted registries are unresolved rather than presumed correct or wrong. All
+    four parent classes fit the actual graph.
+  target_ids:
+  - CHEBI:31788
+  evidence_ids:
+  - chebi
+  - chemical-comparison
+  - kegg
+  - knapsack
+  - restricted-xrefs
+  - metacyc-gate
+  - parent-25495
+  - parent-27116
+  - parent-50018
+  - parent-63353
+- assessment_id: activity
+  area: evidence
+  topic: Exact antibacterial versus fungal, host and extract endpoints
+  outcome: supported
+  summary: The adopted 2009 original abstract supports E. coli inhibition for compound
+    5. It does not assign the gallic acid S. aureus result to lonicerin. Additional
+    moss and antibiofilm leads remain bounded by pooled values or non-growth endpoints.
+    The Candida arthritis paper and herbal patent do not support bacterial target
+    claims.
+  target_ids:
+  - CHEBI:31788
+  evidence_ids:
+  - adopted2009
+  - adopted2011
+  - moss1999
+  - antibiofilm2019
+  - patent
+- assessment_id: completeness
+  area: completeness
+  topic: Optional quantitative activity and protein mechanism
+  outcome: unknown
+  summary: No missing optional field is treated as a schema defect. Exact strain-level
+    MICs and material identity require original methods. Docking plus alginate/biofilm
+    effects do not establish AlgE as a direct molecular target, and antioxidant assays
+    are not antibacterial evidence.
+  target_ids:
+  - CHEBI:31788
+  evidence_ids:
+  - adapter
+  - adopted2009
+  - antibiofilm2019
+  - moss1999
+  - identity2017
+  - access
+- assessment_id: provenance
+  area: provenance
+  topic: Actual source ownership, entire record and adopted bibliography
+  outcome: supported
+  summary: All three adopted PMIDs were read as complete original abstracts with access
+    boundaries. All native chemical xrefs and the patent were individually disposed.
+    Original 13 and expanded 21 input hashes are retained; maintained ChEBI extraction
+    and seeding are the correction owners.
+  target_ids:
+  - CHEBI:31788
+  evidence_ids:
+  - native
+  - owners
+  - search
+  - chebi
+  - adopted2009
+  - adopted2008
+  - adopted2011
+  - patent
+findings:
+- finding_id: F1
+  issue_key: luteolin-neohesperidoside-knapsack-sugar-epimer
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The asserted KNApSAcK accession does not encode the exact native sugar configuration
+  description: C00004283 carries an opposite rhamnose C3 configuration in both retrievable
+    structure encodings. Its SMILES additionally leaves four native centres unspecified,
+    and its displayed key disagrees with its actual InChI. The native exact xref therefore
+    lacks chemical equivalence despite a matching name and formula. Native identity
+    itself is corroborated by other graphs and primary linkage evidence.
+  target_ids:
+  - CHEBI:31788
+  field_paths:
+  - xrefs[3]
+  evidence_ids:
+  - native
+  - knapsack
+  - chemical-comparison
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: 'review-yaml-record: exact chemical grounding'
+  normalization_reason: A confirmed incompatible chemical xref is major; the coherent
+    native molecule is not relabeled a wrong-identity blocker.
+- finding_id: F2
+  issue_key: luteolin-neohesperidoside-distinct-glycoside-exact-names
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Three exact synonyms name distinct glycosides
+  description: Luteolin-7-O-rhamnoside denotes a monosaccharide conjugate, whereas
+    the native molecule has a neohesperidose disaccharide. Luteolin-7-rutinoside and
+    Scolymoside denote the glucose O6-linked rhamnose conjugate, distinguished from
+    the native O2 linkage by original isolation/NMR reports. Current ChEBI and KEGG
+    propagate the mixed names but do not resolve the chemical distinction.
+  target_ids:
+  - CHEBI:31788
+  field_paths:
+  - synonyms[4]
+  - synonyms[5]
+  - synonyms[7]
+  evidence_ids:
+  - native
+  - chebi
+  - kegg
+  - identity2017
+  - identity2017-figure
+  - scolymoside2023
+  - scolymoside-history
+  - rutinoside-comparator
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: 'review-yaml-record: exact identity synonym scope'
+  normalization_reason: Exact names of other constitutional glycosides create a substantive
+    identity ambiguity. The primary supported native graph remains unchanged; no blocker
+    is claimed.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:31788
+  description: Resolve or suppress the incompatible KNApSAcK exact association in
+    maintained source handling and regenerate.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  acceptance_checks:
+  - Compare actual registry structures with the native graph, including rhamnose C3
+    and all sugar stereocentres; do not accept matching names, formula or an internally
+    inconsistent displayed key alone.
+  - Retain the coherent native structure and other verified chemical associations.
+    Record unresolved restricted xrefs without fabricating equivalence.
+  - Regenerate and rerun focused and required shared validators.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:31788
+  description: Correct the exact-synonym list through maintained source handling,
+    preserving primary linkage provenance.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  acceptance_checks:
+  - Remove or explicitly qualify the rhamnoside, rutinoside and scolymoside labels
+    so they no longer assert exact identity with the neohesperidoside.
+  - Retain supported lonicerin/neohesperidoside naming and the native graph; do not
+    replace it with the rutinoside comparator.
+  - Verify regenerated synonym semantics and ensure exact antibacterial evidence stays
+    with the material actually tested.
+limitations:
+- CAS, HMDB and Reaxys were access restricted; MetaCyc returned an account gate. Independent
+  exact structures for those four asserted associations remain unverified.
+- All three adopted papers were read as complete original abstracts; publisher full
+  methods were not recovered. Exact bacterial strains, MICs, incubation and material
+  purity were not inferred.
+- Relevant 2017 and 2023 original structure sections and actual Figure 1 images were
+  read, but raw spectra were not independently reprocessed and the 2017 supplementary
+  download was incomplete. Their abbreviated sugar drawings do not independently establish
+  every stereocentre.
+- The additional 1999 antibacterial and 2019 antibiofilm leads were read at abstract
+  depth. No pooled MIC, direct AlgE inhibition or bactericidal action was inferred.
+  Patent review covered relevant lonicerin background, claims and extract experiments,
+  not every unrelated table or a legal status assessment.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All original 13 and expanded 21 input hashes remain unchanged. Native records, source
+  inventories and history were not edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
