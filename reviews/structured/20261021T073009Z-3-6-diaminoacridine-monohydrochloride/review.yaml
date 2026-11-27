@@ -1,0 +1,706 @@
+schema_version: 1.0.0
+review_id: 20261021T073009Z-3-6-diaminoacridine-monohydrochloride
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Proflavine monohydrochloride: exact identity and qualified DNA-interaction
+  evidence'
+started_at: '2026-10-21T07:26:31Z'
+finished_at: '2026-10-21T07:30:09Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not create the seed; whole record, official identity
+    and primary experimental text were independently inspected. Agent review is not
+    human scientific sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Exact monohydrochloride identity, source ownership and focused gates are
+  supported. One minor follow-up concerns an inspected hydrochloride/synthetic-DNA
+  spectroscopy paper, with bacterial potency and lethal mechanism unresolved. The
+  adopted multi-form review and a conflicting sensor-paper reagent remain bounded
+  context.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/antibiotics/antibacterial/3-6-diaminoacridine-monohydrochloride.yaml
+    sha256: d280203f929f4279fb70befcfa64ebe9358255106d3ba33623359d1fb828ab4b
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:74718
+  path: data/antibiotics/antibacterial/3-6-diaminoacridine-monohydrochloride.yaml
+  label: 3,6-diaminoacridine monohydrochloride
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Complete exact-record identity, provenance, claim-scope and bounded
+    scientific review.
+  selection: Queue index 031; exactly CHEBI:74718 in isolated batch004.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:74718
+  exclusions:
+  - target: Other proflavine salts, hydrates, methylated acridinium compounds and
+      acriflavine mixtures
+    reason: Boundary context only; separate exact-form reviews are required.
+checks:
+- check_id: schema
+  name: Focused schema validation
+  status: passed
+  required: true
+  summary: Actual focused execution passed with zero errors.
+  target_ids:
+  - CHEBI:74718
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/3-6-diaminoacridine-monohydrochloride.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  summary: Actual focused execution passed with zero errors.
+  target_ids:
+  - CHEBI:74718
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/3-6-diaminoacridine-monohydrochloride.yaml --out
+    /private/tmp/am-review-session/031-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: identity
+  name: Exact hydrochloride composition and structure
+  status: passed
+  required: true
+  summary: Official identity and chemistry agree on one HCl equivalent.
+  target_ids:
+  - CHEBI:74718
+  evidence_ids:
+  - chebi
+  - pubchem
+  - chemistry
+- check_id: registry
+  name: Direct registry detail inspection
+  status: unavailable
+  required: false
+  summary: Direct CAS and Reaxys detail unavailable; source assertions and independent
+    IARC CAS identity were inspected.
+  target_ids:
+  - CHEBI:74718
+  evidence_ids:
+  - registry-access
+  - iarc
+- check_id: structured-adapter
+  name: Structured expression-source applicability
+  status: not_applicable
+  required: false
+  summary: The native target asserts no gene, protein, regulator, pathway or dataset.
+    The selected exact-hydrochloride experiment uses synthetic DNA and spectroscopy;
+    candidate yeast genetic work was not adopted as target-specific expression evidence.
+  target_ids:
+  - CHEBI:74718
+  evidence_ids:
+  - record
+  - dynamics
+  - yeast-lead
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:74718
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:74718
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:74718
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:74718
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:74718
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:74718
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:74718
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:74718
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:74718
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/3-6-diaminoacridine-monohydrochloride.yaml
+  locator: Every field of the native YAML
+  accessed_at: '2026-10-21T07:29:41Z'
+  support: supports
+  summary: The ChEBI-only record is ANTIBACTERIAL, SEEDED and EXACT. The definition
+    specifies one HCl equivalent. Eight synonyms, parent, role, structure, two xrefs,
+    source concept and three seed/reseed events were inspected. No mechanism, target,
+    activity_spectrum, resistance, producer, clinical, dataset or causal graph annotations
+    are asserted.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: CHEBI:74718 row 1896; PATHS.tsv row 2155; MANIFEST, source configuration,
+    extractor and seeder
+  accessed_at: '2026-10-21T07:29:41Z'
+  support: supports
+  summary: Adopted identity, formula, structure, xrefs, source version 2026-08-30
+    and minted identifier antibioticmech:chebi-df3c334d4a match the target. The raw
+    citation is PMID:7009393. Parent CHEBI:36807 and antibacterial role CHEBI:33282
+    are reproduced. The source configuration deliberately excludes generic intercalator
+    CHEBI:24853 from automatic mechanism mapping.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:74718
+  locator: Official visible entry; scratch 031-chebi.html and parsed text
+  accessed_at: '2026-10-21T07:26:57Z'
+  support: supports
+  summary: The exact monohydrochloride entry agrees with the definition, eight names,
+    CAS 952-23-8, Reaxys 4023620, complete structure, key PBBGTVBGXBUVLT-UHFFFAOYSA-N,
+    formula C13H11N3.HCl, net charge 0 and both masses. The parent and antibacterial
+    role are current authority assertions. It also has intercalator, antiseptic and
+    carcinogenic roles; these are not primary experiments. A containing acriflavine
+    mixture is separately identified.
+  snapshot_sha256: 9ef379f60afb2f6bb2f0eb7f8a9a5bd44e8e23f9056d40fca207ecc3c2395640
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/197873
+  locator: PUG-View descriptors and CAS section; scratch 031-pubchem197873.json
+  accessed_at: '2026-10-21T07:27:49Z'
+  support: supports
+  summary: The entry is explicitly hydrochloride (1:1), with matching InChI, key,
+    neutral-base plus HCl SMILES and summed formula C13H12ClN3. CAS 952-23-8 occurs
+    among contributor assertions. Other contributed registry numbers were not added
+    to the record or assumed equivalent merely because they occur on this page.
+  snapshot_sha256: 1e8a1fb573de4729a2fbee64d109ae94bc3b4f34b51797c4c3647d7e3a1411cc
+- evidence_id: pubchem-protonation
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/13715
+  locator: PUG-View structure descriptors; scratch 031-pubchem13715.json
+  accessed_at: '2026-10-21T07:27:49Z'
+  support: context_only
+  summary: The same InChIKey search also returns CID 13715, represented as a protonated
+    amino group plus chloride. The complete standard InChI/key and total formula match.
+    This illustrates proton-normalized representations, not evidence that the native
+    two-component neutral-base/HCl encoding is a wrong salt. Neither CID is a native
+    cross-reference.
+  snapshot_sha256: b99199086d263ab76287bbcac6caa5eb5470acedf8d23634908e7fbb709d16fe
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit independent structure calculation
+  locator: Both native encodings parsed; scratch 031-chemistry.json
+  accessed_at: '2026-10-21T07:27:33Z'
+  support: supports
+  summary: SMILES and InChI reproduce the same key. The calculation gives C13H12ClN3,
+    net charge 0, two fragments, average mass 245.713 and exact mass 245.071975064.
+    The component formula C13H11N3.HCl is equivalent to that summed formula; no wrong-charge
+    or extra-HCl defect is supported.
+  snapshot_sha256: 024a3e8950775e5cfe475c77f37ad63dc348de3164a28615dc6d6b9559f30922
+- evidence_id: registry-access
+  kind: authority
+  reference: https://commonchemistry.cas.org/detail?cas_rn=952-23-8
+  locator: Direct CAS detail page and Reaxys 4023620 URL attempts
+  accessed_at: '2026-10-21T07:29:41Z'
+  support: partial
+  summary: The CAS HTML shell failed to load chemical detail, and the Reaxys public
+    URL was inaccessible to the web tool. Direct registry substance content was not
+    inspected. CAS is corroborated independently in the official historical IARC identity
+    section; Reaxys remains an inspected ChEBI assertion.
+- evidence_id: adopted-metadata
+  kind: database
+  reference: PMID:7009393
+  locator: Europe PMC core result; scratch 031-epmc.json
+  accessed_at: '2026-10-21T07:27:00Z'
+  support: supports
+  summary: The adopted PMID resolves to the 1980 IARC monograph on proflavine, dihydrochloride,
+    hemisulphate and monohydrochloride, volume 24 pp 195–209. It is indexed as a Review
+    and has no abstract in this response. It is not a primary exact-salt antibacterial
+    experiment.
+  snapshot_sha256: 7a71c1681750e84c6c79bdc52cbfb2db99f1d11fff4c204768278d06482e56d4
+- evidence_id: iarc
+  kind: authority
+  reference: https://inchem.org/documents/iarc/vol24/proflavin.html
+  locator: Official historical Summary and Evaluation; identity list and sections
+    5.1–5.3; scratch 031-iarc.html
+  accessed_at: '2026-10-21T07:27:00Z'
+  support: context_only
+  summary: The summary separately identifies monohydrochloride CAS 952-23-8, dihydrochloride,
+    hemisulphate and free base. The oral animal study specifically used monohydrochloride
+    hemihydrate. Its cross-form mutagenicity and historical use statements do not
+    establish an antibacterial target or exact anhydrous-salt potency; no current
+    carcinogenicity classification is asserted here.
+  snapshot_sha256: a872b773c77a326cb89311ecd1b1de9389530046eb463cf8cff380726f2d66cf
+- evidence_id: dynamics
+  kind: primary_source
+  reference: PMID:36500248
+  locator: DOI 10.3390/molecules27238157; https://pmc.ncbi.nlm.nih.gov/articles/PMC9738913/
+    ; full primary XML, Methods and Results/Figures 1–4; scratch 031-dynamics.xml
+  accessed_at: '2026-10-21T07:27:28Z'
+  support: supports
+  summary: Methods name Sigma-Aldrich proflavine hydrochloride, used as received,
+    and synthetic d(GC)9 duplex in phosphate buffer pH 7.4. Spectral red-shift and
+    fluorescence changes support DNA interaction in that cell-free system, while time-resolved
+    experiments study excited-state relaxation. No catalog/CAS, bacterial strain,
+    MIC or direct protein-target assay is given. The preparation is explicitly the
+    hydrochloride; any annotation must preserve its stated identity and solution context
+    rather than claim chemically analyzed purity or demonstrated bacterial killing.
+  snapshot_sha256: b42086a6ab6025f0cdfdd7e3f363cdcbc8f55a5b19e8429209cfa0ff9293d3d0
+- evidence_id: sensor-conflict
+  kind: primary_source
+  reference: PMID:32397677
+  locator: DOI 10.3390/nano10050924; https://pmc.ncbi.nlm.nih.gov/articles/PMC7279264/
+    ; section 2.1 Reagents, abstract and preparation methods; scratch 031-sensor.xml
+  accessed_at: '2026-10-21T07:27:46Z'
+  support: context_only
+  summary: The Methods call the purchased reagent proflavine hydrochloride but parenthetically
+    name 3,6-diamino-10-methylacridinium chloride, a different methylated compound.
+    This source-internal identity conflict is unresolved. Its copolymer electrode
+    and doxorubicin-detection experiments are not adopted as exact monohydrochloride
+    binding or antibacterial evidence. This is a limitation of a candidate source,
+    not a defect in the native record.
+  snapshot_sha256: 97f5798b9755249e66b0aeec067a77daa8e7d1d0faecccac1d3c343a11841c4a
+- evidence_id: yeast-lead
+  kind: primary_source
+  reference: DOI:10.1093/mutage/gep012
+  locator: https://academic.oup.com/mutage/article/24/4/317/1082135 ; publisher primary
+    abstract
+  accessed_at: '2026-10-21T07:29:41Z'
+  support: context_only
+  summary: The inspected abstract describes acridine combinations with bleomycin in
+    Saccharomyces cerevisiae D7, measuring recombination and mutation endpoints. Full
+    Methods and proflavine-specific results were unavailable through attempted free
+    routes. A search snippet naming CAS 952-23-8 was not treated as inspected reagent
+    evidence; no antibacterial potency or direct target is extracted.
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: Ignored-inclusive local search and bounded free primary-source discovery
+  accessed_at: '2026-10-21T07:29:41Z'
+  support: context_only
+  summary: The raw row and PATHS agree; focused curation, conf, reviews and historical-report
+    scopes yielded only the readiness-queue lead and no target-specific correction.
+    Public searches located exact hydrochloride spectroscopy and cross-form review
+    material. Bounded research did not establish an exact anhydrous-salt antibacterial
+    MIC or direct lethal pathway.
+  search_scope: prepare.py 31 used rg --no-ignore --hidden across batch004 excluding
+    .git/.venv. Follow-up exact CHEBI:74718, key and minted-ID search covered raw,
+    PATHS, curation, conf and reviews; 74718, 952-23-8 and monohydrochloride searches
+    covered curation, reviews and historical reports excluding queue-named and JSON
+    files. Hidden and ignored files were included. Free queries combined monohydrochloride,
+    full name, CAS, antibacterial, DNA, Materials and proflavine hydrochloride; primary
+    source text was retrieved through Europe PMC and publisher pages.
+- evidence_id: rubric
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: 'Native checklist: identity, evidence, mechanism, targets, activity, resistance,
+    producer, clinical and causal graph scope'
+  accessed_at: '2026-10-21T07:29:41Z'
+  support: supports
+  summary: Optional blanks alone do not establish defects. A concrete primary biochemical
+    experiment can support a bounded note or explicit applicability disposition; binding
+    or photophysical observations alone do not establish an antimicrobial mode, bacterial
+    DNA synthesis inhibition or a specific protein target.
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual isolated batch004 focused executions; scratch 031-validation.tsv
+  accessed_at: '2026-10-21T07:26:47Z'
+  support: supports
+  summary: Both commands exited 0. LinkML found no issues and strict scanned one target
+    with zero ERROR rows.
+  snapshot_sha256: b184ed5450b968070bb6c75648407e388f41a1eaf7017890723cf560999fc3f7
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact one-equivalent hydrochloride
+  outcome: supported
+  summary: All native identity and chemistry fields agree with the official source.
+    Component and summed formulas, net charge and standard structure keys are mutually
+    consistent. The monohydrochloride is distinct from the dihydrochloride, methylated
+    salts and mixtures.
+  target_ids:
+  - CHEBI:74718
+  evidence_ids:
+  - record
+  - chebi
+  - pubchem
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Parent, filing class and cross-references
+  outcome: supported
+  summary: The hydrochloride parent and antibacterial role match current ChEBI. CAS
+    is independently supported in the IARC identity list. Reaxys remains source-asserted
+    because its public detail was unavailable. Deliberately unmapped intercalator
+    role is not a seeder error.
+  target_ids:
+  - CHEBI:74718
+  evidence_ids:
+  - owner
+  - chebi
+  - iarc
+  - registry-access
+- assessment_id: adopted-source
+  area: evidence
+  topic: Adopted review scope
+  outcome: supported
+  summary: The source PMID is resolvable, and the native record does not mislabel
+    it as a primary mechanism claim. The historical review covers several forms, including
+    a hydrated preparation, whose endpoints must remain separate.
+  target_ids:
+  - CHEBI:74718
+  evidence_ids:
+  - record
+  - adopted-metadata
+  - iarc
+- assessment_id: mechanism
+  area: completeness
+  topic: Qualified primary DNA-interaction context
+  outcome: concern
+  summary: The 2022 reagent-defined hydrochloride experiment supplies a concrete annotation
+    opportunity. Preserve synthetic-DNA and buffer conditions, spectroscopic inference
+    and the absence of bacterial killing measurements. A narrow note or explicit curator
+    disposition is justified; a specific antimicrobial mechanism enum is not forced.
+  target_ids:
+  - CHEBI:74718
+  evidence_ids:
+  - record
+  - dynamics
+  - rubric
+- assessment_id: targets
+  area: evidence
+  topic: Direct antibacterial molecular target
+  outcome: unknown
+  summary: No native target is asserted. Cell-free DNA interaction is experimentally
+    supported in the stated preparation, but no bacterial protein target or complete
+    lethal causal pathway is established. The sensor-paper identity conflict precludes
+    its use to fill this gap.
+  target_ids:
+  - CHEBI:74718
+  evidence_ids:
+  - record
+  - dynamics
+  - sensor-conflict
+  - rubric
+- assessment_id: activity
+  area: evidence
+  topic: Quantitative antibacterial activity
+  outcome: unknown
+  summary: No exact monohydrochloride bacterial susceptibility observation was extracted
+    from inspected primary material. Photophysical and yeast mutagenicity endpoints
+    are not MIC measurements; this does not demonstrate inactivity.
+  target_ids:
+  - CHEBI:74718
+  evidence_ids:
+  - record
+  - dynamics
+  - yeast-lead
+  - search
+- assessment_id: other
+  area: scope
+  topic: Producer, resistance, clinical, datasets and causal graphs
+  outcome: not_applicable
+  summary: No native assertion in these categories needs correction. The reviewed
+    evidence does not establish a biosynthetic producer, resistance determinant, current
+    approval, transcriptomic dataset or organism-specific causal edge.
+  target_ids:
+  - CHEBI:74718
+  evidence_ids:
+  - record
+  - iarc
+  - dynamics
+  - rubric
+- assessment_id: provenance
+  area: provenance
+  topic: Generated field ownership and history
+  outcome: supported
+  summary: Source identity, version and all seed/reseed events are consistent. New
+    scientific annotations are curator-owned and need their own evidence/history;
+    native SEEDED is unchanged.
+  target_ids:
+  - CHEBI:74718
+  evidence_ids:
+  - record
+  - owner
+- assessment_id: schema
+  area: schema
+  topic: Focused gates
+  outcome: supported
+  summary: Both focused validators pass.
+  target_ids:
+  - CHEBI:74718
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-74718-qualified-dna-interaction-context
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualified primary hydrochloride spectroscopy merits a curator disposition
+  description: An inspected primary paper explicitly uses proflavine hydrochloride
+    and measures synthetic-DNA interaction. The native seed makes no false scientific
+    claim, but a bounded note or explicit applicability disposition would preserve
+    this specific evidence before scientific sign-off. The requested follow-up concerns
+    this concrete source, not a blanket obligation to fill optional fields.
+  target_ids:
+  - CHEBI:74718
+  field_paths:
+  - mode_of_action_notes
+  - molecular_targets
+  evidence_ids:
+  - record
+  - dynamics
+  - rubric
+  rule_id: native-review-checklist:Mode of action and Molecular targets
+  native_severity: minor evidence-specific readiness gap
+  normalization_reason: Directly inspected material supports a non-blocking biochemical-context
+    follow-up, without requiring an unsupported bacterial mechanism or a protein target.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/3-6-diaminoacridine-monohydrochloride.yaml
+    role: Curator-owned scientific annotations through the validated writer and curation
+      history
+actions:
+- action_id: A1
+  description: Assess the 2022 hydrochloride paper for a qualified DNA-interaction
+    note or explicit applicability disposition. Preserve the reagent as reported,
+    solution conditions and spectroscopic endpoint; assess any molecular-target representation
+    against that limited assay scope.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:74718
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/3-6-diaminoacridine-monohydrochloride.yaml
+    role: Curator-owned scientific annotations through the validated writer and curation
+      history
+  acceptance_checks:
+  - Cite PMID:36500248 at the narrowest supported object and retain the synthetic
+    d(GC)9 duplex, PBS pH 7.4 and spectroscopy context.
+  - State that the commercial hydrochloride was used as received, with no catalog/CAS
+    or analytical purity given; do not imply independently verified reagent stoichiometry.
+  - Do not infer a bacterial MIC, direct protein target, bacterial synthesis-inhibition
+    enum or complete lethal causal chain from photophysical/DNA-interaction data alone.
+  - Do not transfer the internally conflicting sensor reagent, dihydrochloride, hemihydrate,
+    hemisulphate or acriflavine-mixture observations without explicit chemical and
+    experimental mapping.
+  - Use native validated writer, provenance and required gates for any future curation;
+    leave SEEDED until all native sign-off criteria pass.
+limitations:
+- Direct registry detail was unavailable. CAS 952-23-8 is independently corroborated
+  by official IARC identity; Reaxys 4023620 remains an inspected ChEBI assertion.
+- The 2022 paper explicitly names the hydrochloride but supplies no catalog/CAS or
+  analytical reagent characterization. Its full text supports spectroscopy in a synthetic-DNA
+  system, not organism-level antibacterial mechanism or potency.
+- The adopted IARC source was inspected as its official historical summary and publication
+  metadata, not the full volume. The 2009 yeast primary abstract was inspected, but
+  full Methods and compound-specific results were unavailable.
+- The sensor paper contains conflicting proflavine and methylacridinium reagent names
+  and was excluded from exact-form evidence. Bounded searches do not prove absence
+  of other exact-compound studies.
+- No paid research, native edit or saved review bundle occurred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Initial capture preceded judgment; all original input hashes and the Git base are
+  retained in the expanded 20-input provenance.
+- Absence searches included ignored and hidden files within explicit scopes.
+- Native SEEDED status remains unchanged; the finding is source-specific rather than
+  an optional-field checklist failure.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:74718
+- https://pubchem.ncbi.nlm.nih.gov/compound/197873
+- https://inchem.org/documents/iarc/vol24/proflavin.html
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC9738913/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC7279264/
+tags:
+- antibacterial
+- proflavine
+- monohydrochloride
+- seeded
+- biochemical-context
