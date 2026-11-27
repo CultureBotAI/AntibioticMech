@@ -1,0 +1,673 @@
+# Review of gentamicin X
+
+- Review: 20261021T173313Z-gentamicin-x-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T17:15:14Z
+- Finished UTC: 2026-10-21T17:33:13Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The exact neutral gentamicin X2 structure, X/X2 naming, aminoglycoside class and biosynthetic-precursor definition are supported. Eleven independent authority encodings agree, and original component-specific antibacterial and ribosome assays support the activity context. No required native correction was established. Assay salt, hybrid-ribosome and mammalian-readthrough boundaries remain explicit. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position 497; original 13 inputs preserved and three actual ARO/PubChem owner inputs appended before detailed assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-714bb3cd2d | data/antibiotics/antibacterial/gentamicin-x.yaml | generated | gentamicin X |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | antibioticmech:aro-714bb3cd2d | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | antibioticmech:aro-714bb3cd2d | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | antibioticmech:aro-714bb3cd2d | Actual focused execution exited 0. |
+| Independent exact authority comparison | passed | False | antibioticmech:aro-714bb3cd2d | Eleven native/PubChem/ChEMBL/ChEBI/KEGG encodings match including reciprocal chirality-aware atom mapping. |
+| Input, reference and history ledger | passed | False | antibioticmech:aro-714bb3cd2d | All 16 captured hashes unchanged, original 13 preserved; sole adopted PMID, three history events and exact 2023 X2 table rows checked. |
+| Authoritative full QC | failed | True | antibioticmech:aro-714bb3cd2d | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-714bb3cd2d | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-714bb3cd2d | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-714bb3cd2d | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-714bb3cd2d | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-714bb3cd2d | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-714bb3cd2d | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-714bb3cd2d | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-714bb3cd2d | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral gentamicin X2 component
+
+identity: supported. Targets: antibioticmech:aro-714bb3cd2d.
+
+Native and eleven authority encodings agree, with original synthesis and biosynthetic material identity corroboration. No mixture or sibling substitution is required.
+
+### X/X2 alias, current xrefs and minted rationale
+
+grounding: supported. Targets: antibioticmech:aro-714bb3cd2d.
+
+ARO, PubChem and ChEMBL resolve consistently; two-star ChEBI candidate does not establish a failure of the documented adopted-source grounding policy.
+
+### Precursor and minor-component definition
+
+evidence: supported. Targets: antibioticmech:aro-714bb3cd2d.
+
+Original gene/enzyme experiments directly support the precursor role; the separate original readthrough/synthesis papers corroborate minor-component terminology.
+
+### Aminoglycoside and antibacterial scope
+
+nomenclature: supported. Targets: antibioticmech:aro-714bb3cd2d.
+
+The amino-sugar/2-deoxystreptamine graph and exact synthetic-X2 bacterial assays support the class; reduced potency does not negate antibacterial activity.
+
+### Functional ribosome mechanism and assay form
+
+evidence: unknown. Targets: antibioticmech:aro-714bb3cd2d.
+
+Original X2 translation inhibition is directly inspected, but no native target is asserted and no X2-bound structure or exact free-base assay material is established. Biosynthetic enzymes and mammalian readthrough must remain distinct.
+
+### Optional mechanism and quantitative enrichment
+
+completeness: supported. Targets: antibioticmech:aro-714bb3cd2d.
+
+The concise SEEDED record does not overclaim primary mechanism, MIC, producer or approval objects. Their absence is not a required corrective finding; any future addition must retain material and organism scope.
+
+### Actual owners and preserved history
+
+ownership: supported. Targets: antibioticmech:aro-714bb3cd2d.
+
+All inputs and chronological histories are checked; source ownership is ARO extraction plus PubChem enrichment.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/gentamicin-x.yaml; Entire native record, including all three source history events | supports | The SEEDED, MINTED ARO record has one X2 synonym, one aminoglycoside parent, three xrefs, one PubChem structure and the sole adopted PMID25641167. It asserts no target, resistance, MIC, producer, clinical approval, role list or causal graph. |
+| chemistry | PubChem:15574862; ChEMBL:CHEMBL4465498; CHEBI:81280; KEGG:C17702; 497-authority-chemistry.json; current official JSON/molfiles | supports | Eleven encodings agree on HFLKNINDVFJPQT-ZFAMMYHGSA-N, C19H38N4O10, neutral charge and all configured centres with reciprocal chirality-aware graph matches. Native formula/masses are internally consistent. The official current ChEMBL and PubChem exact xrefs therefore agree; an individual X2 component is not conflated with the gentamicin mixture. |
+| grounding | ARO:3007376; ARO:0000016; CHEBI:81280; 497-aro-blocks.json;497-chebi81280.json;ignored-inclusive search in 497-source-audit.json | supports | Current ARO retains the X/X2 synonym and precursor definition, with no ChEBI cross-reference. The independently discovered exact ChEBI81280 candidate is 2-star and absent from the adopted 3-star inventory. No duplicate ChEBI-grounded native structure was found in the ignored-inclusive corpus/inventory/decision search. MINTED identity therefore follows the documented source resolution; the candidate is optional future grounding evidence. |
+| biosynthesis | PMID:25641167; DOI:10.1016/j.chembiol.2014.12.012; Shared 496-PMC4340712.xml, provenance 496-fetch2.json; complete original main text and497-adopted-core.json abstract | supports | Targeted M. echinospora ATCC15835 gene deletions/complementation and recombinant-enzyme reconstitution establish X2 as the common precursor of C components. GenD1 converts gentamicin A to X2; LC-HRMS/MS product comparison with authentic X2 supports the step. Toku-E supplied the commercial X2 comparator, with exact salt unspecified. These are biosynthetic enzymes, not demonstrated antibacterial inhibition targets. |
+| synthesis | PMID:32343899; DOI:10.1021/acs.orglett.0c01107; 497-2020.html; full main text, graphical abstract497-2020-figure1.jpg and Scheme5 in 497-2020-scheme5.jpg | supports | The original synthesizes X2 compound 8 from a garamine acceptor and D-glucosyl donor; the depicted amino-sugar connectivity/anomeric relationships are consistent with the native graph. Final X2 was isolated as a peracetate salt after lyophilization from aqueous acetic acid. The drawing of the molecular component does not make the isolated material a neutral free base, and synthesis does not by itself establish an antibacterial MIC. |
+| activity | PMID:37481733; DOI:10.1021/acsinfecdis.3c00233; 497-2023.xml/.html; original methods/results and actual Tables 1–3 in 497-2023-table1/2/3.jpg | supports | The 2023 original assays synthetic X2 compound 8 separately from the commercial mixture and C congeners. Bacterial S30 translation inhibition gives IC50 0.40±0.14 µM. Table 2 reports X2 MICs in µg/mL of 8 for E. coli ATCC25922, 4 for K. pneumoniae AG215, 16 for A. baumannii AG309, &gt;64 for P. aeruginosa AG220, 4–8 for E. cloacae AG290 and 16–32 for MRSA AG038. Broth microdilution follows CLSI M07 with at least duplicate twofold series. These results support antibacterial activity at the tested synthetic-material scope; they are not silently adopted as native free-base MICs. |
+| mechanism | PMID:37481733; DOI:10.1021/acsinfecdis.3c00233; Original cell-free translation Methods, hybrid-ribosome Results and Tables 1/3 | supports | S30 luciferase translation experiments distinguish wild-type bacterial ribosomes from hybrid bacterial ribosomes containing human mitochondrial, mutant-mitochondrial or cytoplasmic decoding sites. X2 is less potent against the bacterial ribosome than C congeners, but remains inhibitory. Table 3 shows phenotype shifts in AAC(3)-II-bearing E. coli and an8–16 µg/mL value in AAC(6-prime)-Ib AG175, with AG176 not determined. These are functional/model/strain data, not an X2-bound atomic structure or direct human efficacy evidence. |
+| readthrough | PMID:30359426; DOI:10.1371/journal.pone.0206158; 497-PMC6201930.xml; complete main text including compound sourcing and readthrough/toxicity Methods | supports | This original explicitly identifies X2, also called gentamicin X, as a minor mixture component. Mammalian-cell and rabbit-reticulocyte readthrough experiments and rodent toxicity comparisons use commercial Toku-E material; exact catalog/salt is not stated. These experiments support naming and a distinct host readthrough context, not a bacterial MIC, approved X2 therapy or demonstrated safety in humans. |
+| owners | Maintained ARO and PubChem owners; 497-inspect.json;497-source-audit.json;497-raw-rows.json;ignored-inclusive 497-owners-search.json | supports | All 16 hashes are unchanged including original 13. Two exact raw rows reproduce identity/structure/definition, the sole adopted lead was read in full, and all three source history entries are chronological. Additional search returned 18 leads inspected as titles/metadata; only the explicitly named primary sources above are claimed read. |
+
+## Limits And Additional Notes
+
+- Original 2020 synthesis yields X2 peracetate; 2015 and 2018 commercial Toku-E sources do not specify catalog/salt. The 2023 synthetic X2 traces to the 2020 preparation. No quantitative assay is assigned to an independently verified neutral free-base reagent.
+- The 2020 supporting-information route returned empty HTTP 202 HTML, and no raw spectral appendix was read. The original1976 synthesis publisher fetch was blocked; its metadata is retained only as a historical lead.
+- A2023 PDF fallback failed with HTTP 500, but actual XML, HTML and all three assay-table images succeeded and were inspected. The 2020 XML route failed with HTTP 500 while full HTML succeeded. The 2015 HTML route was a challenge page; the shared actual XML was used instead.
+- The 2023 human decoding-site experiments use hybrid bacterial ribosomes; 2018 readthrough and toxicity are preclinical. Neither proves clinical utility, human safety or a direct atomic X2–ribosome binding structure.
+- The discovery search returned 18 records including patents and older papers; all titles were screened, but no claim is made to exhaustive full-text review of all discovery results. The sole native-adopted PMID was fully read.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native gene, protein, pathway object, stress-response or transcriptomic dataset is asserted, so a record-triggered structured iModulonDB query was not applicable. Biosynthetic enzymes from source follow-up are not antibacterial targets.
+- Standalone chemistry used batch019 against batch050; native validators, ledger and contract used batch050. No native/source bytes or scientific status were changed.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T173313Z-gentamicin-x-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of gentamicin X
+started_at: '2026-10-21T17:15:14Z'
+finished_at: '2026-10-21T17:33:13Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The exact neutral gentamicin X2 structure, X/X2 naming, aminoglycoside class
+  and biosynthetic-precursor definition are supported. Eleven independent authority
+  encodings agree, and original component-specific antibacterial and ribosome assays
+  support the activity context. No required native correction was established. Assay
+  salt, hybrid-ribosome and mammalian-readthrough boundaries remain explicit. Scientific
+  assessment retains the stated evidence limits; full verification is blocked by the
+  shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/gentamicin-x.yaml
+    sha256: fa91a8f4c6486d888407efe763b8b9753b30bd644b522e457c8d55cf6df78031
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+targets:
+- target_id: antibioticmech:aro-714bb3cd2d
+  path: data/antibiotics/antibacterial/gentamicin-x.yaml
+  label: gentamicin X
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity, definition, synonym and source cross-references
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Neutral structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem enrichment producer
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: CARD/ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native field generation
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-scoped definition and synonym controls
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 497; original 13 inputs preserved
+    and three actual ARO/PubChem owner inputs appended before detailed assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-714bb3cd2d
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    497
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/gentamicin-x.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/gentamicin-x.yaml --out /private/tmp/am-review-session/497-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent exact authority comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/497-authority-check.py
+    > /private/tmp/am-review-session/497-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Eleven native/PubChem/ChEMBL/ChEBI/KEGG encodings match including reciprocal
+    chirality-aware atom mapping.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+- check_id: ledger
+  name: Input, reference and history ledger
+  command: .venv/bin/python /private/tmp/am-review-session/497-ledger.py > /private/tmp/am-review-session/497-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All 16 captured hashes unchanged, original 13 preserved; sole adopted PMID,
+    three history events and exact 2023 X2 table rows checked.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/gentamicin-x.yaml
+  locator: Entire native record, including all three source history events
+  accessed_at: '2026-10-21T17:29:46Z'
+  support: supports
+  summary: The SEEDED, MINTED ARO record has one X2 synonym, one aminoglycoside parent,
+    three xrefs, one PubChem structure and the sole adopted PMID25641167. It asserts
+    no target, resistance, MIC, producer, clinical approval, role list or causal graph.
+- evidence_id: chemistry
+  kind: validation
+  reference: PubChem:15574862; ChEMBL:CHEMBL4465498; CHEBI:81280; KEGG:C17702
+  locator: 497-authority-chemistry.json; current official JSON/molfiles
+  accessed_at: '2026-10-21T17:29:46Z'
+  support: supports
+  summary: Eleven encodings agree on HFLKNINDVFJPQT-ZFAMMYHGSA-N, C19H38N4O10, neutral
+    charge and all configured centres with reciprocal chirality-aware graph matches.
+    Native formula/masses are internally consistent. The official current ChEMBL and
+    PubChem exact xrefs therefore agree; an individual X2 component is not conflated
+    with the gentamicin mixture.
+  snapshot_sha256: f09d527f8e85b12158cf0f67c553c5c56581b8260d6229cac9a3b8a5abc7e2a9
+- evidence_id: grounding
+  kind: authority
+  reference: ARO:3007376; ARO:0000016; CHEBI:81280
+  locator: 497-aro-blocks.json;497-chebi81280.json;ignored-inclusive search in 497-source-audit.json
+  accessed_at: '2026-10-21T17:29:46Z'
+  support: supports
+  summary: Current ARO retains the X/X2 synonym and precursor definition, with no
+    ChEBI cross-reference. The independently discovered exact ChEBI81280 candidate
+    is 2-star and absent from the adopted 3-star inventory. No duplicate ChEBI-grounded
+    native structure was found in the ignored-inclusive corpus/inventory/decision
+    search. MINTED identity therefore follows the documented source resolution; the
+    candidate is optional future grounding evidence.
+  snapshot_sha256: 47783bdfc0279428c158e88d2851433cb28843fc38de12332a61cd787dc94a0b
+- evidence_id: biosynthesis
+  kind: primary_source
+  reference: PMID:25641167; DOI:10.1016/j.chembiol.2014.12.012
+  locator: Shared 496-PMC4340712.xml, provenance 496-fetch2.json; complete original
+    main text and497-adopted-core.json abstract
+  accessed_at: '2026-10-21T17:29:46Z'
+  support: supports
+  summary: Targeted M. echinospora ATCC15835 gene deletions/complementation and recombinant-enzyme
+    reconstitution establish X2 as the common precursor of C components. GenD1 converts
+    gentamicin A to X2; LC-HRMS/MS product comparison with authentic X2 supports the
+    step. Toku-E supplied the commercial X2 comparator, with exact salt unspecified.
+    These are biosynthetic enzymes, not demonstrated antibacterial inhibition targets.
+  snapshot_sha256: 21d4f7a905b7387ebdb0c2096c5a4397f5d69bdf9eceebdac6bdb8fa9627eee7
+- evidence_id: synthesis
+  kind: primary_source
+  reference: PMID:32343899; DOI:10.1021/acs.orglett.0c01107
+  locator: 497-2020.html; full main text, graphical abstract497-2020-figure1.jpg and
+    Scheme5 in 497-2020-scheme5.jpg
+  accessed_at: '2026-10-21T17:29:46Z'
+  support: supports
+  summary: The original synthesizes X2 compound 8 from a garamine acceptor and D-glucosyl
+    donor; the depicted amino-sugar connectivity/anomeric relationships are consistent
+    with the native graph. Final X2 was isolated as a peracetate salt after lyophilization
+    from aqueous acetic acid. The drawing of the molecular component does not make
+    the isolated material a neutral free base, and synthesis does not by itself establish
+    an antibacterial MIC.
+  snapshot_sha256: 54309a3e39543f38ac24b5c9f92686d718aa4debc109645338c60a176649c6f4
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:37481733; DOI:10.1021/acsinfecdis.3c00233
+  locator: 497-2023.xml/.html; original methods/results and actual Tables 1–3 in 497-2023-table1/2/3.jpg
+  accessed_at: '2026-10-21T17:29:46Z'
+  support: supports
+  summary: The 2023 original assays synthetic X2 compound 8 separately from the commercial
+    mixture and C congeners. Bacterial S30 translation inhibition gives IC50 0.40±0.14
+    µM. Table 2 reports X2 MICs in µg/mL of 8 for E. coli ATCC25922, 4 for K. pneumoniae
+    AG215, 16 for A. baumannii AG309, >64 for P. aeruginosa AG220, 4–8 for E. cloacae
+    AG290 and 16–32 for MRSA AG038. Broth microdilution follows CLSI M07 with at least
+    duplicate twofold series. These results support antibacterial activity at the
+    tested synthetic-material scope; they are not silently adopted as native free-base
+    MICs.
+  snapshot_sha256: 7afa4cd3a45a7738278a00bdbdb2c1a208e3c5f367fb6a9bfe4e098709b0065e
+- evidence_id: mechanism
+  kind: primary_source
+  reference: PMID:37481733; DOI:10.1021/acsinfecdis.3c00233
+  locator: Original cell-free translation Methods, hybrid-ribosome Results and Tables
+    1/3
+  accessed_at: '2026-10-21T17:29:46Z'
+  support: supports
+  summary: S30 luciferase translation experiments distinguish wild-type bacterial
+    ribosomes from hybrid bacterial ribosomes containing human mitochondrial, mutant-mitochondrial
+    or cytoplasmic decoding sites. X2 is less potent against the bacterial ribosome
+    than C congeners, but remains inhibitory. Table 3 shows phenotype shifts in AAC(3)-II-bearing
+    E. coli and an8–16 µg/mL value in AAC(6-prime)-Ib AG175, with AG176 not determined.
+    These are functional/model/strain data, not an X2-bound atomic structure or direct
+    human efficacy evidence.
+  snapshot_sha256: a507bf1efd9b45eb7898ec8d7758c26cafd08dfe91cad8c68e4c41afbb51f574
+- evidence_id: readthrough
+  kind: primary_source
+  reference: PMID:30359426; DOI:10.1371/journal.pone.0206158
+  locator: 497-PMC6201930.xml; complete main text including compound sourcing and
+    readthrough/toxicity Methods
+  accessed_at: '2026-10-21T17:29:46Z'
+  support: supports
+  summary: This original explicitly identifies X2, also called gentamicin X, as a
+    minor mixture component. Mammalian-cell and rabbit-reticulocyte readthrough experiments
+    and rodent toxicity comparisons use commercial Toku-E material; exact catalog/salt
+    is not stated. These experiments support naming and a distinct host readthrough
+    context, not a bacterial MIC, approved X2 therapy or demonstrated safety in humans.
+  snapshot_sha256: 403f408f696e3986d7a6cb943a880b2e424863d5017383bbd33202701f053ada
+- evidence_id: owners
+  kind: validation
+  reference: Maintained ARO and PubChem owners
+  locator: 497-inspect.json;497-source-audit.json;497-raw-rows.json;ignored-inclusive
+    497-owners-search.json
+  accessed_at: '2026-10-21T17:29:46Z'
+  support: supports
+  summary: All 16 hashes are unchanged including original 13. Two exact raw rows reproduce
+    identity/structure/definition, the sole adopted lead was read in full, and all
+    three source history entries are chronological. Additional search returned 18
+    leads inspected as titles/metadata; only the explicitly named primary sources
+    above are claimed read.
+  snapshot_sha256: 700773dcd62b7d3d2a9468e9e1152b45a2325b5c14510f4681ef84fae7ba60c0
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral gentamicin X2 component
+  outcome: supported
+  summary: Native and eleven authority encodings agree, with original synthesis and
+    biosynthetic material identity corroboration. No mixture or sibling substitution
+    is required.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  evidence_ids:
+  - record
+  - chemistry
+  - synthesis
+  - biosynthesis
+- assessment_id: grounding
+  area: grounding
+  topic: X/X2 alias, current xrefs and minted rationale
+  outcome: supported
+  summary: ARO, PubChem and ChEMBL resolve consistently; two-star ChEBI candidate
+    does not establish a failure of the documented adopted-source grounding policy.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  evidence_ids:
+  - grounding
+  - chemistry
+  - readthrough
+- assessment_id: definition
+  area: evidence
+  topic: Precursor and minor-component definition
+  outcome: supported
+  summary: Original gene/enzyme experiments directly support the precursor role; the
+    separate original readthrough/synthesis papers corroborate minor-component terminology.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  evidence_ids:
+  - biosynthesis
+  - readthrough
+  - synthesis
+- assessment_id: class
+  area: nomenclature
+  topic: Aminoglycoside and antibacterial scope
+  outcome: supported
+  summary: The amino-sugar/2-deoxystreptamine graph and exact synthetic-X2 bacterial
+    assays support the class; reduced potency does not negate antibacterial activity.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  evidence_ids:
+  - chemistry
+  - activity
+- assessment_id: target
+  area: evidence
+  topic: Functional ribosome mechanism and assay form
+  outcome: unknown
+  summary: Original X2 translation inhibition is directly inspected, but no native
+    target is asserted and no X2-bound structure or exact free-base assay material
+    is established. Biosynthetic enzymes and mammalian readthrough must remain distinct.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  evidence_ids:
+  - mechanism
+  - synthesis
+  - biosynthesis
+  - readthrough
+- assessment_id: completeness
+  area: completeness
+  topic: Optional mechanism and quantitative enrichment
+  outcome: supported
+  summary: The concise SEEDED record does not overclaim primary mechanism, MIC, producer
+    or approval objects. Their absence is not a required corrective finding; any future
+    addition must retain material and organism scope.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  evidence_ids:
+  - record
+  - activity
+  - mechanism
+  - readthrough
+- assessment_id: provenance
+  area: ownership
+  topic: Actual owners and preserved history
+  outcome: supported
+  summary: All inputs and chronological histories are checked; source ownership is
+    ARO extraction plus PubChem enrichment.
+  target_ids:
+  - antibioticmech:aro-714bb3cd2d
+  evidence_ids:
+  - owners
+findings: []
+actions: []
+limitations:
+- Original 2020 synthesis yields X2 peracetate; 2015 and 2018 commercial Toku-E sources
+  do not specify catalog/salt. The 2023 synthetic X2 traces to the 2020 preparation.
+  No quantitative assay is assigned to an independently verified neutral free-base
+  reagent.
+- The 2020 supporting-information route returned empty HTTP 202 HTML, and no raw spectral
+  appendix was read. The original1976 synthesis publisher fetch was blocked; its metadata
+  is retained only as a historical lead.
+- A2023 PDF fallback failed with HTTP 500, but actual XML, HTML and all three assay-table
+  images succeeded and were inspected. The 2020 XML route failed with HTTP 500 while
+  full HTML succeeded. The 2015 HTML route was a challenge page; the shared actual
+  XML was used instead.
+- The 2023 human decoding-site experiments use hybrid bacterial ribosomes; 2018 readthrough
+  and toxicity are preclinical. Neither proves clinical utility, human safety or a
+  direct atomic X2–ribosome binding structure.
+- The discovery search returned 18 records including patents and older papers; all
+  titles were screened, but no claim is made to exhaustive full-text review of all
+  discovery results. The sole native-adopted PMID was fully read.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native gene, protein, pathway object, stress-response or transcriptomic dataset
+  is asserted, so a record-triggered structured iModulonDB query was not applicable.
+  Biosynthetic enzymes from source follow-up are not antibacterial targets.
+- Standalone chemistry used batch019 against batch050; native validators, ledger and
+  contract used batch050. No native/source bytes or scientific status were changed.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pubchem.ncbi.nlm.nih.gov/compound/15574862
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC4340712/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC10425985/
+tags:
+- record-review
+- gentamicin-x2
+```

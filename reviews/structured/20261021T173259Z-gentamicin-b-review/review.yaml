@@ -1,0 +1,809 @@
+schema_version: 1.0.0
+review_id: 20261021T173259Z-gentamicin-b-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Gentamicin B: exact structure and activity supported, with qualified database
+  mechanisms'
+started_at: '2026-10-21T17:15:12Z'
+finished_at: '2026-10-21T17:32:59Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The exact neutral gentamicin B structure, betamicin synonym and antibacterial
+  classification are supported. A complete original study directly tests gentamicin
+  B and its enzymatic modification, while all thirteen resistance relations and the
+  16S rRNA target faithfully retain their CARD database provenance. Exact-compound
+  primary support was not established for every imported determinant or for direct
+  16S binding. One informational observation distinguishes natural microbial production
+  from a documented semisynthetic preparation; neither route makes the other false.
+  No confirmed corrective defect was found. Focused schema, strict and chemistry checks
+  pass. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/gentamicin-b.yaml
+    sha256: b23a05a88774ff27fa5f1296f4e9fb3493a878c9c9f8f66eae6be0c3acd2dbb3
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-808cc3b683
+  path: data/antibiotics/antibacterial/gentamicin-b.yaml
+  label: gentamicin B
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Maintained target type/relation and explanatory context
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 495; entire exact native record. All thirteen initial
+    input hashes were preserved and verified before judgment. Six actual ARO, PubChem
+    and target-role inputs were appended without replacing the original capture.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-808cc3b683
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/gentamicin-b.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/gentamicin-b.yaml --out /private/tmp/am-review-session/495-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 495
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: Independent native and chemical authority comparison
+  status: passed
+  required: false
+  summary: Native, current PubChem and corroborating ChEBI SMILES/InChI all reproduce
+    the full key, formula, neutral charge and fourteen assigned stereocentres.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/495-authority-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/gentamicin-b.yaml
+  locator: 'Entire YAML: identity, definition and reference, synonym, parent/class,
+    chemistry, both exact xrefs, source concept, thirteen resistance entries, one
+    target and four history events.'
+  accessed_at: '2026-10-21T17:30:25Z'
+  support: supports
+  summary: The SEEDED, MINTED record denotes neutral gentamicin B, not the gentamicin
+    commercial mixture, its 5-epimer or N-acyl derivative isepamicin. Every resistance
+    entry explicitly calls itself a database assertion. The 16S rRNA target is typed
+    NUCLEIC_ACID with PRIMARY_EVIDENCE_NEEDED and unspecified organism, strain and
+    assay. No numerical activity, producer, clinical status, dataset, protein example
+    or causal graph is stored. The four source seed/reseed events do not claim scientific
+    sign-off.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv:155; data/raw/aro_target_edges.tsv:172;
+    data/raw/aro_resistance_edges.tsv:3096; data/raw/pubchem_structures.tsv:35; conf/aro_target_roles.tsv:32;
+    scripts/extract_source_inventory.py; scripts/seed_from_sources.py; scripts/enrich_pubchem_structures.py;
+    conf/sources.yaml
+  locator: Complete exact rows including all thirteen resistance rows 3096–3108; relevant
+    ARO extraction, PubChem enrichment, seed merge/class selection and target role/evidence
+    handling.
+  accessed_at: '2026-10-21T17:30:25Z'
+  support: supports
+  summary: The ARO row supplies the definition, adopted PMID, betamicin synonym, CID
+    and class; the PubChem row supplies exact chemistry. The target and resistance
+    inventories reproduce all native relations. The maintained role map explicitly
+    types ARO3000755 as a nucleic acid direct-binding target; the seeder retains the
+    database assertion and primary-evidence-needed qualification. The class parent
+    is selected from the mapped drug class, not asserted to be the immediate current
+    ARO parent. The mint reproduces from ARO3000655. No exact adopted ChEBI, FDA or
+    MIBiG row was found in the complete inspected tables. Actual ownership was appended
+    to the preserved capture, including the target-role map.
+  snapshot_sha256: 1782eedc5f803867b9dd92d255f6d7eb632a8d55b36f243cf05cc1199682c014
+- evidence_id: identity
+  kind: authority
+  reference: pubchem.compound:11754987; CHEBI:198034
+  locator: Complete current PubChem property and synonym responses; current corroborating
+    ChEBI entry; independent forward graph diagnostics for all six encodings.
+  accessed_at: '2026-10-21T17:30:25Z'
+  support: supports
+  summary: Both native encodings and both authorities give C19H38N4O10, charge 0 and
+    full key RHRAMPXHWHSKQB-GGEUKFTFSA-N with fourteen assigned tetrahedral centres.
+    Native average mass 482.5 and exact mass 482.25879342 are consistent with the
+    source precision. PubChem identifies gentamicin B, betamicin and Sch14342. Current
+    ChEBI198034 is a two-star corroborating identity outside the inspected adopted
+    ChEBI slice; it does not invalidate the minted ARO seed or require an automatic
+    source migration. No stereochemical or exact-xref mismatch was found.
+  snapshot_sha256: 1beea06a44784a6d8003e5b369a927908a375bad6d74f6e7494f2daa5efa5f00
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo; ARO:3000655; ARO:0000016; ARO:3000755;
+    ARO:3000858; ARO:3000859; ARO:3000860; ARO:3000861; ARO:3000862; ARO:3002641;
+    ARO:3002642; ARO:3002644; ARO:3002645; ARO:3002646; ARO:3002647; ARO:3002652;
+    ARO:3002653
+  locator: Complete extracted current stanzas for compound, class, target and all
+    thirteen resistance determinants; every exact gentamicin B relationship checked.
+  accessed_at: '2026-10-21T17:30:25Z'
+  support: supports
+  summary: Current ARO agrees with the native compound name, definition, exact betamicin
+    synonym and CID. Every native determinant still has confers_resistance_to_antibiotic
+    ARO3000655, and the 16S term has targeted_by_antibiotic ARO3000655. ArmA, RmtA,
+    RmtB, RmtC and Sgm are rRNA methyltransferase assertions; the eight APH entries
+    are phosphotransferase assertions. These are positive confirmations of database
+    provenance, not independent primary proof for every exact compound–enzyme pair.
+    The class description is compatible with the native aminated-sugar/cyclitol graph.
+  snapshot_sha256: d881c2fe0de2d8b0de8447d955886a9c50000d20965145883d9a869895331fca
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/precise1k; 495-adapter-datasets.txt; 495-adapter-results.json
+  locator: Structured dataset discovery followed before protein web research by exact
+    armA, rmtA, rmtB, rmtC, sgm queries and bounded aph and 16S rRNA searches.
+  accessed_at: '2026-10-21T17:30:25Z'
+  support: context_only
+  summary: All seven searches exited 0. The five exact methylase names had no gene
+    or module hit; aph yielded six substring gene hits including E.coli b4055 aphA,
+    an acid phosphatase/phosphotransferase that cannot be equated with an acquired
+    APH isoenzyme. The 16S query returned rRNA-processing context, not a direct drug-binding
+    experiment. No iModulon hit required summarization. Native target organisms are
+    unspecified, so this covered dataset is a bounded cross-check only; neither missing
+    hits nor irrelevant substring hits prove or refute the CARD claims.
+  snapshot_sha256: 8b40aa9a876f9d7dd716750008ec3d43a3453f936121a35692a67faeb5fc758c
+- evidence_id: adopted-review
+  kind: database
+  reference: PMID:9872733; DOI:10.2741/wright; https://www.imrpress.com/journal/FBL/4/4/10.2741/wright/pdf
+  locator: 'Sole adopted publication: complete indexed abstract and selected original
+    review PDF sections, including introduction, APH nomenclature/types and Table
+    1; not the entire thirteen-page review.'
+  accessed_at: '2026-10-21T17:24:37Z'
+  support: context_only
+  summary: Wright and Thompson is a secondary review, not primary exact-compound evidence.
+    Table 1 explicitly includes gentamicin B in the substrate/resistance profiles
+    of APH types I, II, III, VI and VII. This supports family-level phosphotransferase
+    context but cannot establish every later subtype or methylase in the native record.
+    Its general discussion of aminoglycoside 16S binding is not an exact-B binding
+    assay. The native PMID resolves correctly; the review must retain its secondary
+    evidentiary status.
+  snapshot_sha256: 69cf7d25404b87444a7eda4b22f6d2c297353b5fdde4d5924a0b067b29648204
+- evidence_id: activity1980
+  kind: primary_source
+  reference: PMID:6967296; DOI:10.1128/AAC.17.5.798; https://pmc.ncbi.nlm.nih.gov/articles/PMC283878/
+  locator: Complete original five scanned pages 798–802, including Figure 1, all three
+    tables, Methods, Results and Discussion, inspected visually.
+  accessed_at: '2026-10-21T17:24:01Z'
+  support: supports
+  summary: The study explicitly distinguishes gentamicin B from 5-epigentamicin B
+    and other aminoglycosides. Antibiotics were supplied through Peter Daniels at
+    Schering; bulk counterion, hydration and purity were not specified. MIC testing
+    used 2 mL nutrient broth at pH 7.2 with an inoculum of 10^4–10^5 organisms. Table
+    1 gives gentamicin B MIC 0.5 microgram/mL for plasmid-free E.coli W677 and 16
+    micrograms/mL for W677 carrying pML2 with APH(3-prime). The direct comparison
+    establishes parent-B antibacterial activity and a bounded resistance phenotype,
+    not a species-wide threshold or the identity of every modern APH subtype. MIC
+    incubation duration is not supplied by the inspected MIC Methods and must not
+    be borrowed from enzyme culture conditions.
+  snapshot_sha256: 7c7b941d698289979955fe7a045309eba391606ab648b5060c65839bb12aa992
+- evidence_id: enzymes1980
+  kind: primary_source
+  reference: PMID:6967296; DOI:10.1128/AAC.17.5.798
+  locator: Complete original enzyme Methods, Tables 2–3, Figure 2 and Discussion,
+    pages 798–802.
+  accessed_at: '2026-10-21T17:24:01Z'
+  support: supports
+  summary: 'Partially purified modifying enzymes were tested with the parent and its
+    5-epimer. Phosphate incorporation directly supports modification of gentamicin
+    B by the study APH(3-prime), and Table 3 gives a gentamicin B Km of 1.3 micromolar
+    for that preparation. Km is not a binding Kd. The paper emphasizes that modification
+    capacity alone does not guarantee resistance: enzyme efficiency and substrate
+    context matter. The pML2 enzyme was not independently mapped here to all native
+    APH subtype accessions. This experiment is not a direct 16S rRNA binding measurement.'
+  snapshot_sha256: 707aa17caf7319c475804b12090e6490e1b96b7d8f5ec40891dc00e483710406
+- evidence_id: biosynthesis
+  kind: primary_source
+  reference: PMID:31720212; DOI:10.1016/j.mec.2019.e00096; https://pmc.ncbi.nlm.nih.gov/articles/PMC6838515/
+  locator: Original introduction, strain/culture and HPLC-CAD Methods, regulator deletion/complementation
+    and overexpression Results, and Discussion; figures and complete plasmid/primer
+    tables not independently reprocessed.
+  accessed_at: '2026-10-21T17:23:23Z'
+  support: supports
+  summary: The study documents gentamicin B production in Micromonospora echinospora
+    CCTCC M2018898, industrial strain HS-1520-016-89, and manipulated derivatives.
+    It distinguishes gentamicin B from its semisynthetic N-acyl derivative isepamicin.
+    GenR/GenS deletion, complementation and overexpression affect production; these
+    are biosynthesis/regulation experiments, not antibacterial target assays. The
+    comparator called wild type in this experiment derives from an industrial UV-mutagenized
+    strain. The main text establishes microbial production, but this review does not
+    treat HPLC-CAD alone as a new full absolute-configuration determination or infer
+    an antibacterial role for the pathway regulators.
+  snapshot_sha256: 53a8017f64f7e47634509d3b1df6db4c4f5e7fe661519259410cdd2c64deae91
+- evidence_id: semisynthesis
+  kind: primary_source
+  reference: PMID:945289; DOI:10.1039/P19760001126; https://pubs.rsc.org/en/content/articlelanding/1976/p1/p19760001126
+  locator: Complete original publisher abstract inspected through the browser reader;
+    direct HTML/PDF requests and subsequent reopening returned 403, so full text was
+    not read.
+  accessed_at: '2026-10-21T17:30:25Z'
+  support: partial
+  summary: The 1976 publisher abstract explicitly reports synthesis of gentamicin
+    B and antibiotic JI-20A from protected garamine using the Lemieux–Nagabhushan
+    reaction. This is positive support for a semisynthetic preparation of the parent,
+    separate from the natural fermentation route. Consequently microbial production
+    alone does not establish that the native word semisynthetic is false. Optional
+    clearer wording can distinguish compound origin from a preparation route. No yield,
+    detailed stereochemical experiment or antibacterial measurement is transferred
+    from the unavailable full paper.
+- evidence_id: aphIIc
+  kind: primary_source
+  reference: PMID:17088477; DOI:10.1128/AAC.00795-06; https://pmc.ncbi.nlm.nih.gov/articles/PMC1797691/
+  locator: 'Complete original short main article: cloning/disruption and susceptibility
+    experiments, Table 1 and Discussion.'
+  accessed_at: '2026-10-21T17:24:37Z'
+  support: partial
+  summary: The S.maltophilia K279a aph(3-prime)-IIc experiment supports an aminoglycoside
+    phosphotransferase mechanism through recombinant E.coli expression and native
+    disruption. Its table labels the tested drug gentamicin rather than exact gentamicin
+    B; the unchanged gentamicin MIC is therefore not evidence that the exact-B CARD
+    edge is false. The tested gentamicin preparation cannot be silently substituted
+    for the chemically distinct B congener. This source does not independently establish
+    the exact-B substrate claim.
+  snapshot_sha256: 4b0350e3713d753d99636f170d780d92d4d186f14b24890bb328a48cc090aa4f
+- evidence_id: rmtC
+  kind: primary_source
+  reference: PMID:16377684; DOI:10.1128/AAC.50.1.178-184.2006; https://pmc.ncbi.nlm.nih.gov/articles/PMC1346777/
+  locator: Original susceptibility/material, cloning, methylase, 30S substrate and
+    methylation Methods; relevant susceptibility Results/Table 2 and methylation Results.
+  accessed_at: '2026-10-21T17:24:37Z'
+  support: partial
+  summary: The original RmtC study combines cloning from Proteus mirabilis ARS68 into
+    E.coli with SAM-dependent 16S rRNA methylation in 30S particles. This supports
+    target alteration as a mechanism. Gentamicin is supplied by Schering-Plough without
+    an exact-B congener specification; isepamicin is a separately supplied drug. Thus
+    neither the numerical gentamicin MICs nor the gene/strain association can be promoted
+    to exact-B primary observations. The native database qualification remains appropriate.
+  snapshot_sha256: abc781e132105f4bbd1a5e425823ce335a3576681ee1c829facf14c649d11efd
+- evidence_id: upstream-leads
+  kind: database
+  reference: 495-core.json; 495-core-read.txt
+  locator: Complete available indexed abstracts for selected current ARO primary leads,
+    with absent-abstract and derivative boundaries retained.
+  accessed_at: '2026-10-21T17:23:23Z'
+  support: context_only
+  summary: PMIDs 20194115 and 19303884 concern Sgm and ArmA/RmtB enzyme structures
+    and methylation; 14667745 concerns RmtA; 14638496 concerns HpaA-regulated APH-IIb/neomycin;
+    10984043 is the PAO1 genome; 10732668,2160941,2846986,2848443,2832861,6313476
+    and 6295884 concern resistance elements or phosphotransferase sequences/phenotypes.
+    Their inspected abstracts do not establish every exact gentamicin B assay. PMID6270337
+    has no indexed abstract in the retrieved record. PMID666309 concerns Sch21420/isepamicin,
+    a semisynthetic derivative of B, and its activity cannot substitute for parent
+    B. PMID945289 has no indexed abstract but its publisher abstract was separately
+    inspected. These follow-up leads are not additional adopted native citations and
+    were not all read in full.
+  snapshot_sha256: c576d8d5bf923440af3ed864e1eebe8d5560e3e353081420a7fa3d09c78d696f
+- evidence_id: policy
+  kind: record_content
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md;
+    src/antibioticmech/schema/antibioticmech.yaml
+  locator: Exact chemical identity, parent/material distinction, qualified database
+    targets, optional coverage and scientific-status rules.
+  accessed_at: '2026-10-21T17:30:25Z'
+  support: supports
+  summary: A source assertion with PRIMARY_EVIDENCE_NEEDED must not be relabeled as
+    directly demonstrated primary evidence. Missing optional numerical activity, producer
+    or causal graph fields do not themselves make this seed incorrect. Exact neutral
+    structures remain distinct from commercial gentamicin mixtures and material salts.
+    A validated review does not promote SEEDED to REVIEWED.
+- evidence_id: search
+  kind: search
+  reference: 495-inclusive-hits.txt; 495-raw-rows.json; 495-additional-owner-hits.txt
+  locator: Hidden- and ignored-inclusive local search across data, curation, conf,
+    scripts, src, docs, .claude, reviews and reports; complete exact maintained rows;
+    bounded identifier/DOI and original-source retrieval.
+  accessed_at: '2026-10-21T17:30:25Z'
+  support: context_only
+  summary: The complete record and actual owners were located before judgment. The
+    exact primary antibacterial study, microbial production source and semisynthesis
+    abstract provide positive support with the stated scope. No exhaustive claim that
+    exact-B target or resistance literature does not exist is made. A selected patent
+    OCR was treated as a discovery lead because B/B1 subscripts were unreliable; it
+    was not used to establish a quantitative or stereochemical claim.
+  search_scope: 2026-10-21; rg --no-ignore --hidden for gentamicin B, gentamicin-b,
+    betamicin, ARO3000655, CID11754987 and the native identifier across maintained
+    and ignored-inclusive local evidence paths; current ARO/PubChem/ChEBI and exact
+    PMID/DOI retrieval.
+  snapshot_sha256: a65565ad82de777ceba6fe612c69f0d7fcdc49aed00414f18ba19b139dc8605f
+- evidence_id: checks
+  kind: validation
+  reference: 495-focused-results.json; 495-chemistry.json; 495-authority-chemistry.json;
+    495-inspect.json
+  locator: Actual focused schema, strict and independent internal/authority chemistry
+    commands; preserved original input hashes rechecked.
+  accessed_at: '2026-10-21T17:30:25Z'
+  support: supports
+  summary: All recorded focused commands exited 0. The exact mint, formula, charge,
+    masses and full stereochemical key reproduce, and nineteen captured inputs include
+    all thirteen unchanged originals plus actual owners. Deterministic checks do not
+    establish primary evidence for every database relation.
+  snapshot_sha256: 80977e4ebb71cdf782798fcdc641aae02cbf1439736952cd00f05f405ad0a849
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact gentamicin B structure, synonym, class and identifiers
+  outcome: supported
+  summary: Native neutral chemistry agrees with current PubChem and corroborating
+    ChEBI. The label, betamicin synonym and aminoglycoside class fit the inspected
+    exact authorities. The record is not conflated with a gentamicin formulation,
+    5-epimer or isepamicin.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  evidence_ids:
+  - identity
+  - aro
+  - activity1980
+  - owners
+  - checks
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial activity of the exact parent
+  outcome: supported
+  summary: The complete original 1980 study directly tests parent gentamicin B in
+    identified strains and distinguishes its epimer. The native qualitative antibacterial
+    claim is supported; no unqualified quantitative or clinical claim is stored. Counterion
+    and material characterization limits remain explicit.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  evidence_ids:
+  - activity1980
+  - enzymes1980
+  - native
+- assessment_id: origin
+  area: nomenclature
+  topic: Natural production and semisynthetic preparation
+  outcome: supported
+  summary: Microbial production is experimentally documented and a separate original
+    publisher abstract positively documents preparation from protected garamine. These
+    facts can coexist. Optional wording could make both routes explicit; no obligatory
+    correction or mistaken-isepamicin identity is established.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  evidence_ids:
+  - biosynthesis
+  - semisynthesis
+  - adopted-review
+- assessment_id: resistance
+  area: grounding
+  topic: All thirteen qualified CARD resistance assertions
+  outcome: supported
+  summary: The complete maintained rows and current ARO stanzas reproduce all thirteen
+    edges and their mechanism categories. The parent-B experiment directly supports
+    a bounded phosphotransferase phenotype; selected subtype and methylase studies
+    frequently use unspecified gentamicin. All native evidence retains database status,
+    and no individual subtype was upgraded to exact-compound primary proof.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  evidence_ids:
+  - aro
+  - owners
+  - enzymes1980
+  - adopted-review
+  - aphIIc
+  - rmtC
+  - upstream-leads
+- assessment_id: target
+  area: evidence
+  topic: Exact gentamicin B direct-binding target evidence
+  outcome: unknown
+  summary: ARO3000755 is correctly typed as nucleic acid and the database relationship
+    is reproduced. Exact-B primary direct 16S binding was not established in the inspected
+    sources. PRIMARY_EVIDENCE_NEEDED and unspecified assay context already disclose
+    this limit; absence of a newly located assay is not a confirmed wrong-target finding.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  evidence_ids:
+  - native
+  - aro
+  - owners
+  - adopted-review
+  - adapter
+  - policy
+- assessment_id: coverage
+  area: completeness
+  topic: Optional producer, numerical activity and mechanism enrichment
+  outcome: supported
+  summary: No missing optional field is treated as a defect. Any enrichment should
+    distinguish neutral structure from tested material, parent from derivative/mixture,
+    biosynthetic regulation from antibacterial target, and enzyme kinetics from affinity
+    or whole-cell susceptibility.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  evidence_ids:
+  - native
+  - activity1980
+  - enzymes1980
+  - biosynthesis
+  - rmtC
+  - aphIIc
+  - policy
+- assessment_id: provenance
+  area: provenance
+  topic: Actual maintained inputs, source qualification and history
+  outcome: supported
+  summary: The mint, mapped class and source history are reproducible. The original
+    thirteen input hashes remain intact and six actual owners were appended, including
+    the target-role map. The sole adopted PMID is a review and was assessed as secondary
+    context rather than relabeled primary evidence.
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  evidence_ids:
+  - owners
+  - adopted-review
+  - checks
+  - native
+findings:
+- finding_id: F1
+  issue_key: gentamicin-b-natural-production-and-semisynthetic-route-context
+  category: nomenclature
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Distinguish natural production from a semisynthetic preparation if expanding
+    the definition
+  description: 'The native definition describes gentamicin B as semisynthetic. The
+    inspected microbial-production study and the 1976 synthesis abstract establish
+    two compatible preparation contexts: production by M.echinospora and synthesis
+    from protected garamine. Natural production does not refute the published semisynthetic
+    route. An optional fuller definition could mention both, without confusing parent
+    B with its N-acyl derivative isepamicin. This observation does not require a corrective
+    edit.'
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - biosynthesis
+  - semisynthesis
+  - adopted-review
+  - aro
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Exact adopted ARO definition and reference
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source definition extraction or a deliberately scoped maintained override
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regeneration of source-backed definition and provenance
+  rule_id: Preserve exact compound identity and distinguish biosynthetic origin from
+    preparation route
+  native_severity: informational
+  normalization_reason: Positive primary evidence exists for both microbial production
+    and semisynthetic preparation. No confirmed false origin statement or wrong-parent
+    identity is established; clearer wording is optional.
+actions:
+- action_id: A1
+  description: Optionally clarify natural-congener and semisynthetic-route context
+    in a maintained source-backed definition.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Exact adopted ARO definition and reference
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source definition extraction or a deliberately scoped maintained override
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regeneration of source-backed definition and provenance
+  acceptance_checks:
+  - 'Retain both original routes with their actual evidence depth: microbial-production
+    main text and 1976 publisher abstract. Do not assert that gentamicin B can only
+    be natural or only be semisynthetic.'
+  - Keep gentamicin B distinct from 5-epigentamicin B, commercial gentamicin mixtures
+    and isepamicin. If an override is introduced, make it reproducible through the
+    maintained source path and rerun focused schema/strict and corpus reproduction
+    checks.
+- action_id: A2
+  description: If primary mechanism or activity enrichment is undertaken, preserve
+    exact compound, enzyme and material scope.
+  finding_ids: []
+  target_ids:
+  - antibioticmech:aro-808cc3b683
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/gentamicin-b.yaml
+    role: Optional curator-owned claim additions through the validated writer
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Maintained target type/relation and explicit qualification
+  acceptance_checks:
+  - Do not promote all thirteen database edges from the 1980 pML2 APH experiment or
+    a family-level secondary table. Resolve each exact enzyme accession and tested
+    compound independently.
+  - Retain PRIMARY_EVIDENCE_NEEDED until an inspected exact-B direct-target experiment
+    supplies adequate organism, assay and binding context. iModulon results and enzyme
+    methylation alone do not establish drug binding.
+  - For any numerical observation, preserve the original strain, inoculum, medium,
+    endpoint and unspecified counterion/purity limits. Do not call enzyme Km a Kd
+    or substitute unspecified gentamicin/isepamicin results for B.
+  - Treat GenR/GenS as biosynthesis/regulation evidence, not antibacterial targets.
+    A producer claim should identify the actual industrial strain and engineered derivative
+    context.
+limitations:
+- The entire native record and all exact maintained rows were inspected. The sole
+  adopted PMID9872733 was read as a complete indexed abstract plus selected original
+  review sections and Table 1, not a complete thirteen-page primary article. It is
+  secondary evidence.
+- The original 1980 gentamicin B study was read in full across all five scanned pages.
+  Its bulk counterion, hydration and purity are unspecified, and it does not directly
+  measure gentamicin B binding to 16S rRNA. The pML2 APH preparation was not mapped
+  here to every modern native APH subtype.
+- The 2019 microbial-production study was read in the specified Methods, Results and
+  Discussion scope; raw analytical data, every plasmid/primer entry and figure image
+  were not independently reprocessed. It does not newly resolve every absolute stereocentre
+  of the assayed material.
+- The 1976 original publisher abstract was successfully inspected through the browser
+  reader, but direct HTML/PDF retrieval and subsequent reopening returned 403. The
+  full synthesis paper was not read. The abstract provides positive semisynthetic-route
+  evidence without supporting additional experimental detail.
+- Selected RmtC and APH-IIc main-text experiments and current ARO primary abstracts
+  use unspecified gentamicin or other substrates. No exhaustive primary validation
+  of all thirteen exact-B resistance edges, direct 16S binding or clinical efficacy
+  is claimed. The native record already qualifies its database evidence.
+- The structured adapter yielded no applicable iModulon evidence; E.coli precise1k
+  searches cannot establish absence of acquired resistance genes across taxa. No claim
+  is made from irrelevant aph substring hits.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Current ARO snapshot 473-current-aro.obo was fetched on 2026-10-21T16:49:32Z from
+  https://purl.obolibrary.org/obo/aro.obo; SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4.
+  Exact relevant stanzas are preserved in 495-current-aro-terms.json.
+- Fetch manifests 495-fetch-results.json through 495-fetch4-results.json preserve
+  actual timestamps, status and SHA256 values, including failed routes. Original 1980
+  visual snapshots are 495-1980-page798.png through 495-1980-page802.png.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
