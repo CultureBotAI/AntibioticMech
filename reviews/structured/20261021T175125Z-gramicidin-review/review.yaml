@@ -1,0 +1,659 @@
+schema_version: 1.0.0
+review_id: 20261021T175125Z-gramicidin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Gramicidin: family concept incorrectly represented by one peptide structure'
+started_at: '2026-10-21T17:38:00Z'
+finished_at: '2026-10-21T17:51:25Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The record faithfully reproduces a family-level ARO concept and one PubChem
+  peptide graph, but those two scopes are not equivalent. The native definition explicitly
+  includes distinct linear peptides, a mixture and cyclic gramicidin S. Required validation
+  and internal chemistry pass; they do not resolve this identity conflict. One blocker
+  requires source-level adjudication before scientific sign-off.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/gramicidin.yaml
+    sha256: 3d0450b108d67050a82b030bca07da99aaf5e292606e1566e61f5442ad70a4f6
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-1204fa50d9
+  path: data/antibiotics/antibacterial/gramicidin.yaml
+  label: gramicidin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Maintained target type/relation and explanatory context
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 512; the entire exact native record. All thirteen initial
+    input hashes were preserved and five actual ARO, PubChem and target-role owners
+    appended before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-1204fa50d9
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/gramicidin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/gramicidin.yaml --out /private/tmp/am-review-session/512-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 512
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: authority-chemistry
+  status: passed
+  required: false
+  summary: Native and current PubChem SMILES and InChI reproduce the same full key,
+    formula and neutral charge.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/512-authority-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: residue-map
+  name: residue-map
+  status: passed
+  required: false
+  summary: Explicit backbone tracing identifies fifteen linear residues and an S-configured
+    Val at position 8; the script exits 0.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/512-residue-map.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/gramicidin.yaml
+  locator: Complete YAML, including both exact xrefs, source concept, structure, membrane
+    target and all four history events.
+  accessed_at: '2026-10-21T17:47:28Z'
+  support: supports
+  summary: The MINTED, SEEDED record defines a family containing linear gramicidins
+    A/B/C, the D mixture and cyclic S, yet encodes one neutral C99H140N20O17 peptide
+    with key ZWCXYZRRTRDGQE-SORVKSEFSA-N. Its membrane target is explicitly MEMBRANE/ATTACKED_COMPONENT
+    and DATABASE_ASSERTION_ONLY, with no stated organism, strain or assay. No quantitative
+    activity, resistance, producer, clinical, dataset or causal-graph object is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: 512-raw-rows.json; data/raw/aro_antibiotics.tsv:70; data/raw/aro_target_edges.tsv:74;
+    data/raw/pubchem_structures.tsv:14; conf/aro_target_roles.tsv:3; conf/sources.yaml;
+    scripts/extract_source_inventory.py; scripts/enrich_pubchem_structures.py; scripts/seed_from_sources.py
+  locator: Complete exact maintained rows and applicable extraction, PubChem enrichment,
+    mint, class and target emission logic.
+  accessed_at: '2026-10-21T17:47:28Z'
+  support: supports
+  summary: The ARO row supplies the family definition, PMID18745784 and PubChem16130140.
+    Enrichment adopts that CID graph and the seeder emits one record. The membrane
+    edge and its role mapping faithfully reproduce the source. The mint recomputes,
+    and the four source events do not imply scientific review. This is a maintained
+    source-resolution problem, not a hand-edited native discrepancy.
+  snapshot_sha256: b7f80503cf48c025a5436d189540aa7b0f1de4542e78eadc150f320faa881239
+- evidence_id: policy
+  kind: record_content
+  reference: docs/HARMONIZATION.md
+  locator: The unit of the corpus is a structure; identity resolution and merge limits,
+    structural class and class assignment sections.
+  accessed_at: '2026-10-21T17:47:28Z'
+  support: supports
+  summary: The corpus requires one chemical structure per record and explicitly excludes
+    classes and mixtures as individual compounds. A supplied InChIKey does not independently
+    prove that an upstream family denotes that exact structure. Source-level exclusion
+    or exact identity resolution must precede reseeding; distinct congeners must not
+    be collapsed merely because a family source carries one CID.
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo; ARO:3000123; ARO:3009657; ARO:3000710;
+    https://card.csu.mcmaster.ca/ontology/36262
+  locator: Complete current family, class and target stanzas in the official OBO snapshot,
+    plus current CARD family page.
+  accessed_at: '2026-10-21T17:47:28Z'
+  support: supports
+  summary: Current ARO explicitly defines gramicidin as the same family, with separate
+    A/B/C/S/D children, and associates PubChem16130140 and PMID18745784. The broader
+    class is nonribosomal peptide antibiotics. The membrane term explicitly targets
+    the family concept, so the native database edge is accurately copied; it does
+    not independently establish a direct experiment on the single native graph.
+  snapshot_sha256: df37a7d69a742ef99ec05c31c6e691c8007746ff77143c94422a8f1557d2e571
+- evidence_id: chemistry
+  kind: authority
+  reference: pubchem.compound:16130140; 512-authority-chemistry.json; 512-residue-map.json
+  locator: Complete current PubChem property and synonym responses; independent native
+    and authority SMILES/InChI parsing and explicit residue tracing.
+  accessed_at: '2026-10-21T17:47:28Z'
+  support: supports
+  summary: All four encodings agree on formula, charge, full key and fourteen assigned
+    alpha-carbon centres. The graph is a linear N-formyl, C-ethanolamide pentadecapeptide
+    with the Val-A composition, not a representation of all linear and cyclic family
+    members. Explicit tracing gives L-Val at position 8. Current source names include
+    broad and conflicting depositor labels, which cannot turn this graph into a family
+    or independently prove natural-product identity. Source mass precision is internally
+    acceptable in the focused diagnostic.
+  snapshot_sha256: cda474ef9af638323875865a3f449295d027d720b34762024a9a7061fb94ff66
+- evidence_id: adopted
+  kind: database
+  reference: PMID:18745784; PMC1634171; https://pmc.ncbi.nlm.nih.gov/articles/PMC1634171/
+  locator: Complete indexed metadata and both original scanned pages 256–257 visually
+    read; W. H. Manwaring, 1940, Dubos’ “Gramicidin.”
+  accessed_at: '2026-10-21T17:43:48Z'
+  support: context_only
+  summary: The sole adopted reference resolves to an editorial, not a primary structure
+    determination, and has no indexed abstract. It summarizes earlier work on soil-bacillus
+    extracts, preliminary animal activity and bovine mastitis treatment. It does not
+    establish the modern A/B/C/D/S composition, a fifteen-residue sequence, exact
+    stereochemistry or the native membrane relation. Historical extract outcomes cannot
+    be transferred to the single encoded graph. No DOI is supplied by the inspected
+    metadata.
+  snapshot_sha256: bc314cb238f9fd7a9bfbbaf5edee91c632c4d470cfc499b408eb3542f90f316d
+- evidence_id: reference1967
+  kind: primary_source
+  reference: PMID:5299675; PMC2476309; https://pmc.ncbi.nlm.nih.gov/articles/PMC2476309/
+  locator: Original WHO reference-standard study, independently viewed pages 447–449
+    and 453–454, including Table1; other pages not independently assessed.
+  accessed_at: '2026-10-21T17:47:28Z'
+  support: supports
+  summary: The study explicitly distinguishes the complex A/B/C reference preparation
+    from gramicidin S. Countercurrent distribution reports approximately 50% A, 7%
+    B and 25% C by weight. Turbidimetric assays use Streptococcus faecalis strains
+    with laboratory-specific conditions and compare preparation potency, not MICs
+    of this exact graph. Composition affects assay comparability. Its historical phrase
+    about very little gramicidin D is not automatically the modern D-mixture label.
+    This primary material evidence independently refutes treating generic gramicidin
+    as one chemically uniform constituent.
+  snapshot_sha256: 6a74075bf2c6eb7a9a19b51f5f0d3be69ce16ae65da0ce6a3af9ea24d6237b12
+- evidence_id: sequence2020
+  kind: primary_source
+  reference: DOI:10.1038/s41467-020-18711-2; PMC7531004
+  locator: Original Figure1 independently viewed; no claim of full-paper review or
+    transfer of its MIC data.
+  accessed_at: '2026-10-21T17:47:28Z'
+  support: supports
+  summary: Figure1 depicts natural gramicidin A with D-Val at positions 6 and 8, L-Val
+    at positions 1 and 7, the fifteen-residue sequence and its termini. The native
+    graph instead has L-Val8. Thus automatic renaming of the family record to natural
+    A is not justified by its formula or superficial sequence resemblance. This comparison
+    does not identify the encoded epimer as an inactive compound or authorize replacing
+    its stereochemistry.
+  snapshot_sha256: deb462c5e900588ed3ad59ba9e1dfe955b7f3b4d8d5abf372678ad685c6ca5f3
+- evidence_id: search
+  kind: search
+  reference: 512-local-hits.txt; 512-fetch-results.json through 512-fetch3-results.json
+  locator: Ignored- and hidden-inclusive local search, complete current authority
+    checks and bounded exact-key, gramicidin and L-Val8 primary-literature searches.
+  accessed_at: '2026-10-21T17:47:28Z'
+  support: context_only
+  summary: Local searches included ignored files. The native target names a membrane
+    component rather than a gene, regulator, pathway or transcriptomic dataset; no
+    applicable structured iModulon query was identified before mechanism follow-up.
+    Current ChEBI749506 and 80115 were read as contextual, structureless records,
+    not new native groundings. The bounded search did not establish an exact experimental
+    identity for the encoded L-Val8 peptide, and is not an exhaustive absence claim.
+  search_scope: 2026-10-21; hidden- and ignored-inclusive exact label, slug, minted
+    identifier, ARO identifier and InChIKey searches; official ARO/PubChem/ChEBI and
+    bounded exact-key and sequence literature retrieval.
+  snapshot_sha256: 7342536514d4a6be0fdb6df17d2c28431c555b9c31558f1f0f98f5b7bba826b9
+- evidence_id: checks
+  kind: validation
+  reference: 512-focused-results.json; 512-authority-chemistry.json; 512-residue-map.json;
+    512-inspect.json
+  locator: Actual focused schema, strict, chemistry and independent authority/residue
+    checks; all eighteen input hashes rechecked.
+  accessed_at: '2026-10-21T17:47:28Z'
+  support: supports
+  summary: Schema, strict and optional internal chemistry checks each exit 0. Independent
+    authority comparison and residue tracing also exit 0. These checks support chemical
+    self-consistency and reproducible provenance, not equivalence of a family and
+    a single graph.
+  snapshot_sha256: 1d78429793452f2b328d0b5ea81be4e08f0b810fd4d6ca6866f93f2281711104
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Family-to-single-structure identity
+  outcome: concern
+  summary: Native and official ARO semantics describe multiple distinct compounds
+    and a mixture. One internally valid PubChem graph cannot denote that entire family;
+    the explicit corpus structure boundary is violated.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  evidence_ids:
+  - native
+  - aro
+  - chemistry
+  - policy
+  - reference1967
+- assessment_id: stereo
+  area: consistency
+  topic: Representative peptide identity
+  outcome: unknown
+  summary: 'The graph is self-consistent but is not automatically natural gramicidin
+    A: its Val8 configuration differs from the primary figure. No exact epimer identity,
+    activity or corrected replacement is established by this review.'
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  evidence_ids:
+  - chemistry
+  - sequence2020
+  - search
+- assessment_id: grounding
+  area: grounding
+  topic: Class and qualified membrane relation
+  outcome: supported
+  summary: The broader peptide class and family membrane relation are faithfully imported
+    database assertions. The target status already preserves its evidence gap. The
+    principal problem is attaching family-level information to one structure, not
+    a demonstrated wrong membrane concept or direct-binding claim.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  evidence_ids:
+  - owners
+  - aro
+  - native
+- assessment_id: citation
+  area: evidence
+  topic: Sole adopted 1940 citation
+  outcome: concern
+  summary: Both scanned editorial pages were read. They support historical extract
+    activity context, but not the modern family composition or exact structure and
+    mechanism. This evidence limitation is retained within the identity adjudication
+    rather than treating an unavailable or missing optional assay as an independent
+    defect.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  evidence_ids:
+  - adopted
+  - reference1967
+  - sequence2020
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership and history
+  outcome: supported
+  summary: All thirteen original hashes remain unchanged; five actual source owners
+    were appended. Complete native and maintained rows, current authority identifiers,
+    target relation and four history events were checked at the documented depth.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  evidence_ids:
+  - owners
+  - native
+  - checks
+- assessment_id: completeness
+  area: completeness
+  topic: Optional biological fields and exact-material evidence
+  outcome: unknown
+  summary: No required optional biological object is missing. Exact-material activity
+    or mechanism enrichment must wait for identity resolution; preparation, congener
+    and cyclic-S experiments cannot be transferred indiscriminately.
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  evidence_ids:
+  - reference1967
+  - sequence2020
+  - search
+findings:
+- finding_id: F1
+  issue_key: gramicidin-family-mapped-to-single-peptide-structure
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: The gramicidin family is emitted as one exact peptide
+  description: 'The definition and exact ARO3000123 grounding explicitly denote a
+    family containing distinct linear peptides, a mixture and cyclic S, while the
+    chemical_structure and PubChem xref encode one linear peptide. Current ARO repeats
+    this mismatch, so faithful import does not resolve it. The corpus explicitly excludes
+    families and mixtures from individual compound records. Resolve the family source
+    at its maintained owner, ordinarily through an exclusion decision unless a separately
+    justified exact-compound identity is established. Do not simply rename this graph
+    to natural gramicidin A: explicit residue mapping shows L-Val8, while the inspected
+    natural-A figure shows D-Val8. Do not merge the distinct sibling records or transfer
+    their assays to this graph.'
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  field_paths:
+  - identifier
+  - label
+  - definition
+  - chemical_structure
+  - xrefs
+  - source_concepts
+  - molecular_targets
+  evidence_ids:
+  - native
+  - owners
+  - policy
+  - aro
+  - chemistry
+  - reference1967
+  - sequence2020
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Family source association
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Per-source PubChem structure association
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source concept inclusion
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: CID structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Exact record generation
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained exclusion or adjudication decision
+  rule_id: One AntibioticRecord denotes one chemical structure, not a family or mixture
+  native_severity: blocker
+  normalization_reason: Positive source semantics establish that the record denotes
+    a different scope from its single graph; this is wrong identity rather than an
+    optional curation gap.
+actions:
+- action_id: A1
+  description: Adjudicate the family concept at its maintained source and regenerate
+    the corpus.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-1204fa50d9
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Family source association
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Per-source PubChem structure association
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source concept inclusion
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: CID structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Exact record generation
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained exclusion or adjudication decision
+  acceptance_checks:
+  - Record a justified source-level exclusion for the family concept, or document
+    an independently verified exact-compound resolution that does not equate the family
+    with an arbitrary representative. Preserve the upstream family as class/context
+    where supported.
+  - Do not choose a replacement graph solely from CID synonyms, formula or the current
+    graph. Verify any exact linear congener and all stereocentres with primary evidence;
+    keep cyclic S, other congeners and mixtures distinct.
+  - After the authorized source decision, rerun inventory/enrichment/seeding as applicable,
+    focused schema and strict validation, corpus reproduction and collision checks.
+    Confirm that family-level membrane provenance and historical extract activity
+    are not promoted to experiments on an exact peptide.
+limitations:
+- The entire native record and actual maintained rows were assessed. The sole adopted
+  reference was read as both complete scanned editorial pages, not treated as a primary
+  structure or mechanism study.
+- The 1967 primary reference-standard study was independently inspected on pages 447–449
+  and 453–454, including Table1. The remaining pages were not independently reviewed.
+  Its component nomenclature is historical and cannot be assumed identical to modern
+  mixture naming.
+- Only Figure1 of the 2020 primary gramicidin A paper was independently assessed for
+  sequence and stereochemical comparison. No quantitative activity or mechanism from
+  that paper is transferred to the native graph.
+- The exact experimental identity and antibacterial activity of the encoded L-Val8
+  peptide remain unresolved. This is not proof of inactivity, a comprehensive literature
+  absence claim or a proposed stereochemical correction.
+- No new clinical, resistance, producer, quantitative activity or causal-graph claims
+  were added. Optional missing fields are not findings.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- The official ARO snapshot 426-current-aro.obo was retrieved at 2026-10-21T15:57:42Z
+  from https://purl.obolibrary.org/obo/aro.obo; SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4.
+  Relevant stanzas are retained in 511-current-aro-terms.json.
+- Original source images and actual fetch timestamps/hashes are retained in 512-fetch3-results.json
+  for both 1940 pages and 507510-fetch3.json / 507510-fetch4.json for the WHO pages
+  and 2020 Figure1. Shared artifacts were independently read at the scopes stated
+  above.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

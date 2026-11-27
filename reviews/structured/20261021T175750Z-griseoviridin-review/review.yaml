@@ -1,0 +1,869 @@
+schema_version: 1.0.0
+review_id: 20261021T175750Z-griseoviridin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Griseoviridin: wrong diene geometry and a separate ChEBI epimer cross-reference'
+started_at: '2026-10-21T17:38:03Z'
+finished_at: '2026-10-21T17:57:50Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The stored PubChem-derived graph has a Z/Z diene, whereas independently inspected
+  natural-isolation and total-synthesis primary figures show E/E griseoviridin. This
+  is a blocker identity failure despite internally coherent chemistry. Current CHEBI:199588
+  also differs at one alcohol stereocentre and is not a safe replacement. The 26 resistance
+  associations and the ribosomal target retain honest database qualification; the
+  review does not promote broad CARD bibliography into exact-compound evidence.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/griseoviridin.yaml
+    sha256: 2bf5f875d0d12b7c624625511bd824d33d26e032731221619295b1ba52aab13a
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+targets:
+- target_id: antibioticmech:aro-4a4590abba
+  path: data/antibiotics/antibacterial/griseoviridin.yaml
+  label: griseoviridin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, exact xrefs and bibliography
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem fallback structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem fallback retrieval
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relation mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Database evidence qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Qualification transform
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 517; one exact native record reviewed independently.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-4a4590abba
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Actual cwd was worktree052; chemistry
+    used the existing019 RDKit environment and native validators used052.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    517
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Actual cwd was worktree052; chemistry
+    used the existing019 RDKit environment and native validators used052.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/griseoviridin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Actual cwd was worktree052; chemistry
+    used the existing019 RDKit environment and native validators used052.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/griseoviridin.yaml --out /private/tmp/am-review-session/517-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/griseoviridin.yaml
+  locator: 'Entire native record: identity, all 26 resistance entries, one molecular
+    target and all four history events'
+  accessed_at: '2026-10-21T17:55:18Z'
+  support: supports
+  summary: The entire seeded ARO record was read. It stores CID6441064, key UXWOXTQWVMFRSE-SXTNSRNPSA-N
+    and exact CHEBI:199588. Every resistance evidence note expressly says database
+    assertion, not a primary citation. The 23S-rRNA target has PRIMARY_EVIDENCE_NEEDED,
+    CARD_ARO provenance, and unspecified organism/strain/assay. No curator primary
+    claim, activity observation, causal graph, clinical product or producer assertion
+    is present.
+  snapshot_sha256: 2bf5f875d0d12b7c624625511bd824d33d26e032731221619295b1ba52aab13a
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv#ARO:3000673
+  locator: ARO row171, PubChem row40, resistance rows3492–3517, target row189, readiness
+    row2715; source projection
+  accessed_at: '2026-10-21T17:55:18Z'
+  support: context_only
+  summary: The original 13 captured hashes were preserved and actual ARO/PubChem/evidence-transform
+    owners appended, giving 29 inputs before detailed assessment. The seeded definition
+    and graph reproduce their adopted rows; no exact maintained curator/decision override
+    was found in the hidden/ignored-inclusive search.
+  snapshot_sha256: 103bb47badd182bc679a56330bc10c2585f09abd691a7a0c50a9f9dfe7652848
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/517-context-search.txt
+  locator: Initial517-local-hits.txt and ignored-inclusive source/owner follow-up
+  accessed_at: '2026-10-21T17:55:18Z'
+  support: context_only
+  summary: The identifier, label, ARO:3000673, CHEBI:199588 and exact paths were searched
+    with hidden and gitignored content included. Historical material was treated only
+    as discovery context.
+  snapshot_sha256: 54e407fc7438a2014f4c185a569b40258f5165fc05162b405efb08b34165a242
+  search_scope: Isolated worktree052, initial whole-tree capture plus rg --no-ignore
+    --hidden across curation, conf, scripts and data/raw; exact source rows projected
+    separately.
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Current compound, parent/class, target and all 26 determinant terms; 517-current-aro-terms.json;
+    shared426-fetch2-results.json
+  accessed_at: '2026-10-21T15:57:42Z'
+  support: supports
+  summary: Current ARO retains the compound, broader streptogramin class, PTC relationship
+    and all 26 exact griseoviridin resistance relationships. This validates source
+    transcription, not a compound-specific experimental assertion.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6441064/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: CID6441064 current property response
+  accessed_at: '2026-10-21T17:47:43.723977Z'
+  support: supports
+  summary: Current official PubChem reproduces the native neutral C22H27N3O7S graph
+    and complete key. Its diene geometry is Z/Z. Agreement with the adopted fallback
+    does not establish natural-product identity.
+  snapshot_sha256: 85e958ee6fbcf6d45eb9929de0fd76a661598a0e6662793e358384ce84e10940
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/199588/
+  locator: CHEBI:199588 default_structure, IUPAC name, charge and provenance
+  accessed_at: '2026-10-21T17:47:43.719016Z'
+  support: supports
+  summary: The current two-star MetaboLights-derived entry has key UXWOXTQWVMFRSE-PUXWVVMRSA-N,
+    an E/E diene and the oxazole-near alcohol centre S rather than native R. Same
+    formula and connectivity do not make these stereochemical graphs exact equivalents.
+    The primary figure comparison supports native R at this alcohol, so ChEBI is not
+    an automatic repair source.
+  snapshot_sha256: cb92275ed4b26d55ad1923196383a612ae9a8d78802f124234e5d4b296371d42
+- evidence_id: candidate
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/11225326/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,ExactMass,IUPACName/JSON
+  locator: CID11225326 current graph, InChI and name
+  accessed_at: '2026-10-21T17:52:36.562087Z'
+  support: supports
+  summary: The current candidate has key UXWOXTQWVMFRSE-JCSRQJCQSA-N and IUPAC 1S,9R,11S,12E,14E,19Z,22R.
+    It matches the native graph after changing only the two diene bonds to E, with
+    reciprocal chirality-aware graph matches. It is a supported repair candidate,
+    not an adopted native xref.
+  snapshot_sha256: 4b38a1c3d67bdb90dff69bc698744ee8d207c0b1fbf4c2484a02e131fbf46f44
+- evidence_id: mapping
+  kind: validation
+  reference: /private/tmp/am-review-session/517-final-map.py
+  locator: 019 RDKit2026.03.5 interpreter, cwd052; 517-map.py and 517-final-mapping.json
+  accessed_at: '2026-10-21T17:55:18Z'
+  support: supports
+  summary: 'Native zero-based atoms 9=10 and 11=12 are Z/Z; the primary-supported
+    candidate is E/E. Native alcohol atom 15 maps to ChEBI atom 17: R versus S. Literal
+    local Figure1B coordinate reconstruction gives R for oxazole-near atom 15 and
+    S for diene-near atom13, matching native tetrahedra. This is explicit atom/bond
+    mapping, not a comparison of identifier strings or CIP names alone. The sulfur-containing
+    alkene and other native centres are retained in the diagnostic candidate.'
+  snapshot_sha256: b9c98e85784b4db92d57ec3d5c8c61075eb0cc9b0987acb7846fb6ce27c02b09
+- evidence_id: primary2024
+  kind: primary_source
+  reference: PMID:39042396
+  locator: DOI10.1021/jacs.4c06080; full main text, Fig1B/C and Scheme1 inspected
+  accessed_at: '2026-10-21T17:49:03.611418Z'
+  support: supports
+  summary: The original chemoenzymatic synthesis constructs pre-griseoviridin and
+    converts it to griseoviridin with SgvP. The text specifies E-selective vinyl-iodide
+    preparation and separation of the desired E isomer, syn diol starting material,
+    D-cysteine and R-propylene oxide. SgvP conversion is a biosynthetic reaction,
+    not an antibacterial target assay. The main source and actual figures were read;
+    no claim of newly inspected final-product crystallography or complete SI spectral
+    reanalysis is made.
+  snapshot_sha256: 86b16a5397ac67f4017d54f3cf3fa86c8dd5571e181799164736774cac6829dc
+- evidence_id: primary2024-figure
+  kind: primary_source
+  reference: https://doi.org/10.1021/jacs.4c06080
+  locator: Actual Fig1B/C, griseoviridin 1; Scheme1A/B separately inspected
+  accessed_at: '2026-10-21T17:50:56.577135Z'
+  support: supports
+  summary: The actual original figure shows both conjugated diene bonds E and the
+    syn diol. Direct local mapping retains native R/S alcohol configurations; it rejects
+    the native Z/Z diene and cautions against the ChEBI alcohol epimer. The paper
+    is an independent synthesis with isolated final product, not a database structure
+    drawing.
+  snapshot_sha256: 5cc5de6c8bfe08115b4d5c3f4552f3821581528f82f07bf4be4390a70f3420fb
+- evidence_id: primary2019
+  kind: primary_source
+  reference: PMID:30995807
+  locator: DOI10.3390/molecules24081495; complete main text, Table1 and Methods 3.1–3.5
+  accessed_at: '2026-10-21T17:48:19.888174Z'
+  support: supports
+  summary: The original natural-isolation study identifies griseoviridin as compound
+    2 from Streptomyces sp.OPMA1730, using HPLC-purified material and NMR/literature
+    comparison. Table1 single-agent MICs are 1.56 µg/mL for M.avium JCM15430 and M.intracellulare
+    JCM6384, >100 for M.smegmatis M341, and 6.25 for M.bovis BCG Pasteur. The liquid
+    assay used supplemented 7H9,37°C120h followed by MTT; MIC was 90% growth inhibition.
+    These exact preparation/strain endpoints are distinct from complete growth inhibition
+    and clinical susceptibility.
+  snapshot_sha256: 4a2bac7875924ca2f07c13a2e25404ce75e34ea5bd054512721decbbf274603c
+- evidence_id: primary2019-figure
+  kind: primary_source
+  reference: https://doi.org/10.3390/molecules24081495
+  locator: Actual Fig1, griseoviridin compound 2
+  accessed_at: '2026-10-21T17:50:56.581914Z'
+  support: supports
+  summary: The natural-isolation primary figure independently depicts the E/E diene,
+    corroborating the synthesis figure and rejecting the stored Z/Z graph. Nosiheptide
+    1 and etamycin 3 are separate substances. Combination checkerboards and the silkworm
+    ED50 concern 2+3 and must not be imported as single-agent griseoviridin values.
+  snapshot_sha256: 42019e9fca61e49fdcdcc875a1d6dfcc1b2f74dc67329d7eb83281da7601302e
+- evidence_id: primary1975
+  kind: primary_source
+  reference: PMID:1096949
+  locator: DOI10.1016/0005-2787(75)90206-3; original abstract in discovery metadata
+  accessed_at: '2026-10-21T17:47:44.292853Z'
+  support: supports
+  summary: The original abstract reports griseoviridin binding to the larger E.coli
+    ribosomal subunit and inhibition of peptidyl-tRNA interaction at the donor site,
+    with competition by other PTC drugs. Yeast/human 80S affinity was about 100-fold
+    weaker, not absent. This is a compound-specific mechanism lead; full original
+    methods, reagent stereochemical characterization and numerical binding curves
+    were not retrieved.
+  snapshot_sha256: f57f4dbaad2d70517694510a0d17c3c18a335ea0a93b702b8e05fea98602544d
+- evidence_id: primary2017
+  kind: primary_source
+  reference: PMID:29065880
+  locator: DOI10.1186/s12934-017-0792-8; complete main text, transporter Results/Discussion
+    and Methods
+  accessed_at: '2026-10-21T17:48:19.888220Z'
+  support: context_only
+  summary: Original deletion/complementation and overexpression studies concern griseoviridin/viridogrisein
+    production in S.griseoviridis NRRL2427. SgvT1/T2 affect production and proposed
+    export; SgvT2 has nucleotide-binding domains but no transmembrane segments. These
+    data do not establish a direct antimicrobial target or a clinical resistance phenotype
+    of the native Z/Z graph. Supplementary experiments were not independently reanalyzed.
+  snapshot_sha256: aa0e853c99a4eb5297b344d39b111189e0142f9e7f51a5b43f7c619af46e9d28
+- evidence_id: bibliography
+  kind: database
+  reference: PMID:15700955
+  locator: All48 unique current ARO definition/class/target/determinant reference
+    leads, individually disposed in517-lead-dispositions.json
+  accessed_at: '2026-10-21T17:55:18Z'
+  support: context_only
+  summary: The sole native definition PMID is a secondary Chemical Reviews article,
+    read at metadata depth because no abstract/full text was retrieved. All other
+    47 available abstracts were read, with exact compound and allele boundaries retained.
+    Broad Erm/MLS-B, Vat/virginiamycin or dalfopristin, Cfr/PhLOPSa and comparator-ribosome
+    studies do not automatically establish the26 exact GV relationships. Native database
+    qualification already declares this limitation.
+  snapshot_sha256: bcc2f456909468f9952ebfa0a675cb841a0d8bb34c915d537241727876981e14
+- evidence_id: bibliography-snapshot0
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A10445875%20OR%20EXT_ID%3A10508434%20OR%20EXT_ID%3A10952608%20OR%20EXT_ID%3A11408212%20OR%20EXT_ID%3A11841212%20OR%20EXT_ID%3A12019067%20OR%20EXT_ID%3A12102603%20OR%20EXT_ID%3A12177341%20OR%20EXT_ID%3A12384375%20OR%20EXT_ID%3A12417742%20OR%20EXT_ID%3A12771141%20OR%20EXT_ID%3A12860128%20OR%20EXT_ID%3A14693532%20OR%20EXT_ID%3A14711653%20OR%20EXT_ID%3A15590712%20OR%20EXT_ID%3A15700955%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Original EPMC core response batch 0,16 records
+  accessed_at: '2026-10-21T17:47:43.710798Z'
+  support: context_only
+  summary: Metadata and available original abstracts preserved. The per-lead disposition
+    file identifies source term, actual reading depth and exact-compound transfer
+    boundary. This response is not represented as full-text reading of all papers.
+  snapshot_sha256: 974b37b8be51c9ad2004033e76102c7c944e1ab8f4c6df5bef7a0e31dc7d6904
+- evidence_id: bibliography-snapshot1
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A16127056%20OR%20EXT_ID%3A16174779%20OR%20EXT_ID%3A16257828%20OR%20EXT_ID%3A16569865%20OR%20EXT_ID%3A17015629%20OR%20EXT_ID%3A17145796%20OR%20EXT_ID%3A1768148%20OR%20EXT_ID%3A1804017%20OR%20EXT_ID%3A18174304%20OR%20EXT_ID%3A18299414%20OR%20EXT_ID%3A18439898%20OR%20EXT_ID%3A18952616%20OR%20EXT_ID%3A20713681%20OR%20EXT_ID%3A2113911%20OR%20EXT_ID%3A22547628%20OR%20EXT_ID%3A23752511%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Original EPMC core response batch 1,16 records
+  accessed_at: '2026-10-21T17:47:43.711690Z'
+  support: context_only
+  summary: Metadata and available original abstracts preserved. The per-lead disposition
+    file identifies source term, actual reading depth and exact-compound transfer
+    boundary. This response is not represented as full-text reading of all papers.
+  snapshot_sha256: 5d7b1fe1c0eed700fbd78c6e6d30324e5018ab16b3c7293504994a375200f54f
+- evidence_id: bibliography-snapshot2
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A2492520%20OR%20EXT_ID%3A26219215%20OR%20EXT_ID%3A26650381%20OR%20EXT_ID%3A27244062%20OR%20EXT_ID%3A28663118%20OR%20EXT_ID%3A29259290%20OR%20EXT_ID%3A3025178%20OR%20EXT_ID%3A3117622%20OR%20EXT_ID%3A6792593%20OR%20EXT_ID%3A7961464%20OR%20EXT_ID%3A8067735%20OR%20EXT_ID%3A8171126%20OR%20EXT_ID%3A8973363%20OR%20EXT_ID%3A9187657%20OR%20EXT_ID%3A9735285%20OR%20EXT_ID%3A9973557%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Original EPMC core response batch 2,16 records
+  accessed_at: '2026-10-21T17:47:43.712045Z'
+  support: context_only
+  summary: Metadata and available original abstracts preserved. The per-lead disposition
+    file identifies source term, actual reading depth and exact-compound transfer
+    boundary. This response is not represented as full-text reading of all papers.
+  snapshot_sha256: 0e4f53650262e668742c0d00eacb281ceefae4dea666577496c3434a860a5dfc
+- evidence_id: clb-primary
+  kind: primary_source
+  reference: PMID:22547628
+  locator: DOI10.1128/AAC.00673-12; public PMC Methods and selected Results inspected
+    at 17:54 UTC
+  accessed_at: '2026-10-21T17:47:43.711690Z'
+  support: context_only
+  summary: ClbA/B/C were expressed in E.coli AS19. The tested streptogramin reagent
+    was Synercid A/B mixture, not griseoviridin; MICs used LB,37°C24h and complete
+    growth inhibition. Thus the paper supports heterologous-host PhLOPSa scope but
+    cannot supply exact-GV MICs for the three native relationships. Subsequent retrieval
+    returned challenges; no new raw full-text hash is claimed.
+  snapshot_sha256: 5d7b1fe1c0eed700fbd78c6e6d30324e5018ab16b3c7293504994a375200f54f
+- evidence_id: adapter
+  kind: search
+  reference: /private/tmp/am-review-session/517-adapter-results.json
+  locator: 'Before open-web research: structured catalog plus covered-dataset queries'
+  accessed_at: '2026-10-21T17:55:18Z'
+  support: context_only
+  summary: Queries for ermC/cfr in s_aureus/staph_precise108, erm37 in m_tuberculosis/modulome,
+    and ermB in s_pneumoniae/precise718 returned no genes/modules. Catalog and actual
+    commands are preserved. This is a dataset coverage result, not negative evidence
+    for resistance or target binding. No unsupported homonym or taxon transfer was
+    made.
+  snapshot_sha256: 1e9071785f2d52f95f036f0856db158558d890b31584586d3b6cb54b30fd04e9
+  search_scope: Covered iModulonDB organisms/datasets from the preserved catalog;
+    actual culturebotai-claw runner commands in517-adapter.py.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Natural-product geometry versus internally valid fallback
+  outcome: concern
+  summary: The neutral formula, charge, masses and four tetrahedral centres are internally
+    coherent, but the native diene denotes the wrong geometric isomer. Both primary
+    figures support E/E. Current ChEBI separately disagrees at an alcohol centre;
+    candidate CID11225326 preserves the primary-supported native tetrahedra and corrects
+    only the diene.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  evidence_ids:
+  - native
+  - pubchem
+  - chebi
+  - candidate
+  - mapping
+  - primary2024-figure
+  - primary2019-figure
+- assessment_id: grounding
+  area: grounding
+  topic: Source mint, broader class and exact chemical xrefs
+  outcome: concern
+  summary: The ARO mint and broader streptogramin parent/class are reproducible and
+    appropriate for intended griseoviridin. The PubChem fallback reproduces the wrong
+    diene graph; CHEBI:199588 is a separate alcohol epimer and cannot be treated as
+    exact equivalence. These are chemical xrefs, not drug-level associations.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  evidence_ids:
+  - aro
+  - native
+  - mapping
+  - pubchem
+  - chebi
+- assessment_id: evidence
+  area: evidence
+  topic: Definition, target and all 26 resistance evidence qualifiers
+  outcome: supported
+  summary: Definition classification is supported independently by the primary sources
+    even though the adopted citation is secondary. All26 native resistance notes explicitly
+    identify CARD database assertions; the target also declares PRIMARY_EVIDENCE_NEEDED
+    and unspecified assay context. Current ARO preserves those associations, and no
+    new claim of compound-specific primary proof is introduced. Their unresolved breadth
+    remains a follow-up, not26 confirmed unsupported-primary defects.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  evidence_ids:
+  - native
+  - aro
+  - bibliography
+  - clb-primary
+  - primary1975
+- assessment_id: activity
+  area: completeness
+  topic: Exact activity and optional enrichment
+  outcome: concern
+  summary: The natural E/E antibiotic has directly measured single-agent mycobacterial
+    MICs in 2019. These do not validate the stored Z/Z isomer or imply clinical susceptibility.
+    Optional activity_spectrum, producer and causal graph fields are not required
+    merely because literature is available; structure adjudication must precede attaching
+    new biological observations. Combination and biosynthetic endpoints remain distinct.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  evidence_ids:
+  - primary2019
+  - primary2019-figure
+  - primary2017
+  - primary2024
+- assessment_id: provenance
+  area: provenance
+  topic: Whole-record coverage and maintained owners
+  outcome: supported
+  summary: Entire record and actual source rows were read, including all 26 resistance
+    assertions, one target and four historical seed/reseed events. Original 13 hashes
+    were preserved; expanded 29 owner/context inputs remain unchanged. No native/source/history
+    edit or review-status promotion occurred.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  evidence_ids:
+  - native
+  - owners
+  - search
+- assessment_id: schema
+  area: schema
+  topic: Focused native validity and deterministic chemistry
+  outcome: supported
+  summary: Focused chemistry, schema validation and strict validation all exited0.
+    Independent SMILES/InChI agreement proves encoding consistency, not that the encoded
+    isomer is the natural product. Required shared corpus gates are recorded separately
+    by root before finalization.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  evidence_ids:
+  - mapping
+  - native
+findings:
+- finding_id: F1
+  issue_key: griseoviridin-native-zz-versus-natural-ee
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: The native structure has the wrong conjugated-diene geometry
+  description: 'Native SMILES/InChI and CID6441064 specify Z at both diene bonds (zero-based
+    native atoms 9=10 and 11=12). Original 2019 natural-isolate Fig1 and 2024 synthetic
+    griseoviridin Fig1/Scheme1 show E/E. The tetrahedral centres need not be inverted:
+    changing only those bonds in scratch gives key UXWOXTQWVMFRSE-JCSRQJCQSA-N, exactly
+    matching current candidate CID11225326. The named natural-product identity cannot
+    be repaired by internal validation or by retaining a faithfully copied wrong fallback.'
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  field_paths:
+  - chemical_structure.smiles
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  - xrefs[2]
+  evidence_ids:
+  - native
+  - pubchem
+  - mapping
+  - candidate
+  - primary2024
+  - primary2024-figure
+  - primary2019-figure
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, exact xrefs and bibliography
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem fallback structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem fallback retrieval
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-yaml-record:Workflow:identity
+  native_severity: blocker
+  normalization_reason: The explicit native rubric assigns blocker to wrong chemical
+    identity; two assigned geometric isomers are different exact structures even when
+    formula, mass and graph parsing pass.
+- finding_id: F2
+  issue_key: griseoviridin-chebi199588-alcohol-epimer
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The exact ChEBI cross-reference contains a different alcohol stereoisomer
+  description: Current CHEBI:199588 has E/E bonds but assigns S at the oxazole-near
+    alcohol (native atom 15, ChEBI atom 17), whereas the primary figure mapping and
+    native tetrahedron are R. Thus even after the diene is corrected, this exact xref
+    would still point to a different stereoisomer. Do not replace the entire native
+    graph from ChEBI or reinterpret its two-star authority as experimental proof.
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  field_paths:
+  - xrefs[1]
+  evidence_ids:
+  - chebi
+  - mapping
+  - candidate
+  - primary2024-figure
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, exact xrefs and bibliography
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-yaml-record:Workflow:identity
+  native_severity: major
+  normalization_reason: This is a distinct exact-equivalence grounding error that
+    survives the diene repair; major is appropriate without double-counting it as
+    another native identity blocker.
+actions:
+- action_id: A1
+  description: Adjudicate the ARO-to-PubChem fallback and regenerate a primary-supported
+    E/E structure.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, exact xrefs and bibliography
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem fallback structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem fallback retrieval
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Publication-backed exact structure override if needed
+  acceptance_checks:
+  - Validate candidate CID11225326 against the inspected primary figures and original
+    characterization before adoption; preserve the supported alcohol, cysteine-derived
+    and methyl-bearing stereocentres and sulfur-alkene geometry.
+  - Update the maintained mapping/structure owner and all coupled chemistry fields
+    consistently; do not patch the generated YAML directly or preserve CID6441064
+    as exact equivalence to natural griseoviridin.
+  - After authorized regeneration, run exact graph/stereo/xref checks, schema/strict,
+    reference/history validation and required corpus reproduction/QC gates.
+  generator: scripts/seed_from_sources.py
+- action_id: A2
+  description: Remove or qualify the incompatible exact ChEBI mapping through maintained
+    source handling.
+  finding_ids:
+  - F2
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, exact xrefs and bibliography
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  acceptance_checks:
+  - Record the atom 15R versus ChEBI S difference with the actual primary figure and
+    authority snapshots; do not transfer the ChEBI epimer into the repaired graph.
+  - Retain provenance of the rejected source association and verify the rebuilt exact-xref
+    set against the chosen primary-supported graph.
+  generator: scripts/seed_from_sources.py
+- action_id: A3
+  description: Optional later primary enrichment, after identity repair.
+  finding_ids: []
+  target_ids:
+  - antibioticmech:aro-4a4590abba
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Database evidence qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Qualification transform
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/griseoviridin.yaml
+    role: Future validated curator-owned primary target/activity annotation
+  acceptance_checks:
+  - Keep all imported resistance relationships database-qualified unless exact compound/allele/host
+    experiments are inspected; class, mixture and homolog data must not become direct-GV
+    evidence.
+  - Retrieve the complete 1975 target paper before attaching detailed binding conditions;
+    preserve E.coli versus eukaryotic scope and distinguish 2019 single-agent MIC90
+    values from combination/silkworm outcomes.
+  - Any added native annotation requires the separate validated-writer and curation-history
+    workflow; absent optional fields are not defects.
+  generator: scripts/seed_from_sources.py
+limitations:
+- Required shared full-corpus gates are incorporated separately by root before finalization;
+  actual focused gates are recorded here.
+- The 1976 original crystallographic/constitution papers (PMID1254852 and1033191)
+  and 2000 total-synthesis paper were read only at metadata depth; publisher full
+  text was not retrieved. The 2019 and 2024 main papers and actual structure figures
+  independently establish the diene conflict. Linked supplementary PDFs returned access
+  challenges/403 responses, so individual NMR spectra and full original absolute-configuration
+  proofs were not reanalyzed.
+- The 2024 main contains an apparent quinupristin/dalfopristin group-label swap in
+  its background paragraph. That unrelated prose was not used to classify native griseoviridin;
+  primary structure, synthesis and isolated-product passages are the basis here.
+- All48 current ontology citation leads were disposed individually:47 original abstracts
+  plus the definition review metadata; selected 2012 Clb Methods/Results were additionally
+  inspected. This is not full-text experimental adjudication of every resistance edge.
+  The1975 exact-GV mechanism source remains abstract-depth.
+- Several EPMC fullTextXML routes returned 500, while PMC/ACS/MDPI endpoints returned
+  403 or HTTP200 challenge HTML. Fetch manifests preserve those failures; later successful
+  main/figure retrievals are separately hashed. The failed generic Figshare route
+  and mistyped initial Clb publisher DOI were not treated as evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- The original 13 input hashes and all 29 expanded input hashes were rechecked before
+  draft creation. All source/figure snapshots used for findings have explicit hashes
+  and actual access timestamps.
+- No native record, maintained source, history, progress file, saved review bundle
+  or Git state was edited. Root retains final bundle saving and publication.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
