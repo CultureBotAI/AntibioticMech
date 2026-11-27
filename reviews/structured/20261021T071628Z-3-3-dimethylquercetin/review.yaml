@@ -1,0 +1,696 @@
+schema_version: 1.0.0
+review_id: 20261021T071628Z-3-3-dimethylquercetin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: '3,3′-Dimethylquercetin: supported identity and scoped antibacterial evidence'
+started_at: '2026-10-21T07:08:59Z'
+finished_at: '2026-10-21T07:16:28Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the seed or curate the target; source
+    and primary-paper checks are independent of generated pages and historical reports.
+    Agent review is not human scientific sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The exact neutral dimethylquercetin structure, adopted provenance and antibacterial
+  filing are supported. Focused schema, strict and chemistry checks pass. One informational
+  follow-up concerns optional strain-specific activity and a qualified membrane-morphology
+  narrative; no required field defect is established. Independent MetaCyc access and
+  finer assay interpretation remain limited. Scientific assessment retains the stated
+  evidence limits; full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/antibiotics/antibacterial/3-3-dimethylquercetin.yaml
+    sha256: 4cdc335f961faf6928a448ee101c537b26c3efa0e11984f6e9395144549bdc1f
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:146138
+  path: data/antibiotics/antibacterial/3-3-dimethylquercetin.yaml
+  label: 3,3'-dimethylquercetin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Complete target and source-owner review, with bounded official identity
+    and primary experimental literature assessment.
+  selection: 'Queue index024: exactly CHEBI:146138 at its locked path.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:146138
+  exclusions:
+  - target: Quercetin, monomethylquercetin, glycosides and other flavonoids
+    reason: Comparison context only; chemical, activity and mechanism claims are not
+      transferred between compounds.
+checks:
+- check_id: schema
+  name: Single-record LinkML schema
+  status: passed
+  required: true
+  summary: LinkML reported No issues found.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/3-3-dimethylquercetin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Single-record strict validation
+  status: passed
+  required: true
+  summary: Scanned1 file;0 files with ERROR and0 ERROR rows.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/3-3-dimethylquercetin.yaml --out /private/tmp/am-review-session/024-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Independent structure-string consistency
+  status: passed
+  required: false
+  summary: Both stored SMILES and InChI parse and reproduce the recorded key, formula,
+    charge and rounded masses; one fragment and no chiral centres.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/024-chemistry-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: metacyc
+  name: Independent MetaCyc identity cross-reference
+  status: unavailable
+  required: false
+  summary: Official ChEBI lists CPD-14946, but both direct MetaCyc URL forms were
+    inaccessible; no independent structure comparison was possible.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - chebi
+  - metacyc
+- check_id: adapter
+  name: Structured expression-module applicability
+  status: not_applicable
+  required: false
+  summary: The native record names no gene, protein, regulator or expression dataset.
+    The assessed antibacterial evidence is growth inhibition and microscopy; no computational
+    module claim is introduced.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - record
+  - inula
+  - sar
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:146138
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:146138
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:146138
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:146138
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:146138
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:146138
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:146138
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:146138
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:146138
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/3-3-dimethylquercetin.yaml
+  locator: Entire YAML, including nine synonyms, three parents, one role, three xrefs
+    and three seeder history events.
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: supports
+  summary: The exact ChEBI-grounded seed contains a source-owned definition of plant
+    isolation, antibacterial and anticancer properties. It has no molecular_targets,
+    mode_of_action, activity_spectrum, resistance_mechanisms, producer_organisms,
+    clinical annotations, datasets, causal_graphs or referenced activity collections.
+    No optional absence is treated as a schema error.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: CHEBI:146138 row2694; PATHS.tsv row250; MANIFEST inventory hash; conf/sources.yaml;
+    extractor176–334; seeder structure_from_chebi/build_record/mint.
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: supports
+  summary: The adopted row matches the whole emitted identity, structure, parents,
+    xrefs and antibacterial role. The source version is2026-08-30. The seeder mint
+    algorithm reproduces antibioticmech:chebi-4745191992. Ten raw PMIDs are discovery
+    leads, deliberately not wholesale literature evidence. Filtering retains in-scope
+    antimicrobial roles and reviewed source relationships; blank mechanism is reproducible
+    from the empty mechanism_role_ids column.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:146138
+  locator: 'Official live compound page: definition, chemical strings, names, outgoing
+    relations, registry and manual xrefs.'
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: supports
+  summary: CHEBI:146138 has matching formula C17H14O7, net charge0, mass330.292 and
+    exact mass330.07395, SMILES/InChI and key FMEHGPQTMOPUGM-UHFFFAOYSA-N. The listed
+    is_a parents are CHEBI:138730,23798,27116;33282 is antibacterial role. CAS4382-17-6,
+    LMPK12112752 and CPD-14946 are listed. Non-antimicrobial plant/apoptosis/antineoplastic
+    roles lie outside the adopted antimicrobial-role selection. Names designate methylation
+    of the3 and3′ hydroxyl oxygens, not a different positional isomer.
+- evidence_id: lipidmaps
+  kind: database
+  reference: https://www.lipidmaps.org/databases/lmsd/LMPK12112752
+  locator: 'Curated LMSD entry: name, formula, exact mass, InChI/key and ChEBI cross-reference.'
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: supports
+  summary: LIPID MAPS independently identifies quercetin3,3′-dimethyl ether with the
+    same InChI and InChIKey, formula and exact mass330.073955, and links to CHEBI146138.
+    This supports exact equivalence of the retained lipidmaps xref.
+- evidence_id: metacyc
+  kind: database
+  reference: https://metacyc.org/compound?orgid=META&id=CPD-14946
+  locator: Direct compound URL and META/NEW-IMAGE?type=COMPOUND&object=CPD-14946 attempted.
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: context_only
+  summary: Neither direct page yielded inspectable content. Official ChEBI supports
+    the presence of the source assertion; independent MetaCyc structural equivalence
+    remains unverified. This is an access limitation, not evidence that the xref is
+    false.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit2026.03.5
+  locator: /private/tmp/am-review-session/024-chemistry-check.py and024-chemistry.json.
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: supports
+  summary: Independent parsing of both stored representations yields identical Standard
+    InChI/key, C17H14O7, charge0, average mass330.29200000000003 and exact mass330.073952788.
+    Each representation is one connected molecule with no detected chiral centres.
+    Identity remains corroborated externally by ChEBI and LIPID MAPS.
+- evidence_id: search-local
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: prepare.py24 inclusive worktree search; follow-up exact/alias searches
+    in curation/reviews/reports/yaml_record_review.
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: context_only
+  summary: The hidden-and-ignored-inclusive worktree search finds source/generated/index/research-ledger
+    references. Focused curation/reviews/historical-report search returned no target-specific
+    override or report in those scopes. Whole-file inspection independently establishes
+    the absent optional fields; this does not establish global evidence absence.
+  search_scope: rg --no-ignore --hidden over worktree003 for CHEBI:146138, exact label
+    and slug, excluding .git/.venv; follow-up -i queries146138,FMEHGPQTMOPUGM,3.?3.?dimethylquercetin,3.?O.?methylisorhamnetin
+    in curation reviews reports/yaml_record_review, excluding record_review_queue.tsv.
+    Hidden and ignored files were included.
+- evidence_id: literature
+  kind: primary_source
+  reference: 'Europe PMC official API: raw ChEBI PMID lead set'
+  locator: /private/tmp/am-review-session/024-literature.json; full abstracts and
+    PMID/DOI metadata for15202557,16722375,20877205,21343428,21526045,22041066,22418930,23109858,28300698,28394271.
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: context_only
+  summary: All ten adopted lead identifiers resolve. Several concern isolation or
+    analysis rather than antibacterial mechanism. PMID21526045 studies a glycoside-containing
+    fraction, not this aglycone alone;15202557 centres on quercetin/oxazolidines and21343428
+    on myricetin methyltransferases. The exact aglycone is isolated/analysed in16722375,20877205,22041066;28300698
+    reports it among Rumex isolates without exact-compound activity values in the
+    abstract. These leads are not promoted to claim-level support beyond the inspected
+    text.
+- evidence_id: inula
+  kind: primary_source
+  reference: PMID:22418930
+  locator: DOI:10.3390/molecules17033291; official fullTextXML PMC6268972; Results,
+    Tables1–2, Figure3 caption, Methods3.3/3.5/3.7. Scratch024-inula.xml sha2561e1df2a3121b32d869c84ea0cfc3e3d4705a0913f78cbbc64b62cc7c5864c507.
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: supports
+  summary: Exact dimethylquercetin has Table2 MIC62.5µg/mL against B.cereus toxigenic
+    strainTS,125 against S.typhimuriumATCC14028,250 against the MRSA clinical isolate
+    and C.albicansATCC90028, and >250 against E.coliATCC10798. The assay is broth
+    microdilution with24h incubation and complete turbidity inhibition endpoint. SEM
+    after24h at62.5µg/mL is interpreted as envelope damage/leakage; it does not independently
+    establish the initiating molecular target. MCF-7 antiproliferation and apoptosis
+    observations support the bounded in-vitro anticancer wording. Isolation is described
+    from Inula viscosa, with earlier structural characterization cited.
+- evidence_id: halimodendron
+  kind: primary_source
+  reference: PMID:23109858
+  locator: DOI:10.3390/ijms130911349; official fullTextXML PMC3472750; Results2.1–2.3,
+    Methods3.4–3.7; compound4 spectrometry. Scratch024-halimodendron.xml sha256cda13361cb1151be338d853d58a7ae61885df053b722e03c29c6d60c976f7720.
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: supports
+  summary: Compound4 is explicitly the3,3′-dimethyl aglycone, distinguished from compound5
+    glucoside. Extraction, NMR and MS support the isolation identity. The antibacterial
+    assay uses seven named strains, LB at28°C and MTT readout; the reported aglycone
+    group has MIC50–150µg/mL. That grouped range is not assigned as an exact MIC for
+    each compound/taxon. Fungal assays use distinct endpoints. Graphical per-organism
+    values require figure extraction before curation; no source organism is automatically
+    promoted to a biosynthetic producer.
+- evidence_id: sar
+  kind: primary_source
+  reference: PMID:28394271
+  locator: DOI:10.3390/molecules22040608; official fullTextXML PMC6154607; compound6
+    synonym, Table1, Results2.1–2.3 and Methods4.1–4.4. Scratch024-sar.xml sha2560269f27b188e89cfce41cbc7da2a5cb1c6baf7143981f4bee9f507ad815d1f24.
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: supports
+  summary: 3-O-Methylisorhamnetin is the exact5,7,4′-trihydroxy-3,3′-dimethoxyflavone.
+    Table1 reports solid-medium inhibition at2µg/µL for B.cereus and1µg/µL for B.coagulans,
+    and >4 for the other six organisms. The table/methods concentration scale differs
+    from µg/mL wording in Results prose; do not silently convert this assay into broth
+    MICs. The text reports a B.subtilis turbidity effect at0.18µg/µL with data not
+    shown, while plotted viability curves concern other flavonoids. Lipophilicity
+    associations and other compounds’ membrane/efflux explanations do not establish
+    this molecule’s direct target or resistance mechanism.
+- evidence_id: web-search
+  kind: search
+  reference: Free web search
+  locator: Exact name and3-O-methylisorhamnetin combined with antibacterial/mechanism;
+    exact MetaCycID; bounded plant-biosynthesis lead search.
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: context_only
+  summary: Search retrieved the inspected2012/2017 primary studies, cancer/vascular
+    studies, biosynthesis/biotransformation leads and secondary/vendor material. Vendor
+    mechanism prose, docking, related compounds and uninspected biosynthetic leads
+    were not adopted. No universal mechanism-evidence absence is claimed.
+  search_scope: 'Queries: "3,3''-dimethylquercetin" mechanism antibacterial; "3-O-methylisorhamnetin"
+    antibacterial mechanism; site.biocyc.org and site.metacyc.org "CPD-14946"; "3,3''-dimethylquercetin"
+    "biosynthesis" Serratula. Public sources only,2026-10-21UTC.'
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity, structure, equivalence, activity, mechanism, producer, datasets
+    and REVIEWED gates; docs/CURATION.md/HARMONIZATION.md.
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: supports
+  summary: Optional fields need not all be populated. Direct binding and biochemical
+    mechanism need claim-specific evidence; source isolation alone does not establish
+    biosynthesis. A source-derived role is distinct from structured AST measurements.
+    New scientific annotations belong on the actual native record through validated
+    writer/history; source-owned identity fields are maintained upstream.
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual commands run in isolated worktree003;024-validation.tsv.
+  accessed_at: '2026-10-21T07:13:09Z'
+  support: supports
+  summary: Both focused gates exited0. LinkML reported no issues; strict scanned1
+    file and produced0ERROR rows.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact aglycone and O-methyl positions
+  outcome: supported
+  summary: The label, nine synonyms, source concept, official databases and calculated
+    strings denote one neutral aglycone methylated at3 and3′. Glycosides, other dimethyl
+    isomers and parent quercetin remain separate.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - record
+  - owner
+  - chebi
+  - lipidmaps
+  - chemistry
+- assessment_id: equivalence
+  area: grounding
+  topic: Parents and xref scope
+  outcome: supported
+  summary: Three chemical-class parents are broader. The lipidmaps xref matches the
+    exact structure; CAS is corroborated as an official ChEBI registry assertion.
+    MetaCyc is retained as an upstream assertion with independent access explicitly
+    limited.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - chebi
+  - lipidmaps
+  - metacyc
+  - owner
+- assessment_id: classification
+  area: grounding
+  topic: Antibacterial filing and source definition
+  outcome: supported
+  summary: The adopted antibacterial role and exact-compound primary inhibition support
+    filing. The isolation and in-vitro antiproliferative portions of the definition
+    have direct experimental support. Additional fungal observations are optional
+    activity-curation opportunities; they do not make the current source-derived antibacterial
+    role false.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - chebi
+  - owner
+  - inula
+  - halimodendron
+- assessment_id: mechanism
+  area: evidence
+  topic: Membrane morphology versus causal molecular mechanism
+  outcome: unknown
+  summary: No native mechanism or target is asserted. The microscopy study offers
+    a qualified membrane-damage narrative, but late morphological damage does not
+    establish a direct target or the primary cause of growth inhibition. The later
+    SAR study does not settle that causal ordering.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - record
+  - inula
+  - sar
+  - rubric
+- assessment_id: activity
+  area: completeness
+  topic: Optional strain- and assay-specific evidence
+  outcome: supported
+  summary: Exact-compound activity observations can be curated with their source conditions.
+    Avoid pooling different strains or readouts and preserve the2017 solid-assay unit
+    ambiguity. Missing optional observations are not an existing unsupported claim.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - record
+  - inula
+  - halimodendron
+  - sar
+  - rubric
+- assessment_id: producer
+  area: evidence
+  topic: Isolation source versus biosynthetic producer
+  outcome: unknown
+  summary: The record asserts plant isolation only, which is supported. No structured
+    producer is present. The inspected isolation studies alone do not justify a biosynthetic-producer
+    annotation; the bounded biosynthesis search identified leads that were not adopted
+    without full experimental adjudication.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - record
+  - inula
+  - halimodendron
+  - web-search
+  - rubric
+- assessment_id: other
+  area: evidence
+  topic: Resistance, clinical use, datasets and causal graph
+  outcome: not_applicable
+  summary: No native assertions require correction in these optional areas. Comparator
+    resistance, fungal spore inhibition, anticancer apoptosis, family-level efflux
+    hypotheses and plant transformations must not be recast as this compound’s antibacterial
+    resistance or direct molecular target.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - record
+  - inula
+  - halimodendron
+  - sar
+  - rubric
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership and scientific status
+  outcome: supported
+  summary: Source row, input hashes, deterministic mint, PATHS mapping and three seeder
+    events are coherent. SEEDED remains appropriate; scientific review does not itself
+    append an event or promote REVIEWED.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - record
+  - owner
+  - rubric
+- assessment_id: schema
+  area: schema
+  topic: Focused validation and chemistry
+  outcome: supported
+  summary: Schema and strict validation pass; independent chemistry reproduces the
+    source structure. Parent will insert shared gate evidence before final persistence.
+  target_ids:
+  - CHEBI:146138
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-146138-scoped-primary-activity-and-morphology-followup
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Primary activity and morphology observations offer optional scoped enrichment
+  description: Exact-compound primary experiments support strain-specific activity
+    and a qualified envelope-damage discussion. The2017 solid-assay concentration
+    wording is internally inconsistent and needs adjudication before quantitative
+    extraction. The current seed makes no false molecular-target or assay claim, and
+    these optional omissions do not require a corrective edit.
+  target_ids:
+  - CHEBI:146138
+  field_paths:
+  - activity_spectrum
+  - mode_of_action_notes
+  - discussions
+  evidence_ids:
+  - record
+  - inula
+  - halimodendron
+  - sar
+  - rubric
+  rule_id: native-review-checklist:Activity, Mode of action and Molecular targets
+  native_severity: Optional evidence-specific enrichment opportunity
+  normalization_reason: Informational because the unpopulated fields are optional
+    and no erroneous current assertion is established. A precise mechanistic enum
+    or direct target is not required from late morphology alone.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/3-3-dimethylquercetin.yaml
+    role: Curator-owned scientific additions through write_validated_antibiotic and
+      a native curation event
+actions:
+- action_id: A1
+  description: If the record is selected for curation, add exact-compound activity
+    observations with strain, endpoint, units and assay context; assess a qualified
+    membrane-morphology narrative or explicitly unresolved mechanism disposition.
+    Resolve or retain the2017 table/prose unit discrepancy without pooling it with
+    broth measurements.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:146138
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/3-3-dimethylquercetin.yaml
+    role: Curator-owned scientific additions through write_validated_antibiotic and
+      a native curation event
+  acceptance_checks:
+  - Each observation cites its own inspected primary experiment and preserves exact
+    chemical identity, isolate, conditions, qualifier and endpoint.
+  - Treat SEM envelope damage as an observed phenotype with unresolved causal ordering;
+    do not assert direct binding, a cell-wall synthesis target or an efflux resistance
+    route from these papers.
+  - Do not infer biosynthesis from extraction or transfer effects from other flavonoids,
+    glycosides or host-cell experiments.
+  - Use write_validated_antibiotic plus native curation event; rerun focused schema/strict
+    and required corpus gates for any separately authorized mutation.
+limitations:
+- Independent MetaCyc CPD-14946 content was inaccessible; the official ChEBI xref
+  assertion was verified. CAS was checked through official ChEBI rather than an independent
+  CAS registry.
+- Ten adopted PMID abstracts were inspected; the principal2012/2017 antibacterial
+  full texts were retrieved from official Europe PMC XML. Other primary full texts
+  and earlier referenced isolation/assay protocols were not comprehensively reviewed.
+- No per-strain values were extracted from the Halimodendron graphical figures. The2017
+  solid-assay table/prose unit conflict remains for a quantitative curator to adjudicate.
+  SEM interpretation is reported as the authors’ phenotype observation, not proof
+  of an initiating molecular mechanism.
+- The literature search is bounded and does not establish global absence of additional
+  mechanism, biosynthesis, dataset or target evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

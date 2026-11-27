@@ -1,0 +1,764 @@
+schema_version: 1.0.0
+review_id: 20261021T072639Z-3-6-diamino-10-methylacridinium-chloride
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: '3,6-Diamino-10-methylacridinium chloride: exact salt and primary-source boundaries'
+started_at: '2026-10-21T07:18:31Z'
+finished_at: '2026-10-21T07:26:39Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not create or curate the seed and independently
+    inspected official identity, primary abstracts and available experimental source
+    text; this agent review is not human scientific sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Exact single-chloride identity, source provenance and focused gates are supported.
+  One informational follow-up concerns unresolved compound mapping in the adopted
+  derivative study and candidate acriflavine experiments. No incorrect native scientific
+  claim was established; the review does not transfer hydrochloride, mixture or substituted-derivative
+  results into this seed. Scientific assessment retains the stated evidence limits;
+  full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/antibiotics/antibacterial/3-6-diamino-10-methylacridinium-chloride.yaml
+    sha256: 57365f8e26f3fee2a9cf08ebfcfb04a63f16835018c0ea00a543e7287c429118
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:383703
+  path: data/antibiotics/antibacterial/3-6-diamino-10-methylacridinium-chloride.yaml
+  label: 3,6-diamino-10-methylacridinium chloride
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Complete one-record review with live identity checks and bounded primary-source
+    assessment.
+  selection: Queue index 029, exactly CHEBI:383703.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:383703
+  exclusions:
+  - target: Acriflavine mixtures, the additional-HCl salt, proflavine salts and acridinium
+      derivatives
+    reason: Identity and source-boundary context only; each is a separate exact-form
+      record.
+checks:
+- check_id: schema
+  name: Single-record LinkML schema
+  status: passed
+  required: true
+  summary: Focused gate passed with no errors.
+  target_ids:
+  - CHEBI:383703
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/3-6-diamino-10-methylacridinium-chloride.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Single-record strict validation
+  status: passed
+  required: true
+  summary: Focused gate passed with no errors.
+  target_ids:
+  - CHEBI:383703
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/3-6-diamino-10-methylacridinium-chloride.yaml --out
+    /private/tmp/am-review-session/029-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: identity
+  name: Exact salt identity and charge cross-check
+  status: passed
+  required: true
+  summary: ChEBI, PubChem and chemistry recomputation agree on the single chloride.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - chebi
+  - pubchem
+  - chemistry
+- check_id: registry
+  name: Direct registry detail access
+  status: unavailable
+  required: false
+  summary: CAS and Reaxys assertions were checked in ChEBI; CAS was also corroborated
+    through attributed PubChem content. Direct registry detail was unavailable.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - chebi
+  - pubchem
+  - registry-access
+- check_id: structured-adapter
+  name: Structured expression-dataset follow-up
+  status: not_applicable
+  required: false
+  summary: The native record asserts no gene, regulator, protein or expression dataset.
+    Candidate gyrase and host-response papers remain outside exact-compound annotation
+    because material mapping is unresolved; no expression-module inference was made.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - record
+  - gyrase-primary
+  - mixture-primary
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:383703
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:383703
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:383703
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:383703
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:383703
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:383703
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:383703
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:383703
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:383703
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/3-6-diamino-10-methylacridinium-chloride.yaml
+  locator: 'Complete YAML: definition, three synonyms, parent and role, chemical fields,
+    two xrefs, source concept and three history events'
+  accessed_at: '2026-10-21T07:26:00Z'
+  support: supports
+  summary: The exact ChEBI-only seed is ANTIBACTERIAL, SEEDED and EXACT. Its definition
+    distinguishes the single chloride from mixtures with proflavine. There are no
+    native mechanism, molecular target, activity_spectrum, producer_organisms, resistance,
+    clinical, datasets or causal_graphs annotations. Optional absence alone is not
+    a defect.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: CHEBI:383703 row 2959; PATHS.tsv row 970; MANIFEST, extractor, source configuration
+    and seeder
+  accessed_at: '2026-10-21T07:26:00Z'
+  support: supports
+  summary: Identity, structure, source version 2026-08-30, minted identifier antibioticmech:chebi-263801f267
+    and three history events match. The adopted row carries PMID:6737429 as a source
+    lead, rather than a native claim-level evidence object. Generated-field corrections
+    belong upstream, while new scientific annotations belong on the actual record.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:383703
+  locator: Live official entry; scratch 029-chebi.html and parsed text
+  accessed_at: '2026-10-21T07:19:44Z'
+  support: supports
+  summary: ChEBI matches the salt label, definition, synonyms, CAS 86-40-8 and Reaxys
+    3579028, formula C14H14N3.Cl, charge 0, masses, structure strings and key KKAJSJJFBSOMGS-UHFFFAOYSA-N.
+    The organic chloride salt parent CHEBI:36094 and antibacterial role CHEBI:33282
+    are supported. The live entry also distinguishes this salt as a component of chloride.HCl
+    and a separate mixture; its extra intercalator role is a database assertion rather
+    than primary mechanism evidence.
+  snapshot_sha256: 9e5c724c8db47e49d807e14b9cfedebcb29ebab3b973426a3b0789a6f461789b
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/6842
+  locator: PUG-View JSON identity and CAS provenance sections; scratch 029-pubchem6842.json
+  accessed_at: '2026-10-21T07:24:15Z'
+  support: supports
+  summary: CID 6842 matches the complete InChI, key, one-chloride SMILES and summed
+    formula C14H14ClN3. It attributes CAS 86-40-8 to CAS Common Chemistry with the
+    exact salt name. This independently corroborates the adopted CAS assertion through
+    attributed database content, not through direct inspection of the CAS detail page.
+  snapshot_sha256: 92ed38182a913b8d263afdfb2308b338d22bb54870167a5cbb046c5f2dbb4f77
+- evidence_id: pubchem-alternate
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/614013
+  locator: PUG-View JSON descriptors; scratch 029-pubchem614013.json
+  accessed_at: '2026-10-21T07:24:15Z'
+  support: context_only
+  summary: The InChIKey lookup also returned CID 614013. Its currently returned SMILES,
+    InChI, key, formula and CAS attribution match CID 6842. Neither additional CID
+    is a native xref in this record; this review does not assert a unique PubChem
+    identifier or merge either entry.
+  snapshot_sha256: c7905e891b038bc138d947b14fa329bbc56ed80789ab29ecb9b53d972d452fa4
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit structure recomputation
+  locator: Both SMILES and InChI parsed; scratch 029-chemistry.json
+  accessed_at: '2026-10-21T07:21:08Z'
+  support: supports
+  summary: The written formula sums to C14H14ClN3. RDKit gives net charge 0, two encoded
+    fragments, average mass 259.74, exact mass 259.087625128 and the same InChI/key
+    from either representation. The cation plus chloride encoding is internally consistent
+    and distinct from the additional-HCl salt.
+  snapshot_sha256: e61a951154dd51007c4b75326f3362a9925e46cc260ccc08d5955c052b91ced4
+- evidence_id: registry-access
+  kind: authority
+  reference: https://commonchemistry.cas.org/detail?cas_rn=86-40-8
+  locator: Direct CAS detail page; scratch 029-cas86.html; direct Reaxys 3579028 URL
+    attempt
+  accessed_at: '2026-10-21T07:24:17Z'
+  support: partial
+  summary: The CAS page shell reports a failed detail load. The Reaxys public URL
+    was inaccessible to the web tool. Direct registry records were not inspected.
+    CAS is corroborated by attributed PubChem content, while Reaxys is verified only
+    as an official ChEBI assertion.
+  snapshot_sha256: 2f239172fc6f94cf371b6ea533370663c3b9757b0ba9f3bc83a79bf30a731989
+- evidence_id: config
+  kind: record_content
+  reference: conf/sources.yaml
+  locator: CHEBI:33282 class mapping and explicit exclusion comment for CHEBI:24853
+    intercalator
+  accessed_at: '2026-10-21T07:26:00Z'
+  support: supports
+  summary: ANTIBACTERIAL filing is reproducible. Intercalator is deliberately excluded
+    from automatic mode mapping because it is too generic to name a target; the empty
+    seeded mechanism is not a mapping defect.
+- evidence_id: adopted-primary
+  kind: primary_source
+  reference: PMID:6737429
+  locator: DOI 10.1021/jm00373a010; Firth et al., Journal of Medicinal Chemistry 27:865–870;
+    primary abstract in Europe PMC core response 029-adopted-core.json; https://pubmed.ncbi.nlm.nih.gov/6737429/
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: partial
+  summary: The inspected abstract reports screening 24 acridine derivatives against
+    Trypanosoma brucei. Its highlighted photoaffinity compound is 3-amino-6-azido-10-methylacridinium
+    chloride, chemically distinct from this diamino salt. Full Methods, compound table
+    and exact target-specific observations were not accessible. The abstract cannot
+    supply this record with a bacterial MIC or a direct molecular target.
+  snapshot_sha256: 0875c63c8b62749f8e6727a9bbc2640443489cc57132eb839b0f8689a391711f
+- evidence_id: gyrase-primary
+  kind: primary_source
+  reference: PMID:9148951
+  locator: DOI 10.1074/jbc.272.20.13302; primary abstract in Europe PMC core response
+    029-gyrase-core.json
+  accessed_at: '2026-10-21T07:19:28Z'
+  support: context_only
+  summary: The abstract locates its historically named acrB mutation within gyrB,
+    with S759R/R760C changes, and reports altered gyrase DNA binding and enzyme activity.
+    This historical allele must not be confused with the modern AcrB efflux pump.
+    The experiment does not by itself distinguish direct protein binding from interference
+    with the DNA substrate; exact acriflavine reagent composition remains unverified
+    because full Methods were unavailable.
+  snapshot_sha256: d01c5626ca2bc66577c23b164477c3426e83e4f395d9e27ebc6e7d732013a9bd
+- evidence_id: gyrase-followup
+  kind: primary_source
+  reference: PMID:9703246
+  locator: DOI 10.1248/bpb.21.667; https://www.jstage.jst.go.jp/article/bpb1993/21/7/21_7_667/_pdf/-char/en
+    ; visually inspected pp 667–668, abstract and Materials and Methods; scratch 029-gyrase98.pdf
+  accessed_at: '2026-10-21T07:19:46Z'
+  support: context_only
+  summary: The inspected pages of the 1998 follow-up concern quinolone-resistant gyrase
+    mutations and acriflavine susceptibility. Their enzyme methods refer back to the
+    1997 work, and the inspected pages do not resolve exact salt or mixture composition.
+    This is a candidate mechanistic source, not an adopted exact-compound target or
+    resistance annotation. The rest of the scanned paper was not fully reviewed.
+  snapshot_sha256: 9f658a0d51302ab2bd8f3c2a2d535042f83c5a76c617a87f20f1393e94d3e216
+- evidence_id: mixture-primary
+  kind: primary_source
+  reference: PMID:27694309
+  locator: https://pmc.ncbi.nlm.nih.gov/articles/PMC5224509/ ; DOI 10.1093/nar/gkw878;
+    Materials and Methods, Abstract and Discussion; scratch 028-cgas.xml
+  accessed_at: '2026-10-21T07:15:00Z'
+  support: context_only
+  summary: The cGAS study explicitly used Sigma A8126, a mixture of methylacridinium
+    chloride and proflavine. Its mammalian antiviral response and indirect cGAS engagement
+    cannot be transferred to this exact single-chloride record.
+  snapshot_sha256: 85440cec099816ca627a4902dfb63bba9d68a739a78bffb3319160dbc47fd5cc
+- evidence_id: hydrochloride-primary
+  kind: primary_source
+  reference: PMID:19866747
+  locator: DOI 10.1083/jcb.47.2.500; https://pdfs.semanticscholar.org/5189/d14f24807ef0f6019fa36420b62850d99d21.pdf
+    ; Methods p 501 and uncomplexed-dye controls; scratch 028-pta-semantic.pdf
+  accessed_at: '2026-10-21T07:15:58Z'
+  support: context_only
+  summary: The 1970 binding paper explicitly identifies the hydrochloride of the methylacridinium
+    chloride, corresponding to an additional-HCl preparation. It is useful boundary
+    context but is not adopted as an assay on this single chloride. Most of that paper
+    also concerns a separately prepared phosphotungstate complex.
+  snapshot_sha256: edefd1c736b98fc9fbe93d2397290326e070751394fb15428ba2597f93b1310b
+- evidence_id: hpylori-lead
+  kind: primary_source
+  reference: PMID:33118020
+  locator: DOI 10.1093/femsle/fnaa178; primary abstract in 029-h-pylori-core.json
+    and author-uploaded Methods/results at https://www.researchgate.net/publication/347577605_Antibacterial_action_of_acriflavine_hydrochloride_for_eradication_of_the_gastric_pathogen_Helicobacter_pylori
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: context_only
+  summary: The 2020 paper names acriflavine hydrochloride from Sigma-Aldrich; the
+    inspected Methods give no catalog number or CAS identifier. It reports H. pylori
+    antibacterial and membrane observations, but the commercial composition and Figure
+    1 chemical structure were not resolved in this review. It is a useful hydrochloride
+    lead, not verified evidence for the present single chloride. Candidate pull-down
+    proteins and mouse endpoints cannot establish a direct target or human clinical
+    efficacy here.
+  snapshot_sha256: f04ce21b35a959f99fe860ba4995a76e60f32c5c1058d071efb3dbb65ed306b5
+- evidence_id: local-search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: Ignored-inclusive exact identifier, key, minted-ID, CAS and trypaflavine
+    searches
+  accessed_at: '2026-10-21T07:26:00Z'
+  support: context_only
+  summary: Raw and PATHS references match. Focused curation, reviews and historical-report
+    searches found no target-specific override or prior prose review in the declared
+    scopes. Broad research-ledger and generated hits were treated as discovery context.
+  search_scope: prepare.py 29 used rg --no-ignore --hidden over the worktree excluding
+    .git/.venv. Focused exact CHEBI:383703, key and minted-ID searches covered raw,
+    curation, reviews and PATHS; expanded 383703, key, 86-40-8 and trypaflavine searches
+    covered curation, reviews and reports/yaml_record_review, excluding queue and
+    large JSON files. Hidden and ignored files were included.
+- evidence_id: research-scope
+  kind: search
+  reference: Free primary literature and official identity sources
+  locator: Exact full name, CAS, trypaflavine, acriflavine, antibacterial and DNA/gyrase
+    source searches
+  accessed_at: '2026-10-21T07:26:00Z'
+  support: context_only
+  summary: 'The adopted 1984 abstract was inspected, but the ACS body returned 403.
+    The 1997 JBC body returned 403 and the ResearchGate route returned 429. The 1962
+    staphylococcal paper DOI 10.1099/00221287-29-2-317 was a search lead only: attempted
+    publisher/free-copy routes failed, so its compound and quantitative claims were
+    not adopted. This bounded search does not establish absence of exact-single-chloride
+    studies.'
+  search_scope: Free ChEBI, PubChem, PubMed, Europe PMC, publisher, J-STAGE and indexed
+    author-copy routes. Only inspected source text supports the scoped assessments;
+    search snippets, vendor descriptions and historical summaries do not.
+- evidence_id: rubric
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: Native field-by-field checklist and schema for mechanism, targets, activity,
+    producer, resistance, clinical status, datasets and graphs
+  accessed_at: '2026-10-21T07:26:00Z'
+  support: supports
+  summary: Optional empty fields are not schema defects. Compound identity, assay
+    material, organism and experimental inference must be established before translating
+    generic acriflavine results into mechanistic enums, protein targets, MIC observations
+    or causal edges.
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Isolated worktree 003; scratch 029-validation.tsv
+  accessed_at: '2026-10-21T07:18:58Z'
+  support: supports
+  summary: Both focused commands exited 0. LinkML reported no issues; strict scanned
+    one target with zero ERROR rows.
+  snapshot_sha256: b184ed5450b968070bb6c75648407e388f41a1eaf7017890723cf560999fc3f7
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact single-chloride composition
+  outcome: supported
+  summary: Official identity and structure recomputation agree on the cation plus
+    one chloride, with no additional HCl or proflavine component. No wrong-salt, mass
+    or charge defect is supported.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - record
+  - owner
+  - chebi
+  - pubchem
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Source antibacterial class and organic chloride salt parent
+  outcome: supported
+  summary: The adopted classification and parent agree with the official source and
+    configured mapping. The source intercalator role does not require an automatic
+    mechanism enum.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - chebi
+  - config
+- assessment_id: xref
+  area: identity
+  topic: CAS and Reaxys cross-references
+  outcome: supported
+  summary: Both adopted identifiers occur on the official ChEBI record, and CAS has
+    independent attributed corroboration in PubChem. Reaxys is not independently verified;
+    public detail access is a stated limitation.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - chebi
+  - pubchem
+  - registry-access
+- assessment_id: adopted-citation
+  area: evidence
+  topic: Compound mapping and scope of the adopted citation
+  outcome: unknown
+  summary: The abstract establishes a trypanocidal derivative study and names a chemically
+    distinct photoaffinity probe. Full source tables are needed to establish which
+    observations apply to this exact diamino chloride; no false native claim currently
+    relies on the abstract.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - owner
+  - adopted-primary
+- assessment_id: mechanism
+  area: evidence
+  topic: Antibacterial mechanism and direct targets
+  outcome: unknown
+  summary: No native mechanism or target is asserted. Candidate gyrase and DNA-interaction
+    studies require exact-material resolution and careful distinction between substrate
+    association, enzyme interference and direct protein binding. No exact-single-chloride
+    mechanistic claim was established in the inspected material.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - record
+  - gyrase-primary
+  - gyrase-followup
+  - hydrochloride-primary
+  - rubric
+- assessment_id: activity
+  area: evidence
+  topic: Species- and assay-specific antibacterial potency
+  outcome: unknown
+  summary: No exact-single-chloride activity observation was extracted. The trypanosome
+    derivative result, hydrochloride H. pylori lead and acriflavine mixture studies
+    cannot supply an interchangeable antibacterial MIC. This is a bounded research
+    limitation rather than evidence of inactivity.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - record
+  - adopted-primary
+  - hpylori-lead
+  - mixture-primary
+  - rubric
+- assessment_id: resistance
+  area: evidence
+  topic: Resistance and susceptibility determinants
+  outcome: unknown
+  summary: The native record makes no resistance assertion. The historical acrB label
+    in the gyrase paper denotes a gyrB allele, and should not be mapped by name to
+    an AcrB efflux protein. Exact preparation and assay context must be resolved before
+    any mutation-level annotation.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - record
+  - gyrase-primary
+  - gyrase-followup
+- assessment_id: other
+  area: scope
+  topic: Producer, clinical, dataset and causal-graph scope
+  outcome: not_applicable
+  summary: No native claims in these categories need correction. Host antiviral mixture
+    studies and experimental mouse observations do not establish approval, a biosynthetic
+    producer, a transcriptomic dataset or a causal chain for this exact salt.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - record
+  - mixture-primary
+  - hpylori-lead
+  - rubric
+- assessment_id: provenance
+  area: provenance
+  topic: Generated ownership and native status
+  outcome: supported
+  summary: Source fields, version, minted identifier and history are reproducible.
+    Curator annotations would require separate claim-level evidence and provenance;
+    this review leaves native SEEDED unchanged.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - record
+  - owner
+  - rubric
+- assessment_id: schema
+  area: schema
+  topic: Focused schema gates
+  outcome: supported
+  summary: Both focused validators pass.
+  target_ids:
+  - CHEBI:383703
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-383703-primary-compound-mapping-followup
+  category: evidence
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Resolve exact-compound evidence before extending the seed
+  description: The official exact-salt identity is supported, but the adopted primary
+    abstract does not establish this diamino chloride as the highlighted active derivative.
+    Additional candidate acriflavine papers have unresolved material boundaries. This
+    is a source-verification follow-up, not a demonstrated incorrect assertion or
+    a requirement to populate every optional field.
+  target_ids:
+  - CHEBI:383703
+  field_paths:
+  - mode_of_action_notes
+  - molecular_targets
+  - activity_spectrum
+  evidence_ids:
+  - record
+  - owner
+  - adopted-primary
+  - gyrase-primary
+  - gyrase-followup
+  - hpylori-lead
+  rule_id: native-review-checklist:Evidence scope and compound identity
+  native_severity: informational source-mapping limitation
+  normalization_reason: No native mechanistic or assay claim contradicts the inspected
+    sources. An unresolved source table or reagent composition supports a bounded
+    follow-up, not an unsupported-record finding.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/3-6-diamino-10-methylacridinium-chloride.yaml
+    role: Curator-owned scientific annotations; use native validated writer and curation
+      event
+actions:
+- action_id: A1
+  description: Before adding scientific annotations, inspect the adopted paper compound
+    table and exact reagent descriptions of candidate bacterial studies. Record an
+    explicit applicability disposition for this single chloride; retain any unresolved
+    lead as such.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:383703
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/3-6-diamino-10-methylacridinium-chloride.yaml
+    role: Curator-owned scientific annotations; use native validated writer and curation
+      event
+  acceptance_checks:
+  - Map the tested material to the full single-chloride structure, separating the
+    additional-HCl salt, proflavine mixtures and substituted acridine derivatives.
+  - Keep Trypanosoma assays separate from antibacterial activity_spectrum and retain
+    strain, endpoint, exposure and experimental conditions.
+  - Distinguish historical gyrB acrB allele nomenclature from the AcrB efflux pump;
+    do not infer direct gyrase binding solely from altered enzyme-DNA association.
+  - Do not assign a protein target, mechanism enum, MIC or causal edge until source
+    text supports that exact claim and material.
+  - Any eventual curation uses the native validated writer and history with the required
+    validation gates.
+limitations:
+- The adopted 1984 paper was available as a primary abstract, not its compound table
+  or full Methods. Exact diamino-chloride observations remain unresolved.
+- The 1997 primary abstract and first two pages of the 1998 paper were inspected;
+  full reagent identity remains unresolved. The 1962 paper was a failed-access discovery
+  lead only.
+- Direct CAS and Reaxys detail pages were unavailable. CAS is corroborated through
+  attributed PubChem content; Reaxys remains an inspected ChEBI assertion.
+- The 2020 H. pylori paper names a Sigma hydrochloride without a catalog number or
+  CAS in the inspected Methods; Figure 1 and exact commercial composition were not
+  resolved in this review. Its observations were not assigned to the single chloride.
+- Bounded research does not establish absence of additional exact-compound studies.
+  No paid research, native edit or saved bundle occurred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Capture preceded judgment; the original hashes and Git base were preserved when
+  provenance was expanded to 20 inputs.
+- Local absence searches included hidden and ignored files within declared scopes.
+- The record remains SEEDED. Optional missing scientific annotations alone were not
+  treated as schema or scientific defects.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:383703
+- https://pubchem.ncbi.nlm.nih.gov/compound/6842
+- https://pubmed.ncbi.nlm.nih.gov/6737429/
+- https://doi.org/10.1074/jbc.272.20.13302
+- https://doi.org/10.1248/bpb.21.667
+- https://doi.org/10.1093/femsle/fnaa178
+tags:
+- antibacterial
+- acridinium
+- chloride
+- seeded
+- compound-boundary
