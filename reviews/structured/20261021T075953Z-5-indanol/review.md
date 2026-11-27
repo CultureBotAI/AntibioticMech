@@ -1,0 +1,955 @@
+# 5-Indanol: exact structure, source fidelity and bounded primary phenotypes
+
+- Review: 20261021T075953Z-5-indanol
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T07:53:18Z
+- Finished UTC: 2026-10-21T07:59:53Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Exact5-indanol identity and broad S. aureus antibacterial classification are supported. Two minor follow-ups concern a misattributed paraphrase in the evidence snippet and source-specific assay/phenotype disposition. Supplementary versus main-text MIC and plotted-versus-prose kill conflicts, plant-tissue conflicts and compound-versus-feed boundaries are retained; no direct target is inferred.
+
+## Scope And Provenance
+
+Complete one-record identity, source fidelity and bounded scientific review.
+
+Selection: Queue index052; exactly antibioticmech:curator-9412b5ca77 in isolated batch006.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:curator-9412b5ca77 | data/antibiotics/antibacterial/5-indanol.yaml | generated | 5-indanol |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema validation | passed | True | antibioticmech:curator-9412b5ca77 | Actual focused execution passed. |
+| Focused strict validation | passed | True | antibioticmech:curator-9412b5ca77 | Actual focused execution passed. |
+| Exact chemical identity and minted source | passed | True | antibioticmech:curator-9412b5ca77 | Live PubChem, native chemistry and source mint agree. |
+| Structured expression-source applicability | not_applicable | False | antibioticmech:curator-9412b5ca77 | No native gene, protein, regulator, pathway, stress-response or transcriptomic dataset claim is named. Newly inspected leakage markers are measured phenotypes, not proposed direct protein targets; plant-feed microbiota outcomes are outside exact-compound scope. |
+| Authoritative full QC | failed | True | antibioticmech:curator-9412b5ca77 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:curator-9412b5ca77 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:curator-9412b5ca77 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:curator-9412b5ca77 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:curator-9412b5ca77 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:curator-9412b5ca77 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:curator-9412b5ca77 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:curator-9412b5ca77 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:curator-9412b5ca77 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact aromatic phenol
+
+identity: supported. Targets: antibioticmech:curator-9412b5ca77.
+
+PubChem and independent calculations support the complete native structure and neutral form. The paper tests named5-indanol separately and describes authentic-standard comparisons, with preparation metadata limitations retained.
+
+### Antibacterial class and definition
+
+grounding: supported. Targets: antibioticmech:curator-9412b5ca77.
+
+The exact-compound S. aureus experiment supports broad antibacterial wording and CHEBI33282. The native record does not claim broad-spectrum pure-drug or clinical efficacy.
+
+### Snippet fidelity and source attribution
+
+evidence: concern. Targets: antibioticmech:curator-9412b5ca77.
+
+The source snippet is a paraphrase with a wrong author attribution. Its tissue wording also hides a conflict within the primary source. Correct in the maintained curator row; the stable DOI itself is valid.
+
+### Specific strain-resolved primary results
+
+completeness: concern. Targets: antibioticmech:curator-9412b5ca77.
+
+Full primary text and supplement give a concrete ATCC6538 assay follow-up, but main text62.5microgram/mL conflicts with TableS3 65.5microgram/mL. The plotted8h time course also does not demonstrate complete eradication. Source-conflict notes or explicit deferral are required before any quantitative annotation.
+
+### Cellular phenotypes versus direct target
+
+completeness: concern. Targets: antibioticmech:curator-9412b5ca77.
+
+Specific leakage, biofilm and hemolysis experiments merit a bounded mode-of-action note or explicit disposition. No direct molecular target or proven ordered lethal chain is established.
+
+### Tissue and biosynthetic-producer limits
+
+scope: unknown. Targets: antibioticmech:curator-9412b5ca77.
+
+Fruit versus stem/leaf statements conflict within the primary source. GC-MS detection in a plant extract does not demonstrate a particular biosynthetic producer process. No structured producer assertion is required from this evidence alone.
+
+### Resistance, clinical outcomes and datasets
+
+scope: not_applicable. Targets: antibioticmech:curator-9412b5ca77.
+
+No resistance determinant or clinical use is claimed. Feed and microbiota experiments apply to whole plant material, not isolated5-indanol. No exact-compound expression dataset is established.
+
+### Curator inventory ownership and proposed status
+
+provenance: supported. Targets: antibioticmech:curator-9412b5ca77.
+
+The source inventory, mint and proposal history are consistent. PROPOSED/MINTED is retained, and chemical exactness alone does not authorize status promotion.
+
+### Focused validation
+
+schema: supported. Targets: antibioticmech:curator-9412b5ca77.
+
+Both focused native gates pass.
+
+## Findings
+
+### F1: Replace the misattributed paraphrase with faithful evidence
+
+minor / open / confirmed; issue key: curator-9412b5ca77-snippet-provenance-fidelity.
+
+The maintained curator evidence snippet says Yang et al., but the cited article is by Zi and colleagues and has no Yang author. The sentence is a paraphrase in a field reserved for verbatim passages. Its unqualified stem/leaf attribution also omits an internal source conflict with fruit-based Results and captions. Correct the provenance while preserving the supported exact-compound antibacterial claim.
+
+### F2: Adjudicate the inspected exact-compound assay and cellular phenotypes
+
+minor / open / confirmed; issue key: curator-9412b5ca77-primary-assay-phenotype-disposition.
+
+The cited full primary paper contains separate5-indanol MIC/time-kill measurements in S. aureus ATCC6538 and leakage/biofilm/hemolysis experiments. These specific results warrant claim-level activity and bounded phenotype curation or an explicit applicability disposition. This finding arises from concrete inspected evidence, not from empty optional fields. Direct target, causal ordering, other-taxon susceptibility and chicken-feed benefits must not be inferred. The follow-up must retain TableS3 65.5 versus main-text62.5microgram/mL and the plotted nonzero8h viable counts versus prose eradication. These source conflicts are not errors already present in a native quantitative annotation.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the curator inventory evidence passage and author/tissue notes, then regenerate the seed-owned fields.
+
+- Use a short exact passage from the inspected primary source as snippet; move interpretive synthesis into notes and identify Zi et al. accurately.
+- Explicitly preserve the source abstract versus Results/caption tissue conflict; do not silently recast plant detection as proven stem/leaf biosynthesis.
+- Rerun the documented seeder workflow and native schema, strict, reference and history gates; preserve existing curator annotations and PROPOSED status unless independently eligible for sign-off.
+
+### A2
+
+Curate or explicitly disposition the specific ATCC6538 activity and exposure-associated cellular phenotypes.
+
+- Adjudicate or explicitly defer TableS3 MIC65.5 versus main-text/Fig3-caption62.5microgram/mL for S. aureus ATCC6538. Do not silently choose a value, calculate a precise potency ratio, or transfer whole-extract data.
+- Preserve broth-microdilution versus checkerboard terminology, ambiguous final well inoculum and missing reagent supplier/purity metadata. Keep the source time-kill claims distinct from the visually inspected plot: viable counts remain nonzero through8h, so do not assert complete eradication or infer an MBC.
+- Describe increased extracellular markers and altered biofilm/hemolysis as observed phenotypes supporting the authors membrane-damage interpretation, without assigning ALP/hemolysin as direct targets or proving a lethal causal order.
+- Exclude whole-extract broad-spectrum results and chicken-feed microbiota/growth outcomes from isolated5-indanol claims.
+- Use the validated native writer with claim-level citations and curation history, then rerun focused and shared required gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/5-indanol.yaml; Entire native YAML | supports | Read the ANTIBACTERIAL, PROPOSED, MINTED record, definition and DOI source, role, full structure, PubChem xref, CURATOR source concept and evidence text, source date and single proposal event. Native evidence snippet says Yang et al. and attributes the marker to stem/leaf extract. No mode, target, activity_spectrum, producer, resistance, clinical, dataset or causal graph annotation is asserted. |
+| owner | curation/curator_antibiotics.tsv; Row12; scripts/seed_from_sources.py load_curator_concepts and mint; PATHS.tsv row2925 | supports | The maintained curator row owns the exact structure, classification, definition and evidence text and is copied by the seeder. The native CURATOR source ID, source version2026-09-07 and minted identifier reproduce correctly. The general prepare helper initially labeled ChEBI owners; expanded review metadata corrects this to the already captured/read curator inventory and seeder without changing any input hash. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/15118; Official PUG View identity and computed fields | supports | CID15118 resolves to 5-indanol, 2,3-dihydro-1H-inden-5-ol. Native SMILES, complete Standard InChI and key PEHSSTUGJUBZBI-UHFFFAOYSA-N, formula C9H10O and neutral charge match. This is aromatic-ring OH5 indanol, distinct from 1-indanol, indole alcohols or the compared indene carbaldehyde. |
+| chemistry | RDKit independent structure and mint calculation; Batch006 locked environment; native SMILES and InChI separately parsed | supports | Both encodings give the same full key, C9H10O, charge0, one connected component, average mass134.178 and exact mass134.07316494. SHA256 of CURATOR&#124;source_id gives the native minted suffix9412b5ca77. Optional native masses are absent, not incorrect. |
+| role | https://www.ebi.ac.uk/chebi/CHEBI:33282; Official antibacterial role definition | supports | The role resolves to substances that kill or slow bacterial growth, appropriately supported by the exact-compound study. |
+| citation | DOI:10.1016/j.psj.2026.107400; PMID42485919; PMC13427478 front matter and primary abstract | refutes | The primary article resolves with title referring to 5-indanol from Amomum tsaoko fruits and stem-leaf by-products. Authors are Yinqiang Zi, Guohui Liao, Yuyi Zhang, Yuping Wu, Ping Li and Jian Yan; Yang is not an author. The native snippet is a reviewer paraphrase rather than a verbatim passage from the inspected primary source. |
+| assay | DOI:10.1016/j.psj.2026.107400; PMC13427478 Methods sec0003/sec0004/sec0006 and Results sec0019, para0023; Fig2 caption | supports | The paper names S. aureus ATCC6538 and separately tests 5-indanol, comparing authentic GC-MS standards. It reports MIC62.5microgram/mL and concentration-dependent time-kill activity, with125 and250microgram/mL producing bactericidal effects at8 and4h respectively. Methods call the assay broth microdilution, while Results call it checkerboard; preserve that reporting inconsistency. General MIC methods specify CAMHB,37C,24h and50microliter additions of a bacterial suspension stated as about5x10^5CFU/mL, not an unambiguously stated final well inoculum. The authentic-standard supplier, catalog, purity and isolated-versus-purchased test material are not clearly specified in the inspected main text. The compared carbaldehyde and whole-extract assays are separate. These are author-reported main-text results, not independently reconciled endpoints: TableS3 differs and Fig2c does not demonstrate complete eradication. |
+| phenotypes | DOI:10.1016/j.psj.2026.107400; PMC13427478 Methods sec0007 and Results sec0020, Fig3 caption | supports | Crystal-violet biofilm assays, rabbit-blood hemolysis and extracellular ALP, protein and glucose measurements support bounded cellular phenotypes associated with 5-indanol exposure. Authors interpret these as membrane/cell-wall damage. Leakage and reduced hemolytic activity do not establish a direct protein target, prove hemolysin synthesis inhibition, or distinguish primary membrane action from secondary injury. No target binding, essentiality rescue or time-resolved causal ordering is reported in these inspected experiments. |
+| source-boundary | DOI:10.1016/j.psj.2026.107400; PMC13427478 title/abstract versus Results sec0017/sec0018, Fig1/Fig2 captions, Discussion; feed Methods sec0010 | context_only | The source is internally inconsistent about plant tissue: the abstract describes stem/leaf extract, whereas Results, Discussion and chromatogram captions describe fruit extracts. Retain the conflict rather than replacing it with a confident tissue attribution. The chicken experiment uses dried plant material in feed, not isolated 5-indanol; its growth and microbiota changes cannot be attributed directly to this molecule. The Fig2 caption also says 5-indole alcohol once while the title, Methods and Results say5-indanol; this wording discrepancy does not overturn the independent exact PubChem identity but should remain in preparation notes. |
+| taxon | https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1280&amp;mode=Info; Official species name/rank; complementary ATCC6538 catalog https://www.atcc.org/products/6538 | supports | NCBITaxon1280 resolves to S. aureus at species rank. The inspected ATCC catalog identifies6538 as S. aureus subsp. aureus strain FDA209. An activity annotation should keep the paper strain separately and must not promote the assay to species-wide susceptibility or infer clinical resistance. |
+| search | CultureBotAI/AntibioticMech; Ignored-inclusive local references and bounded free source discovery | context_only | The exact curator row and native record agree; no target-specific grounding override was found in the inspected maintained surfaces. PubMed/Europe PMC and full PMC XML independently resolve the native DOI. Other hits on whole essential oils, substituted indanol analogues and a patent were discovery context and were not adopted as exact-compound mechanism evidence. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Evidence rule14-15 and activity/mechanism/producer rows | supports | A snippet must be a short verbatim passage; interpretation belongs in notes. Preserve exact strain and assay, do not mistake correlated leakage for a demonstrated protein target, and do not infer biosynthesis from plant detection alone. Optional blanks are not independently defects. |
+| validation | just validate; just validate-strict; Actual batch006 focused commands and052-validation.tsv | supports | Both commands exited0. LinkML reported no issues; strict scanned one record with zero ERROR rows. |
+| supplement | https://ars.els-cdn.com/content/image/1-s2.0-S0032579126010308-mmc1.doc; Official downloadable Word supplement, TablesS1-S3; TableS3 cells independently read in text and structured HTML conversions | context_only | TableS3 names S. aureus ATCC6538 and gives5-indanol65.5microgram/mL, conflicting with62.5microgram/mL in the main text and Fig3 caption. The compared carbaldehyde is1250microgram/mL. Do not silently correct65.5, calculate an adjudicated exact potency ratio, or import a single unqualified MIC. TableS2 concerns plant extracts and cannot supply pure5-indanol activity against other taxa. |
+| figure2 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/49b4/13427478/103ca70b8f86/gr2.jpg; Original Figure2 pixels visually inspected, panelsa-c | context_only | Panelc is a log10CFU/mL time course ending at8h; treated groups retain nonzero plotted viable counts. Thus the main-text claim of complete eradication is not demonstrated by this plotted endpoint. Plate panel labels125/250microgram/mL and62.5microgram/mL, and chromatographic panel labels5-indanol separately. No numerical points were digitized, no detection limit was established and no new MBC was inferred. |
+| figure3 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/49b4/13427478/75c2c5d9ee80/gr3.jpg; Original Figure3 pixels visually inspected, panelsa-e | context_only | The images and bar charts depict biofilm disruption, hemolytic activity and extracellular alkaline phosphatase, total protein and glucose responses across0.5-4xMIC. They substantiate cellular observations, not direct binding to any named protein. No chart-only numeric endpoint was extracted. |
+
+## Limits And Additional Notes
+
+- The inspected full main text supplies named-compound results but lacks clear supplier/catalog/purity and isolated-versus-purchased preparation details. Its Methods and Results differ in assay terminology and do not unambiguously state final well inoculum.
+- The official supplementary table and original Figure2/3 pixels were inspected. TableS3 reports65.5microgram/mL versus62.5 in the main text; Fig2c retains nonzero viable counts at8h despite prose eradication wording. The review preserves these source conflicts without declaring an erratum or choosing a canonical quantitative result.
+- The primary source conflicts internally on fruit versus stem/leaf origin and contains a5-indole-alcohol caption wording discrepancy; neither is silently resolved.
+- Leakage and biofilm/hemolysis phenotypes support a bounded membrane-damage interpretation, not a validated direct protein target or causal ordering.
+- Bounded discovery does not prove absence of additional exact-compound studies.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Initial capture included the actual curator inventory before judgment. Expanded metadata replaces generic helper ChEBI owner labels with actual CURATOR ownership; original hashes/base are preserved.
+- All20 captured input hashes were rechecked unchanged. Hidden and ignored files were included in local searches.
+- No native record, scientific status or history was changed.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T075953Z-5-indanol
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: '5-Indanol: exact structure, source fidelity and bounded primary phenotypes'
+started_at: '2026-10-21T07:53:18Z'
+finished_at: '2026-10-21T07:59:53Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not create the curator row; complete native record,
+    maintained owner, official identity and full primary article were independently
+    read.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Exact5-indanol identity and broad S. aureus antibacterial classification
+  are supported. Two minor follow-ups concern a misattributed paraphrase in the evidence
+  snippet and source-specific assay/phenotype disposition. Supplementary versus main-text
+  MIC and plotted-versus-prose kill conflicts, plant-tissue conflicts and compound-versus-feed
+  boundaries are retained; no direct target is inferred.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/5-indanol.yaml
+    sha256: 02dfb2ef76084a0a5bc42b0c86777974a7715099f6c56e5704d6d662620d96b6
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+targets:
+- target_id: antibioticmech:curator-9412b5ca77
+  path: data/antibiotics/antibacterial/5-indanol.yaml
+  label: 5-indanol
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: 'Curator inventory row12: maintained identity, structure, classification
+      and evidence'
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: CURATOR inventory loader and generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Complete one-record identity, source fidelity and bounded scientific
+    review.
+  selection: Queue index052; exactly antibioticmech:curator-9412b5ca77 in isolated
+    batch006.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:curator-9412b5ca77
+  exclusions:
+  - target: Other indanol isomers, indole alcohols, indene carbaldehyde, whole extracts
+      and plant-feed interventions
+    reason: Context and boundaries only; their outcomes are not transferred to the
+      exact molecule.
+checks:
+- check_id: schema
+  name: Focused schema validation
+  status: passed
+  required: true
+  summary: Actual focused execution passed.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/5-indanol.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  summary: Actual focused execution passed.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/5-indanol.yaml --out /private/tmp/am-review-session/052-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: identity
+  name: Exact chemical identity and minted source
+  status: passed
+  required: true
+  summary: Live PubChem, native chemistry and source mint agree.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  evidence_ids:
+  - pubchem
+  - chemistry
+  - owner
+- check_id: structured-adapter
+  name: Structured expression-source applicability
+  status: not_applicable
+  required: false
+  summary: No native gene, protein, regulator, pathway, stress-response or transcriptomic
+    dataset claim is named. Newly inspected leakage markers are measured phenotypes,
+    not proposed direct protein targets; plant-feed microbiota outcomes are outside
+    exact-compound scope.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  evidence_ids:
+  - record
+  - phenotypes
+  - source-boundary
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/5-indanol.yaml
+  locator: Entire native YAML
+  accessed_at: '2026-10-21T07:56:33Z'
+  support: supports
+  summary: Read the ANTIBACTERIAL, PROPOSED, MINTED record, definition and DOI source,
+    role, full structure, PubChem xref, CURATOR source concept and evidence text,
+    source date and single proposal event. Native evidence snippet says Yang et al.
+    and attributes the marker to stem/leaf extract. No mode, target, activity_spectrum,
+    producer, resistance, clinical, dataset or causal graph annotation is asserted.
+- evidence_id: owner
+  kind: record_content
+  reference: curation/curator_antibiotics.tsv
+  locator: Row12; scripts/seed_from_sources.py load_curator_concepts and mint; PATHS.tsv
+    row2925
+  accessed_at: '2026-10-21T07:56:33Z'
+  support: supports
+  summary: The maintained curator row owns the exact structure, classification, definition
+    and evidence text and is copied by the seeder. The native CURATOR source ID, source
+    version2026-09-07 and minted identifier reproduce correctly. The general prepare
+    helper initially labeled ChEBI owners; expanded review metadata corrects this
+    to the already captured/read curator inventory and seeder without changing any
+    input hash.
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/15118
+  locator: Official PUG View identity and computed fields
+  accessed_at: '2026-10-21T07:53:47Z'
+  support: supports
+  summary: CID15118 resolves to 5-indanol, 2,3-dihydro-1H-inden-5-ol. Native SMILES,
+    complete Standard InChI and key PEHSSTUGJUBZBI-UHFFFAOYSA-N, formula C9H10O and
+    neutral charge match. This is aromatic-ring OH5 indanol, distinct from 1-indanol,
+    indole alcohols or the compared indene carbaldehyde.
+  snapshot_sha256: 214db6e3c259859cd3c94940407f2cde477ad0b7e22300c68127a7d74f1c413b
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit independent structure and mint calculation
+  locator: Batch006 locked environment; native SMILES and InChI separately parsed
+  accessed_at: '2026-10-21T07:53:45Z'
+  support: supports
+  summary: Both encodings give the same full key, C9H10O, charge0, one connected component,
+    average mass134.178 and exact mass134.07316494. SHA256 of CURATOR|source_id gives
+    the native minted suffix9412b5ca77. Optional native masses are absent, not incorrect.
+  snapshot_sha256: 8aed3d80e16374f4736d153b98d1b44fa9fa57a1ac7f2be93ed67e26796b3ad1
+- evidence_id: role
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:33282
+  locator: Official antibacterial role definition
+  accessed_at: '2026-10-21T07:53:48Z'
+  support: supports
+  summary: The role resolves to substances that kill or slow bacterial growth, appropriately
+    supported by the exact-compound study.
+  snapshot_sha256: b01c6b5fdd1b347f419247657124ebfe9a2770af7974844696755ce975a1ba21
+- evidence_id: citation
+  kind: primary_source
+  reference: DOI:10.1016/j.psj.2026.107400
+  locator: PMID42485919; PMC13427478 front matter and primary abstract
+  accessed_at: '2026-10-21T07:53:53Z'
+  support: refutes
+  summary: The primary article resolves with title referring to 5-indanol from Amomum
+    tsaoko fruits and stem-leaf by-products. Authors are Yinqiang Zi, Guohui Liao,
+    Yuyi Zhang, Yuping Wu, Ping Li and Jian Yan; Yang is not an author. The native
+    snippet is a reviewer paraphrase rather than a verbatim passage from the inspected
+    primary source.
+  snapshot_sha256: 44eb43dda861871eefa2eebc287210ada0bee96b3585c653ffef5cb314f9616d
+- evidence_id: assay
+  kind: primary_source
+  reference: DOI:10.1016/j.psj.2026.107400
+  locator: PMC13427478 Methods sec0003/sec0004/sec0006 and Results sec0019, para0023;
+    Fig2 caption
+  accessed_at: '2026-10-21T07:53:53Z'
+  support: supports
+  summary: 'The paper names S. aureus ATCC6538 and separately tests 5-indanol, comparing
+    authentic GC-MS standards. It reports MIC62.5microgram/mL and concentration-dependent
+    time-kill activity, with125 and250microgram/mL producing bactericidal effects
+    at8 and4h respectively. Methods call the assay broth microdilution, while Results
+    call it checkerboard; preserve that reporting inconsistency. General MIC methods
+    specify CAMHB,37C,24h and50microliter additions of a bacterial suspension stated
+    as about5x10^5CFU/mL, not an unambiguously stated final well inoculum. The authentic-standard
+    supplier, catalog, purity and isolated-versus-purchased test material are not
+    clearly specified in the inspected main text. The compared carbaldehyde and whole-extract
+    assays are separate. These are author-reported main-text results, not independently
+    reconciled endpoints: TableS3 differs and Fig2c does not demonstrate complete
+    eradication.'
+  snapshot_sha256: 44eb43dda861871eefa2eebc287210ada0bee96b3585c653ffef5cb314f9616d
+- evidence_id: phenotypes
+  kind: primary_source
+  reference: DOI:10.1016/j.psj.2026.107400
+  locator: PMC13427478 Methods sec0007 and Results sec0020, Fig3 caption
+  accessed_at: '2026-10-21T07:53:53Z'
+  support: supports
+  summary: Crystal-violet biofilm assays, rabbit-blood hemolysis and extracellular
+    ALP, protein and glucose measurements support bounded cellular phenotypes associated
+    with 5-indanol exposure. Authors interpret these as membrane/cell-wall damage.
+    Leakage and reduced hemolytic activity do not establish a direct protein target,
+    prove hemolysin synthesis inhibition, or distinguish primary membrane action from
+    secondary injury. No target binding, essentiality rescue or time-resolved causal
+    ordering is reported in these inspected experiments.
+  snapshot_sha256: 44eb43dda861871eefa2eebc287210ada0bee96b3585c653ffef5cb314f9616d
+- evidence_id: source-boundary
+  kind: primary_source
+  reference: DOI:10.1016/j.psj.2026.107400
+  locator: PMC13427478 title/abstract versus Results sec0017/sec0018, Fig1/Fig2 captions,
+    Discussion; feed Methods sec0010
+  accessed_at: '2026-10-21T07:53:53Z'
+  support: context_only
+  summary: 'The source is internally inconsistent about plant tissue: the abstract
+    describes stem/leaf extract, whereas Results, Discussion and chromatogram captions
+    describe fruit extracts. Retain the conflict rather than replacing it with a confident
+    tissue attribution. The chicken experiment uses dried plant material in feed,
+    not isolated 5-indanol; its growth and microbiota changes cannot be attributed
+    directly to this molecule. The Fig2 caption also says 5-indole alcohol once while
+    the title, Methods and Results say5-indanol; this wording discrepancy does not
+    overturn the independent exact PubChem identity but should remain in preparation
+    notes.'
+  snapshot_sha256: 44eb43dda861871eefa2eebc287210ada0bee96b3585c653ffef5cb314f9616d
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1280&mode=Info
+  locator: Official species name/rank; complementary ATCC6538 catalog https://www.atcc.org/products/6538
+  accessed_at: '2026-10-21T07:53:49Z'
+  support: supports
+  summary: NCBITaxon1280 resolves to S. aureus at species rank. The inspected ATCC
+    catalog identifies6538 as S. aureus subsp. aureus strain FDA209. An activity annotation
+    should keep the paper strain separately and must not promote the assay to species-wide
+    susceptibility or infer clinical resistance.
+  snapshot_sha256: c2ed23704e34633bc2371fc405fb1c93efa675a22e0e2a38020860ae3b42fd59
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: Ignored-inclusive local references and bounded free source discovery
+  accessed_at: '2026-10-21T07:56:33Z'
+  support: context_only
+  summary: The exact curator row and native record agree; no target-specific grounding
+    override was found in the inspected maintained surfaces. PubMed/Europe PMC and
+    full PMC XML independently resolve the native DOI. Other hits on whole essential
+    oils, substituted indanol analogues and a patent were discovery context and were
+    not adopted as exact-compound mechanism evidence.
+  search_scope: prepare.py52 used rg --no-ignore --hidden across batch006 excluding
+    .git/.venv. Follow-up ignored-inclusive searches covered curation, conf, scripts,
+    tests, reviews, reports and PATHS for5-indanol, full key, minted suffix, DOI107400
+    and CID15118. Web searches used exact5-indanol with antibacterial/Staphylococcus/Yang
+    and the DOI/PMID; full primary article was retrieved from Europe PMC. Initial
+    PMC figure links returned browser checks; the full HTML subsequently exposed CDN
+    figure URLs, and the official Elsevier supplement was retrieved directly. Europe
+    PMC supplementary ZIP timed out and the NCBI OA package query returned404; these
+    were retrieval-route limitations, not missing-source findings.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Evidence rule14-15 and activity/mechanism/producer rows
+  accessed_at: '2026-10-21T07:56:33Z'
+  support: supports
+  summary: A snippet must be a short verbatim passage; interpretation belongs in notes.
+    Preserve exact strain and assay, do not mistake correlated leakage for a demonstrated
+    protein target, and do not infer biosynthesis from plant detection alone. Optional
+    blanks are not independently defects.
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual batch006 focused commands and052-validation.tsv
+  accessed_at: '2026-10-21T07:53:47Z'
+  support: supports
+  summary: Both commands exited0. LinkML reported no issues; strict scanned one record
+    with zero ERROR rows.
+  snapshot_sha256: b184ed5450b968070bb6c75648407e388f41a1eaf7017890723cf560999fc3f7
+- evidence_id: supplement
+  kind: primary_source
+  reference: https://ars.els-cdn.com/content/image/1-s2.0-S0032579126010308-mmc1.doc
+  locator: Official downloadable Word supplement, TablesS1-S3; TableS3 cells independently
+    read in text and structured HTML conversions
+  accessed_at: '2026-10-21T07:56:07Z'
+  support: context_only
+  summary: TableS3 names S. aureus ATCC6538 and gives5-indanol65.5microgram/mL, conflicting
+    with62.5microgram/mL in the main text and Fig3 caption. The compared carbaldehyde
+    is1250microgram/mL. Do not silently correct65.5, calculate an adjudicated exact
+    potency ratio, or import a single unqualified MIC. TableS2 concerns plant extracts
+    and cannot supply pure5-indanol activity against other taxa.
+  snapshot_sha256: e8c4f87e52dd437962a1acc079fd27558c632df8b5776612b79a4f2cee26ff3b
+- evidence_id: figure2
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/49b4/13427478/103ca70b8f86/gr2.jpg
+  locator: Original Figure2 pixels visually inspected, panelsa-c
+  accessed_at: '2026-10-21T07:56:55Z'
+  support: context_only
+  summary: Panelc is a log10CFU/mL time course ending at8h; treated groups retain
+    nonzero plotted viable counts. Thus the main-text claim of complete eradication
+    is not demonstrated by this plotted endpoint. Plate panel labels125/250microgram/mL
+    and62.5microgram/mL, and chromatographic panel labels5-indanol separately. No
+    numerical points were digitized, no detection limit was established and no new
+    MBC was inferred.
+  snapshot_sha256: 346c25d41bae4ad01a9485c0dd3223c4f3d1dedff53770a0a85d4c982cb3d51e
+- evidence_id: figure3
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/49b4/13427478/75c2c5d9ee80/gr3.jpg
+  locator: Original Figure3 pixels visually inspected, panelsa-e
+  accessed_at: '2026-10-21T07:56:56Z'
+  support: context_only
+  summary: The images and bar charts depict biofilm disruption, hemolytic activity
+    and extracellular alkaline phosphatase, total protein and glucose responses across0.5-4xMIC.
+    They substantiate cellular observations, not direct binding to any named protein.
+    No chart-only numeric endpoint was extracted.
+  snapshot_sha256: bae378d0b112a39e220a5e1442f26a617115184651e237cfffb5bee04dd8b8f4
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact aromatic phenol
+  outcome: supported
+  summary: PubChem and independent calculations support the complete native structure
+    and neutral form. The paper tests named5-indanol separately and describes authentic-standard
+    comparisons, with preparation metadata limitations retained.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  evidence_ids:
+  - pubchem
+  - chemistry
+  - assay
+- assessment_id: classification
+  area: grounding
+  topic: Antibacterial class and definition
+  outcome: supported
+  summary: The exact-compound S. aureus experiment supports broad antibacterial wording
+    and CHEBI33282. The native record does not claim broad-spectrum pure-drug or clinical
+    efficacy.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  evidence_ids:
+  - role
+  - assay
+  - record
+- assessment_id: evidence
+  area: evidence
+  topic: Snippet fidelity and source attribution
+  outcome: concern
+  summary: The source snippet is a paraphrase with a wrong author attribution. Its
+    tissue wording also hides a conflict within the primary source. Correct in the
+    maintained curator row; the stable DOI itself is valid.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  evidence_ids:
+  - record
+  - owner
+  - citation
+  - source-boundary
+  - rubric
+- assessment_id: activity
+  area: completeness
+  topic: Specific strain-resolved primary results
+  outcome: concern
+  summary: Full primary text and supplement give a concrete ATCC6538 assay follow-up,
+    but main text62.5microgram/mL conflicts with TableS3 65.5microgram/mL. The plotted8h
+    time course also does not demonstrate complete eradication. Source-conflict notes
+    or explicit deferral are required before any quantitative annotation.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  evidence_ids:
+  - assay
+  - taxon
+  - rubric
+  - supplement
+  - figure2
+- assessment_id: mechanism
+  area: completeness
+  topic: Cellular phenotypes versus direct target
+  outcome: concern
+  summary: Specific leakage, biofilm and hemolysis experiments merit a bounded mode-of-action
+    note or explicit disposition. No direct molecular target or proven ordered lethal
+    chain is established.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  evidence_ids:
+  - phenotypes
+  - rubric
+  - figure3
+- assessment_id: producer
+  area: scope
+  topic: Tissue and biosynthetic-producer limits
+  outcome: unknown
+  summary: Fruit versus stem/leaf statements conflict within the primary source. GC-MS
+    detection in a plant extract does not demonstrate a particular biosynthetic producer
+    process. No structured producer assertion is required from this evidence alone.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  evidence_ids:
+  - source-boundary
+  - rubric
+- assessment_id: other
+  area: scope
+  topic: Resistance, clinical outcomes and datasets
+  outcome: not_applicable
+  summary: No resistance determinant or clinical use is claimed. Feed and microbiota
+    experiments apply to whole plant material, not isolated5-indanol. No exact-compound
+    expression dataset is established.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  evidence_ids:
+  - record
+  - source-boundary
+- assessment_id: provenance
+  area: provenance
+  topic: Curator inventory ownership and proposed status
+  outcome: supported
+  summary: The source inventory, mint and proposal history are consistent. PROPOSED/MINTED
+    is retained, and chemical exactness alone does not authorize status promotion.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  evidence_ids:
+  - owner
+  - chemistry
+  - record
+- assessment_id: schema
+  area: schema
+  topic: Focused validation
+  outcome: supported
+  summary: Both focused native gates pass.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: curator-9412b5ca77-snippet-provenance-fidelity
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Replace the misattributed paraphrase with faithful evidence
+  description: The maintained curator evidence snippet says Yang et al., but the cited
+    article is by Zi and colleagues and has no Yang author. The sentence is a paraphrase
+    in a field reserved for verbatim passages. Its unqualified stem/leaf attribution
+    also omits an internal source conflict with fruit-based Results and captions.
+    Correct the provenance while preserving the supported exact-compound antibacterial
+    claim.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  field_paths:
+  - source_concepts[0].evidence[0].snippet
+  - source_concepts[0].evidence[0].notes
+  evidence_ids:
+  - record
+  - owner
+  - citation
+  - source-boundary
+  - rubric
+  rule_id: native-review-checklist:Evidence
+  native_severity: minor bounded provenance and quotation defect
+  normalization_reason: The DOI and broad biological claim are supported; incorrect
+    attribution and quotation placement are repairable without changing compound identity
+    or activity class.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: 'Curator inventory row12: maintained identity, structure, classification
+      and evidence'
+- finding_id: F2
+  issue_key: curator-9412b5ca77-primary-assay-phenotype-disposition
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Adjudicate the inspected exact-compound assay and cellular phenotypes
+  description: The cited full primary paper contains separate5-indanol MIC/time-kill
+    measurements in S. aureus ATCC6538 and leakage/biofilm/hemolysis experiments.
+    These specific results warrant claim-level activity and bounded phenotype curation
+    or an explicit applicability disposition. This finding arises from concrete inspected
+    evidence, not from empty optional fields. Direct target, causal ordering, other-taxon
+    susceptibility and chicken-feed benefits must not be inferred. The follow-up must
+    retain TableS3 65.5 versus main-text62.5microgram/mL and the plotted nonzero8h
+    viable counts versus prose eradication. These source conflicts are not errors
+    already present in a native quantitative annotation.
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  field_paths:
+  - activity_spectrum
+  - mode_of_action_notes
+  evidence_ids:
+  - assay
+  - phenotypes
+  - taxon
+  - source-boundary
+  - rubric
+  - supplement
+  - figure2
+  - figure3
+  rule_id: native-review-checklist:Activity-and-mechanism
+  native_severity: minor source-specific evidence placement opportunity
+  normalization_reason: The current conservative definition is supported, but verified
+    exact-compound results are not represented as scoped scientific annotations.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/5-indanol.yaml
+    role: Curator-owned scientific annotations through the validated writer and curation
+      history
+actions:
+- action_id: A1
+  description: Correct the curator inventory evidence passage and author/tissue notes,
+    then regenerate the seed-owned fields.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: 'Curator inventory row12: maintained identity, structure, classification
+      and evidence'
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: CURATOR inventory loader and generated field owner
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Use a short exact passage from the inspected primary source as snippet; move interpretive
+    synthesis into notes and identify Zi et al. accurately.
+  - Explicitly preserve the source abstract versus Results/caption tissue conflict;
+    do not silently recast plant detection as proven stem/leaf biosynthesis.
+  - Rerun the documented seeder workflow and native schema, strict, reference and
+    history gates; preserve existing curator annotations and PROPOSED status unless
+    independently eligible for sign-off.
+- action_id: A2
+  description: Curate or explicitly disposition the specific ATCC6538 activity and
+    exposure-associated cellular phenotypes.
+  finding_ids:
+  - F2
+  target_ids:
+  - antibioticmech:curator-9412b5ca77
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/5-indanol.yaml
+    role: Curator-owned scientific annotations through the validated writer and curation
+      history
+  acceptance_checks:
+  - Adjudicate or explicitly defer TableS3 MIC65.5 versus main-text/Fig3-caption62.5microgram/mL
+    for S. aureus ATCC6538. Do not silently choose a value, calculate a precise potency
+    ratio, or transfer whole-extract data.
+  - 'Preserve broth-microdilution versus checkerboard terminology, ambiguous final
+    well inoculum and missing reagent supplier/purity metadata. Keep the source time-kill
+    claims distinct from the visually inspected plot: viable counts remain nonzero
+    through8h, so do not assert complete eradication or infer an MBC.'
+  - Describe increased extracellular markers and altered biofilm/hemolysis as observed
+    phenotypes supporting the authors membrane-damage interpretation, without assigning
+    ALP/hemolysin as direct targets or proving a lethal causal order.
+  - Exclude whole-extract broad-spectrum results and chicken-feed microbiota/growth
+    outcomes from isolated5-indanol claims.
+  - Use the validated native writer with claim-level citations and curation history,
+    then rerun focused and shared required gates.
+limitations:
+- The inspected full main text supplies named-compound results but lacks clear supplier/catalog/purity
+  and isolated-versus-purchased preparation details. Its Methods and Results differ
+  in assay terminology and do not unambiguously state final well inoculum.
+- The official supplementary table and original Figure2/3 pixels were inspected. TableS3
+  reports65.5microgram/mL versus62.5 in the main text; Fig2c retains nonzero viable
+  counts at8h despite prose eradication wording. The review preserves these source
+  conflicts without declaring an erratum or choosing a canonical quantitative result.
+- The primary source conflicts internally on fruit versus stem/leaf origin and contains
+  a5-indole-alcohol caption wording discrepancy; neither is silently resolved.
+- Leakage and biofilm/hemolysis phenotypes support a bounded membrane-damage interpretation,
+  not a validated direct protein target or causal ordering.
+- Bounded discovery does not prove absence of additional exact-compound studies.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Initial capture included the actual curator inventory before judgment. Expanded
+  metadata replaces generic helper ChEBI owner labels with actual CURATOR ownership;
+  original hashes/base are preserved.
+- All20 captured input hashes were rechecked unchanged. Hidden and ignored files were
+  included in local searches.
+- No native record, scientific status or history was changed.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pubchem.ncbi.nlm.nih.gov/compound/15118
+- https://doi.org/10.1016/j.psj.2026.107400
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC13427478/
+tags:
+- antibacterial
+- indanol
+- evidence-fidelity
+- assay-scope
+- proposed
+```
