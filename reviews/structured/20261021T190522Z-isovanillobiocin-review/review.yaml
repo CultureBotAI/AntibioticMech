@@ -1,0 +1,794 @@
+schema_version: 1.0.0
+review_id: 20261021T190522Z-isovanillobiocin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Isovanillobiocin: supported antibacterial congener with missing sugar stereochemistry'
+started_at: '2026-10-21T18:41:49Z'
+finished_at: '2026-10-21T19:05:22Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The original discovery paper supports isolated isovanillobiocin, its vanilloyl
+  group, the 2″ pyrrole ester and antibacterial activity. The native graph correctly
+  represents that connectivity but leaves all four sugar stereocentres unspecified,
+  unlike the primary drawing. A primary-derived Haworth mapping agrees with the independently
+  parsed stereospecific PubChem entry. The definition also inherits the chemically
+  incorrect word crenelated in place of prenylated. These require source-owned correction;
+  no opposite-enantiomer or mixture claim is made.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/isovanillobiocin.yaml
+    sha256: ffff760eee908ec5e9e5b3c52935b9ce416420dbceb895a8c4fe7726ede45860
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-f538304a82
+  path: data/antibiotics/antibacterial/isovanillobiocin.yaml
+  label: isovanillobiocin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Actual maintained source input for the record
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 567; one entire exact record. Thirteen original captured
+    hashes are preserved, with the actual ARO inventory, PubChem fallback inventory
+    and PubChem enrichment script appended before assessment, yielding sixteen inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-f538304a82
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/isovanillobiocin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/isovanillobiocin.yaml --out /private/tmp/am-review-session/567-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 567
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-catalog
+  name: Structured source grounding before mechanism follow-up
+  status: passed
+  required: false
+  summary: Actual catalog/query completed; returned annotation is contextual and is
+    not drug-specific binding evidence.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-gyrB
+  name: Structured source grounding before mechanism follow-up
+  status: passed
+  required: false
+  summary: Actual catalog/query completed; returned annotation is contextual and is
+    not drug-specific binding evidence.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query gyrB
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-comparison
+  name: Independent chemical identity diagnostic
+  status: passed
+  required: false
+  summary: Native and adopted/current PubChem are valid and agree, with four unspecified
+    sugar centres. Current ChEBI InChI agrees; its separate SMILES does not parse.
+    The independently parsed fully assigned PubChem entry has the same constitution.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/567-compare.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: primary-stereo-map
+  name: Independent chemical identity diagnostic
+  status: passed
+  required: false
+  summary: A local stereochemical diagnostic transcribes the original Haworth projection
+    and maps all four sugar centres to the independently assigned PubChem graph. It
+    is not an energy-minimized molecular conformation or a native edit.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/567-primary-map.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/isovanillobiocin.yaml
+  locator: Entire native record, including identity/status, definition/source, parent/class,
+    all chemistry, three xrefs, source concept and three history events.
+  accessed_at: '2026-10-21T19:03:22Z'
+  support: supports
+  summary: The record is SEEDED/MINTED from ARO:3004717, with PubChem 76181969 chemistry,
+    neutral C31H31ClN2O12 and key AKYRQFMQZJFLAE-UHFFFAOYSA-N. It has no synonyms,
+    activity-role list, molecular target, mechanism, producer, resistance, MIC, clinical
+    or causal-graph objects. Its definition names isovanillobiocin as the specific
+    positional congener; MINTED status does not itself assert an experimentally established
+    racemate.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv:353; data/raw/pubchem_structures.tsv:118;
+    conf/sources.yaml; scripts/extract_source_inventory.py; scripts/enrich_pubchem_structures.py;
+    scripts/seed_from_sources.py
+  locator: Entire exact source rows and relevant extraction, PubChem fallback, minting,
+    definition-source and class-emission branches; hidden/ignored-inclusive owner
+    search.
+  accessed_at: '2026-10-21T19:03:22Z'
+  support: supports
+  summary: ARO supplies the label, definition, PMID 15152806, aminocoumarin parent
+    and exact authority associations. PubChem supplies the stored graph/properties
+    and retrieval date. No matching adopted ChEBI row exists under the maintained
+    inventory selection, so the stable ARO mint is expected. Its hash reproduces antibioticmech:aro-f538304a82.
+    The raw inventories contain no exact target, resistance, FDA, MIBiG or BindingDB
+    row; ignored-inclusive maintained overlay searches found only the review queue.
+    All original thirteen hashes remain unchanged.
+  snapshot_sha256: d95481aadf1c36d6091bcb329150c0337b5fa29a19db4c9c44d0ae86d2d4010a
+- evidence_id: aro
+  kind: authority
+  reference: ARO:3004717; ARO:3000103; https://card.mcmaster.ca/ontology/42772; https://purl.obolibrary.org/obo/aro.obo
+  locator: Complete correct CARD entry and both exact OBO terms from the public snapshot426-current-aro.obo,
+    retrieved 2026-10-21T15:57:42Z with SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4.
+  accessed_at: '2026-10-21T18:59:15Z'
+  support: supports
+  summary: Current CARD repeats the native definition, sole adopted PMID, PubChem/CHEBI
+    references and aminocoumarin class. The class is broader than this individual
+    compound and its family definition concerns GyrB-mediated ATP-dependent supercoiling
+    inhibition. The native has no separate direct-target assertion. The inherited
+    word crenelated is not the prenylated chemical group described in the original
+    source.
+  snapshot_sha256: e2d1b7371c5d5291395e61794cff5d0722ff60e4c7920fa6c16e4ad8b5451659
+- evidence_id: pubchem
+  kind: authority
+  reference: PubChem CID 76181969; PubChem CID 54713406; 567-authority-chemistry.json
+  locator: Complete official property responses and independent parsing of both graph
+    representations.
+  accessed_at: '2026-10-21T19:03:22Z'
+  support: supports
+  summary: CID 76181969 still reproduces the native structure, formula, neutral charge
+    and all-four-unassigned sugar stereochemistry. CID 54713406 has the same constitution
+    and assigns the four centres, giving AKYRQFMQZJFLAE-AUHTVUCRSA-N. Removing only
+    its stereochemistry gives the native key. Native average mass 659.0 is a rounded
+    source value consistent with calculated 659.044; monoisotopic mass 658.1565521
+    agrees. This is an under-specified representation, not a demonstrated opposite
+    hand, different acyl position or mixture.
+  snapshot_sha256: b9f38cf3cdc1f846fa9d25dc7b6d7f1c9eb15f351b739df84c85f92230d4dffd
+- evidence_id: chebi
+  kind: authority
+  reference: CHEBI:211429; https://www.ebi.ac.uk/chebi/backend/api/public/compound/211429/
+  locator: Complete current official JSON.
+  accessed_at: '2026-10-21T18:58:55Z'
+  support: supports
+  summary: This two-star submitted entry is named Isovanillobiocin and contains the
+    same unspecified Standard InChI/key and formula, with coumarin/glycoside parents.
+    Its displayed pyrrole SMILES separately lacks [nH] and fails parsing, but that
+    invalid string is not the native PubChem-derived SMILES. The independently parsed
+    ChEBI InChI agrees with the native constitution and unspecified stereo scope.
+    Current entry availability is not proof that an omitted two-star source should
+    have bypassed the maintained three-star adoption rule.
+  snapshot_sha256: 61d304f2e4b29b3f29bd17234263b1a06647f99fe799e528f66db0267dc2c0df
+- evidence_id: discovery-identity
+  kind: primary_source
+  reference: PMID:15152806; DOI:10.7164/antibiotics.57.205
+  locator: Entire original five-page article; Table 1 and Figures 2/3 visually inspected
+    at pp207–208.
+  accessed_at: '2026-10-21T18:59:15Z'
+  support: supports
+  summary: The authors isolate 0.84 mg of compound 2 from a cloQ-defective S. roseochromogenes
+    DS12.976 culture, separate from vanillobiocin 1 and declovanillobiocin 3. FAB-MS
+    and proton NMR support a vanilloyl-containing aminocoumarin with the pyrrole ester
+    at sugar 2″ rather than 3″. Figure 2 draws the defined noviose configuration.
+    Its chlorine and 2″ ester distinguish it from the dechloro and 3″-ester siblings.
+    The paper calls clorobiocin’s replaced group prenylated 4-hydroxybenzoate, not
+    crenelated.
+  snapshot_sha256: b9a15e77107aabb75c51748ca67a6a974de2882e2ffef9add1820d54f95dabce
+- evidence_id: primary-map
+  kind: primary_source
+  reference: PMID:15152806 Figure 2; 567-primary-map.py; 567-primary-map.json
+  locator: Original Haworth projection independently transcribed with its ring orientation
+    and up/down substituent directions.
+  accessed_at: '2026-10-21T19:03:22Z'
+  support: supports
+  summary: The mapped native atoms are anomeric C1″ 14, ester-bearing C2″ 9, hydroxyl
+    C3″ 10 and methoxy C4″ 11. Figure 2 has aglycone up, ester down, hydroxyl down
+    and methoxy up; the resulting assignments are S,R,R,R at those respective sites.
+    The resulting full key AKYRQFMQZJFLAE-AUHTVUCRSA-N matches independent PubChem
+    54713406. The diagnostic establishes the missing defined sugar configuration without
+    claiming that the unassigned native graph is a racemate or that an opposite stereoisomer
+    was experimentally tested.
+  snapshot_sha256: 3c56c4c5fde0448626305f74d59b12ebafde366340ba6abd97d0929715bfdcca
+- evidence_id: discovery-activity
+  kind: primary_source
+  reference: PMID:15152806 Methods and Figure 3
+  locator: Original bioassay Methods and exact compound 2 result, including plate
+    image and amount labels.
+  accessed_at: '2026-10-21T19:03:22Z'
+  support: supports
+  summary: Isovanillobiocin was tested at 8, 16 and 32 nmol per 3 mm paper disk against
+    B. subtilis ATCC 14893 in nutrient agar containing approximately 2×10^5 spores/mL,
+    overnight at 37°C. Its relative activity was 3–6% of clorobiocin from inhibition-zone
+    comparisons. This directly supports antibacterial activity for the isolated congener,
+    but is not a broth MIC, a binding constant or proof of the activity of every stereoisomer.
+    The parent clorobiocin target discussed in the introduction is not itself an isovanillobiocin
+    enzyme assay.
+  snapshot_sha256: acf0da33ceac4137609d8f898ae6c9b7c471b4dd44e2e231d90c77044b9fc906
+- evidence_id: novclobiocin-map
+  kind: primary_source
+  reference: PMID:15047534; DOI:10.1128/AAC.48.4.1307-1312.2004; PMC375324
+  locator: Original Table 1 image inspected, with main material/preparation passages
+    and Table 2 compound 312 row.
+  accessed_at: '2026-10-21T19:01:14Z'
+  support: supports
+  summary: The original table assigns novclobiocin 312 the vanilloyl group, chlorine,
+    methylated L-noviose and the pyrrole ester on the anomeric-adjacent2″ hydroxyl.
+    This maps the experimental code to isovanillobiocin independently of a vendor
+    name. The main text explicitly distinguishes the 2″ isoclorobiocin derivatives
+    from 3″ congeners. Directly inspected Table 1 also avoids silently accepting the
+    apparently reversed 2″/3″ column headings in the later 2008 Table 1.
+  snapshot_sha256: 605c70544108f7b9091ce29561737c997188545f3f743face191e4179ad227a2
+- evidence_id: activity2004aac
+  kind: primary_source
+  reference: PMID:15047534; DOI:10.1128/AAC.48.4.1307-1312.2004
+  locator: Main introduction, Methods, Results/Discussion and exact Table 2 row 312
+    inspected; unrelated compound rows not exhaustively audited.
+  accessed_at: '2026-10-21T19:00:33Z'
+  support: supports
+  summary: For mapped 312, Table 2 reports gyrase inhibition as a ratio 0.47 relative
+    to novobiocin, not a direct binding Kd. The corresponding MICs include S. aureus
+    ATCC 29213 2 µg/mL, S. aureus42080 4 µg/mL and S. epidermidis CNS184 0.25 µg/mL.
+    Broth microdilution used cation-adjusted Mueller-Hinton broth, overnight 35°C
+    incubation and no more than 2% DMSO. The gyrase assay instead measured inhibition
+    of E. coli DNA supercoiling with relaxed pBR322,ATP and intact enzyme. Antibacterial
+    transport explanations are hypotheses and should not be treated as demonstrated
+    direct-target contacts.
+  snapshot_sha256: 8dc6406a002a0fd05c88f7ea5e3ad9eaf0c9e6922531d0fff70bef445b6d10b5
+- evidence_id: mechanism2008
+  kind: primary_source
+  reference: PMID:18347114; DOI:10.1128/AAC.01235-07; PMC2415755
+  locator: Main Methods, relevant Results/Discussion, complete Table 2 and selected
+    Table 1/Table 3/Table 4 context inspected; Table 1 image viewed.
+  accessed_at: '2026-10-21T18:59:45Z'
+  support: supports
+  summary: Mapped novclobiocin 312 gives E. coli GyrB ATPase IC50 891±82 nM and intact-gyrase
+    triplex/supercoiling IC50 460±70 nM. The assays differ in protein concentration,
+    solvent, temperature and duration, so these are distinct inhibition endpoints.
+    The same row reports no gyrA-reporter induction and a 100 µM threshold for at
+    least fourfold sulA-reporter induction in hyperpermeable E. coli DC2. Reporter
+    response is not direct protein binding. The paper could not obtain the usual docking
+    mode for 2″-ester derivatives; it does not provide an exact 312 crystal complex
+    or a validated docking affinity. Class mechanism is therefore supported by biochemical
+    data while exact binding geometry remains unresolved.
+  snapshot_sha256: 7e64fcec1d4a13799ea31353e76c0498031c1a4a5567f4f056cdee6c20dee688
+- evidence_id: adapter
+  kind: database
+  reference: 567-adapter.json; iModulonDB catalog and E. coli precise1k gyrB query
+  locator: Actual structured adapter execution before target-related web follow-up.
+  accessed_at: '2026-10-21T19:03:22Z'
+  support: context_only
+  summary: The catalog returned 28 datasets and the query returned E. coli b3699/gyrB,
+    DNA gyrase subunit B, with no module result. This is annotation context, not an
+    isovanillobiocin exposure or functional experiment.
+  snapshot_sha256: 9578dfc5fbaf0eb01945c56f4ac19a9a0520c450b0524a9d3b958f7361f5ba50
+- evidence_id: search
+  kind: search
+  reference: 567-local-hits.txt;567-owner-hits.txt;567-literature.json;567-synonym-literature.json;567-fetch-results.json
+    through567-fetch5-results.json
+  locator: Hidden/ignored-inclusive repository/source searches and bounded exact-name/code
+    searches.
+  accessed_at: '2026-10-21T18:59:16Z'
+  support: context_only
+  summary: The single adopted PMID was fully inspected. The exact novclobiocin 312
+    follow-up was mapped against primary structures before biochemical results were
+    used. AB-DB computational resources and a glycosylated-natural-products review
+    were treated as secondary/contextual leads rather than primary antibacterial evidence.
+    GtoP direct requests returned a login page; accessible indexed structure text
+    was only a discovery lead and no account or guest-session access was used. A first
+    guessed CARD numeric URL was not the target; the correct 42772 page was independently
+    retrieved and used.
+  snapshot_sha256: 44b84842aad2e01dc35a2237e0f94b3c8409544021ee207f73158d975f7eb41c
+  search_scope: 2026-10-21; hidden and ignored files included. Exact isovanillobiocin,
+    ARO:3004717, CHEBI:211429, full native key, PMID 15152806 and novclobiocin 312
+    synonym/structure follow-up. Bounded public-primary research; no global absence
+    claim.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Constitution, stereochemical scope and material
+  outcome: unknown
+  summary: The native valid graph has the correct vanilloyl-containing 2″-ester constitution.
+    It omits four sugar configurations that the original structure drawing and independent
+    mapping specify. The named experimental congener is supported; an opposite hand
+    or mixture is not established.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  evidence_ids:
+  - native
+  - pubchem
+  - discovery-identity
+  - primary-map
+- assessment_id: grounding
+  area: grounding
+  topic: ARO, PubChem, ChEBI and broader aminocoumarin class
+  outcome: supported
+  summary: The native xrefs correctly reflect the adopted/current unspecified entries
+    and the exact named ARO concept; the class is strictly broader and chemically
+    appropriate. Correcting to the fully assigned experimental identity will require
+    coordinated source/xref scope handling, rather than silently asserting that unspecified
+    and assigned keys are identical.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  evidence_ids:
+  - aro
+  - pubchem
+  - chebi
+  - owners
+- assessment_id: definition
+  area: evidence
+  topic: Comparative structural description and cited source
+  outcome: supported
+  summary: The vanilloyl and pyrrole-position distinction is supported by the sole
+    cited discovery paper. The inherited crenelated word is a confirmed transcription/nomenclature
+    error for prenylated and should be corrected without changing the congener or
+    comparator.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  evidence_ids:
+  - aro
+  - discovery-identity
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial filing and optional mechanism enrichment
+  outcome: supported
+  summary: Original exact-congener growth inhibition supports ANTIBACTERIAL. Independently
+    mapped novclobiocin 312 experiments support inhibition of GyrB ATPase and intact
+    gyrase. No native target/producer/MIC object requires a defect finding merely
+    because this optional evidence has not been curated. Reporter and docking scope
+    are retained.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  evidence_ids:
+  - discovery-activity
+  - novclobiocin-map
+  - activity2004aac
+  - mechanism2008
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained source ownership and MINTED identity
+  outcome: supported
+  summary: Original thirteen hashes were preserved and actual ARO/PubChem/enrichment
+    inputs appended before assessment. The seeder’s fallback, source reference, stable
+    mint and three history events are reproducible. Current two-star ChEBI availability
+    does not invalidate the historical fallback.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  evidence_ids:
+  - owners
+  - native
+  - chebi
+- assessment_id: coverage
+  area: completeness
+  topic: All populated native fields and sole adopted citation
+  outcome: supported
+  summary: All native fields, three asserted xrefs, class term and the sole adopted
+    primary reference were assessed. Two exact-code primary follow-ups were inspected
+    at stated depths. Optional absent fields were distinguished from the confirmed
+    missing stereochemical specification and inherited wording error.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  evidence_ids:
+  - search
+  - owners
+  - discovery-identity
+  - primary-map
+  - mechanism2008
+findings:
+- finding_id: F1
+  issue_key: isovanillobiocin-unspecified-known-noviose-stereochemistry
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Represent the experimentally defined sugar configuration
+  description: Both native SMILES and InChI leave all four sugar stereocentres unspecified.
+    The exact discovery paper draws a defined noviose configuration, and an independent
+    mapping of that projection matches the assigned PubChem 54713406 structure. The
+    stored constitution is correct, but the principal representation does not retain
+    the known stereochemistry of the named isolated congener. Resolve this through
+    maintained source/grounding ownership; do not label the native graph a racemate
+    or claim that it specifies the opposite enantiomer.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  field_paths:
+  - chemical_structure.smiles
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  evidence_ids:
+  - pubchem
+  - discovery-identity
+  - primary-map
+  - novclobiocin-map
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted unspecified fallback structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Maintained PubChem retrieval and property normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Scoped exact grounding decision
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Structure/xref emission
+  rule_id: 'Native checklist: exact chemical form and source stereo agreement'
+  native_severity: major
+  normalization_reason: A required representation of the named experimental structure
+    omits four known configurations. Major is proportionate to material under-specification;
+    no wrong assigned hand or invalid native serialization is established.
+- finding_id: F2
+  issue_key: isovanillobiocin-crenelated-definition-typo
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the inherited prenylated-group wording
+  description: The native definition says crenelated 4-hydroxybenzoic acid. The cited
+    original paper says prenylated 4-hydroxybenzoic acid and depicts the 3-dimethylallyl
+    substituent in clorobiocin. Replace the erroneous word in the maintained source
+    wording while preserving the valid vanilloyl and 2″/3″ positional comparison.
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  field_paths:
+  - definition
+  evidence_ids:
+  - aro
+  - discovery-identity
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Inherited definition and cited source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO extraction/normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition emission
+  rule_id: 'Native checklist: accurate source-supported descriptive nomenclature'
+  native_severity: minor
+  normalization_reason: This is a bounded chemical-word transcription error. The structural
+    comparison and compound identity are otherwise supported.
+actions:
+- action_id: A1
+  description: Resolve and regenerate the exact experimental stereochemical representation
+    through maintained ownership.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted unspecified fallback structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Maintained PubChem retrieval and property normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Scoped exact grounding decision
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Structure/xref emission
+  acceptance_checks:
+  - Preserve the original 2″ ester constitution, chlorine, methylated noviose and
+    vanilloyl group; independently verify all four centres against the primary projection
+    before adopting a full stereo key.
+  - 'The primary-derived candidate reproduces AKYRQFMQZJFLAE-AUHTVUCRSA-N. Review
+    grounding and exact-xref scope together: existing PubChem 76181969 and ChEBI211429
+    denote unspecified structures and must not silently become unqualified exact equivalents
+    of an assigned replacement.'
+  - Do not infer a mixture or opposite enantiomer from absence of stereo. Run schema,
+    strict, chemistry, grounding and source-reproduction checks after a future correction.
+- action_id: A2
+  description: Correct the chemical word in the inherited definition.
+  finding_ids:
+  - F2
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Inherited definition and cited source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO extraction/normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition emission
+  acceptance_checks:
+  - The regenerated definition uses prenylated 4-hydroxybenzoic acid or an equally
+    precise primary-supported formulation.
+  - Retain PMID 15152806 and the distinction from vanillobiocin; avoid direct generated-YAML
+    repair.
+- action_id: A3
+  description: Keep primary material, assay and target distinctions in optional curator
+    additions.
+  finding_ids: []
+  target_ids:
+  - antibioticmech:aro-f538304a82
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/isovanillobiocin.yaml
+    role: Optional curator-owned scientific additions through the validated writer
+  acceptance_checks:
+  - Distinguish 3–6% relative disk-diffusion activity from broth MIC and from the
+    two biochemical IC50 assays.
+  - Keep exact novclobiocin 312 mapping explicit, acknowledge the later table-header
+    inconsistency, and do not transfer clorobiocin crystal contacts or reporter induction
+    to direct binding.
+  - If adding a producer, specify the cloQ-defective S. roseochromogenes DS12.976
+    experiment; the tested mutant result does not establish wild-type production.
+limitations:
+- The sole adopted 2004 discovery article was read in full, including visually inspected
+  Table 1 and Figures 2/3. Raw NMR data were not independently reprocessed. The paper
+  has apparent typographical slips in the 2″/3″ discussion and a cloR reference in
+  the closing discussion; its abstract, Methods and main results consistently identify
+  the cloQ mutant. Exact congener mapping uses the actual Figure 2/table and surrounding
+  experimental context.
+- The primary stereochemical diagnostic transcribes a published Haworth projection
+  and matches an independent assigned authority graph. It is not a new experimental
+  absolute-configuration measurement or a physical molecular model. No native edits
+  were made.
+- The 2004 AAC follow-up was read for material mapping, Methods, exact 312 row and
+  Results/Discussion. The 2008 follow-up was read for Methods, exact 312 data and
+  relevant Results/Discussion; unrelated compound MIC rows were not individually audited.
+  Its Table 1 appears to reverse the 2″/3″ column headings relative to the earlier
+  primary structures and its own narrative. Stable compound codes and the original
+  2004 structural table support the mapping, but that source inconsistency must remain
+  explicit.
+- GtoP direct retrieval required login, so no account-based access or complete current
+  page was claimed. Indexed text was used only as a lead; official PubChem and independently
+  read primary figures supply the structural evidence.
+- Current ChEBI has an invalid displayed pyrrole SMILES but a valid matching unspecified
+  InChI. The native PubChem-derived SMILES is valid and all three focused gates passed.
+  The upstream ChEBI serialization issue is not reported as an invalid-native-SMILES
+  blocker.
+- The structured adapter identifies gyrB annotation and no module hit, not an isovanillobiocin
+  experiment. The original sources do not establish a human clinical indication or
+  exact isovanillobiocin-bound crystal structure. Optional native target, producer,
+  MIC and causal-graph omissions are not separate findings.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Actual public-source retrieval URLs, UTC access times, statuses and hashes are retained
+  in scratch manifests. Source owner hashes preserve the original capture and append
+  only actual maintained inputs. The original primary source, rather than an authority
+  name match alone, establishes the missing sugar configuration.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
