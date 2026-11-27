@@ -1,0 +1,763 @@
+schema_version: 1.0.0
+review_id: 20261021T150735Z-dragmacidin-d-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Dragmacidin D: correct the reduced source structure and G-derived definition'
+started_at: '2026-10-21T14:43:53Z'
+finished_at: '2026-10-21T15:07:35Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native graph faithfully reproduces PubChem and ChEMBL but has two excess
+  hydrogens and a reduced aminoimidazole ring relative to the experimentally characterized
+  dragmacidin D molecular core. This is a blocker independent of the unresolved absolute
+  stereochemistry and isolated salt form. A separate major finding concerns the G-specific
+  definition and biological panel copied to D. Schema, strict and independent representation
+  checks pass; they do not establish the named natural-product identity.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/dragmacidin-d.yaml
+    sha256: c8850340491212c7b42f210f6215878230db317bd155a6daf6ddffe1af60865e
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-48bb80f5a5
+  path: data/antibiotics/antibacterial/dragmacidin-d.yaml
+  label: dragmacidin D
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction and source-specific qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Actual maintained source input for the record
+scope:
+  description: Entire native YAML, every chemical descriptor and exact xref, label
+    and class, definition and source, source concept, deterministic mint and all history
+    entries; both adopted publication leads and bounded exact-D primary structure,
+    activity and mechanism follow-up.
+  selection: Queue position 376, one exact record. Thirteen original input hashes
+    were preserved and three actual source/enrichment inputs appended before assessment,
+    for sixteen total.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-48bb80f5a5
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused schema validation passed.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/dragmacidin-d.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused strict validation passed.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/dragmacidin-d.yaml --out /private/tmp/am-review-session/376-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Actual independent parsing confirms internal SMILES/InChI/key/formula/charge/mass
+    agreement and deterministic mint reproduction.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 376
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: authority-chemistry
+  status: passed
+  required: false
+  summary: Native encodings, current PubChem SMILES and ChEMBL molfile all encode
+    the same reduced graph. Scratch-only neutral aminoimidazole mapping gives C25H20BrN7O2,
+    consistent with original HRMS, and distinguishes a two-hydrogen reduction from
+    salt, tautomer or stereochemical differences.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/376-xref-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/dragmacidin-d.yaml
+  locator: Entire native YAML.
+  accessed_at: '2026-10-21T15:07:13Z'
+  support: supports
+  summary: The MINTED/SEEDED D-labelled record contains neutral C25H22BrN7O2, XTUQWMCQNLFDOX-UHFFFAOYSA-N,
+    with two unspecified tetrahedral centres. Its definition explicitly names G and
+    describes a sulfur-containing side chain absent from the native graph. There are
+    no synonyms, activity roles, quantitative observations, targets, modes, resistance
+    assertions, producers, clinical assertions, datasets or causal graphs.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; scripts/extract_source_inventory.py;
+    scripts/enrich_pubchem_structures.py; scripts/seed_from_sources.py; conf/sources.yaml
+  locator: Complete exact ARO row 544 and PubChem row 237; relevant extraction, PubChem
+    property selection, structure fallback and definition-source selection.
+  accessed_at: '2026-10-21T15:07:13Z'
+  support: supports
+  summary: ARO supplies the D name, parent class, G paragraph and both adopted PMIDs.
+    PubChem supplies the H22 structure. The seeder reproduces those inputs and takes
+    PMID38206835 as the definition source. Both PubChem isomeric SMILES and InChI
+    are requested, so the reduced graph predates native generation. Mint and all three
+    seed/reseed history entries agree with provenance; no ChEBI row owns this record.
+  snapshot_sha256: 374e9480ab734451bb7bcf470a60f83a8e6a90c111957f96d054c29cbfb24da1
+- evidence_id: aro
+  kind: database
+  reference: ARO:3007776; ARO:3007773; https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo
+  locator: Complete current D and broader bis-indole class term blocks.
+  accessed_at: '2026-10-21T14:50:57Z'
+  support: supports
+  summary: Current ARO retains the G paragraph under D and the same PubChem/ChEMBL
+    links. The structural parent is broader. Its antibiotic-activity wording is a
+    database classification, not independent evidence for activity of the reduced
+    graph.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: pubchem
+  kind: authority
+  reference: PubChem:15000037; https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/15000037/property/MolecularFormula,MolecularWeight,MonoisotopicMass,Charge,SMILES,InChI,InChIKey/JSON
+  locator: Complete official property response and independently parsed current SMILES/InChI.
+  accessed_at: '2026-10-21T15:01:55Z'
+  support: supports
+  summary: Current PubChem exactly reproduces the native neutral H22 formula, reduced
+    aminoimidazole graph, full key, mass and charge. This is faithful source reproduction,
+    not primary confirmation of the name-to-structure assignment.
+  snapshot_sha256: 9b98a4121f7107a3e60410523427e324f04dfa0aa96f8080fc1fb918002a6d3f
+- evidence_id: chembl
+  kind: authority
+  reference: CHEMBL513753; https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL513753.json
+  locator: Complete molecule response; canonical SMILES, Standard InChI and molfile
+    checked.
+  accessed_at: '2026-10-21T15:01:55Z'
+  support: supports
+  summary: The current ChEMBL graph and molfile independently parse to the same H22
+    full key. Thus the concern is a shared source identity error, not disagreement
+    between the native graph and these two exact xrefs.
+  snapshot_sha256: 9aed2bc668e7f21889721e12ed290dce136d6f6a81fad73aa668d6e44cf0f4b6
+- evidence_id: d2002-main
+  kind: primary_source
+  reference: PMID:12405846; DOI:10.1021/ja027822b; https://stoltz2.caltech.edu/publications/23-2002.pdf
+  locator: Complete six-page original author-hosted paper text read, with Figure 1
+    visually inspected; final synthesis and natural/synthetic comparison on pages
+    13183–13184.
+  accessed_at: '2026-10-21T15:02:57Z'
+  support: refutes
+  summary: The synthesis builds an aminoimidazole-bearing pyrazinone and isolates
+    final D after TFA treatment. The authors report agreement with natural D in proton/carbon
+    NMR, IR, HRMS and UV, with natural samples/spectra from Wright and Capon. The
+    drawing contains the aminoimidazolium resonance system, not the native reduced
+    aminal carbon. The work does not itself establish a new antibacterial assay.
+  snapshot_sha256: e8cfc99be08aa68eda7eecdceaf93c10c04c4edc95c39b4162813fc739766f12
+- evidence_id: d2002-si
+  kind: primary_source
+  reference: DOI:10.1021/ja027822b supporting information; https://stoltz2.caltech.edu/publications/23-s-2002.pdf
+  locator: Selected final-product experimental section, printed pages 22–23, read;
+    page 22 reaction/product drawing visually inspected. Other intermediate spectra
+    were not reprocessed.
+  accessed_at: '2026-10-21T15:02:57Z'
+  support: refutes
+  summary: Final dragmacidin D (5) is isolated with TFA after cyanamide cyclization.
+    The explicitly reported mass formula is [C25H20BrN7O2+H]+, with calculated m/z
+    530.0940 and found 530.0943. The molecular core therefore has H20; the native
+    neutral H22 core has an additional degree of saturation. This discrepancy cannot
+    be reconciled by selecting an enantiomer or by protonating the same molecular
+    core.
+  snapshot_sha256: 93f6f7f2b4875df13758d2e33fb8b7afb15eda01fbc61e92f62dab8cc649a8ee
+- evidence_id: graph-comparison
+  kind: validation
+  reference: 376-xref-check.py; 376-xref-chemistry.json
+  locator: Independent authority parsing and scratch-only aminoimidazole neutralization.
+  accessed_at: '2026-10-21T15:07:13Z'
+  support: refutes
+  summary: All four source/native encodings give C25H22BrN7O2, neutral exact mass
+    531.101835044. Native atom 32 is sp3 C-H bonded singly to three N atoms. Mapping
+    the original aminoimidazole core without choosing handedness gives C25H20BrN7O2,
+    exact mass 529.086184980 and LYYMDXNIMMMZLB-UHFFFAOYSA-N, with one unassigned
+    stereocentre. This is a diagnostic connectivity candidate, not a completed correction
+    or substitution for the isolated trifluoroacetate material.
+  snapshot_sha256: 50a076e93b54ec2fb24d0f32c378173c811b4c11e298d574998c8535af3d05cf
+- evidence_id: g2017
+  kind: primary_source
+  reference: PMID:28085024; DOI:10.3390/md15010016; PMC5295236
+  locator: Complete original main text, structural-analysis table and assay methods
+    read.
+  accessed_at: '2026-10-21T14:51:22Z'
+  support: refutes
+  summary: This study isolates and assays G, C23H19Br2N7S, whose pyrazine and guanidinoethylthio
+    side chain match the native definition. Its MRSA, mycobacterial, malaria and pancreatic-cell
+    panel belongs to G. It is not an exact-D experiment and does not support transfer
+    to either the native reduced graph or the experimentally characterized D core.
+  snapshot_sha256: 5274486045543d17a24c658a77c86d11e71359cbbd2af9cd7f769a344953c5ee
+- evidence_id: gh2024
+  kind: primary_source
+  reference: PMID:38206835; DOI:10.1021/acs.orglett.3c04039
+  locator: Complete indexed/publisher abstract; full original paper not read.
+  accessed_at: '2026-10-21T14:50:57Z'
+  support: refutes
+  summary: The native definition citation concerns total synthesis of G/H and antibacterial
+    testing of those compounds and analogues against S. aureus and an efflux-deficient
+    Salmonella strain. The abstract provides no D result and cannot repair the congener-specific
+    definition mismatch.
+  snapshot_sha256: bc5bc115eebede98c08a49f728c93e1e83a3a965afed552d8a2291a5451cd1f6
+- evidence_id: d2015-s
+  kind: primary_source
+  reference: PMID:26130270; DOI:10.1002/anie.201504113; PMC4532559
+  locator: Complete original main text and Table 1, Figure 2 captions and scheme descriptions
+    read in public PMC HTML; supplementary spectra not read.
+  accessed_at: '2026-10-21T15:02:27Z'
+  support: context_only
+  summary: This asymmetric synthesis isolates D trifluoroacetate at 61 percent ee
+    and supports S configuration by chemical correlation, explicitly conflicting with
+    Jia/Capon R assignment. In water at pH 6.8 and 1 mg/mL, ee decreases to 33 percent
+    after four days and 4 percent after sixteen days; storage at minus 20 degrees
+    C with benzene preserves ee for forty days. These material-dependent observations
+    justify retaining stereochemical uncertainty. Neither they nor biosynthetic analogy
+    repairs the separate H22 versus H20 bond-order error.
+  snapshot_sha256: b5c5d65b23b34079b22468d90fa3455700ce56f7287515196fd2cee595de35d1
+- evidence_id: d2015-r
+  kind: primary_source
+  reference: PMID:25730523; DOI:10.1021/acs.orglett.5b00327; https://pubmed.ncbi.nlm.nih.gov/25730523/
+  locator: Complete official indexed abstract inspected with the web tool; direct
+    downloaded HTML was a challenge page and is not treated as article text.
+  accessed_at: '2026-10-21T15:07:13Z'
+  support: context_only
+  summary: The first asymmetric synthesis assigns R configuration and reports natural
+    samples as racemic or scalemic at 39 percent ee. This conflicts with the subsequent
+    S synthesis. The abstract supports that disagreement and sample scope, not a choice
+    of handedness for this record.
+- evidence_id: d1998
+  kind: primary_source
+  reference: PMID:9599272; DOI:10.1021/np970483t; https://pubmed.ncbi.nlm.nih.gov/9599272/
+  locator: Complete official indexed abstract inspected with the web tool; original
+    full text unavailable.
+  accessed_at: '2026-10-21T15:07:13Z'
+  support: context_only
+  summary: The paper identifies D as a co-metabolite of new E from an Australian Spongosorites
+    sample and describes both as protein-phosphatase inhibitors. The abstract contains
+    no assay concentrations or organism-specific antibacterial result. Numeric phosphatase
+    potencies repeated in later papers are not accepted as directly verified from
+    this abstract.
+- evidence_id: d2023
+  kind: primary_source
+  reference: PMID:38132962; DOI:10.3390/md21120642; https://mdpi-res.com/d_attachment/marinedrugs/marinedrugs-21-00642/article_deploy/marinedrugs-21-00642.pdf
+  locator: Abstract/introduction, selected main results and discussion, complete conclusions,
+    compound identity subsection, spheroid methods and RPPA methods read. Full intermediate
+    result tables and supplementary spectra were not independently reviewed.
+  accessed_at: '2026-10-21T15:02:27Z'
+  support: context_only
+  summary: The authors use greater than 98 percent pure D trifluoroacetate from the
+    HBOI collection, checked by NMR/HRMS. Their new experiments concern breast-cancer
+    spheroids and host-cell protein changes. The 450-antibody RPPA and Connectivity
+    Map comparisons generate hypotheses about protein synthesis, ribonucleotide reductase
+    and signaling; they do not directly identify microbial binding targets. The introductory
+    bacterial MICs cite the original 1992 discovery and are not newly measured 2023
+    antibacterial endpoints.
+  snapshot_sha256: 1272582a367b37f219e03e564b100e83d37d873bdf8df19c96a62a1723012c17
+- evidence_id: discovery-access
+  kind: database
+  reference: DOI:10.1021/jo00043a045
+  locator: Original 1992 publisher bibliographic identity and citation chain verified;
+    full original experiment unavailable.
+  accessed_at: '2026-10-21T15:07:13Z'
+  support: context_only
+  summary: The original D isolation paper is identified consistently by the 2002 author
+    paper and 2023 original authors. The publisher route returned 403. Reported bacterial
+    MICs in the later introduction remain citation context; strains, exact material
+    and original assay were not verified from the 1992 full paper.
+- evidence_id: search
+  kind: search
+  reference: 376-inclusive-hits.txt; 376-curation-hits.txt
+  locator: Ignored-inclusive local search and bounded public exact-name/identifier
+    follow-up.
+  accessed_at: '2026-10-21T15:07:13Z'
+  support: context_only
+  summary: No existing exact corrective overlay was found. The queue lists the two
+    G/H leads. Public searches distinguished D synthesis and host-cell results from
+    G activity and family-level review summaries. No claim of exhaustive absence of
+    D antibacterial evidence is made.
+  search_scope: '2026-10-21: rg --no-ignore --hidden across data, curation, conf,
+    scripts, src, docs, .claude, reviews and reports for dragmacidin D, dragmacidon
+    D, ARO:3007776 and XTUQWMCQNLFDOX. A separate ignored-inclusive curation/conf/reports/reviews
+    search retained the queue hit and found no corrective overlay. Public queries
+    used exact D name, discovery/synthesis DOIs, formula and aminoimidazole/antibacterial/stereochemistry
+    terms; publisher, PubMed, PMC and author-hosted sources were inspected.'
+  snapshot_sha256: ecc3981a875aff8b4f000c5a9859ee91f5eec7d77deb52fe6adbfcf55f90a869
+- evidence_id: validation
+  kind: validation
+  reference: 376-schema.log; 376-strict.log; 376-chemistry.json; 376-xref-chemistry.json
+  locator: Actual focused checks and final unchanged-input hash recheck.
+  accessed_at: '2026-10-21T15:07:13Z'
+  support: supports
+  summary: Schema, strict, independent native chemistry and authority comparison all
+    pass. Their success confirms faithful representation and provenance while the
+    primary structure evidence establishes a name-to-structure error.
+  snapshot_sha256: 48e81d8c0dbcccce29db99aa51dbde9e7155db7f996580eb4807baebe4fb79a5
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Named natural product, chemical form and all exact xrefs
+  outcome: concern
+  summary: Native and both authorities encode the same reduced H22 graph, but the
+    original synthesis and final-product HRMS establish an H20 aminoimidazole core
+    for D. This is a wrong identity despite internally valid chemistry. Salt and disputed
+    absolute configuration require separate adjudication, not a speculative automatic
+    replacement.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  evidence_ids:
+  - native
+  - pubchem
+  - chembl
+  - d2002-main
+  - d2002-si
+  - graph-comparison
+- assessment_id: definition
+  area: evidence
+  topic: Congener-specific structural and biological definition
+  outcome: concern
+  summary: Both adopted source publications concern G/H; the paragraph explicitly
+    names G. The definition and citation must be corrected independently of the D
+    structural blocker.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  evidence_ids:
+  - owners
+  - aro
+  - g2017
+  - gh2024
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial filing and biological-material scope
+  outcome: unknown
+  summary: The bis-indole structural parent is broader. D antimicrobial reports are
+    identifiable, but original 1992 assay depth was unavailable. They must not be
+    assigned to the current reduced graph, and host-cell D trifluoroacetate experiments
+    do not establish neutral-form antibacterial activity. No universal inactivity
+    or compulsory exclusion is inferred.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  evidence_ids:
+  - aro
+  - d2002-main
+  - discovery-access
+  - d2023
+- assessment_id: mechanism
+  area: evidence
+  topic: Mode, target, resistance, producer and dataset assertions
+  outcome: not_applicable
+  summary: The native record asserts no gene, protein, pathway, stress response or
+    transcriptomic dataset, so a structured adapter is not applicable. Optional D
+    host phosphatase and RPPA hypotheses remain context. Sponge extraction is not
+    biosynthetic-producer proof, and no direct microbial target is inferred.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  evidence_ids:
+  - native
+  - d1998
+  - d2023
+- assessment_id: provenance
+  area: provenance
+  topic: Generated source ownership, history and optional completeness
+  outcome: supported
+  summary: Every native field and history event was checked against actual ARO/PubChem
+    ownership. Original captures are preserved and the later actual owner hashes appended.
+    Missing optional assays, graphs or mechanism fields are not separate defects;
+    the source identity and congener-definition errors are the actionable findings.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  evidence_ids:
+  - native
+  - owners
+  - search
+  - validation
+findings:
+- finding_id: F1
+  issue_key: dragmacidin-d-reduced-aminoimidazole-wrong-identity
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: Correct the two-hydrogen reduction in the structure labelled dragmacidin
+    D
+  description: The record and current PubChem/ChEMBL encodings have a neutral C25H22BrN7O2
+    graph with a tetrahedral C-H bonded singly to three nitrogens in the five-membered
+    ring. Original synthesis SI pp22–23 instead identifies final D with an aminoimidazole
+    system and [C25H20BrN7O2+H]+ HRMS, calculated 530.0940 and found 530.0943; the
+    main paper reports agreement with natural D. The native core therefore differs
+    by H2 and bond order. This is not a tautomer, choice of R/S assignment, or proton/counterion
+    difference. Database agreement reproduces the shared problem rather than validating
+    the natural-product identity.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  field_paths:
+  - label
+  - chemical_structure
+  - xrefs
+  - source_concepts
+  evidence_ids:
+  - native
+  - owners
+  - pubchem
+  - chembl
+  - d2002-main
+  - d2002-si
+  - graph-comparison
+  rule_id: One exact chemical structure and primary name-to-structure identity checklist
+  native_severity: blocker
+  normalization_reason: The named natural product is represented by a chemically different
+    hydrogenation state. Internal parser agreement and exact database reproduction
+    do not cure wrong identity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted reduced molecular structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Maintained exact source structure acquisition
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: D name and adopted exact chemical xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Evidence-backed exact identity and xref adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible structure and identifier emission
+- finding_id: F2
+  issue_key: dragmacidin-d-definition-transferred-from-g
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Replace the G-specific definition and biological panel attached to D
+  description: The D record copies a paragraph explicitly describing dragmacidin G,
+    including a sulfur-containing side chain and the G experimental activity panel.
+    The nearest citation is a G/H total synthesis; the other adopted lead is the G
+    isolation study. These do not support a D definition. Correct this independently
+    of the molecular-structure blocker; neither congener should be relabelled to make
+    the copied prose fit.
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - native
+  - owners
+  - aro
+  - g2017
+  - gh2024
+  rule_id: Exact-compound and narrowest-claim evidence checklist
+  native_severity: major
+  normalization_reason: This is a confirmed transfer of substantive chemical and biological
+    claims between distinct congeners, not an optional enrichment gap.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted congener definition and references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source-specific definition qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition and citation placement
+actions:
+- action_id: A1
+  description: Adjudicate the D molecular identity through maintained inputs before
+    attaching additional activity or mechanism claims.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted reduced molecular structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Maintained exact source structure acquisition
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: D name and adopted exact chemical xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Evidence-backed exact identity and xref adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible structure and identifier emission
+  acceptance_checks:
+  - Reconcile the published aminoimidazole bond orders and H20 molecular core with
+    adopted chemical sources. Keep the natural-product name, graph, formula, masses
+    and xrefs mutually consistent. Do not merely change the formula while retaining
+    the reduced SMILES/InChI.
+  - Resolve or explicitly preserve the independent salt and absolute-configuration
+    questions. The scratch LYYMDXNIMMMZLB-UHFFFAOYSA-N graph is a neutral connectivity
+    diagnostic, not authority to choose a natural enantiomer or conflate the trifluoroacetate
+    assay material with a neutral substance.
+  - Reassess current PubChem/ChEMBL exact-xref scope after correction; retain provenance
+    without asserting equivalence to a different hydrogenation state. Regenerate,
+    inspect full encodings and mint, and run schema, strict and source-reproduction
+    checks.
+- action_id: A2
+  description: Replace the copied G definition with a D-specific, accurately sourced
+    statement.
+  finding_ids:
+  - F2
+  target_ids:
+  - antibioticmech:aro-48bb80f5a5
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted congener definition and references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source-specific definition qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition and citation placement
+  acceptance_checks:
+  - Attach primary D identity support at the definition and keep G/H experimental
+    claims with their actual congeners. Do not use G antibacterial results as D evidence.
+  - For any new D activity, inspect the exact material, strain, endpoint, units and
+    assay. Preserve the original-discovery access limit and the distinction between
+    isolated salt and neutral molecular core; do not promote host RPPA hypotheses
+    to direct microbial targets.
+  - Regenerate and inspect the definition/source pair, then rerun focused schema/strict
+    and source reproduction.
+limitations:
+- The 1992 discovery full text and 1998 phosphatase full text were unavailable through
+  the inspected public publisher routes. The 1998 official abstract was read completely;
+  later repeated MICs or phosphatase potencies are not treated as original assays
+  inspected here.
+- The full 2002 author paper was read. Its supporting information was inspected for
+  final D synthesis, characterization and formula on printed pages 22–23, with the
+  product drawing visually checked; complete intermediate spectra and final spectral
+  overlays were not independently reprocessed.
+- The 2015 S-assignment paper was read in full main-text form; the conflicting R-assignment
+  paper was available at complete-abstract depth. Their disagreement and documented
+  sample-dependent racemization remain unresolved. Unspecified stereochemistry alone
+  is not proof of a mixture.
+- The 2023 host-cell paper was read selectively for exact material, activity context,
+  interpretation and relevant methods. Its spectra and complete experimental result
+  tables were not independently reprocessed. Its mechanistic suggestions remain hypotheses,
+  and its isolated trifluoroacetate material is distinct from the native neutral graph.
+- The 2024 G/H source was available at complete-abstract depth. The 2017 G source
+  was read in full main-text form. Neither is D-specific evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- The blocker concerns hydrogenation, not a choice between the disputed natural-product
+  absolute configurations. The proposed actions require a maintained, source-supported
+  correction; no native identity or scientific status was changed.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
