@@ -1,0 +1,1570 @@
+# Florfenicol: coherent exact identity and appropriately bounded resistance observations
+
+- Review: 20261021T163917Z-florfenicol-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T16:12:22Z
+- Finished UTC: 2026-10-21T16:39:17Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The complete neutral (1R,2S) florfenicol graph agrees with checked exact chemical authorities. The five curated avian-isolate and bovine-subgroup observations match original methods and results, retaining UNKNOWN mechanism and avoiding allele or genome inflation. Eleven resistance associations and the peptidyl-transferase target remain explicitly database-qualified; selected original studies provide support with distinct host and assay boundaries. No corrective finding was established in this review. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 447; original thirteen input hashes preserved within twenty-three expanded inputs, including actual ARO owners and explicit native curator ownership.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:87185 | data/antibiotics/antibacterial/florfenicol.yaml | generated | florfenicol |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:87185 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:87185 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:87185 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:87185 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:87185 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:87185 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:87185 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:87185 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:87185 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:87185 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:87185 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:87185 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Complete neutral (1R,2S) florfenicol
+
+identity: supported. Targets: CHEBI:87185.
+
+Structure, systematic name, D-threo identity, formula, neutral charge and masses are coherent across checked authorities and exact patent examples. Close phenicol analogues and ester salts remain distinct.
+
+### Exact chemical and broader drug/document links
+
+grounding: supported. Targets: CHEBI:87185.
+
+Checked chemical authorities agree, KEGG drug association resolves, and both patent documents contain the exact florfenicol structure among other compounds. Reaxys/LINCS have bounded unresolved access, not demonstrated mismatches.
+
+### Antibacterial eligibility and spectrum
+
+evidence: supported. Targets: CHEBI:87185.
+
+Original cell-free and isolate studies support the named compound as an antibacterial. Canine and RGM isolate differences prevent uniform-spectrum claims. Clinical product and host-immune results do not substitute for pure-compound mechanism experiments.
+
+### Four exact-isolate co-occurrences
+
+evidence: supported. Targets: CHEBI:87185.
+
+All four isolates, flo associations, source disk phenotype and the cmlA addition for 6468 are supported. The native UNKNOWN labels and no-allele/no-genome caveats accurately bound the observations.
+
+### One separate bovine subgroup association
+
+evidence: supported. Targets: CHEBI:87185.
+
+The 8/48 flo/cmlA subgroup and assay/breakpoint caveats are supported; discordant subgroups remain separate. Q9F0D9/AF252855 is reference context, and EC56 is correctly excluded as a subgroup identity.
+
+### Eleven imported associations and mechanism classes
+
+evidence: supported. Targets: CHEBI:87185.
+
+The entries faithfully preserve their database evidence tier. Selected original ClcD and OptrA/PoxtA experiments support target alteration/protection with explicit construct and organism limits. The remaining discovery abstracts have differing phenotypic, sequence and epidemiological depth; no unverified exact transport assay or universal allele effect is inferred.
+
+### Qualified 23S rRNA peptidyl-transferase target
+
+evidence: supported. Targets: CHEBI:87185.
+
+The target remains a broad nucleic-acid target with PRIMARY_EVIDENCE_NEEDED. The original Sch 25298 abstract supports 70S/PTC inhibition and shared-site binding; exact nucleotide/organism/reagent details require full original methods before promotion. Other PTC-drug papers are not substituted for florfenicol experiments.
+
+### Brand typing, synthetic origin and veterinary uses
+
+scope: supported. Targets: CHEBI:87185.
+
+Brand names are already correctly typed. Exact patent syntheses support synthetic origin, and official labels support bovine respiratory/foot-rot and bounded aquaculture-use descriptions. No natural producer or FDA product assertion is present to audit as an additional native collection.
+
+### Optional target/activity enrichment
+
+completeness: unknown. Targets: CHEBI:87185.
+
+Future primary enrichment can use original ribosome, MIC and cloned-resistance evidence after exact material and endpoint review. Missing optional quantitative activity or causal graph fields are not defects. All adopted leads were disposed at their stated reading depths.
+
+### Mixed generated and curator-owned claims
+
+provenance: supported. Targets: CHEBI:87185.
+
+All six history events and actual source owners were inspected. The explicit native curator owner is preserved, while generated source hashes remain unchanged.
+
+### Focused gates and input integrity
+
+schema: supported. Targets: CHEBI:87185.
+
+Focused chemistry, schema and strict checks pass; all original and expanded input hashes were rechecked. Deterministic success is kept separate from the scientific source assessment.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+If enriching the primary target or resistance evidence, retain exact assay and material boundaries.
+
+- Read full original Sch 25298 binding methods before specifying organism, nucleotide or quantitative binding constants.
+- Keep florfenicol MICs separate from linezolid stalling and PoxtA structural experiments.
+- Preserve exact constructs, host backgrounds and induction conditions for ClcD/OptrA/PoxtA; do not assign native-isolate alleles from reference sequences.
+- Do not change the five supported UNKNOWN co-occurrences into isolated-gene causation without additional source experiments.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/florfenicol.yaml; Entire record, sixteen resistance entries, one target and all six history events | supports | The neutral stereodefined synthetic phenicol has seven names, six parents, one antimicrobial role, two patent references and one broad KEGG drug association. Eleven resistance entries and the target are explicitly database-qualified. Five curator-owned UNKNOWN entries retain four exact avian isolates and one bovine subgroup with primary references and extensive source-scope caveats. Nuflor and Nuflor gold are already BRAND_NAME. No quantitative activity, causal graph, producer or FDA product collection is asserted. |
+| owners | 445447-raw-rows.json; 447-inputs-expanded.json; Complete ChEBI row 2376, ARO row 106, resistance rows 2530–2540 and target row 114 | supports | Original captures were preserved. ARO identity, resistance and target inputs were appended before detailed assessment; native curator ownership was explicitly retained for the five primary qualitative observations. All source-derived edges were compared with the complete record. |
+| local-search | 445447-all-local-paths.txt; Ignored-inclusive exact-label and reference search | context_only | The search included hidden and ignored files under data, curation, conf, scripts, src, reports and reviews. Native and actual owners were read; optional collection absence is not treated as a defect. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/87185/; CHEBI:87185 current structure, synonyms, parents and role | supports | The current complete neutral (1R,2S) graph, formula C12H14Cl2FNO4S and key AYIRNRDRBQJXIF-NXEZZACHSA-N agree with the native record. Its amide, secondary alcohol, sulfone, organochlorine and organofluorine parents are chemically coherent. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/114811/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON; PubChem CID 114811 molecular properties | supports | The full stereodefined neutral graph matches the native record. |
+| chembl | https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1241590.json; CHEMBL1241590 molecular structure | supports | The ChEMBL structure independently produces the same exact InChIKey. |
+| vsdb | https://sitem.herts.ac.uk/aeru/vsdb/Reports/1777.htm; VSDB 1777 identification section | supports | The native VSDB link resolves to florfenicol, CAS 73231-34-2 and the exact same stereodefined InChI. Only its chemical identification was used; its separate L16 target annotation was not imported as primary ribosome evidence. |
+| kegg-drug | https://rest.kegg.jp/get/D04194; KEGG drug D04194 entry and molfile | supports | The drug accession resolves to florfenicol and its parsed structure matches. drug_xrefs denotes a drug-level association, not mandatory exact chemical equivalence. |
+| chemistry | 447-chemistry.json; 445447-xref-chemistry.json; Independent RDKit 2026.03.5 using batch019 interpreter against batch045 cwd | supports | Native SMILES/InChI, charge, formula, masses and source mints pass; current ChEBI, PubChem, ChEMBL and KEGG drug graphs agree. The two assigned centers match the native systematic name. |
+| aro | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000461; ARO:3000461 identity, class and adopted lead | supports | The accession resolves to florfenicol and phenicol antibiotic classification. Its adopted PMID 15539072 is a resistance review, not an original experimental source. |
+| aro-3002704 | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3002704; Current ARO:3002704 fexA definition and cited leads | supports | Phenicol exporter association; retained as database evidence. |
+| aro-3002705 | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3002705; Current ARO:3002705 floR definition and cited leads | supports | Phenicol exporter association with multiple organism-specific primary leads; no one allele is assigned to all occurrences. |
+| aro-3002812 | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3002812; Current ARO:3002812 pp-flo definition and cited leads | supports | Fish-pathogen plasmid resistance determinant; separate from bovine and avian flo observations. |
+| aro-3003746 | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3003746; Current ARO:3003746 optrA definition and cited leads | supports | ABC-F protection association; original discovery transporter wording is qualified by later original mechanistic work. |
+| aro-3003963 | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3003963; Current ARO:3003963 flo definition and cited leads | supports | Database efflux association is separate from the five curated qualitative co-occurrences. |
+| aro-3004146 | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004146; Current ARO:3004146 cfrC definition and cited leads | supports | Cfr(C) target-modification association; not conflated with the distinct ClcD experiment. |
+| aro-3004470 | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004470; Current ARO:3004470 poxtA definition and cited leads | supports | ABC-F protection association; later original work supports this mechanism class. |
+| aro-3004572 | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004572; Current ARO:3004572 Staphylococcus aureus LmrS definition and cited leads | supports | Source-organism protein association; exact florfenicol experiments were not verified from full text during this review. |
+| aro-3004599 | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004599; Current ARO:3004599 clcD definition and cited leads | supports | Target-alteration association followed to cloned-host MIC and rRNA primer-extension evidence. |
+| aro-3004666 | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004666; Current ARO:3004666 pexA definition and cited leads | supports | Functional-metagenomic phenicol determinant; no source environmental organism is inferred from the clone. |
+| aro-3007019 | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3007019; Current ARO:3007019 fexB definition and cited leads | supports | Enterococcal phenicol-exporter association; original isolate/plasmid context remains bounded. |
+| target-source | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000754; ARO:3000754 peptidyl-transferase target | supports | The native 23S rRNA peptidyl-transferase target faithfully carries PRIMARY_EVIDENCE_NEEDED and leaves organism, strain and assay unspecified. General PTC papers attached to this ontology are not all florfenicol-specific. |
+| avian | https://pmc.ncbi.nlm.nih.gov/articles/PMC89696/?pdf=render; PMID 10639375 / DOI 10.1128/AAC.44.2.421-424.2000; original phenotype paragraph, complete Table 1 and adjacent probe results | supports | All four named isolates 5334, 5790, 5840 and 6468 are described as florfenicol-resistant by disk diffusion using a 30-µg disk and the source threshold below 21 mm. They are flo-positive. Table 1 reports florfenicol MICs of 64, 32, 64 and 32 µg/mL respectively; its second probe column is int, not cmlA. Adjacent text states that only 6468 contains cmlA. These results support precisely the four native co-occurrences, without proving sole-gene causation or assigning a shared allele. The native qualitative entries correctly avoid importing numeric MICs or a new E. coli clinical breakpoint. |
+| bovine | https://pmc.ncbi.nlm.nih.gov/articles/PMC87642/?pdf=render; PMID 11101601 / DOI 10.1128/JCM.38.12.4593-4598.2000; original Methods, Tables 1–2 and adjacent accession/cohort results | supports | NCCLS broth microdilution was performed in the 48-isolate bovine cohort. Table 2 identifies eight flo/cmlA-positive isolates with florfenicol MICs 64–&gt;256 µg/mL. Separate flo-only and cmlA-only subgroups are not merged into this row; the latter includes discordant phenotypes. The paper explicitly borrows a bovine-respiratory breakpoint because an E. coli breakpoint was unavailable. AF252855 is the deposited bovine flo sequence. The native subgroup observation preserves these limitations and does not assign a subgroup strain, genome or common experimental allele. |
+| uniprot | https://rest.uniprot.org/uniprotkb/Q9F0D9.json; UniProt Q9F0D9 organism, references and sequence evidence | supports | The entry links PMID 11101601 to bovine Flo/AAG21808.1. EC56/pEC56 appears in a separate 2004 sequence submission with AAW02923.1. Neither name establishes the allele of all 2000 subgroup members or the four avian isolates. The native reference-only context is accurate. |
+| archive | https://www.ebi.ac.uk/ena/browser/api/embl/AF252855.1; ENA AF252855.1 source/CDS/reference features | supports | The archive gives E. coli taxon 562, the flo CDS and AAG21808.1, and cites the bovine study. It does not supply a strain or genome assignment for all reported isolates. The native accession boundary is appropriate. |
+| clcd-original | https://pmc.ncbi.nlm.nih.gov/articles/PMC4538495/?pdf=render; PMID 26149991; original experimental text, Table 1 and Figure 1 caption | partial | Codon-optimized clcD was expressed in E. coli, not measured as a universal C. difficile phenotype. IPTG-induced E. coli AS19 carrying pClcD has florfenicol MIC 8 µg/mL versus 1 µg/mL for parent-vector and no-plasmid controls. Primer-extension experiments in an rlmN-deleted E. coli background locate a ClcD-dependent stop at A2503. These data support a target-alteration mechanism in the tested constructs, without equating all Cfr-like proteins or proving every homolog active. |
+| clcd-figure | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/88e1/4538495/3fa757a164fe/zac0091543540001.jpg; Original Figure 1, actual image inspected | partial | The pClcD and pCfrhis lanes contain the labeled A2503 stop compared with the no-plasmid and parent-vector lanes. This independently confirms the displayed modification readout; the figure does not chemically identify every modified atom or independently measure antibiotic binding. |
+| poxta2022 | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8987054/fullTextXML; DOI 10.1038/s41467-022-29274-9; original resistance Results, full Table 1/footnote and relevant Methods/Discussion | partial | In E. faecalis TX5332 ΔlsaA, inducible OptrA and PoxtA constructs increase florfenicol MICs relative to an empty vector. Experiments used BHI, plasmid/host selection antibiotics, cCF10 induction, about 5×10^5 CFU/mL and 16–20 h at 37°C, in triplicate. The table distinguishes OptrA ST16/35048 and PoxtA EF9F6/AOUC-0915. Its detailed stalling experiments concern linezolid and its cryo-EM complexes concern PoxtA-bound ribosomes; they are not direct images of florfenicol displacement. These combined original data support the ABC-F protection classification while keeping the florfenicol-specific endpoint at MIC depth. |
+| cannon1990 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A2228823%20AND%20SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; PMID 2228823 / DOI 10.1093/jac/26.3.307; complete original abstract | partial | The original compares Sch 25298 with chloramphenicol, thiamphenicol and other fluorinated analogues. Sch 25298 inhibits cell-free bacterial translation and 70S peptidyl transferase and competes for a shared ribosomal site, with lower binding efficiency than the two parent comparators. Full methods, exact receptor nucleotide, reagent stereochemical analysis and binding constants were not recovered; this is a primary target-enrichment lead, not grounds to claim a fully audited nucleotide-level binding experiment. |
+| patent-us | https://patents.google.com/patent/US4235892/en; US4235892A; stereochemical discussion, exact Example 6A–D and claim 8 | supports | The patent explicitly prepares D-threo para-methylsulfonyl dichloroacetamido fluoropropanol, the florfenicol constitution, separately from nitro, difluoroacetyl, ester and salt analogues. Example 6D gives the neutral product and its analytical characterization. This supports synthetic identity/document relevance; broad genus claims are not copied as exact-compound MICs. |
+| patent-ep | https://patents.google.com/patent/EP0014437/en; EP0014437A2, normalized native EP14437; Example 9 and activity discussion defining compound B | partial | The corresponding exact D-threo product is prepared in Example 9D and identified as compound B in antibacterial discussion. The EP text reports a different melting range from US Example 6D; that source-level analytical difference is preserved without inventing a new native isomer. All patent congeners, ester salts and broad activity claims were not treated as the neutral molecule. Numerical animal-protection tables embedded as images were not independently audited. |
+| nuflor | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=87f37539-b83b-42e9-989c-32e63ebecd29; Official NUFLOR label, description/indications and product-name section | supports | The label identifies florfenicol as the ingredient of a veterinary injection and supports the native bovine respiratory disease and foot-rot use descriptions. Nuflor/Nuflor Gold are product names, already typed as brands. Formulated product use is not substituted for pure-compound binding evidence. |
+| aquaflor | https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=03902b8d-4f0a-450c-9862-99576dd4ff67; Official AQUAFLOR label, active ingredient and finfish indications | supports | The official label identifies a florfenicol-containing medicated article for specified freshwater-reared fish diseases. It supports the broad aquaculture-use statement while preserving product, species and indication scope; no dosing recommendation or new native regulatory assertion is made. |
+| lead-25287575 | https://pubmed.ncbi.nlm.nih.gov/25287575/; Complete adopted abstract in 447-core.json | context_only | Original sustained-release gel and dog pharmacokinetic study. Formulation/exposure endpoints do not establish a bacterial mechanism. |
+| lead-25395188 | https://pubmed.ncbi.nlm.nih.gov/25395188/; Complete adopted abstract in 447-core.json | context_only | Original soil analytical/degradation study separates florfenicol from florfenicol amine; metabolite measurements are not free-drug antibacterial activity. |
+| lead-25567063 | https://pubmed.ncbi.nlm.nih.gov/25567063/; Complete adopted abstract in 447-core.json | context_only | Original UV/persulfate water-degradation study concerns chemical removal and resulting toxicity, not a bacterial target. |
+| lead-25572306 | https://pubmed.ncbi.nlm.nih.gov/25572306/; Complete adopted abstract in 447-core.json | context_only | Original feline RGM microbroth study reports M. fortuitum MIC above 128 µg/mL and M. smegmatis 32–64 µg/mL in the tested isolates. These bounded high MICs do not contradict antibacterial eligibility or justify universal efficacy. |
+| lead-25612770 | https://pubmed.ncbi.nlm.nih.gov/25612770/; Complete adopted abstract in 447-core.json | context_only | Original LC-MS/MS tissue-residue study measures total florfenicol as amine equivalents after digestion; analytical residue quantity is not intact-drug target binding. |
+| lead-25614968 | https://pubmed.ncbi.nlm.nih.gov/25614968/; Complete adopted abstract in 447-core.json | context_only | Original molecularly imprinted polymer extraction/LC-MS study concerns recognition in an analytical sorbent, not a bacterial molecular target. |
+| lead-25618189 | https://pubmed.ncbi.nlm.nih.gov/25618189/; Complete adopted abstract in 447-core.json | context_only | Original hydrolysis study examines pH/temperature-dependent chemical stability. Degradation products and environmental persistence are not additional native mechanisms. |
+| lead-25623169 | https://pubmed.ncbi.nlm.nih.gov/25623169/; Complete adopted abstract in 447-core.json | context_only | Original canine-isolate study tests 169 S. pseudintermedius and 167 E. coli isolates. The complete abstract reports florfenicol MIC90 values of 4 and 8 µg/mL respectively and mainly bacteriostatic time dependence; it calls for species-specific PK/PD and breakpoint work rather than establishing clinical efficacy. |
+| lead-25675893 | https://pubmed.ncbi.nlm.nih.gov/25675893/; Complete adopted abstract in 447-core.json | context_only | Original immunoassay/strip study concerns analytical antibody cross-reactivity with several phenicols; this antibody is not an antibacterial target. |
+| lead-25686865 | https://pubmed.ncbi.nlm.nih.gov/25686865/; Complete adopted abstract in 447-core.json | context_only | Original chick antibiotic/LPS study measures lymphocyte subsets, a host immune endpoint distinct from bacterial protein synthesis. |
+| lead-15539072 | https://pubmed.ncbi.nlm.nih.gov/15539072/; Complete adopted abstract in 447-core.json | context_only | Resistance review; its complete abstract is used only to identify contextual mechanisms and original leads, not as direct experimental support. |
+| lead-10639375 | https://pubmed.ncbi.nlm.nih.gov/10639375/; Complete adopted abstract in 447-core.json | context_only | Original avian study followed to full relevant phenotype methods, Table 1 and adjacent hybridization results. |
+| lead-11101601 | https://pubmed.ncbi.nlm.nih.gov/11101601/; Complete adopted abstract in 447-core.json | context_only | Original bovine study followed to full relevant Methods, Tables 1–2 and accession/cohort results. |
+| aro-lead-29635422 | https://pubmed.ncbi.nlm.nih.gov/29635422/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | PoxtA discovery: cloned-host susceptibility shifts and ABC-F sequence features; subsequent 2022 experiments refine mechanism and spectrum. |
+| aro-lead-28663118 | https://pubmed.ncbi.nlm.nih.gov/28663118/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Cfr(C) discovery: cloned C. difficile phenotype and occurrence in selected isolates; the abstract proposes A2503 methylation rather than presenting a complete direct chemical modification assay. |
+| aro-lead-26149991 | https://pubmed.ncbi.nlm.nih.gov/26149991/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | ClcD original followed to full experimental text, Table 1 and actual Figure 1. |
+| aro-lead-25977397 | https://pubmed.ncbi.nlm.nih.gov/25977397/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | OptrA discovery: plasmid characterization and cloned susceptible-host phenotype; original transporter terminology is not adopted as an efflux mechanism after later ABC-F work. |
+| aro-lead-22096043 | https://pubmed.ncbi.nlm.nih.gov/22096043/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | FexB: porcine E. faecium EFM-1 and E. hirae EH-1 phenotypes, plasmids and cloned sequences; no generalized strain susceptibility claim. |
+| aro-lead-20855745 | https://pubmed.ncbi.nlm.nih.gov/20855745/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | LmrS original abstract establishes cloned MFS multidrug-efflux research, but does not itself give the exact florfenicol experiment. Full-text attempts failed, so florfenicol-specific magnitude and assay details remain unverified here. |
+| aro-lead-20543056 | https://pubmed.ncbi.nlm.nih.gov/20543056/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | PexA functional metagenomics identifies a cloned soil-DNA determinant reducing florfenicol susceptibility. Native environmental taxon identity is not established. |
+| aro-lead-19292580 | https://pubmed.ncbi.nlm.nih.gov/19292580/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Salmonella DT104 SGI1 genetic-cluster study; the abstract emphasizes chloramphenicol/ampicillin phenotypes, not a new florfenicol-specific isolated-gene assay. |
+| aro-lead-17224413 | https://pubmed.ncbi.nlm.nih.gov/17224413/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Bordetella study distinguishes floR-positive phenicol-resistant isolates from cmlB1-positive chloramphenicol-resistant but florfenicol-susceptible material; do not collapse the exporter genes. |
+| aro-lead-16569865 | https://pubmed.ncbi.nlm.nih.gov/16569865/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Original pleuromutilin footprinting/L3 study concerns other drugs; it is not exact florfenicol target evidence merely because it appears under the broad PTC term. |
+| aro-lead-16257828 | https://pubmed.ncbi.nlm.nih.gov/16257828/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | PTC review; contextual only, not original florfenicol binding evidence. |
+| aro-lead-15914491 | https://pubmed.ncbi.nlm.nih.gov/15914491/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Efflux review; contextual only, not original exact-drug experiments. |
+| aro-lead-14742219 | https://pubmed.ncbi.nlm.nih.gov/14742219/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Original fexA paper abstract identifies S. lentus pSCFS2 and a phenicol-resistance protein with induction by florfenicol/chloramphenicol; full assay details were not recovered. |
+| aro-lead-14645321 | https://pubmed.ncbi.nlm.nih.gov/14645321/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Porcine E. coli study links floR with high florfenicol MICs and distinct plasmid/chromosomal contexts; abstract-level support does not assign a shared allele to native avian/bovine observations. |
+| aro-lead-12493808 | https://pubmed.ncbi.nlm.nih.gov/12493808/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Metadata resolves the original Salmonella phenotype/genotype report, but no abstract was supplied; its exact florfenicol endpoint remains unassessed. |
+| aro-lead-12107144 | https://pubmed.ncbi.nlm.nih.gov/12107144/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | SXT genomic/deletion study establishes mobile-element organization and transfer functions, not a direct florfenicol transporter assay at abstract depth. |
+| aro-lead-11600347 | https://pubmed.ncbi.nlm.nih.gov/11600347/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Vibrio SXT resistance-cluster study maps floR with other resistance loci; the original abstract addresses chloramphenicol resistance and genetic organization. |
+| aro-lead-11544236 | https://pubmed.ncbi.nlm.nih.gov/11544236/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | SGI1 complete-sequence study establishes island organization and occurrence, not a new exact florfenicol mechanism experiment at abstract depth. |
+| aro-lead-11451703 | https://pubmed.ncbi.nlm.nih.gov/11451703/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Original R55 floR-variant paper reports cloned nonenzymatic chloramphenicol resistance and florfenicol cross-resistance; exact numeric assay/form remains beyond the abstract. |
+| aro-lead-10991873 | https://pubmed.ncbi.nlm.nih.gov/10991873/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Original bovine E. coli plasmid study places a floR-like determinant in different flanking contexts; it is not a basis for assigning one common allele to all native observations. |
+| aro-lead-10445875 | https://pubmed.ncbi.nlm.nih.gov/10445875/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Original tRNA cross-linking experiment tests chloramphenicol and other listed PTC drugs; florfenicol is not established as a tested compound in the complete abstract. |
+| aro-lead-10339826 | https://pubmed.ncbi.nlm.nih.gov/10339826/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Original Salmonella DT104 floR characterization supports cross-resistance and an MFS-like predicted protein in a multiresistance locus; sequence prediction alone is not a purified transport measurement. |
+| aro-lead-8908612 | https://pubmed.ncbi.nlm.nih.gov/8908612/; Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json | context_only | Original pp-flo sequence paper identifies the fish-pathogen transferable plasmid gene and similarity to cmlA; it does not establish identity with each E. coli allele. |
+| lincs-access | https://lincs.hms.harvard.edu/db/sm/5287/; Exact HMS LINCS LSM-5287 request | unknown | The direct request returned HTTP 500. An official 2020 HMS SDF snapshot of 639 structures has no exact ID/name/key match; this bounded snapshot is not exhaustive evidence that the native accession is wrong. |
+| hms-snapshot | 445447-hms-audit.json; Exact LSM-5287/name/CAS/InChIKey audit of official snapshot | unknown | No exact florfenicol match was identified in the downloaded 639-record snapshot. The snapshot does not validate or disprove all legacy LINCS entries. |
+| reaxys-access | https://www.reaxys.com/#/search/quick?context=R&amp;query=RX.RN%3D4202553; Reaxys 4202553 public request | unknown | The exact public request returned HTTP 403. No wrong-link inference follows. |
+| fulltext-access | 447-fetch5.json; 447-fetch6.json; 447-fetch7.json; Exact primary full-text retrieval outcomes | unknown | PMC returned browser challenges for several older original papers, Europe PMC XML endpoints returned HTTP 500 for LmrS/PexA/FexA, and their verified publisher URLs returned HTTP 403. Publisher search text was treated only as a discovery lead. The unrelated initial PexA publisher URL was corrected to verified DOI 10.1128/AEM.00323-10; neither failed page informs a scientific claim. |
+| adapter | 445447-adapter-search-results.json; Structured source cross-check before open protein research | context_only | The catalog was resolved first. e_coli/precise1k flo/cmlA searches had no exact hit; s_aureus/staph_precise108 LmrS returned USA300HOU_RS11735 with no component. This is expression-database context, not experimental transport, florfenicol susceptibility or identity with the source strain. |
+| gates | 447-focused-results.json; Actual focused execution receipts | supports | Independent chemistry, own-environment schema and strict checks all exited 0 on the unchanged native record. |
+
+## Limits And Additional Notes
+
+- All thirteen adopted PMID leads were read at complete available abstract depth. The ten ChEBI leads, ARO resistance review and two curated originals have separate dispositions. The two curated originals were additionally inspected for relevant full methods, complete claim-bearing tables, accession statements and adjacent results. Raw gels/genomes were not independently reanalyzed.
+- Twenty-six distinct ARO-linked PMID leads were resolved; available complete abstracts were read, while PMID 12493808 supplied metadata without an abstract. Detailed full-text depth is explicitly limited to successful selected originals; reviews and non-florfenicol PTC experiments are contextual only.
+- Selected 2015 ClcD full experimental text, Table 1 and actual Figure 1 were inspected. Selected 2022 OptrA/PoxtA Results, full Table 1/footnote and relevant Methods were read; raw cryo-EM data and every supplement were not reanalyzed.
+- The original 1990 Sch 25298 binding study remains abstract-only. Exact chemical preparation certificates and purity were not independently established for every later named-drug assay.
+- Free full-text attempts for several older originals encountered PMC challenges, Europe PMC HTTP 500 or publisher HTTP 403. Exact LmrS florfenicol assay details remain unverified despite a promising publisher search lead. The broader qualified database claim is not deemed false from access failure.
+- Reaxys returned HTTP 403 and the LINCS page HTTP 500. The official HMS snapshot is limited to 639 records. No separate authoritative CAS registry graph was obtained; VSDB CAS/name/InChI agreement supports the chemical comparison.
+- Both patent exact synthesis passages and compound mapping were read; all analogue structures, numeric animal tables and spectra were not independently audited. EP Example 9D and US Example 6D report differing melting ranges for the named product; this source discrepancy is not resolved by the native record.
+- Official veterinary labels were used only to assess existing broad use and brand descriptions. No treatment advice, current dosing guidance or new FDA product assertion is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native or maintained files were edited. All original hashes and expanded inputs were retained and rechecked. Optional links, tags and notes were checked specifically for florfenicol.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T163917Z-florfenicol-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Florfenicol: coherent exact identity and appropriately bounded resistance
+  observations'
+started_at: '2026-10-21T16:12:22Z'
+finished_at: '2026-10-21T16:39:17Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The complete neutral (1R,2S) florfenicol graph agrees with checked exact
+  chemical authorities. The five curated avian-isolate and bovine-subgroup observations
+  match original methods and results, retaining UNKNOWN mechanism and avoiding allele
+  or genome inflation. Eleven resistance associations and the peptidyl-transferase
+  target remain explicitly database-qualified; selected original studies provide support
+  with distinct host and assay boundaries. No corrective finding was established in
+  this review. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/florfenicol.yaml
+    sha256: 009a4b128ddc3cfd06d4f7a8ecf77b056755004337447f89574db9221f074af4
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+targets:
+- target_id: CHEBI:87185
+  path: data/antibiotics/antibacterial/florfenicol.yaml
+  label: florfenicol
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI and ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual ARO identity/classification and citation owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual imported target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/florfenicol.yaml
+    role: Native curated qualitative isolate/subgroup resistance evidence; validated
+      writer required for future correction
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 447; original thirteen input hashes preserved within twenty-three
+    expanded inputs, including actual ARO owners and explicit native curator ownership.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:87185
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:87185
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/445447-focused.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:87185
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/florfenicol.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:87185
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/florfenicol.yaml --out /private/tmp/am-review-session/447-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:87185
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:87185
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:87185
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:87185
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:87185
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:87185
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:87185
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:87185
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:87185
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/florfenicol.yaml
+  locator: Entire record, sixteen resistance entries, one target and all six history
+    events
+  accessed_at: '2026-10-21T16:36:26Z'
+  support: supports
+  summary: The neutral stereodefined synthetic phenicol has seven names, six parents,
+    one antimicrobial role, two patent references and one broad KEGG drug association.
+    Eleven resistance entries and the target are explicitly database-qualified. Five
+    curator-owned UNKNOWN entries retain four exact avian isolates and one bovine
+    subgroup with primary references and extensive source-scope caveats. Nuflor and
+    Nuflor gold are already BRAND_NAME. No quantitative activity, causal graph, producer
+    or FDA product collection is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: 445447-raw-rows.json; 447-inputs-expanded.json
+  locator: Complete ChEBI row 2376, ARO row 106, resistance rows 2530–2540 and target
+    row 114
+  accessed_at: '2026-10-21T16:36:26Z'
+  support: supports
+  summary: Original captures were preserved. ARO identity, resistance and target inputs
+    were appended before detailed assessment; native curator ownership was explicitly
+    retained for the five primary qualitative observations. All source-derived edges
+    were compared with the complete record.
+  snapshot_sha256: 13d552de8b6fa684796f189c526ffb34c820d1ee4f8a85ef72edd4e4a9344a4f
+- evidence_id: local-search
+  kind: search
+  reference: 445447-all-local-paths.txt
+  locator: Ignored-inclusive exact-label and reference search
+  accessed_at: '2026-10-21T16:36:26Z'
+  support: context_only
+  summary: The search included hidden and ignored files under data, curation, conf,
+    scripts, src, reports and reviews. Native and actual owners were read; optional
+    collection absence is not treated as a defect.
+  search_scope: rg --no-ignore --hidden -il 'fleroxacin|flomoxef|florfenicol' data
+    curation conf scripts src reports reviews
+  snapshot_sha256: 02ab6bf102133423d462e55ab1f710d651b6d6e91b6faf9eec666d468a4a4617
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/87185/
+  locator: CHEBI:87185 current structure, synonyms, parents and role
+  accessed_at: '2026-10-21T16:22:19.229444Z'
+  support: supports
+  summary: The current complete neutral (1R,2S) graph, formula C12H14Cl2FNO4S and
+    key AYIRNRDRBQJXIF-NXEZZACHSA-N agree with the native record. Its amide, secondary
+    alcohol, sulfone, organochlorine and organofluorine parents are chemically coherent.
+  snapshot_sha256: e95b1f70eff97e019689ad9eebfb4e8ddfa289084b84033bc1d3587dab8a5a00
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/114811/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: PubChem CID 114811 molecular properties
+  accessed_at: '2026-10-21T16:22:19.230713Z'
+  support: supports
+  summary: The full stereodefined neutral graph matches the native record.
+  snapshot_sha256: 4ce333e0a17fc76cb5da6c7401db33360de54136d318e3d7a56ff176d0f01833
+- evidence_id: chembl
+  kind: authority
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1241590.json
+  locator: CHEMBL1241590 molecular structure
+  accessed_at: '2026-10-21T16:22:19.470451Z'
+  support: supports
+  summary: The ChEMBL structure independently produces the same exact InChIKey.
+  snapshot_sha256: 039e18d372cc5e97ae8af9d867114309924e92dbdc705d46cd3c8fbaf4b8dccb
+- evidence_id: vsdb
+  kind: authority
+  reference: https://sitem.herts.ac.uk/aeru/vsdb/Reports/1777.htm
+  locator: VSDB 1777 identification section
+  accessed_at: '2026-10-21T16:32:34.811816Z'
+  support: supports
+  summary: The native VSDB link resolves to florfenicol, CAS 73231-34-2 and the exact
+    same stereodefined InChI. Only its chemical identification was used; its separate
+    L16 target annotation was not imported as primary ribosome evidence.
+  snapshot_sha256: c6e81321b6acd61ba8535426811d2a46f173721df8cbce070185745bc8d1e2f7
+- evidence_id: kegg-drug
+  kind: authority
+  reference: https://rest.kegg.jp/get/D04194
+  locator: KEGG drug D04194 entry and molfile
+  accessed_at: '2026-10-21T16:22:19.616003Z'
+  support: supports
+  summary: The drug accession resolves to florfenicol and its parsed structure matches.
+    drug_xrefs denotes a drug-level association, not mandatory exact chemical equivalence.
+  snapshot_sha256: d1c280999ab398aec59de1a12bfa99c35309dd690d32e698acde9cb9afbb886c
+- evidence_id: chemistry
+  kind: validation
+  reference: 447-chemistry.json; 445447-xref-chemistry.json
+  locator: Independent RDKit 2026.03.5 using batch019 interpreter against batch045
+    cwd
+  accessed_at: '2026-10-21T16:36:26Z'
+  support: supports
+  summary: Native SMILES/InChI, charge, formula, masses and source mints pass; current
+    ChEBI, PubChem, ChEMBL and KEGG drug graphs agree. The two assigned centers match
+    the native systematic name.
+  snapshot_sha256: c329fdfb10a094a53e4f98112fdcfdecd282f524607708e5eb553c0f64c3f1ad
+- evidence_id: aro
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000461
+  locator: ARO:3000461 identity, class and adopted lead
+  accessed_at: '2026-10-21T16:22:21.015555Z'
+  support: supports
+  summary: The accession resolves to florfenicol and phenicol antibiotic classification.
+    Its adopted PMID 15539072 is a resistance review, not an original experimental
+    source.
+  snapshot_sha256: 70a16f3544886174648fca70cce09782e0661ee4a646df505c52f42f31a46017
+- evidence_id: aro-3002704
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3002704
+  locator: Current ARO:3002704 fexA definition and cited leads
+  accessed_at: '2026-10-21T16:22:21.507905Z'
+  support: supports
+  summary: Phenicol exporter association; retained as database evidence.
+  snapshot_sha256: 3f36aabebbaa05e7366d2dc3450da550f9a7b4b072d690a1be55af8d55984db5
+- evidence_id: aro-3002705
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3002705
+  locator: Current ARO:3002705 floR definition and cited leads
+  accessed_at: '2026-10-21T16:22:21.566465Z'
+  support: supports
+  summary: Phenicol exporter association with multiple organism-specific primary leads;
+    no one allele is assigned to all occurrences.
+  snapshot_sha256: afd8b90cf0f41dc15ee9ab55cb8d8453ce2d0b74f2a06cb13e5b12ded336f057
+- evidence_id: aro-3002812
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3002812
+  locator: Current ARO:3002812 pp-flo definition and cited leads
+  accessed_at: '2026-10-21T16:22:21.591105Z'
+  support: supports
+  summary: Fish-pathogen plasmid resistance determinant; separate from bovine and
+    avian flo observations.
+  snapshot_sha256: 73af5e84caa7546fe1ed508cd72e0cba0b251ccdf5498e348d99ca3487a692b8
+- evidence_id: aro-3003746
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3003746
+  locator: Current ARO:3003746 optrA definition and cited leads
+  accessed_at: '2026-10-21T16:22:21.647071Z'
+  support: supports
+  summary: ABC-F protection association; original discovery transporter wording is
+    qualified by later original mechanistic work.
+  snapshot_sha256: a0aa7c1a59d91bb5f160d25e330b6688909ae305506c83329a42d7a07a48b299
+- evidence_id: aro-3003963
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3003963
+  locator: Current ARO:3003963 flo definition and cited leads
+  accessed_at: '2026-10-21T16:22:21.721936Z'
+  support: supports
+  summary: Database efflux association is separate from the five curated qualitative
+    co-occurrences.
+  snapshot_sha256: fc106dcc19d0a8b4ef3c9935392900891d0650d2c9444e98e3254cc374a87c33
+- evidence_id: aro-3004146
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004146
+  locator: Current ARO:3004146 cfrC definition and cited leads
+  accessed_at: '2026-10-21T16:22:22.117582Z'
+  support: supports
+  summary: Cfr(C) target-modification association; not conflated with the distinct
+    ClcD experiment.
+  snapshot_sha256: f1ea1043b03c2022fa37b56bb8aba1d8e7a456d1c7ef2c7fb3960175c20dcdc9
+- evidence_id: aro-3004470
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004470
+  locator: Current ARO:3004470 poxtA definition and cited leads
+  accessed_at: '2026-10-21T16:22:22.175703Z'
+  support: supports
+  summary: ABC-F protection association; later original work supports this mechanism
+    class.
+  snapshot_sha256: 723b0e46c018a9083e31132c5ffa9cad61657419cda546642db66b0288d805be
+- evidence_id: aro-3004572
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004572
+  locator: Current ARO:3004572 Staphylococcus aureus LmrS definition and cited leads
+  accessed_at: '2026-10-21T16:22:22.198240Z'
+  support: supports
+  summary: Source-organism protein association; exact florfenicol experiments were
+    not verified from full text during this review.
+  snapshot_sha256: ebb47460939dac9c9c63e1c49a9900f0f05b149a22d1acb853a98fac83114a68
+- evidence_id: aro-3004599
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004599
+  locator: Current ARO:3004599 clcD definition and cited leads
+  accessed_at: '2026-10-21T16:22:22.276316Z'
+  support: supports
+  summary: Target-alteration association followed to cloned-host MIC and rRNA primer-extension
+    evidence.
+  snapshot_sha256: 5fed37ce8ca1e931f6cac4d570d3e0fde1107c26423dbbb021ee084e05f95db8
+- evidence_id: aro-3004666
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004666
+  locator: Current ARO:3004666 pexA definition and cited leads
+  accessed_at: '2026-10-21T16:22:22.334477Z'
+  support: supports
+  summary: Functional-metagenomic phenicol determinant; no source environmental organism
+    is inferred from the clone.
+  snapshot_sha256: 8abd56f50b8cc034717f157b29e49adceffebf7a379a77e0882ee29619bc4a81
+- evidence_id: aro-3007019
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3007019
+  locator: Current ARO:3007019 fexB definition and cited leads
+  accessed_at: '2026-10-21T16:22:22.781000Z'
+  support: supports
+  summary: Enterococcal phenicol-exporter association; original isolate/plasmid context
+    remains bounded.
+  snapshot_sha256: 91527361d5e6481ed388ac0843d41c06000ac9aea9e1070448fbcd3f5bf56d8d
+- evidence_id: target-source
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000754
+  locator: ARO:3000754 peptidyl-transferase target
+  accessed_at: '2026-10-21T16:22:21.102022Z'
+  support: supports
+  summary: The native 23S rRNA peptidyl-transferase target faithfully carries PRIMARY_EVIDENCE_NEEDED
+    and leaves organism, strain and assay unspecified. General PTC papers attached
+    to this ontology are not all florfenicol-specific.
+  snapshot_sha256: f1d63ce7a532c1cfdd42a568e7c560d9baf1bb15551b9daa5308c7df98c9edf5
+- evidence_id: avian
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC89696/?pdf=render
+  locator: PMID 10639375 / DOI 10.1128/AAC.44.2.421-424.2000; original phenotype paragraph,
+    complete Table 1 and adjacent probe results
+  accessed_at: '2026-10-21T16:23:10.462120Z'
+  support: supports
+  summary: All four named isolates 5334, 5790, 5840 and 6468 are described as florfenicol-resistant
+    by disk diffusion using a 30-µg disk and the source threshold below 21 mm. They
+    are flo-positive. Table 1 reports florfenicol MICs of 64, 32, 64 and 32 µg/mL
+    respectively; its second probe column is int, not cmlA. Adjacent text states that
+    only 6468 contains cmlA. These results support precisely the four native co-occurrences,
+    without proving sole-gene causation or assigning a shared allele. The native qualitative
+    entries correctly avoid importing numeric MICs or a new E. coli clinical breakpoint.
+  snapshot_sha256: 25f2ee6a1cdde55ea77cb7608e5070f22cb491ee7d3bad7d297ffbef91fab864
+- evidence_id: bovine
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC87642/?pdf=render
+  locator: PMID 11101601 / DOI 10.1128/JCM.38.12.4593-4598.2000; original Methods,
+    Tables 1–2 and adjacent accession/cohort results
+  accessed_at: '2026-10-21T16:23:10.264876Z'
+  support: supports
+  summary: NCCLS broth microdilution was performed in the 48-isolate bovine cohort.
+    Table 2 identifies eight flo/cmlA-positive isolates with florfenicol MICs 64–>256
+    µg/mL. Separate flo-only and cmlA-only subgroups are not merged into this row;
+    the latter includes discordant phenotypes. The paper explicitly borrows a bovine-respiratory
+    breakpoint because an E. coli breakpoint was unavailable. AF252855 is the deposited
+    bovine flo sequence. The native subgroup observation preserves these limitations
+    and does not assign a subgroup strain, genome or common experimental allele.
+  snapshot_sha256: f8140bab7fc955cd9b29a561cf437a10331e66270b486783e5df71e327b9e25d
+- evidence_id: uniprot
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q9F0D9.json
+  locator: UniProt Q9F0D9 organism, references and sequence evidence
+  accessed_at: '2026-10-21T16:22:23.925045Z'
+  support: supports
+  summary: The entry links PMID 11101601 to bovine Flo/AAG21808.1. EC56/pEC56 appears
+    in a separate 2004 sequence submission with AAW02923.1. Neither name establishes
+    the allele of all 2000 subgroup members or the four avian isolates. The native
+    reference-only context is accurate.
+  snapshot_sha256: 9a1e0f6add0718e3257a171b3a65291576faca11e0dfd31ea8faf8114d2b7c6c
+- evidence_id: archive
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/browser/api/embl/AF252855.1
+  locator: ENA AF252855.1 source/CDS/reference features
+  accessed_at: '2026-10-21T16:22:23.928934Z'
+  support: supports
+  summary: The archive gives E. coli taxon 562, the flo CDS and AAG21808.1, and cites
+    the bovine study. It does not supply a strain or genome assignment for all reported
+    isolates. The native accession boundary is appropriate.
+  snapshot_sha256: 4ad6798ccc5cfb9319085c5946102a5db75176860098509842fa0c815e14ef27
+- evidence_id: clcd-original
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4538495/?pdf=render
+  locator: PMID 26149991; original experimental text, Table 1 and Figure 1 caption
+  accessed_at: '2026-10-21T16:26:21.392188Z'
+  support: partial
+  summary: Codon-optimized clcD was expressed in E. coli, not measured as a universal
+    C. difficile phenotype. IPTG-induced E. coli AS19 carrying pClcD has florfenicol
+    MIC 8 µg/mL versus 1 µg/mL for parent-vector and no-plasmid controls. Primer-extension
+    experiments in an rlmN-deleted E. coli background locate a ClcD-dependent stop
+    at A2503. These data support a target-alteration mechanism in the tested constructs,
+    without equating all Cfr-like proteins or proving every homolog active.
+  snapshot_sha256: f5607177efa23ac638d44e84079021167115b830af3d05f7fa606b092cc12cd2
+- evidence_id: clcd-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/88e1/4538495/3fa757a164fe/zac0091543540001.jpg
+  locator: Original Figure 1, actual image inspected
+  accessed_at: '2026-10-21T16:34:21.299759Z'
+  support: partial
+  summary: The pClcD and pCfrhis lanes contain the labeled A2503 stop compared with
+    the no-plasmid and parent-vector lanes. This independently confirms the displayed
+    modification readout; the figure does not chemically identify every modified atom
+    or independently measure antibiotic binding.
+  snapshot_sha256: e77d0288e30b72f7e9f8d895123ea64a2a6c40e40acb24c51e8a327351f90c58
+- evidence_id: poxta2022
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8987054/fullTextXML
+  locator: DOI 10.1038/s41467-022-29274-9; original resistance Results, full Table
+    1/footnote and relevant Methods/Discussion
+  accessed_at: '2026-10-21T16:32:34.162592Z'
+  support: partial
+  summary: In E. faecalis TX5332 ΔlsaA, inducible OptrA and PoxtA constructs increase
+    florfenicol MICs relative to an empty vector. Experiments used BHI, plasmid/host
+    selection antibiotics, cCF10 induction, about 5×10^5 CFU/mL and 16–20 h at 37°C,
+    in triplicate. The table distinguishes OptrA ST16/35048 and PoxtA EF9F6/AOUC-0915.
+    Its detailed stalling experiments concern linezolid and its cryo-EM complexes
+    concern PoxtA-bound ribosomes; they are not direct images of florfenicol displacement.
+    These combined original data support the ABC-F protection classification while
+    keeping the florfenicol-specific endpoint at MIC depth.
+  snapshot_sha256: f2b491edf45ca4aad89e9be53216530f481126c01903344ea3fa10de435ef8a0
+- evidence_id: cannon1990
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A2228823%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: PMID 2228823 / DOI 10.1093/jac/26.3.307; complete original abstract
+  accessed_at: '2026-10-21T16:32:34.897297Z'
+  support: partial
+  summary: The original compares Sch 25298 with chloramphenicol, thiamphenicol and
+    other fluorinated analogues. Sch 25298 inhibits cell-free bacterial translation
+    and 70S peptidyl transferase and competes for a shared ribosomal site, with lower
+    binding efficiency than the two parent comparators. Full methods, exact receptor
+    nucleotide, reagent stereochemical analysis and binding constants were not recovered;
+    this is a primary target-enrichment lead, not grounds to claim a fully audited
+    nucleotide-level binding experiment.
+  snapshot_sha256: 939ea1bc1f146f324c18260f02475cc5813fdf51e15d162feddd4d18369084ca
+- evidence_id: patent-us
+  kind: primary_source
+  reference: https://patents.google.com/patent/US4235892/en
+  locator: US4235892A; stereochemical discussion, exact Example 6A–D and claim 8
+  accessed_at: '2026-10-21T16:22:20.258749Z'
+  support: supports
+  summary: The patent explicitly prepares D-threo para-methylsulfonyl dichloroacetamido
+    fluoropropanol, the florfenicol constitution, separately from nitro, difluoroacetyl,
+    ester and salt analogues. Example 6D gives the neutral product and its analytical
+    characterization. This supports synthetic identity/document relevance; broad genus
+    claims are not copied as exact-compound MICs.
+  snapshot_sha256: 69148063ab0aaa6b920749b2569436e936bbc7d9ac209e4956152469710aca8e
+- evidence_id: patent-ep
+  kind: primary_source
+  reference: https://patents.google.com/patent/EP0014437/en
+  locator: EP0014437A2, normalized native EP14437; Example 9 and activity discussion
+    defining compound B
+  accessed_at: '2026-10-21T16:22:19.960072Z'
+  support: partial
+  summary: The corresponding exact D-threo product is prepared in Example 9D and identified
+    as compound B in antibacterial discussion. The EP text reports a different melting
+    range from US Example 6D; that source-level analytical difference is preserved
+    without inventing a new native isomer. All patent congeners, ester salts and broad
+    activity claims were not treated as the neutral molecule. Numerical animal-protection
+    tables embedded as images were not independently audited.
+  snapshot_sha256: 659159d30015808bd11c5f74b0b953d68e47bb78f7f8e68ac8855dfbc9ba8d81
+- evidence_id: nuflor
+  kind: authority
+  reference: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=87f37539-b83b-42e9-989c-32e63ebecd29
+  locator: Official NUFLOR label, description/indications and product-name section
+  accessed_at: '2026-10-21T16:32:34.167798Z'
+  support: supports
+  summary: The label identifies florfenicol as the ingredient of a veterinary injection
+    and supports the native bovine respiratory disease and foot-rot use descriptions.
+    Nuflor/Nuflor Gold are product names, already typed as brands. Formulated product
+    use is not substituted for pure-compound binding evidence.
+  snapshot_sha256: 36f56bd29c564f79585d1161f198553686992d1020afd1d75a61c6c1b66a245e
+- evidence_id: aquaflor
+  kind: authority
+  reference: https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=03902b8d-4f0a-450c-9862-99576dd4ff67
+  locator: Official AQUAFLOR label, active ingredient and finfish indications
+  accessed_at: '2026-10-21T16:33:56.496826Z'
+  support: supports
+  summary: The official label identifies a florfenicol-containing medicated article
+    for specified freshwater-reared fish diseases. It supports the broad aquaculture-use
+    statement while preserving product, species and indication scope; no dosing recommendation
+    or new native regulatory assertion is made.
+  snapshot_sha256: 04312b0ab2ca8ecd2ccb0a847be40b7c47428c908ad5a8410b35e5ecc1c63a69
+- evidence_id: lead-25287575
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25287575/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Original sustained-release gel and dog pharmacokinetic study. Formulation/exposure
+    endpoints do not establish a bacterial mechanism.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+- evidence_id: lead-25395188
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25395188/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Original soil analytical/degradation study separates florfenicol from florfenicol
+    amine; metabolite measurements are not free-drug antibacterial activity.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+- evidence_id: lead-25567063
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25567063/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Original UV/persulfate water-degradation study concerns chemical removal
+    and resulting toxicity, not a bacterial target.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+- evidence_id: lead-25572306
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25572306/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Original feline RGM microbroth study reports M. fortuitum MIC above 128
+    µg/mL and M. smegmatis 32–64 µg/mL in the tested isolates. These bounded high
+    MICs do not contradict antibacterial eligibility or justify universal efficacy.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+- evidence_id: lead-25612770
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25612770/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Original LC-MS/MS tissue-residue study measures total florfenicol as amine
+    equivalents after digestion; analytical residue quantity is not intact-drug target
+    binding.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+- evidence_id: lead-25614968
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25614968/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Original molecularly imprinted polymer extraction/LC-MS study concerns
+    recognition in an analytical sorbent, not a bacterial molecular target.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+- evidence_id: lead-25618189
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25618189/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Original hydrolysis study examines pH/temperature-dependent chemical stability.
+    Degradation products and environmental persistence are not additional native mechanisms.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+- evidence_id: lead-25623169
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25623169/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Original canine-isolate study tests 169 S. pseudintermedius and 167 E.
+    coli isolates. The complete abstract reports florfenicol MIC90 values of 4 and
+    8 µg/mL respectively and mainly bacteriostatic time dependence; it calls for species-specific
+    PK/PD and breakpoint work rather than establishing clinical efficacy.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+- evidence_id: lead-25675893
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25675893/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Original immunoassay/strip study concerns analytical antibody cross-reactivity
+    with several phenicols; this antibody is not an antibacterial target.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+- evidence_id: lead-25686865
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25686865/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Original chick antibiotic/LPS study measures lymphocyte subsets, a host
+    immune endpoint distinct from bacterial protein synthesis.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+- evidence_id: lead-15539072
+  kind: search
+  reference: https://pubmed.ncbi.nlm.nih.gov/15539072/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Resistance review; its complete abstract is used only to identify contextual
+    mechanisms and original leads, not as direct experimental support.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+  search_scope: Disposition of the adopted secondary resistance review after reading
+    its complete abstract.
+- evidence_id: lead-10639375
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/10639375/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Original avian study followed to full relevant phenotype methods, Table
+    1 and adjacent hybridization results.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+- evidence_id: lead-11101601
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/11101601/
+  locator: Complete adopted abstract in 447-core.json
+  accessed_at: '2026-10-21T16:22:19.163580Z'
+  support: context_only
+  summary: Original bovine study followed to full relevant Methods, Tables 1–2 and
+    accession/cohort results.
+  snapshot_sha256: fe1e69d897a5864b6ffad20999fa07c0269b05d2b00fceaf179dc4983c82abc9
+- evidence_id: aro-lead-29635422
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/29635422/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: 'PoxtA discovery: cloned-host susceptibility shifts and ABC-F sequence
+    features; subsequent 2022 experiments refine mechanism and spectrum.'
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-28663118
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/28663118/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: 'Cfr(C) discovery: cloned C. difficile phenotype and occurrence in selected
+    isolates; the abstract proposes A2503 methylation rather than presenting a complete
+    direct chemical modification assay.'
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-26149991
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/26149991/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: ClcD original followed to full experimental text, Table 1 and actual Figure
+    1.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-25977397
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/25977397/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: 'OptrA discovery: plasmid characterization and cloned susceptible-host
+    phenotype; original transporter terminology is not adopted as an efflux mechanism
+    after later ABC-F work.'
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-22096043
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/22096043/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: 'FexB: porcine E. faecium EFM-1 and E. hirae EH-1 phenotypes, plasmids
+    and cloned sequences; no generalized strain susceptibility claim.'
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-20855745
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/20855745/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: LmrS original abstract establishes cloned MFS multidrug-efflux research,
+    but does not itself give the exact florfenicol experiment. Full-text attempts
+    failed, so florfenicol-specific magnitude and assay details remain unverified
+    here.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-20543056
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/20543056/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: PexA functional metagenomics identifies a cloned soil-DNA determinant reducing
+    florfenicol susceptibility. Native environmental taxon identity is not established.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-19292580
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/19292580/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Salmonella DT104 SGI1 genetic-cluster study; the abstract emphasizes chloramphenicol/ampicillin
+    phenotypes, not a new florfenicol-specific isolated-gene assay.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-17224413
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/17224413/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Bordetella study distinguishes floR-positive phenicol-resistant isolates
+    from cmlB1-positive chloramphenicol-resistant but florfenicol-susceptible material;
+    do not collapse the exporter genes.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-16569865
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/16569865/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Original pleuromutilin footprinting/L3 study concerns other drugs; it is
+    not exact florfenicol target evidence merely because it appears under the broad
+    PTC term.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-16257828
+  kind: search
+  reference: https://pubmed.ncbi.nlm.nih.gov/16257828/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: PTC review; contextual only, not original florfenicol binding evidence.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+  search_scope: Bounded disposition of a source-linked secondary review; no primary
+    inference from it.
+- evidence_id: aro-lead-15914491
+  kind: search
+  reference: https://pubmed.ncbi.nlm.nih.gov/15914491/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Efflux review; contextual only, not original exact-drug experiments.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+  search_scope: Bounded disposition of a source-linked secondary review; no primary
+    inference from it.
+- evidence_id: aro-lead-14742219
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/14742219/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Original fexA paper abstract identifies S. lentus pSCFS2 and a phenicol-resistance
+    protein with induction by florfenicol/chloramphenicol; full assay details were
+    not recovered.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-14645321
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/14645321/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Porcine E. coli study links floR with high florfenicol MICs and distinct
+    plasmid/chromosomal contexts; abstract-level support does not assign a shared
+    allele to native avian/bovine observations.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-12493808
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/12493808/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Metadata resolves the original Salmonella phenotype/genotype report, but
+    no abstract was supplied; its exact florfenicol endpoint remains unassessed.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-12107144
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/12107144/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: SXT genomic/deletion study establishes mobile-element organization and
+    transfer functions, not a direct florfenicol transporter assay at abstract depth.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-11600347
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/11600347/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Vibrio SXT resistance-cluster study maps floR with other resistance loci;
+    the original abstract addresses chloramphenicol resistance and genetic organization.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-11544236
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/11544236/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: SGI1 complete-sequence study establishes island organization and occurrence,
+    not a new exact florfenicol mechanism experiment at abstract depth.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-11451703
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/11451703/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Original R55 floR-variant paper reports cloned nonenzymatic chloramphenicol
+    resistance and florfenicol cross-resistance; exact numeric assay/form remains
+    beyond the abstract.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-10991873
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/10991873/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Original bovine E. coli plasmid study places a floR-like determinant in
+    different flanking contexts; it is not a basis for assigning one common allele
+    to all native observations.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-10445875
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/10445875/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Original tRNA cross-linking experiment tests chloramphenicol and other
+    listed PTC drugs; florfenicol is not established as a tested compound in the complete
+    abstract.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-10339826
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/10339826/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Original Salmonella DT104 floR characterization supports cross-resistance
+    and an MFS-like predicted protein in a multiresistance locus; sequence prediction
+    alone is not a purified transport measurement.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: aro-lead-8908612
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/8908612/
+  locator: Complete available abstract, or explicitly absent abstract, in 447-aro-leads-core.json
+  accessed_at: '2026-10-21T16:23:09.931968Z'
+  support: context_only
+  summary: Original pp-flo sequence paper identifies the fish-pathogen transferable
+    plasmid gene and similarity to cmlA; it does not establish identity with each
+    E. coli allele.
+  snapshot_sha256: 9a40e4ff9ceb2081130d3b08161822be0c1715ceaa6ad3b5486aba4e51fc3542
+- evidence_id: lincs-access
+  kind: search
+  reference: https://lincs.hms.harvard.edu/db/sm/5287/
+  locator: Exact HMS LINCS LSM-5287 request
+  accessed_at: '2026-10-21T16:22:23.355053Z'
+  support: unknown
+  summary: The direct request returned HTTP 500. An official 2020 HMS SDF snapshot
+    of 639 structures has no exact ID/name/key match; this bounded snapshot is not
+    exhaustive evidence that the native accession is wrong.
+  snapshot_sha256: 3a78de2b8aff91b3344d26463ab61e07281eb565940b3ec5890a599a2c1c2a8e
+  search_scope: Exact LINCS link and local audit of the downloaded official HMS small-molecule
+    snapshot.
+- evidence_id: hms-snapshot
+  kind: search
+  reference: 445447-hms-audit.json
+  locator: Exact LSM-5287/name/CAS/InChIKey audit of official snapshot
+  accessed_at: '2026-10-21T16:36:26Z'
+  support: unknown
+  summary: No exact florfenicol match was identified in the downloaded 639-record
+    snapshot. The snapshot does not validate or disprove all legacy LINCS entries.
+  search_scope: Official HMS prod-20200624 small_molecules.sdf, exact identifier/name/structure
+    audit.
+  snapshot_sha256: 7ab3e27ed51d527b65f445b7f5eee918a7061ba8c80546cc57a0c42a18344ba5
+- evidence_id: reaxys-access
+  kind: search
+  reference: https://www.reaxys.com/#/search/quick?context=R&query=RX.RN%3D4202553
+  locator: Reaxys 4202553 public request
+  accessed_at: '2026-10-21T16:22:23.313176Z'
+  support: unknown
+  summary: The exact public request returned HTTP 403. No wrong-link inference follows.
+  snapshot_sha256: af8a084d241bb8ae52e083f9c2c1ec742e7f5d53815f20537482587d4b1d3301
+  search_scope: Exact native Reaxys accession.
+- evidence_id: fulltext-access
+  kind: search
+  reference: 447-fetch5.json; 447-fetch6.json; 447-fetch7.json
+  locator: Exact primary full-text retrieval outcomes
+  accessed_at: '2026-10-21T16:36:26Z'
+  support: unknown
+  summary: PMC returned browser challenges for several older original papers, Europe
+    PMC XML endpoints returned HTTP 500 for LmrS/PexA/FexA, and their verified publisher
+    URLs returned HTTP 403. Publisher search text was treated only as a discovery
+    lead. The unrelated initial PexA publisher URL was corrected to verified DOI 10.1128/AEM.00323-10;
+    neither failed page informs a scientific claim.
+  search_scope: Exact free public PMC, Europe PMC and publisher routes for the source-linked
+    papers; successful originals are itemized separately.
+  snapshot_sha256: 608e8b4f84e22f80d5cd1928b31bf5f1e7724a77a3d4a1791d8b1730d7eb0172
+- evidence_id: adapter
+  kind: search
+  reference: 445447-adapter-search-results.json
+  locator: Structured source cross-check before open protein research
+  accessed_at: '2026-10-21T16:36:26Z'
+  support: context_only
+  summary: The catalog was resolved first. e_coli/precise1k flo/cmlA searches had
+    no exact hit; s_aureus/staph_precise108 LmrS returned USA300HOU_RS11735 with no
+    component. This is expression-database context, not experimental transport, florfenicol
+    susceptibility or identity with the source strain.
+  search_scope: Catalog plus exact flo, cmlA and LmrS structured searches before open-ended
+    protein research.
+  snapshot_sha256: 6cb72373a60d6274d0f36d88e2dd7faed5c00019d0841d1204d1c367d19ecd1a
+- evidence_id: gates
+  kind: validation
+  reference: 447-focused-results.json
+  locator: Actual focused execution receipts
+  accessed_at: '2026-10-21T16:36:26Z'
+  support: supports
+  summary: Independent chemistry, own-environment schema and strict checks all exited
+    0 on the unchanged native record.
+  snapshot_sha256: 94e3a10a6396cb9ec2c830df7afaafec1ad492c0716ffda5e826371f91714c9a
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Complete neutral (1R,2S) florfenicol
+  outcome: supported
+  summary: Structure, systematic name, D-threo identity, formula, neutral charge and
+    masses are coherent across checked authorities and exact patent examples. Close
+    phenicol analogues and ester salts remain distinct.
+  target_ids:
+  - CHEBI:87185
+  evidence_ids:
+  - native
+  - chebi
+  - pubchem
+  - chembl
+  - vsdb
+  - chemistry
+  - patent-us
+  - patent-ep
+- assessment_id: grounding
+  area: grounding
+  topic: Exact chemical and broader drug/document links
+  outcome: supported
+  summary: Checked chemical authorities agree, KEGG drug association resolves, and
+    both patent documents contain the exact florfenicol structure among other compounds.
+    Reaxys/LINCS have bounded unresolved access, not demonstrated mismatches.
+  target_ids:
+  - CHEBI:87185
+  evidence_ids:
+  - chebi
+  - pubchem
+  - chembl
+  - vsdb
+  - kegg-drug
+  - patent-us
+  - patent-ep
+  - lincs-access
+  - reaxys-access
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial eligibility and spectrum
+  outcome: supported
+  summary: Original cell-free and isolate studies support the named compound as an
+    antibacterial. Canine and RGM isolate differences prevent uniform-spectrum claims.
+    Clinical product and host-immune results do not substitute for pure-compound mechanism
+    experiments.
+  target_ids:
+  - CHEBI:87185
+  evidence_ids:
+  - cannon1990
+  - lead-25623169
+  - lead-25572306
+  - lead-25686865
+  - nuflor
+  - aquaflor
+- assessment_id: curated-avian
+  area: evidence
+  topic: Four exact-isolate co-occurrences
+  outcome: supported
+  summary: All four isolates, flo associations, source disk phenotype and the cmlA
+    addition for 6468 are supported. The native UNKNOWN labels and no-allele/no-genome
+    caveats accurately bound the observations.
+  target_ids:
+  - CHEBI:87185
+  evidence_ids:
+  - native
+  - avian
+  - uniprot
+  - archive
+- assessment_id: curated-bovine
+  area: evidence
+  topic: One separate bovine subgroup association
+  outcome: supported
+  summary: The 8/48 flo/cmlA subgroup and assay/breakpoint caveats are supported;
+    discordant subgroups remain separate. Q9F0D9/AF252855 is reference context, and
+    EC56 is correctly excluded as a subgroup identity.
+  target_ids:
+  - CHEBI:87185
+  evidence_ids:
+  - native
+  - bovine
+  - uniprot
+  - archive
+- assessment_id: database-resistance
+  area: evidence
+  topic: Eleven imported associations and mechanism classes
+  outcome: supported
+  summary: The entries faithfully preserve their database evidence tier. Selected
+    original ClcD and OptrA/PoxtA experiments support target alteration/protection
+    with explicit construct and organism limits. The remaining discovery abstracts
+    have differing phenotypic, sequence and epidemiological depth; no unverified exact
+    transport assay or universal allele effect is inferred.
+  target_ids:
+  - CHEBI:87185
+  evidence_ids:
+  - owners
+  - clcd-original
+  - clcd-figure
+  - poxta2022
+  - aro-lead-25977397
+  - aro-lead-28663118
+  - aro-lead-14742219
+  - aro-lead-22096043
+  - aro-lead-20543056
+  - aro-lead-20855745
+  - aro-lead-8908612
+  - fulltext-access
+  - adapter
+- assessment_id: target
+  area: evidence
+  topic: Qualified 23S rRNA peptidyl-transferase target
+  outcome: supported
+  summary: The target remains a broad nucleic-acid target with PRIMARY_EVIDENCE_NEEDED.
+    The original Sch 25298 abstract supports 70S/PTC inhibition and shared-site binding;
+    exact nucleotide/organism/reagent details require full original methods before
+    promotion. Other PTC-drug papers are not substituted for florfenicol experiments.
+  target_ids:
+  - CHEBI:87185
+  evidence_ids:
+  - target-source
+  - cannon1990
+  - aro-lead-16569865
+  - aro-lead-10445875
+- assessment_id: names-use
+  area: scope
+  topic: Brand typing, synthetic origin and veterinary uses
+  outcome: supported
+  summary: Brand names are already correctly typed. Exact patent syntheses support
+    synthetic origin, and official labels support bovine respiratory/foot-rot and
+    bounded aquaculture-use descriptions. No natural producer or FDA product assertion
+    is present to audit as an additional native collection.
+  target_ids:
+  - CHEBI:87185
+  evidence_ids:
+  - native
+  - patent-us
+  - patent-ep
+  - nuflor
+  - aquaflor
+- assessment_id: completeness
+  area: completeness
+  topic: Optional target/activity enrichment
+  outcome: unknown
+  summary: Future primary enrichment can use original ribosome, MIC and cloned-resistance
+    evidence after exact material and endpoint review. Missing optional quantitative
+    activity or causal graph fields are not defects. All adopted leads were disposed
+    at their stated reading depths.
+  target_ids:
+  - CHEBI:87185
+  evidence_ids:
+  - native
+  - local-search
+  - cannon1990
+  - poxta2022
+  - clcd-original
+  - fulltext-access
+- assessment_id: provenance
+  area: provenance
+  topic: Mixed generated and curator-owned claims
+  outcome: supported
+  summary: All six history events and actual source owners were inspected. The explicit
+    native curator owner is preserved, while generated source hashes remain unchanged.
+  target_ids:
+  - CHEBI:87185
+  evidence_ids:
+  - native
+  - owners
+  - gates
+- assessment_id: validation
+  area: schema
+  topic: Focused gates and input integrity
+  outcome: supported
+  summary: Focused chemistry, schema and strict checks pass; all original and expanded
+    input hashes were rechecked. Deterministic success is kept separate from the scientific
+    source assessment.
+  target_ids:
+  - CHEBI:87185
+  evidence_ids:
+  - gates
+  - chemistry
+  - owners
+findings: []
+actions:
+- action_id: A1
+  description: If enriching the primary target or resistance evidence, retain exact
+    assay and material boundaries.
+  finding_ids: []
+  target_ids:
+  - CHEBI:87185
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual imported target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/florfenicol.yaml
+    role: Native curated qualitative isolate/subgroup resistance evidence; validated
+      writer required for future correction
+  acceptance_checks:
+  - Read full original Sch 25298 binding methods before specifying organism, nucleotide
+    or quantitative binding constants.
+  - Keep florfenicol MICs separate from linezolid stalling and PoxtA structural experiments.
+  - Preserve exact constructs, host backgrounds and induction conditions for ClcD/OptrA/PoxtA;
+    do not assign native-isolate alleles from reference sequences.
+  - Do not change the five supported UNKNOWN co-occurrences into isolated-gene causation
+    without additional source experiments.
+limitations:
+- All thirteen adopted PMID leads were read at complete available abstract depth.
+  The ten ChEBI leads, ARO resistance review and two curated originals have separate
+  dispositions. The two curated originals were additionally inspected for relevant
+  full methods, complete claim-bearing tables, accession statements and adjacent results.
+  Raw gels/genomes were not independently reanalyzed.
+- Twenty-six distinct ARO-linked PMID leads were resolved; available complete abstracts
+  were read, while PMID 12493808 supplied metadata without an abstract. Detailed full-text
+  depth is explicitly limited to successful selected originals; reviews and non-florfenicol
+  PTC experiments are contextual only.
+- Selected 2015 ClcD full experimental text, Table 1 and actual Figure 1 were inspected.
+  Selected 2022 OptrA/PoxtA Results, full Table 1/footnote and relevant Methods were
+  read; raw cryo-EM data and every supplement were not reanalyzed.
+- The original 1990 Sch 25298 binding study remains abstract-only. Exact chemical
+  preparation certificates and purity were not independently established for every
+  later named-drug assay.
+- Free full-text attempts for several older originals encountered PMC challenges,
+  Europe PMC HTTP 500 or publisher HTTP 403. Exact LmrS florfenicol assay details
+  remain unverified despite a promising publisher search lead. The broader qualified
+  database claim is not deemed false from access failure.
+- Reaxys returned HTTP 403 and the LINCS page HTTP 500. The official HMS snapshot
+  is limited to 639 records. No separate authoritative CAS registry graph was obtained;
+  VSDB CAS/name/InChI agreement supports the chemical comparison.
+- Both patent exact synthesis passages and compound mapping were read; all analogue
+  structures, numeric animal tables and spectra were not independently audited. EP
+  Example 9D and US Example 6D report differing melting ranges for the named product;
+  this source discrepancy is not resolved by the native record.
+- Official veterinary labels were used only to assess existing broad use and brand
+  descriptions. No treatment advice, current dosing guidance or new FDA product assertion
+  is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native or maintained files were edited. All original hashes and expanded inputs
+  were retained and rechecked. Optional links, tags and notes were checked specifically
+  for florfenicol.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1128/AAC.44.2.421-424.2000
+- https://doi.org/10.1128/JCM.38.12.4593-4598.2000
+- https://doi.org/10.1038/s41467-022-29274-9
+- https://doi.org/10.1093/jac/26.3.307
+tags:
+- florfenicol
+- phenicol
+- qualitative-resistance
+- ribosomal-protection
+```
