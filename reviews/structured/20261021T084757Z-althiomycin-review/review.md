@@ -1,0 +1,1095 @@
+# Review of althiomycin
+
+- Review: 20261021T084757Z-althiomycin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T08:39:56Z
+- Finished UTC: 2026-10-21T08:47:57Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Althiomycin native encodings are internally consistent and the curated process-level translation target is supported by the original experiment. KNApSAcK representations conflict geometrically and ChemSpider loses specified stereochemistry in another tautomer representation. Primary structural reports explicitly describe side-chain racemization, so no arbitrary missing-centre assignment is proposed. Minor follow-up concerns strain/resistance evidence and MIBiG provenance.
+
+## Scope And Provenance
+
+Whole REVIEWED record, all ten adopted citation records and available abstracts/full texts, current identity and nine parents, native target evidence, two producer and two activity assertions, MIBiG and exact chemical cross-references.
+
+Selection: Path-ordered session queue index088; exactly one record, including its existing REVIEWED event.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:157683 | data/antibiotics/antibacterial/althiomycin.yaml | generated | althiomycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented per-record LinkML validation | passed | True | CHEBI:157683 | Exit 0; No issues found. |
+| Documented closed-schema validation | passed | True | CHEBI:157683 | Exit 0; one file,zero ERROR rows. |
+| Native and cross-reference chemical comparison | failed | False | CHEBI:157683 | Exit 1 for exact representation conflicts; native encodings, formula,charge,masses and mint agree. Canonical tautomer comparison prevents miscalling ChemSpider a different skeleton. |
+| Current ChEBI identity and source assertions | passed | False | CHEBI:157683 | Exit 0; nine parents, both retained role links, synonyms, chemistry and xref strings reproduce. |
+| Structured-source catalog initial execution | failed | False | CHEBI:157683 | Exit 2 from sandbox DNS resolution failure; successful retry follows. |
+| Structured-source catalog retry | passed | False | CHEBI:157683 | Exit 0 before web research. E.coli covered; Serratia and Myxococcus absent from this catalog. |
+| Native peptidyl-transferase query | passed | False | CHEBI:157683 | Exit 0; e_coli/precise1k query returned zero genes and zero iModulons, so no summarize call was applicable. |
+| Authoritative full QC | failed | True | CHEBI:157683 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:157683 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:157683 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:157683 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:157683 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:157683 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:157683 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:157683 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:157683 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Scaffold and stereochemical scope
+
+identity: concern. Targets: CHEBI:157683.
+
+Native encodings agree, and side-chain uncertainty has primary experimental basis. Historical oxime disagreement and exact xref inconsistency require reconciliation rather than a guessed stereocentre.
+
+### Chemical classes and source roles
+
+grounding: supported. Targets: CHEBI:157683.
+
+Nine chemical parents fit and both retained activity roles are supported.
+
+### Process-level target and microbial scope
+
+evidence: supported. Targets: CHEBI:157683.
+
+Original experiments support native translation and puromycin-reaction wording, exact snippet and bounded microbial process target. No UniProt example is required for a biological process.
+
+### Producer-product inhibition observations
+
+scope: supported. Targets: CHEBI:157683.
+
+Qualitative observations are appropriately described as producer-derived activity. Add strains and retain multiple-product context for S.aureus; do not convert to pure-compound MICs.
+
+### Natural-product biosynthesis
+
+evidence: supported. Targets: CHEBI:157683.
+
+Db10 genetics/analytical identity directly support production; DK897 is supported by publisher primary summary and characterized MIBiG, with detailed original-paper access limited.
+
+### Alb1 resistance phenotype
+
+completeness: concern. Targets: CHEBI:157683.
+
+Direct expression-associated resistance evidence can be curated with exact recipient strain, without claiming experimentally demonstrated efflux.
+
+### Source metadata preservation
+
+ownership: concern. Targets: CHEBI:157683.
+
+Native MIBiG-attributed producer lacks available version,source-quality and link-method context; original biological relationship remains supported.
+
+### Existing REVIEWED event and current review
+
+ownership: supported. Targets: CHEBI:157683.
+
+Five history events transparently include a 2026-09-02 LLM-assisted review followed by reseeding. This reassessment does not claim the earlier checks were never performed and does not mutate status.
+
+### Clinical and complete causal graph
+
+representation: not_applicable. Targets: CHEBI:157683.
+
+No clinical assertion or mandatory complete graph is implied by REVIEWED.
+
+### Native focused checks
+
+schema: supported. Targets: CHEBI:157683.
+
+Both documented focused checks pass; cross-source chemistry is a separate semantic concern.
+
+## Findings
+
+### F1: Exact chemical mappings disagree in geometry and specified stereochemistry
+
+major / open / confirmed; issue key: chebi-157683-althiomycin-exact-cross-reference-conflicts.
+
+KNApSAcK SMILES, InChI and displayed key do not agree; ChemSpider changes tautomer representation and omits the native assigned thiazoline stereochemistry. These cannot be treated as unqualified exact encodings. The intended compound is clear, but the historical oxime disagreement must be preserved and checked against actual structures.
+
+### F2: Existing primary studies support strain and resistance refinements
+
+minor / open / confirmed; issue key: chebi-157683-althiomycin-strain-resistance-evidence-refinement.
+
+Activity evidence identifies exact indicator strains and later separates additional secreted metabolites. The same original producer paper demonstrates Alb1-associated resistance in ATCC274. These are concrete additions to otherwise bounded native claims.
+
+### F3: MIBiG-attributed producer lacks available source metadata
+
+minor / open / confirmed; issue key: chebi-157683-althiomycin-mibig-producer-provenance.
+
+The DK897 producer names PRIMARY_LITERATURE_AND_MIBIG and BGC0000955 but omits available version,quality and experimental link-method context. This loses source provenance without invalidating the experimentally characterized producer relationship.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Resolve exact-xref conflicts and document the experimentally meaningful chemical scope before further sign-off.
+
+- Compare actual 1974/1975 oxime drawings and later synthesis/structural evidence under modern E/Z assignment; preserve the historical conflict until resolved. Do not choose a replacement by database majority.
+- Retain the documented side-chain racemization/uncertainty; distinguish any purified single epimer from the historically characterized material. Do not silently add an arbitrary centre.
+- Reconcile KNApSAcK key,InChI and SMILES. Qualify or remove a mapping that cannot denote the agreed scope; no replacement accession is proposed here.
+- Treat ChemSpider nitroso/oxime forms as tautomer-related, not unrelated skeletons, while resolving its lost native thiazoline stereochemistry. MIBiG cluster chemistry is not an exact native structure replacement.
+- Apply maintained inventory/import decisions and regenerate; validate structure,source mappings,schema,strict,term/reference/history and required corpus gates. Reassess the current scientific sign-off through authorized curation rather than editing history retrospectively.
+
+### A2
+
+Refine exact indicator and resistance observations using the inspected producer experiments.
+
+- Add B.subtilis NCIB3610 and S.aureus113 to the relevant 2012 qualitative observations; preserve the distinct NRS1473 complementation-assay indicator if adding those experiments.
+- State that S.aureus wild-type inhibition includes multiple PswP-dependent products; retain the althiomycin contribution without assigning the entire halo to it. No MIC can be inferred from these assays.
+- Curate Alb1 expression-associated resistance in S.marcescens ATCC274 with its producer-lawn context. Predicted MFS export is not direct efflux measurement, and the alb1 deletion has transcriptional/potential second-site confounding.
+- Use validated writer/history and all required scientific gates after authorized curation.
+
+### A3
+
+Restore MIBiG provenance beside independently supported primary producer evidence.
+
+- Carry source_record_version,source_quality,link_evidence and link_evidence_scope from the inspected maintained source, using actual schema vocabulary and preserving primary evidence separately.
+- Do not invent an upstream review credit or use questionable as a verdict against the science. Explain source cluster-level method scope and exact compound identity limitations.
+- Inspect the original 2011 full methods when available to independently confirm detailed gene-inactivation statements; do not convert the publisher graphical abstract into a claim that those methods were read.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/althiomycin.yaml; Entire YAML, including five evidence references and five history events | supports | Read exact chemistry, five synonyms, nine parents, two roles, curator-owned mechanism/scope, two qualitative activity observations, two producer assertions, process-type target with exact quoted snippet, three chemical xrefs, document link, mint and REVIEWED/reseed history. The record does not claim direct binding or a measured MIC. |
+| inventory | data/raw/chebi_antimicrobials.tsv; data/raw/mibig_producers.tsv; curation/uniprot_protein_examples.yaml; 088-owner-hits.txt and captured owner inputs | supports | ChEBI owns generated chemical fields. Primary mechanism/activity/producer assertions are curator-owned. The UniProt overlay explicitly exempts the biological-process target from protein_examples. Maintained MIBiG row carries version 5,questionable quality, knockout/heterologous evidence and a non-exact tautomer/stereo representation; none warrants replacing native chemistry. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:157683; 088-ols.json; 088-chebi.html | supports | Current non-obsolete ChEBI reproduces the native partial-stereo E-oxime encoding and synonyms. Nine chemical parents are broader and fit the graph. Antimicrobial/antibacterial role links persist; protein-synthesis mechanism is independently curated from primary evidence. |
+| knapsack | https://www.knapsackfamily.com/knapsack_core/information.php?word=C00018669; 088-knapsack.html | refutes | SMILES matches native GMLCBOFYSA key, but displayed InChI encodes Z oxime plus an assigned side-chain centre, regenerating GBXZPXMESA. Displayed BOHBIETDNA key differs from both. The conflict is within the exact mapped accession, not evidence that all native chemistry is wrong. |
+| chemspider | https://www.chemspider.com/Chemical-Structure.4576669.html; 088-chemspider.html, machine-readable MolecularEntity descriptors | partial | Exact accession uses NZGOIHZOTAJJCD-UHFFFAOYSA-N, a nitroso/oxime tautomer representation with both tetrahedral centres unspecified. After removing stereo and canonicalizing tautomers, RDKit yields the native skeleton; it therefore cannot be rejected as a different constitution solely from the first key block. It still lacks the native specified thiazoline configuration. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/135434097; 088-pubchem.json, exact-name query | context_only | Name query resolves to the same formula and E-oxime skeleton but both tetrahedral centres unspecified. This is not a native xref and is not proposed as a replacement. |
+| structure1974 | PMID:4452663; DOI:10.7164/antibiotics.27.897; 088-primary1974.pdf pp897–899 | partial | Primary structural work assigns cysteine-derived centre S and reports serine-derived material as racemic, possibly originally or during isolation/hydrolysis. Its carbon-NMR footnote reports equal diastereoisomers. This supports preserving side-chain uncertainty rather than inventing one configuration. The oxime assignment requires reconciliation with the later 1975 contrary result. |
+| structure1975 | PMID:1150528; DOI:10.7164/antibiotics.28.286; 088-primary1975.pdf and original page images p286,p288 | partial | Chemical/NMR and derivative X-ray work supports the scaffold; p288 attributes doubled NMR resonances to a racemized side-chain carbon. p289 explicitly gives a syn oxime conclusion opposite the 1974 result, suggesting basic-hydrolysis isomerization in the older work. Historical syn/anti terminology is not silently equated with modern E/Z; this conflict must be mapped on the actual drawings. |
+| mechanism1970 | PMID:4917791; DOI:10.7164/antibiotics.23.271; 088-primary1970-correct.pdf pp271–275 | supports | Original E.coli B intact-cell/cell-free experiments support protein-synthesis inhibition and reduced puromycin reaction without inhibition of aminoacyl-tRNA synthesis or binding. Native snippet is exact. Reticulocyte assays provide only the tested host comparison, not universal clinical selectivity. Process-level MEASURED_TARGET_ASSOCIATION is appropriate; direct ribosomal binding is not demonstrated. |
+| serrratia2012 | PMID:23028578; DOI:10.1371/journal.pone.0044673; 088-primary2012.xml Methods,Results,Figures1,4,5,7 | supports | Db10 wild-type versus alb disruption plus LC-MS/NMR supports althiomycin biosynthesis. Figure 1 tests B.subtilis NCIB3610 and S.aureus113; native qualitative producer-product assays fit, though strain fields are absent. Alb1 expression in susceptible S.marcescens ATCC274 confers resistance. Efflux is predicted, not directly measured; deletion also reduces downstream operon transcription and failed complementation has explicit alternative explanations. |
+| serrratia2014 | PMID:24847000; DOI:10.1099/mic.0.078576-0; 088-primary2014-producer.xml Methods and Results | supports | The follow-up separates three PswP-dependent contributors to S.aureus inhibition: althiomycin, serrawettin W2 and a siderophore. Residual activity persists after althiomycin disruption. Native althiomycin ACTIVE observation remains supported, but the whole wild-type inhibition zone must not be attributed solely to althiomycin or treated as purified-compound MIC. |
+| myxococcus-primary | PMID:21626639; DOI:10.1002/cbic.201100154; publisher graphical abstract | partial | Publisher identifies Myxococcus xanthus DK897 as the natural producer and describes characterization of its NRPS/PKS cluster. Original full text and supplementary document requests were403; detailed inactivation experiments were not independently read in that article. Current MIBiG and the independent 2012 paper corroborate the cluster context. |
+| mibig | https://mibig.secondarymetabolites.org/go/BGC0000955.5; 088-mibig.html; maintained MIBiG inventory row | supports | BGC0000955 resolves to an active complete althiomycin cluster from M.xanthus, locus FR831800.1, with knockout and heterologous-expression methods and PMID21626639. Upstream quality is questionable, a source-entry metadata category, not a verdict against the underlying science. Native producer source says PRIMARY_LITERATURE_AND_MIBIG but omits version/quality/link-method provenance available in the maintained row. |
+| leads | Europe PMC indexed records for all ten adopted PMIDs; 088-core.json; 088-lead-dispositions.json | supports | Every adopted record was resolved and its available abstract read. Five older papers have no indexed abstract;1970/1974/1975 original PDFs were inspected,2011 publisher summary was accessible,1957 discovery body was not.2002 concerns analogue SAR;2005 myxobacterial screening;2014 shared PswP products;2019 DacA concerns prodigiosin, not an althiomycin target. |
+| chemistry | RDKit exact encodings and cross-reference comparison; 088-chemistry.py; 088-chemistry.json | supports | Native SMILES/InChI/key,masses,formula,charge and mint agree; one S centre and one unspecified side-chain centre are present. KNApSAcK is internally inconsistent. ChemSpider tautomer comparison proves shared normalized skeleton while distinguishing loss of stereo. |
+| source-check | Current ChEBI assertion comparison; 088-source-check.py; 088-source-check.json | supports | Exact non-obsolete identity, nine chemical parents, retained role links, all synonyms, chemistry and source mapping strings pass. |
+| imodulondb | https://imodulondb.org/api/datasets; 088-imodulondb-datasets.json; 088-imodulondb-search.txt | context_only | Catalog/search ran before web research. E.coli precise1k query peptidyl transferase returned zero genes/modules. No Serratia/Myxococcus dataset appears in this catalog; expression coverage is not a negative mechanism or producer result. |
+| validation | just validate; just validate-strict; Actual native focused executions in batch009;088-strict.tsv | supports | Both documented checks exited 0; strict scanned one file and zero ERROR rows. |
+| search | Ignored-inclusive maintained-owner and exact-source search; 088-local-hits.txt;088-owner-hits.txt | context_only | Whole record and all adopted source leads were scoped; primary mechanism, chemical structure, producer genetics and activity contributions were independently distinguished. |
+
+## Limits And Additional Notes
+
+- The native side-chain centre is unspecified and primary1974/1975 report racemization. No unique epimer is nominated. The historical oxime assignments conflict; a modern stereochemical reconciliation remains required.
+- All ten adopted records were resolved and every available indexed abstract read. Original 1957 discovery has no indexed abstract and was not read in full. Original 2011 publisher summary and MIBiG were inspected, but full text, supplement and author-thesis downloads failed HTTP403.
+- MIBiG repository JSON and guessed API endpoint returned HTTP404; the versioned public HTML and maintained row were read successfully. CAS12656-40-5 is corroborated rather than independently resolved against the CAS registry.
+- The first 1970 PDF locator mistakenly fetched an unrelated p315 article; it is excluded from evidence. Verified DOI metadata led to the correct p271–275 PDF. Subsequent attempted thesis text extraction failed because the 403 download produced no file; no claim rests on it.
+- The native record remains REVIEWED exactly as found; this review neither changes status nor endorses a new completed sign-off while cross-reference concerns remain.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native record edits were made; all 15 captured inputs rechecked unchanged. Original source hashes were preserved; MIBiG and UniProt overlay hashes were added before scientific source judgment.
+- Initial iModulonDB catalog failed due sandbox DNS; retry and search succeeded before web research. No module hit warranted summarize.
+- A supplemental exact-name PubChem result is broader stereochemically and is not a native xref or proposed replacement.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T084757Z-althiomycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of althiomycin
+started_at: '2026-10-21T08:39:56Z'
+finished_at: '2026-10-21T08:47:57Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Existing mechanism and producer/activity scope substantially supported;
+  major exact-cross-reference conflict and minor annotation/provenance refinements
+scientific_review: true
+summary: Althiomycin native encodings are internally consistent and the curated process-level
+  translation target is supported by the original experiment. KNApSAcK representations
+  conflict geometrically and ChemSpider loses specified stereochemistry in another
+  tautomer representation. Primary structural reports explicitly describe side-chain
+  racemization, so no arbitrary missing-centre assignment is proposed. Minor follow-up
+  concerns strain/resistance evidence and MIBiG provenance.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: curation/uniprot_protein_examples.yaml
+    sha256: 536ab4cc7ba9be95c80242bcc25321d67a5bdbfecbc50f3be5a449000abfe5f5
+    role: context
+  - path: data/antibiotics/antibacterial/althiomycin.yaml
+    sha256: ddf3e901ea11204b5e50988c2eea55539a81c0fe2eb57f4d176bbd748735c0f4
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: Whole REVIEWED record, all ten adopted citation records and available
+    abstracts/full texts, current identity and nine parents, native target evidence,
+    two producer and two activity assertions, MIBiG and exact chemical cross-references.
+  selection: Path-ordered session queue index088; exactly one record, including its
+    existing REVIEWED event.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:157683
+targets:
+- target_id: CHEBI:157683
+  path: data/antibiotics/antibacterial/althiomycin.yaml
+  label: althiomycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/althiomycin.yaml
+    role: Curator-owned evidence, activity, mechanism and producer/history assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/mibig_producers.tsv
+    role: Maintained MIBiG provenance and identity-matching source
+checks:
+- check_id: schema
+  name: Documented per-record LinkML validation
+  status: passed
+  required: true
+  summary: Exit 0; No issues found.
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/althiomycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented closed-schema validation
+  status: passed
+  required: true
+  summary: Exit 0; one file,zero ERROR rows.
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/althiomycin.yaml --out /private/tmp/am-review-session/088-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Native and cross-reference chemical comparison
+  status: failed
+  required: false
+  summary: Exit 1 for exact representation conflicts; native encodings, formula,charge,masses
+    and mint agree. Canonical tautomer comparison prevents miscalling ChemSpider a
+    different skeleton.
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/088-chemistry.py
+  exit_code: 1
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: source-check
+  name: Current ChEBI identity and source assertions
+  status: passed
+  required: false
+  summary: Exit 0; nine parents, both retained role links, synonyms, chemistry and
+    xref strings reproduce.
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/088-source-check.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - source-check
+- check_id: imodulondb-first
+  name: Structured-source catalog initial execution
+  status: failed
+  required: false
+  summary: Exit 2 from sandbox DNS resolution failure; successful retry follows.
+  target_ids:
+  - CHEBI:157683
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 2
+  expected_exit_code: 0
+  evidence_ids:
+  - imodulondb
+- check_id: imodulondb-catalog
+  name: Structured-source catalog retry
+  status: passed
+  required: false
+  summary: Exit 0 before web research. E.coli covered; Serratia and Myxococcus absent
+    from this catalog.
+  target_ids:
+  - CHEBI:157683
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - imodulondb
+- check_id: imodulondb-search
+  name: Native peptidyl-transferase query
+  status: passed
+  required: false
+  summary: Exit 0; e_coli/precise1k query returned zero genes and zero iModulons,
+    so no summarize call was applicable.
+  target_ids:
+  - CHEBI:157683
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query 'peptidyl
+    transferase'
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - imodulondb
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:157683
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/althiomycin.yaml
+  locator: Entire YAML, including five evidence references and five history events
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: supports
+  summary: Read exact chemistry, five synonyms, nine parents, two roles, curator-owned
+    mechanism/scope, two qualitative activity observations, two producer assertions,
+    process-type target with exact quoted snippet, three chemical xrefs, document
+    link, mint and REVIEWED/reseed history. The record does not claim direct binding
+    or a measured MIC.
+- evidence_id: inventory
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/mibig_producers.tsv; curation/uniprot_protein_examples.yaml
+  locator: 088-owner-hits.txt and captured owner inputs
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: supports
+  summary: ChEBI owns generated chemical fields. Primary mechanism/activity/producer
+    assertions are curator-owned. The UniProt overlay explicitly exempts the biological-process
+    target from protein_examples. Maintained MIBiG row carries version 5,questionable
+    quality, knockout/heterologous evidence and a non-exact tautomer/stereo representation;
+    none warrants replacing native chemistry.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:157683
+  locator: 088-ols.json; 088-chebi.html
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: supports
+  summary: Current non-obsolete ChEBI reproduces the native partial-stereo E-oxime
+    encoding and synonyms. Nine chemical parents are broader and fit the graph. Antimicrobial/antibacterial
+    role links persist; protein-synthesis mechanism is independently curated from
+    primary evidence.
+  snapshot_sha256: 0e7ff0727ede538a28246ce99ea3d17585d151df2aa5fd2a54b66dd0c772f9b0
+- evidence_id: knapsack
+  kind: database
+  reference: https://www.knapsackfamily.com/knapsack_core/information.php?word=C00018669
+  locator: 088-knapsack.html
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: refutes
+  summary: SMILES matches native GMLCBOFYSA key, but displayed InChI encodes Z oxime
+    plus an assigned side-chain centre, regenerating GBXZPXMESA. Displayed BOHBIETDNA
+    key differs from both. The conflict is within the exact mapped accession, not
+    evidence that all native chemistry is wrong.
+  snapshot_sha256: a584591d7a999d5e2ebc9c606c8ebdb0b7203797ee6e8958ea663f51a0b1f60b
+- evidence_id: chemspider
+  kind: database
+  reference: https://www.chemspider.com/Chemical-Structure.4576669.html
+  locator: 088-chemspider.html, machine-readable MolecularEntity descriptors
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: partial
+  summary: Exact accession uses NZGOIHZOTAJJCD-UHFFFAOYSA-N, a nitroso/oxime tautomer
+    representation with both tetrahedral centres unspecified. After removing stereo
+    and canonicalizing tautomers, RDKit yields the native skeleton; it therefore cannot
+    be rejected as a different constitution solely from the first key block. It still
+    lacks the native specified thiazoline configuration.
+  snapshot_sha256: 7638e46781c98252992b35711e1fb132d2a131211899f499aba8da7d542fb10f
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/135434097
+  locator: 088-pubchem.json, exact-name query
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: context_only
+  summary: Name query resolves to the same formula and E-oxime skeleton but both tetrahedral
+    centres unspecified. This is not a native xref and is not proposed as a replacement.
+  snapshot_sha256: ed61f54b9616aec7ead95b95dab1c135dfec7435dbb39ed03d2839d163c21d10
+- evidence_id: structure1974
+  kind: primary_source
+  reference: PMID:4452663
+  locator: DOI:10.7164/antibiotics.27.897; 088-primary1974.pdf pp897–899
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: partial
+  summary: Primary structural work assigns cysteine-derived centre S and reports serine-derived
+    material as racemic, possibly originally or during isolation/hydrolysis. Its carbon-NMR
+    footnote reports equal diastereoisomers. This supports preserving side-chain uncertainty
+    rather than inventing one configuration. The oxime assignment requires reconciliation
+    with the later 1975 contrary result.
+  snapshot_sha256: 0773e53117617817840de346ecdc9b6ff6db55ed12ac080d0ff70cd4cca05975
+- evidence_id: structure1975
+  kind: primary_source
+  reference: PMID:1150528
+  locator: DOI:10.7164/antibiotics.28.286; 088-primary1975.pdf and original page images
+    p286,p288
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: partial
+  summary: Chemical/NMR and derivative X-ray work supports the scaffold; p288 attributes
+    doubled NMR resonances to a racemized side-chain carbon. p289 explicitly gives
+    a syn oxime conclusion opposite the 1974 result, suggesting basic-hydrolysis isomerization
+    in the older work. Historical syn/anti terminology is not silently equated with
+    modern E/Z; this conflict must be mapped on the actual drawings.
+  snapshot_sha256: 18d81315ba336fa112bb50d88d863b66b300ff77cdbc7ab98c13c3209aafeeec
+- evidence_id: mechanism1970
+  kind: primary_source
+  reference: PMID:4917791
+  locator: DOI:10.7164/antibiotics.23.271; 088-primary1970-correct.pdf pp271–275
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: supports
+  summary: Original E.coli B intact-cell/cell-free experiments support protein-synthesis
+    inhibition and reduced puromycin reaction without inhibition of aminoacyl-tRNA
+    synthesis or binding. Native snippet is exact. Reticulocyte assays provide only
+    the tested host comparison, not universal clinical selectivity. Process-level
+    MEASURED_TARGET_ASSOCIATION is appropriate; direct ribosomal binding is not demonstrated.
+  snapshot_sha256: 7f141189513eade60ae1b686605d684269ba627bfd3f0746a7abec502579199a
+- evidence_id: serrratia2012
+  kind: primary_source
+  reference: PMID:23028578
+  locator: DOI:10.1371/journal.pone.0044673; 088-primary2012.xml Methods,Results,Figures1,4,5,7
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: supports
+  summary: Db10 wild-type versus alb disruption plus LC-MS/NMR supports althiomycin
+    biosynthesis. Figure 1 tests B.subtilis NCIB3610 and S.aureus113; native qualitative
+    producer-product assays fit, though strain fields are absent. Alb1 expression
+    in susceptible S.marcescens ATCC274 confers resistance. Efflux is predicted, not
+    directly measured; deletion also reduces downstream operon transcription and failed
+    complementation has explicit alternative explanations.
+  snapshot_sha256: eb3cb9c40de54605f488f7a7c640c3415704ef3e961773f6a24d1165ebf2d0ce
+- evidence_id: serrratia2014
+  kind: primary_source
+  reference: PMID:24847000
+  locator: DOI:10.1099/mic.0.078576-0; 088-primary2014-producer.xml Methods and Results
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: supports
+  summary: 'The follow-up separates three PswP-dependent contributors to S.aureus
+    inhibition: althiomycin, serrawettin W2 and a siderophore. Residual activity persists
+    after althiomycin disruption. Native althiomycin ACTIVE observation remains supported,
+    but the whole wild-type inhibition zone must not be attributed solely to althiomycin
+    or treated as purified-compound MIC.'
+  snapshot_sha256: 83bab7ac53eda76746ec9df50e1a6ae0b451e62bee6a9dc37dd12058f533b58b
+- evidence_id: myxococcus-primary
+  kind: primary_source
+  reference: PMID:21626639
+  locator: DOI:10.1002/cbic.201100154; publisher graphical abstract
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: partial
+  summary: Publisher identifies Myxococcus xanthus DK897 as the natural producer and
+    describes characterization of its NRPS/PKS cluster. Original full text and supplementary
+    document requests were403; detailed inactivation experiments were not independently
+    read in that article. Current MIBiG and the independent 2012 paper corroborate
+    the cluster context.
+- evidence_id: mibig
+  kind: database
+  reference: https://mibig.secondarymetabolites.org/go/BGC0000955.5
+  locator: 088-mibig.html; maintained MIBiG inventory row
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: supports
+  summary: BGC0000955 resolves to an active complete althiomycin cluster from M.xanthus,
+    locus FR831800.1, with knockout and heterologous-expression methods and PMID21626639.
+    Upstream quality is questionable, a source-entry metadata category, not a verdict
+    against the underlying science. Native producer source says PRIMARY_LITERATURE_AND_MIBIG
+    but omits version/quality/link-method provenance available in the maintained row.
+  snapshot_sha256: cb231bbeb797a1c10c9c4ff12c9ca4b1a90762783e34615afb1988e13ae16823
+- evidence_id: leads
+  kind: database
+  reference: Europe PMC indexed records for all ten adopted PMIDs
+  locator: 088-core.json; 088-lead-dispositions.json
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: supports
+  summary: Every adopted record was resolved and its available abstract read. Five
+    older papers have no indexed abstract;1970/1974/1975 original PDFs were inspected,2011
+    publisher summary was accessible,1957 discovery body was not.2002 concerns analogue
+    SAR;2005 myxobacterial screening;2014 shared PswP products;2019 DacA concerns
+    prodigiosin, not an althiomycin target.
+  snapshot_sha256: 4b48a63d9aa006525d3e5bb56c43b77b1535d2a35aa32198fb6225a3d983388e
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit exact encodings and cross-reference comparison
+  locator: 088-chemistry.py; 088-chemistry.json
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: supports
+  summary: Native SMILES/InChI/key,masses,formula,charge and mint agree; one S centre
+    and one unspecified side-chain centre are present. KNApSAcK is internally inconsistent.
+    ChemSpider tautomer comparison proves shared normalized skeleton while distinguishing
+    loss of stereo.
+  snapshot_sha256: aeea9b5944089f68a1e6272028865a0595df1fbb555fa7a980f3f80041577974
+- evidence_id: source-check
+  kind: validation
+  reference: Current ChEBI assertion comparison
+  locator: 088-source-check.py; 088-source-check.json
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: supports
+  summary: Exact non-obsolete identity, nine chemical parents, retained role links,
+    all synonyms, chemistry and source mapping strings pass.
+  snapshot_sha256: 3f4a315202184cd5e07d4bc4524dda2762ea19c07cb2f661da9ad444927a0e3e
+- evidence_id: imodulondb
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: 088-imodulondb-datasets.json; 088-imodulondb-search.txt
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: context_only
+  summary: Catalog/search ran before web research. E.coli precise1k query peptidyl
+    transferase returned zero genes/modules. No Serratia/Myxococcus dataset appears
+    in this catalog; expression coverage is not a negative mechanism or producer result.
+  snapshot_sha256: f0aa8b65cd456d1ed6ef452b0b150ebf3d942d873c6a9fa76db3990ba6e62663
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual native focused executions in batch009;088-strict.tsv
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: supports
+  summary: Both documented checks exited 0; strict scanned one file and zero ERROR
+    rows.
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive maintained-owner and exact-source search
+  locator: 088-local-hits.txt;088-owner-hits.txt
+  accessed_at: '2026-10-21T08:45:11Z'
+  support: context_only
+  summary: Whole record and all adopted source leads were scoped; primary mechanism,
+    chemical structure, producer genetics and activity contributions were independently
+    distinguished.
+  search_scope: prepare.py 88 ran rg --no-ignore --hidden excluding only .git/.venv
+    before judgment. Follow-up ignored-inclusive search included curation,data/raw,conf,scripts.
+    Additional MIBiG/UniProt owner files were captured before scientific source assessment;
+    all 15 hashes later rechecked unchanged.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Scaffold and stereochemical scope
+  outcome: concern
+  summary: Native encodings agree, and side-chain uncertainty has primary experimental
+    basis. Historical oxime disagreement and exact xref inconsistency require reconciliation
+    rather than a guessed stereocentre.
+  target_ids:
+  - CHEBI:157683
+  evidence_ids:
+  - chebi
+  - structure1974
+  - structure1975
+  - knapsack
+  - chemspider
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical classes and source roles
+  outcome: supported
+  summary: Nine chemical parents fit and both retained activity roles are supported.
+  target_ids:
+  - CHEBI:157683
+  evidence_ids:
+  - chebi
+  - source-check
+  - mechanism1970
+  - serrratia2012
+- assessment_id: mechanism
+  area: evidence
+  topic: Process-level target and microbial scope
+  outcome: supported
+  summary: Original experiments support native translation and puromycin-reaction
+    wording, exact snippet and bounded microbial process target. No UniProt example
+    is required for a biological process.
+  target_ids:
+  - CHEBI:157683
+  evidence_ids:
+  - record
+  - mechanism1970
+  - inventory
+- assessment_id: activity
+  area: scope
+  topic: Producer-product inhibition observations
+  outcome: supported
+  summary: Qualitative observations are appropriately described as producer-derived
+    activity. Add strains and retain multiple-product context for S.aureus; do not
+    convert to pure-compound MICs.
+  target_ids:
+  - CHEBI:157683
+  evidence_ids:
+  - serrratia2012
+  - serrratia2014
+- assessment_id: producer
+  area: evidence
+  topic: Natural-product biosynthesis
+  outcome: supported
+  summary: Db10 genetics/analytical identity directly support production; DK897 is
+    supported by publisher primary summary and characterized MIBiG, with detailed
+    original-paper access limited.
+  target_ids:
+  - CHEBI:157683
+  evidence_ids:
+  - serrratia2012
+  - myxococcus-primary
+  - mibig
+- assessment_id: resistance
+  area: completeness
+  topic: Alb1 resistance phenotype
+  outcome: concern
+  summary: Direct expression-associated resistance evidence can be curated with exact
+    recipient strain, without claiming experimentally demonstrated efflux.
+  target_ids:
+  - CHEBI:157683
+  evidence_ids:
+  - serrratia2012
+- assessment_id: mibig-provenance
+  area: ownership
+  topic: Source metadata preservation
+  outcome: concern
+  summary: Native MIBiG-attributed producer lacks available version,source-quality
+    and link-method context; original biological relationship remains supported.
+  target_ids:
+  - CHEBI:157683
+  evidence_ids:
+  - inventory
+  - mibig
+- assessment_id: audit
+  area: ownership
+  topic: Existing REVIEWED event and current review
+  outcome: supported
+  summary: Five history events transparently include a 2026-09-02 LLM-assisted review
+    followed by reseeding. This reassessment does not claim the earlier checks were
+    never performed and does not mutate status.
+  target_ids:
+  - CHEBI:157683
+  evidence_ids:
+  - record
+- assessment_id: optional
+  area: representation
+  topic: Clinical and complete causal graph
+  outcome: not_applicable
+  summary: No clinical assertion or mandatory complete graph is implied by REVIEWED.
+  target_ids:
+  - CHEBI:157683
+  evidence_ids:
+  - record
+- assessment_id: schema
+  area: schema
+  topic: Native focused checks
+  outcome: supported
+  summary: Both documented focused checks pass; cross-source chemistry is a separate
+    semantic concern.
+  target_ids:
+  - CHEBI:157683
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-157683-althiomycin-exact-cross-reference-conflicts
+  category: consistency
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Exact chemical mappings disagree in geometry and specified stereochemistry
+  description: KNApSAcK SMILES, InChI and displayed key do not agree; ChemSpider changes
+    tautomer representation and omits the native assigned thiazoline stereochemistry.
+    These cannot be treated as unqualified exact encodings. The intended compound
+    is clear, but the historical oxime disagreement must be preserved and checked
+    against actual structures.
+  target_ids:
+  - CHEBI:157683
+  field_paths:
+  - xrefs
+  - chemical_structure
+  evidence_ids:
+  - knapsack
+  - chemspider
+  - chemistry
+  - structure1974
+  - structure1975
+  rule_id: 'review-checklist: Structure and Equivalence'
+  native_severity: major exact chemical-reference consistency conflict
+  normalization_reason: A source conflict is confirmed without declaring the native
+    scaffold wrong. Side-chain racemization is documented and does not justify arbitrary
+    stereo completion.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained chemical identity and xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source mapping extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated representation
+- finding_id: F2
+  issue_key: chebi-157683-althiomycin-strain-resistance-evidence-refinement
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Existing primary studies support strain and resistance refinements
+  description: Activity evidence identifies exact indicator strains and later separates
+    additional secreted metabolites. The same original producer paper demonstrates
+    Alb1-associated resistance in ATCC274. These are concrete additions to otherwise
+    bounded native claims.
+  target_ids:
+  - CHEBI:157683
+  field_paths:
+  - activity_spectrum
+  - resistance_mechanisms
+  - evidence
+  - discussions
+  evidence_ids:
+  - record
+  - serrratia2012
+  - serrratia2014
+  rule_id: 'review-checklist: Activity,Resistance and claim-level evidence'
+  native_severity: minor bounded primary annotation refinement
+  normalization_reason: Native qualitative activity remains supported and no false
+    direct-binding/efflux assertion exists.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/althiomycin.yaml
+    role: Curator-owned activity, resistance, evidence, discussions and history
+- finding_id: F3
+  issue_key: chebi-157683-althiomycin-mibig-producer-provenance
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: MIBiG-attributed producer lacks available source metadata
+  description: The DK897 producer names PRIMARY_LITERATURE_AND_MIBIG and BGC0000955
+    but omits available version,quality and experimental link-method context. This
+    loses source provenance without invalidating the experimentally characterized
+    producer relationship.
+  target_ids:
+  - CHEBI:157683
+  field_paths:
+  - producer_organisms[0]
+  evidence_ids:
+  - record
+  - inventory
+  - mibig
+  - myxococcus-primary
+  rule_id: 'review-checklist: Producer provenance; docs/CURATION.md producer link
+    scope'
+  native_severity: minor nonblocking source-provenance gap
+  normalization_reason: Upstream questionable quality describes entry metadata, not
+    poor science; reviewed metadata is never an admission gate.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/althiomycin.yaml
+    role: Curator-owned activity, resistance, evidence, discussions and history
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/mibig_producers.tsv
+    role: Maintained upstream MIBiG metadata
+actions:
+- action_id: A1
+  description: Resolve exact-xref conflicts and document the experimentally meaningful
+    chemical scope before further sign-off.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:157683
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained chemical identity and xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source mapping extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated representation
+  acceptance_checks:
+  - Compare actual 1974/1975 oxime drawings and later synthesis/structural evidence
+    under modern E/Z assignment; preserve the historical conflict until resolved.
+    Do not choose a replacement by database majority.
+  - Retain the documented side-chain racemization/uncertainty; distinguish any purified
+    single epimer from the historically characterized material. Do not silently add
+    an arbitrary centre.
+  - Reconcile KNApSAcK key,InChI and SMILES. Qualify or remove a mapping that cannot
+    denote the agreed scope; no replacement accession is proposed here.
+  - Treat ChemSpider nitroso/oxime forms as tautomer-related, not unrelated skeletons,
+    while resolving its lost native thiazoline stereochemistry. MIBiG cluster chemistry
+    is not an exact native structure replacement.
+  - Apply maintained inventory/import decisions and regenerate; validate structure,source
+    mappings,schema,strict,term/reference/history and required corpus gates. Reassess
+    the current scientific sign-off through authorized curation rather than editing
+    history retrospectively.
+- action_id: A2
+  description: Refine exact indicator and resistance observations using the inspected
+    producer experiments.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:157683
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/althiomycin.yaml
+    role: Curator-owned activity, resistance, evidence, discussions and history
+  acceptance_checks:
+  - Add B.subtilis NCIB3610 and S.aureus113 to the relevant 2012 qualitative observations;
+    preserve the distinct NRS1473 complementation-assay indicator if adding those
+    experiments.
+  - State that S.aureus wild-type inhibition includes multiple PswP-dependent products;
+    retain the althiomycin contribution without assigning the entire halo to it. No
+    MIC can be inferred from these assays.
+  - Curate Alb1 expression-associated resistance in S.marcescens ATCC274 with its
+    producer-lawn context. Predicted MFS export is not direct efflux measurement,
+    and the alb1 deletion has transcriptional/potential second-site confounding.
+  - Use validated writer/history and all required scientific gates after authorized
+    curation.
+- action_id: A3
+  description: Restore MIBiG provenance beside independently supported primary producer
+    evidence.
+  finding_ids:
+  - F3
+  target_ids:
+  - CHEBI:157683
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/althiomycin.yaml
+    role: Curator-owned activity, resistance, evidence, discussions and history
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/mibig_producers.tsv
+    role: Maintained upstream MIBiG metadata
+  acceptance_checks:
+  - Carry source_record_version,source_quality,link_evidence and link_evidence_scope
+    from the inspected maintained source, using actual schema vocabulary and preserving
+    primary evidence separately.
+  - Do not invent an upstream review credit or use questionable as a verdict against
+    the science. Explain source cluster-level method scope and exact compound identity
+    limitations.
+  - Inspect the original 2011 full methods when available to independently confirm
+    detailed gene-inactivation statements; do not convert the publisher graphical
+    abstract into a claim that those methods were read.
+limitations:
+- The native side-chain centre is unspecified and primary1974/1975 report racemization.
+  No unique epimer is nominated. The historical oxime assignments conflict; a modern
+  stereochemical reconciliation remains required.
+- All ten adopted records were resolved and every available indexed abstract read.
+  Original 1957 discovery has no indexed abstract and was not read in full. Original
+  2011 publisher summary and MIBiG were inspected, but full text, supplement and author-thesis
+  downloads failed HTTP403.
+- MIBiG repository JSON and guessed API endpoint returned HTTP404; the versioned public
+  HTML and maintained row were read successfully. CAS12656-40-5 is corroborated rather
+  than independently resolved against the CAS registry.
+- The first 1970 PDF locator mistakenly fetched an unrelated p315 article; it is excluded
+  from evidence. Verified DOI metadata led to the correct p271–275 PDF. Subsequent
+  attempted thesis text extraction failed because the 403 download produced no file;
+  no claim rests on it.
+- The native record remains REVIEWED exactly as found; this review neither changes
+  status nor endorses a new completed sign-off while cross-reference concerns remain.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record edits were made; all 15 captured inputs rechecked unchanged. Original
+  source hashes were preserved; MIBiG and UniProt overlay hashes were added before
+  scientific source judgment.
+- Initial iModulonDB catalog failed due sandbox DNS; retry and search succeeded before
+  web research. No module hit warranted summarize.
+- A supplemental exact-name PubChem result is broader stereochemically and is not
+  a native xref or proposed replacement.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:157683
+- https://doi.org/10.7164/antibiotics.23.271
+- https://doi.org/10.7164/antibiotics.27.897
+- https://doi.org/10.7164/antibiotics.28.286
+- https://doi.org/10.1371/journal.pone.0044673
+- https://mibig.secondarymetabolites.org/go/BGC0000955.5
+tags:
+- record-review
+- althiomycin
+- primary-mechanism
+- cross-reference-conflict
+- producer-provenance
+```

@@ -1,0 +1,651 @@
+schema_version: 1.0.0
+review_id: 20261021T084647Z-alexidine
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Alexidine: supported seed identity with salt- and endpoint-qualified activity
+  enrichment'
+started_at: '2026-10-21T08:31:12Z'
+finished_at: '2026-10-21T08:46:47Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author native record. Captured maintained hashes before
+    assessment, read the full record, adopted row, source transform/seeder and local
+    rubric, verified official identities and all eight adopted original abstracts,
+    and read both open2013 primary articles.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: 'Native neutral alexidine identity, structural parent, source provenance
+  and antibacterial role are supported. No confirmed native error was found. One informational
+  finding identifies optional exact-form activity and mechanism enrichment: retain
+  dihydrochloride assay material, biofilm versus microscopy endpoints, formulation
+  conditions and host-target boundaries. LINCS and Reaxys remain independently unverified.
+  Scientific assessment retains the stated evidence limits; full verification is blocked
+  by the shared native-library failure.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/alexidine.yaml
+    sha256: 7b80fa7268d282722532a962a280c0a4b15ff686a7913cd309e13664ea712e31
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:53661
+  path: data/antibiotics/antibacterial/alexidine.yaml
+  label: alexidine
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire neutral alexidine record, adopted ChEBI source and transforms,
+    official identity pages, all eight adopted abstract dispositions, full2013 dentin/biofilm
+    primary studies, and bounded original mechanistic abstracts.
+  selection: Queue085 exact CHEBI:53661, one locked native path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:53661
+  exclusions:
+  - target: Alexidine dihydrochloride as an exact structural identity; chlorhexidine;
+      multicomponent commercial products
+    reason: Related salt, comparator and formulations are separate contexts; assay
+      results retain the actual material and formulation.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Focused LinkML validation exited0.
+  target_ids:
+  - CHEBI:53661
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/alexidine.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Focused strict scan has zero ERROR rows.
+  target_ids:
+  - CHEBI:53661
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/alexidine.yaml --out /private/tmp/am-review-session/085-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Native structures, formula,charge,masses and source-specific mint agree.
+  target_ids:
+  - CHEBI:53661
+  evidence_ids:
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/085-chemistry-check.py 85
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: structured-context
+  name: structured-context
+  status: not_applicable
+  required: false
+  summary: Native record asserts no protein/pathway/expression dataset. Inspected
+    same-session dataset inventory has no E.faecalis or mammalian host coverage; LPS/LTA
+    binding is not an expression-module claim.
+  target_ids:
+  - CHEBI:53661
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:53661
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:53661
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:53661
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:53661
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:53661
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:53661
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:53661
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:53661
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:53661
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/alexidine.yaml
+  locator: Entire native YAML after085 input capture.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: supports
+  summary: SEEDED/EXACT neutral alexidine; six synonyms including two INN variants;
+    broader biguanides parent CHEBI:53662; antibacterial role33282; three chemical,one
+    drug and two document xrefs; one CHEBI source concept and four seed/reseed events.
+    No claim-level activity,mechanism,target,resistance,producer,clinical,dataset
+    or graph objects are asserted.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Exact line989 in085-raw.json; extractor176–339,seeder1483–1669 and conf/sources.yaml;
+    manifest/role names.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: supports
+  summary: Native fields reproduce adopted row. The eight source PMID leads are retained
+    in raw input rather than automatically asserted as claim evidence. No mechanism
+    role is present. The seeder correctly separates DrugCentral into drug_xrefs and
+    patent/Wikipedia into document_xrefs. Role33282 and minted275124c3cb match source.
+    All13 initially captured input hashes unchanged.
+  snapshot_sha256: 7a437155671bf83170076e62d1c200f0e6b5f9e1c0488d74d298fdfd13d49d33
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:53661
+  locator: Complete085-chebi.html/txt and085-pubchem.json.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: supports
+  summary: Current ChEBI confirms native label,definition,synonyms,biguanides parent,antibacterial
+    role and neutral structure. PubChem key lookup includes CID2090 with identical
+    Standard InChI/key,formula,charge and masses; additional tautomer representations
+    returned by the same query are not adopted equivalences. CAS22573-93-9 is corroborated
+    by ChEBI/PubChem/DrugCentral,not directly by CAS registry. Two carbon stereocentres
+    are unspecified; no racemic or single-enantiomer assertion follows.
+  snapshot_sha256: a0bdd221110974e931c2acb3e78580ea7c350d50b1fe031ba5e0364e8432c5ab
+- evidence_id: drug-document-links
+  kind: database
+  reference: https://drugcentral.org/drugcard/113
+  locator: Full085-drugcentral.html/txt and official /drug/113/inchi,/drug/113/smiles
+    endpoints; patentCN101624356A and WikipediaAlexidine pages.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: supports
+  summary: DrugCentral113 directly matches native InChI and SMILES; its broader drug
+    synonym list includes the dihydrochloride, correctly kept in drug_xrefs rather
+    than chemical equivalence. It does not establish current approval. Patent document
+    resolves to alexidine synthesis and explicitly describes a dihydrochloride; it
+    is correctly a document link. Wikipedia resolves to the intended topic. LINCSLSM-4432
+    and Reaxys2404807 are corroborated in ChEBI only; LINCS routes failed access/TLS
+    and Reaxys was not inspected.
+  snapshot_sha256: eefc69b2e1547cfc26bf85a0749808866259163b15a8648c0c063a13635d1b4e
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculation
+  locator: 085-chemistry.json/log.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: supports
+  summary: Both native representations parse to one neutral C26H56N10 fragment,full
+    keyLFVVNPBBFUSSHL-UHFFFAOYSA-N,average mass508.804,exact mass508.468941792 and
+    two unspecified centres. Source mint independently agrees. No salt or stereoisomer
+    equivalence is inferred.
+  snapshot_sha256: 2670c1dcf9fe5f6df23142fa312ebb1f978f971ed85f970f4163d44611481b72
+- evidence_id: biofilm
+  kind: primary_source
+  reference: DOI:10.1038/ijos.2013.58
+  locator: PMID23970139,PMC3967334;085-2013-biofilm.xml and extracted entire main
+    body,Methods and Table1.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: supports
+  summary: Two24h E.faecalis biofilms,ATCC29212/D1,were grown in BHI at37°C and challenged1/5min.
+    CFU recovery defined eradication operationally as100% kill. At1min,ALX alone reached
+    this endpoint at0.0156%/0.031%,respectively;5min worked at all tested concentrations.
+    Stock was2%ALX in30%ethanol,pH2.63; ethanol controls reduced≤0.5log. Supplier/salt
+    form is not specified in inspected methods, so exact freebase mass basis remains
+    unresolved.1:1NAC mixing requires concentration clarification before numeric combination
+    entries; the paper does not support synergy.
+  snapshot_sha256: ce0945d8f57ffde0dd82cecc89cea25610971869858bff1012053db3be61752f
+- evidence_id: dentin
+  kind: primary_source
+  reference: DOI:10.1038/ijos.2013.11
+  locator: PMID23492900,PMC3632760;085-2013-dentin.xml and complete main body,Methods/Table1/Discussion.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: supports
+  summary: Methods explicitly dissolve alexidine dihydrochloride powder in water to1%.
+    E.faecalis ATCC29212 biofilms on bovine dentin were exposed5/10min. Fixed-sample
+    SEM counts fell from90±12.86 to16±4.68 cells/spot at5min and92±10.34 to14±4.27
+    at10min. Authors explicitly acknowledge that microscopy did not determine viability.
+    Do not label these counts as CFU,MIC or bactericidal percentages; membrane images
+    do not establish direct protein binding.
+  snapshot_sha256: 5a906020e60b30051112eef4ac2ae11588d4a97a4fc7bc01daaf616404d20775
+- evidence_id: other-adopted
+  kind: primary_source
+  reference: Eight adopted PMIDs in Europe PMC
+  locator: All complete abstracts in085-adopted-abstracts.txt and verified085-epmc.json.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: supports
+  summary: 'In addition to the two full2013 studies: PMID24139264 DOI10.1016/j.joen.2013.07.038
+    tests1%/2%ALX dentin substantivity after1min over80days;22495680 DOI10.1097/ICL.0b013e31824da9be
+    tests0.00045% buffered ALX after4weeks at56°C versus room temperature in HDPE/glass,showing
+    formulation/storage loss across fungi and bacteria,not a genetic resistance mechanism;22152633
+    DOI10.1016/j.joen.2011.10.003 tests NaOCl chemical interactions/PCA,not antibacterial
+    mechanism;10848923 DOI10.1046/j.1365-2222.2000.00887.x tests IgE cross-inhibition
+    in a chlorhexidine-allergic subject,not alexidine clinical allergy incidence.
+    PMID265389 DOI10.1902/jop.1977.48.4.216 and381628 DOI10.1902/jop.1978.49.3.145
+    report mouthrinse plaque reduction with nonsignificant/inconclusive gingivitis
+    outcomes. Their historical efficacy/safety statements do not establish current
+    approval or universal safety. These six are abstract-only.'
+  snapshot_sha256: 013e000550673f25add4e3e1ce78a501810198c68f9357c8f7484b809e7d956f
+- evidence_id: binding
+  kind: primary_source
+  reference: PMID:18635521; PMID:30226750
+  locator: Complete original abstracts in085-extra-epmc.json; DOI10.1093/jac/dkn270
+    and10.1021/acsinfecdis.8b00087 verified.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: context_only
+  summary: 2008 fluorescence displacement and isothermal calorimetry support LPS/LTA
+    binding; transfected-cell TLR reporters/macrophage NO measure downstream immune
+    activation.2018 explicitly tests alexidine dihydrochloride with NMR,fluorescence
+    and SPR,reporting LPS binding KD38µM and stoichiometry1:2–1:4,with simulation
+    as computational context. These are bounded binding/neutralization leads; LPS
+    is a molecular component,not a protein family,and these assays alone do not establish
+    the sole cause of bacterial killing.2008 full publisher access403; detailed methods
+    not inspected.
+  snapshot_sha256: 4a1780d971fdc15c85b5c9f40c6b075bf9cc4df0f9d5a20fb13b4378f4d3affc
+- evidence_id: host-boundary
+  kind: primary_source
+  reference: PMID:20167843
+  locator: Complete original abstract in085-extra-epmc.json; DOI10.1124/jpet.109.163329.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: context_only
+  summary: Original PTPMT1 work uses alexidine dihydrochloride in enzyme and rat pancreatic-islet
+    experiments and reports insulin-secretion effects. That host mitochondrial phosphatase
+    is not established by this study as the bacterial target. An incidental2025 hepatocellular-carcinoma
+    abstract returned by the title query is likewise host pharmacology. No host target
+    is asserted natively.
+  snapshot_sha256: 4a1780d971fdc15c85b5c9f40c6b075bf9cc4df0f9d5a20fb13b4378f4d3affc
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB public dataset inventory
+  locator: Previously successful same-session055-imodulondb-datasets-retry.txt, reread
+    in this review.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: context_only
+  summary: The inspected inventory has no E.faecalis or mammalian host dataset. Native
+    record contains no genes/pathways/transcriptomics claims. No applicable expression-module
+    cross-check for the scoped biofilm/host-target observations; this is not negative
+    biological evidence.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 085-local-hits.txt and085-maintained-search.txt; bounded official exact
+    identifier/name/DOI search.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: context_only
+  summary: Ignored-inclusive search found source/queue occurrences and no target-specific
+    decision,overlay or prior review in the searched paths. Source records and primary
+    texts were inspected independently; reviews,vendors and search snippets were only
+    leads. No exhaustive literature-absence claim.
+  search_scope: rg --no-ignore --hidden across batch009 excluding.git/.venv for alexidine,53661,LFVVNPBBFUSSHL
+    and275124c3cb, plus maintained curation/conf/scripts/data/raw/reports/reviews.
+    Official ChEBI,PubChem,DrugCentral,LINCS resolver; original PubMed/EuropePMC,Nature/International
+    Journal of Oral Science,Oxford and patent text.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity,equivalence,activity,target and audit sections; CLAUDE,HARMONIZATION,CURATION.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: supports
+  summary: Salt structures are distinct. Drug/document links need not be exact chemical-equivalence
+    links. Optional claim objects require narrow evidence when added; broad source
+    antibacterial classification does not authorize unqualified salt-mass MICs or
+    host-target transfer.
+- evidence_id: validation
+  kind: validation
+  reference: Focused documented native gates
+  locator: 085-focused-results.json and schema/strict logs/TSV;085-chemistry.json.
+  accessed_at: '2026-10-21T08:34:52Z'
+  support: supports
+  summary: Focused schema and strict exit0; native chemistry/mint exit0.
+  snapshot_sha256: d7e729fe67e2eda2f8e02a2f0e3c29ab41694dcefc0f1cfdfc3150b3604d2c85
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral stereounspecified alexidine
+  outcome: supported
+  summary: Official chemistry,structural description and broader biguanides parent
+    agree; no salt synonym is asserted as exact natively.
+  target_ids:
+  - CHEBI:53661
+  evidence_ids:
+  - identity
+  - drug-document-links
+  - chemistry
+  - source
+- assessment_id: xrefs
+  area: identity
+  topic: Identifier verification extent
+  outcome: unknown
+  summary: DrugCentral and document links resolve and fit their slots; LINCS/Reaxys
+    remain source-corroborated but not independently verified. No confirmed mismatch.
+  target_ids:
+  - CHEBI:53661
+  evidence_ids:
+  - drug-document-links
+  - identity
+- assessment_id: roles
+  area: evidence
+  topic: Antibacterial source role
+  outcome: supported
+  summary: Current ontology and original bacterial studies support activity of alexidine/the
+    active part in tested preparations. Exact supplied salts and formulations must
+    accompany numeric enrichment.
+  target_ids:
+  - CHEBI:53661
+  evidence_ids:
+  - identity
+  - biofilm
+  - dentin
+  - other-adopted
+- assessment_id: citations
+  area: evidence
+  topic: All eight adopted publication dispositions
+  outcome: supported
+  summary: Each PMID/DOI resolves; activity,formulation,chemical compatibility,host
+    antibody and historical mouthrinse outcomes are distinguished. No automatic claim
+    evidence was fabricated from citation leads.
+  target_ids:
+  - CHEBI:53661
+  evidence_ids:
+  - source
+  - biofilm
+  - dentin
+  - other-adopted
+- assessment_id: mechanism
+  area: completeness
+  topic: Activity and mechanism enrichment
+  outcome: unknown
+  summary: Optional evidence can be added with salt,assay and biological-target qualifications.
+    LPS/LTA binding differs from host PTPMT1 and SEM morphology differs from viability.
+  target_ids:
+  - CHEBI:53661
+  evidence_ids:
+  - biofilm
+  - dentin
+  - binding
+  - host-boundary
+  - adapter
+  - rubric
+- assessment_id: other
+  area: completeness
+  topic: Resistance,producer,clinical,datasets and graphs
+  outcome: unknown
+  summary: No such objects asserted. Storage/formulation failure is not resistance;
+    mouthrinse trials and drug links do not establish current approval; no biological
+    producer inferred from synthetic manufacture.
+  target_ids:
+  - CHEBI:53661
+  evidence_ids:
+  - record
+  - other-adopted
+  - drug-document-links
+  - rubric
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained source and status/history
+  outcome: supported
+  summary: Source row/extractor/seeder reproduce native seed. Actual native path owns
+    optional curated claims. All13 captures unchanged; no status/history mutation.
+  target_ids:
+  - CHEBI:53661
+  evidence_ids:
+  - source
+  - search
+- assessment_id: gates
+  area: schema
+  topic: Focused native validation
+  outcome: supported
+  summary: Documented focused gates and independent chemistry pass.
+  target_ids:
+  - CHEBI:53661
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: alexidine-exact-form-endpoint-mechanism-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Curate optional activity and mechanism with exact assay and salt boundaries
+  description: Original studies support antibacterial activity and provide qualified
+    enrichment leads. Keep dihydrochloride material and unresolved supplied-form details,
+    microscopy cell counts versus CFU recovery, biofilm time/solvent/pH, and storage-dependent
+    formulation behavior distinct. LPS/LTA binding and host PTPMT1 pharmacology must
+    not become an undifferentiated antibacterial target claim.
+  target_ids:
+  - CHEBI:53661
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - mode_of_action
+  - molecular_targets
+  - discussions
+  evidence_ids:
+  - biofilm
+  - dentin
+  - other-adopted
+  - binding
+  - host-boundary
+  - rubric
+  rule_id: 'native-review-checklist: Evidence/Activity/Mode/Targets'
+  native_severity: informational optional enrichment
+  normalization_reason: Native record does not assert the problematic extrapolations;
+    optional missing fields are not required-representation errors.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/alexidine.yaml
+    role: Curator-added activity, evidence, mechanism, discussions and datasets through
+      validated writer/history
+actions:
+- action_id: A1
+  description: Optionally add the narrowest original activity and mechanistic evidence
+    after exact-material adjudication.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:53661
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/alexidine.yaml
+    role: Curator-added activity, evidence, mechanism, discussions and datasets through
+      validated writer/history
+  acceptance_checks:
+  - Resolve supplied form and reported concentration basis for each proposed numeric
+    observation. Retain the explicit2013 dihydrochloride form; do not silently convert
+    percent salt to neutral freebase mass.
+  - Represent2013 dentin counts as fixed-sample microscopy observations,not CFU or
+    MIC. Represent biofilm CFU recovery with strain,growth medium,24h biofilm,1/5min
+    exposure,ethanol,pH and operational detection limits. Resolve1:1combination dilution
+    basis.
+  - Inspect full original2008/2018 binding methods before detailed LPS/LTA entries;
+    distinguish binding/neutralization from bacterial killing and from host TLR/PTPMT1
+    effects.
+  - Do not infer genetic resistance from heatedHDPE formulations or clinical approval
+    from historical mouthrinse trials. Keep LINCS/Reaxys verification limitations
+    explicit until resolved.
+  - Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/alexidine.yaml;
+    preserve native status until sign-off criteria independently pass; rerun focused
+    and required shared gates.
+limitations:
+- All eight adopted original abstracts inspected; only the two2013 International Journal
+  of Oral Science main articles were read in full. Primary2008/2018 binding and2010
+  host-phosphatase work remain abstract-level for this review. No uninspected method
+  details are treated as established.
+- Biofilm paper does not identify supplied salt or supplier in inspected methods and
+  has concentration/dilution ambiguities; numerical enrichment is conditional. Dentin
+  paper explicitly tests dihydrochloride and acknowledges lack of viability measurement.
+- LINCSLSM-4432 access failed through public pages/resolver with TLS/access errors.
+  Reaxys and CAS registry were not directly inspected. Current ChEBI corroborates
+  those accessions but does not independently resolve exact LINCS/Reaxys structures.
+- Unspecified stereochemistry is retained as unspecified; this review does not establish
+  enantiomer composition,clinical approval,biosynthetic producer or a unique antibacterial
+  protein target.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

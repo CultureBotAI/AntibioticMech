@@ -1,0 +1,716 @@
+schema_version: 1.0.0
+review_id: 20261021T084612Z-albomycin-delta1
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Albomycin δ1: ferric identity, mixture CAS and shunt-product scope'
+started_at: '2026-10-21T08:30:45Z'
+finished_at: '2026-10-21T08:46:12Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independently read whole native record, both raw owners, live
+    authorities, primary text and synthesis supplement; did not create source seed.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'Exact ferric δ1 structure and qualified producer/antibacterial context are
+  supported. One major chemical-xref defect: native CAS1414-39-7 denotes the albomycin
+  mixture, while exact δ1 has official CAS12676-11-8. Synthetic assay transfer requires
+  resolving metal-free characterization versus ferric depiction.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/albomycin-δ1.yaml
+    sha256: c620b5405352241591bb9c7d589d5f61523a098e7d992e8527aafe0acc755374
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+  - path: scripts/extract_mibig_producers.py
+    sha256: a078cdf4c9b2d09999800ab7ae03f93d3972f29b7d2f460ebbbe7d7ec6b31c53
+    role: context
+targets:
+- target_id: CHEBI:83206
+  path: data/antibiotics/antibacterial/albomycin-δ1.yaml
+  label: albomycin δ1
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/mibig_producers.tsv
+    role: Adopted producer join metadata and structure-key match
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_mibig_producers.py
+    role: MIBiG producer extraction
+scope:
+  description: Whole-record review of exact ferric albomycin δ1.
+  selection: Queue082; CHEBI:83206 in isolated batch009.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:83206
+  exclusions:
+  - target: Albomycin mixture,δ2,ε,desferri preparations,SB-217452 and aluminium complex
+    reason: Separate entities; comparator or precursor context only.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual command passed.
+  target_ids:
+  - CHEBI:83206
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/albomycin-δ1.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual command passed.
+  target_ids:
+  - CHEBI:83206
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/albomycin-δ1.yaml --out /private/tmp/am-review-session/082-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Structure consistency
+  status: passed
+  required: true
+  summary: Both encodings regenerate the complete native key and chemistry.
+  target_ids:
+  - CHEBI:83206
+  evidence_ids:
+  - chemistry
+- check_id: adapter
+  name: Structured source coverage
+  status: passed
+  required: true
+  summary: Dataset listing succeeded before open-web follow-up; exact producer dataset
+    not covered.
+  target_ids:
+  - CHEBI:83206
+  command: env UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run --no-sync --project
+    /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:83206
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:83206
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:83206
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:83206
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:83206
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:83206
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:83206
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:83206
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:83206
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/albomycin-δ1.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T08:40:25Z'
+  support: supports
+  summary: Read exact δ1 label, ferric-hydroxamate definition, three synonyms, parent,
+    two roles, both structure encodings, formula/charge/masses, CAS, source/mint,
+    complete MIBiG producer assertion and all five seed/reseed events. No native quantitative
+    assay, direct target, resistance determinant, clinical claim or graph.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/mibig_producers.tsv
+  locator: ChEBI row2196; MIBiG row1053; extractor/seeder
+  accessed_at: '2026-10-21T08:40:25Z'
+  support: supports
+  summary: ChEBI row owns imported identity/CAS and has no PMID leads. MIBiG row joins
+    by exact complete key with questionable quality, entry2, cluster-inherited knock-out
+    method and explicitly inherited first legacy PMID22704654. Both raw owners were
+    captured before producer assessment.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:83206
+  locator: Entire current identity entry
+  accessed_at: '2026-10-21T08:31:46Z'
+  support: supports
+  summary: Matches exact ferric δ1 structure, formula, neutral total charge, masses,
+    parent and roles. Current ChEBI also repeats CAS1414-39-7, in conflict with independent
+    official mixture-versus-component registry scope.
+  snapshot_sha256: a60e44a89237335934dfeb2626ba897c148328c2740a481ae1a5ea3156a348dc
+- evidence_id: parent
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:84688
+  locator: Definition and outgoing relation
+  accessed_at: '2026-10-21T08:31:48Z'
+  support: supports
+  summary: Fe(III)-complexed hydroxamate siderophore is a strictly broader class satisfied
+    by the three hydroxamate ligands and ferric component.
+  snapshot_sha256: 5776b173dee68f92172451de7c685c30ca34860b14ea0fd39641b7ee0828a30b
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculations
+  locator: Both native encodings
+  accessed_at: '2026-10-21T08:32:48Z'
+  support: supports
+  summary: Both yield KKRRFZFRCNSVCL-DFBZBFILSA-N, C36H55FeN10O18S, charge0, mass1003.8
+    and exact1003.27658842 with10 specified tetrahedral centres. Standard InChI disconnects
+    metal and normalizes ligand tautomers; that does not by itself demonstrate inconsistent
+    native identity. Mint reproduces.
+  snapshot_sha256: 006e6871dc7b385b0f818bef8adc05c511b26664b0a3d290156d7a61b1dbf668
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/90479120
+  locator: Full-key PUG lookup
+  accessed_at: '2026-10-21T08:31:44Z'
+  support: supports
+  summary: Exact full key returns CID90479120 with matching InChI, formula, masses
+    and charge.
+  snapshot_sha256: 2994058ce0573e3d56c1f7eac12aad011b4173fbd7c46fddf069b3e92a9054a4
+- evidence_id: gsrs-mixture
+  kind: authority
+  reference: https://gsrs.ncats.nih.gov/api/v1/substances(4f606a3b-69ca-4bca-834b-55c8aa1df38e)?view=full
+  locator: substanceClass, mixture.components and codes
+  accessed_at: '2026-10-21T08:33:54Z'
+  support: refutes
+  summary: Official GSRS identifies UNII293D7P5Z2T as an albomycin mixture containing
+    δ1,δ2 and ε, and explicitly attaches primary CAS1414-39-7. Its descriptive name
+    refers to six historical components. This is not the exact δ1 chemical.
+  snapshot_sha256: a785b0d0be761e4723bfd3a37823f32d51661c815641ae26232b474ec050f95a
+- evidence_id: gsrs-delta1
+  kind: authority
+  reference: https://gsrs.ncats.nih.gov/api/v1/substances/3320C39EKU?view=full
+  locator: Chemical structure full InChI/key and codes
+  accessed_at: '2026-10-21T08:33:55Z'
+  support: supports
+  summary: Separate official δ1 record UNII3320C39EKU carries the exact native key/InChI
+    and PubChem90479120, and primary CAS12676-11-8. This provides a concrete exact-form
+    replacement candidate after source correction.
+  snapshot_sha256: 598cc7fa29093d75537ee15d3e4276831939105d033dc780d6e69972b425c7f1
+- evidence_id: mibig
+  kind: database
+  reference: https://mibig.secondarymetabolites.org/repository/BGC0002300.2/annotations.json
+  locator: Full version2 JSON
+  accessed_at: '2026-10-21T08:33:44Z'
+  support: supports
+  summary: Active, questionable entry lists δ1 with matching stereo-encoded structure,
+    ATCC700974/NCBITaxon668825, locus JN252488.1 and locus-level knock-out evidence.
+    Per-compound evidence is empty; native CLUSTER_INHERITED and inherited-PMID caution
+    accurately preserve source placement.
+  snapshot_sha256: 0597f1ddaf9166fe2df27080d0a3b6db0991e3e66fa7ac8b9f581998dd3bd1a3
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/668825
+  locator: Official taxonomy response
+  accessed_at: '2026-10-21T08:31:45Z'
+  support: supports
+  summary: NCBITaxon668825 resolves Streptomyces sp. ATCC700974; native generic label
+    plus separate strain preserve the full source identity.
+  snapshot_sha256: d2ce4126ad392e5ff66dfb5f3a47a08531edfdf1b1a29a12725a96ab21f720a6
+- evidence_id: biosynthesis
+  kind: primary_source
+  reference: PMID:22704654
+  locator: DOI10.1021/cb300173x; full text, abmE characterization and hydrolysis experiment
+  accessed_at: '2026-10-21T08:32:29Z'
+  support: supports
+  summary: ATCC700974 abmE mutant supplied an active fraction with ferric δ1-compatible
+    mass/formula. Authors also converted δ2 under alkaline conditions and conclude
+    δ1 is a shunt product, not a biosynthetic intermediate. The cluster and organism
+    link are supported, while neither direct universal δ1 synthesis nor mutant-specific
+    quantitative MIC is established. Native inherited-source caution remains accurate.
+  snapshot_sha256: 6ed17c1e1064f1bc2fdad38fbf7ae408db30be626307f97801a0ae780da0a49c
+- evidence_id: synthetic-assay
+  kind: primary_source
+  reference: PMID:30181560
+  locator: DOI10.1038/s41467-018-05821-1; Table1, Methods; Fig1 visually inspected
+  accessed_at: '2026-10-21T08:31:45Z'
+  support: partial
+  summary: Synthetic1a shows MIC0.0625µg/mL for S.pneumoniae ATCC49619,0.25 for E.coli
+    BJ5183 and0.0039 for N.gonorrhoeae ATCC49226; three other tested strains have
+    >512. Methods distinguish agar dilution for gonococcus and broth assays. Figure1
+    depicts ferric complexes, but supplement preparation requires form qualification
+    before transferring these values.
+  snapshot_sha256: 50678e14b6879bb3ad925a4909c0faf91463e2375a08a9f44c6680b410ee5275
+- evidence_id: synthetic-form
+  kind: primary_source
+  reference: https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-05821-1/MediaObjects/41467_2018_5821_MOESM1_ESM.pdf
+  locator: Supplementary Methods physical pp78–79; compound1a
+  accessed_at: '2026-10-21T08:32:40Z'
+  support: context_only
+  summary: Final product preparation reports no iron addition; HRMS formula C36H58KN10O18S+
+    and [M+K]+989.3283 describe the desferri ligand. This conflicts with the main
+    ferric drawing as an exact assay-preparation identifier. Iron uptake in medium
+    is possible but not an inspected measurement of the dosed material.
+  snapshot_sha256: 3bb3d6d04dc26f64143b263f4fedab624228abe42fe3035746b8873b7ce425cd
+- evidence_id: target-boundary
+  kind: primary_source
+  reference: PMID:11217799
+  locator: DOI10.7164/antibiotics.53.1346; primary abstract
+  accessed_at: '2026-10-21T08:31:45Z'
+  support: context_only
+  summary: SB-217452 inhibits S.aureus and rat SerRS near8nM. The study distinguishes
+    this cleaved δ2 nucleoside from isolated ferric and aluminium δ2 complexes, which
+    had no enzyme inhibition. These results cannot establish direct SerRS inhibition
+    by intact δ1.
+  snapshot_sha256: b2baf5f46bf6a5e4bf9baf151b101d5404840be9cfebc4201a8e8b9b360c06d6
+- evidence_id: delta1-core
+  kind: primary_source
+  reference: PMID:32773091
+  locator: DOI10.1016/j.bmc.2020.115645; primary abstract
+  accessed_at: '2026-10-21T08:39:32Z'
+  support: context_only
+  summary: Synthetic δ1 core14a was tested by purified-enzyme aminoacylation and observed
+    in a SerRS co-crystal. The5′S,6′R diastereomer was active whereas its5′R,6′S companion
+    was weak. This supports a δ1-core mechanism lead; the abstract does not resolve
+    enzyme organism or establish direct binding by intact ferric δ1. Full article
+    remained inaccessible.
+  snapshot_sha256: c7700c506db07cfefadca7cab248763ba9a2b56fcf7c84999e55356c3b316d5a
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb datasets
+  locator: Structured adapter run before open web
+  accessed_at: '2026-10-21T08:31:13Z'
+  support: context_only
+  summary: Dataset listing succeeded. Covered Streptomyces albidoflavus and coelicolor
+    datasets do not identify ATCC700974. No matching producer dataset was available;
+    absence is not evidence against production.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: gates
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual focused batch009 commands
+  accessed_at: '2026-10-21T08:32:52Z'
+  support: supports
+  summary: Both exit0; one record and zero strict ERROR rows.
+  snapshot_sha256: e811af2488b30d24979592bfb69aa1758692dbb8dc6000d63b73307ad97b8565
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: Ignored-inclusive search
+  accessed_at: '2026-10-21T08:40:25Z'
+  support: context_only
+  summary: prepare.py82 searched ID,label,slug with rg --no-ignore --hidden across
+    batch009 excluding.git/.venv; full raw owner and maintained curation surfaces
+    followed. Broader historical albomycin reports are family context only. Public
+    retrieval covered official identity/registry, versioned MIBiG and primary synthesis/biosynthesis
+    text; no mixture assay was treated as exact δ1.
+  search_scope: Exact CHEBI83206, albomycin δ1/delta1, full key, BGC0002300 and CAS1414-39-7;
+    ignored files included. Direct CAS API401; independent official GSRS full records
+    resolved the scope conflict. Unversioned MIBiG404 was resolved using entry.2/annotations.json;
+    older GitHub JSON was not substituted for current version2.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact ferric δ1
+  outcome: supported
+  summary: Core label, encodings, stereochemistry, formula, charge and masses agree
+    across independent authorities.
+  target_ids:
+  - CHEBI:83206
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - pubchem
+  - gsrs-delta1
+- assessment_id: xref
+  area: identity
+  topic: Mixture CAS versus component CAS
+  outcome: concern
+  summary: The imported CAS refers to an official mixture; exact δ1 has a distinct
+    official CAS and matching full structure.
+  target_ids:
+  - CHEBI:83206
+  evidence_ids:
+  - gsrs-mixture
+  - gsrs-delta1
+  - chebi
+  - owner
+- assessment_id: grounding
+  area: grounding
+  topic: Parent and antimicrobial filing
+  outcome: supported
+  summary: Parent is broader. Primary active ferric δ1-containing fraction plus congener-specific
+    synthesis assays support antibacterial activity with preparation qualifications.
+  target_ids:
+  - CHEBI:83206
+  evidence_ids:
+  - parent
+  - biosynthesis
+  - synthetic-assay
+  - synthetic-form
+- assessment_id: producer
+  area: provenance
+  topic: Exact-key MIBiG producer join
+  outcome: supported
+  summary: Source metadata and strain resolve. Primary text supports δ1 shunt-product
+    occurrence in ATCC700974 context; inherited evidence labels accurately avoid pretending
+    locus evidence is compound-specific.
+  target_ids:
+  - CHEBI:83206
+  evidence_ids:
+  - mibig
+  - taxon
+  - biosynthesis
+  - owner
+- assessment_id: activity
+  area: evidence
+  topic: Exact preparation and quantitative observations
+  outcome: unknown
+  summary: 2018 has specific δ1 results, but metal-free final characterization versus
+    ferric drawing must be adjudicated before attaching exact ferric-compound MICs.
+  target_ids:
+  - CHEBI:83206
+  evidence_ids:
+  - synthetic-assay
+  - synthetic-form
+- assessment_id: mechanism
+  area: evidence
+  topic: Intact congener versus liberated inhibitor
+  outcome: unknown
+  summary: No native direct target or mechanism is asserted. A2020 δ1-core study supplies
+    functional and co-crystal evidence for the separated core; organism detail and
+    intact ferric preparation remain unresolved. δ2-derived SB-217452 and biosynthetic
+    enzymes must also retain their distinct scopes.
+  target_ids:
+  - CHEBI:83206
+  evidence_ids:
+  - native
+  - delta1-core
+  - target-boundary
+  - biosynthesis
+- assessment_id: resistance
+  area: scope
+  topic: Determinant and clinical context
+  outcome: not_applicable
+  summary: No native resistance or clinical efficacy claim. Biosynthetic self-protection
+    and historical family use do not establish δ1-specific clinical status or a resistance
+    phenotype in every strain.
+  target_ids:
+  - CHEBI:83206
+  evidence_ids:
+  - native
+  - biosynthesis
+  - target-boundary
+- assessment_id: completeness
+  area: completeness
+  topic: Optional annotations
+  outcome: unknown
+  summary: Assay and shunt-product evidence offers bounded follow-up; missing optional
+    fields alone are not schema defects.
+  target_ids:
+  - CHEBI:83206
+  evidence_ids:
+  - native
+  - biosynthesis
+  - synthetic-form
+- assessment_id: history
+  area: provenance
+  topic: Seed owner and source history
+  outcome: supported
+  summary: Both source-owner pipelines, exact mint, source versions and five history
+    events are coherent; status remains SEEDED.
+  target_ids:
+  - CHEBI:83206
+  evidence_ids:
+  - native
+  - owner
+  - chemistry
+  - mibig
+- assessment_id: schema
+  area: schema
+  topic: Focused validation
+  outcome: supported
+  summary: Both focused gates pass despite the semantic CAS scope defect.
+  target_ids:
+  - CHEBI:83206
+  evidence_ids:
+  - gates
+findings:
+- finding_id: F1
+  issue_key: chebi-83206-albomycin-mixture-cas-xref
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Replace the mixture CAS cross-reference with a verified δ1 identifier
+  description: Native cas:1414-39-7 denotes the broader albomycin mixture in official
+    GSRS. The separate δ1 chemical has CAS12676-11-8 and exactly matches native InChI/key.
+    Imported ChEBI agreement does not resolve this independent authority conflict.
+  target_ids:
+  - CHEBI:83206
+  field_paths:
+  - xrefs
+  evidence_ids:
+  - native
+  - owner
+  - chebi
+  - gsrs-mixture
+  - gsrs-delta1
+  rule_id: native-review-checklist:Chemical-identity
+  native_severity: major exact-reference scope
+  normalization_reason: The core structure remains correct, but a retained chemical
+    equivalence identifier denotes a multi-component mixture. This is a material grounding
+    error rather than a blocker for the entire record.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+actions:
+- action_id: A1
+  description: Remove or qualify mixture CAS1414-39-7 from exact chemical xrefs and
+    adopt the independently verified δ1 identifier through the maintained import workflow.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:83206
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  acceptance_checks:
+  - Retain exact δ1 structure; verify CAS12676-11-8 against full-key GSRS chemical3320C39EKU
+    before replacement.
+  - Preserve the ChEBI-versus-GSRS source conflict in the curation rationale; do not
+    silently relabel the mixture as the exact compound.
+  - Run schema, strict, exact-reference/source-reproduction and history gates for
+    any authorized fix.
+limitations:
+- 2018 preparation chemistry reports a desferri formula while the main drawing depicts
+  Fe. Exact ferric MIC transfer requires source adjudication; medium iron does not
+  prove the dosed preparation was ferric.
+- 2012 δ1-active fraction identity is supported by mass/formula and shunt-product
+  experiments, not independent stereochemical characterization of that isolated fraction.
+- Direct CAS API access was unavailable; independent official GSRS records supplied
+  the mixture and exact-component distinction.
+- The bounded search does not establish the absence of additional δ1-specific mechanism
+  or clinical evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All22 captured input hashes rechecked unchanged; no native, history or status changes.
+- The older public GitHub MIBiG JSON listed only δ2; the version2 official annotation
+  was retrieved and inspected instead. Native source_version4.0.1 and record_version2
+  are preserved.
+- The native MIBiG note correctly marks the first legacy citation as inherited. A
+  future curator may attach primary δ1 shunt-product evidence without upgrading every
+  locus-level claim to compound-specific proof.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:83206
+- https://gsrs.ncats.nih.gov/api/v1/substances/3320C39EKU?view=full
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC3448783/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC6123416/
+tags:
+- antibacterial
+- ferric-complex
+- exact-congener
+- mixture-xref
+- mibig
