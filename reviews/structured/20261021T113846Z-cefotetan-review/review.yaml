@@ -1,0 +1,631 @@
+schema_version: 1.0.0
+review_id: 20261021T113846Z-cefotetan-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of cefotetan
+started_at: '2026-10-21T11:21:19Z'
+finished_at: '2026-10-21T11:38:46Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Qualified scientific pass; coordinate-dependent identifier normalization
+  and exact CfxA evidence remain unresolved
+scientific_review: true
+summary: The neutral cefotetan core graph, formula, masses and configured cephem centers
+  are coherent. Its stored InChI/key differ from the SMILES-derived key; the same
+  KEGG graph reproduces either key depending only on retention of drawing coordinates,
+  so this is not established as a different compound. ACC-1 has direct cefotetan-specific
+  inactivation evidence, while the original CfxA paper establishes cefoxitin activity
+  and does not validate its cefotetan-specific database edge. The native record labels
+  both resistance entries as database assertions. All nine adopted MED leads resolve,
+  with seven complete abstracts read; relevant original ACC and CfxA papers were inspected.
+  No confirmed required correction was established, and no native record was changed.
+  Scientific assessment retains the stated evidence limits; full verification is blocked
+  by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefotetan.yaml
+    sha256: 3c3fd7ba6faf4216bed7e571338be03b2e7d07da54586a2371b1c70481854e95
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+scope:
+  description: Entire exact SEEDED cefotetan record, all history events and names,
+    each exact chemical and contextual drug/document identifier, the actual ChEBI/ARO
+    source owners, all nine adopted or parent MED leads and relevant original resistance
+    studies.
+  selection: Queue 235; initial 13 input captures preserved and three actual ARO inventories
+    appended before detailed judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:3499
+targets:
+- target_id: CHEBI:3499
+  path: data/antibiotics/antibacterial/cefotetan.yaml
+  label: cefotetan
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual ARO inventory or imported claim owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual ARO inventory or imported claim owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual ARO inventory or imported claim owner
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:3499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefotetan.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit 0; zero ERROR rows.
+  target_ids:
+  - CHEBI:3499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefotetan.yaml --out /private/tmp/am-review-session/235-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Supplemental identity and coordinate sensitivity analysis
+  status: passed
+  required: false
+  summary: Exit 0; source-key disagreement reproduced and explicitly retained. Successful
+    execution is not a claim that all identifiers agree.
+  target_ids:
+  - CHEBI:3499
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/235-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: structured-adapter
+  name: Structured dataset applicability check
+  status: passed
+  required: false
+  summary: Dataset catalog completed before protein follow-up. No applicable Klebsiella
+    or Bacteroides dataset was listed; no absent association was inferred.
+  target_ids:
+  - CHEBI:3499
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/235-imodulondb-datasets.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:3499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:3499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:3499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:3499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:3499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:3499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:3499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:3499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:3499
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefotetan.yaml
+  locator: Entire YAML, all seven synonyms and four history events
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: supports
+  summary: The native exact neutral cefotetan record contains two resistance mechanisms,
+    ACC-1 and CfxA, each explicitly identified as a CARD/ARO database assertion. It
+    has no populated primary molecular target, mode, producer, MIC or causal graph.
+    The history contains source seeding events, not scientific sign-off.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:3499; PubChem:53025; CHEMBL474579; KEGG:C06886; KEGG:D00260
+  locator: 235-chemistry.py/.json; 235-pubchem.json; 235-chembl.json; both KEGG molfile
+    snapshots
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: partial
+  summary: RDKit 2026.03.5 with InChI 1.07.3 confirms C17H17N7O8S4, charge 0, average
+    mass 575.632 and exact mass 575.0021445, with 6R/7S cephem centers. Native and
+    ChEMBL SMILES generate SRZNHPXWXCNNDU-RHBCBLIFSA-N, agreeing with current PubChem.
+    Stored ChEBI/ChEMBL InChI and both KEGG drawings generate SRZNHPXWXCNNDU-IXOPCIAXSA-N,
+    whose extra layer is /b12-6-. Removing only coordinates from either KEGG molecule
+    yields the former key without changing canonical isomeric SMILES or mutual chiral
+    graph matching. This demonstrates representation sensitivity; it does not prove
+    a different isolated geometric isomer or justify automatic removal of PubChem.
+  snapshot_sha256: 30e59ed1336da577b9b8764b0149b96c4dad453fe1f84eaa49de45b12f4dd532
+- evidence_id: grounding
+  kind: authority
+  reference: CHEBI:3499; CHEBI:55429; ARO:3004004; ARO:0000032; CHEBI:33281; CHEBI:36047
+  locator: 235-ols.json; 235-parent.json; 235-aro-stanzas.txt; exact owner-row snapshots
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: supports
+  summary: Current ChEBI resolves the compound and cephamycin parent, and the ARO
+    compound/class entries resolve. The native 7-alpha-methoxy core fits the cephamycin
+    subgroup within the broader cephalosporin class. The source roles and original
+    compound-specific activity support antibacterial classification. The definition
+    says resistance to a wide range of beta-lactamases, not all enzymes; the inspected
+    exceptions do not contradict that qualified wording.
+  snapshot_sha256: f66da504ab3ecb8024988b2587e2ea19eac8a839e2ef9ce3083fa51b97e1ecf5
+- evidence_id: xref-context
+  kind: authority
+  reference: cas:69712-56-7; drugbank:DB01330; drugcentral:547; kegg.drug:D00260
+  locator: 235-drugcentral.html; 235-kegg.txt; 235-ols.json; 235-fetch-results.json
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: partial
+  summary: DrugCentral 547 resolves to cefotetan with neutral formula and drug/formulation
+    context, including disodium terminology. KEGG D00260 represents the free-acid
+    graph and is appropriately contextual as a drug record. DrugBank DB01330 and CAS
+    are corroborated by inspected authorities rather than independent registry validation;
+    direct DrugBank returned 403. LINCS LSM-5961 resolver access returned 500, and
+    Reaxys 5697364 was not independently resolved. These access limits are not evidence
+    of incorrect mappings.
+  snapshot_sha256: ccf580aa2ee15688c6a8174c319925b7553b2b7c8d69324c0dd2411db9a88e6a
+- evidence_id: adopted-leads
+  kind: database
+  reference: Nine adopted or parent MED records
+  locator: 235-core.json; 235-lead-dispositions.json
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: context_only
+  summary: All nine resolve. Seven complete abstracts were inspected, covering ACC
+    variants, cefotetan activity/pharmacokinetics, CfxA, beta-lactam allergy and ESBL
+    context. Reviews PMID15673804 and PMID6810737 have metadata only. Review citations
+    are not treated as direct assays.
+  snapshot_sha256: 627313cc23cfc15ba38c2c629867d32811f516fec1452c71e2071f09e98c3866
+- evidence_id: acc1
+  kind: primary_source
+  reference: PMID:10428914; DOI:10.1128/AAC.43.8.1924
+  locator: 235-acc1.html and text; original methods, Results and Tables 2-3
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: supports
+  summary: The original ACC-1 study reports cefotetan inactivation in a pI 7.7 gel-overlay
+    bioassay. Table 2 gives cefotetan MIC 2 micrograms/mL in the cloned E. coli MV1190
+    transformant versus 0.06 in its host; the transconjugant is 1 versus 0.13 in its
+    recipient and also contains TEM-1. Table 3 steady-state cefotetan hydrolysis is
+    below the reported threshold (Vmax <0.001 nmol/min/microgram protein), so those
+    kinetics alone are not positive quantitative hydrolysis. The independent overlay
+    evidence and cloned-host MIC change support a bounded inactivation association,
+    not universal clinical resistance.
+  snapshot_sha256: 179e3809181341d46a461ef98f6981edcd093eb84f0ece576e15667cd01ba257
+- evidence_id: acc4
+  kind: primary_source
+  reference: PMID:17664321; DOI:10.1128/AAC.00389-07
+  locator: 235-acc4.html; Table 2 and original methods/results
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: supports
+  summary: The ACC-4/ACC-1 comparison reports cefotetan MIC 1 microgram/mL for both
+    alleles in both tested vectors in E. coli MC4100 delta-ampC versus 0.5 in vector
+    controls. Cefotetan is absent from the kinetic table. The paper therefore does
+    not establish superior cefotetan hydrolysis by ACC-4 or a large allele-specific
+    cefotetan effect.
+  snapshot_sha256: e0df957cc8c7ce565666648d3c1c8238fa6ff3e6f91bf8145e4ad0a620d275f5
+- evidence_id: cfxa
+  kind: primary_source
+  reference: PMID:8517690; DOI:10.1128/AAC.37.5.1028
+  locator: 235-cfxa1028.png through 235-cfxa1034.png, 235-cfxa1035-full.png and 235-cfxa1036.png;
+    all original pages read, especially Table 1 on printed p.1030 and Table 2 on printed
+    p.1031
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: partial
+  summary: The original CfxA cloning, insertional inactivation and biochemical study
+    establishes cefoxitin resistance in the tested Bacteroides system. Table 1 compares
+    cefoxitin and ampicillin MICs; Table 2 and the hydrolysis experiments do not test
+    cefotetan. These experiments do not directly support a cefotetan-specific CfxA
+    claim. They also do not prove absence of cefotetan activity. The native edge remains
+    explicitly database evidence.
+  snapshot_sha256: 2d18f3088dd0c19303d7b9b57b860cb11c7c45c270d1bc0248c27b70cc7c866a
+- evidence_id: cfxa-owner
+  kind: database
+  reference: ARO:3003001; https://card.mcmaster.ca/ontology/39435
+  locator: 235-card.html and 235-aro_resistance_edges.json
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: partial
+  summary: The current CARD CfxA entry still asserts cefotetan resistance and cites
+    PMID8517690. The maintained adopted edge reproduces this assertion. Its provenance
+    is accurate, while exact primary cefotetan support remains unresolved; neither
+    genus-wide hydrolysis nor cefoxitin experiments should be promoted to exact CfxA-cefotetan
+    primary evidence.
+  snapshot_sha256: 65cf5fa49a3198c2337e40ede0a78b6fd392b53f887c44de9e73599496f4850a
+- evidence_id: additional-mechanism
+  kind: primary_source
+  reference: PMID:6573313; DOI:10.1093/jac/11.suppl_a.169; PMID:3497146
+  locator: 235-additional-core.json; complete original abstracts
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: partial
+  summary: PMID6573313 directly studies radiolabeled cefotetan binding to bacterial
+    membrane PBPs and benzylpenicillin competition, reporting greatest affinity for
+    PBP3 and none for PBP2 in most tested Gram-negative organisms. Its permeability
+    explanation is an assumption, not direct measurement. The full PDF request returned
+    403, so exact strains, formulation and protocol were not independently verified.
+    PMID3497146 reports cefotetan degradation by crude extracts from eight Bacteroides
+    fragilis-group strains; enzymes are not identified as CfxA in the abstract. That
+    result cannot repair the exact CfxA attribution.
+  snapshot_sha256: 8c87796e823fe89e1dcab2f424f3adf34c24ecacad49470ca93b32c3ff842b09
+- evidence_id: documents
+  kind: primary_source
+  reference: patent:DE2824559; patent:US4263432
+  locator: 235-patent-de.html; 235-patent-us.html, titles, family and relevant claims
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: context_only
+  summary: Both patent records resolve to the same family of 7-alpha-methoxy, 7-beta-dithietane-carboxamido
+    cephalosporin derivatives. US4263432 claim 2 specifically names the carbamoyl/carboxymethylene
+    structure, while the family also covers other derivatives and acceptable salts.
+    Document references are correctly contextual; no uninspected patent example or
+    family-wide antibacterial claim was transferred as an exact assay.
+  snapshot_sha256: cee70653b69f5e6ab3d7169eb8eb95df688e3308364193f478504f14f4fbeb05
+- evidence_id: wikipedia
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Cefotetan
+  locator: 235-wikipedia.html, infobox, descriptive text and references
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: context_only
+  summary: The native document link resolves, repeats the stored IXOPCIAX identifier
+    and describes the cephamycin drug. Its secondary MIC compilation and clinical
+    statements were not adopted as primary evidence. This inspected link is contextual,
+    not an independent resolution of the coordinate-dependent stereo issue.
+  snapshot_sha256: 1449f3861a2e9520055e5b9c080dc93addb41ffe7f9ddfd73ca61c8641fff383
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_resistance_edges.tsv
+  locator: 235 exact row snapshots; 235-local-hits.txt; source hashes
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: supports
+  summary: ChEBI supplies identity, names, definition and structural fields; ARO supplies
+    class, resistance assertions and literature leads. The adopted target-edge inventory
+    has no matching compound row. No separate compound-specific curation overlay was
+    located in the bounded ignored-inclusive search.
+  snapshot_sha256: 00e47291a4b462b9e677ce861c866e88f39ae4085ab3c18218e3e06030dc0674
+  search_scope: rg --no-ignore --hidden across curation, conf, data/antibiotics, scripts
+    and docs for cefotetan, CHEBI:3499, ARO:3004004 and SRZNHPXWXCNNDU; exact adopted
+    owner rows and external ARO stanzas inspected.
+- evidence_id: adapter
+  kind: validation
+  reference: kg-microbe-sources imodulondb datasets
+  locator: 235-imodulondb-datasets.txt
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: supports
+  summary: The structured adapter catalog ran before protein-related web follow-up.
+    It did not list applicable Klebsiella or Bacteroides datasets for the native resistance
+    concepts. Heterologous E. coli assays subsequently located in the primary literature
+    do not turn that catalog result into negative gene evidence.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: validation
+  kind: validation
+  reference: Focused native checks
+  locator: 235-strict.tsv; 235-chemistry.json
+  accessed_at: '2026-10-21T11:29:24Z'
+  support: supports
+  summary: Schema and strict checks exited 0 with zero ERROR rows; supplemental chemistry
+    executed successfully and disclosed a source normalization disagreement. These
+    checks do not substitute for required shared corpus gates.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral core and configured cephem centers
+  outcome: supported
+  summary: Formula, charge, masses, core connectivity and 6R/7S centers agree.
+  target_ids:
+  - CHEBI:3499
+  evidence_ids:
+  - chemistry
+  - grounding
+- assessment_id: normalization
+  area: identity
+  topic: Coupled ring stereochemistry serialization
+  outcome: unknown
+  summary: The stored and SMILES-derived complete keys differ. A coordinate-only intervention
+    reproduces both, so a different isolated isomer or exact corrective representation
+    has not been established.
+  target_ids:
+  - CHEBI:3499
+  evidence_ids:
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Parents, roles and contextual identifiers
+  outcome: supported
+  summary: Source concepts, structural subgroup and antibacterial roles are coherent;
+    drug and document scope is retained with stated identifier access limits.
+  target_ids:
+  - CHEBI:3499
+  evidence_ids:
+  - grounding
+  - xref-context
+  - documents
+  - wikipedia
+- assessment_id: acc
+  area: evidence
+  topic: Exact ACC-1 cefotetan evidence
+  outcome: supported
+  summary: Original overlay inactivation plus cloned-host MIC comparison support a
+    bounded association; low kinetic values and limited ACC-4 differences are preserved.
+  target_ids:
+  - CHEBI:3499
+  evidence_ids:
+  - acc1
+  - acc4
+- assessment_id: cfxa
+  area: evidence
+  topic: Exact CfxA cefotetan primary attribution
+  outcome: unknown
+  summary: The current database assertion resolves, but the cited original experiments
+    concern cefoxitin and do not establish an exact cefotetan result. Native database-only
+    evidence placement is accurate.
+  target_ids:
+  - CHEBI:3499
+  evidence_ids:
+  - cfxa
+  - cfxa-owner
+  - additional-mechanism
+- assessment_id: provenance
+  area: provenance
+  topic: Owners, references and history
+  outcome: supported
+  summary: All nine adopted leads resolve, seven available complete abstracts were
+    read, and the original relevant resistance studies and owner chain were inspected.
+  target_ids:
+  - CHEBI:3499
+  evidence_ids:
+  - adopted-leads
+  - owners
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Optional direct PBP enrichment
+  outcome: supported
+  summary: A cefotetan-specific primary PBP study was identified at abstract depth.
+    Empty mechanistic slots do not assert a false mechanism; full assay/form verification
+    is needed before enrichment.
+  target_ids:
+  - CHEBI:3499
+  evidence_ids:
+  - additional-mechanism
+- assessment_id: schema
+  area: schema
+  topic: Native focused validity
+  outcome: supported
+  summary: Focused validators pass. Scientific limits are explicit and required shared
+    gates remain separate.
+  target_ids:
+  - CHEBI:3499
+  evidence_ids:
+  - validation
+findings: []
+actions: []
+limitations:
+- The core identity is supported, but exact full-key normalization remains unresolved.
+  ChEBI/ChEMBL and coordinate-bearing KEGG representations retain a /b12-6- layer
+  absent from current PubChem and SMILES-generated InChI. Drawing-coordinate sensitivity
+  was reproduced with RDKit 2026.03.5 and InChI 1.07.3. No independent isolated-isomer
+  assignment or mandated source correction was established; do not infer an E/Z substitution
+  solely from the keys.
+- The native CfxA edge is current database evidence, not a primary claim. All nine
+  pages of its cited original paper were read; its cefoxitin experiments cannot establish
+  cefotetan-specific activity or absence. Any promotion to primary evidence needs
+  an exact CfxA allele, cefotetan reagent and demonstrated assay. The additional crude-extract
+  paper is untyped and cannot supply that attribution.
+- Seven of nine adopted MED records have complete abstracts and were read; two parent
+  reviews are metadata-only. ACC-1 and ACC-4 original full text and all CfxA scanned
+  pages were inspected. The additional direct PBP study and untyped Bacteroides hydrolysis
+  study were read at complete-abstract depth; the attempted PBP PDF returned 403.
+- CAS was corroborated through chemical authorities rather than direct registry access.
+  DrugBank access returned 403 but its mapping is corroborated through ChEBI and DrugCentral.
+  The LINCS resolver returned 500; Reaxys was not independently resolved. Patent family
+  text and relevant claims were inspected without assigning every example, and Wikipedia
+  was kept as a contextual document.
+- No quantitative observation was imported from a drug formulation, radiolabeled reagent,
+  broad patent family or untyped enzyme extract. If a curator adds PBP or resistance
+  measurements, verify exact tested form, organism/strain, expression construct and
+  assay conditions, preserve database provenance, and use the native writer plus curation
+  history.
+- Chemistry used the existing 019 interpreter against the 024 checkout because the
+  native environment lacks RDKit. Successful focused checks do not replace required
+  shared corpus checks.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 16 captured repository hashes and the separately captured external ARO cache
+  hash are unchanged. No native record, saved bundle or Git state was modified.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1128/AAC.43.8.1924
+- https://doi.org/10.1128/AAC.00389-07
+- https://doi.org/10.1128/AAC.37.5.1028
+- https://doi.org/10.1093/jac/11.suppl_a.169
+tags:
+- record-review
+- cefotetan
+- cephamycin
+- resistance-evidence

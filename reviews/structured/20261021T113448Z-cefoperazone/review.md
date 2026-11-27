@@ -1,0 +1,839 @@
+# Cefoperazone: exact identity agrees; qualify the imported tetrazolyl beta-lactamase-resistance attribution
+
+- Review: 20261021T113448Z-cefoperazone
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T11:21:14Z
+- Finished UTC: 2026-10-21T11:34:48Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native cefoperazone free-acid structure, stereochemistry and principal chemical identifiers agree with inspected official sources. Antibacterial activity is supported by original experiments. The imported definition nevertheless assigns beta-lactamase resistance causally to the tetrazolyl moiety without an inspected matched structural comparison; primary studies establish enzyme-dependent stability and also cefoperazone hydrolysis. A bounded definition qualification is proposed. This is not evidence that the moiety never contributes to stability or that cefoperazone lacks antibacterial activity.
+
+## Scope And Provenance
+
+Whole CHEBI:3493 record: definition, twelve synonyms, both parents and activity roles, chemical descriptors, eight chemical xrefs, three drug xrefs, document link, two source concepts and four history events. All seven adopted citation abstracts were read.
+
+Selection: Queue 231; initial input capture preserved and actual ARO input/owner capture appended before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:3493 | data/antibiotics/antibacterial/cefoperazone.yaml | generated | cefoperazone |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:3493 | Actual focused command exited 0. |
+| strict | passed | True | CHEBI:3493 | Actual focused command exited 0. |
+| chemistry | passed | False | CHEBI:3493 | Actual focused command exited 0. The batch019 RDKit interpreter parsed batch024 native structures and reproduced both mints. |
+| Authoritative full QC | failed | True | CHEBI:3493 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:3493 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:3493 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:3493 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:3493 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:3493 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:3493 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:3493 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:3493 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact free acid and identifiers
+
+identity: supported. Targets: CHEBI:3493.
+
+The native graph and three assigned stereocentres agree across inspected chemical sources. LINCS and subscription registry contents remain bounded access limitations, not demonstrated mismatches.
+
+### Antibacterial class and roles
+
+scope: supported. Targets: CHEBI:3493.
+
+Original cefoperazone experiments support antibacterial activity. Population and isolate scope, counterion reporting and assay conditions are retained; combination antifungal or host effects are not transferred.
+
+### Tetrazolyl attribution and enzyme-stability scope
+
+evidence: concern. Targets: CHEBI:3493.
+
+The wording accurately reproduces its database source but exceeds the inspected primary evidence. Enzyme-dependent stability is established; the specific structural causal attribution remains unresolved.
+
+### Optional primary biological enrichment
+
+completeness: unknown. Targets: CHEBI:3493.
+
+Primary activity and enzyme-stability data are available for later claim-level curation. Optional absence of targets, graph, producer and clinical status is not a missing required representation.
+
+### Generated definition ownership
+
+ownership: supported. Targets: CHEBI:3493.
+
+The maintained ChEBI row and extraction/seeding path own the definition. No record-only edit would be a reproducible fix. All initial hashes remain unchanged.
+
+### Focused deterministic checks
+
+schema: supported. Targets: CHEBI:3493.
+
+Schema, strict and independent chemistry pass. These checks do not validate a causal definition, and SEEDED status is unchanged.
+
+## Findings
+
+### F1: Qualify the tetrazolyl beta-lactamase-resistance attribution
+
+minor / open / confirmed; issue key: cefoperazone-tetrazolyl-resistance-attribution.
+
+The definition says the tetrazolyl moiety confers beta-lactamase resistance. Inspected original data establish selective enzyme stability and substantial hydrolysis by some enzymes; they do not isolate that substituent as the causal explanation. Retain the supported structure and antibacterial identity while narrowing the wording or adding an exact primary structural-comparison source. This does not show that the group never contributes or that cefoperazone is universally unstable.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Reconcile the imported definition with enzyme-specific primary evidence through its maintained source path.
+
+- Use a neutral structural definition unless an inspected original matched-analogue experiment supports the tetrazolyl causal attribution. If retaining a stability statement, specify that stability depends on the enzyme and experimental context.
+- Preserve the valid free-acid graph, stereochemistry, cephalosporin class and antibacterial roles. Do not replace the claim with universal beta-lactamase susceptibility or infer that tetrazolyl substitution has no effect.
+- Correct the maintained upstream inventory or an explicit reproducible extraction/definition-qualification mechanism; do not make a native-only edit that reseeding would undo. Re-extract or re-seed the exact target as appropriate and inspect the resulting definition.
+- Run focused schema and strict checks, source provenance and corpus reproducibility plus applicable shared gates after any separately authorized curation. Quantitative activity or target enrichment requires narrow claim-level primary evidence and the validated writer/curation-event workflow.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/cefoperazone.yaml; Entire YAML and four seed/reseed events. | supports | SEEDED/EXACT record represents the neutral free acid with three assigned stereocentres. It contains no structured activity, molecular targets, mode_of_action, resistance, producer, clinical status, graph or dataset assertions. Optional-field absence is not itself a defect. Its definition attributes beta-lactamase resistance to the tetrazolyl moiety. |
+| source | data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; conf/sources.yaml; ChEBI row 83; ARO row 300; extraction of ChEBI names/xrefs/citations and ARO molecule/class fields; build_record lines 1483–1570. | supports | The native definition is copied from ChEBI. ARO supplies two aliases and the cephalosporin class, cites review PMID 6221381, and has no exact target or resistance source edge for this molecule in the maintained tables. The seeder prioritizes a nonempty ChEBI definition over ARO and does not invent the causal wording. The six ChEBI citation leads concern host hypersensitivity, toxicity, pharmacokinetics or combination treatment. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:3493; Current entry, chemical fields, names, outgoing ontology relations and xrefs. | supports | Official structure, formula C25H27N9O8S2, charge 0, masses, key GCFBRXLSHGKWDP-XCGNWRKASA-N and native ChEBI aliases agree. CHEBI:23066 is the broader cephalosporin class; CHEBI:36047 and its antimicrobial ancestor CHEBI:33281 support the retained roles. The current definition repeats the same tetrazolyl-resistance attribution; source agreement is provenance, not independent experimental proof of that attribution. |
+| card | https://card.mcmaster.ca/ontology/40930; ARO:3004003 identity, definition, aliases, class, parent and publication list. | supports | Current CARD names cefoperazone, gives CFP and cefoperazine, CAS 62893-19-0, ChEBI 3493, ChEMBL507674 and PubChem44187. Its parsed structure reproduces the native full key. ARO:0000032 is the broader cephalosporin class. The linked review describes relative enzyme stability, not a native claim-level primary target experiment. |
+| chemical-xrefs | https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL507674; https://pubchem.ncbi.nlm.nih.gov/compound/44187; https://rest.kegg.jp/get/C06883; https://rest.kegg.jp/get/D07645; https://drugcentral.org/drugcard/543; Complete official property entries, KEGG identity/structure fields and DrugCentral InChI. | supports | ChEMBL, PubChem, KEGG, DrugCentral and CARD chemical representations independently reproduce the native full key, formula, net charge and three R stereocentres. KEGG C06883 and D07645 both denote cefoperazone. DrugCentral has broader salt aliases elsewhere, but its actual InChI matches this free acid; those aliases were not transferred. KEGG broad PBP annotations are database context, not independently checked primary protein assays. |
+| drugbank | https://go.drugbank.com/drugs/DB01329; Public identity overview obtained through web retrieval after direct HTTP 403. | supports | DB01329 resolves to cefoperazone and gives the native full key, formula, isomeric SMILES and other chemical identifiers. The public target list and regulatory labels are not used as new exact primary or jurisdiction-specific regulatory claims. |
+| vsdb | https://bioregistry.io/vsdb:1836; Resolved University of Hertfordshire Veterinary Substances Database entry, chemical identity section. | partial | The entry names cefoperazone and supplies the native CAS, formula, InChI and full key. Its isomeric SMILES independently parses to the same three R centres. An internal IUPAC-name field instead says 6R,7S and omits side-chain stereochemistry; that external text inconsistency is not copied into the native record and does not justify replacing its coherent chemical graph. Other environmental, toxicological and regulatory fields were not independently adjudicated. |
+| other-xrefs | https://bioregistry.io/lincs.smallmolecule:LSM-15520; https://www.ebi.ac.uk/chebi/CHEBI:3493; https://en.wikipedia.org/wiki/Cefoperazone; Official ChEBI xref attestation, LINCS namespace metadata and informational link. | partial | ChEBI attests LINCS LSM-15520, Reaxys 6050252 and CAS 62893-19-0. LINCS namespace metadata resolves the provider route, but the provider timed out and one direct route failed certificate verification; its exact structure was not independently inspected. Reaxys and CAS subscription contents were not accessed. The encyclopedia link resolves to cefoperazone and is context only. |
+| adopted-review | PMID:6221381; https://doi.org/10.1093/clinids/5.Supplement_1.S108; Complete indexed abstract and review classification. | context_only | The ARO-cited 1983 review describes cefoperazone antibacterial properties and lower stability to some beta-lactamases than comparator cephalosporins. Its abstract mentions PBP affinities and combinations but does not isolate the tetrazolyl group’s causal contribution. It remains secondary context, not a new primary target citation. |
+| adopted-host | PMID:1384868; PMID:15073933; PMID:17560751; PMID:19241941; PMID:28543395; All five complete indexed original abstracts. | partial | PMID 1384868 studies aztreonam-protein antibody epitopes; PMID 28543395 studies cefotiam-specific IgE and lack of cross-reactivity, not cefoperazone antibacterial action. PMID 15073933 is a retrospective cefoperazone/NMTT safety cohort; PMID 19241941 is a gastrointestinal bleeding case report. PMID 17560751 measures rat biliary cefoperazone pharmacokinetics with microdialysis, including berberine pretreatment. These leads do not establish microbial targets, exact MICs, biosynthesis or an isolated tetrazolyl beta-lactamase-resistance mechanism. |
+| adopted-combination | PMID:24033828; https://doi.org/10.1111/apm.12159; Complete original abstract. | partial | The study tests cefoperazone-sulbactam or piperacillin-tazobactam with caspofungin or voriconazole by checkerboard and a neutropenic candidiasis mouse model. Its synergy result is for combinations and does not establish standalone cefoperazone antifungal activity. The abstract explicitly leaves the synergy mechanism unresolved. |
+| primary-activity | PMID:314775; https://doi.org/10.1128/AAC.16.2.150; https://pmc.ncbi.nlm.nih.gov/articles/PMC352812/; All eight original scanned pages 150–157 visually inspected, Figure 1, Methods and Tables 1–6. | supports | The paper identifies cefoperazone chemically and draws its free-acid scaffold; samples came from Toyama, Lederle and Pfizer, without a stated counterion in Methods. Agar dilution used Mueller-Hinton medium, specified organism-dependent supplements, a reported final 10^5 CFU inoculum and 18 h at 35°C for routine assays. Tables show antibacterial activity and marked strain variation. MIC50/90 values are population summaries, not individual-isolate MICs. The biological result supports the cefoperazone active moiety; an unreported exact commercial salt is not inferred. |
+| primary-stability | PMID:314775; https://doi.org/10.1128/AAC.16.2.150; Original pages 154–157, Table 6 and enzyme-assay Methods on page 151. | partial | Partially purified or purified beta-lactamases were compared spectrophotometrically. Table 6 gives relative cefoperazone hydrolysis from 0 to 150 against cephaloridine set to 100; the E. coli enzyme hydrolyzes cefoperazone at 150. The paper supports resistance to several tested enzymes and susceptibility to others, but does not compare otherwise matched compounds differing only in the tetrazolyl substituent. It therefore does not establish the definition’s specific causal assignment. |
+| additional-primary | PMID:316988; https://doi.org/10.1128/AAC.16.6.731; PMID:6214994; https://doi.org/10.1128/AAC.22.1.15; Both complete original abstracts. | partial | PMID 316988 describes relative cefoperazone stability to a tested enzyme panel and an inoculum effect. PMID 6214994 compares agar and broth activity in ampicillin-resistant organisms and reports regrowth after TEM-mediated drug destruction. These reinforce context-dependent stability rather than universal resistance; neither inspected abstract isolates the tetrazolyl group’s causal contribution. Full methods and tables of these two studies were not read. |
+| adapter | kg-microbe-sources imodulondb; 231-imodulondb-datasets.txt; 231-imodulondb-betalactamase.txt; Dataset catalog and e_coli/precise1k search for beta-lactamase before web research. | context_only | The query returns gene e_coli/precise1k/b4150, ampC, and no iModulon. The native definition specifies no enzyme, gene or dataset. This annotation cannot establish cefoperazone hydrolysis, molecular stability or a substituent-specific causal mechanism, and no expression module informed the verdict. |
+| search | 231-inclusive-file-hits.txt; public literature search 2026-10-21; Exact name, identifier, key and slug locally; bounded cefoperazone/T-1551/tetrazolyl/3-substituent searches publicly. | context_only | Ignored- and hidden-inclusive local search found the native/source rows, path lock, queue and generated maps, with no exact corrective decision or curator overlay. The bounded public search located original stability studies and repeated database wording, but no inspected matched cefoperazone analogue experiment establishing tetrazolyl causation. This is a bounded evidence gap, not proof that no such study exists. |
+| validation | 231-focused-results.json; 231-chemistry.json; 231-external-chemistry.json; Actual documented focused commands and independent chemical parsing. | supports | Schema, strict and chemistry commands exit 0. Both native chemical strings reproduce the full key, formula, charge, masses and stereochemistry; both source mints reproduce. Six independently parsed external representations agree. |
+
+## Limits And Additional Notes
+
+- All native fields, exact source rows and all seven adopted citation abstracts were read. The original thirteen input hashes are unchanged; three ARO tables were captured before assessment, for sixteen total inputs.
+- PMID 314775 was read in full from eight original page images. Its Methods names cefoperazone and suppliers but does not state an exact counterion; the free-acid chemical figure supports active-moiety identity without proving every sample was a neutral solid.
+- The original abstracts of PMID 316988 and PMID 6214994 were inspected, but their full methods and tables were not. The ARO-adopted PMID 6221381 is a review, read at abstract level. No new exact primary PBP assertion is made.
+- A bounded literature search did not locate an inspected matched structural comparison proving the tetrazolyl attribution. This does not establish that such evidence is absent from the literature. The proposed qualification is deliberately narrower than a claim that the substituent cannot affect enzyme stability.
+- LINCS LSM-15520 is attested by ChEBI but its provider could not be inspected after certificate and timeout failures. Reaxys and paid CAS Registry records were not accessed. DrugBank public identity was inspected through web retrieval after direct HTTP 403.
+- VSDB contains an internal 7S systematic-name inconsistency while its key, InChI and isomeric SMILES match the native 6R,7R,side-chain R structure. That external naming conflict was preserved as context and was not used to change the native stereochemistry.
+- The structured adapter supplied a generic ampC annotation, not experimental drug evidence. No matching expression module was used. Optional fields remain unpopulated and native scientific status remains SEEDED.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T113448Z-cefoperazone
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cefoperazone: exact identity agrees; qualify the imported tetrazolyl beta-lactamase-resistance
+  attribution'
+started_at: '2026-10-21T11:21:14Z'
+finished_at: '2026-10-21T11:34:48Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the seed. Preserved initial inputs, read the
+    whole native record and exact maintained source rows/code, parsed independent
+    official structures and visually inspected all eight pages of an original antibacterial
+    and enzyme-stability study.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native cefoperazone free-acid structure, stereochemistry and principal
+  chemical identifiers agree with inspected official sources. Antibacterial activity
+  is supported by original experiments. The imported definition nevertheless assigns
+  beta-lactamase resistance causally to the tetrazolyl moiety without an inspected
+  matched structural comparison; primary studies establish enzyme-dependent stability
+  and also cefoperazone hydrolysis. A bounded definition qualification is proposed.
+  This is not evidence that the moiety never contributes to stability or that cefoperazone
+  lacks antibacterial activity.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefoperazone.yaml
+    sha256: 9e3eab3f05a17efd263847b6ec7543395bd4adf6ba44e3c08ef214fad8440778
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+targets:
+- target_id: CHEBI:3493
+  path: data/antibiotics/antibacterial/cefoperazone.yaml
+  label: cefoperazone
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity aliases and bibliography
+scope:
+  description: 'Whole CHEBI:3493 record: definition, twelve synonyms, both parents
+    and activity roles, chemical descriptors, eight chemical xrefs, three drug xrefs,
+    document link, two source concepts and four history events. All seven adopted
+    citation abstracts were read.'
+  selection: Queue 231; initial input capture preserved and actual ARO input/owner
+    capture appended before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:3493
+  exclusions:
+  - target: Cefoperazone salts, combinations, metabolites, antibody conjugates and
+      other cephalosporins
+    reason: They are separate material or experimental contexts. Combination antifungal
+      effects, host antigenicity and metabolism do not establish an exact cefoperazone
+      antibacterial target or natural producer.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:3493
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefoperazone.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:3493
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefoperazone.yaml --out /private/tmp/am-review-session/231-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Actual focused command exited 0. The batch019 RDKit interpreter parsed
+    batch024 native structures and reproduced both mints.
+  target_ids:
+  - CHEBI:3493
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 231
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:3493
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:3493
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:3493
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:3493
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:3493
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:3493
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:3493
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:3493
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:3493
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefoperazone.yaml
+  locator: Entire YAML and four seed/reseed events.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: supports
+  summary: SEEDED/EXACT record represents the neutral free acid with three assigned
+    stereocentres. It contains no structured activity, molecular targets, mode_of_action,
+    resistance, producer, clinical status, graph or dataset assertions. Optional-field
+    absence is not itself a defect. Its definition attributes beta-lactamase resistance
+    to the tetrazolyl moiety.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py; conf/sources.yaml
+  locator: ChEBI row 83; ARO row 300; extraction of ChEBI names/xrefs/citations and
+    ARO molecule/class fields; build_record lines 1483–1570.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: supports
+  summary: The native definition is copied from ChEBI. ARO supplies two aliases and
+    the cephalosporin class, cites review PMID 6221381, and has no exact target or
+    resistance source edge for this molecule in the maintained tables. The seeder
+    prioritizes a nonempty ChEBI definition over ARO and does not invent the causal
+    wording. The six ChEBI citation leads concern host hypersensitivity, toxicity,
+    pharmacokinetics or combination treatment.
+  snapshot_sha256: be7db36fc7a2ad68e3dbc451ef70d5286ff0c2a27b31bdce85f648d03df866b2
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:3493
+  locator: Current entry, chemical fields, names, outgoing ontology relations and
+    xrefs.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: supports
+  summary: Official structure, formula C25H27N9O8S2, charge 0, masses, key GCFBRXLSHGKWDP-XCGNWRKASA-N
+    and native ChEBI aliases agree. CHEBI:23066 is the broader cephalosporin class;
+    CHEBI:36047 and its antimicrobial ancestor CHEBI:33281 support the retained roles.
+    The current definition repeats the same tetrazolyl-resistance attribution; source
+    agreement is provenance, not independent experimental proof of that attribution.
+  snapshot_sha256: 87697165dc06496ef7a228fd18b5370dd34fb2ac03ddcefebffbd2b29c5a1179
+- evidence_id: card
+  kind: database
+  reference: https://card.mcmaster.ca/ontology/40930
+  locator: ARO:3004003 identity, definition, aliases, class, parent and publication
+    list.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: supports
+  summary: Current CARD names cefoperazone, gives CFP and cefoperazine, CAS 62893-19-0,
+    ChEBI 3493, ChEMBL507674 and PubChem44187. Its parsed structure reproduces the
+    native full key. ARO:0000032 is the broader cephalosporin class. The linked review
+    describes relative enzyme stability, not a native claim-level primary target experiment.
+  snapshot_sha256: 4bd152c75284be43c754fe66ee404e9b40aec2346e9f5e9609ec05a5ceecc297
+- evidence_id: chemical-xrefs
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL507674; https://pubchem.ncbi.nlm.nih.gov/compound/44187;
+    https://rest.kegg.jp/get/C06883; https://rest.kegg.jp/get/D07645; https://drugcentral.org/drugcard/543
+  locator: Complete official property entries, KEGG identity/structure fields and
+    DrugCentral InChI.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: supports
+  summary: ChEMBL, PubChem, KEGG, DrugCentral and CARD chemical representations independently
+    reproduce the native full key, formula, net charge and three R stereocentres.
+    KEGG C06883 and D07645 both denote cefoperazone. DrugCentral has broader salt
+    aliases elsewhere, but its actual InChI matches this free acid; those aliases
+    were not transferred. KEGG broad PBP annotations are database context, not independently
+    checked primary protein assays.
+  snapshot_sha256: 7c806e3d8cdfbad148a51fc089eeeae1b7a914d84fe6a689ff374cc3231eb5f7
+- evidence_id: drugbank
+  kind: database
+  reference: https://go.drugbank.com/drugs/DB01329
+  locator: Public identity overview obtained through web retrieval after direct HTTP
+    403.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: supports
+  summary: DB01329 resolves to cefoperazone and gives the native full key, formula,
+    isomeric SMILES and other chemical identifiers. The public target list and regulatory
+    labels are not used as new exact primary or jurisdiction-specific regulatory claims.
+- evidence_id: vsdb
+  kind: database
+  reference: https://bioregistry.io/vsdb:1836
+  locator: Resolved University of Hertfordshire Veterinary Substances Database entry,
+    chemical identity section.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: partial
+  summary: The entry names cefoperazone and supplies the native CAS, formula, InChI
+    and full key. Its isomeric SMILES independently parses to the same three R centres.
+    An internal IUPAC-name field instead says 6R,7S and omits side-chain stereochemistry;
+    that external text inconsistency is not copied into the native record and does
+    not justify replacing its coherent chemical graph. Other environmental, toxicological
+    and regulatory fields were not independently adjudicated.
+  snapshot_sha256: 1bd558e017830f0b344bd7118c68c53c1c508fcc66e313f6c26f8e6fd0b5bf11
+- evidence_id: other-xrefs
+  kind: database
+  reference: https://bioregistry.io/lincs.smallmolecule:LSM-15520; https://www.ebi.ac.uk/chebi/CHEBI:3493;
+    https://en.wikipedia.org/wiki/Cefoperazone
+  locator: Official ChEBI xref attestation, LINCS namespace metadata and informational
+    link.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: partial
+  summary: ChEBI attests LINCS LSM-15520, Reaxys 6050252 and CAS 62893-19-0. LINCS
+    namespace metadata resolves the provider route, but the provider timed out and
+    one direct route failed certificate verification; its exact structure was not
+    independently inspected. Reaxys and CAS subscription contents were not accessed.
+    The encyclopedia link resolves to cefoperazone and is context only.
+- evidence_id: adopted-review
+  kind: database
+  reference: PMID:6221381; https://doi.org/10.1093/clinids/5.Supplement_1.S108
+  locator: Complete indexed abstract and review classification.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: context_only
+  summary: The ARO-cited 1983 review describes cefoperazone antibacterial properties
+    and lower stability to some beta-lactamases than comparator cephalosporins. Its
+    abstract mentions PBP affinities and combinations but does not isolate the tetrazolyl
+    group’s causal contribution. It remains secondary context, not a new primary target
+    citation.
+  snapshot_sha256: 4b496ba7fc19f5e2284caed042d59d073b0db572af7fa322a088209c3dce86ce
+- evidence_id: adopted-host
+  kind: primary_source
+  reference: PMID:1384868; PMID:15073933; PMID:17560751; PMID:19241941; PMID:28543395
+  locator: All five complete indexed original abstracts.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: partial
+  summary: PMID 1384868 studies aztreonam-protein antibody epitopes; PMID 28543395
+    studies cefotiam-specific IgE and lack of cross-reactivity, not cefoperazone antibacterial
+    action. PMID 15073933 is a retrospective cefoperazone/NMTT safety cohort; PMID
+    19241941 is a gastrointestinal bleeding case report. PMID 17560751 measures rat
+    biliary cefoperazone pharmacokinetics with microdialysis, including berberine
+    pretreatment. These leads do not establish microbial targets, exact MICs, biosynthesis
+    or an isolated tetrazolyl beta-lactamase-resistance mechanism.
+  snapshot_sha256: 4b496ba7fc19f5e2284caed042d59d073b0db572af7fa322a088209c3dce86ce
+- evidence_id: adopted-combination
+  kind: primary_source
+  reference: PMID:24033828; https://doi.org/10.1111/apm.12159
+  locator: Complete original abstract.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: partial
+  summary: The study tests cefoperazone-sulbactam or piperacillin-tazobactam with
+    caspofungin or voriconazole by checkerboard and a neutropenic candidiasis mouse
+    model. Its synergy result is for combinations and does not establish standalone
+    cefoperazone antifungal activity. The abstract explicitly leaves the synergy mechanism
+    unresolved.
+  snapshot_sha256: 4b496ba7fc19f5e2284caed042d59d073b0db572af7fa322a088209c3dce86ce
+- evidence_id: primary-activity
+  kind: primary_source
+  reference: PMID:314775; https://doi.org/10.1128/AAC.16.2.150; https://pmc.ncbi.nlm.nih.gov/articles/PMC352812/
+  locator: All eight original scanned pages 150–157 visually inspected, Figure 1,
+    Methods and Tables 1–6.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: supports
+  summary: The paper identifies cefoperazone chemically and draws its free-acid scaffold;
+    samples came from Toyama, Lederle and Pfizer, without a stated counterion in Methods.
+    Agar dilution used Mueller-Hinton medium, specified organism-dependent supplements,
+    a reported final 10^5 CFU inoculum and 18 h at 35°C for routine assays. Tables
+    show antibacterial activity and marked strain variation. MIC50/90 values are population
+    summaries, not individual-isolate MICs. The biological result supports the cefoperazone
+    active moiety; an unreported exact commercial salt is not inferred.
+  snapshot_sha256: 4566cdecacd08c15f0f8bfc6fdecc234254a77c446bc264bda2adb41d99c15b9
+- evidence_id: primary-stability
+  kind: primary_source
+  reference: PMID:314775; https://doi.org/10.1128/AAC.16.2.150
+  locator: Original pages 154–157, Table 6 and enzyme-assay Methods on page 151.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: partial
+  summary: Partially purified or purified beta-lactamases were compared spectrophotometrically.
+    Table 6 gives relative cefoperazone hydrolysis from 0 to 150 against cephaloridine
+    set to 100; the E. coli enzyme hydrolyzes cefoperazone at 150. The paper supports
+    resistance to several tested enzymes and susceptibility to others, but does not
+    compare otherwise matched compounds differing only in the tetrazolyl substituent.
+    It therefore does not establish the definition’s specific causal assignment.
+  snapshot_sha256: f729f327cfa6fe07804cfcf3750aacf55e96f3661e40696025a1a658edcf4e62
+- evidence_id: additional-primary
+  kind: primary_source
+  reference: PMID:316988; https://doi.org/10.1128/AAC.16.6.731; PMID:6214994; https://doi.org/10.1128/AAC.22.1.15
+  locator: Both complete original abstracts.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: partial
+  summary: PMID 316988 describes relative cefoperazone stability to a tested enzyme
+    panel and an inoculum effect. PMID 6214994 compares agar and broth activity in
+    ampicillin-resistant organisms and reports regrowth after TEM-mediated drug destruction.
+    These reinforce context-dependent stability rather than universal resistance;
+    neither inspected abstract isolates the tetrazolyl group’s causal contribution.
+    Full methods and tables of these two studies were not read.
+  snapshot_sha256: 4b496ba7fc19f5e2284caed042d59d073b0db572af7fa322a088209c3dce86ce
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb; 231-imodulondb-datasets.txt; 231-imodulondb-betalactamase.txt
+  locator: Dataset catalog and e_coli/precise1k search for beta-lactamase before web
+    research.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: context_only
+  summary: The query returns gene e_coli/precise1k/b4150, ampC, and no iModulon. The
+    native definition specifies no enzyme, gene or dataset. This annotation cannot
+    establish cefoperazone hydrolysis, molecular stability or a substituent-specific
+    causal mechanism, and no expression module informed the verdict.
+  snapshot_sha256: c5bc314d36697f0969c211e5680a5456ecb41a0902d8a7efa32f56da1df73939
+- evidence_id: search
+  kind: search
+  reference: 231-inclusive-file-hits.txt; public literature search 2026-10-21
+  locator: Exact name, identifier, key and slug locally; bounded cefoperazone/T-1551/tetrazolyl/3-substituent
+    searches publicly.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: context_only
+  summary: Ignored- and hidden-inclusive local search found the native/source rows,
+    path lock, queue and generated maps, with no exact corrective decision or curator
+    overlay. The bounded public search located original stability studies and repeated
+    database wording, but no inspected matched cefoperazone analogue experiment establishing
+    tetrazolyl causation. This is a bounded evidence gap, not proof that no such study
+    exists.
+  snapshot_sha256: 2bc3c94f24c056fe2c90ebde85b601b5f2df7c964d7a9fad25131f84fbbef497
+  search_scope: rg --no-ignore --hidden across data, curation, conf, scripts, src,
+    docs, .claude, reviews and reports; public queries cefoperazone tetrazolyl beta-lactamase
+    resistance, T-1551 synthesis structure activity, and cefoperazone 3-substituent
+    beta-lactamase.
+- evidence_id: validation
+  kind: validation
+  reference: 231-focused-results.json; 231-chemistry.json; 231-external-chemistry.json
+  locator: Actual documented focused commands and independent chemical parsing.
+  accessed_at: '2026-10-21T11:28:20Z'
+  support: supports
+  summary: Schema, strict and chemistry commands exit 0. Both native chemical strings
+    reproduce the full key, formula, charge, masses and stereochemistry; both source
+    mints reproduce. Six independently parsed external representations agree.
+  snapshot_sha256: d2e970e9e639957191f7e7a5c557d90bb79d549986d14387a3fdc2cb1c964da6
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact free acid and identifiers
+  outcome: supported
+  summary: The native graph and three assigned stereocentres agree across inspected
+    chemical sources. LINCS and subscription registry contents remain bounded access
+    limitations, not demonstrated mismatches.
+  target_ids:
+  - CHEBI:3493
+  evidence_ids:
+  - chebi
+  - card
+  - chemical-xrefs
+  - drugbank
+  - vsdb
+  - other-xrefs
+  - validation
+- assessment_id: activity
+  area: scope
+  topic: Antibacterial class and roles
+  outcome: supported
+  summary: Original cefoperazone experiments support antibacterial activity. Population
+    and isolate scope, counterion reporting and assay conditions are retained; combination
+    antifungal or host effects are not transferred.
+  target_ids:
+  - CHEBI:3493
+  evidence_ids:
+  - primary-activity
+  - additional-primary
+  - adopted-combination
+  - adopted-host
+- assessment_id: definition
+  area: evidence
+  topic: Tetrazolyl attribution and enzyme-stability scope
+  outcome: concern
+  summary: The wording accurately reproduces its database source but exceeds the inspected
+    primary evidence. Enzyme-dependent stability is established; the specific structural
+    causal attribution remains unresolved.
+  target_ids:
+  - CHEBI:3493
+  evidence_ids:
+  - record
+  - source
+  - chebi
+  - primary-stability
+  - additional-primary
+  - search
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary biological enrichment
+  outcome: unknown
+  summary: Primary activity and enzyme-stability data are available for later claim-level
+    curation. Optional absence of targets, graph, producer and clinical status is
+    not a missing required representation.
+  target_ids:
+  - CHEBI:3493
+  evidence_ids:
+  - record
+  - primary-activity
+  - adopted-review
+- assessment_id: provenance
+  area: ownership
+  topic: Generated definition ownership
+  outcome: supported
+  summary: The maintained ChEBI row and extraction/seeding path own the definition.
+    No record-only edit would be a reproducible fix. All initial hashes remain unchanged.
+  target_ids:
+  - CHEBI:3493
+  evidence_ids:
+  - source
+  - search
+- assessment_id: gates
+  area: schema
+  topic: Focused deterministic checks
+  outcome: supported
+  summary: Schema, strict and independent chemistry pass. These checks do not validate
+    a causal definition, and SEEDED status is unchanged.
+  target_ids:
+  - CHEBI:3493
+  evidence_ids:
+  - validation
+  - record
+findings:
+- finding_id: F1
+  issue_key: cefoperazone-tetrazolyl-resistance-attribution
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the tetrazolyl beta-lactamase-resistance attribution
+  description: The definition says the tetrazolyl moiety confers beta-lactamase resistance.
+    Inspected original data establish selective enzyme stability and substantial hydrolysis
+    by some enzymes; they do not isolate that substituent as the causal explanation.
+    Retain the supported structure and antibacterial identity while narrowing the
+    wording or adding an exact primary structural-comparison source. This does not
+    show that the group never contributes or that cefoperazone is universally unstable.
+  target_ids:
+  - CHEBI:3493
+  field_paths:
+  - definition
+  evidence_ids:
+  - source
+  - chebi
+  - adopted-review
+  - primary-stability
+  - additional-primary
+  - search
+  rule_id: 'native-review-checklist: mechanism claims require exact evidence and scope'
+  native_severity: minor
+  normalization_reason: Bounded qualification of an imported definition. The exact
+    identity and antibacterial role are supported, and no structured target or resistance
+    observation depends on this wording. The broader structure-activity question remains
+    unresolved.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition for CHEBI:3493
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ChEBI extraction or narrowly justified qualification handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition precedence and regenerated record
+actions:
+- action_id: A1
+  description: Reconcile the imported definition with enzyme-specific primary evidence
+    through its maintained source path.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:3493
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition for CHEBI:3493
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ChEBI extraction or narrowly justified qualification handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition precedence and regenerated record
+  acceptance_checks:
+  - Use a neutral structural definition unless an inspected original matched-analogue
+    experiment supports the tetrazolyl causal attribution. If retaining a stability
+    statement, specify that stability depends on the enzyme and experimental context.
+  - Preserve the valid free-acid graph, stereochemistry, cephalosporin class and antibacterial
+    roles. Do not replace the claim with universal beta-lactamase susceptibility or
+    infer that tetrazolyl substitution has no effect.
+  - Correct the maintained upstream inventory or an explicit reproducible extraction/definition-qualification
+    mechanism; do not make a native-only edit that reseeding would undo. Re-extract
+    or re-seed the exact target as appropriate and inspect the resulting definition.
+  - Run focused schema and strict checks, source provenance and corpus reproducibility
+    plus applicable shared gates after any separately authorized curation. Quantitative
+    activity or target enrichment requires narrow claim-level primary evidence and
+    the validated writer/curation-event workflow.
+limitations:
+- All native fields, exact source rows and all seven adopted citation abstracts were
+  read. The original thirteen input hashes are unchanged; three ARO tables were captured
+  before assessment, for sixteen total inputs.
+- PMID 314775 was read in full from eight original page images. Its Methods names
+  cefoperazone and suppliers but does not state an exact counterion; the free-acid
+  chemical figure supports active-moiety identity without proving every sample was
+  a neutral solid.
+- The original abstracts of PMID 316988 and PMID 6214994 were inspected, but their
+  full methods and tables were not. The ARO-adopted PMID 6221381 is a review, read
+  at abstract level. No new exact primary PBP assertion is made.
+- A bounded literature search did not locate an inspected matched structural comparison
+  proving the tetrazolyl attribution. This does not establish that such evidence is
+  absent from the literature. The proposed qualification is deliberately narrower
+  than a claim that the substituent cannot affect enzyme stability.
+- LINCS LSM-15520 is attested by ChEBI but its provider could not be inspected after
+  certificate and timeout failures. Reaxys and paid CAS Registry records were not
+  accessed. DrugBank public identity was inspected through web retrieval after direct
+  HTTP 403.
+- VSDB contains an internal 7S systematic-name inconsistency while its key, InChI
+  and isomeric SMILES match the native 6R,7R,side-chain R structure. That external
+  naming conflict was preserved as context and was not used to change the native stereochemistry.
+- The structured adapter supplied a generic ampC annotation, not experimental drug
+  evidence. No matching expression module was used. Optional fields remain unpopulated
+  and native scientific status remains SEEDED.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

@@ -1,0 +1,693 @@
+# Review of cefotiam dihydrochloride
+
+- Review: 20261021T113856Z-cefotiam-dihydrochloride-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T11:21:20Z
+- Finished UTC: 2026-10-21T11:38:56Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The exact cefotiam dihydrochloride structure, two-HCl stoichiometry, 6R/7R centers, formula and masses agree with current ChEBI, GSRS, KEGG and PubChem representations. The native historical US approval of Ceradon under NDA050601 and its discontinued product status are both verified in FDA records. The official hydrochloride name maps to this dihydrochloride and is not evidence of a monohydrochloride identity error. Original SCE-963 PBP and activity studies were located and their relevant methods inspected, but those pages do not specify the salt. No confirmed required correction was established; no native record was changed. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact SEEDED cefotiam dihydrochloride record, all synonyms, six history events, chemical and contextual identifiers, each regulatory assertion field, actual ChEBI/FDA maintained owners, and bounded compound-specific primary evidence follow-up.
+
+Selection: Queue 236; the original 13 inputs were preserved and the actual FDA inventory and extractor were appended before detailed judgment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:31374 | data/antibiotics/antibacterial/cefotiam-dihydrochloride.yaml | generated | cefotiam dihydrochloride |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema check | passed | True | CHEBI:31374 | Exit 0. |
+| Documented strict check | passed | True | CHEBI:31374 | Exit 0; zero ERROR rows. |
+| Supplemental exact salt comparison | passed | False | CHEBI:31374 | Exit 0 using the existing 019 interpreter against the 024 checkout. |
+| Structured source applicability | not_applicable | False | CHEBI:31374 | The native record names no gene, protein, pathway, stress response or transcriptomic claim requiring a structured adapter. The optional PBP source was identified during subsequent literature research. |
+| Authoritative full QC | failed | True | CHEBI:31374 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:31374 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:31374 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:31374 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:31374 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:31374 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:31374 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:31374 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:31374 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact dihydrochloride composition and stereochemistry
+
+identity: supported. Targets: CHEBI:31374.
+
+Independent authorities agree on two HCl equivalents, complete key, 6R/7R centers, masses and formula.
+
+### Names, salt parent and contextual identifiers
+
+grounding: supported. Targets: CHEBI:31374.
+
+The official hydrochloride alias is used for this exact two-HCl substance; drug and patent scope is contextual.
+
+### Historical approval and current marketing distinction
+
+evidence: supported. Targets: CHEBI:31374.
+
+FDA verifies the historical approval and discontinued product; the exact GSRS join is coherent.
+
+### Antibacterial role and exact assay boundaries
+
+evidence: supported. Targets: CHEBI:31374.
+
+The salt authority and original cefotiam evidence support antibacterial context. Salt-specific quantitative adoption remains bounded by reagent uncertainty.
+
+### Optional primary mechanism enrichment
+
+completeness: unknown. Targets: CHEBI:31374.
+
+Direct cefotiam PBP evidence exists, but the inspected original methods do not establish the precise salt. No native mechanistic assertion is contradicted.
+
+### Maintained owners, references and history
+
+provenance: supported. Targets: CHEBI:31374.
+
+The actual FDA inventory and extractor were captured, no adopted PMID leads were omitted, and six history events are intact.
+
+### Focused native validity
+
+schema: supported. Targets: CHEBI:31374.
+
+Schema and strict validators pass; shared required checks remain separate.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/cefotiam-dihydrochloride.yaml; Entire native YAML, all four synonyms and six history events | supports | The record denotes exact cefotiam dihydrochloride, not cefotiam free acid or an oral ester. It contains an antibacterial role, hydrochloride parent and one historical FDA clinical assertion. It has no populated mode, molecular target, resistance mechanism, MIC, producer or causal graph. Six history events concern source seeding rather than scientific sign-off. |
+| chemistry | CHEBI:31374; UNII:H7V12WDZ93; KEGG:D01819; PubChem:47896; PubChem:57515951; 236-chemistry.py/.json; current authority snapshots | supports | Native SMILES/InChI, GSRS SMILES/molfile and KEGG molfile all generate BWRRTAXZCKVRON-DGPOFWGLSA-N. The graph has one cefotiam moiety plus two HCl components, aggregate formula C18H25Cl2N9O4S3, charge 0, 6R/7R centers, average mass 598.564 and exact mass 597.05686864. The component formula C18H23N9O4S3.2HCl is equivalent. Exact-key PubChem lookup returns CID47896 and CID57515951 with neutral-HCl versus separated proton/chloride encodings; both normalize to the same full key and stoichiometry. This is not evidence for two chemical forms requiring a native identity correction. |
+| names-grounding | CHEBI:31374; CHEBI:36807; CHEBI:36047; cas:66309-69-1; 236-ols.json; 236-parent.json; 236-gsrs.json; adopted ChEBI row | supports | ChEBI resolves the salt, its hydrochloride parent and antibacterial role. Current GSRS H7V12WDZ93 version 20 calls the two-HCl structure CEFOTIAM HYDROCHLORIDE and also lists CEFOTIAM DIHYDROCHLORIDE plus the matching systematic names and CAS. Thus the shortened official hydrochloride alias is supported for this exact salt; it must not be interpreted as an assertion of one HCl. CAS is corroborated through authority records, not separately through the CAS registry. |
+| fda | NDA050601 product 001; https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&amp;ApplNo=050601; 236-fda.html; 236-fda.json; native clinical_status_assertions[0] | supports | Both the FDA application page and current openFDA response identify Takeda Ceradon, cefotiam hydrochloride, product 001, original approval on 1988-12-30, and discontinued marketing. The response identifies ORIG submission 1 with AP status and an injectable product at EQ 1GM BASE/VIAL. The native APPROVED status describes historical approval while currently_marketed:false preserves discontinuation; no current availability or reason for discontinuation is inferred. The FDA page explicitly says its label is unavailable. |
+| fda-identity | UNII:H7V12WDZ93; FDA_GSRS version 20; 236-gsrs.json, structure, names and identifiers; 236-chemistry.json | supports | Current GSRS version 20 confirms the exact two-HCl structure and official ingredient name used in the native assertion. The clinical inventory row joins that full key to the FDA product, and the seeder attaches only a unique full-key match. This is an exact salt identity join, not a name-only transfer from cefotiam free acid. |
+| drug-context | kegg.drug:D01819; drugbank:DB00229; 236-kegg.txt/.mol; 236-ols.json; 236-fetch-results.json | partial | KEGG D01819 resolves to cefotiam hydrochloride with the exact dihydrochloride composition and graph. DrugBank DB00229 is corroborated as a cefotiam drug-context link by current ChEBI; direct access returned 403. It is correctly placed under drug_xrefs and is not used as an independently verified exact salt structure. |
+| patents | patent:DE2738711; patent:US4146710; 236-patent-de.html; 236-patent-us.html; US description, reference antibacterial example, hydration discussion, Example 17 and claims | context_only | The linked patent family concerns solid cefotiam salts and their hydration-dependent stability. US4146710 discusses two equivalents of acid, multiple hydrates and anhydrates, as well as tautomeric thiazoline/thiazole descriptions; Example 17 gives the anhydrous dihydrochloride formula and elemental analysis. Its reference antibacterial spectrum is expressed on an anhydrate basis, while the invention also includes variable hydration and counterion scope. Those data were not transferred as an exact native MIC observation. The patents support relevant salt provenance and are correctly kept as document references. |
+| pbp | PMID:371539; DOI:10.1128/AAC.15.1.20; 236-core.json; original printed pp.20-22 in 236-pbp20.png, 236-pbp21.png and 236-pbp22.png | partial | The original SCE-963 study uses E. coli KN126 envelope PBPs with radiolabeled benzylpenicillin competition, Y10 cell-free peptidoglycan cross-linking, and LD-2 peptidoglycan synthesis assays. It separately describes labeled SCE-963 binding and morphology. The inspected methods say SCE-963 and labeled SCE-963 were synthesized in the authors division; Figure 1 draws the cefotiam moiety and no salt is specified. This is direct cefotiam-level mechanism evidence at the inspected depth, not independently verified dihydrochloride-specific quantitative evidence. Remaining figures and tables were not exhaustively inspected. |
+| activity | PMID:718154; DOI:10.1128/AAC.14.4.557; 236-core.json; original printed pp.557-558 in 236-activity557.png and 236-activity558.png | partial | The original activity paper reports SCE-963 antibacterial and mouse-protection experiments. Its inspected methods identify Takeda material, describe agar and broth dilution, inoculum and visible-growth endpoints, but do not specify salt form. Figure 1 shows the cefotiam moiety. The Results passage explicitly notes no inhibition of the tested P. aeruginosa strains. The paper supports bounded cefotiam antibacterial context; it does not establish a form-specific MIC for the anhydrous dihydrochloride from the inspected pages. |
+| owners | data/raw/chebi_antimicrobials.tsv; data/raw/fda_clinical_status.tsv; scripts/extract_fda_clinical_status.py; scripts/seed_from_sources.py; 236 exact owner-row snapshots; 236-local-hits.txt; extractor and seeder clinical join | supports | The ChEBI row owns identity, names, parent, role and document/drug links. It contains zero PMID citation leads. The FDA row owns the product facts and GSRS key, with extractor and seeder maintaining the join. All native assertion values match the adopted row, including source dates and historical identity version. No separate exact-salt curator overlay was found in the bounded ignored-inclusive search. |
+| validation | Focused schema, strict and supplemental chemistry checks; 236-strict.tsv; 236-chemistry.json | supports | Schema and strict validation exited 0 with zero ERROR rows. Supplemental chemistry exited 0 and all independently inspected exact salt representations agree. Required shared corpus gates remain separate. |
+
+## Limits And Additional Notes
+
+- The two original SCE-963 papers were read at complete-abstract depth plus relevant original methods/results pages: pp.20-22 for PMID371539 and pp.557-558 for PMID718154. Neither inspected methods section specifies the salt; the remaining figures and tables were not exhaustively reviewed. Do not assign form-specific MIC or PBP measurements to the dihydrochloride without verifying the reagent and concentration basis.
+- Initial PMC HTML downloads returned browser-challenge content. Original scanned pages were retrieved successfully from the NCBI image links, inspected and hashed. The adopted ChEBI row contains no PMID leads; the two literature sources are additional verified leads rather than unexamined adopted citations.
+- The native FDA assertion is supported as historical approval of a product whose current source status is discontinued. It does not establish availability, efficacy for an uninspected indication, or the reason marketing ceased. The FDA application page says its label is unavailable. Source dates are the preserved adopted snapshot, not silently replaced with current retrieval dates.
+- Direct DrugBank access returned 403; its contextual mapping is corroborated through current ChEBI. CAS was not independently checked in the registry. The patent family includes different hydration and acid forms; only the stated description, exact anhydrous example and relevant salt/antibacterial passages were inspected, not every example as an exact assay.
+- Neutral disconnected HCl notation and separately represented protons/chlorides normalize to the same Standard InChI and aggregate composition. This does not equate the salt with cefotiam free acid, an oral ester or a distinct hydrate.
+- The native 024 environment lacks RDKit; supplemental chemistry used the existing 019 interpreter. Focused validation does not replace required shared corpus gates.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 15 captured repository input hashes are unchanged. No native record, saved bundle or Git state was modified.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T113856Z-cefotiam-dihydrochloride-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of cefotiam dihydrochloride
+started_at: '2026-10-21T11:21:20Z'
+finished_at: '2026-10-21T11:38:56Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Qualified scientific pass; exact two-HCl identity and historical FDA
+  assertion supported
+scientific_review: true
+summary: The exact cefotiam dihydrochloride structure, two-HCl stoichiometry, 6R/7R
+  centers, formula and masses agree with current ChEBI, GSRS, KEGG and PubChem representations.
+  The native historical US approval of Ceradon under NDA050601 and its discontinued
+  product status are both verified in FDA records. The official hydrochloride name
+  maps to this dihydrochloride and is not evidence of a monohydrochloride identity
+  error. Original SCE-963 PBP and activity studies were located and their relevant
+  methods inspected, but those pages do not specify the salt. No confirmed required
+  correction was established; no native record was changed. Scientific assessment
+  retains the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefotiam-dihydrochloride.yaml
+    sha256: 8b8faf5bb17340b6712a60b02e7488178c7c03decec549b593f6a71746f9d0dc
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+scope:
+  description: Entire exact SEEDED cefotiam dihydrochloride record, all synonyms,
+    six history events, chemical and contextual identifiers, each regulatory assertion
+    field, actual ChEBI/FDA maintained owners, and bounded compound-specific primary
+    evidence follow-up.
+  selection: Queue 236; the original 13 inputs were preserved and the actual FDA inventory
+    and extractor were appended before detailed judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:31374
+targets:
+- target_id: CHEBI:31374
+  path: data/antibiotics/antibacterial/cefotiam-dihydrochloride.yaml
+  label: cefotiam dihydrochloride
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Adopted regulatory assertions with exact GSRS structure join
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: Clinical source extraction and identity join
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:31374
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefotiam-dihydrochloride.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit 0; zero ERROR rows.
+  target_ids:
+  - CHEBI:31374
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefotiam-dihydrochloride.yaml --out /private/tmp/am-review-session/236-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Supplemental exact salt comparison
+  status: passed
+  required: false
+  summary: Exit 0 using the existing 019 interpreter against the 024 checkout.
+  target_ids:
+  - CHEBI:31374
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/236-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: structured-adapter
+  name: Structured source applicability
+  status: not_applicable
+  required: false
+  summary: The native record names no gene, protein, pathway, stress response or transcriptomic
+    claim requiring a structured adapter. The optional PBP source was identified during
+    subsequent literature research.
+  target_ids:
+  - CHEBI:31374
+  evidence_ids:
+  - record
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:31374
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:31374
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:31374
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:31374
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:31374
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:31374
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:31374
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:31374
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:31374
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefotiam-dihydrochloride.yaml
+  locator: Entire native YAML, all four synonyms and six history events
+  accessed_at: '2026-10-21T11:32:05Z'
+  support: supports
+  summary: The record denotes exact cefotiam dihydrochloride, not cefotiam free acid
+    or an oral ester. It contains an antibacterial role, hydrochloride parent and
+    one historical FDA clinical assertion. It has no populated mode, molecular target,
+    resistance mechanism, MIC, producer or causal graph. Six history events concern
+    source seeding rather than scientific sign-off.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:31374; UNII:H7V12WDZ93; KEGG:D01819; PubChem:47896; PubChem:57515951
+  locator: 236-chemistry.py/.json; current authority snapshots
+  accessed_at: '2026-10-21T11:32:05Z'
+  support: supports
+  summary: Native SMILES/InChI, GSRS SMILES/molfile and KEGG molfile all generate
+    BWRRTAXZCKVRON-DGPOFWGLSA-N. The graph has one cefotiam moiety plus two HCl components,
+    aggregate formula C18H25Cl2N9O4S3, charge 0, 6R/7R centers, average mass 598.564
+    and exact mass 597.05686864. The component formula C18H23N9O4S3.2HCl is equivalent.
+    Exact-key PubChem lookup returns CID47896 and CID57515951 with neutral-HCl versus
+    separated proton/chloride encodings; both normalize to the same full key and stoichiometry.
+    This is not evidence for two chemical forms requiring a native identity correction.
+  snapshot_sha256: 67969cce99628abc6564ee8f8afcbe4fbccf1cbfb1b6774dd397b9da3c10f258
+- evidence_id: names-grounding
+  kind: authority
+  reference: CHEBI:31374; CHEBI:36807; CHEBI:36047; cas:66309-69-1
+  locator: 236-ols.json; 236-parent.json; 236-gsrs.json; adopted ChEBI row
+  accessed_at: '2026-10-21T11:32:05Z'
+  support: supports
+  summary: ChEBI resolves the salt, its hydrochloride parent and antibacterial role.
+    Current GSRS H7V12WDZ93 version 20 calls the two-HCl structure CEFOTIAM HYDROCHLORIDE
+    and also lists CEFOTIAM DIHYDROCHLORIDE plus the matching systematic names and
+    CAS. Thus the shortened official hydrochloride alias is supported for this exact
+    salt; it must not be interpreted as an assertion of one HCl. CAS is corroborated
+    through authority records, not separately through the CAS registry.
+  snapshot_sha256: e250594c85365ac73b9b5421aa864de8cdca318d829570195ca606742b845299
+- evidence_id: fda
+  kind: authority
+  reference: NDA050601 product 001; https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=050601
+  locator: 236-fda.html; 236-fda.json; native clinical_status_assertions[0]
+  accessed_at: '2026-10-21T11:32:05Z'
+  support: supports
+  summary: Both the FDA application page and current openFDA response identify Takeda
+    Ceradon, cefotiam hydrochloride, product 001, original approval on 1988-12-30,
+    and discontinued marketing. The response identifies ORIG submission 1 with AP
+    status and an injectable product at EQ 1GM BASE/VIAL. The native APPROVED status
+    describes historical approval while currently_marketed:false preserves discontinuation;
+    no current availability or reason for discontinuation is inferred. The FDA page
+    explicitly says its label is unavailable.
+  snapshot_sha256: 16a1b752a0190b8a58ae420cf485e8dd0c5425fa40f86cfaf3e9a7a5094cf781
+- evidence_id: fda-identity
+  kind: authority
+  reference: UNII:H7V12WDZ93; FDA_GSRS version 20
+  locator: 236-gsrs.json, structure, names and identifiers; 236-chemistry.json
+  accessed_at: '2026-10-21T11:32:05Z'
+  support: supports
+  summary: Current GSRS version 20 confirms the exact two-HCl structure and official
+    ingredient name used in the native assertion. The clinical inventory row joins
+    that full key to the FDA product, and the seeder attaches only a unique full-key
+    match. This is an exact salt identity join, not a name-only transfer from cefotiam
+    free acid.
+  snapshot_sha256: a5533bd4d91f861ddc83dc7aaf5f091b6671315f47ea845745d440327ef02ad6
+- evidence_id: drug-context
+  kind: authority
+  reference: kegg.drug:D01819; drugbank:DB00229
+  locator: 236-kegg.txt/.mol; 236-ols.json; 236-fetch-results.json
+  accessed_at: '2026-10-21T11:32:05Z'
+  support: partial
+  summary: KEGG D01819 resolves to cefotiam hydrochloride with the exact dihydrochloride
+    composition and graph. DrugBank DB00229 is corroborated as a cefotiam drug-context
+    link by current ChEBI; direct access returned 403. It is correctly placed under
+    drug_xrefs and is not used as an independently verified exact salt structure.
+  snapshot_sha256: d8a979e0094c64c285043e9ec88c7d2bf642052bb14f6a77818563ba58642611
+- evidence_id: patents
+  kind: primary_source
+  reference: patent:DE2738711; patent:US4146710
+  locator: 236-patent-de.html; 236-patent-us.html; US description, reference antibacterial
+    example, hydration discussion, Example 17 and claims
+  accessed_at: '2026-10-21T11:32:05Z'
+  support: context_only
+  summary: The linked patent family concerns solid cefotiam salts and their hydration-dependent
+    stability. US4146710 discusses two equivalents of acid, multiple hydrates and
+    anhydrates, as well as tautomeric thiazoline/thiazole descriptions; Example 17
+    gives the anhydrous dihydrochloride formula and elemental analysis. Its reference
+    antibacterial spectrum is expressed on an anhydrate basis, while the invention
+    also includes variable hydration and counterion scope. Those data were not transferred
+    as an exact native MIC observation. The patents support relevant salt provenance
+    and are correctly kept as document references.
+  snapshot_sha256: 26c334c61bf24b8d2ae32caccf861409c213c84b65e35749f20c3bb47116fd1b
+- evidence_id: pbp
+  kind: primary_source
+  reference: PMID:371539; DOI:10.1128/AAC.15.1.20
+  locator: 236-core.json; original printed pp.20-22 in 236-pbp20.png, 236-pbp21.png
+    and 236-pbp22.png
+  accessed_at: '2026-10-21T11:32:05Z'
+  support: partial
+  summary: The original SCE-963 study uses E. coli KN126 envelope PBPs with radiolabeled
+    benzylpenicillin competition, Y10 cell-free peptidoglycan cross-linking, and LD-2
+    peptidoglycan synthesis assays. It separately describes labeled SCE-963 binding
+    and morphology. The inspected methods say SCE-963 and labeled SCE-963 were synthesized
+    in the authors division; Figure 1 draws the cefotiam moiety and no salt is specified.
+    This is direct cefotiam-level mechanism evidence at the inspected depth, not independently
+    verified dihydrochloride-specific quantitative evidence. Remaining figures and
+    tables were not exhaustively inspected.
+  snapshot_sha256: b9284ddfc5ae1dfae62f167da73c10d2cd4499ed64387946132d58590951bee9
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:718154; DOI:10.1128/AAC.14.4.557
+  locator: 236-core.json; original printed pp.557-558 in 236-activity557.png and 236-activity558.png
+  accessed_at: '2026-10-21T11:32:05Z'
+  support: partial
+  summary: The original activity paper reports SCE-963 antibacterial and mouse-protection
+    experiments. Its inspected methods identify Takeda material, describe agar and
+    broth dilution, inoculum and visible-growth endpoints, but do not specify salt
+    form. Figure 1 shows the cefotiam moiety. The Results passage explicitly notes
+    no inhibition of the tested P. aeruginosa strains. The paper supports bounded
+    cefotiam antibacterial context; it does not establish a form-specific MIC for
+    the anhydrous dihydrochloride from the inspected pages.
+  snapshot_sha256: e5aa41823078590054fe7bb79aaded11fe927a548a7d2becc62d15d8fc09e769
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/fda_clinical_status.tsv;
+    scripts/extract_fda_clinical_status.py; scripts/seed_from_sources.py
+  locator: 236 exact owner-row snapshots; 236-local-hits.txt; extractor and seeder
+    clinical join
+  accessed_at: '2026-10-21T11:32:05Z'
+  support: supports
+  summary: The ChEBI row owns identity, names, parent, role and document/drug links.
+    It contains zero PMID citation leads. The FDA row owns the product facts and GSRS
+    key, with extractor and seeder maintaining the join. All native assertion values
+    match the adopted row, including source dates and historical identity version.
+    No separate exact-salt curator overlay was found in the bounded ignored-inclusive
+    search.
+  snapshot_sha256: 9fdbe3467e331ecc5bbeb88627f5b835c022c0fbdc9b15a2a4733b3a20c666ba
+  search_scope: rg --no-ignore --hidden across data/raw, curation, conf, scripts and
+    docs for CHEBI:31374, cefotiam dihydrochloride, H7V12WDZ93 and 050601; exact source
+    rows and full native record inspected.
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema, strict and supplemental chemistry checks
+  locator: 236-strict.tsv; 236-chemistry.json
+  accessed_at: '2026-10-21T11:32:05Z'
+  support: supports
+  summary: Schema and strict validation exited 0 with zero ERROR rows. Supplemental
+    chemistry exited 0 and all independently inspected exact salt representations
+    agree. Required shared corpus gates remain separate.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact dihydrochloride composition and stereochemistry
+  outcome: supported
+  summary: Independent authorities agree on two HCl equivalents, complete key, 6R/7R
+    centers, masses and formula.
+  target_ids:
+  - CHEBI:31374
+  evidence_ids:
+  - chemistry
+  - names-grounding
+- assessment_id: grounding
+  area: grounding
+  topic: Names, salt parent and contextual identifiers
+  outcome: supported
+  summary: The official hydrochloride alias is used for this exact two-HCl substance;
+    drug and patent scope is contextual.
+  target_ids:
+  - CHEBI:31374
+  evidence_ids:
+  - names-grounding
+  - drug-context
+  - patents
+- assessment_id: clinical
+  area: evidence
+  topic: Historical approval and current marketing distinction
+  outcome: supported
+  summary: FDA verifies the historical approval and discontinued product; the exact
+    GSRS join is coherent.
+  target_ids:
+  - CHEBI:31374
+  evidence_ids:
+  - fda
+  - fda-identity
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and exact assay boundaries
+  outcome: supported
+  summary: The salt authority and original cefotiam evidence support antibacterial
+    context. Salt-specific quantitative adoption remains bounded by reagent uncertainty.
+  target_ids:
+  - CHEBI:31374
+  evidence_ids:
+  - names-grounding
+  - patents
+  - activity
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary mechanism enrichment
+  outcome: unknown
+  summary: Direct cefotiam PBP evidence exists, but the inspected original methods
+    do not establish the precise salt. No native mechanistic assertion is contradicted.
+  target_ids:
+  - CHEBI:31374
+  evidence_ids:
+  - pbp
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained owners, references and history
+  outcome: supported
+  summary: The actual FDA inventory and extractor were captured, no adopted PMID leads
+    were omitted, and six history events are intact.
+  target_ids:
+  - CHEBI:31374
+  evidence_ids:
+  - owners
+  - record
+- assessment_id: schema
+  area: schema
+  topic: Focused native validity
+  outcome: supported
+  summary: Schema and strict validators pass; shared required checks remain separate.
+  target_ids:
+  - CHEBI:31374
+  evidence_ids:
+  - validation
+findings: []
+actions: []
+limitations:
+- 'The two original SCE-963 papers were read at complete-abstract depth plus relevant
+  original methods/results pages: pp.20-22 for PMID371539 and pp.557-558 for PMID718154.
+  Neither inspected methods section specifies the salt; the remaining figures and
+  tables were not exhaustively reviewed. Do not assign form-specific MIC or PBP measurements
+  to the dihydrochloride without verifying the reagent and concentration basis.'
+- Initial PMC HTML downloads returned browser-challenge content. Original scanned
+  pages were retrieved successfully from the NCBI image links, inspected and hashed.
+  The adopted ChEBI row contains no PMID leads; the two literature sources are additional
+  verified leads rather than unexamined adopted citations.
+- The native FDA assertion is supported as historical approval of a product whose
+  current source status is discontinued. It does not establish availability, efficacy
+  for an uninspected indication, or the reason marketing ceased. The FDA application
+  page says its label is unavailable. Source dates are the preserved adopted snapshot,
+  not silently replaced with current retrieval dates.
+- Direct DrugBank access returned 403; its contextual mapping is corroborated through
+  current ChEBI. CAS was not independently checked in the registry. The patent family
+  includes different hydration and acid forms; only the stated description, exact
+  anhydrous example and relevant salt/antibacterial passages were inspected, not every
+  example as an exact assay.
+- Neutral disconnected HCl notation and separately represented protons/chlorides normalize
+  to the same Standard InChI and aggregate composition. This does not equate the salt
+  with cefotiam free acid, an oral ester or a distinct hydrate.
+- The native 024 environment lacks RDKit; supplemental chemistry used the existing
+  019 interpreter. Focused validation does not replace required shared corpus gates.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 15 captured repository input hashes are unchanged. No native record, saved bundle
+  or Git state was modified.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=050601
+- https://doi.org/10.1128/AAC.15.1.20
+- https://doi.org/10.1128/AAC.14.4.557
+- https://patents.google.com/patent/US4146710A/en
+tags:
+- record-review
+- cefotiam-dihydrochloride
+- salt-boundary
+- regulatory-provenance
+```
