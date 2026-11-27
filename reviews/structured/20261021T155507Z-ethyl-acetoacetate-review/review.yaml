@@ -1,0 +1,501 @@
+schema_version: 1.0.0
+review_id: 20261021T155507Z-ethyl-acetoacetate-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Ethyl acetoacetate: coherent keto-form identity with bounded antimicrobial
+  evidence'
+started_at: '2026-10-21T15:30:51Z'
+finished_at: '2026-10-21T15:55:07Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The native keto-form graph agrees with accessible exact chemical authorities.
+  Original studies support antibacterial effects, but a later paper has a serious
+  unresolved concentration-unit inconsistency. No quantitative native activity is
+  asserted, so the source problem is retained as a reuse limitation rather than a
+  record finding. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ethyl-acetoacetate.yaml
+    sha256: 294ad8330d4e41d4d938aa840cc731572ab0774292f27d1fed43d2156fe00b52
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+targets:
+- target_id: CHEBI:4893
+  path: data/antibiotics/antibacterial/ethyl-acetoacetate.yaml
+  label: ethyl acetoacetate
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 416; one entire native record. Thirteen initial input
+    hashes were retained when the actual readiness-queue context was appended; fourteen
+    unchanged inputs are captured.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:4893
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:4893
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    416
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:4893
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ethyl-acetoacetate.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:4893
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ethyl-acetoacetate.yaml --out /private/tmp/am-review-session/416-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:4893
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:4893
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:4893
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:4893
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:4893
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:4893
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:4893
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:4893
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:4893
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ethyl-acetoacetate.yaml
+  locator: Entire native YAML, all fields and history
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: The SEEDED/EXACT record has 14 exact synonyms, 1 broader parents, one antibacterial
+    role, one ChEBI source concept and 5 source history events. All were inspected.
+    No quantitative activity, molecular target, mode, resistance, producer, clinical,
+    graph or dataset object is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py; curation/record_review_queue.tsv
+  locator: 416-source-rows.json; applicable extraction, normalization and seeding
+    code
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: The exact adopted ChEBI row supplies identity, definition, structure, roles,
+    links and ten publication leads. Readiness is context, not independent scientific
+    evidence. Original hashes were retained before judgment. Broad CHEBI:4893 search
+    also matched CHEBI:48935, (E)-roxithromycin; those rows are explicitly excluded.
+    The seeder intentionally normalizes the FDB compound accession from foodb.food
+    to foodb.compound; this is not an unexplained provenance mismatch.
+  snapshot_sha256: caebfbeb7464081dd95aa051b71530933858b44b11153c5fb7c5b272754efa12
+- evidence_id: chemistry
+  kind: validation
+  reference: 042-authority-compare.json; 416-chemistry.json
+  locator: Independent full-key, formula, charge and atom-adjacency comparisons
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: Native SMILES and InChI, current ChEBI SMILES/InChI/molfile and PubChem
+    encodings agree on XYIBRDXRRQCHLP-UHFFFAOYSA-N, C6H10O3, neutral charge and no
+    stereocentres. All five inspected CCD EAC SMILES and KEGG C03500 molfile also
+    agree; thirteen encodings in total. Focused chemistry additionally verifies stored
+    masses and the deterministic source alias.
+  snapshot_sha256: b272eea3b5cb152c442ab57efd0f202a9aa4f9afbc007c25784f9128b79dd74b
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:4893; https://www.ebi.ac.uk/chebi/CHEBI:4893
+  locator: Current complete chemical entry and definitions of all asserted broader
+    parents and role
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: CHEBI23990 ethyl ester fits the beta-ketoester graph. All fourteen aliases
+    are current authority-attested, including historical names; ethyl acetylacetonate
+    is retained at authority depth without claiming independent historical nomenclature
+    proof. Keto/enol equilibrium papers do not by themselves contradict the stored
+    keto-form identity. Role33282 has original antibacterial support.
+  snapshot_sha256: f94e94f241df4e5d7a871b87a0c6117a03b5d530e9ff66285d0957b4555d719b
+- evidence_id: search
+  kind: search
+  reference: 416-local-hits.txt; 416-owners-search.json; 042-root-fetch-manifest.json
+    through 042-root-fetch5-manifest.json
+  locator: Ignored-inclusive local discovery, current linked authorities and bounded
+    original-paper retrieval
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: Hidden and gitignored files were included in the local evidence/owner search.
+    Exact source rows and all adopted publication leads were assessed. Access failures,
+    login pages and HTML challenges were not treated as read full texts or chemical
+    structures.
+  search_scope: '2026-10-21: rg --no-ignore --hidden using exact compound names, native
+    identifier and molecular key over repository data, curation, conf, scripts, src,
+    docs, reviews and reports; direct official linked authorities, EuropePMC metadata/full
+    text and free publisher routes. Broader searches were discovery only, not an exhaustive
+    absence claim.'
+  snapshot_sha256: a72372c5182a38f8f9acd18892e3a295b1efbf26c9b490558807f42ce8bf6d58
+- evidence_id: xrefs
+  kind: authority
+  reference: CAS:141-97-9; ChemSpider:13865426; KEGG:C03500; PDB-CCD:EAC
+  locator: NIST identity section, ChemSpider JSON-LD, KEGG record/molfile and complete
+    CCD JSON
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: NIST and ChemSpider give the exact native keto-form InChI/key, and KEGG/CCD
+    graphs independently match. Historical aliases including diacetic ether are authority-attested.
+    FooDBFDB003241 and HMDB0031216 returned403; MetaCyc served a login page, not a
+    chemical record; Reaxys385838 was not independently read. Wikipedia and REST routes
+    returned429. These access limits do not prove wrong links.
+  snapshot_sha256: e6f6b5bea764355eb2b6d0537384c5a2a0d52af6926d59c72917a58c49d4484c
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:15084322;1521830;16233006;23142514;24010347;25558982;26521683;29341217;30890485;31193366
+  locator: Nine complete indexed abstracts and metadata for the no-abstract safety
+    item
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: 15084322 concerns solvent-dependent keto/enol equilibrium;1521830 rat feeding
+    toxicology;16233006 and23142514 microbial enzymatic reduction of EAA as a substrate;24010347
+    analytical separation;25558982 synthesis of ELQ300 from EAA, not antimalarial
+    activity of EAA;26521683 NMR/enol chemistry;31193366 physical properties of ionic-liquid
+    mixtures.30890485 has no indexed abstract and its safety conclusion was not inferred
+    from title alone.29341217 directly distinguishes acetoacetic acid from its ethyl
+    ester and is assessed separately.
+  snapshot_sha256: 537e2ced5a0aab7a8d31da6d811d53abb3a6c1652bfcd8da546f6ca6043ff114
+- evidence_id: original2018
+  kind: primary_source
+  reference: PMID:29341217; DOI:10.1111/lam.12852
+  locator: Complete original indexed abstract only
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: The paper separately tests acetoacetic acid and ethyl acetoacetate. EAA
+    reduces bacterial growth, biofilm and viable counts, with abstract IC50 range0.31–5.76
+    mg/mL and up to three-log viable-count reduction. These are not MICs. The Yersinia
+    flhD/inv/yadA expression result belongs to acetoacetic acid and is not transferred
+    to EAA. Publisher routes were inaccessible, so exact EAA strain-by-strain assay
+    conditions remain unverified.
+  snapshot_sha256: cd98b5dd601f36851f63c3e16872dbe7acb35074f4c6ef7d0c8baf266cd36688
+- evidence_id: extra
+  kind: primary_source
+  reference: PMID:33920266;33876098;32562527;9615478;9301121;7370749
+  locator: Six additional current citation abstracts fully read
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: 33920266 is the heating/antibacterial study examined below;33876098 concerns
+    computational tautomer chemistry;32562527 substituted pyrazole products synthesized
+    using EAA, not EAA’s intrinsic activity;9615478 and9301121 use EAA as a microbial
+    biotransformation substrate;7370749 concerns a rat olfactory tracer. None of these
+    indirect contexts is promoted to an exact EAA bacterial molecular target.
+  snapshot_sha256: d9bb4b9c9a47edc19f72ef02f87af4c22c72856fd7f930e940050820ad52cd46
+- evidence_id: heating
+  kind: primary_source
+  reference: PMID:33920266; DOI:10.3390/antibiotics10040418; PMC8069388; https://pmc.ncbi.nlm.nih.gov/articles/PMC8069388/
+  locator: Original Results2.2–2.3 and Methods4.1–4.3, plus actual PDF Table3 p6
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: Alfa Aesar EAA was compared unheated and after73.9/93.3°C heating. The
+    study tests E. coli O157:H7 EDL932 and S. Typhimurium FSLR6-0020 in1% beef broth,30°C,24-hour
+    OD600 growth and colony-count reduction, with four experiments. Growth inhibition
+    and99.9% viable-count reduction are distinct MIC/MBC endpoints. Antimicrobial
+    tables/body print mmol/mL, while GC-MS preparation and standards use micromol/mL.
+    Table3 visibly prints mmol/mL and concentrations15.6–46.8; this cannot be silently
+    corrected or converted into a reliable native numeric observation. The source
+    still reports qualitative growth/viability effects, without establishing a direct
+    protein target.
+  snapshot_sha256: 5195fbfae6c4603085b43d49efb596cc12722619bac7899e5b5253e246c836d3
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB public catalog
+  locator: Actual catalog inspected before mechanism follow-up
+  accessed_at: '2026-10-21T15:45:14Z'
+  support: supports
+  summary: No exact direct bacterial gene/protein mechanism is asserted or established
+    for EAA. The acid’s Yersinia transcription observations and enzymes using EAA
+    as a substrate are not EAA targets; no inapplicable component query or target
+    was invented.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Keto-form identity and linked chemical concepts
+  outcome: supported
+  summary: All independently parsed accessible encodings match. Solution tautomerism
+    is distinguished from a contradiction in the stored graph. The FooDB namespace
+    transformation is a documented seeder normalization.
+  target_ids:
+  - CHEBI:4893
+  evidence_ids:
+  - native
+  - chemistry
+  - authority
+  - owners
+  - xrefs
+- assessment_id: activity
+  area: evidence
+  topic: Exact ester activity and source-unit ambiguity
+  outcome: supported
+  summary: The2018 original abstract and2021 exact-material experiments support antibacterial
+    eligibility. Their endpoints differ, and the2021 concentration units remain unresolved.
+    There is no native numerical result to correct.
+  target_ids:
+  - CHEBI:4893
+  evidence_ids:
+  - original2018
+  - heating
+  - adopted
+- assessment_id: mechanism
+  area: evidence
+  topic: Acid versus ester and synthetic products
+  outcome: unknown
+  summary: No exact EAA molecular bacterial target was established. Acetoacetic-acid
+    transcription, synthetic product activity and biocatalytic consumption of EAA
+    cannot supply one.
+  target_ids:
+  - CHEBI:4893
+  evidence_ids:
+  - adopted
+  - extra
+  - original2018
+  - adapter
+- assessment_id: coverage
+  area: completeness
+  topic: Optional biological fields and record status
+  outcome: supported
+  summary: Absent optional quantitative activity, mechanism, resistance, producer,
+    clinical, graph and dataset fields are not automatic defects in this SEEDED record.
+    Useful exact primary leads are documented without treating this review as native
+    curation or biological sign-off.
+  target_ids:
+  - CHEBI:4893
+  evidence_ids:
+  - native
+  - adopted
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Adopted leads, generated ownership and immutable source capture
+  outcome: supported
+  summary: Every native field and all ten adopted lead dispositions were covered at
+    the stated reading depth. Focused schema, strict and chemistry checks pass, and
+    all fourteen captured source inputs remain unchanged.
+  target_ids:
+  - CHEBI:4893
+  evidence_ids:
+  - owners
+  - native
+  - chemistry
+  - search
+findings: []
+actions: []
+limitations:
+- Nine adopted abstracts were available and read; PMID30890485 has no abstract. The2018
+  publisher routes returned403, so only its full abstract supports the bounded activity
+  statement. All six additional current abstracts were read.
+- The2021 main paper was read at the stated Results/Methods scope and actual Table3
+  was viewed; a complete supplementary audit or safety evaluation was not performed.
+  Its antimicrobial concentration units conflict with preparation units and are physically
+  problematic as printed. No corrected unit is guessed.
+- FooDB and HMDB returned403, MetaCyc returned a login page, Reaxys was not independently
+  accessible, and Wikipedia routes returned429. Exact graph agreement for other linked
+  authorities does not certify those unread records.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native or source file was modified. Independent chemistry used the existing batch019
+  interpreter against the batch042 records; focused schema and strict gates used the
+  batch042 environment.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
