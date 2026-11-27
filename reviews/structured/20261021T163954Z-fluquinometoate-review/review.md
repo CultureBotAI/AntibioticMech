@@ -1,0 +1,639 @@
+# Review of fluquinometoate
+
+- Review: 20261021T163954Z-fluquinometoate-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T16:22:20Z
+- Finished UTC: 2026-10-21T16:39:54Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The native graph agrees with current ChEBI, BCPC, PubChem and the original patent compound 152. The patent reports exact 152 growth inhibition and formulation field disease control, supporting the bounded agricultural antibacterial description. These endpoints do not establish an MIC, bactericidal killing mechanism or a particular molecular target. No corrective finding is established; independent Reaxys identity and development-code confirmation remain limited. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole SEEDED, EXACT fluquinometoate record: definition, six exact synonyms, six parents, antibacterial role, all chemical fields, three registry/document links, source concept and all three histories; original exact-compound patent activity and identity boundaries.
+
+Selection: Queue 451 in isolated batch 046. Original 13 input hashes preserved and source-lead queue appended before assessment, giving 14 unchanged inputs.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:231921 | data/antibiotics/antibacterial/fluquinometoate.yaml | generated | fluquinometoate |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native chemistry | passed | False | CHEBI:231921 | Actual focused exit 0; source scope is assessed separately. |
+| Native schema | passed | True | CHEBI:231921 | Actual focused exit 0; source scope is assessed separately. |
+| Native strict | passed | True | CHEBI:231921 | Actual focused exit 0; source scope is assessed separately. |
+| Independent official structure comparison | passed | False | CHEBI:231921 | Six encodings agree without tautomer or stereo normalization; original patent drawing independently matches. |
+| Source, term, reference and history ledger | passed | False | CHEBI:231921 | All 14 input hashes and initial 13 are preserved; six synonyms, all source fields and three ordered histories accounted for; zero adopted citation leads. |
+| Authoritative full QC | failed | True | CHEBI:231921 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:231921 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:231921 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:231921 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:231921 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:231921 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:231921 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:231921 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:231921 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral compound
+
+identity: supported. Targets: CHEBI:231921.
+
+Native graph, independent official structures and original152 drawing agree; no salt, hydrolysis product, mixture or family member is substituted.
+
+### Parents, role and qualitative definition
+
+grounding: supported. Targets: CHEBI:231921.
+
+Six strictly broader classes match the exact graph. Original exact 152 tests support bounded agricultural bacterial growth inhibition and disease control; bactericide is an official use class rather than proof of an MBC endpoint.
+
+### Remaining registry and code limits
+
+grounding: unknown. Targets: CHEBI:231921.
+
+Reaxys is repeated by current ChEBI but independently inaccessible. LH363 aliases are source-supported without an independently verified original code assignment. No contradictory identity is established.
+
+### Exact potency scope
+
+quantity: unknown. Targets: CHEBI:231921.
+
+Patent percentages at fixed ppm and formulation field-control percentages cannot be silently converted into an MIC or strain-resolved resistance observation. No such native quantities are asserted.
+
+### Molecular mechanism
+
+evidence: unknown. Targets: CHEBI:231921.
+
+No native target is asserted and the inspected exact 152 experiments do not establish a molecular target. Fluoroquinolone-like chemistry alone does not establish gyrase inhibition.
+
+### Source and history consistency
+
+ownership: supported. Targets: CHEBI:231921.
+
+The adopted ChEBI lane and all chronological histories agree; original input hashes remain intact.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/fluquinometoate.yaml; Entire native YAML | supports | Neutral exact fluquinometoate, with six systematic/development-code synonyms and three references. No clinical, MIC, producer, molecular-target, resistance or causal-graph assertion is present. |
+| chemistry | CHEBI:231921; PubChem CID141763755; original patent compound152; 451-authority-chemistry.json;451-chebi.mol;451-pubchem-name.json;451-patent-page21.png | supports | Six native/current ChEBI/PubChem encodings give C16H15ClFNO4, charge 0 and JXNYQAJFIFYARB-UHFFFAOYSA-N with reciprocal chiral graph matches. Original patent printed p20 Example 5 graph visibly matches the N-cyclopropyl,6-fluoro, 7-chloro and2-methoxyethyl 3-carboxylate substituents. There are no configured or unresolved tetrahedral centers. Average-mass 339.75 versus 339.74 reflects atomic-weight precision, not a different structure. |
+| authority | CHEBI:231921 and six parent/one role terms; 451-chebi.json;451-chebi-23765/25698/33308/36683/37143/51454/33282.json | supports | All source fields and six aliases are reproduced by current ChEBI. Quinolone, ether, carboxylic ester, organochlorine, organofluorine and cyclopropane classes match distinct native graph features and are strictly broader. Antibacterial-agent definition includes growth slowing. LH363 spacing/hyphen variants remain current ChEBI-supported codes; no independent original code assignment was verified. |
+| bcpc | BCPC Pesticide Compendium fluquinometoate; https://pesticidecompendium.bcpc.org/fluquinometoate.html; complete datasheet | supports | Official compendium gives the identical formula, InChI/key, CAS 2408468-30-2 and three systematic names, and classifies the substance as a bactericide. Its ISO common-name approval describes nomenclature, not regulatory registration. |
+| patent-identity | US20220220076A1; Original PDF printedp20, Example5 paragraphs0134–0136; structure visually inspected at PDFpage21 | supports | Patent assigned to Shandong United Pesticide Industry Co Ltd synthesizes exact compound 152 from the matching carbonyl chloride and 2-methoxyethanol, reporting 88% yield and [M+H]+ 340.08. Name and original drawing independently map to the native graph. The patent itself uses the number152, so this identity mapping rests on structure rather than an assumed LH363 code. |
+| patent-activity | US20220220076A1; Example19, printedpp34–35 paragraphs0203–0215; field methods/Table2–4 printedp40, visually inspected PDFpage41 | supports | The in-vitro method uses NB medium, log-phase inoculum, four replicates, 25°C dark shaking and OD growth measurement. Exact152 is listed with at least 90% inhibition at 1 ppm for cucumber angular leaf spot, tobacco wilt and potato black-shank pathogen tests. The inspected methods name disease-associated bacteria without exact strain identifiers; these are growth-inhibition percentages, not an MIC or MBC. In 2019 field tests,152 as 10% dispersible granules at 16.87/33.75 g active ingredient per hectare gives 86/96% Chinese-cabbage, 82/93% wild-cabbage and 79/90% lettuce soft-rot control. These are formulation disease-control endpoints, not purified-compound MICs or target assays. |
+| owners | Maintained ChEBI extraction and seeding lane; 451-raw-rows.json;451-source-audit.json;extract_source_inventory.py ChEBI mapping;seed_from_sources.py | supports | The frozen CHEBI:231921 row reproduces the native fields. There are zero adopted PMIDs. Six exact synonyms, three xrefs, six parents, role, structure and three chronological seeded/reseeded histories are accounted for. All 14 input hashes, including original13, remain unchanged. |
+| validation | Focused checks; 451-focused-results.json;451-chemistry.json;451-schema.log;451-strict.log;451-ledger.log | supports | Native chemistry, schema and strict terms all exit 0. Independent graph comparison and final source ledger also exit 0; these checks do not assert mechanism or REVIEWED status. |
+| access | Bounded public evidence investigation; 451-local-hits.txt ignored-inclusive local search;451-fetch1/2.json;451-search-core.json | context_only | Exact-key PubChem request returned 404, but the name endpoint returned an independently matching CID. Reaxys returned 403; CommonChemistry produced application HTML and its API 401, so no independent CAS record was read. BCPC independently verifies the CAS association. EuropePMC search returns an unrelated maize LH363 patent cluster and a 2026 pesticide review; those are not original exact-compound assays. The full patent was downloaded; selected exact synthesis/activity sections and original figures were read, not every genus compound or claim. |
+
+## Limits And Additional Notes
+
+- Independent Reaxys 34759041 mapping and primary LH363 development-code assignment remain unresolved. CAS identity is corroborated by BCPC, while the CAS registry endpoint itself was not readable.
+- Primary activity evidence inspected is a patent, with disease-associated pathogen descriptions and fixed-concentration OD inhibition rather than strain-resolved MIC/MBC data. Field results concern a 10% formulation.
+- No exact molecular target, causal mechanism or clinical use is established by these sources. No family-based mechanism is adopted.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Standalone chemistry used the batch 019 interpreter against batch 046; native schema/strict, ledger and contract use batch 046.
+- No native gene, protein or pathway assertion required a structured adapter query.
+- No native/source bytes or scientific status were changed; absent optional fields are not treated as defects.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T163954Z-fluquinometoate-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of fluquinometoate
+started_at: '2026-10-21T16:22:20Z'
+finished_at: '2026-10-21T16:39:54Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Entire native record and maintained input row read; original
+    hashes preserved; official chemical graphs independently compared; original patent
+    structure and exact-compound assay sections checked separately from source-database
+    labels.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Exact chemical identity and bounded agricultural antibacterial use
+  supported; independent registry and mechanism limits remain
+scientific_review: true
+summary: The native graph agrees with current ChEBI, BCPC, PubChem and the original
+  patent compound 152. The patent reports exact 152 growth inhibition and formulation
+  field disease control, supporting the bounded agricultural antibacterial description.
+  These endpoints do not establish an MIC, bactericidal killing mechanism or a particular
+  molecular target. No corrective finding is established; independent Reaxys identity
+  and development-code confirmation remain limited. Scientific assessment retains
+  the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/fluquinometoate.yaml
+    sha256: 83c27747569cc4ff67d12e9ebdb2ee4e0d80a82c75af5914f0f376cf020f16ad
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+scope:
+  description: 'Whole SEEDED, EXACT fluquinometoate record: definition, six exact
+    synonyms, six parents, antibacterial role, all chemical fields, three registry/document
+    links, source concept and all three histories; original exact-compound patent
+    activity and identity boundaries.'
+  selection: Queue 451 in isolated batch 046. Original 13 input hashes preserved and
+    source-lead queue appended before assessment, giving 14 unchanged inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:231921
+targets:
+- target_id: CHEBI:231921
+  path: data/antibiotics/antibacterial/fluquinometoate.yaml
+  label: fluquinometoate
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: chemistry
+  name: Native chemistry
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    451
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual focused exit 0; source scope is assessed separately.
+  target_ids:
+  - CHEBI:231921
+  evidence_ids:
+  - validation
+- check_id: schema
+  name: Native schema
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/fluquinometoate.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual focused exit 0; source scope is assessed separately.
+  target_ids:
+  - CHEBI:231921
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Native strict
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/fluquinometoate.yaml --out /private/tmp/am-review-session/451-strict.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual focused exit 0; source scope is assessed separately.
+  target_ids:
+  - CHEBI:231921
+  evidence_ids:
+  - validation
+- check_id: authority
+  name: Independent official structure comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/451-authority-check.py
+    > /private/tmp/am-review-session/451-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Six encodings agree without tautomer or stereo normalization; original
+    patent drawing independently matches.
+  target_ids:
+  - CHEBI:231921
+  evidence_ids:
+  - chemistry
+- check_id: ledger
+  name: Source, term, reference and history ledger
+  command: .venv/bin/python /private/tmp/am-review-session/451-ledger.py > /private/tmp/am-review-session/451-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All 14 input hashes and initial 13 are preserved; six synonyms, all source
+    fields and three ordered histories accounted for; zero adopted citation leads.
+  target_ids:
+  - CHEBI:231921
+  evidence_ids:
+  - owners
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:231921
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:231921
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:231921
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:231921
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:231921
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:231921
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:231921
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:231921
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:231921
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/fluquinometoate.yaml
+  locator: Entire native YAML
+  accessed_at: '2026-10-21T16:28:21Z'
+  support: supports
+  summary: Neutral exact fluquinometoate, with six systematic/development-code synonyms
+    and three references. No clinical, MIC, producer, molecular-target, resistance
+    or causal-graph assertion is present.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:231921; PubChem CID141763755; original patent compound152
+  locator: 451-authority-chemistry.json;451-chebi.mol;451-pubchem-name.json;451-patent-page21.png
+  accessed_at: '2026-10-21T16:28:21Z'
+  support: supports
+  summary: Six native/current ChEBI/PubChem encodings give C16H15ClFNO4, charge 0
+    and JXNYQAJFIFYARB-UHFFFAOYSA-N with reciprocal chiral graph matches. Original
+    patent printed p20 Example 5 graph visibly matches the N-cyclopropyl,6-fluoro,
+    7-chloro and2-methoxyethyl 3-carboxylate substituents. There are no configured
+    or unresolved tetrahedral centers. Average-mass 339.75 versus 339.74 reflects
+    atomic-weight precision, not a different structure.
+  snapshot_sha256: 6a4bc26a72b58f50794b8472bb31edbfdc28c45740bcac2cb58384d8eb865ac8
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:231921 and six parent/one role terms
+  locator: 451-chebi.json;451-chebi-23765/25698/33308/36683/37143/51454/33282.json
+  accessed_at: '2026-10-21T16:23:08.907880Z'
+  support: supports
+  summary: All source fields and six aliases are reproduced by current ChEBI. Quinolone,
+    ether, carboxylic ester, organochlorine, organofluorine and cyclopropane classes
+    match distinct native graph features and are strictly broader. Antibacterial-agent
+    definition includes growth slowing. LH363 spacing/hyphen variants remain current
+    ChEBI-supported codes; no independent original code assignment was verified.
+  snapshot_sha256: e3c004fe4187b09672a3f4f1829163fa9cbd427b406d24207d1cff6f42c23207
+- evidence_id: bcpc
+  kind: authority
+  reference: BCPC Pesticide Compendium fluquinometoate
+  locator: https://pesticidecompendium.bcpc.org/fluquinometoate.html; complete datasheet
+  accessed_at: '2026-10-21T16:23:08.908470Z'
+  support: supports
+  summary: Official compendium gives the identical formula, InChI/key, CAS 2408468-30-2
+    and three systematic names, and classifies the substance as a bactericide. Its
+    ISO common-name approval describes nomenclature, not regulatory registration.
+  snapshot_sha256: 0e57db66df9ec0dbfe58beda37f58f17fddc6d6e23d097f81e6fe3913dff2678
+- evidence_id: patent-identity
+  kind: primary_source
+  reference: US20220220076A1
+  locator: Original PDF printedp20, Example5 paragraphs0134–0136; structure visually
+    inspected at PDFpage21
+  accessed_at: '2026-10-21T16:23:35.859243Z'
+  support: supports
+  summary: Patent assigned to Shandong United Pesticide Industry Co Ltd synthesizes
+    exact compound 152 from the matching carbonyl chloride and 2-methoxyethanol, reporting
+    88% yield and [M+H]+ 340.08. Name and original drawing independently map to the
+    native graph. The patent itself uses the number152, so this identity mapping rests
+    on structure rather than an assumed LH363 code.
+  snapshot_sha256: 874dd595367ff5ed3731cb19baa91d19c1bc37598406d812568bb01fde641567
+- evidence_id: patent-activity
+  kind: primary_source
+  reference: US20220220076A1
+  locator: Example19, printedpp34–35 paragraphs0203–0215; field methods/Table2–4 printedp40,
+    visually inspected PDFpage41
+  accessed_at: '2026-10-21T16:23:35.859243Z'
+  support: supports
+  summary: The in-vitro method uses NB medium, log-phase inoculum, four replicates,
+    25°C dark shaking and OD growth measurement. Exact152 is listed with at least
+    90% inhibition at 1 ppm for cucumber angular leaf spot, tobacco wilt and potato
+    black-shank pathogen tests. The inspected methods name disease-associated bacteria
+    without exact strain identifiers; these are growth-inhibition percentages, not
+    an MIC or MBC. In 2019 field tests,152 as 10% dispersible granules at 16.87/33.75
+    g active ingredient per hectare gives 86/96% Chinese-cabbage, 82/93% wild-cabbage
+    and 79/90% lettuce soft-rot control. These are formulation disease-control endpoints,
+    not purified-compound MICs or target assays.
+  snapshot_sha256: 874dd595367ff5ed3731cb19baa91d19c1bc37598406d812568bb01fde641567
+- evidence_id: owners
+  kind: database
+  reference: Maintained ChEBI extraction and seeding lane
+  locator: 451-raw-rows.json;451-source-audit.json;extract_source_inventory.py ChEBI
+    mapping;seed_from_sources.py
+  accessed_at: '2026-10-21T16:28:21Z'
+  support: supports
+  summary: The frozen CHEBI:231921 row reproduces the native fields. There are zero
+    adopted PMIDs. Six exact synonyms, three xrefs, six parents, role, structure and
+    three chronological seeded/reseeded histories are accounted for. All 14 input
+    hashes, including original13, remain unchanged.
+  snapshot_sha256: 98fb1e0e811560afcb9ff7484f7f45121ebe8eafee96df765741620a4c706a2c
+- evidence_id: validation
+  kind: validation
+  reference: Focused checks
+  locator: 451-focused-results.json;451-chemistry.json;451-schema.log;451-strict.log;451-ledger.log
+  accessed_at: '2026-10-21T16:28:21Z'
+  support: supports
+  summary: Native chemistry, schema and strict terms all exit 0. Independent graph
+    comparison and final source ledger also exit 0; these checks do not assert mechanism
+    or REVIEWED status.
+  snapshot_sha256: 1bdc18463344728214cfccb89af91ac8cf43ade884a3a207c32c8fed28975006
+- evidence_id: access
+  kind: search
+  reference: Bounded public evidence investigation
+  locator: 451-local-hits.txt ignored-inclusive local search;451-fetch1/2.json;451-search-core.json
+  accessed_at: '2026-10-21T16:28:21Z'
+  support: context_only
+  summary: Exact-key PubChem request returned 404, but the name endpoint returned
+    an independently matching CID. Reaxys returned 403; CommonChemistry produced application
+    HTML and its API 401, so no independent CAS record was read. BCPC independently
+    verifies the CAS association. EuropePMC search returns an unrelated maize LH363
+    patent cluster and a 2026 pesticide review; those are not original exact-compound
+    assays. The full patent was downloaded; selected exact synthesis/activity sections
+    and original figures were read, not every genus compound or claim.
+  snapshot_sha256: a30985a3a18eed04a12fffe9a7ad2ee9be90c89a57ce536ac3111f8e5218ff9d
+  search_scope: 451-local-hits.txt ignored-inclusive local search;451-fetch1/2.json;451-search-core.json
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral compound
+  outcome: supported
+  summary: Native graph, independent official structures and original152 drawing agree;
+    no salt, hydrolysis product, mixture or family member is substituted.
+  target_ids:
+  - CHEBI:231921
+  evidence_ids:
+  - record
+  - chemistry
+  - patent-identity
+  - bcpc
+- assessment_id: grounding
+  area: grounding
+  topic: Parents, role and qualitative definition
+  outcome: supported
+  summary: Six strictly broader classes match the exact graph. Original exact 152
+    tests support bounded agricultural bacterial growth inhibition and disease control;
+    bactericide is an official use class rather than proof of an MBC endpoint.
+  target_ids:
+  - CHEBI:231921
+  evidence_ids:
+  - authority
+  - bcpc
+  - patent-activity
+- assessment_id: registry
+  area: grounding
+  topic: Remaining registry and code limits
+  outcome: unknown
+  summary: Reaxys is repeated by current ChEBI but independently inaccessible. LH363
+    aliases are source-supported without an independently verified original code assignment.
+    No contradictory identity is established.
+  target_ids:
+  - CHEBI:231921
+  evidence_ids:
+  - authority
+  - access
+- assessment_id: quantity
+  area: quantity
+  topic: Exact potency scope
+  outcome: unknown
+  summary: Patent percentages at fixed ppm and formulation field-control percentages
+    cannot be silently converted into an MIC or strain-resolved resistance observation.
+    No such native quantities are asserted.
+  target_ids:
+  - CHEBI:231921
+  evidence_ids:
+  - patent-activity
+  - record
+- assessment_id: mechanism
+  area: evidence
+  topic: Molecular mechanism
+  outcome: unknown
+  summary: No native target is asserted and the inspected exact 152 experiments do
+    not establish a molecular target. Fluoroquinolone-like chemistry alone does not
+    establish gyrase inhibition.
+  target_ids:
+  - CHEBI:231921
+  evidence_ids:
+  - patent-activity
+  - record
+- assessment_id: ownership
+  area: ownership
+  topic: Source and history consistency
+  outcome: supported
+  summary: The adopted ChEBI lane and all chronological histories agree; original
+    input hashes remain intact.
+  target_ids:
+  - CHEBI:231921
+  evidence_ids:
+  - owners
+  - validation
+findings: []
+actions: []
+limitations:
+- Independent Reaxys 34759041 mapping and primary LH363 development-code assignment
+  remain unresolved. CAS identity is corroborated by BCPC, while the CAS registry
+  endpoint itself was not readable.
+- Primary activity evidence inspected is a patent, with disease-associated pathogen
+  descriptions and fixed-concentration OD inhibition rather than strain-resolved MIC/MBC
+  data. Field results concern a 10% formulation.
+- No exact molecular target, causal mechanism or clinical use is established by these
+  sources. No family-based mechanism is adopted.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Standalone chemistry used the batch 019 interpreter against batch 046; native schema/strict,
+  ledger and contract use batch 046.
+- No native gene, protein or pathway assertion required a structured adapter query.
+- No native/source bytes or scientific status were changed; absent optional fields
+  are not treated as defects.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:231921
+- https://pesticidecompendium.bcpc.org/fluquinometoate.html
+- https://pubchem.ncbi.nlm.nih.gov/compound/141763755
+- https://patents.google.com/patent/US20220220076A1/en
+tags:
+- record-review
+- fluquinometoate
+- agricultural-bactericide
+```

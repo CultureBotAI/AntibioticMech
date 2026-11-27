@@ -1,0 +1,620 @@
+schema_version: 1.0.0
+review_id: 20261021T163959Z-flurithromycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of flurithromycin
+started_at: '2026-10-21T16:22:22Z'
+finished_at: '2026-10-21T16:39:59Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Entire native record and maintained row read, original input
+    hashes preserved, nine chemical encodings independently compared with chirality-aware
+    mapping, original structure drawings and selected exact-compound experiments inspected,
+    and all adopted literature leads individually disposed.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Exact free-base identity and bounded antibacterial/drug context supported;
+  independent registry, code and mechanism limits remain
+scientific_review: true
+summary: The native (8S)-8-fluoroerythromycin A structure agrees with nine native
+  and official authority encodings and original drawings. Original precursor-fed mutasynthesis
+  and semisynthesis support the derivative classification; primary antibacterial studies
+  support activity. Clinical ethylsuccinate studies are kept distinct from the free-base
+  structure, as the definition already does. No corrective finding is established.
+  Some development-code spelling, Reaxys identity and full primary mechanism methods
+  remain unresolved. Scientific assessment retains the stated evidence limits; full
+  verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/flurithromycin.yaml
+    sha256: fdaca7bac0c870586062e47c5069721bd5ea393e005d81d6a94d494ee1462219
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+scope:
+  description: 'Entire SEEDED, EXACT flurithromycin record: definition, ten synonyms,
+    four parents, two roles, all chemical fields, chemical/drug/document references,
+    source concept and four histories; all ten adopted literature leads and relevant
+    exact-form primary evidence.'
+  selection: Queue 452 in isolated batch 046. Initial 13 hashes preserved; actual
+    source-lead queue appended before detailed assessment, giving 14 unchanged inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:131719
+targets:
+- target_id: CHEBI:131719
+  path: data/antibiotics/antibacterial/flurithromycin.yaml
+  label: flurithromycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: chemistry
+  name: Native chemistry
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    452
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual focused exit 0; scientific claim support assessed separately.
+  target_ids:
+  - CHEBI:131719
+  evidence_ids:
+  - validation
+- check_id: schema
+  name: Native schema
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/flurithromycin.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual focused exit 0; scientific claim support assessed separately.
+  target_ids:
+  - CHEBI:131719
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Native strict
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/flurithromycin.yaml --out /private/tmp/am-review-session/452-strict.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual focused exit 0; scientific claim support assessed separately.
+  target_ids:
+  - CHEBI:131719
+  evidence_ids:
+  - validation
+- check_id: authority
+  name: Independent exact stereochemical comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/452-authority-check.py
+    > /private/tmp/am-review-session/452-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Nine encodings agree by Standard InChIKey and reciprocal chiral graph mapping,
+    retaining 18 configured centers.
+  target_ids:
+  - CHEBI:131719
+  evidence_ids:
+  - chemistry
+- check_id: ledger
+  name: Source, lead and history ledger
+  command: .venv/bin/python /private/tmp/am-review-session/452-ledger.py > /private/tmp/am-review-session/452-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All 14 hashes and original 13 remain unchanged; ten adopted MED records,
+    all source fields and four chronological events are accounted for.
+  target_ids:
+  - CHEBI:131719
+  evidence_ids:
+  - owners
+- check_id: adapter
+  name: Structured source dataset check
+  command: .venv/bin/python /private/tmp/am-review-session/452-adapter.py
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual dataset call exits 0. No H. influenzae dataset is listed, so the
+    exact mechanism follow-up has no matched iModulon context.
+  target_ids:
+  - CHEBI:131719
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:131719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:131719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:131719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:131719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:131719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:131719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:131719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:131719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:131719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/flurithromycin.yaml
+  locator: Entire native YAML
+  accessed_at: '2026-10-21T16:33:21Z'
+  support: supports
+  summary: Exact neutral flurithromycin is distinguished in the definition from its
+    monoethylsuccinate derivative. No native MIC, protein target, resistance, clinical
+    assertion object, producer or causal graph is present.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:131719; PubChem CID71260; KEGG D07242; DrugCentral1221
+  locator: 452-authority-chemistry.json;452-chebi.mol;452-kegg.mol;452-drugcentral.mol;452-pubchem-key.json
+  accessed_at: '2026-10-21T16:33:21Z'
+  support: supports
+  summary: Native SMILES/InChI, current ChEBI SMILES/molfile, PubChem SMILES/InChI,
+    KEGG molfile and DrugCentral molfile/InChI agree on C37H66FNO13, charge 0 and
+    XOEUHCONYHZURQ-HNUBZJOYSA-N. All 18 tetrahedral centers match by reciprocal chirality-aware
+    graph comparison; the fluorinated carbon is S. No ester or salt component is part
+    of this graph.
+  snapshot_sha256: 0be8edb3e906debed7307b9584408fb3f579300d576d91745daf07cb7aaa3af3
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:131719 and four parent/two role terms
+  locator: 452-chebi.json;452-chebi-37143/3992/48924/72588/33281/36047.json
+  accessed_at: '2026-10-21T16:29:16.631104Z'
+  support: supports
+  summary: Current ChEBI preserves the identity and names. A carbon-fluorine bond,
+    ring ketone, erythromycin scaffold and documented partial chemical synthesis support
+    all four broader parents. Antimicrobial-agent and antibacterial-drug roles are
+    compatible with the exact primary activity and qualified clinical context. Source-attributed
+    French, Latin and Spanish INNs are distinct from generic exact synonyms.
+  snapshot_sha256: 71dcd2c2227a6457acb5c059ae6f6bc75c44c7f3b72280a7ebeb24fcb52cf45f
+- evidence_id: original-identity
+  kind: primary_source
+  reference: DOI:10.7164/antibiotics.36.1439
+  locator: 452-original1983.pdf, selected pp1439–1442 and1447–1448; Scheme1 p1440
+    visually inspected
+  accessed_at: '2026-10-21T16:31:09.821134Z'
+  support: supports
+  summary: The original study chemically prepares fluorinated precursors and feeds
+    them to blocked S. erythraeus ATCC 31772. It isolates exact (8S)-8-fluoroerythromycin
+    A as IV, separately from C as VI and B/D products. IV has C37H66FNO13 and [M+H]+
+    752. A solution-dependent, reversible fluoroketone/6,9-hemiketal equilibrium is
+    described; the supported native ketone representation is not thereby a mistaken
+    congener. Mutasynthesis does not imply unmodified natural fluorinated production.
+  snapshot_sha256: 670bed443aae869df193f9db580e8983c281acbdfc915afd90a2853d001029c7
+- evidence_id: original-activity
+  kind: primary_source
+  reference: DOI:10.7164/antibiotics.36.1439
+  locator: 452-original1983.pdf, IV column Tables2–4 pp1444–1445 and antimicrobial
+    methods p1448; Tables3/4 visually inspected
+  accessed_at: '2026-10-21T16:31:09.821134Z'
+  support: supports
+  summary: Exact IV has antibacterial activity with strain- and method-dependent MIC/MBC
+    values. For S. aureus ATCC 6538P the agar MIC is 0.097 µg/mL, broth MIC 0.195
+    µg/mL and MBC 3.12 µg/mL. Erythromycin-resistant strains in the agar panel remain
+    above 25 µg/mL. The methods use Mueller-Hinton conditions with organism-specific
+    supplements/media and further antibiotic-free subculture for MBC. These data support
+    activity, not universal bactericidal efficacy or a protein-binding mechanism.
+    No native MIC is added.
+  snapshot_sha256: 670bed443aae869df193f9db580e8983c281acbdfc915afd90a2853d001029c7
+- evidence_id: patent
+  kind: primary_source
+  reference: US4673736A
+  locator: 452-US4673736A.pdf, synthesis discussion and exact A examples
+  accessed_at: '2026-10-21T16:30:20.523736Z'
+  support: supports
+  summary: Original patent describes conversion of erythromycin A through the anhydro
+    hemiketal to (8S)-8-fluoroerythromycin A, supporting the semisynthetic class.
+    Its separate A/B/C/D substitutions are not conflated. No legal-status or approval
+    inference is made.
+  snapshot_sha256: 3796dd795a0ef7911e48b06eef4fef68f6884d118a04498f27e41f74dcfcfc3b
+- evidence_id: host
+  kind: primary_source
+  reference: PMID:3084433; PMID:3733532
+  locator: 452-original1986-463.pdf and452-original1986-839.pdf; introductions, methods
+    and selected Results; original Fig1 p839 visually inspected
+  accessed_at: '2026-10-21T16:29:40.684637Z'
+  support: supports
+  summary: Both original papers identify P-0501A as (8S)-8-fluoroerythromycin A; the
+    latter labels it flurithromycin and shows the matching free-base structure. Seven-day
+    rat dosing, liver microsomal activities and perfused-liver clearance concern host
+    pharmacology. Their cytochrome P450 effects are not a bacterial molecular target
+    or a human safety guarantee.
+  snapshot_sha256: 4379cfa0152fd07e0ed595255a56cbf04061b79642439e63235c0f4443e8eac3
+- evidence_id: adopted
+  kind: primary_source
+  reference: Ten adopted PMID records
+  locator: 452-adopted-core.json; individual read-depth/disposition in452-source-audit.json
+  accessed_at: '2026-10-21T16:29:18.848328Z'
+  support: supports
+  summary: All ten MED records were resolved. Original abstracts cover H. pylori agar
+    dilution/PAE (11165121), respiratory/anaerobic panels and serum effects (1452490),
+    adjunct periodontal treatment (15216949), tonsil exposure (2722307), early antibacterial/neutrophil
+    studies (3487389) and genital-tissue exposure (7486945). The liver papers 3084433/3733532
+    and tissue paper 3245699 were inspected beyond abstracts. 10783037 is a nephritis
+    case-report title with no abstract; no unsupported case details are adopted.
+  snapshot_sha256: 7dbb08ae9e2810a90c8e928d7faabc915b8e357c2f87f0c093bde65fa3616e39
+- evidence_id: human
+  kind: primary_source
+  reference: PMID:3245699
+  locator: 452-PMC176036-page2/page1/page3/page4.png, original printedpp1875–1878
+    all visually read
+  accessed_at: '2026-10-21T16:29:40.422891Z'
+  support: supports
+  summary: Surgical patients received oral flurithromycin and underwent microbiological
+    serum/tissue assays. The paper distinguishes total tissue content from modeled
+    free interstitial concentrations and notes that high total levels need not equal
+    active antibiotic. It supports historical human use and exposure, not treatment
+    efficacy, an exact administered ester assignment or a bacterial target.
+  snapshot_sha256: 1b45f735d6448607be6dad0c73ce84ef0f23f24c1b21917ff91dbbc3c355e718
+- evidence_id: ethylsuccinate
+  kind: primary_source
+  reference: PMID:7620689; PMID:7927827
+  locator: 452-additional-core.json, complete original abstracts
+  accessed_at: '2026-10-21T16:29:40.692389Z'
+  support: supports
+  summary: ENT and lower-respiratory clinical studies explicitly administer flurithromycin
+    ethylsuccinate. They support the definition’s qualified drug-use context but do
+    not make the ester an exact synonym of the neutral parent. Additional current-ChEBI
+    lead 7768764 reports mycoplasma/ureaplasma susceptibility; 15646539 is bibliographic
+    liver-injury metadata without an abstract.
+  snapshot_sha256: b836f5d2cd34159ea6258a08ae00f4bfca2372a9fe4b91f38efa9dc4398e3d9f
+- evidence_id: mechanism
+  kind: primary_source
+  reference: PMID:15386112; DOI:10.1007/s00284-004-4312-9
+  locator: 452-mechanism-core.json and452-mechanism2004.html, complete original abstract
+    only
+  accessed_at: '2026-10-21T16:31:09.821621Z'
+  support: supports
+  summary: The exact flurithromycin experiment in H. influenzae reports cellular protein-synthesis
+    IC50 of 6 µg/mL and 50S-subunit-formation IC50 of 8 µg/mL, with pulse-chase assembly
+    effects and some 30S effect. This is bounded functional cellular evidence; it
+    does not identify a directly bound protein or establish that assembly inhibition
+    is an independent primary binding event. Full material/strain methods remain inaccessible.
+  snapshot_sha256: 091e20d7201d83315d6f000b9aa0e875e6b5c464df2371f6176f74c1b5c647dd
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB dataset catalog
+  locator: 452-adapter-results.json; exact runner and command preserved
+  accessed_at: '2026-10-21T16:33:21Z'
+  support: context_only
+  summary: The free structured adapter ran before following up the exact H. influenzae
+    mechanism source. No H. influenzae dataset is in the returned catalog. No other
+    organism was substituted and lack of coverage is not negative mechanism evidence.
+  snapshot_sha256: 9ad4620ee7aa48bb05d52f3b7c2dc0e9f347c5640dbc71a0292f2f0b82a0bc11
+- evidence_id: references
+  kind: authority
+  reference: Native chemical, drug and document references
+  locator: 452-kegg.txt;452-drugcentral.html;452-wikipedia.html;452-pubchem-synonyms.json
+  accessed_at: '2026-10-21T16:29:16.982726Z'
+  support: supports
+  summary: CAS 82664-20-8 is concordant across current sources. Both drug cards map
+    to the correct graph; drug_xrefs remains drug context rather than blanket chemical
+    equivalence or approval evidence. Wikipedia resolves to the correct compound and
+    identifiers, but its broad bactericidal prose is not used as primary support.
+    Reaxys remains independently inaccessible. PubChem lists both Cl-932 and CI-932;
+    P 80206 and this code spelling have database support without original code confirmation.
+  snapshot_sha256: bdb313fe68786814aad30368e6537b96df2bbb469b130849bcc32712924ae92a
+- evidence_id: owners
+  kind: database
+  reference: Maintained ChEBI extraction and seeding lane
+  locator: 452-raw-rows.json;452-source-audit.json;source field mapping and xref partition
+  accessed_at: '2026-10-21T16:33:21Z'
+  support: supports
+  summary: All 14 hashes remain unchanged, including original 13. Ten synonyms follow
+    the raw names after excluding the preferred label. Two chemical, two drug and
+    one document xrefs are correctly partitioned by local schema. All ten adopted
+    citation leads and four chronological seeded events are accounted for.
+  snapshot_sha256: 95b83f390c2cbf8ba8eda13b7d3c5d51a6135a2c23c75833d9be5c2f52e098ce
+- evidence_id: validation
+  kind: validation
+  reference: Actual native and independent checks
+  locator: 452-focused-results.json;452-chemistry.json;452-schema.log;452-strict.log;452-ledger.log
+  accessed_at: '2026-10-21T16:33:21Z'
+  support: supports
+  summary: Chemistry, schema, strict terms, authority comparison and final provenance
+    ledger exit 0. These checks do not promote the native record to REVIEWED.
+  snapshot_sha256: 8d62a5b26e554d99cb316e3f9029929d40e4a48231dff8fd9a5c7c7ea5c5f9fb
+- evidence_id: access
+  kind: search
+  reference: Bounded public-source review
+  locator: 452-local-hits.txt ignored-inclusive local search;452-fetch1/2/3/4.json;452-search-core.json
+  accessed_at: '2026-10-21T16:33:21Z'
+  support: context_only
+  summary: Reaxys 403 and inaccessible original case details remain limits. Both PMC
+    PDF URLs returned download-preparation HTML; the 1988 main was instead read from
+    four official scanned pages, while the 1995 genital-tissue paper remains abstract-only.
+    The 2004 publisher exposes its complete abstract but subscription main. No paid
+    access was used.
+  snapshot_sha256: 17a85be75eb312fe88e695d2ee0cfe2ab796cd91a034b1c568a9da7ac589836a
+  search_scope: 452-local-hits.txt ignored-inclusive local search;452-fetch1/2/3/4.json;452-search-core.json
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact free-base stereochemistry
+  outcome: supported
+  summary: Nine encodings and original IV/P-0501A drawings agree. The original solution
+    hemiketal equilibrium does not require replacing the defined native ketone graph.
+  target_ids:
+  - CHEBI:131719
+  evidence_ids:
+  - chemistry
+  - original-identity
+  - host
+- assessment_id: grounding
+  area: grounding
+  topic: Definition, parents and roles
+  outcome: supported
+  summary: Position 8 fluorination, four broader chemical classes and antibacterial
+    activity are supported. The definition explicitly distinguishes the ethylsuccinate
+    drug form.
+  target_ids:
+  - CHEBI:131719
+  evidence_ids:
+  - authority
+  - original-identity
+  - original-activity
+  - patent
+  - ethylsuccinate
+- assessment_id: aliases
+  area: grounding
+  topic: Remaining code and registry scope
+  outcome: unknown
+  summary: Reaxys 6950255 and original P 80206/Cl-932 spelling were not independently
+    resolved. Current sources support the mappings but do not settle whether Cl uses
+    letter l or derives from CI. No confirmed wrong-compound mapping is asserted.
+  target_ids:
+  - CHEBI:131719
+  evidence_ids:
+  - references
+  - access
+- assessment_id: mechanism
+  area: evidence
+  topic: Functional mechanism and direct target
+  outcome: unknown
+  summary: Exact cellular translation and subunit-assembly effects are supported at
+    original-abstract depth. A direct molecular binding relation and detailed causal
+    chain remain unverified; no native relation is present.
+  target_ids:
+  - CHEBI:131719
+  evidence_ids:
+  - mechanism
+  - adapter
+  - record
+- assessment_id: quantity
+  area: quantity
+  topic: Assay and clinical material boundaries
+  outcome: supported
+  summary: Primary IV MIC and MBC are distinguished by method; ethylsuccinate clinical
+    results, host pharmacology and tissue concentration are not reclassified as parent
+    MIC or binding evidence.
+  target_ids:
+  - CHEBI:131719
+  evidence_ids:
+  - original-activity
+  - human
+  - host
+  - ethylsuccinate
+- assessment_id: ownership
+  area: ownership
+  topic: Source and lead reproducibility
+  outcome: supported
+  summary: All adopted leads have explicit dispositions, all source inputs remain
+    unchanged and chronological seeded history is coherent.
+  target_ids:
+  - CHEBI:131719
+  evidence_ids:
+  - owners
+  - validation
+  - adopted
+findings: []
+actions: []
+limitations:
+- Independent Reaxys identity and original development-code P 80206/Cl-932 spelling
+  remain unresolved; source-attributed aliases are not silently normalized.
+- The nephritis case report has no available abstract. The 1995 genital-tissue study
+  and 2004 bacterial mechanism study were read at complete-original-abstract depth,
+  not full-main depth.
+- The native graph is the free-base ketone. Original experiments can involve solution
+  hemiketal equilibrium; clinical ethylsuccinate material and exposure measurements
+  are distinct contexts.
+- No primary direct-binding target is established here. Cellular inhibition of translation
+  and ribosomal assembly does not by itself identify a particular directly bound protein.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Standalone chemistry used the batch 019 interpreter against batch 046; native validation,
+  source ledger and contract use batch 046.
+- Native has no gene/protein/pathway claim. The additional exact H. influenzae mechanism
+  lead prompted a structured catalog check before follow-up; no matching organism
+  dataset was available.
+- No native/source bytes or scientific status were changed. Missing optional targets,
+  MICs or producer fields are not automatically defects.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:131719
+- https://www.kegg.jp/entry/D07242
+- https://drugcentral.org/drugcard/1221
+- https://doi.org/10.7164/antibiotics.36.1439
+- https://doi.org/10.7164/antibiotics.39.839
+- https://doi.org/10.1007/s00284-004-4312-9
+tags:
+- record-review
+- flurithromycin
+- macrolide
