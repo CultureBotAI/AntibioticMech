@@ -1,0 +1,732 @@
+schema_version: 1.0.0
+review_id: 20261021T112540Z-cefetamet
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cefetamet: exact active-acid identity and qualified gonococcal activity'
+started_at: '2026-10-21T11:08:25Z'
+finished_at: '2026-10-21T11:25:40Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent entire native/ChEBI/ARO owner review, current complete
+    structure comparisons, both adopted PMID abstracts and original 1985/1987 gonococcal
+    primary papers with inspected figures/tables.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: No confirmed native defect. Neutral cefetamet has coherent (6R,7R), Z-oxime
+  structure, complete cross-reference matches and both source mints. Original studies
+  support the definition’s Neisseria gonorrhoeae activity, while distinguishing the
+  active compound from cefetamet pivoxil. The 1985 assay explicitly used cefetamet
+  sodium; its numeric observations and enzyme stability require that material and
+  assay scope, not unqualified neutral-acid transfer. Scientific assessment retains
+  the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefetamet.yaml
+    sha256: ac7b9f5d1ca3a7d8f769f3917f2173619c828408fdd00f84bbd8e9149aaddce8
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:135629
+  path: data/antibiotics/antibacterial/cefetamet.yaml
+  label: cefetamet
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted exact ChEBI identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO class, exact identity and source citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+scope:
+  description: Whole-record review of exact neutral cefetamet.
+  selection: Queue 223 in isolated batch 023; preserved original capture and appended
+    actual ARO owner before judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:135629
+  exclusions:
+  - target: Cefetamet pivoxil/Ro 15-8075, cefetamet sodium, ceftetrame and other cephalosporins
+    reason: Prodrug, salt and comparators retain their specific material and experimental
+      roles.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual focused command passed with zero errors.
+  target_ids:
+  - CHEBI:135629
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefetamet.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual focused command passed with zero errors.
+  target_ids:
+  - CHEBI:135629
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefetamet.yaml --out /private/tmp/am-review-session/223-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Independent molecular encodings and source mints
+  status: passed
+  required: true
+  summary: Both encodings reproduce the complete key, neutral formula, masses, two
+    R centres and Z oxime; both source mints agree.
+  target_ids:
+  - CHEBI:135629
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/check199200.py
+    223 (cwd /private/tmp/antibioticmech-record-reviews-023)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:135629
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:135629
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:135629
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:135629
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:135629
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:135629
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:135629
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:135629
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:135629
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefetamet.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T11:15:05Z'
+  support: supports
+  summary: Read identity, structural and gonococcal definition, source synonyms, two
+    parents, antibiotic role, complete structure, four exact xrefs, two drug xrefs,
+    two source concepts and four seed events. No populated molecular target, mode,
+    activity_spectrum, resistance, producer, clinical or graph claims.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv
+  locator: ChEBI row 2558; ARO row 297
+  accessed_at: '2026-10-21T11:15:05Z'
+  support: supports
+  summary: ChEBI owns the exact graph/definition/antibiotic role and PMID:29017833
+    allergy review lead. ARO supplies cephalosporin class/identity and PMID:2504597
+    primary antibacterial study. Native does not import ARO PBP prose as a structured
+    target. Both actual owners and governing inputs were captured before judgment.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:135629
+  locator: Current definition, structure, parents and xrefs
+  accessed_at: '2026-10-21T11:12:19Z'
+  support: supports
+  summary: Current authority matches neutral C14H15N5O5S2, full key MQLRYUCJDNBWMV-GHXIOONMSA-N,
+    (6R,7R) stereochemistry and Z oxime. Cephalosporin parent and antibiotic role
+    are consistent with the structure and primary antibacterial evidence.
+  snapshot_sha256: cee16d907d51519f6eaa56dda21827128a8e2a494caae1a0fb28b66ccc4ef8f4
+- evidence_id: aro
+  kind: authority
+  reference: https://card.mcmaster.ca/aro/3004000
+  locator: Current cefetamet entry
+  accessed_at: '2026-10-21T11:12:19Z'
+  support: supports
+  summary: ARO identifies cefetamet as a third-generation semisynthetic cephalosporin
+    and carries the same complete stereochemical graph. Its PBP/cell-lysis description
+    remains database context; the cited antibacterial paper abstract does not by itself
+    establish a direct PBP experiment.
+  snapshot_sha256: c5c96130ab782bf7b8e0aa97b1aedf69dae4ceae424a8e1761a86626f27c4271
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit 2026.03.5 checks
+  locator: 223-chemistry.json
+  accessed_at: '2026-10-21T11:12:04Z'
+  support: supports
+  summary: SMILES and InChI agree on a single neutral fragment, full key, formula,
+    average/exact mass and two R centres. The InChI double-bond layer and current
+    structure databases agree with the defined Z oxime. Both source mints are correct.
+  snapshot_sha256: 1af72be448ab682619c60c6ee0ddaf32f162e4a3f89833c78f734892f475f2e5
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/5487888
+  locator: Complete current PUG structure
+  accessed_at: '2026-10-21T11:12:20Z'
+  support: supports
+  summary: CID 5487888 matches the complete cefetamet free-acid structure, including
+    both ring stereocentres and the Z oxime. It is not the pivoxil ester.
+  snapshot_sha256: 199ca33ccdd21fef4fc1cd6c331fb3ad4563e4fb447f60d2ff635afceeee6eea
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL2103764.json
+  locator: Current complete molecule
+  accessed_at: '2026-10-21T11:12:20Z'
+  support: supports
+  summary: CHEMBL2103764 matches the exact native neutral formula and full stereochemical
+    key.
+  snapshot_sha256: 4db753fd05d2f6d36d3b006f65263bd3f7ddf3cdabd6d1e3d48d03d9cbcd6ebf
+- evidence_id: reaxys
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:135629
+  locator: Current retained Reaxys 967151 mapping
+  accessed_at: '2026-10-21T11:12:19Z'
+  support: partial
+  summary: The exact registry mapping is retained by ChEBI. Independent Reaxys contents
+    were not inspected through free access; no identity contradiction was demonstrated.
+  snapshot_sha256: cee16d907d51519f6eaa56dda21827128a8e2a494caae1a0fb28b66ccc4ef8f4
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/D03424
+  locator: Drug entry D03424
+  accessed_at: '2026-10-21T11:12:20Z'
+  support: supports
+  summary: KEGG resolves to cefetamet with the neutral formula and third-generation
+    cephalosporin class. Drug-level PBP/pathway annotations are not primary binding
+    evidence; broad dosage/use information is not copied into a native clinical-status
+    claim.
+  snapshot_sha256: 50c3f8a44277185695dcb072796a66f3c09fbd21487bc717367c981b3b5e5b66
+- evidence_id: drugcentral
+  kind: database
+  reference: https://drugcentral.org/drugcard/3074
+  locator: Drug identity and formula
+  accessed_at: '2026-10-21T11:12:20Z'
+  support: supports
+  summary: DrugCentral 3074 resolves to cefetamet, deacetoxycefotaxime and C14H15N5O5S2.
+    Its broader drug/administration information is kept separate from exact prodrug
+    identity and current jurisdiction-specific approval.
+  snapshot_sha256: 67cff7aea19969e55bffbeae3f15a21d396d791e075ccb54860da1c362d230b2
+- evidence_id: adopted-primary
+  kind: primary_source
+  reference: https://doi.org/10.1007/BF01967476
+  locator: PMID:2504597; inspected primary abstract
+  accessed_at: '2026-10-21T11:12:19Z'
+  support: supports
+  summary: The paper explicitly separates in-vitro cefetamet, the active metabolite,
+    from in-vivo orally administered cefetamet pivoxil. It reports antibacterial activity
+    against Neisseria spp. and other tested Gram-negative organisms, with resistance
+    among staphylococci, P. aeruginosa and cephalosporinase-overproducing E. cloacae.
+    Full publisher retrieval returned HTML rather than the PDF; numerical tables/protocols
+    from that article were not inspected.
+  snapshot_sha256: c2910564d3d6b719573971075f45c330f34476b1bb7f0114c3af5c6fed31db50
+- evidence_id: adopted-review
+  kind: database
+  reference: https://doi.org/10.1016/j.jaip.2017.08.027
+  locator: PMID:29017833; review abstract
+  accessed_at: '2026-10-21T11:12:19Z'
+  support: context_only
+  summary: This adopted citation is a beta-lactam allergy review. It is not a primary
+    cefetamet antibacterial or PBP experiment and cannot support compound-specific
+    mechanistic annotation.
+  snapshot_sha256: c2910564d3d6b719573971075f45c330f34476b1bb7f0114c3af5c6fed31db50
+- evidence_id: gonococci1985
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.28.3.461
+  locator: PMID:3935045; original p461, Figure 1 and Methods
+  accessed_at: '2026-10-21T11:13:32Z'
+  support: supports
+  summary: Figure 1 distinguishes Ro 15-8075 ester from active Ro 15-8074 with the
+    matching two R centres and Z oxime. Methods explicitly state Ro 15-8074 was supplied
+    as its sodium salt. Agar dilution used GC agar with 1% hemoglobin and 1% defined
+    supplement, 10^3 CFU/spot, 5% CO2 and 24 h; inoculum-effect experiments used 10^6
+    CFU/spot. This is direct gonococcal activity evidence with a salt-material boundary.
+  snapshot_sha256: 56bd6dd3906a503c8af756b292bf163c7afaf07976c5f7d6e076748808013976
+- evidence_id: gonococci1985-results
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.28.3.461
+  locator: Original p462, Tables 1–2 and Results
+  accessed_at: '2026-10-21T11:13:32Z'
+  support: supports
+  summary: The 48 clinical gonococcal isolates comprise 25 penicillinase producers
+    and 23 nonproducers. Table 1 shows sodium-material Ro 15-8074 MIC ranges 0.0075–0.06
+    and 0.0075–0.125 mg/L respectively. Table 2 reports no detectable hydrolysis by
+    an extract from one penicillinase-producing strain at specified spectrophotometric
+    wavelengths. That is not proof of universal beta-lactamase stability or a direct
+    PBP assay.
+  snapshot_sha256: 1c5b163b1f5cfc1a08e55f0cc0ce4c4baf1e2397095748d5da234c52887e5eb9
+- evidence_id: gonococci1987
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.31.7.1153
+  locator: PMID:2959199; complete original pp1153–1154
+  accessed_at: '2026-10-21T11:13:32Z'
+  support: supports
+  summary: The study explicitly names cefetamet/Ro 15-8074 and tests 300 N. gonorrhoeae
+    and 100 H. ducreyi isolates by chocolate-agar dilution. Cefetamet activity persists
+    in the tested penicillinase groups; presumptive Mtr phenotype shifts gonococcal
+    MICs two- to fourfold. The material counterion and complete detailed inoculum
+    protocol are not established on these pages. Phenotypic Mtr classification is
+    not an identified cefetamet molecular efflux target.
+  snapshot_sha256: 98c9ca424df5e1cc32f1cf7723326d55c51a0598a1509b2b35709c28e1b7d5a0
+- evidence_id: taxon
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=485&retmode=xml
+  locator: Current organism identity
+  accessed_at: '2026-10-21T11:12:31Z'
+  support: supports
+  summary: NCBITaxon:485 resolves to Neisseria gonorrhoeae, the species named in the
+    structural definition and original antibacterial experiments.
+  snapshot_sha256: d8a087591987935807a48bba43b59b60e2a44ca1fe851e1e5ea99bf54644e297
+- evidence_id: adapter
+  kind: search
+  reference: kg-microbe-sources imodulondb
+  locator: 223224-adapter-results.json; e_coli/precise1k/peptidoglycan
+  accessed_at: '2026-10-21T11:12:41Z'
+  support: context_only
+  summary: Native has no named protein/pathway claim. A bounded supplementary check
+    of the ARO PBP context found reference E. coli peptidoglycan genes including ftsI/b0084
+    and mrcB/b0149, with no iModulon hit. Dataset membership does not demonstrate
+    cefetamet binding, and the catalog does not supply a gonococcal dataset. Sandbox
+    DNS failure was resolved by free public network retrieval.
+  snapshot_sha256: 33ea81c2f7029ab07aa0557fececec513a06197690c835a240d0d96719d0a034
+  search_scope: Exact cefetamet/CHEBI:135629/ARO:3004000/full-key ignored-inclusive
+    search in batch 023 outside .git/.venv; live structured catalog/E. coli precise1k
+    query and public primary/authority follow-up on 2026-10-21.
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive repository and public follow-up
+  locator: 223-owner-hits.txt and 223-local-hits.txt
+  accessed_at: '2026-10-21T11:12:00Z'
+  support: context_only
+  summary: Exact identifier, label, slug and key searches included ignored/hidden
+    files outside .git/.venv. Native/raw/generated references and historical research
+    leads were distinguished; actual ARO ownership was added to the initial ChEBI
+    capture. Primary gonococcal studies were independently inspected.
+  snapshot_sha256: d66ece2d519ecd5754c0ecca76423800e63dae0d2b2b029d549771e7e8acfd26
+  search_scope: Exact cefetamet/CHEBI:135629/ARO:3004000/full-key ignored-inclusive
+    search in batch 023 outside .git/.venv; live structured catalog/E. coli precise1k
+    query and public primary/authority follow-up on 2026-10-21.
+- evidence_id: gates
+  kind: validation
+  reference: Actual focused checks
+  locator: 223-focused-results.json;223-validation.tsv
+  accessed_at: '2026-10-21T11:12:04Z'
+  support: supports
+  summary: Schema/strict and source-aware chemistry pass. All 21 expanded input hashes
+    were rechecked unchanged.
+  snapshot_sha256: 736faf55f84961d35b1c00f4421f39da4338eb17639e5a9b1520c159ff0cc4b8
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral active cefetamet
+  outcome: supported
+  summary: The exact free acid is coherent across encodings and public complete structures.
+    The pivoxil ester is a distinct prodrug; the sodium reagent in 1985 is explicitly
+    qualified.
+  target_ids:
+  - CHEBI:135629
+  evidence_ids:
+  - native
+  - chebi
+  - aro
+  - chemistry
+  - pubchem
+  - chembl
+  - gonococci1985
+- assessment_id: grounding
+  area: grounding
+  topic: Cephalosporin class and antibiotic eligibility
+  outcome: supported
+  summary: The graph supports the cephalosporin parent and structural class. Primary
+    exact-active-moiety studies independently support antibacterial eligibility rather
+    than family inference alone.
+  target_ids:
+  - CHEBI:135629
+  evidence_ids:
+  - chebi
+  - aro
+  - adopted-primary
+  - gonococci1985
+  - gonococci1987
+- assessment_id: definition
+  area: evidence
+  topic: Structural description and gonococcal activity
+  outcome: supported
+  summary: The methyl/methoxyimino aminothiazole substituents and defined stereochemistry
+    match the graph. Historical N. gonorrhoeae activity is experimentally supported;
+    the definition does not assert universal present-day susceptibility.
+  target_ids:
+  - CHEBI:135629
+  evidence_ids:
+  - chemistry
+  - chebi
+  - gonococci1985
+  - gonococci1987
+  - taxon
+- assessment_id: xrefs
+  area: grounding
+  topic: Exact and drug references
+  outcome: unknown
+  summary: PubChem/ChEMBL/ARO match exactly and both drug-level references resolve
+    appropriately. Reaxys remains current-authority corroborated without independent
+    registry detail.
+  target_ids:
+  - CHEBI:135629
+  evidence_ids:
+  - pubchem
+  - chembl
+  - aro
+  - reaxys
+  - kegg
+  - drugcentral
+- assessment_id: activity
+  area: evidence
+  topic: Primary material and assay scope
+  outcome: supported
+  summary: The inspected 1985 and 1987 primary papers directly test the active Ro
+    15-8074 moiety against gonococci; 1985 explicitly uses sodium. Salt, assay, isolate
+    grouping and prodrug treatment must remain separate for numeric enrichment.
+  target_ids:
+  - CHEBI:135629
+  evidence_ids:
+  - adopted-primary
+  - gonococci1985
+  - gonococci1985-results
+  - gonococci1987
+- assessment_id: mechanism
+  area: evidence
+  topic: Optional PBP mechanism
+  outcome: unknown
+  summary: ARO/KEGG provide database PBP context, but the inspected primary source
+    passages do not directly measure cefetamet PBP binding. Native makes no structured
+    target or pathway claim; no optional gap is treated as a defect.
+  target_ids:
+  - CHEBI:135629
+  evidence_ids:
+  - native
+  - aro
+  - kegg
+  - adapter
+  - adopted-primary
+- assessment_id: resistance
+  area: evidence
+  topic: Enzyme stability and Mtr phenotype
+  outcome: unknown
+  summary: The gonococcal extract experiment establishes a bounded no-detectable-hydrolysis
+    result, and Mtr is a presumptive phenotype in 1987. Neither implies universal
+    stability, molecular determinant identity or clinical breakpoint interpretation.
+    Native has no resistance assertion.
+  target_ids:
+  - CHEBI:135629
+  evidence_ids:
+  - native
+  - gonococci1985-results
+  - gonococci1987
+- assessment_id: clinical-producer
+  area: scope
+  topic: Clinical, producer and graph domains
+  outcome: not_applicable
+  summary: Native has no clinical-status, natural-producer or causal-graph claim.
+    Oral prodrug efficacy and commercial drug dosage cannot be silently attributed
+    to administration of the exact neutral active acid.
+  target_ids:
+  - CHEBI:135629
+  evidence_ids:
+  - native
+  - adopted-primary
+  - drugcentral
+- assessment_id: provenance
+  area: provenance
+  topic: Source concepts and seeded history
+  outcome: supported
+  summary: Both mints and four seed/reseed events agree with ChEBI/ARO ownership.
+    Actual source captures are retained and SEEDED remains unchanged.
+  target_ids:
+  - CHEBI:135629
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+- assessment_id: completeness
+  area: completeness
+  topic: Bounded optional enrichment
+  outcome: supported
+  summary: The primary studies offer concrete activity and stability observations,
+    with material/protocol limits stated. Empty optional fields alone do not establish
+    incompleteness requiring correction.
+  target_ids:
+  - CHEBI:135629
+  evidence_ids:
+  - gonococci1985
+  - gonococci1985-results
+  - gonococci1987
+- assessment_id: schema
+  area: schema
+  topic: Focused validation
+  outcome: supported
+  summary: Schema/strict, molecular coherence and mint checks pass; scientific evidence
+    review is separate.
+  target_ids:
+  - CHEBI:135629
+  evidence_ids:
+  - gates
+  - chemistry
+findings: []
+actions:
+- action_id: A1
+  description: Optionally enrich gonococcal activity with exact primary material and
+    assay context.
+  finding_ids: []
+  target_ids:
+  - CHEBI:135629
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefetamet.yaml
+    role: Curator-owned activity_spectrum and evidence via validated writer
+  acceptance_checks:
+  - Preserve Ro 15-8074 active compound versus Ro 15-8075 pivoxil prodrug and the
+    explicitly sodium-form reagent in 1985. Do not transfer prodrug animal/oral exposure
+    as exact free-acid monotherapy.
+  - For 1985 Table 1, retain penicillinase group, GC agar supplements, 10^3 CFU/spot,
+    5% CO2, 24 h and units. Aggregate ranges/MIC50/MIC90 are not individual-strain
+    MIC observations.
+  - Keep the single gonococcal beta-lactamase extract/no-detectable-hydrolysis assay
+    distinct from a universal resistance determinant claim or measured PBP interaction.
+  - For 1987 Mtr phenotype, retain the phenotypic definition and do not infer a specific
+    sequenced efflux pump or a current clinical breakpoint.
+  - Run native schema/strict and applicable evidence/term/reference/history/corpus
+    checks after separately authorized curation.
+- action_id: A2
+  description: Optionally corroborate remaining registry and primary target detail.
+  finding_ids: []
+  target_ids:
+  - CHEBI:135629
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source-owned exact registry mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefetamet.yaml
+    role: Curator-owned primary mechanism evidence
+  acceptance_checks:
+  - Confirm Reaxys 967151 with independent exact neutral stereochemical detail if
+    freely permissible access becomes available; do not remove it based solely on
+    retrieval limitations.
+  - Retrieve the complete 1989 primary article or another compound-specific binding/acylation
+    experiment before adding primary PBP mechanism annotation. Database class context
+    and E. coli expression-module gene matches are insufficient.
+limitations:
+- Reaxys 967151 remains authority-corroborated without independent registry contents.
+- Both adopted PMID metadata/abstracts were inspected, but the 1989 publisher PDF
+  route returned HTML rather than article content. The 2017 allergy lead is a review
+  and was not treated as primary antibacterial evidence.
+- Original 1985 and 1987 gonococcal papers were fully read, with 1985 structure and
+  tables visually inspected. 1985 uses sodium reagent; 1987 does not fully resolve
+  reagent counterion or referenced protocol details.
+- No direct cefetamet-specific primary PBP binding experiment was established in this
+  bounded review; native contains no such asserted primary mechanism.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 21 expanded input hashes unchanged, including the initial 13. No native/source/status/history
+  edits.
+- Focused native checks used023 own environment; chemistry used019 locked RDKit 2026.03.5
+  against 023 cwd.
+- Free public retrieval only. Structured adapter sandbox DNS failure was resolved
+  through the permitted public-network retry; original failure output is retained.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:135629
+- https://doi.org/10.1128/AAC.28.3.461
+- https://doi.org/10.1128/AAC.31.7.1153
+- https://doi.org/10.1007/BF01967476
+tags:
+- cefetamet
+- exact-identity
+- gonococcal-activity
+- prodrug-boundary

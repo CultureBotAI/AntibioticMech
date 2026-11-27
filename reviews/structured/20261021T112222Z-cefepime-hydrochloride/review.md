@@ -1,0 +1,735 @@
+# Cefepime hydrochloride: exact hydrate and FDA product assertions agree; preserve active-moiety evidence scope
+
+- Review: 20261021T112222Z-cefepime-hydrochloride
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T11:08:19Z
+- Finished UTC: 2026-10-21T11:22:22Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The record consistently denotes cefepime dihydrochloride monohydrate. Native structures, official ChEBI/KEGG identities and FDA GSRS agree, including both stereocentres and the Z oxime. All 27 clinical assertions match current Drugs@FDA data: 14 products are marketed and 13 are discontinued. The approved summary and antibacterial role are supported. No material error was found. One informational follow-up concerns optional primary evidence enrichment without conflating the crystalline salt with dissolved cefepime or its excipients. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole CHEBI:31368 record, including definition, eight synonyms, three chemical parents, two activity roles, chemical descriptors and xrefs, one source concept, all 27 FDA assertions and six history entries.
+
+Selection: Queue 221. Original capture preserved; actual FDA owners and inputs appended before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:31368 | data/antibiotics/antibacterial/cefepime-hydrochloride.yaml | generated | cefepime hydrochloride |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:31368 | Actual focused command exited 0. |
+| strict | passed | True | CHEBI:31368 | Actual focused command exited 0. |
+| chemistry | passed | False | CHEBI:31368 | Actual focused command exited 0. Batch019 RDKit interpreter parsed batch023 native structures and compared the elemental sum of the dot-separated formula. |
+| Authoritative full QC | failed | True | CHEBI:31368 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:31368 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:31368 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:31368 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:31368 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:31368 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:31368 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:31368 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:31368 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact dihydrochloride monohydrate
+
+identity: supported. Targets: CHEBI:31368.
+
+All native identifiers, chemical parents, composition and stereochemistry agree with inspected official identity sources. Proton placement varies between equivalent standardized salt representations.
+
+### Approved status and product assertions
+
+evidence: supported. Targets: CHEBI:31368.
+
+Every imported assertion matches current public FDA product data. The approved summary has currently marketed approved products as support and does not rely solely on historical discontinued entries.
+
+### Antibacterial role and mechanism scope
+
+scope: supported. Targets: CHEBI:31368.
+
+Official product labeling supports antibacterial use and active-moiety cell-wall/PBP mechanism. Product-specific combination outcomes, resistant taxa and uncertain in vitro clinical relevance remain qualified. No specific direct protein claim is present natively.
+
+### Optional primary evidence enrichment
+
+completeness: unknown. Targets: CHEBI:31368.
+
+A later curator may add narrowly supported activity or mechanism observations after inspecting exact primary experimental material. Current optional absence is not erroneous; database and label mechanism summaries do not replace primary protein evidence.
+
+### Reproducible seed and regulatory sources
+
+ownership: supported. Targets: CHEBI:31368.
+
+ChEBI and FDA maintained inputs own their imported fields. Any optional primary observations belong to the exact native record under the curation workflow. Initial source hashes are unchanged.
+
+### Focused validation and history shape
+
+schema: supported. Targets: CHEBI:31368.
+
+Documented focused schema/strict checks and independent chemical validation pass. No native history event or scientific-status promotion was made.
+
+## Findings
+
+### F1: Preserve salt, active-moiety and formulation scope when enriching biological evidence
+
+informational / open / confirmed; issue key: cefepime-hydrochloride-qualified-primary-evidence-enrichment.
+
+The sparse seed is sound within its present claims. Official labeling supplies a useful context for optional activity and PBP mechanism enrichment, but product dose equivalence and active-moiety effects do not establish binding of the intact dihydrochloride monohydrate or justify transferring combination-drug effects.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+If enriching biology, inspect the exact experimental material and retain active-moiety and product qualifications.
+
+- Select an accessible original study that identifies cefepime hydrochloride material or explicitly maps the tested preparation to this hydrate. Record strain, medium, inoculum, incubation, units and endpoint for any quantitative activity claim.
+- Describe the dissolved active moiety and specific PBP evidence accurately. Do not assert that the intact salt/hydrate crystal is a ligand or add a protein accession from a broad PBP label statement.
+- Preserve cefepime-equivalent product strengths and separate L-arginine/dextrose excipients from the antibiotic identity. Do not assign cefepime-plus-metronidazole outcomes to cefepime alone.
+- Keep original approval and marketing fields distinct. Future regulatory updates should use the maintained FDA extractor and exact GSRS identity join, with any explicit legal withdrawal assessed independently of discontinued marketing.
+- For separately authorized native curation, use write_validated_antibiotic and record_curation_event, attach evidence at the narrow claim and run focused and applicable shared gates before scientific-status promotion.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/cefepime-hydrochloride.yaml; Entire YAML, all assertions and history entries. | supports | SEEDED/EXACT record explicitly defines the monohydrate of cefepime dihydrochloride. It contains no structured mechanism, molecular target, quantitative activity, resistance, producer or causal graph. Its source row adopts no primary bibliography. Optional-field absence is not a schema defect. |
+| source | data/raw/chebi_antimicrobials.tsv; data/raw/fda_clinical_status.tsv; scripts/extract_source_inventory.py; scripts/extract_fda_clinical_status.py; scripts/seed_from_sources.py; conf/sources.yaml; ChEBI row 632; FDA rows 1559–1585; FDA extractor lines 1–390 and clinical assertion seeder lines 3746–3804. | supports | ChEBI supplies the exact structure, ontology and names. The FDA extractor accepts single-ingredient approved-original products, maps ingredient names to GSRS UNIIs and joins only an exact full InChIKey with unique record identity. The seeder retains original AP approval dates separately from current marketing status. All 27 maintained FDA rows were inspected, including their source and identity timestamps. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:31368; Complete current chemical entry and ontology section. | supports | The definition, native aliases, CAS 123171-59-5, structures, masses, formula, charge and exact identifier agree. CHEBI:23066 is cephalosporin, CHEBI:35505 hydrate and CHEBI:36807 hydrochloride; CHEBI:33281 antimicrobial agent and CHEBI:36047 antibacterial drug support the retained roles. The broader common aliases are paired with an explicitly exact hydrate definition and structure. The flattened superscript in a long systematic synonym is also identifiable in the official product label. |
+| chemical-xrefs | https://rest.kegg.jp/get/C12557; https://rest.kegg.jp/get/D01157; https://pubchem.ncbi.nlm.nih.gov/compound/9571075; Both complete KEGG entries/MOLs and PubChem exact properties. | supports | Native KEGG C12557 and D01157 both denote the same dihydrochloride monohydrate. Their MOLs and the supplemental PubChem structure independently reproduce LRAJHPGSGBRUJN-OMIVUECESA-N, C19H28Cl2N6O6S2, charge 0, four fragments, two R stereocentres and a Z oxime. KEGG broad PBP annotations are database context, not a new direct protein experiment. |
+| gsrs | https://api.fda.gov/other/substance.json?search=unii:I8X1O0607P; Exact UNII result version 32: names, structure MOL/SMILES, formula, charge and stereochemistry. | supports | I8X1O0607P is cefepime hydrochloride, with explicit dihydrochloride monohydrate aliases. Both official representations reproduce the native full Standard InChIKey and composition. GSRS draws a zwitterion plus two HCl molecules and water, while the native representation places a proton on the carboxylate with chloride/HCl/water. Shared standardized identity is supported; identical proton placement is not claimed. The native identity_record_version 32 matches the current result. |
+| fda | https://api.fda.gov/drug/drugsfda.json; All 12 exact application results, every one of the 27 native products, original AP dates and marketing fields; API last_updated 2026-10-20. | supports | NDA050679, NDA050817, NDA050821 and ANDA065369, 065441, 090291, 091048, 202268, 203704, 209408, 212721 and 214402 resolve. Every native application/product, sponsor, brand, sole active ingredient, earliest original approval date, AP status, marketing label and currently_marketed flag matches the retrieved official data. Fourteen products are Prescription and thirteen Discontinued. Original approval dates and current marketing state are separate facts; discontinued marketing is not itself legal withdrawal or a safety finding. |
+| label-identity | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57517a0e-ec1b-4605-a7cc-7e3801158ec9; B. Braun label updated 2026-04-07, Description 11 and product/ingredient/application metadata. | supports | The label explicitly specifies the monohydrochloride of the pyrrolidinium chloride monohydrate, molecular mass 571.50 and composition matching the native salt. It names UNII I8X1O0607P as ingredient and cefepime UNII 807PW4VQE3 as active moiety. NDA050821 products have 1 g or 2 g cefepime-equivalent strength. L-arginine controls reconstitution pH and dextrose is diluent; those formulation components are not covalent parts of this record or additional antibacterial active ingredients. |
+| label-biology | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57517a0e-ec1b-4605-a7cc-7e3801158ec9; Indications 1, Microbiology 12.4 and Clinical Studies 14 read in full. | supports | Official labeling supports antibacterial use of this formulated ingredient and describes cefepime-mediated cell-wall inhibition through PBPs. It restricts activity to susceptible organisms and separates established indications from additional in vitro organisms of unknown clinical significance. Methicillin-resistant staphylococci and most enterococci are resistant in the label context. The intra-abdominal study uses cefepime plus metronidazole and notes a baseline severity imbalance; its outcomes cannot be assigned to cefepime alone. The label does not establish a specific PBP protein accession, a new exact MIC observation or binding of the intact hydrate crystal. |
+| local-search | 221-local-hits.txt; 221-inclusive-file-hits.txt; Exact name, slug, CHEBI:31368 and full key across maintained and generated surfaces. | context_only | The inclusive search found the source/native records, source/queue metadata and generated maps. No exact corrective curator or decision row was found. The whole native file confirms the absence of optional mechanistic/quantitative fields. |
+| validation | 221-focused-results.json; 221-chemistry.json; 221-external-chemistry.json; 221-fda-comparison.json; Actual per-record gates and independent exact-structure/product comparisons. | supports | Schema, strict and independent native chemistry exit 0. Both native chemical strings reproduce the full key, summed formula, charge, masses and stereochemistry; the source mint reproduces. Independent FDA comparison finds zero discrepancies across 27 assertions. A scratch comparison script initially referenced a nonexistent field name, was corrected to standard_inchi_key and then exited 0; this was not a native validation failure. |
+
+## Limits And Additional Notes
+
+- The whole native record and all maintained exact rows were read. All 13 original input hashes remain unchanged; two actual FDA source/transform inputs and owner paths were added before judgment.
+- No original PBP-binding paper or quantitative susceptibility experiment was independently adjudicated for this exact salt in this review. Biological support is official labeling and ontology, not a new PRIMARY_LITERATURE mechanism assertion. The adopted ChEBI row contains no primary bibliography.
+- The public FDA comparison verifies every asserted product and its current API fields, not every supplemental submission or legal docket event. Discontinued marketing is not treated as proof of withdrawal or safety concern.
+- The B. Braun label was inspected for Description, Indications, Microbiology, Clinical Studies and product identity metadata. It was not exhaustively audited for every safety, dosing or pharmacokinetic statement, none of which is a new native claim here.
+- CAS 123171-59-5 is concordantly attested by official ChEBI/KEGG; no paid CAS Registry access was used.
+- No structured-source adapter was triggered by the native record because it contains no named gene, protein, pathway, stress response or dataset claim. Label PBP context was not promoted to a specific protein claim.
+- This partial scientific review supports the present identity, roles and regulatory assertions while leaving optional primary mechanistic and quantitative enrichment unresolved. It does not promote SEEDED status.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T112222Z-cefepime-hydrochloride
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cefepime hydrochloride: exact hydrate and FDA product assertions agree; preserve
+  active-moiety evidence scope'
+started_at: '2026-10-21T11:08:19Z'
+finished_at: '2026-10-21T11:22:22Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the seed. Read the entire record and maintained
+    source rows/code, preserved initial input hashes, independently parsed official
+    chemical structures and compared every FDA assertion with current public FDA data.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: 'The record consistently denotes cefepime dihydrochloride monohydrate. Native
+  structures, official ChEBI/KEGG identities and FDA GSRS agree, including both stereocentres
+  and the Z oxime. All 27 clinical assertions match current Drugs@FDA data: 14 products
+  are marketed and 13 are discontinued. The approved summary and antibacterial role
+  are supported. No material error was found. One informational follow-up concerns
+  optional primary evidence enrichment without conflating the crystalline salt with
+  dissolved cefepime or its excipients. Scientific assessment retains the stated evidence
+  limits; full verification is blocked by the shared native-library failure.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefepime-hydrochloride.yaml
+    sha256: d1a42ca57f8cae97ecc0be64e326ad9ed73fa65b83aed4b238c4210e1c50e552
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+targets:
+- target_id: CHEBI:31368
+  path: data/antibiotics/antibacterial/cefepime-hydrochloride.yaml
+  label: cefepime hydrochloride
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: FDA product assertions and GSRS identity mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: FDA extraction and exact-substance join
+scope:
+  description: Whole CHEBI:31368 record, including definition, eight synonyms, three
+    chemical parents, two activity roles, chemical descriptors and xrefs, one source
+    concept, all 27 FDA assertions and six history entries.
+  selection: Queue 221. Original capture preserved; actual FDA owners and inputs appended
+    before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:31368
+  exclusions:
+  - target: Cefepime active moiety, other cefepime salts/hydrates, excipients and
+      combination antibiotics
+    reason: They are distinct molecular or product contexts. Activity of a formulated
+      product does not prove intact hydrate binding or transfer another ingredient’s
+      effects.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:31368
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefepime-hydrochloride.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:31368
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefepime-hydrochloride.yaml --out /private/tmp/am-review-session/221-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Actual focused command exited 0. Batch019 RDKit interpreter parsed batch023
+    native structures and compared the elemental sum of the dot-separated formula.
+  target_ids:
+  - CHEBI:31368
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/221-chemistry-check.py 221
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:31368
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:31368
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:31368
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:31368
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:31368
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:31368
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:31368
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:31368
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:31368
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefepime-hydrochloride.yaml
+  locator: Entire YAML, all assertions and history entries.
+  accessed_at: '2026-10-21T11:14:51Z'
+  support: supports
+  summary: SEEDED/EXACT record explicitly defines the monohydrate of cefepime dihydrochloride.
+    It contains no structured mechanism, molecular target, quantitative activity,
+    resistance, producer or causal graph. Its source row adopts no primary bibliography.
+    Optional-field absence is not a schema defect.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/fda_clinical_status.tsv;
+    scripts/extract_source_inventory.py; scripts/extract_fda_clinical_status.py; scripts/seed_from_sources.py;
+    conf/sources.yaml
+  locator: ChEBI row 632; FDA rows 1559–1585; FDA extractor lines 1–390 and clinical
+    assertion seeder lines 3746–3804.
+  accessed_at: '2026-10-21T11:14:51Z'
+  support: supports
+  summary: ChEBI supplies the exact structure, ontology and names. The FDA extractor
+    accepts single-ingredient approved-original products, maps ingredient names to
+    GSRS UNIIs and joins only an exact full InChIKey with unique record identity.
+    The seeder retains original AP approval dates separately from current marketing
+    status. All 27 maintained FDA rows were inspected, including their source and
+    identity timestamps.
+  snapshot_sha256: 81ece6b60fe37d94d5e8ae82788d862bca06124ea58104f85e5773220a778260
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:31368
+  locator: Complete current chemical entry and ontology section.
+  accessed_at: '2026-10-21T11:14:51Z'
+  support: supports
+  summary: The definition, native aliases, CAS 123171-59-5, structures, masses, formula,
+    charge and exact identifier agree. CHEBI:23066 is cephalosporin, CHEBI:35505 hydrate
+    and CHEBI:36807 hydrochloride; CHEBI:33281 antimicrobial agent and CHEBI:36047
+    antibacterial drug support the retained roles. The broader common aliases are
+    paired with an explicitly exact hydrate definition and structure. The flattened
+    superscript in a long systematic synonym is also identifiable in the official
+    product label.
+  snapshot_sha256: 40f0306837afb54648471c4e13b8edc51473f43e140de7e7ac8af53a7c85d35e
+- evidence_id: chemical-xrefs
+  kind: database
+  reference: https://rest.kegg.jp/get/C12557; https://rest.kegg.jp/get/D01157; https://pubchem.ncbi.nlm.nih.gov/compound/9571075
+  locator: Both complete KEGG entries/MOLs and PubChem exact properties.
+  accessed_at: '2026-10-21T11:14:51Z'
+  support: supports
+  summary: Native KEGG C12557 and D01157 both denote the same dihydrochloride monohydrate.
+    Their MOLs and the supplemental PubChem structure independently reproduce LRAJHPGSGBRUJN-OMIVUECESA-N,
+    C19H28Cl2N6O6S2, charge 0, four fragments, two R stereocentres and a Z oxime.
+    KEGG broad PBP annotations are database context, not a new direct protein experiment.
+  snapshot_sha256: b4b61e48ef723c011339d09cbd0c3db3dfc8ee400c639341d5bf109794e4aa7e
+- evidence_id: gsrs
+  kind: authority
+  reference: https://api.fda.gov/other/substance.json?search=unii:I8X1O0607P
+  locator: 'Exact UNII result version 32: names, structure MOL/SMILES, formula, charge
+    and stereochemistry.'
+  accessed_at: '2026-10-21T11:14:51Z'
+  support: supports
+  summary: I8X1O0607P is cefepime hydrochloride, with explicit dihydrochloride monohydrate
+    aliases. Both official representations reproduce the native full Standard InChIKey
+    and composition. GSRS draws a zwitterion plus two HCl molecules and water, while
+    the native representation places a proton on the carboxylate with chloride/HCl/water.
+    Shared standardized identity is supported; identical proton placement is not claimed.
+    The native identity_record_version 32 matches the current result.
+  snapshot_sha256: 7156ca3205bd43c83a289d39e9d780b6c95c11c7c79e90a5240fd97f3eac7ffd
+- evidence_id: fda
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json
+  locator: All 12 exact application results, every one of the 27 native products,
+    original AP dates and marketing fields; API last_updated 2026-10-20.
+  accessed_at: '2026-10-21T11:14:51Z'
+  support: supports
+  summary: NDA050679, NDA050817, NDA050821 and ANDA065369, 065441, 090291, 091048,
+    202268, 203704, 209408, 212721 and 214402 resolve. Every native application/product,
+    sponsor, brand, sole active ingredient, earliest original approval date, AP status,
+    marketing label and currently_marketed flag matches the retrieved official data.
+    Fourteen products are Prescription and thirteen Discontinued. Original approval
+    dates and current marketing state are separate facts; discontinued marketing is
+    not itself legal withdrawal or a safety finding.
+  snapshot_sha256: ceebc84f85ccce0476ef90e734ce6377f2f71c7f0f2c38ef7ee89daa986056b2
+- evidence_id: label-identity
+  kind: authority
+  reference: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57517a0e-ec1b-4605-a7cc-7e3801158ec9
+  locator: B. Braun label updated 2026-04-07, Description 11 and product/ingredient/application
+    metadata.
+  accessed_at: '2026-10-21T11:14:51Z'
+  support: supports
+  summary: The label explicitly specifies the monohydrochloride of the pyrrolidinium
+    chloride monohydrate, molecular mass 571.50 and composition matching the native
+    salt. It names UNII I8X1O0607P as ingredient and cefepime UNII 807PW4VQE3 as active
+    moiety. NDA050821 products have 1 g or 2 g cefepime-equivalent strength. L-arginine
+    controls reconstitution pH and dextrose is diluent; those formulation components
+    are not covalent parts of this record or additional antibacterial active ingredients.
+  snapshot_sha256: 783044c8796bb317bd8287df8d09077e43a2d10e5b4bd348cd53532951c80242
+- evidence_id: label-biology
+  kind: authority
+  reference: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57517a0e-ec1b-4605-a7cc-7e3801158ec9
+  locator: Indications 1, Microbiology 12.4 and Clinical Studies 14 read in full.
+  accessed_at: '2026-10-21T11:14:51Z'
+  support: supports
+  summary: Official labeling supports antibacterial use of this formulated ingredient
+    and describes cefepime-mediated cell-wall inhibition through PBPs. It restricts
+    activity to susceptible organisms and separates established indications from additional
+    in vitro organisms of unknown clinical significance. Methicillin-resistant staphylococci
+    and most enterococci are resistant in the label context. The intra-abdominal study
+    uses cefepime plus metronidazole and notes a baseline severity imbalance; its
+    outcomes cannot be assigned to cefepime alone. The label does not establish a
+    specific PBP protein accession, a new exact MIC observation or binding of the
+    intact hydrate crystal.
+  snapshot_sha256: 783044c8796bb317bd8287df8d09077e43a2d10e5b4bd348cd53532951c80242
+- evidence_id: local-search
+  kind: search
+  reference: 221-local-hits.txt; 221-inclusive-file-hits.txt
+  locator: Exact name, slug, CHEBI:31368 and full key across maintained and generated
+    surfaces.
+  accessed_at: '2026-10-21T11:14:51Z'
+  support: context_only
+  summary: The inclusive search found the source/native records, source/queue metadata
+    and generated maps. No exact corrective curator or decision row was found. The
+    whole native file confirms the absence of optional mechanistic/quantitative fields.
+  snapshot_sha256: 801c5983d73e7934f93c5570c3db5c4a8a7aa1edc32e0c9064851a6b6a0403ea
+  search_scope: rg --no-ignore --hidden across data, curation, conf, scripts, src,
+    docs, .claude, reviews and reports; ignored and hidden files included, excluding
+    .git and .venv internals.
+- evidence_id: validation
+  kind: validation
+  reference: 221-focused-results.json; 221-chemistry.json; 221-external-chemistry.json;
+    221-fda-comparison.json
+  locator: Actual per-record gates and independent exact-structure/product comparisons.
+  accessed_at: '2026-10-21T11:14:51Z'
+  support: supports
+  summary: Schema, strict and independent native chemistry exit 0. Both native chemical
+    strings reproduce the full key, summed formula, charge, masses and stereochemistry;
+    the source mint reproduces. Independent FDA comparison finds zero discrepancies
+    across 27 assertions. A scratch comparison script initially referenced a nonexistent
+    field name, was corrected to standard_inchi_key and then exited 0; this was not
+    a native validation failure.
+  snapshot_sha256: 85ca8811e4de232fbe93b196c59f32d3ec608c679af5ad7a1fdc9a1b0975b9d4
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact dihydrochloride monohydrate
+  outcome: supported
+  summary: All native identifiers, chemical parents, composition and stereochemistry
+    agree with inspected official identity sources. Proton placement varies between
+    equivalent standardized salt representations.
+  target_ids:
+  - CHEBI:31368
+  evidence_ids:
+  - chebi
+  - chemical-xrefs
+  - gsrs
+  - label-identity
+  - validation
+- assessment_id: clinical
+  area: evidence
+  topic: Approved status and product assertions
+  outcome: supported
+  summary: Every imported assertion matches current public FDA product data. The approved
+    summary has currently marketed approved products as support and does not rely
+    solely on historical discontinued entries.
+  target_ids:
+  - CHEBI:31368
+  evidence_ids:
+  - fda
+  - gsrs
+  - source
+  - label-identity
+- assessment_id: biology
+  area: scope
+  topic: Antibacterial role and mechanism scope
+  outcome: supported
+  summary: Official product labeling supports antibacterial use and active-moiety
+    cell-wall/PBP mechanism. Product-specific combination outcomes, resistant taxa
+    and uncertain in vitro clinical relevance remain qualified. No specific direct
+    protein claim is present natively.
+  target_ids:
+  - CHEBI:31368
+  evidence_ids:
+  - label-biology
+  - record
+  - chebi
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary evidence enrichment
+  outcome: unknown
+  summary: A later curator may add narrowly supported activity or mechanism observations
+    after inspecting exact primary experimental material. Current optional absence
+    is not erroneous; database and label mechanism summaries do not replace primary
+    protein evidence.
+  target_ids:
+  - CHEBI:31368
+  evidence_ids:
+  - record
+  - label-biology
+  - chemical-xrefs
+- assessment_id: ownership
+  area: ownership
+  topic: Reproducible seed and regulatory sources
+  outcome: supported
+  summary: ChEBI and FDA maintained inputs own their imported fields. Any optional
+    primary observations belong to the exact native record under the curation workflow.
+    Initial source hashes are unchanged.
+  target_ids:
+  - CHEBI:31368
+  evidence_ids:
+  - source
+  - local-search
+- assessment_id: gates
+  area: schema
+  topic: Focused validation and history shape
+  outcome: supported
+  summary: Documented focused schema/strict checks and independent chemical validation
+    pass. No native history event or scientific-status promotion was made.
+  target_ids:
+  - CHEBI:31368
+  evidence_ids:
+  - validation
+  - record
+findings:
+- finding_id: F1
+  issue_key: cefepime-hydrochloride-qualified-primary-evidence-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Preserve salt, active-moiety and formulation scope when enriching biological
+    evidence
+  description: The sparse seed is sound within its present claims. Official labeling
+    supplies a useful context for optional activity and PBP mechanism enrichment,
+    but product dose equivalence and active-moiety effects do not establish binding
+    of the intact dihydrochloride monohydrate or justify transferring combination-drug
+    effects.
+  target_ids:
+  - CHEBI:31368
+  field_paths:
+  - activity_spectrum
+  - mode_of_action
+  - molecular_targets
+  - evidence
+  evidence_ids:
+  - record
+  - label-identity
+  - label-biology
+  - chemical-xrefs
+  rule_id: 'native-review-checklist: attach primary support to the exact chemical
+    and experimental claim'
+  native_severity: informational
+  normalization_reason: No required-field gap or unsupported existing biological assertion
+    was found. This is an optional curation path, not an identity or regulatory error.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefepime-hydrochloride.yaml
+    role: Future claim-level primary evidence additions for this exact salt/hydrate
+      record
+actions:
+- action_id: A1
+  description: If enriching biology, inspect the exact experimental material and retain
+    active-moiety and product qualifications.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:31368
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefepime-hydrochloride.yaml
+    role: Future claim-level primary evidence additions for this exact salt/hydrate
+      record
+  acceptance_checks:
+  - Select an accessible original study that identifies cefepime hydrochloride material
+    or explicitly maps the tested preparation to this hydrate. Record strain, medium,
+    inoculum, incubation, units and endpoint for any quantitative activity claim.
+  - Describe the dissolved active moiety and specific PBP evidence accurately. Do
+    not assert that the intact salt/hydrate crystal is a ligand or add a protein accession
+    from a broad PBP label statement.
+  - Preserve cefepime-equivalent product strengths and separate L-arginine/dextrose
+    excipients from the antibiotic identity. Do not assign cefepime-plus-metronidazole
+    outcomes to cefepime alone.
+  - Keep original approval and marketing fields distinct. Future regulatory updates
+    should use the maintained FDA extractor and exact GSRS identity join, with any
+    explicit legal withdrawal assessed independently of discontinued marketing.
+  - For separately authorized native curation, use write_validated_antibiotic and
+    record_curation_event, attach evidence at the narrow claim and run focused and
+    applicable shared gates before scientific-status promotion.
+limitations:
+- The whole native record and all maintained exact rows were read. All 13 original
+  input hashes remain unchanged; two actual FDA source/transform inputs and owner
+  paths were added before judgment.
+- No original PBP-binding paper or quantitative susceptibility experiment was independently
+  adjudicated for this exact salt in this review. Biological support is official labeling
+  and ontology, not a new PRIMARY_LITERATURE mechanism assertion. The adopted ChEBI
+  row contains no primary bibliography.
+- The public FDA comparison verifies every asserted product and its current API fields,
+  not every supplemental submission or legal docket event. Discontinued marketing
+  is not treated as proof of withdrawal or safety concern.
+- The B. Braun label was inspected for Description, Indications, Microbiology, Clinical
+  Studies and product identity metadata. It was not exhaustively audited for every
+  safety, dosing or pharmacokinetic statement, none of which is a new native claim
+  here.
+- CAS 123171-59-5 is concordantly attested by official ChEBI/KEGG; no paid CAS Registry
+  access was used.
+- No structured-source adapter was triggered by the native record because it contains
+  no named gene, protein, pathway, stress response or dataset claim. Label PBP context
+  was not promoted to a specific protein claim.
+- This partial scientific review supports the present identity, roles and regulatory
+  assertions while leaving optional primary mechanistic and quantitative enrichment
+  unresolved. It does not promote SEEDED status.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

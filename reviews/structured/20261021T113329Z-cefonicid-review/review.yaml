@@ -1,0 +1,590 @@
+schema_version: 1.0.0
+review_id: 20261021T113329Z-cefonicid-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cefonicid: correct a positional exact-synonym error while preserving direct
+  PBP evidence'
+started_at: '2026-10-21T11:08:35Z'
+finished_at: '2026-10-21T11:33:29Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native neutral cefonicid structure and checked chemical identifiers agree.
+  One ChEBI-derived exact synonym places the mandelamido substituent at 6-beta instead
+  of the supported 7-beta position. This bounded name error requires a reproducible
+  correction. Original E. coli PBP experiments support optional target enrichment
+  with competition, reagent-form and morphological-inference limits.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefonicid.yaml
+    sha256: ad6fa9afda48d502bf8abfa8aefd987165e7542e1ed69a7e8c74f862d09cb5ac
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+targets:
+- target_id: CHEBI:3491
+  path: data/antibiotics/antibacterial/cefonicid.yaml
+  label: cefonicid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity and reference leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted PBP target edge
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target role mapping
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 230; one exact record in path order,
+    captured before judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:3491
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:3491
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    230
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:3491
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefonicid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:3491
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefonicid.yaml --out /private/tmp/am-review-session/230-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:3491
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:3491
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:3491
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:3491
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:3491
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:3491
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:3491
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:3491
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:3491
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefonicid.yaml
+  locator: Complete native YAML, all source concepts and every history event.
+  accessed_at: '2026-10-21T11:32:57Z'
+  support: supports
+  summary: The complete exact record and all populated assertions were inspected.
+    This observation does not modify the generated record or promote SEEDED status.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; scripts/seed_from_sources.py
+  locator: 230-raw-rows.json and actual maintained owner files.
+  accessed_at: '2026-10-21T11:32:57Z'
+  support: supports
+  summary: ChEBI supplies identity, names, definition and its document/citation leads;
+    ARO supplies the joined classification and its assertions. Initial hashes are
+    preserved, with actual additional owner inputs appended before detailed judgment.
+    Any correction must survive reseeding.
+  snapshot_sha256: c66fca427ce51c10686ade4d473fe99e83b261c784d819671c072cc9b149067d
+- evidence_id: search
+  kind: search
+  reference: 230-local-hits.txt; 230-owner-hits.txt
+  locator: Exact identifier, label, full key and slug; maintained inputs and related
+    forms.
+  accessed_at: '2026-10-21T11:32:57Z'
+  support: supports
+  summary: The ignored-inclusive search distinguished the exact record from related
+    compounds and source references. No exact corrective overlay was identified in
+    the inspected maintained inputs.
+  search_scope: rg --no-ignore --hidden across the isolated worktree, excluding .git
+    and .venv internals; exact identifiers, label, key and slug.
+  snapshot_sha256: 738b1ecc88de6c46f7735d4cfca6f9278e9f6395a59d2a72d6bedf9f80360767
+- evidence_id: chemistry
+  kind: validation
+  reference: 230-chemistry.json; 227-230-external-chemistry.json
+  locator: Native SMILES/InChI and independently parsed official PubChem, ChEMBL,
+    KEGG and DrugCentral structures.
+  accessed_at: '2026-10-21T11:32:57Z'
+  support: supports
+  summary: Native encodings agree with DYAIAHUQIPBDIP-AXAPSJFSSA-N, C18H18N6O8S3,
+    charge 0 and the retained masses. All inspected independent structure representations
+    agree with the specified stereochemistry. Calculations used the existing batch019
+    RDKit interpreter against unchanged batch023 inputs.
+  snapshot_sha256: 7ba36332f8e33091739e45acaad31ef5ed53e4ce633ff69a1eb9a4c3e40393fc
+- evidence_id: identity
+  kind: database
+  reference: CHEBI:3491; PubChem:43594; CHEMBL1601; KEGG:C06882; KEGG:D07644; drugcentral:542
+  locator: Current ChEBI/OLS, CAS 61270-58-4 resolution and independently parsed official
+    structures.
+  accessed_at: '2026-10-21T11:32:57Z'
+  support: supports
+  summary: The neutral C18H18N6O8S3 graph has the supported three R centers, a 7-position
+    mandelamido side chain, and the 3-position sulfomethyltetrazolylthiomethyl group.
+    All checked exact structures agree. Reaxys 8175049 remains source-attested; DrugBank
+    and Wikipedia returned access failures.
+  snapshot_sha256: b9bd52cb5f478ab48a1011a477e05f0e9835a1b66fcc54aa94c56defe54ebc27
+- evidence_id: names
+  kind: record_content
+  reference: CHEBI:3491; data/raw/chebi_antimicrobials.tsv; conf/sources.yaml; scripts/seed_from_sources.py
+  locator: synonyms[2], definition, synonyms[3], current source and existing exclusion
+    code.
+  accessed_at: '2026-10-21T11:32:57Z'
+  support: supports
+  summary: The first systematic exact synonym begins 6-beta-[(2R)-2-hydroxy-2-phenylacetamido]
+    on a ceph-3-em skeleton. The native graph, definition, other systematic name and
+    inspected patents instead attach this group at position 7. Both ceph/cepham and
+    bicyclo numbering retain this beta-lactam carbon as position 7; this is not a
+    nomenclature-system renumbering. The current ChEBI source repeats the error. A
+    maintained source-specific name suppression or verified correction is needed.
+  snapshot_sha256: c66fca427ce51c10686ade4d473fe99e83b261c784d819671c072cc9b149067d
+- evidence_id: pbp
+  kind: primary_source
+  reference: PMID:6376452; DOI:10.7164/antibiotics.37.572
+  locator: Complete original pp572–576; Table 1 and Figure 2 page visually inspected.
+  accessed_at: '2026-10-21T11:32:57Z'
+  support: supports
+  summary: E. coli K-12 KN126 membranes were tested by competition with benzyl-14C-penicillin
+    and gel densitometry. Table 1 I50 values in micrograms/mL are PBP1a <0.25, 1b
+    10, 2 90, 3 0.7, 4 26 and 5/6 >256. Direct radiolabeled cefonicid gel-slice scintillation
+    corroborates binding to 1a/3; low specific activity limited fluorogram detection.
+    Agar MIC was 0.4 micrograms/mL on Trypticase soy agar with a Steers replicator.
+    These competition endpoints are not equilibrium Kd. Filamentation at/sub-MIC suggests
+    a PBP3 inhibitory role, but does not isolate the full causal killing pathway.
+    Radiolabeled material was supplied by SK&F; the bulk salt form is not specified.
+  snapshot_sha256: 045176206baa05ca07a0670c5443fb05902e291c2af493f56982d887427cb0b9
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:96734; PMID:6975269; PMID:12041774
+  locator: Complete adopted abstracts.
+  accessed_at: '2026-10-21T11:32:57Z'
+  support: supports
+  summary: 96734 reports original SK&F75073 antibacterial and animal exposure work.
+    6975269 studies selected beta-lactamase classes, including Type I enzyme inhibition,
+    not direct antibacterial PBP binding or universal enzyme stability. 12041774 concerns
+    eleven adults with difficult urinary infections, including renal-function context;
+    it is a small clinical study, not general efficacy or safety proof. Their full
+    methods were not independently inspected.
+  snapshot_sha256: 669595eb6f7e6478f2c46da0686d24f72a46921e5d95aef8802e9be974ba52e8
+- evidence_id: context
+  kind: database
+  reference: PMID:21425867; PMID:29017833; PMID:3055170; PMID:11585791; PMID:15673804;
+    PMID:6810737
+  locator: All remaining compound/target/parent available abstracts or metadata.
+  accessed_at: '2026-10-21T11:32:57Z'
+  support: supports
+  summary: The synthetic IgE-epitope and allergy papers provide immunology context;
+    PBP and ESBL reviews provide broader background. Parent reviews 15673804/6810737
+    have metadata only. These do not replace exact-compound primary target experiments.
+  snapshot_sha256: 669595eb6f7e6478f2c46da0686d24f72a46921e5d95aef8802e9be974ba52e8
+- evidence_id: patents
+  kind: primary_source
+  reference: https://patents.google.com/patent/DE2611270A1/en; https://patents.google.com/patent/US4048311A/en;
+    https://patents.google.com/patent/US4093723A/en; https://patents.google.com/patent/US4159373A/en
+  locator: All four titles, metadata/abstracts and selected exact named-compound body
+    text.
+  accessed_at: '2026-10-21T11:32:57Z'
+  support: supports
+  summary: 'The documents describe related substituted cephalosporin families and
+    include the matching 7-D-mandelamido-3-(1-sulfomethyltetrazol-5-ylthiomethyl)-3-cephem-4-carboxylic
+    acid. The broad US4159373 abstract alone is not sufficient to call it unrelated:
+    its body includes the matching compound. Other side-chain derivatives and salts
+    remain distinct; no family-wide assay is imported.'
+  snapshot_sha256: c5b151e059cb2aec611b4e0099fdc3d12acc2a7d3cf9c969718b277153bbc76d
+- evidence_id: adapter
+  kind: database
+  reference: 227-230-adapter-datasets.json; 227-230-adapter-cfxA.json; 227-230-adapter-pbp.json
+  locator: Structured iModulonDB catalog and matching E. coli searches before open-ended
+    mechanism research.
+  accessed_at: '2026-10-21T11:32:57Z'
+  support: supports
+  summary: kg-microbe-sources imodulondb --timeout 15 datasets and search --organism
+    e_coli --dataset modulome --query cfxA / --query penicillin all exited 0. The
+    catalog has no Bacteroides dataset. cfxA returned no genes or modules; penicillin
+    returned yfeW/b2430 (PBP4B) and no modules. These are annotation/search outcomes,
+    not direct binding, resistance or negative biological evidence.
+  snapshot_sha256: 98627808541dbd07b37e85a4bfb692fc0fe8a0a9564839813c9f2f9ac41a4a10
+assessments:
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained sources and history
+  outcome: supported
+  summary: Source concepts, source-owned assertions and seeding history are coherent.
+    New primary observations require the native validated writer and curation event;
+    source corrections must be reproducible.
+  target_ids:
+  - CHEBI:3491
+  evidence_ids:
+  - record
+  - owners
+  - search
+- assessment_id: validation
+  area: schema
+  topic: Focused native checks
+  outcome: supported
+  summary: Documented schema and strict validation passed; independent chemistry also
+    passed. Deterministic checks do not establish scientific completeness or native
+    REVIEWED status.
+  target_ids:
+  - CHEBI:3491
+  evidence_ids:
+  - chemistry
+- assessment_id: identity
+  area: identity
+  topic: Supported molecular graph
+  outcome: supported
+  summary: The native graph, charge and all specified stereochemistry agree across
+    independent structures.
+  target_ids:
+  - CHEBI:3491
+  evidence_ids:
+  - identity
+  - chemistry
+  - patents
+- assessment_id: names
+  area: representation
+  topic: Mandelamido substituent position
+  outcome: concern
+  summary: One exact synonym assigns position 6 where the native graph and other verified
+    descriptions specify position 7.
+  target_ids:
+  - CHEBI:3491
+  evidence_ids:
+  - names
+  - identity
+  - record
+  - patents
+- assessment_id: target
+  area: evidence
+  topic: PBP family and direct binding experiments
+  outcome: supported
+  summary: The native target honestly retains PRIMARY_EVIDENCE_NEEDED. Original KN126
+    competition and radiolabeled binding data can support bounded primary enrichment
+    while preserving the taxon-agnostic family grounding.
+  target_ids:
+  - CHEBI:3491
+  evidence_ids:
+  - record
+  - pbp
+  - adapter
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and enzyme/clinical boundaries
+  outcome: supported
+  summary: Original activity and PBP studies support the antibacterial moiety. Enzyme
+    inhibition, whole-cell MIC and small clinical series remain different evidence
+    types.
+  target_ids:
+  - CHEBI:3491
+  evidence_ids:
+  - activity
+  - pbp
+  - context
+- assessment_id: optional
+  area: completeness
+  topic: Producer, quantitative observations and causal graph
+  outcome: unknown
+  summary: No natural producer or complete isolated causal chain is established. Optional
+    primary additions require explicit reagent, strain, method and endpoint context.
+  target_ids:
+  - CHEBI:3491
+  evidence_ids:
+  - record
+  - pbp
+  - activity
+findings:
+- finding_id: F1
+  issue_key: chebi-3491-cefonicid-six-beta-positional-synonym
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct or suppress the 6-beta mandelamido exact synonym
+  description: synonyms[2] assigns the (R)-mandelamido group to 6-beta, whereas the
+    stored graph, native definition, other systematic name and original patent naming
+    place it at position 7. The chemical structure is coherent; this is a source-imported
+    positional naming error.
+  target_ids:
+  - CHEBI:3491
+  field_paths:
+  - synonyms[2].synonym_text
+  evidence_ids:
+  - record
+  - owners
+  - identity
+  - chemistry
+  - names
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Existing source-specific synonym_exclusions configuration
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI name provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible source-name extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-specific synonym suppression and native regeneration
+  rule_id: 'native-review-checklist: identity, equivalence and accurate names'
+  native_severity: minor bounded nomenclature defect
+  normalization_reason: The supported molecular graph and exact grounding remain intact;
+    the finding concerns specific source-imported name text.
+actions:
+- action_id: A1
+  description: Correct or suppress the 6-beta mandelamido exact synonym
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:3491
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Existing source-specific synonym_exclusions configuration
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI name provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible source-name extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-specific synonym suppression and native regeneration
+  acceptance_checks:
+  - Verify a 7-beta name against the exact native graph, then correct the maintained
+    source name or add the complete erroneous alias to synonym_exclusions under CHEBI:3491.
+    Do not apply a global positional replacement to unrelated compounds.
+  - Use the maintained source/extraction correction or source-specific synonym exclusion;
+    regenerate through the documented seed dry run and exact-record canary. Do not
+    patch generated YAML alone.
+  - Preserve the independently supported complete structure, charge, stereochemistry
+    and source provenance. Inspect the emitted names, run focused schema/strict, verify-corpus
+    and applicable shared quality gates.
+limitations:
+- Required shared corpus results must be incorporated before final save. Focused success
+  alone does not establish whole-corpus quality.
+- No paid source was used. Inaccessible independent registry or article contents remain
+  explicit limits, not evidence of nonexistence.
+- Ten adopted/target/parent and direct-follow-up MED records were dispositioned; eight
+  indexed abstracts were available and two parent reviews have metadata only. The
+  1984 PBP paper was read in full; the other original studies remain abstract-level.
+- The PBP paper refers to prior membrane protocols, and the bulk salt form is not
+  explicit. Its Methods name antibiotic assay medium 3 for morphogenic effects while
+  Figure 2 says TSB; do not adopt an unqualified broth-medium assertion. Competition
+  I50, binding and inferred inhibitory-site effects remain distinct.
+- Reaxys, DrugBank and Wikipedia independent contents remain unverified. Patent checks
+  cover relevance and selected exact compound naming, not all examples, claims or
+  activities.
+- Future primary-target enrichment must retain family grounding and add organism/strain/assay
+  evidence through the native writer and curation event. This review does not perform
+  the proposed synonym correction or native sign-off.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
