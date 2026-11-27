@@ -1,0 +1,638 @@
+schema_version: 1.0.0
+review_id: 20261021T180116Z-halocarban-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Halocarban: exact structure and antibacterial activity supported; definition
+  spelling corrections'
+started_at: '2026-10-21T17:48:29Z'
+finished_at: '2026-10-21T18:01:16Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The exact neutral halocarban structure, seven aliases, CAS identity and broader
+  chemical classes agree with current authorities and independent chemistry. An original
+  study directly measures cloflucarban antibacterial activity using a 50% growth-reduction
+  endpoint. The adopted nanobody paper concerns analytical cross-reactivity, not the
+  antibacterial mechanism. Two spelling errors in the imported definition form one
+  minor finding; historical formulation evidence and unestablished present-day use
+  frequency remain qualified.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/halocarban.yaml
+    sha256: 86433e675ca9fea03be2bf9b90a77316f4a4b030ef64eb2b2be7febe89bd1e0a
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:135477
+  path: data/antibiotics/antibacterial/halocarban.yaml
+  label: halocarban
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 521; one whole exact native record. All thirteen original
+    captured input hashes were verified and preserved; owner inspection confirmed
+    that no additional adopted source lane supplies this record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:135477
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:135477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/halocarban.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:135477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/halocarban.yaml --out /private/tmp/am-review-session/521-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:135477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 521
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: Independent chemical authority comparison
+  status: passed
+  required: false
+  summary: All six native, ChEBI and PubChem SMILES/InChI encodings reproduce the
+    same exact neutral graph.
+  target_ids:
+  - CHEBI:135477
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/521-authority-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: structured-adapter
+  name: Native structured-source applicability
+  status: not_applicable
+  required: false
+  summary: The native record asserts no gene, protein, pathway, regulator, stress
+    response or transcriptomics dataset. Newly encountered mammalian pathway and nanobody
+    experiments are context, not native antibacterial target assertions.
+  target_ids:
+  - CHEBI:135477
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:135477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:135477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:135477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:135477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:135477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:135477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:135477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:135477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:135477
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/halocarban.yaml
+  locator: Entire native YAML, including definition, all seven synonyms, both parents,
+    role, all chemistry and identifiers, source concept and four history events.
+  accessed_at: '2026-10-21T17:57:48Z'
+  support: supports
+  summary: The record denotes neutral halocarban, CHEBI:135477, C14H9Cl2F3N2O, ZFSXZJXLKAJIGS-UHFFFAOYSA-N.
+    It is EXACT and SEEDED. No mode, molecular target, quantitative activity, resistance,
+    producer, clinical assertion, causal graph, dataset or discussion is populated.
+    The definition contains the literal spelling errors deodarants and anbacterial.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:2557; conf/sources.yaml; scripts/extract_source_inventory.py:176;
+    scripts/seed_from_sources.py:785; curation/decisions.tsv; data/raw/MANIFEST.yaml
+  locator: Complete exact row, relevant reviewed-edge extraction, role/class mapping,
+    synonym/xref routing and ChEBI seeding code; actual-owner scan across seven maintained
+    raw lanes.
+  accessed_at: '2026-10-21T17:57:48Z'
+  support: supports
+  summary: The native definition, chemistry, aliases, parents and antibacterial role
+    faithfully reproduce the three-star ChEBI row. PMID:30033524 is the sole adopted
+    citation lead and is intentionally not copied as record-wide evidence. No exact
+    ARO, PubChem enrichment, FDA or MIBiG row supplies this seed. DrugCentral is deliberately
+    routed to the broader drug_xrefs slot. No applicable exact decision or curator
+    addition was found in the hidden/ignored-inclusive owner search.
+  snapshot_sha256: 1a06242ca8adba52574c45072736115065bbd9935ce90b344f37e59100ba4f17
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/135477/
+  locator: Complete current identity, synonyms, chemistry, exact CAS, drug association,
+    outgoing parents/role and citation list.
+  accessed_at: '2026-10-21T17:54:52Z'
+  support: supports
+  summary: Current ChEBI agrees with native identity and all retained aliases, including
+    Spanish/Latin INNs and cloflucarban. Its definition still contains both spelling
+    errors. The current entry additionally cites PMID:36067930; that later citation
+    is not silently treated as an adopted input. Its has-part trifluoromethyl relationship
+    is not a missing required parent.
+  snapshot_sha256: b12a3b9db846d88cf34228d52968c40628448d3f642b14b5eaffeac7fcef5f73
+- evidence_id: chemistry
+  kind: authority
+  reference: pubchem.compound:9719; cas:369-77-7; CHEBI:135477; 521-authority-chemistry.json
+  locator: Complete PubChem property responses by full key and CAS; independent parsing
+    of native, current ChEBI and PubChem SMILES and InChI.
+  accessed_at: '2026-10-21T17:57:48Z'
+  support: supports
+  summary: All six encodings reproduce the full key, formula and zero charge. The
+    CAS query resolves to the same CID9719. The molecule has one para chlorine on
+    each phenyl ring and one meta trifluoromethyl substituent; the definition and
+    systematic aliases describe that graph. Native average and monoisotopic masses
+    pass the independent diagnostic.
+  snapshot_sha256: 432e43940edcb8b1bf392fafff704fdce733cff5e2eff621049bbed310ed28fb
+- evidence_id: classes
+  kind: authority
+  reference: CHEBI:134043; CHEBI:83403; CHEBI:33282
+  locator: Current official term definitions and native compound outgoing relations.
+  accessed_at: '2026-10-21T17:54:52Z'
+  support: supports
+  summary: Phenylureas and monochlorobenzenes are strictly broader, compatible classes.
+    Monochlorobenzenes refers to a ring bearing one chlorine, so the two chlorines
+    on separate rings are not a contradiction. The antibacterial role resolves to
+    the expected biological role. Filing follows the maintained antibacterial priority.
+  snapshot_sha256: 5443edbe80501d65a383a52b5ce4534702d8ced30d373645b6cae1ad5268ea77
+- evidence_id: drug
+  kind: database
+  reference: https://drugcentral.org/drugcard/3108
+  locator: Drug identity, CAS, formula, synonyms, pharmacologic role and approval/product
+    sections; no AI-generated answer was requested or used.
+  accessed_at: '2026-10-21T17:54:52Z'
+  support: supports
+  summary: DrugCentral3108 is halocarban with CAS369-77-7 and C14H9Cl2F3N2O, and lists
+    cloflucarban and trifluoromethyldichlorocarbanilide aliases. This supports the
+    broader drug association. The page provides no approval or product rows; that
+    is not proof of universal regulatory absence and is not converted into a clinical
+    status.
+  snapshot_sha256: 2155ea32af35eac286d3a9a447747aed23a6c56a2a490d4c7fbca9d2b3785484
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:30033524; DOI:10.1002/jmr.2755; https://pmc.ncbi.nlm.nih.gov/articles/PMC6774440/
+  locator: Complete indexed abstract; original Introduction, Methods2.1–2.4, Table1,
+    selected Results3.1, Results3.2–3.3 and Conclusions inspected, with particular
+    attention to exact TFC material and cross-reactivity.
+  accessed_at: '2026-10-21T17:55:46Z'
+  support: supports
+  summary: The exact 3-trifluoromethyl-4,4′-dichlorocarbanilide appears in Table1
+    and Methods2.3 as a comparison hapten. Competitive ELISA gives relative cross-reactivity
+    6.97% for T9, reused from prior work, and 15% for T10. These are ratios of IC50
+    values, not antibacterial MICs or direct Kd values. The crystallized ligands are
+    triclocarban, not halocarban. The paper is relevant compound context but does
+    not establish its microbial killing mechanism.
+  snapshot_sha256: f13d6bc09605015f1715f661b86d29244a811f9703229a7e8f0ced90c90186ed
+- evidence_id: activity2018
+  kind: primary_source
+  reference: PMID:30400165; DOI:10.3390/molecules23112853; https://pmc.ncbi.nlm.nih.gov/articles/PMC6278391/
+  locator: Original Abstract, Introduction, complete Results/Discussion, Tables1–2
+    and footnotes, general chemical methods, biological Methods3.2–3.8 and Conclusions
+    read. Unrelated analogue synthesis entries and raw supplemental spectra were not
+    comprehensively read. Figure1 independently viewed.
+  accessed_at: '2026-10-21T17:55:23Z'
+  support: supports
+  summary: Figure1 explicitly identifies cloflucarban as the CF3 parent and matches
+    the native constitution. Table1 TFC gives 0.5 µg/mL against S. aureus ATCC12600,
+    an unnamed MRSA clinical isolate and S. epidermidis ATCC1798. Its endpoint is
+    a 50% reduction of growth OD550 over an 8 h assay, not conventional complete-inhibition
+    MIC or a population MIC50. Methods use TSB, initial OD550 approximately 0.1, 37
+    degrees C and 150 rpm. TFC is NA against S. mutans ATCC25175, defined as >100
+    µg/mL, and >20 against E. faecalis ATCC19433; the paper reports no Gram-negative
+    activity. Macrophage CC50 is 13.7 µg/mL. Membrane microscopy, biofilm and mutation
+    experiments concern TCC and selected new analogues, not TFC, and cannot supply
+    an exact halocarban mechanism. The general ≥95% purity statement concerns new
+    compounds and does not independently establish the comparator purity.
+  snapshot_sha256: e7f6d479806e60da5cc5da0cdca5153aeab5ac6f0e82d061032dbdf222ca0d2c
+- evidence_id: figure
+  kind: primary_source
+  reference: DOI:10.3390/molecules23112853 Figure1
+  locator: Original article-linked image independently viewed; 521-2018-figure1.jpg.
+  accessed_at: '2026-10-21T17:56:21Z'
+  support: supports
+  summary: The drawing labels cloflucarban as X=CF3 on the otherwise 4,4′-dichlorocarbanilide
+    scaffold, corroborating the native exact constitution.
+  snapshot_sha256: 818fa73c915bf52d1e0359669abb36741b9640219e68038a6355055bcebb67bc
+- evidence_id: historical-use
+  kind: primary_source
+  reference: PMID:1103729; DOI:10.1128/am.30.4.551-556.1975
+  locator: Complete indexed original abstract; full scanned paper not independently
+    read.
+  accessed_at: '2026-10-21T17:55:23Z'
+  support: supports
+  summary: The 1975 study explicitly tested a soap containing 1.0% trichlorocarbanilide
+    plus 0.5% trifluoromethyldichlorocarbanilide. It supports historical use in a
+    combination soap. The reduced skin bacterial counts belong to that formulation,
+    not isolated halocarban, and do not establish present-day use frequency or deodorant-market
+    prevalence.
+  snapshot_sha256: 56e137259748d44cc7802f1aedac976bae3ddc314de4ffb152ed3b49e592b598
+- evidence_id: followup-scope
+  kind: database
+  reference: PMID:36067930; DOI:10.1016/j.bmcl.2022.128975; PMID:38540668; DOI:10.3390/biom14030248;
+    PMID:38700321; DOI:10.1128/spectrum.00071-24
+  locator: 2022 complete abstract; 2024 mammalian paper abstract and selected Results
+    paragraphs; 2024 analogue paper selected Introduction/Discussion and compound
+    list, not complete independent assay audit.
+  accessed_at: '2026-10-21T17:55:23Z'
+  support: context_only
+  summary: The newer ChEBI citation concerns novel diarylureas and its abstract does
+    not identify an exact halocarban assay. Mammalian PINK1/Parkin and mitochondrial-complex
+    effects are host experiments, not an established antibacterial mechanism. The
+    2024 antimicrobial paper concerns new SF5 analogues and discusses cloflucarban
+    as context; these congener findings are not transferred to this native graph.
+    These bounded leads do not create required missing target fields.
+  snapshot_sha256: 3c3c63383de19cde6920f80af2eb5e9579128d5139bfae8ebbe2a168b748b2be
+- evidence_id: search
+  kind: search
+  reference: 521-local-hits.txt; 521-owner-hits.txt; 521-literature.json; 521-exact-literature.json;
+    521-fetch-results.json
+  locator: Initial repository-wide hidden/ignored-inclusive identifier, label and
+    slug search; owner follow-up by full key/CAS/aliases; public Europe PMC and web
+    exact-name searches on 2026-10-21.
+  accessed_at: '2026-10-21T17:55:23Z'
+  support: context_only
+  summary: The initial broad literature query returned 46 entries, many through ambiguous
+    Irgasan indexing or unrelated halocarbons. The exact title/abstract query for
+    halocarban, cloflucarban, trifluoromethyldichlorocarbanilide and Irgasan CF3 returned
+    4. Only explicitly mapped compound evidence was used; generic Irgasan/DP300 results
+    were not assigned to halocarban. This is a bounded search, not evidence that other
+    mechanisms or formulations do not exist.
+  snapshot_sha256: 56e137259748d44cc7802f1aedac976bae3ddc314de4ffb152ed3b49e592b598
+  search_scope: 2026-10-21; repository hidden/ignored-inclusive exact identifier,
+    label, slug, InChIKey and CAS searches; Europe PMC broad and exact title/abstract
+    synonym queries plus bounded public web primary discovery.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact molecule, aliases, formula and identifiers
+  outcome: supported
+  summary: The graph, formula, masses, exact CAS and aliases agree with independent
+    authority encodings and the original comparison figure. DrugCentral remains a
+    correctly typed broader drug association.
+  target_ids:
+  - CHEBI:135477
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - drug
+  - figure
+- assessment_id: grounding
+  area: grounding
+  topic: Strictly broader classes and antibacterial filing
+  outcome: supported
+  summary: Both parent terms fit the actual scaffold and the retained role resolves
+    correctly. Direct exact-TFC growth inhibition supports antibacterial activity
+    without relying on family membership.
+  target_ids:
+  - CHEBI:135477
+  evidence_ids:
+  - classes
+  - activity2018
+  - owners
+- assessment_id: definition
+  area: consistency
+  topic: Imported definition wording
+  outcome: concern
+  summary: The chemical description is correct, but deodarants and anbacterial are
+    spelling errors reproduced from ChEBI. Historical soap use is documented; the
+    frequency and present-day scope of the word often are not independently established
+    here.
+  target_ids:
+  - CHEBI:135477
+  evidence_ids:
+  - native
+  - chebi
+  - historical-use
+- assessment_id: mechanism
+  area: evidence
+  topic: Adopted evidence and exact antimicrobial mechanism boundary
+  outcome: unknown
+  summary: The sole adopted publication supplies analytical antibody cross-reactivity.
+    Exact antibacterial growth inhibition is supported independently, but the inspected
+    sources do not establish a particular halocarban bacterial target or killing pathway.
+    TCC/analogue membrane experiments and mammalian mitochondrial effects must remain
+    distinct.
+  target_ids:
+  - CHEBI:135477
+  evidence_ids:
+  - adopted
+  - activity2018
+  - followup-scope
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained inputs and scientific history
+  outcome: supported
+  summary: All thirteen original hashes remain unchanged, the exact adopted source
+    row and relevant generator logic were inspected, and four source history events
+    are consistent with SEEDED status. No scientific status promotion is implied by
+    passing validators.
+  target_ids:
+  - CHEBI:135477
+  evidence_ids:
+  - owners
+  - native
+- assessment_id: coverage
+  area: completeness
+  topic: Optional objects and exact assay enrichment
+  outcome: supported
+  summary: The absent optional activity, target, resistance, producer, clinical, graph
+    and dataset fields are not defects by themselves. Any quantitative enrichment
+    must preserve the 50% OD-growth endpoint, strains, material uncertainty and combination-formulation
+    scope.
+  target_ids:
+  - CHEBI:135477
+  evidence_ids:
+  - native
+  - activity2018
+  - historical-use
+  - search
+findings:
+- finding_id: F1
+  issue_key: halocarban-definition-spelling-deodarants-anbacterial
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct two spelling errors in the imported definition
+  description: The native and current ChEBI definitions spell deodorants as deodarants
+    and antibacterial as anbacterial. These are bounded wording defects; the chemical
+    identity and independently demonstrated antibacterial activity are not disputed.
+  target_ids:
+  - CHEBI:135477
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - chebi
+  - activity2018
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition text
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained upstream definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition emission
+  rule_id: 'Native checklist: accurate definitions through maintained source owners'
+  native_severity: minor
+  normalization_reason: Two unambiguous spelling errors impair presentation without
+    changing the denoted chemical structure or experimental claim.
+actions:
+- action_id: A1
+  description: Correct both spelling errors through the maintained source path and
+    regenerate the exact record.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:135477
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition text
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained upstream definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition emission
+  acceptance_checks:
+  - The generated definition uses deodorants and antibacterial while retaining the
+    corroborated exact scaffold description.
+  - Record the source correction or an explicit maintained override; re-seed this
+    exact identifier and pass focused schema/strict and corpus reproduction checks.
+- action_id: A2
+  description: If adding activity evidence or refining use wording, preserve the exact
+    experimental scope.
+  finding_ids: []
+  target_ids:
+  - CHEBI:135477
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/halocarban.yaml
+    role: Optional curator-owned evidence or activity additions through the validated
+      writer
+  acceptance_checks:
+  - Represent the 2018 TFC measurement as 50% growth reduction over 8 h, not complete-inhibition
+    MIC or population MIC50. Keep exact strain identifiers and the unnamed clinical
+    isolate distinct.
+  - Do not assign nanobody binding, TCC/SF5-analogue membrane effects or mammalian
+    PINK1/Parkin effects as halocarban antibacterial targets.
+  - For use wording, distinguish documented historical combination soap use from a
+    substantiated present-day frequency claim; do not infer universal regulatory status
+    from DrugCentral empty fields.
+limitations:
+- The complete native record and maintained exact source row were reviewed. The adopted
+  primary was read at the stated full-main sections, and the 2018 primary was read
+  across main scientific and biological-method sections with Figure1 visually checked;
+  unrelated analogue synthesis details and raw supplemental spectra were not fully
+  audited.
+- The 1975 formulation source was read only at complete abstract depth. Its outcome
+  cannot be partitioned between halocarban and triclocarban. Present-day frequency
+  of deodorant/soap use was not established.
+- The 2018 comparator is explicitly identified and drawn, but a separate supplier/lot/purity
+  declaration for TFC was not established in the inspected text. The source’s purity
+  threshold applies to newly synthesized compounds.
+- The 2022 newer ChEBI citation was read at abstract depth only. The 2024 host and
+  analogue papers were inspected selectively for scope; no comprehensive mechanistic
+  sign-off is claimed.
+- Europe PMC XML for the adopted paper returned 500; ordinary PMC HTML supplied the
+  inspected main text. Publisher image routes failed 403 before the article-linked
+  PMC image succeeded. The Taiwan authority file route returned a removed-file HTML
+  notice, not a usable policy PDF, and supports no regulatory claim.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All fetch manifests retain actual URLs, UTC retrieval times and SHA256 values, including
+  failed or non-PDF routes. The exact structure and source input hashes were rechecked
+  before draft output.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
