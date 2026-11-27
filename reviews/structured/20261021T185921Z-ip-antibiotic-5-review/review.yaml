@@ -1,0 +1,541 @@
+schema_version: 1.0.0
+review_id: 20261021T185921Z-ip-antibiotic-5-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'IP-antibiotic 5: exact cyclohexanecarboxamide structure and WHO Z activity'
+started_at: '2026-10-21T18:21:57Z'
+finished_at: '2026-10-21T18:59:21Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The primary structure and supplementary characterization support this exact
+  numbered cyclohexanecarboxamide. Actual Table1 reports a WHO Z MIC of 0.313 mg/L,
+  consistent with the native summary. One minor evidence-placement defect remains:
+  a faithful curator paraphrase occupies a verbatim snippet field. Follow-up results
+  on compounds2/3 do not establish activity, mechanism or safety for this analogue.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ip-antibiotic-5.yaml
+    sha256: 2725b99f4375e4ae699888410404e305724717f7ebaf2513ac1789e3ac9950c4
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:curator-4b720a8dc7
+  path: data/antibiotics/antibacterial/ip-antibiotic-5.yaml
+  label: IP-antibiotic 5
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Exact publication-derived identity and evidence owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Curator inventory loader and generated record emission
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Optional maintained grounding adjudication
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 559; one exact record in path order.
+    All thirteen original input hashes preserved, with target ownership corrected
+    to the actual curator lane.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:curator-4b720a8dc7
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    559
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ip-antibiotic-5.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ip-antibiotic-5.yaml --out /private/tmp/am-review-session/559-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: independent-drawing
+  name: Independent primary drawing reconstruction
+  status: passed
+  required: false
+  summary: Independently typed Table1 graph matches the native full key and reciprocal
+    molecular graph.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/IP456-structure-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter
+  name: Structured-source applicability
+  status: not_applicable
+  required: false
+  summary: No native gene, protein, regulator, pathway or expression assertion; proteomics
+    in the source concerns other compounds.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ip-antibiotic-5.yaml
+  locator: Entire native record, both synonyms, definition, all chemistry, source
+    evidence and sole history event.
+  accessed_at: '2026-10-21T18:41:11Z'
+  support: supports
+  summary: The neutral publication-numbered structure has key CRFNZPACFKDJLE-UHFFFAOYSA-N,
+    no stereocentre and no additional salt fragment. The MINTED/PROPOSED status and
+    single curator-source history event are consistent. No target, mode, resistance,
+    producer, clinical use, parent or external exact reference is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: curation/curator_antibiotics.tsv:6; scripts/seed_from_sources.py:618;
+    scripts/seed_from_sources.py:686
+  locator: Exact DOI-fragment row matched by equality; complete loader/build logic
+    inspected.
+  accessed_at: '2026-10-21T18:41:11Z'
+  support: supports
+  summary: Exact source ID DOI:10.1021/acsinfecdis.5c00812#5 supplies the structure,
+    two names, role, definition and evidence. The loader copies evidence_snippet directly
+    into snippet and evidence_notes into notes. The deterministic mint and dates agree.
+    Original thirteen inputs already include the actual source table and seeder.
+  snapshot_sha256: 4511a29d9b39f0a7969d7c5d018023d644382f1caa322f3bc5f217592960a758
+- evidence_id: chemistry
+  kind: validation
+  reference: 559-chemistry.json; 559-authority-chemistry.json; IP456-structure-check.py
+  locator: Native SMILES/InChI checks and independent drawing reconstruction.
+  accessed_at: '2026-10-21T18:41:11Z'
+  support: supports
+  summary: The two native encodings and independently typed Table1 drawing agree at
+    CRFNZPACFKDJLE-UHFFFAOYSA-N. Formula, zero charge, single fragment, average/exact
+    masses and deterministic mint pass. No precursor, different acyl chain, positional
+    isomer, metal complex or MS ion is substituted.
+  snapshot_sha256: f66145e17a9b44964cdabb414d25efa458c58e3f5bf16bf5aa639c50266035b2
+- evidence_id: registry
+  kind: search
+  reference: PubChem exact InChIKey lookup CRFNZPACFKDJLE-UHFFFAOYSA-N
+  locator: Actual official PUG REST response and056-root-fetch7.json.
+  accessed_at: '2026-10-21T18:41:11Z'
+  support: context_only
+  summary: The exact-key lookup returned404 for CRFNZPACFKDJLE-UHFFFAOYSA-N. This
+    bounded provider miss does not prove universal registry absence or undermine the
+    independently supported publication-derived identity.
+  search_scope: 2026-10-21; exact full-key PubChem property endpoint only; no exhaustive
+    registry search claimed.
+  snapshot_sha256: a38299a0f3610ff6dd9f3b750f53809a6ac43cae6c7d9d27071c2bfebd28bd9c
+- evidence_id: primary
+  kind: primary_source
+  reference: PMID:41405126; DOI:10.1021/acsinfecdis.5c00812; https://pmc.ncbi.nlm.nih.gov/articles/PMC12797230/
+  locator: Entire original scientific main, all tables/captions; actual Scheme1 and
+    Table1 images.
+  accessed_at: '2026-10-21T18:41:11Z'
+  support: supports
+  summary: The original synthesizes twelve numbered 2-amino-5,7-dichloro-8-hydroxyquinoline
+    analogues. Compound5 is the cyclohexanecarboxamide; both source drawings and the
+    exact synthesis subsection match the native structure. Time-kill, serial passage,
+    host-cell, cytotoxicity and proteomic experiments select compounds2/3 and PBT2;
+    those results are not transferred to this compound.
+  snapshot_sha256: 2a99c3f72244f2e8a63dd207e623081cb3e00101c49502b9043ce4ff4b584fab
+- evidence_id: material
+  kind: primary_source
+  reference: DOI:10.1021/acsinfecdis.5c00812.s001; https://ndownloader.figshare.com/files/60451332
+  locator: Exact main synthesis/characterization subsection and actual supplementary
+    pagesS10–S11; verified publisher resource DOI/file identity.
+  accessed_at: '2026-10-21T18:41:11Z'
+  support: supports
+  summary: Actual proton/carbon NMR drawings depict compound5 as the cyclohexanecarboxamide.
+    Published HRMS [M+H]+ found339.0658, calculated339.0662, agrees with the exact
+    native formula at the source precision. The paper reports purity greater than95%
+    by NMR. Published spectra were viewed, without raw-data reprocessing or independent
+    purity quantification. The observed MS ion does not change the neutral native
+    compound.
+  snapshot_sha256: 1b130403095d4518fbc3a59edf57c3ed7753d47b6beb2f16c21d46c6efe583b8
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:41405126; Table1 and Bacterial Strains/Media and MIC Determination
+    Methods
+  locator: Actual Table1 compound5 cell and full corresponding methods.
+  accessed_at: '2026-10-21T18:41:11Z'
+  support: supports
+  summary: The exact printed MIC is 0.313 mg/L for N.gonorrhoeae WHO Z. GC medium
+    contains1% IsoVitaleX; the MIC method uses an approximately5×10^5 CFU/mL adjusted
+    suspension,100 µL inoculum, serially diluted compound and overnight incubation
+    at37°C, with no turbidity defining MIC. Each assay was performed three times in
+    triplicate. No added zinc is specified in the monotherapy screen. This supports
+    the native preliminary activity statement, not a clinical breakpoint, species-wide
+    efficacy or a killing mechanism.
+  snapshot_sha256: 67e867b42477bf51aa785476377153818c3e9d95041fa4d8e8acdf9e84fd7ff0
+- evidence_id: role
+  kind: authority
+  reference: CHEBI:33282
+  locator: Official current antibacterial-agent definition.
+  accessed_at: '2026-10-21T18:41:11Z'
+  support: supports
+  summary: The role covers inhibition or killing of bacteria. Exact WHO Z growth inhibition
+    supports the qualitative role without clinical-use or direct-target claims.
+  snapshot_sha256: 20d92ce7e00c204b1753184671c043160821d692438278344335446aadcd5082
+- evidence_id: snippet
+  kind: validation
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md:14;
+    source_concepts[0].evidence[0].snippet
+  locator: Native/source row compared against the complete original main and exact
+    Table1.
+  accessed_at: '2026-10-21T18:41:11Z'
+  support: supports
+  summary: The sentence describing Jen and colleagues and compound5 potency is a curator
+    synthesis of study design and the table result. Its factual content is supported,
+    but it is not a verbatim source passage. The checklist reserves snippet for verbatim
+    source text and interpretation for notes.
+- evidence_id: search
+  kind: search
+  reference: 559-local-hits.txt; 559-owner-hits.txt; 559-authority-chemistry.json;056-root-fetch7.json
+  locator: Initial hidden/ignored-inclusive searches and additional exact-key search
+    across data/curation/conf YAML/TSV/JSON.
+  accessed_at: '2026-10-21T18:41:11Z'
+  support: context_only
+  summary: The additional exact-key search, including ignored and hidden paths, returned
+    the target and its curator row only. This is a bounded maintained-input result,
+    not global absence. Direct DOI/PMC primary retrieval succeeded. Challenged/denied
+    supplement routes were followed by a successful verified original publisher Figshare
+    PDF; no comprehensive later-literature search is claimed.
+  search_scope: 2026-10-21; rg --no-ignore --hidden exact identifiers/labels and full
+    key; primary DOI and publisher supplement metadata/file retrieval.
+  snapshot_sha256: f66145e17a9b44964cdabb414d25efa458c58e3f5bf16bf5aa639c50266035b2
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact numbered structure
+  outcome: supported
+  summary: The native cyclohexanecarboxamide matches its original drawing, independent
+    graph and exact characterization pages; source-local numbering is explicitly resolved.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+  - primary
+  - material
+- assessment_id: activity
+  area: evidence
+  topic: WHO Z preliminary antibacterial evidence
+  outcome: supported
+  summary: The 0.313 mg/L printed result and qualitative antibacterial role agree
+    with the native summary under the recorded assay conditions.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  evidence_ids:
+  - activity
+  - role
+  - primary
+- assessment_id: placement
+  area: evidence
+  topic: Quotation versus curator summary
+  outcome: concern
+  summary: The supported paraphrase is incorrectly placed in a verbatim snippet; moving
+    it into notes preserves its scientific content.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  evidence_ids:
+  - snippet
+  - owners
+  - activity
+- assessment_id: scope
+  area: completeness
+  topic: Mechanistic and downstream evidence boundaries
+  outcome: supported
+  summary: No native mechanism is asserted. The original follow-up work on compounds2/3
+    supplies no target, resistance-selection, host-cell or clinical conclusion for
+    this analogue.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  evidence_ids:
+  - native
+  - primary
+- assessment_id: provenance
+  area: provenance
+  topic: Curator identity and source ownership
+  outcome: supported
+  summary: The exact DOI fragment, deterministic mint and history are coherent. All
+    initial hashes are preserved; the bounded registry miss is not a reason to fabricate
+    a mapping.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  evidence_ids:
+  - owners
+  - native
+  - chemistry
+  - registry
+  - search
+findings:
+- finding_id: F1
+  issue_key: ip-antibiotic-5-paraphrase-in-source-snippet
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Move the curator paraphrase out of the verbatim snippet field
+  description: The exact curator row places a faithful synthesis of study design and
+    compound5 Table1 activity in evidence_snippet, copied to source_concepts[0].evidence[0].snippet.
+    It is not a verbatim passage. Move it to notes while preserving the existing normalization
+    notes and source, or replace it with a short exact passage and retain interpretation
+    separately.
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  field_paths:
+  - source_concepts[0].evidence[0].snippet
+  evidence_ids:
+  - native
+  - owners
+  - snippet
+  - activity
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Exact publication-derived identity and evidence owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Curator inventory loader and generated record emission
+  rule_id: 'review-checklist: Evidence standard, verbatim snippet versus curator notes'
+  native_severity: minor
+  normalization_reason: The identity and factual activity statement are supported;
+    the confirmed defect is bounded evidence placement.
+actions:
+- action_id: A1
+  description: Correct the maintained curator evidence placement and regenerate reproducibly.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:curator-4b720a8dc7
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Exact publication-derived identity and evidence owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Curator inventory loader and generated record emission
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Correct only the exact source row DOI:10.1021/acsinfecdis.5c00812#5; move the
+    paraphrase into evidence_notes while retaining the existing structure-normalization
+    notes and DOI.
+  - Preserve exact key CRFNZPACFKDJLE-UHFFFAOYSA-N, formula, compound number and the
+    0.313 mg/L WHO Z result with its assay context. Do not transfer follow-up claims
+    for compounds2/3.
+  - Any replacement snippet must be a short exact primary passage. Pass focused schema/strict
+    and corpus reproduction checks without manually patching generated YAML or rewriting
+    history.
+limitations:
+- Actual structure/characterization image inspection covered Scheme1,Table1 and pagesS10–S11.
+  Other analogue spectra were not independently reassigned for this target.
+- Published NMR and HRMS were visually inspected, without raw instrumental reprocessing,
+  complete peak assignment or independent verification of the stated greater-than95%
+  purity.
+- The assay states overnight incubation and an approximate optical-density-based inoculum;
+  no exact duration, final viable count or undocumented solvent concentration is invented.
+- No comprehensive later-literature or registry search was undertaken. Follow-up experiments
+  on other analogues cannot establish this target’s mechanism, safety or clinical
+  use.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Only scratch review artifacts were written. Original input hashes, native record,
+  maintained sources, history and proposed status remain unchanged.
+- Generic initial ChEBI target ownership was corrected to the actual curator table
+  and generator without changing captured input hashes.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
