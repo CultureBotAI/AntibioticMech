@@ -1,0 +1,1054 @@
+# Entrectinib: missing indazole hydrogen makes the imported SMILES invalid
+
+- Review: 20261021T153655Z-entrectinib-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T15:13:45Z
+- Finished UTC: 2026-10-21T15:36:55Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The exact entrectinib identity is supported by the native InChI and independent authority structures, but the imported SMILES omits the indazole [nH] and fails chemical parsing. Original antibacterial experiments support its antibacterial filing, while separate host-kinase experiments support the definition. All five FDA product assertions reconcile with current official records. The primary antibacterial paper has a prose/table MIC conflict that must be preserved before quantitative enrichment.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 401; one exact record. Original thirteen input hashes retained within 22 expanded inputs.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:195558 | data/antibiotics/antibacterial/entrectinib.yaml | generated | entrectinib |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Structured source catalog before open protein research | passed | False | CHEBI:195558 | The actual read-only catalog command succeeded; human kinase coverage is not applicable. |
+| Focused chemistry verification | failed | False | CHEBI:195558 | Actual focused execution exited 1. |
+| Focused schema verification | passed | True | CHEBI:195558 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:195558 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:195558 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:195558 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:195558 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:195558 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:195558 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:195558 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:195558 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:195558 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:195558 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral identity and defective SMILES
+
+identity: concern. Targets: CHEBI:195558.
+
+The native InChI, formula, charge, masses and source mint are coherent. Native SMILES lacks the required aromatic indazole [nH] and cannot be parsed. A scratch-only correction reproduces the native key and independent KEGG, GSRS and valid YMX descriptors; the defect is representation-specific rather than proof of another compound.
+
+### Stable identifiers, structural parents and synonym typing
+
+grounding: supported. Targets: CHEBI:195558.
+
+Accessible CAS, ChemSpider, DrugBank, KEGG and core YMX mappings support entrectinib. HMDB remains an access limitation. All seven structural parents are consistent with the valid graph. Rozlytrek is already correctly typed BRAND_NAME; chemical names and development codes were checked at their stated scope.
+
+### Antibacterial filing versus oncology use
+
+scope: supported. Targets: CHEBI:195558.
+
+The 2023 original bacterial study supports the adopted antibacterial role. Its laboratory activity and the five oncology drug approvals are separate claims. Source MIC disagreement prevents silently choosing a numerical range, but does not negate the observed bacterial growth inhibition.
+
+### Host kinase inhibition and tumour-use definition
+
+evidence: supported. Targets: CHEBI:195558.
+
+Original supplementary biochemical measurements verify the stated 0.1–1.7 nM host-kinase range. The adopted CAD-ALK clinical case supports bounded ALK-positive use. The definition does not assert that all named tumour settings are FDA-approved, and none of these human kinases is promoted to a bacterial target.
+
+### All five exact FDA product assertions
+
+evidence: supported. Targets: CHEBI:195558.
+
+All five exact application/product assertions reconcile with current FDA records. GSRS confirms the same ingredient graph, while historical retrieval dates and record version remain appropriately historical. No inference of antibacterial approval is made.
+
+### Optional bacterial mechanism and quantitative activity enrichment
+
+completeness: unknown. Targets: CHEBI:195558.
+
+The native record has no activity_spectrum, molecular target, resistance, mode or causal graph assertions. Optional enrichment could use the original bacterial experiments, but must retain exact conditions and the source MIC conflict. Proteomics, docking and selected-strain associations are insufficient to assert a direct NDH2 target. Missing optional fields are not schema defects.
+
+### Natural producer and collection membership
+
+scope: not_applicable. Targets: CHEBI:195558.
+
+No producer or activity-collection assertion is present. No natural producer is inferred for this synthetic kinase inhibitor.
+
+### Generated history and maintained owners
+
+provenance: supported. Targets: CHEBI:195558.
+
+All six seed/reseed events and actual ChEBI/FDA ownership were inspected. Current ChEBI repeats the SMILES defect, explaining source reproduction but not validating the chemistry. Original thirteen hashes remain within 22 expanded inputs.
+
+### Focused checks and their limits
+
+schema: concern. Targets: CHEBI:195558.
+
+Schema and strict validation pass, while independent chemistry exits 1 solely for native SMILES parsing. Valid syntax and current source agreement do not establish chemical validity.
+
+## Findings
+
+### F1: The imported SMILES omits the indazole N-H
+
+major / open / confirmed; issue key: entrectinib-invalid-indazole-smiles.
+
+The aromatic fragment c3nnc4 lacks the [nH] required by the intended 1H-indazole graph and fails RDKit sanitization. Replacing it with c3n[nH]c4 in scratch yields the retained standard InChI key HAYYBYPASCDWEQ-UHFFFAOYSA-N, formula and mass. Current ChEBI repeats the defect; independent KEGG, GSRS and valid YMX descriptors establish the intended graph. Correct the maintained structure representation without changing the supported compound identity.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Repair the maintained entrectinib SMILES through the source extraction/seeding ownership.
+
+- Use the chemically justified indazole [nH] representation and preserve the neutral formula, native InChI/key and intended exact identity. Do not copy the inconsistent ACDLabs YMX descriptor.
+- Regenerate reproducibly from maintained inputs, then require independent SMILES/InChI agreement, schema and strict validation, source provenance and corpus reproduction checks.
+- Keep the bacterial assay conflict and host-versus-bacterial mechanism boundaries separate from this structure repair.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/entrectinib.yaml; Entire exact native YAML, including all source, history and product entries | supports | Whole record read and all populated domains assessed. SEEDED status and deterministic reproduction are not treated as primary scientific sign-off. |
+| owners | 401407-raw-rows.json; actual maintained owners in targets; Exact source rows; scripts/seed_from_sources.py source selection and field ownership | supports | Exact maintained source rows and applicable extraction/structure-enrichment ownership were inspected after preserving original captures. No matching curator or decision override was found in the inspected complete tables. |
+| search | Ignored-inclusive local identifier/name search; 401407-all-local-paths.txt and original local-hits captures | context_only | Case-insensitive search included hidden and gitignored content across data, curation, conf, scripts, src, reports and reviews. Hits were followed to exact rows; no absence of external literature is inferred. The initial case-sensitive search was supplemented so uppercase FDA ingredient names were covered. |
+| chemistry | 401-chemistry.json; 401407-chemical-xrefs.json; Independent RDKit 2026.03.5 calculations using batch019 interpreter against batch041 cwd | supports | Native SMILES and InChI were parsed independently, with formula, charge, mass, stereocentres and source mint calculations. Exact authority structure comparisons are retained separately; the actual result is not inferred from schema success. |
+| xref-calculations | 401407-chemical-xrefs.json; Independently parsed current authority structures and native comparison | supports | Each parsed external representation retains its own key and scope; inconsistent descriptors or alternate tautomers are not silently normalized into an exact-graph assertion. |
+| gates | 401-focused-results.json; Actual chemistry, schema and strict commands and exit codes | supports | Focused checks ran from batch041; native schema and strict checks use its own environment, while standalone chemistry uses the installed batch019 RDKit interpreter. All original input hashes are preserved. |
+| adapter | iModulonDB structured dataset catalog; 401407-adapter-catalog.txt; exact runner resolved before open protein research | context_only | The catalog was inspected before open protein research. It has no human dataset for TRKA/B/C, ROS1 or ALK. Lack of a covered organism is not negative biological evidence; computational expression context cannot establish drug binding. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/195558/; Current CHEBI195558 graph, names, role and all seven outgoing structural parents | supports | Current ChEBI reproduces the invalid aromatic SMILES, while its InChI, neutral formula C31H34F2N6O2, mass and intended 1H-indazole identity agree with the native record. The seven structural parents and antibacterial role are coherent. Source fidelity does not repair the defective SMILES. |
+| chemspider | https://www.chemspider.com/Chemical-Structure.24808589.html; Chemical Structure 24808589 identity and identifiers | supports | The exact entry names entrectinib, CAS1108743-60-7 and the standard key HAYYBYPASCDWEQ-UHFFFAOYSA-N. A legacy nonstandard key displayed on the same page is not treated as a different stereoisomer. |
+| kegg | https://rest.kegg.jp/get/D10926/mol; KEGG D10926 molfile and accompanying entry | supports | Independent parsing reproduces the native valid InChI key and neutral formula. The explicit indazole N-H supports the scratch repair without changing the intended compound. |
+| ymx | https://data.rcsb.org/rest/v1/core/chemcomp/YMX; PDB chemical component YMX core identity and separately named descriptors | supports | The core component is entrectinib with the native formula, neutral charge and InChI. CACTVS and OpenEye SMILES contain [nH] and reproduce the native InChI. Its ACDLabs descriptor instead parses as C31H32F2N6O2; this internal descriptor conflict does not invalidate the correctly identified YMX component or justify copying that descriptor. |
+| drugbank | https://go.drugbank.com/drugs/DB11986; Public identity, structure, codes, brand and identifier sections; 401-drugbank-web.json | supports | The official public page was inspected through the web reader after direct retrieval returned 403. DB11986, CAS, UNII, neutral formula and standard key match entrectinib; its displayed target panel is secondary context. |
+| gsrs | https://gsrs.ncats.nih.gov/api/v1/substances/search?q=root_approvalID:L5ORF0AN1I; UNII L5ORF0AN1I, current substance record and structure | supports | Current GSRS version 51 identifies the same neutral graph. Native version 46 is explicitly historical provenance, not a claim that 46 is the latest version; no version-only defect is inferred. |
+| fda-212725 | https://api.fda.gov/drug/drugsfda.json?search=application_number:NDA212725&amp;limit=100; Exact NDA212725 product, sponsor, marketing and original approval submission rows | supports | Current official application 212725 resolves to the native ROZLYTREK/ENTRECTINIB product assertions. Exact product numbers, sponsor, prescription status and original AP dates were compared individually; oncology approval does not establish an antibacterial indication. |
+| fda-212726 | https://api.fda.gov/drug/drugsfda.json?search=application_number:NDA212726&amp;limit=100; Exact NDA212726 product, sponsor, marketing and original approval submission rows | supports | Current official application 212726 resolves to the native ROZLYTREK/ENTRECTINIB product assertions. Exact product numbers, sponsor, prescription status and original AP dates were compared individually; oncology approval does not establish an antibacterial indication. |
+| fda-218550 | https://api.fda.gov/drug/drugsfda.json?search=application_number:NDA218550&amp;limit=100; Exact NDA218550 product, sponsor, marketing and original approval submission rows | supports | Current official application 218550 resolves to the native ROZLYTREK/ENTRECTINIB product assertions. Exact product numbers, sponsor, prescription status and original AP dates were compared individually; oncology approval does not establish an antibacterial indication. |
+| fda-audit | 401-fda-audit.json; All five native assertions compared individually | supports | Both capsule products in each of NDA212725 and NDA212726 match 2019-08-15 approval, and NDA218550 product 001 matches 2023-10-20. All five product-number, sponsor, ingredient, brand, marketing and approval comparisons pass. |
+| adopted-abstracts | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A26633560%20OR%20EXT_ID%3A27003761%20OR%20EXT_ID%3A32907817%20OR%20EXT_ID%3A33290717%20OR%20EXT_ID%3A34209967%20OR%20EXT_ID%3A34253025%20OR%20EXT_ID%3A34536094%20OR%20EXT_ID%3A34633782%20OR%20EXT_ID%3A35118559%20OR%20EXT_ID%3A35447552%29%20AND%20SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=100; All ten frozen ChEBI-adopted PMID records and original abstracts where present | context_only | All ten adopted bibliography leads were resolved. Their original clinical, discovery, pharmacokinetic, review and commentary scopes are separated in the disposition ledger. A current ChEBI bibliography containing additional papers was used for discovery, not represented as fully read. |
+| adopted-dispositions | 401-adopted-dispositions.json; Per-PMID reading depth and endpoint boundaries | context_only | All adopted PMID leads have explicit dispositions, including the no-abstract commentary and the inaccessible original discovery full text. |
+| alk-case | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4701996/fullTextXML; PMID26633560, DOI10.1038/bjc.2015.401; Methods, Results and Discussion | supports | The original CAD-ALK colorectal cancer case reports entrectinib treatment and objective tumour response after prior therapies. This supports a bounded ALK-positive oncology-use statement; it is neither antibacterial evidence nor proof of an FDA ALK indication. |
+| commentary | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7481078/fullTextXML; PMID32907817, DOI10.1136/esmoopen-2020-000867; complete author commentary | context_only | The no-abstract adopted lead was resolved by reading its free full commentary. It describes regulatory oncology context rather than an original antibacterial experiment. |
+| kinase-primary | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7283026/fullTextXML; PMID32383735, DOI10.1093/neuonc/noaa052; relevant kinase Methods and Discussion | supports | This original preclinical study provides supplementary biochemical kinase experiments. Its oncology/brain pharmacokinetic setting is not a bacterial mechanism; the native 0.1–1.7 nM range was checked against the actual supplementary table rather than copied from a review. |
+| kinase-si | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7283026/supplementaryFiles; Actual extracted noaa052_suppl_supplementary_materials.docx, kinase Methods and Supplementary Table S3 | supports | Table S3 gives ROS1 0.2, TRKA 1.7, TRKB 0.1, TRKC 0.1 and ALK 1.6 nM. Purified kinase-domain HotSpot assays used ten concentrations with threefold dilutions from 0.3 µM, 33P-ATP substrate phosphorylation, 2 h at room temperature and P81 capture. These are biochemical IC50 values, not bacterial MICs. |
+| si-extraction | 401-supplement-extraction.json; Archive members and extracted file SHA256 values | context_only | The legitimate Europe PMC archives provided the actual DOCX kinase supplement and antibacterial PDF supplement. The initial direct download challenge HTML was excluded rather than treated as the requested document. |
+| antibacterial-primary | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9868760/fullTextXML; PMID36699581, DOI10.3389/fmicb.2022.1106319; relevant complete Methods, Results, Table 1 and Discussion | supports | The original entrectinib study tested 34 MSSA, 16 MRSA and 16 E. faecalis clinical isolates. CAMHB broth microdilution used a 1:1000 inoculum, 1.56–200 µM dilutions, 37 °C for 24 h and visible-growth endpoints. Actual Table 1 gives 25–50 µM MICs, whereas one Results sentence says 12.5–25 µM; the discrepancy is preserved. The compound was from an FDA-approved drug library, but the inspected main text does not identify supplier, catalog, salt or purity. These experiments support antibacterial activity without establishing a clinical antibacterial indication. |
+| antibacterial-fig1 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8e91/9868760/2550d92508d9/fmicb-13-1106319-g001.jpg; Actual Figure 1 image and caption; original growth and time-kill experiments | supports | The actual image was viewed. Growth and CFU killing are distinct from the 6.25/12.5 µM subinhibitory biofilm experiments. Figure 1 time-kill curves use 25, 50 and 100 µM at 0, 3, 6 and 24 h; values were not digitized into native quantitative claims. |
+| antibacterial-fig4 | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8e91/9868760/0326c50686ae/fmicb-13-1106319-g004.jpg; Actual Figure 4 image and caption; membrane-potential, ROS and microscopy experiments | supports | The actual image was viewed. DiBAC membrane-potential changes, DCFH ROS signal and high-concentration microscopy provide cellular response evidence. NDH2 docking, proteomic changes and selected-strain variants are not direct biochemical proof that NDH2 or a bacterial ribosomal protein is the binding target. |
+| antibacterial-si | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9868760/supplementaryFiles; Extracted Data_Sheet_1.PDF; Table S2 and relevant supplement context | context_only | The supplement contains selected-strain variant and proteomic data. Variant association and docking do not demonstrate a reconstructed resistance mechanism or exact binding target. The full proteomics table was not independently reanalyzed; no individual variant is adopted here. |
+| wikipedia | https://en.wikipedia.org/wiki/Entrectinib; Exact native document link | context_only | The document resolves to entrectinib. Secondary mechanism or clinical prose is not used as original evidence. |
+| access-boundaries | 401407-fetch1.json through 401407-fetch7.json; Per-request URL, timestamp, HTTP status and hash | context_only | HMDB0304880 returned 403 and remains unverified. ACS discovery full text and the additional original MCT article returned 403; the corresponding original abstracts were inspected. Failed aggregate FDA querying was replaced by successful individual application requests. Download challenge HTML was not treated as scientific text. |
+
+## Limits And Additional Notes
+
+- HMDB0304880 could not be verified because the exact public request returned 403. Accessible independent identifiers do not validate that inaccessible mapping by proxy.
+- All ten frozen adopted PMID leads were resolved at the explicit depths in the disposition ledger. Current ChEBI and broad discovery searches returned additional leads that were not exhaustively reviewed. Full ACS discovery methods and the additional original MCT paper were inaccessible; original abstracts were used only within their explicit scope.
+- The original antibacterial main Methods, relevant Results, Table 1 and actual Figures 1/4 were inspected. Its Results MIC range conflicts with Table 1/Discussion; supplier, catalog, salt and purity are unspecified in the inspected main text. The complete proteomics dataset and all clinical/animal figures were not reanalyzed.
+- The original kinase supplement Methods and Table S3 were inspected directly. Unrelated pharmacokinetic raw data and all supplementary figures were not independently reconstructed.
+- PDB YMX contains a conflicting ACDLabs descriptor, while its core identity, InChI and CACTVS/OpenEye structures agree with entrectinib. The native component reference is retained with that source-specific qualification.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native, source, status or history field was edited. Original thirteen input hashes were retained and all expanded inputs were checked unchanged before output. Optional links, tags and notes were checked against this exact compound.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T153655Z-entrectinib-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Entrectinib: missing indazole hydrogen makes the imported SMILES invalid'
+started_at: '2026-10-21T15:13:45Z'
+finished_at: '2026-10-21T15:36:55Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent whole-record review after initial input capture,
+    actual maintained-row inspection, authority comparisons, independent chemistry
+    and bounded original-paper review. No native or source record was authored or
+    modified by this reviewer.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The exact entrectinib identity is supported by the native InChI and independent
+  authority structures, but the imported SMILES omits the indazole [nH] and fails
+  chemical parsing. Original antibacterial experiments support its antibacterial filing,
+  while separate host-kinase experiments support the definition. All five FDA product
+  assertions reconcile with current official records. The primary antibacterial paper
+  has a prose/table MIC conflict that must be preserved before quantitative enrichment.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/entrectinib.yaml
+    sha256: 35b601b8398371bf8b361437d8290b34d573a5b6a5793aeada99a7dbfdda4bda
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+targets:
+- target_id: CHEBI:195558
+  path: data/antibiotics/antibacterial/entrectinib.yaml
+  label: entrectinib
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Exact FDA product assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: FDA/GSRS exact-identity extraction
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 401; one exact record. Original thirteen input hashes
+    retained within 22 expanded inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:195558
+checks:
+- check_id: structured-adapter
+  name: Structured source catalog before open protein research
+  status: passed
+  required: false
+  target_ids:
+  - CHEBI:195558
+  evidence_ids:
+  - adapter
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The actual read-only catalog command succeeded; human kinase coverage is
+    not applicable.
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: failed
+  required: false
+  summary: Actual focused execution exited 1.
+  target_ids:
+  - CHEBI:195558
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/401407-focused.py
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:195558
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/entrectinib.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:195558
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/entrectinib.yaml --out /private/tmp/am-review-session/401-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:195558
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:195558
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:195558
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:195558
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:195558
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:195558
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:195558
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:195558
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:195558
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/entrectinib.yaml
+  locator: Entire exact native YAML, including all source, history and product entries
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: supports
+  summary: Whole record read and all populated domains assessed. SEEDED status and
+    deterministic reproduction are not treated as primary scientific sign-off.
+- evidence_id: owners
+  kind: record_content
+  reference: 401407-raw-rows.json; actual maintained owners in targets
+  locator: Exact source rows; scripts/seed_from_sources.py source selection and field
+    ownership
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: supports
+  summary: Exact maintained source rows and applicable extraction/structure-enrichment
+    ownership were inspected after preserving original captures. No matching curator
+    or decision override was found in the inspected complete tables.
+  snapshot_sha256: 3ce338473a51af48012f9d6156d449d87905e62996131252d8458afa50dca8cc
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local identifier/name search
+  locator: 401407-all-local-paths.txt and original local-hits captures
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: context_only
+  summary: Case-insensitive search included hidden and gitignored content across data,
+    curation, conf, scripts, src, reports and reviews. Hits were followed to exact
+    rows; no absence of external literature is inferred. The initial case-sensitive
+    search was supplemented so uppercase FDA ingredient names were covered.
+  search_scope: rg --no-ignore --hidden -il 'CHEBI:195558|entrectinib|antibioticmech:aro-2d35d60097|eravacycline|ARO:3003979|L5ORF0AN1I'
+    data curation conf scripts src reports reviews
+  snapshot_sha256: ca19b61069339ed93e81e7c299f626dc2a2386f5444402bd8c4ea92f7e722b5b
+- evidence_id: chemistry
+  kind: record_content
+  reference: 401-chemistry.json; 401407-chemical-xrefs.json
+  locator: Independent RDKit 2026.03.5 calculations using batch019 interpreter against
+    batch041 cwd
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: supports
+  summary: Native SMILES and InChI were parsed independently, with formula, charge,
+    mass, stereocentres and source mint calculations. Exact authority structure comparisons
+    are retained separately; the actual result is not inferred from schema success.
+  snapshot_sha256: c2197ca8e4edc0cc4ccbe511ed97811982f0e5cdf7697776b4f033e38f2267f1
+- evidence_id: xref-calculations
+  kind: record_content
+  reference: 401407-chemical-xrefs.json
+  locator: Independently parsed current authority structures and native comparison
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: supports
+  summary: Each parsed external representation retains its own key and scope; inconsistent
+    descriptors or alternate tautomers are not silently normalized into an exact-graph
+    assertion.
+  snapshot_sha256: d89e525971f5c39dd9e833dfa7416d169fa27df99bd116c95ab0d9150d6a3f93
+- evidence_id: gates
+  kind: record_content
+  reference: 401-focused-results.json
+  locator: Actual chemistry, schema and strict commands and exit codes
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: supports
+  summary: Focused checks ran from batch041; native schema and strict checks use its
+    own environment, while standalone chemistry uses the installed batch019 RDKit
+    interpreter. All original input hashes are preserved.
+  snapshot_sha256: 0794ca16e6369de0533e25e3acbf3fca1e5ee82cc07925245b0e66e1a687110b
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB structured dataset catalog
+  locator: 401407-adapter-catalog.txt; exact runner resolved before open protein research
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: context_only
+  summary: The catalog was inspected before open protein research. It has no human
+    dataset for TRKA/B/C, ROS1 or ALK. Lack of a covered organism is not negative
+    biological evidence; computational expression context cannot establish drug binding.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/195558/
+  locator: Current CHEBI195558 graph, names, role and all seven outgoing structural
+    parents
+  accessed_at: '2026-10-21T15:24:17.592800Z'
+  support: supports
+  summary: Current ChEBI reproduces the invalid aromatic SMILES, while its InChI,
+    neutral formula C31H34F2N6O2, mass and intended 1H-indazole identity agree with
+    the native record. The seven structural parents and antibacterial role are coherent.
+    Source fidelity does not repair the defective SMILES.
+  snapshot_sha256: c7ddb4892ad99984f41ef13e1890a6c8c1ef2cf4c406d360f394e0dd1a8072a3
+- evidence_id: chemspider
+  kind: authority
+  reference: https://www.chemspider.com/Chemical-Structure.24808589.html
+  locator: Chemical Structure 24808589 identity and identifiers
+  accessed_at: '2026-10-21T15:24:17.610667Z'
+  support: supports
+  summary: The exact entry names entrectinib, CAS1108743-60-7 and the standard key
+    HAYYBYPASCDWEQ-UHFFFAOYSA-N. A legacy nonstandard key displayed on the same page
+    is not treated as a different stereoisomer.
+  snapshot_sha256: 54f7cb571280499208873c2ff996e4cb9bca647e876d2bc9d41ce68a1824369e
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/D10926/mol
+  locator: KEGG D10926 molfile and accompanying entry
+  accessed_at: '2026-10-21T15:24:17.895086Z'
+  support: supports
+  summary: Independent parsing reproduces the native valid InChI key and neutral formula.
+    The explicit indazole N-H supports the scratch repair without changing the intended
+    compound.
+  snapshot_sha256: fe0166df52f5506b56a366cd42b724614285bb7d3ff2a7c4bea3a6926d87b2b8
+- evidence_id: ymx
+  kind: authority
+  reference: https://data.rcsb.org/rest/v1/core/chemcomp/YMX
+  locator: PDB chemical component YMX core identity and separately named descriptors
+  accessed_at: '2026-10-21T15:24:17.618465Z'
+  support: supports
+  summary: The core component is entrectinib with the native formula, neutral charge
+    and InChI. CACTVS and OpenEye SMILES contain [nH] and reproduce the native InChI.
+    Its ACDLabs descriptor instead parses as C31H32F2N6O2; this internal descriptor
+    conflict does not invalidate the correctly identified YMX component or justify
+    copying that descriptor.
+  snapshot_sha256: bc259d5ec7e5c46ceb35b816e5356001bb2126c038765ecca7953be0ae7d1acc
+- evidence_id: drugbank
+  kind: authority
+  reference: https://go.drugbank.com/drugs/DB11986
+  locator: Public identity, structure, codes, brand and identifier sections; 401-drugbank-web.json
+  accessed_at: '2026-10-21T15:29:19.764856Z'
+  support: supports
+  summary: The official public page was inspected through the web reader after direct
+    retrieval returned 403. DB11986, CAS, UNII, neutral formula and standard key match
+    entrectinib; its displayed target panel is secondary context.
+  snapshot_sha256: aeff337b12b8a570d59270ada27d9c694397d75296516f175897854094ee1b28
+- evidence_id: gsrs
+  kind: authority
+  reference: https://gsrs.ncats.nih.gov/api/v1/substances/search?q=root_approvalID:L5ORF0AN1I
+  locator: UNII L5ORF0AN1I, current substance record and structure
+  accessed_at: '2026-10-21T15:24:18.340595Z'
+  support: supports
+  summary: Current GSRS version 51 identifies the same neutral graph. Native version
+    46 is explicitly historical provenance, not a claim that 46 is the latest version;
+    no version-only defect is inferred.
+  snapshot_sha256: 1899b02a8669f4c0868450f7d0c8a301fe941bc784a253303bb660dac29dcd95
+- evidence_id: fda-212725
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:NDA212725&limit=100
+  locator: Exact NDA212725 product, sponsor, marketing and original approval submission
+    rows
+  accessed_at: '2026-10-21T15:24:54.456534Z'
+  support: supports
+  summary: Current official application 212725 resolves to the native ROZLYTREK/ENTRECTINIB
+    product assertions. Exact product numbers, sponsor, prescription status and original
+    AP dates were compared individually; oncology approval does not establish an antibacterial
+    indication.
+  snapshot_sha256: 5821e3dfe834624fc34bbe9b0ba08f220410f3497d989cabff07fe686edd2d37
+- evidence_id: fda-212726
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:NDA212726&limit=100
+  locator: Exact NDA212726 product, sponsor, marketing and original approval submission
+    rows
+  accessed_at: '2026-10-21T15:24:54.459205Z'
+  support: supports
+  summary: Current official application 212726 resolves to the native ROZLYTREK/ENTRECTINIB
+    product assertions. Exact product numbers, sponsor, prescription status and original
+    AP dates were compared individually; oncology approval does not establish an antibacterial
+    indication.
+  snapshot_sha256: b38aed13cf3893026ecbce51a601d6a14f45fbd6d5604a69f01465731968f92e
+- evidence_id: fda-218550
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json?search=application_number:NDA218550&limit=100
+  locator: Exact NDA218550 product, sponsor, marketing and original approval submission
+    rows
+  accessed_at: '2026-10-21T15:24:54.461893Z'
+  support: supports
+  summary: Current official application 218550 resolves to the native ROZLYTREK/ENTRECTINIB
+    product assertions. Exact product numbers, sponsor, prescription status and original
+    AP dates were compared individually; oncology approval does not establish an antibacterial
+    indication.
+  snapshot_sha256: eea39ad0e936dda4a03a5707bc0b7c3774370edfad173882526aa4275d8561c2
+- evidence_id: fda-audit
+  kind: record_content
+  reference: 401-fda-audit.json
+  locator: All five native assertions compared individually
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: supports
+  summary: Both capsule products in each of NDA212725 and NDA212726 match 2019-08-15
+    approval, and NDA218550 product 001 matches 2023-10-20. All five product-number,
+    sponsor, ingredient, brand, marketing and approval comparisons pass.
+  snapshot_sha256: 7cbb854ac73d937e495b451b24bdd79b6c50769e50fa03d47526783be62ca57f
+- evidence_id: adopted-abstracts
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A26633560%20OR%20EXT_ID%3A27003761%20OR%20EXT_ID%3A32907817%20OR%20EXT_ID%3A33290717%20OR%20EXT_ID%3A34209967%20OR%20EXT_ID%3A34253025%20OR%20EXT_ID%3A34536094%20OR%20EXT_ID%3A34633782%20OR%20EXT_ID%3A35118559%20OR%20EXT_ID%3A35447552%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: All ten frozen ChEBI-adopted PMID records and original abstracts where
+    present
+  accessed_at: '2026-10-21T15:24:17.602000Z'
+  support: context_only
+  summary: All ten adopted bibliography leads were resolved. Their original clinical,
+    discovery, pharmacokinetic, review and commentary scopes are separated in the
+    disposition ledger. A current ChEBI bibliography containing additional papers
+    was used for discovery, not represented as fully read.
+  snapshot_sha256: f44ddf0ecfea0d014075f2cee793b6cfe02a2cc232a94d71dcc240850aabe0d4
+- evidence_id: adopted-dispositions
+  kind: record_content
+  reference: 401-adopted-dispositions.json
+  locator: Per-PMID reading depth and endpoint boundaries
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: context_only
+  summary: All adopted PMID leads have explicit dispositions, including the no-abstract
+    commentary and the inaccessible original discovery full text.
+  snapshot_sha256: df7b6f988bc622ac3a34fb73fc88168cbc6a9e6173dd7ea6ecc1329104e270be
+- evidence_id: alk-case
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4701996/fullTextXML
+  locator: PMID26633560, DOI10.1038/bjc.2015.401; Methods, Results and Discussion
+  accessed_at: '2026-10-21T15:24:54.452549Z'
+  support: supports
+  summary: The original CAD-ALK colorectal cancer case reports entrectinib treatment
+    and objective tumour response after prior therapies. This supports a bounded ALK-positive
+    oncology-use statement; it is neither antibacterial evidence nor proof of an FDA
+    ALK indication.
+  snapshot_sha256: 12a512c6527ca3031a20cc7419175839b0daed6b24410751e7b11972cefc1c3d
+- evidence_id: commentary
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7481078/fullTextXML
+  locator: PMID32907817, DOI10.1136/esmoopen-2020-000867; complete author commentary
+  accessed_at: '2026-10-21T15:24:54.455883Z'
+  support: context_only
+  summary: The no-abstract adopted lead was resolved by reading its free full commentary.
+    It describes regulatory oncology context rather than an original antibacterial
+    experiment.
+  snapshot_sha256: cdade5b74df1a2cfb9d68a4ea391e092564df75eeb4ab351ed3c1016d3c4456d
+- evidence_id: kinase-primary
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7283026/fullTextXML
+  locator: PMID32383735, DOI10.1093/neuonc/noaa052; relevant kinase Methods and Discussion
+  accessed_at: '2026-10-21T15:25:15.193041Z'
+  support: supports
+  summary: This original preclinical study provides supplementary biochemical kinase
+    experiments. Its oncology/brain pharmacokinetic setting is not a bacterial mechanism;
+    the native 0.1–1.7 nM range was checked against the actual supplementary table
+    rather than copied from a review.
+  snapshot_sha256: 7098d138f99b143a3728cd0af0b844031820c56c28c66b2abb628e12a2645d68
+- evidence_id: kinase-si
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7283026/supplementaryFiles
+  locator: Actual extracted noaa052_suppl_supplementary_materials.docx, kinase Methods
+    and Supplementary Table S3
+  accessed_at: '2026-10-21T15:27:10.238574Z'
+  support: supports
+  summary: Table S3 gives ROS1 0.2, TRKA 1.7, TRKB 0.1, TRKC 0.1 and ALK 1.6 nM. Purified
+    kinase-domain HotSpot assays used ten concentrations with threefold dilutions
+    from 0.3 µM, 33P-ATP substrate phosphorylation, 2 h at room temperature and P81
+    capture. These are biochemical IC50 values, not bacterial MICs.
+  snapshot_sha256: bc3276e00e36ab0ca3541f6460f750d7b1a6bd73631023854d46e53ea1ff7522
+- evidence_id: si-extraction
+  kind: record_content
+  reference: 401-supplement-extraction.json
+  locator: Archive members and extracted file SHA256 values
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: context_only
+  summary: The legitimate Europe PMC archives provided the actual DOCX kinase supplement
+    and antibacterial PDF supplement. The initial direct download challenge HTML was
+    excluded rather than treated as the requested document.
+  snapshot_sha256: fc6264033e703adc862a54236526ac9a343af340e43a9b856d43dda687f20792
+- evidence_id: antibacterial-primary
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9868760/fullTextXML
+  locator: PMID36699581, DOI10.3389/fmicb.2022.1106319; relevant complete Methods,
+    Results, Table 1 and Discussion
+  accessed_at: '2026-10-21T15:25:15.191660Z'
+  support: supports
+  summary: The original entrectinib study tested 34 MSSA, 16 MRSA and 16 E. faecalis
+    clinical isolates. CAMHB broth microdilution used a 1:1000 inoculum, 1.56–200
+    µM dilutions, 37 °C for 24 h and visible-growth endpoints. Actual Table 1 gives
+    25–50 µM MICs, whereas one Results sentence says 12.5–25 µM; the discrepancy is
+    preserved. The compound was from an FDA-approved drug library, but the inspected
+    main text does not identify supplier, catalog, salt or purity. These experiments
+    support antibacterial activity without establishing a clinical antibacterial indication.
+  snapshot_sha256: 566c89577ebd0b5b6043e67e40ed9994523fadac52af9a9d3277b163f5c90713
+- evidence_id: antibacterial-fig1
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8e91/9868760/2550d92508d9/fmicb-13-1106319-g001.jpg
+  locator: Actual Figure 1 image and caption; original growth and time-kill experiments
+  accessed_at: '2026-10-21T15:26:19.396228Z'
+  support: supports
+  summary: The actual image was viewed. Growth and CFU killing are distinct from the
+    6.25/12.5 µM subinhibitory biofilm experiments. Figure 1 time-kill curves use
+    25, 50 and 100 µM at 0, 3, 6 and 24 h; values were not digitized into native quantitative
+    claims.
+  snapshot_sha256: 1bd9b6318dcc4ba2e32bfdab801f1e7043f0703b6bdaac730acf6e35683b3406
+- evidence_id: antibacterial-fig4
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8e91/9868760/0326c50686ae/fmicb-13-1106319-g004.jpg
+  locator: Actual Figure 4 image and caption; membrane-potential, ROS and microscopy
+    experiments
+  accessed_at: '2026-10-21T15:26:19.396521Z'
+  support: supports
+  summary: The actual image was viewed. DiBAC membrane-potential changes, DCFH ROS
+    signal and high-concentration microscopy provide cellular response evidence. NDH2
+    docking, proteomic changes and selected-strain variants are not direct biochemical
+    proof that NDH2 or a bacterial ribosomal protein is the binding target.
+  snapshot_sha256: 83812655eeb613ec80fad74e1b36e06d236c62757bf5b42397ee9f42503710ea
+- evidence_id: antibacterial-si
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9868760/supplementaryFiles
+  locator: Extracted Data_Sheet_1.PDF; Table S2 and relevant supplement context
+  accessed_at: '2026-10-21T15:27:10.241210Z'
+  support: context_only
+  summary: The supplement contains selected-strain variant and proteomic data. Variant
+    association and docking do not demonstrate a reconstructed resistance mechanism
+    or exact binding target. The full proteomics table was not independently reanalyzed;
+    no individual variant is adopted here.
+  snapshot_sha256: cb6dee42c3fea8065950f9e8f44b5cf454e169927e48e2ac1c50aaaf9102fd2a
+- evidence_id: wikipedia
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Entrectinib
+  locator: Exact native document link
+  accessed_at: '2026-10-21T15:24:18.256681Z'
+  support: context_only
+  summary: The document resolves to entrectinib. Secondary mechanism or clinical prose
+    is not used as original evidence.
+  snapshot_sha256: d159928774595310fe42b059e96f31f81487118868db0b8e1796913dcf8fa71d
+- evidence_id: access-boundaries
+  kind: search
+  reference: 401407-fetch1.json through 401407-fetch7.json
+  locator: Per-request URL, timestamp, HTTP status and hash
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: context_only
+  summary: HMDB0304880 returned 403 and remains unverified. ACS discovery full text
+    and the additional original MCT article returned 403; the corresponding original
+    abstracts were inspected. Failed aggregate FDA querying was replaced by successful
+    individual application requests. Download challenge HTML was not treated as scientific
+    text.
+  search_scope: Exact native identifiers, all frozen adopted PMID leads, relevant
+    original host-kinase and antibacterial papers, their publisher/PMC full text and
+    legitimate supplements; no paid source access.
+  snapshot_sha256: ec5d6a6d20781dc35520baa941f0c371f9fb749b7e2801db8573211c8eb62ea1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral identity and defective SMILES
+  outcome: concern
+  summary: The native InChI, formula, charge, masses and source mint are coherent.
+    Native SMILES lacks the required aromatic indazole [nH] and cannot be parsed.
+    A scratch-only correction reproduces the native key and independent KEGG, GSRS
+    and valid YMX descriptors; the defect is representation-specific rather than proof
+    of another compound.
+  target_ids:
+  - CHEBI:195558
+  evidence_ids:
+  - native
+  - chemistry
+  - xref-calculations
+  - chebi
+  - kegg
+  - ymx
+  - gsrs
+- assessment_id: grounding
+  area: grounding
+  topic: Stable identifiers, structural parents and synonym typing
+  outcome: supported
+  summary: Accessible CAS, ChemSpider, DrugBank, KEGG and core YMX mappings support
+    entrectinib. HMDB remains an access limitation. All seven structural parents are
+    consistent with the valid graph. Rozlytrek is already correctly typed BRAND_NAME;
+    chemical names and development codes were checked at their stated scope.
+  target_ids:
+  - CHEBI:195558
+  evidence_ids:
+  - native
+  - chebi
+  - chemspider
+  - drugbank
+  - kegg
+  - ymx
+  - access-boundaries
+- assessment_id: classification
+  area: scope
+  topic: Antibacterial filing versus oncology use
+  outcome: supported
+  summary: The 2023 original bacterial study supports the adopted antibacterial role.
+    Its laboratory activity and the five oncology drug approvals are separate claims.
+    Source MIC disagreement prevents silently choosing a numerical range, but does
+    not negate the observed bacterial growth inhibition.
+  target_ids:
+  - CHEBI:195558
+  evidence_ids:
+  - native
+  - antibacterial-primary
+  - antibacterial-fig1
+  - fda-audit
+- assessment_id: definition
+  area: evidence
+  topic: Host kinase inhibition and tumour-use definition
+  outcome: supported
+  summary: Original supplementary biochemical measurements verify the stated 0.1–1.7
+    nM host-kinase range. The adopted CAD-ALK clinical case supports bounded ALK-positive
+    use. The definition does not assert that all named tumour settings are FDA-approved,
+    and none of these human kinases is promoted to a bacterial target.
+  target_ids:
+  - CHEBI:195558
+  evidence_ids:
+  - native
+  - kinase-primary
+  - kinase-si
+  - alk-case
+  - adopted-dispositions
+- assessment_id: clinical
+  area: evidence
+  topic: All five exact FDA product assertions
+  outcome: supported
+  summary: All five exact application/product assertions reconcile with current FDA
+    records. GSRS confirms the same ingredient graph, while historical retrieval dates
+    and record version remain appropriately historical. No inference of antibacterial
+    approval is made.
+  target_ids:
+  - CHEBI:195558
+  evidence_ids:
+  - native
+  - fda-212725
+  - fda-212726
+  - fda-218550
+  - fda-audit
+  - gsrs
+- assessment_id: completeness
+  area: completeness
+  topic: Optional bacterial mechanism and quantitative activity enrichment
+  outcome: unknown
+  summary: The native record has no activity_spectrum, molecular target, resistance,
+    mode or causal graph assertions. Optional enrichment could use the original bacterial
+    experiments, but must retain exact conditions and the source MIC conflict. Proteomics,
+    docking and selected-strain associations are insufficient to assert a direct NDH2
+    target. Missing optional fields are not schema defects.
+  target_ids:
+  - CHEBI:195558
+  evidence_ids:
+  - native
+  - search
+  - antibacterial-primary
+  - antibacterial-fig4
+  - antibacterial-si
+- assessment_id: other-domains
+  area: scope
+  topic: Natural producer and collection membership
+  outcome: not_applicable
+  summary: No producer or activity-collection assertion is present. No natural producer
+    is inferred for this synthetic kinase inhibitor.
+  target_ids:
+  - CHEBI:195558
+  evidence_ids:
+  - native
+  - search
+  - adopted-dispositions
+- assessment_id: provenance
+  area: provenance
+  topic: Generated history and maintained owners
+  outcome: supported
+  summary: All six seed/reseed events and actual ChEBI/FDA ownership were inspected.
+    Current ChEBI repeats the SMILES defect, explaining source reproduction but not
+    validating the chemistry. Original thirteen hashes remain within 22 expanded inputs.
+  target_ids:
+  - CHEBI:195558
+  evidence_ids:
+  - native
+  - owners
+  - chebi
+  - gates
+- assessment_id: validation
+  area: schema
+  topic: Focused checks and their limits
+  outcome: concern
+  summary: Schema and strict validation pass, while independent chemistry exits 1
+    solely for native SMILES parsing. Valid syntax and current source agreement do
+    not establish chemical validity.
+  target_ids:
+  - CHEBI:195558
+  evidence_ids:
+  - gates
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: entrectinib-invalid-indazole-smiles
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The imported SMILES omits the indazole N-H
+  description: The aromatic fragment c3nnc4 lacks the [nH] required by the intended
+    1H-indazole graph and fails RDKit sanitization. Replacing it with c3n[nH]c4 in
+    scratch yields the retained standard InChI key HAYYBYPASCDWEQ-UHFFFAOYSA-N, formula
+    and mass. Current ChEBI repeats the defect; independent KEGG, GSRS and valid YMX
+    descriptors establish the intended graph. Correct the maintained structure representation
+    without changing the supported compound identity.
+  target_ids:
+  - CHEBI:195558
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+  - xref-calculations
+  - chebi
+  - kegg
+  - ymx
+  - gsrs
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-checklist:Identity/Structure
+  native_severity: major
+  normalization_reason: A required chemical representation is invalid and unusable,
+    while independent identifiers and the valid InChI preserve the exact intended
+    compound; this is not a demonstrated whole-record identity substitution.
+actions:
+- action_id: A1
+  description: Repair the maintained entrectinib SMILES through the source extraction/seeding
+    ownership.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:195558
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Use the chemically justified indazole [nH] representation and preserve the neutral
+    formula, native InChI/key and intended exact identity. Do not copy the inconsistent
+    ACDLabs YMX descriptor.
+  - Regenerate reproducibly from maintained inputs, then require independent SMILES/InChI
+    agreement, schema and strict validation, source provenance and corpus reproduction
+    checks.
+  - Keep the bacterial assay conflict and host-versus-bacterial mechanism boundaries
+    separate from this structure repair.
+limitations:
+- HMDB0304880 could not be verified because the exact public request returned 403.
+  Accessible independent identifiers do not validate that inaccessible mapping by
+  proxy.
+- All ten frozen adopted PMID leads were resolved at the explicit depths in the disposition
+  ledger. Current ChEBI and broad discovery searches returned additional leads that
+  were not exhaustively reviewed. Full ACS discovery methods and the additional original
+  MCT paper were inaccessible; original abstracts were used only within their explicit
+  scope.
+- The original antibacterial main Methods, relevant Results, Table 1 and actual Figures
+  1/4 were inspected. Its Results MIC range conflicts with Table 1/Discussion; supplier,
+  catalog, salt and purity are unspecified in the inspected main text. The complete
+  proteomics dataset and all clinical/animal figures were not reanalyzed.
+- The original kinase supplement Methods and Table S3 were inspected directly. Unrelated
+  pharmacokinetic raw data and all supplementary figures were not independently reconstructed.
+- PDB YMX contains a conflicting ACDLabs descriptor, while its core identity, InChI
+  and CACTVS/OpenEye structures agree with entrectinib. The native component reference
+  is retained with that source-specific qualification.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native, source, status or history field was edited. Original thirteen input hashes
+  were retained and all expanded inputs were checked unchanged before output. Optional
+  links, tags and notes were checked against this exact compound.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:195558
+- https://doi.org/10.3389/fmicb.2022.1106319
+- https://doi.org/10.1093/neuonc/noaa052
+tags:
+- entrectinib
+- invalid-smiles
+- antibacterial-repurposing
+- host-kinase-scope
+```

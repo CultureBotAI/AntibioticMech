@@ -1,0 +1,753 @@
+# Erdasporine A: supported exact compound and activity with an invalid imported SMILES
+
+- Review: 20261021T154231Z-erdasporine-a-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T15:13:50Z
+- Finished UTC: 2026-10-21T15:42:31Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The original discovery experiment supports the erdasporine A structure, environmental-DNA gene-cluster origin and bounded S. aureus growth inhibition. The native InChI, official ChEBI molfile and adopted MIBiG representation agree. The imported aromatic SMILES omits three required pyrrolic N–H groups and cannot be parsed. One major representation correction is needed; optional quantitative activity and producer fields are not treated as defects.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 408; one complete native record. All thirteen initial hashes were verified unchanged before judgment and retained. Actual MIBiG source and extractor owners were appended, giving fifteen captured inputs.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:156313 | data/antibiotics/antibacterial/erdasporine-a.yaml | generated | erdasporine A |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:156313 | Focused schema check passed. |
+| strict | passed | True | CHEBI:156313 | Focused strict check passed. |
+| chemistry | failed | False | CHEBI:156313 | Native SMILES fails kekulization. Native InChI independently reproduces the stored key, formula, charge and masses; the minted alias reproduces. |
+| authority-map-initial | failed | False | CHEBI:156313 | The first diagnostic stopped at a Python syntax error before chemical comparisons. The scratch diagnostic was corrected. |
+| authority-map | passed | False | CHEBI:156313 | Corrected diagnostic independently parses native InChI, official ChEBI molfile and adopted MIBiG SMILES. All three yield the same full standard InChI and key. |
+| adapter-catalog | passed | False | CHEBI:156313 | Actual catalog read before mechanistic follow-up. The native environmental-DNA gene-cluster statement provides no exact covered producer gene or dataset; no applicable module query was inferred. |
+| Authoritative full QC | failed | True | CHEBI:156313 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:156313 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:156313 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:156313 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:156313 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:156313 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:156313 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:156313 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:156313 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact compound, synonyms, parents and source identity
+
+identity: concern. Targets: CHEBI:156313.
+
+The neutral A identity is supported by the original structure, official molfile, native InChI and MIBiG graph; the SMILES is unusable because pyrrolic hydrogen notation is missing. No salt, mixture or stereochemical ambiguity is inferred.
+
+### Antibacterial role and definition endpoints
+
+evidence: supported. Targets: CHEBI:156313.
+
+The exact isolated compound inhibits growth of the reported S. aureus strain and reduces HCT116 biomass in distinct experiments. Class and antibacterial role are supported; quantitative activity is optional and cannot be generalized beyond the protocol or strain.
+
+### Environmental-DNA cluster versus natural producer and target
+
+evidence: supported. Targets: CHEBI:156313.
+
+The refactored environmental esp cluster experimentally yields A. The native definition does not name an unsupported natural producer, and the MIBiG refusal is appropriate for its unnamed taxon. Biosynthesis does not establish an antimicrobial mechanism.
+
+### Optional biology and absent mechanistic fields
+
+completeness: supported. Targets: CHEBI:156313.
+
+No compound-specific antimicrobial target is established in the inspected discovery article. Empty target, resistance, mode, clinical, producer, causal-graph, dataset and activity fields are not automatically defects for this SEEDED record. No sign-off promotion is inferred.
+
+### Maintained owners, evidence depth and history
+
+provenance: supported. Targets: CHEBI:156313.
+
+Every native field and the sole adopted primary lead were assessed. Actual source owners were appended while retaining initial hashes. The invalid text originates in ChEBI and persists through source generation; it requires a reproducible maintained-source correction.
+
+## Findings
+
+### F1: Repair the imported pyrrolic nitrogen encoding in SMILES
+
+major / open / confirmed; issue key: erdasporine-a-invalid-aromatic-nh-smiles.
+
+The native SMILES uses bare aromatic n at all three pyrrolic nitrogens and fails RDKit kekulization. The native InChI, current official ChEBI molfile, adopted MIBiG graph and original Figure 2 consistently require three N–H groups. The same invalid textual SMILES remains in current ChEBI. Correct the maintained source representation with an auditable equivalence check; do not change the supported exact identity or substitute a sibling congener.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the source-owned SMILES and regenerate the record through the maintained source path.
+
+- Use the inspected official molfile or equivalent validated representation to preserve all three N–H groups; retain provenance for any source normalization or override.
+- Require the corrected SMILES to parse and reproduce full key WIKWOGJGVQUVBW-UHFFFAOYSA-N, neutral formula C22H15N3O3 and the stored masses. Confirm the original Figure 2 constitution independently.
+- Regenerate and run focused schema, strict, chemistry and source-reproduction checks. Preserve SEEDED status until all separate sign-off criteria are satisfied.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/erdasporine-a.yaml; Entire native YAML. | supports | The SEEDED, EXACT CHEBI156313 record has two systematic exact synonyms, five broader chemical parents, one antibacterial role, neutral C22H15N3O3 structure, one ChEBI source concept and five seed/reseed events. It has no external xrefs, molecular-target, resistance, quantitative-activity, producer, clinical, dataset, causal-graph or discussion assertions. The definition describes environmental-DNA origin and HCT116/S. aureus effects. The stored SMILES is not a valid encoding of the otherwise consistently identified molecule. |
+| owners | data/raw/chebi_antimicrobials.tsv; data/raw/mibig_producers.tsv; scripts/extract_source_inventory.py; scripts/extract_mibig_producers.py; scripts/seed_from_sources.py; conf/sources.yaml; Entire exact source rows and applicable extraction, structure selection, MIBiG merge and unnamed-taxon refusal code. | supports | ChEBI row 2752 supplies the exact native fields and sole adopted citation PMID24171465. MIBiG row 650 supplies BGC0001336, version 5, questionable quality, not expert reviewed, experimental expression evidence and the same full InChIKey for compound 1 of 3. Its taxon 77133 is uncultured bacterium. The seeder refuses unnamed taxa, explaining the absence of a native producer object; the source quality flag is not itself the refusal condition. No exact ARO, FDA or PubChem source row owns this record. The MIBiG extractor computes structural identity from its valid kekule SMILES. Original hashes are preserved. |
+| chebi | CHEBI:156313; https://www.ebi.ac.uk/chebi/CHEBI:156313; Complete official entry, names, definition, classification, role and chemical properties. | supports | Current ChEBI retains the exact label, synonyms, full InChIKey, formula, charge and masses. Its textual SMILES has the same invalid aromatic nitrogen encoding as native. Its broader parents resolve to methyl ester 25248, phenols 33853, indolocarbazole alkaloid 37697, secondary amino compound 50995 and organic heterohexacyclic compound 51914; role 33282 is antibacterial agent. These are broader classifications rather than alternate exact compounds. Additional host/non-antimicrobial roles do not establish a missing antimicrobial role. |
+| structures | https://www.ebi.ac.uk/chebi/backend/api/public/molfile/156313; MIBiG:BGC0001336; Official molfile and adopted MIBiG SMILES independently parsed against native InChI. | partial | All valid representations give WIKWOGJGVQUVBW-UHFFFAOYSA-N, neutral C22H15N3O3 and monoisotopic mass 369.11134134, without stereocentres. Their valid aromatic serialization has three [nH] atoms. Native textual SMILES uses three bare aromatic n atoms and fails kekulization. The discrepancy is an unusable representation, not evidence of another natural-product stereoisomer. No graph was edited. |
+| mibig | MIBiG:BGC0001336; https://raw.githubusercontent.com/mibig-secmet/mibig-json/master/data/BGC0001336.json; Entire public official repository entry, including all three compounds and biosynthesis metadata. | supports | The inspected legacy-schema release 3.1 entry independently corroborates the same erdasporine A graph, PMID24171465, heterologous-expression evidence and KF551865.1 locus. It is explicitly older than the adopted version 5 row and is not represented as a verification of all version 5 fields. An uncultured taxon and experimentally refactored host do not identify a cultured natural producer. |
+| original | PMID:24171465; DOI:10.1021/ja408683p; PMC3878720; https://pmc.ncbi.nlm.nih.gov/articles/PMC3878720/; Complete original main article, including all methods and captions; Figures 2, 4 and 5 visually inspected. | supports | Chang and colleagues isolate environmental-DNA clone AB339 and refactor its esp cluster in E. coli BL21. EspODPM produces compound 2, erdasporine B; spent broth fed to EspX-expressing cells yields compound 1, erdasporine A, isolated at 0.4 mg. Figure 2 explicitly shows the methyl ester, phenol position and three N–H groups agreeing with the valid native InChI and ChEBI molfile. Figure 4 documents the feeding strategy and time dependence; Figure 5 is a proposed biosynthetic scheme. Predicted actinobacterial origin is not an experimentally identified native producer. Biosynthetic Esp proteins are not antibacterial targets. |
+| activity | PMID:24171465; DOI:10.1021/ja408683p; Figure 2 and Bioactivity assays; Original Figure 2 image read against complete antibacterial and human-cell methods. | supports | For exact compound 1, Figure 2 reports S. aureus MIC 4.2 µM and HCT116 IC50 4.3 µM; the caption explicitly gives micromolar units. The bacterial assay uses strain 6538P, LB, an overnight culture diluted 10^6-fold, a twofold dilution series prepared in µg/mL, 18 h at 30°C and OD600 &lt; 0.05 as the growth-inhibition endpoint. HCT116 ATCC CCL247 is assessed after 72 h by crystal-violet biomass and curve-fitted IC50. These are distinct endpoints; the bacterial result is not an MBC or proof of a cellular target. The definition uses the source wording cytotoxic, but this review preserves the actual bacterial growth endpoint. No native numerical observation is asserted. |
+| adapter | iModulonDB catalog; environmental-DNA esp cluster; Complete structured catalog inspected before open-ended mechanism follow-up. | context_only | No catalog entry resolves the unidentified natural producer or its environmental esp locus. HCT116 is a human assay model, S. aureus is the antibacterial recipient, and E. coli BL21 is a heterologous expression host established by the paper. These distinctions do not justify a native endogenous E. coli transcriptomic mapping. No negative biological conclusion is drawn from catalog coverage. |
+| search | 408-inclusive-hits.txt; 408-fetch-results.json through 408-fetch4-results.json; Ignored-inclusive local record/source/overlay search and bounded public original-source retrieval. | context_only | Hidden and ignored files were included across data, curation, conf, scripts, src, docs, .claude, reviews and reports. Focused overlay/report searches found the queue but no exact curator override or prior review. Generated projections are not independent evidence. The sole adopted PMID resolves to the inspected original main article. EuropePMC XML returned 500; PMC main HTML and figure images succeeded. The PMC supplementary route returned an HTML download challenge, the ACS landing returned an empty 202 response and the direct publisher SI route returned 403; none is counted as a read PDF. |
+| validation | 408-schema.log; 408-strict.log; 408-chemistry.json; 408-xref-chemistry.json; Actual focused checks and complete unchanged-input recheck. | supports | Schema and strict validation pass while the separate chemistry check fails on SMILES. Valid alternative representations agree independently, so passing deterministic schema checks do not resolve the scientific representation defect. |
+
+## Limits And Additional Notes
+
+- The original main article and Figures 2, 4 and 5 were inspected, but the supplementary PDF and raw NMR spectra were not obtained from the attempted public routes. The figure and mutually agreeing official/archived structures support the bounded representation finding without claiming a new spectral elucidation.
+- The public MIBiG GitHub entry uses legacy schema release 3.1, whereas the adopted TSV records entryversion 5. The legacy entry corroborates identity and experimental origin, not every later metadata field.
+- The discovery study identifies an environmental gene cluster and engineered production host, not a named cultured natural producer or antibacterial molecular target. Host-cell effects and biosynthetic enzyme assignments are not transferred to antimicrobial mechanism.
+- The original methods contain apparent reporting inconsistencies, including a 64:38 HPLC solvent ratio and a 100 ml dye-extraction volume. No correction of those source values or quantitative native activity object is inferred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- The original Figure 2 antibacterial values are in µM, while the dilution series in the methods is expressed in µg/mL. The two representations are not interchangeable without conversion.
+- No missing optional field is treated as a defect. The actual chemistry failure is retained even though focused schema and strict validation pass.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T154231Z-erdasporine-a-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Erdasporine A: supported exact compound and activity with an invalid imported
+  SMILES'
+started_at: '2026-10-21T15:13:50Z'
+finished_at: '2026-10-21T15:42:31Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The original discovery experiment supports the erdasporine A structure, environmental-DNA
+  gene-cluster origin and bounded S. aureus growth inhibition. The native InChI, official
+  ChEBI molfile and adopted MIBiG representation agree. The imported aromatic SMILES
+  omits three required pyrrolic N–H groups and cannot be parsed. One major representation
+  correction is needed; optional quantitative activity and producer fields are not
+  treated as defects.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/erdasporine-a.yaml
+    sha256: 3c8e52a88d87883308f5c5a3a3adcf8c1aec6e0e4f207bdfeb2d1cac3f4eac6a
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_mibig_producers.py
+    sha256: a078cdf4c9b2d09999800ab7ae03f93d3972f29b7d2f460ebbbe7d7ec6b31c53
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:156313
+  path: data/antibiotics/antibacterial/erdasporine-a.yaml
+  label: erdasporine A
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/mibig_producers.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_mibig_producers.py
+    role: MIBiG producer extraction
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 408; one complete native record. All thirteen initial
+    hashes were verified unchanged before judgment and retained. Actual MIBiG source
+    and extractor owners were appended, giving fifteen captured inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:156313
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Focused schema check passed.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/erdasporine-a.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Focused strict check passed.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/erdasporine-a.yaml --out /private/tmp/am-review-session/408-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: failed
+  required: false
+  summary: Native SMILES fails kekulization. Native InChI independently reproduces
+    the stored key, formula, charge and masses; the minted alias reproduces.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 408
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: authority-map-initial
+  name: authority-map-initial
+  status: failed
+  required: false
+  summary: The first diagnostic stopped at a Python syntax error before chemical comparisons.
+    The scratch diagnostic was corrected.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/408-xref-check.py
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: authority-map
+  name: authority-map
+  status: passed
+  required: false
+  summary: Corrected diagnostic independently parses native InChI, official ChEBI
+    molfile and adopted MIBiG SMILES. All three yield the same full standard InChI
+    and key.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/408-xref-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-catalog
+  name: adapter-catalog
+  status: passed
+  required: false
+  summary: Actual catalog read before mechanistic follow-up. The native environmental-DNA
+    gene-cluster statement provides no exact covered producer gene or dataset; no
+    applicable module query was inferred.
+  target_ids:
+  - CHEBI:156313
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:156313
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/erdasporine-a.yaml
+  locator: Entire native YAML.
+  accessed_at: '2026-10-21T15:37:38Z'
+  support: supports
+  summary: The SEEDED, EXACT CHEBI156313 record has two systematic exact synonyms,
+    five broader chemical parents, one antibacterial role, neutral C22H15N3O3 structure,
+    one ChEBI source concept and five seed/reseed events. It has no external xrefs,
+    molecular-target, resistance, quantitative-activity, producer, clinical, dataset,
+    causal-graph or discussion assertions. The definition describes environmental-DNA
+    origin and HCT116/S. aureus effects. The stored SMILES is not a valid encoding
+    of the otherwise consistently identified molecule.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/mibig_producers.tsv; scripts/extract_source_inventory.py;
+    scripts/extract_mibig_producers.py; scripts/seed_from_sources.py; conf/sources.yaml
+  locator: Entire exact source rows and applicable extraction, structure selection,
+    MIBiG merge and unnamed-taxon refusal code.
+  accessed_at: '2026-10-21T15:37:38Z'
+  support: supports
+  summary: ChEBI row 2752 supplies the exact native fields and sole adopted citation
+    PMID24171465. MIBiG row 650 supplies BGC0001336, version 5, questionable quality,
+    not expert reviewed, experimental expression evidence and the same full InChIKey
+    for compound 1 of 3. Its taxon 77133 is uncultured bacterium. The seeder refuses
+    unnamed taxa, explaining the absence of a native producer object; the source quality
+    flag is not itself the refusal condition. No exact ARO, FDA or PubChem source
+    row owns this record. The MIBiG extractor computes structural identity from its
+    valid kekule SMILES. Original hashes are preserved.
+  snapshot_sha256: 45b0ee2cd0e39167b4dbd79408b824460bf9577e98522a42e3714f9a33813abe
+- evidence_id: chebi
+  kind: authority
+  reference: CHEBI:156313; https://www.ebi.ac.uk/chebi/CHEBI:156313
+  locator: Complete official entry, names, definition, classification, role and chemical
+    properties.
+  accessed_at: '2026-10-21T15:32:53Z'
+  support: supports
+  summary: Current ChEBI retains the exact label, synonyms, full InChIKey, formula,
+    charge and masses. Its textual SMILES has the same invalid aromatic nitrogen encoding
+    as native. Its broader parents resolve to methyl ester 25248, phenols 33853, indolocarbazole
+    alkaloid 37697, secondary amino compound 50995 and organic heterohexacyclic compound
+    51914; role 33282 is antibacterial agent. These are broader classifications rather
+    than alternate exact compounds. Additional host/non-antimicrobial roles do not
+    establish a missing antimicrobial role.
+  snapshot_sha256: 049251b88d8e368b06d46de36cc7693bc13470092b0dd4d72f1c46e156edcdaa
+- evidence_id: structures
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/molfile/156313; MIBiG:BGC0001336
+  locator: Official molfile and adopted MIBiG SMILES independently parsed against
+    native InChI.
+  accessed_at: '2026-10-21T15:37:38Z'
+  support: partial
+  summary: All valid representations give WIKWOGJGVQUVBW-UHFFFAOYSA-N, neutral C22H15N3O3
+    and monoisotopic mass 369.11134134, without stereocentres. Their valid aromatic
+    serialization has three [nH] atoms. Native textual SMILES uses three bare aromatic
+    n atoms and fails kekulization. The discrepancy is an unusable representation,
+    not evidence of another natural-product stereoisomer. No graph was edited.
+  snapshot_sha256: 9da682d59c40d7cec2a3f5318d1b49cdc5febc62662eaeb033e0145e54c9c908
+- evidence_id: mibig
+  kind: authority
+  reference: MIBiG:BGC0001336; https://raw.githubusercontent.com/mibig-secmet/mibig-json/master/data/BGC0001336.json
+  locator: Entire public official repository entry, including all three compounds
+    and biosynthesis metadata.
+  accessed_at: '2026-10-21T15:33:24Z'
+  support: supports
+  summary: The inspected legacy-schema release 3.1 entry independently corroborates
+    the same erdasporine A graph, PMID24171465, heterologous-expression evidence and
+    KF551865.1 locus. It is explicitly older than the adopted version 5 row and is
+    not represented as a verification of all version 5 fields. An uncultured taxon
+    and experimentally refactored host do not identify a cultured natural producer.
+  snapshot_sha256: 4e24ce72d5a8d6e0f26c04209cb15ec599b85f349e0bbf01ad576edf4b02cfa9
+- evidence_id: original
+  kind: primary_source
+  reference: PMID:24171465; DOI:10.1021/ja408683p; PMC3878720; https://pmc.ncbi.nlm.nih.gov/articles/PMC3878720/
+  locator: Complete original main article, including all methods and captions; Figures
+    2, 4 and 5 visually inspected.
+  accessed_at: '2026-10-21T15:33:24Z'
+  support: supports
+  summary: Chang and colleagues isolate environmental-DNA clone AB339 and refactor
+    its esp cluster in E. coli BL21. EspODPM produces compound 2, erdasporine B; spent
+    broth fed to EspX-expressing cells yields compound 1, erdasporine A, isolated
+    at 0.4 mg. Figure 2 explicitly shows the methyl ester, phenol position and three
+    N–H groups agreeing with the valid native InChI and ChEBI molfile. Figure 4 documents
+    the feeding strategy and time dependence; Figure 5 is a proposed biosynthetic
+    scheme. Predicted actinobacterial origin is not an experimentally identified native
+    producer. Biosynthetic Esp proteins are not antibacterial targets.
+  snapshot_sha256: 82b5c3c92b3de3699cc4f04829b58103c1c34247f1ce15cc8839c68f860df40b
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:24171465; DOI:10.1021/ja408683p; Figure 2 and Bioactivity assays
+  locator: Original Figure 2 image read against complete antibacterial and human-cell
+    methods.
+  accessed_at: '2026-10-21T15:35:24Z'
+  support: supports
+  summary: For exact compound 1, Figure 2 reports S. aureus MIC 4.2 µM and HCT116
+    IC50 4.3 µM; the caption explicitly gives micromolar units. The bacterial assay
+    uses strain 6538P, LB, an overnight culture diluted 10^6-fold, a twofold dilution
+    series prepared in µg/mL, 18 h at 30°C and OD600 < 0.05 as the growth-inhibition
+    endpoint. HCT116 ATCC CCL247 is assessed after 72 h by crystal-violet biomass
+    and curve-fitted IC50. These are distinct endpoints; the bacterial result is not
+    an MBC or proof of a cellular target. The definition uses the source wording cytotoxic,
+    but this review preserves the actual bacterial growth endpoint. No native numerical
+    observation is asserted.
+  snapshot_sha256: 08d4a3bc4ca6d2ce42376c066f5ee0598d8e77c1199cacf81144590a2db9adba
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB catalog; environmental-DNA esp cluster
+  locator: Complete structured catalog inspected before open-ended mechanism follow-up.
+  accessed_at: '2026-10-21T15:37:38Z'
+  support: context_only
+  summary: No catalog entry resolves the unidentified natural producer or its environmental
+    esp locus. HCT116 is a human assay model, S. aureus is the antibacterial recipient,
+    and E. coli BL21 is a heterologous expression host established by the paper. These
+    distinctions do not justify a native endogenous E. coli transcriptomic mapping.
+    No negative biological conclusion is drawn from catalog coverage.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: search
+  kind: search
+  reference: 408-inclusive-hits.txt; 408-fetch-results.json through 408-fetch4-results.json
+  locator: Ignored-inclusive local record/source/overlay search and bounded public
+    original-source retrieval.
+  accessed_at: '2026-10-21T15:37:38Z'
+  support: context_only
+  summary: Hidden and ignored files were included across data, curation, conf, scripts,
+    src, docs, .claude, reviews and reports. Focused overlay/report searches found
+    the queue but no exact curator override or prior review. Generated projections
+    are not independent evidence. The sole adopted PMID resolves to the inspected
+    original main article. EuropePMC XML returned 500; PMC main HTML and figure images
+    succeeded. The PMC supplementary route returned an HTML download challenge, the
+    ACS landing returned an empty 202 response and the direct publisher SI route returned
+    403; none is counted as a read PDF.
+  search_scope: '2026-10-21: ignored-inclusive exact CHEBI:156313, erdasporine A/name/slug
+    and full InChIKey searches across the stated repository paths; exact official
+    ChEBI/MIBiG identifiers, adopted PMID24171465 and original DOI/public author/publisher
+    routes. No paid provider used.'
+  snapshot_sha256: 467fcc89e9702743a631d728f6f5d7ee8d03db7217ca9fc0fdcbae6fd40043bf
+- evidence_id: validation
+  kind: validation
+  reference: 408-schema.log; 408-strict.log; 408-chemistry.json; 408-xref-chemistry.json
+  locator: Actual focused checks and complete unchanged-input recheck.
+  accessed_at: '2026-10-21T15:37:38Z'
+  support: supports
+  summary: Schema and strict validation pass while the separate chemistry check fails
+    on SMILES. Valid alternative representations agree independently, so passing deterministic
+    schema checks do not resolve the scientific representation defect.
+  snapshot_sha256: 91bd2a5d24cae25fee6b58986280c25facd336e849b012964374a24541688ae1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact compound, synonyms, parents and source identity
+  outcome: concern
+  summary: The neutral A identity is supported by the original structure, official
+    molfile, native InChI and MIBiG graph; the SMILES is unusable because pyrrolic
+    hydrogen notation is missing. No salt, mixture or stereochemical ambiguity is
+    inferred.
+  target_ids:
+  - CHEBI:156313
+  evidence_ids:
+  - native
+  - chebi
+  - structures
+  - original
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and definition endpoints
+  outcome: supported
+  summary: The exact isolated compound inhibits growth of the reported S. aureus strain
+    and reduces HCT116 biomass in distinct experiments. Class and antibacterial role
+    are supported; quantitative activity is optional and cannot be generalized beyond
+    the protocol or strain.
+  target_ids:
+  - CHEBI:156313
+  evidence_ids:
+  - original
+  - activity
+  - chebi
+- assessment_id: biosynthesis
+  area: evidence
+  topic: Environmental-DNA cluster versus natural producer and target
+  outcome: supported
+  summary: The refactored environmental esp cluster experimentally yields A. The native
+    definition does not name an unsupported natural producer, and the MIBiG refusal
+    is appropriate for its unnamed taxon. Biosynthesis does not establish an antimicrobial
+    mechanism.
+  target_ids:
+  - CHEBI:156313
+  evidence_ids:
+  - owners
+  - mibig
+  - original
+  - adapter
+- assessment_id: coverage
+  area: completeness
+  topic: Optional biology and absent mechanistic fields
+  outcome: supported
+  summary: No compound-specific antimicrobial target is established in the inspected
+    discovery article. Empty target, resistance, mode, clinical, producer, causal-graph,
+    dataset and activity fields are not automatically defects for this SEEDED record.
+    No sign-off promotion is inferred.
+  target_ids:
+  - CHEBI:156313
+  evidence_ids:
+  - native
+  - original
+  - activity
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained owners, evidence depth and history
+  outcome: supported
+  summary: Every native field and the sole adopted primary lead were assessed. Actual
+    source owners were appended while retaining initial hashes. The invalid text originates
+    in ChEBI and persists through source generation; it requires a reproducible maintained-source
+    correction.
+  target_ids:
+  - CHEBI:156313
+  evidence_ids:
+  - owners
+  - chebi
+  - search
+  - validation
+findings:
+- finding_id: F1
+  issue_key: erdasporine-a-invalid-aromatic-nh-smiles
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Repair the imported pyrrolic nitrogen encoding in SMILES
+  description: The native SMILES uses bare aromatic n at all three pyrrolic nitrogens
+    and fails RDKit kekulization. The native InChI, current official ChEBI molfile,
+    adopted MIBiG graph and original Figure 2 consistently require three N–H groups.
+    The same invalid textual SMILES remains in current ChEBI. Correct the maintained
+    source representation with an auditable equivalence check; do not change the supported
+    exact identity or substitute a sibling congener.
+  target_ids:
+  - CHEBI:156313
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - native
+  - chebi
+  - structures
+  - original
+  - validation
+  rule_id: Structure encodings must parse and denote the same exact molecule
+  native_severity: major
+  normalization_reason: A required molecular representation is unusable, but independent
+    valid encodings and original primary structure establish the intended exact molecule.
+    This is not a demonstrated wrong compound identity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted invalid textual SMILES
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI structure extraction and normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated molecular representation
+actions:
+- action_id: A1
+  description: Correct the source-owned SMILES and regenerate the record through the
+    maintained source path.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:156313
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted invalid textual SMILES
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI structure extraction and normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated molecular representation
+  acceptance_checks:
+  - Use the inspected official molfile or equivalent validated representation to preserve
+    all three N–H groups; retain provenance for any source normalization or override.
+  - Require the corrected SMILES to parse and reproduce full key WIKWOGJGVQUVBW-UHFFFAOYSA-N,
+    neutral formula C22H15N3O3 and the stored masses. Confirm the original Figure
+    2 constitution independently.
+  - Regenerate and run focused schema, strict, chemistry and source-reproduction checks.
+    Preserve SEEDED status until all separate sign-off criteria are satisfied.
+limitations:
+- The original main article and Figures 2, 4 and 5 were inspected, but the supplementary
+  PDF and raw NMR spectra were not obtained from the attempted public routes. The
+  figure and mutually agreeing official/archived structures support the bounded representation
+  finding without claiming a new spectral elucidation.
+- The public MIBiG GitHub entry uses legacy schema release 3.1, whereas the adopted
+  TSV records entryversion 5. The legacy entry corroborates identity and experimental
+  origin, not every later metadata field.
+- The discovery study identifies an environmental gene cluster and engineered production
+  host, not a named cultured natural producer or antibacterial molecular target. Host-cell
+  effects and biosynthetic enzyme assignments are not transferred to antimicrobial
+  mechanism.
+- The original methods contain apparent reporting inconsistencies, including a 64:38
+  HPLC solvent ratio and a 100 ml dye-extraction volume. No correction of those source
+  values or quantitative native activity object is inferred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- The original Figure 2 antibacterial values are in µM, while the dilution series
+  in the methods is expressed in µg/mL. The two representations are not interchangeable
+  without conversion.
+- No missing optional field is treated as a defect. The actual chemistry failure is
+  retained even though focused schema and strict validation pass.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

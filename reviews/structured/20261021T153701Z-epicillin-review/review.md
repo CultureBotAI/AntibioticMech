@@ -1,0 +1,604 @@
+# Epicillin: exact structure and antibacterial evidence with source limits
+
+- Review: 20261021T153701Z-epicillin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T15:13:47Z
+- Finished UTC: 2026-10-21T15:37:01Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The exact neutral epicillin graph and penicillin classification are supported by mutually agreeing authorities and original experiments. All adopted citation leads were disposed at their actual reading depth. Historical animal, clinical and susceptibility experiments are kept separate; no current approval or exact allergenic determinant is inferred. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position402; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:58974 | data/antibiotics/antibacterial/epicillin.yaml | generated | epicillin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:58974 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:58974 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:58974 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:58974 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:58974 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:58974 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:58974 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:58974 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:58974 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:58974 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:58974 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:58974 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact molecular identity and synonyms
+
+identity: supported. Targets: CHEBI:58974.
+
+Mutually agreeing complete graphs and original structure/chemical context support neutral epicillin. The native D/2R side-chain configuration and penicillin core are consistent. Common dexacillin/Dexacillin names are authority-attested; the inspected evidence does not establish a contradictory exact structure or independently certify their brand history.
+
+### Antibacterial role and spectrum
+
+evidence: supported. Targets: CHEBI:58974.
+
+Original growth experiments directly support antibacterial eligibility. Quantitative reuse must retain medium, inoculum, strain, endpoint and active-material potency. Historical mouse and combined clinical regimens cannot be collapsed into intrinsic MICs.
+
+### Drug-allergen parent
+
+evidence: unknown. Targets: CHEBI:58974.
+
+The broader parent is a faithful current ChEBI annotation; exact epicillin-specific clinical allergy evidence was not established from the inspected abstract. No false allergy claim or primary certification is inferred from that access/scope limit.
+
+### Chemical and document links
+
+grounding: supported. Targets: CHEBI:58974.
+
+Accessible exact structure authorities agree. Patent and Wikipedia are related documents rather than chemical identity equivalences; Reaxys remains independently unverified.
+
+### Source concepts, histories and coverage
+
+provenance: supported. Targets: CHEBI:58974.
+
+All 4 native history entries and source concepts were read; generated ownership, original hashes and focused validators are coherent. Native status remains SEEDED. Optional absent evidence domains are not corrective findings.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/epicillin.yaml; Entire YAML including all source concepts and history | supports | Every populated field was read. Native SEEDED/EXACT status, exact neutral graph, names, broader classes, activity roles, cross-references and history remain unchanged. Missing optional quantitative activity, molecular targets, resistance, producer, clinical, graph and collection fields are not schema defects. |
+| owners | 402-source-rows.json; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Exact adopted rows and generated field ownership | supports | Original thirteen inputs were captured before judgment and retained within 17 expanded unchanged inputs. The exact ChEBI row owns the structure, definition and parent relations. Readiness rows are context, not an independent source. ARO3009131 owns the penicillin class, dexacillin alias and PubChem/ChEMBL links; unrelated ARO3000670 hits from the initial broad search are not evidence owners. |
+| chemistry | 041-authority-compare.json; Independent RDKit comparison, record402 | supports | Native SMILES, InChI and current ChEBI molfile agree with the stored key, formula and charge. Focused chemistry also verifies masses and deterministic source identifier. PubChem71392 and ChEMBL2104266 independently reproduce RPBAFSBGYDKNRG-NJBDSQKTSA-N, with all four tetrahedral centres assigned. |
+| authority | CHEBI:58974; 402-chebi.json; current broader term definitions | supports | Current ChEBI identity, names, structure, exact identifiers, outgoing relations and bibliography were inspected. CHEBI17334 is penicillin and CHEBI88187 drug allergen; ARO3000008 is the penicillin beta-lactam class. The inherited antimicrobial role is coherent and a separately materialized antibacterial role is not mandatory. |
+| search | 402-local-hits.txt; 402-owners-search.json; Ignored-inclusive local search and exact authority/primary links | supports | Local source/curation/conf/script searches included hidden and gitignored files. Current authority descriptors and primary originals were sought by exact label and identifiers. No extra exact corrective overlay was established in the inspected scope. Transport failures are not biological or chemical refutation. |
+| invitro | PMID:4343402; DOI:10.1128/iai.4.1.44-49.1971; All six original scanned pages44–49, including Methods and Tables1–5, visually read | supports | Squibb epicillin lotB4, potency970 micrograms/mg, was tested by broth or agar dilution with organism-specific media and inocula; standard broth conditions used37C18–24h, with documented exceptions. MIC meant absence of visible growth and MBC required subculture. Table1 distinguishes S.aureus SC2399 at0.2 from penicillinase-producing SC2400 above50 micrograms/mL. Fig1 depicts epicillin and its separate sodium salt. The experiments establish antibacterial activity and beta-lactamase susceptibility; they do not establish a purified PBP binding site, all-strain susceptibility or present clinical breakpoints. |
+| animal | PMID:4404324; DOI:10.1128/iai.4.1.50-53.1971; All four original scanned pages50–53, including material lots, Tables1/2 and Figs1/2, visually read | supports | The study distinguishes crystalline epicillin and sodium-salt lots, oral/subcutaneous mouse infection experiments, and pharmacokinetic experiments specifically using sodium salts. ED50 in mg/kg is not a bacterial MIC. S.aureus penicillinase production and Pseudomonas strain/route greatly affect response. The historical disc/MIC correlation and tentative ampicillin-disc interpretation are not a current breakpoint recommendation. |
+| leads | PMID:1170316;1701026;4404324;7191790;9689;4343402; 041-root-primary-abstracts.json and the two full original1971 papers | supports | All five adopted ChEBI leads and the separate ARO4343402 were disposed.1170316 has no abstract and concerns crystalline forms; no hydrate conclusion was taken from its title.1701026 full abstract concerns IgE hapten studies on several penicillins but does not identify epicillin explicitly; it does not independently prove an epicillin-specific allergenic determinant.7191790 concerns a historical gonorrhoea regimen including probenecid and other treatment components;9689 compares epicillin and ampicillin in meningitis. Both complete abstracts were read, without inferring current approval, recommendations or monotherapy from combined treatment. |
+| drugcentral | https://drugcentral.org/drug/1025/molfile; 402-drugcentral.html/.txt and downloaded molfile | supports | The exact DrugCentral card identifies epicillin, CAS26774-90-3 and matching formula. Its molfile was independently parsed to the complete native key. Commercial/common-name listings establish an association but do not by themselves resolve every historical name type. |
+| documents | https://patents.google.com/patent/DE2161659A1/en; Document title, process description and original table around printedp32 | supports | The native patent link resolves to a semisynthetic penicillin process. Its table includes a D-cyclohexadienylglycyl precursor and an isolated half-hydrate; the machine-transcribed table has OCR damage, so no quantitative yield or exact salt equivalence is asserted. Wikipedia resolves to the correct compound but is not primary mechanism evidence. |
+
+## Limits And Additional Notes
+
+- The crystalline-form paper1170316 has no abstract; subscription full text was not obtained. Only complete abstracts were inspected for1701026,7191790 and9689. Both original1971 main papers were read in full as scans.
+- Reaxys1091831 was retained as adopted provenance but its proprietary structure was not independently inspected. Drug-allergen evidence remains authority-level, and commercial-name typing remains unresolved.
+- The patent was read at exact process/table scope, not every example; OCR damage prevents exact quantitative reuse. Its hydrated preparation is distinct from the native neutral formula unit.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Independent chemistry used the existing batch019 interpreter against batch041; native schema and strict gates ran in the batch041 environment. No native or source field was edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T153701Z-epicillin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Epicillin: exact structure and antibacterial evidence with source limits'
+started_at: '2026-10-21T15:13:47Z'
+finished_at: '2026-10-21T15:37:01Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The exact neutral epicillin graph and penicillin classification are supported
+  by mutually agreeing authorities and original experiments. All adopted citation
+  leads were disposed at their actual reading depth. Historical animal, clinical and
+  susceptibility experiments are kept separate; no current approval or exact allergenic
+  determinant is inferred. Scientific assessment retains the stated evidence limits;
+  full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/epicillin.yaml
+    sha256: dc31dd3afde0a529c157af4e2835b6fb24c7711dce2ce3ea9ed64d581ab123ef
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+targets:
+- target_id: CHEBI:58974
+  path: data/antibiotics/antibacterial/epicillin.yaml
+  label: epicillin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO class, alias, exact identifiers and primary citation
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position402; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:58974
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:58974
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    402
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:58974
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/epicillin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:58974
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/epicillin.yaml --out /private/tmp/am-review-session/402-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:58974
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:58974
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:58974
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:58974
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:58974
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:58974
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:58974
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:58974
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:58974
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/epicillin.yaml
+  locator: Entire YAML including all source concepts and history
+  accessed_at: '2026-10-21T15:30:21Z'
+  support: supports
+  summary: Every populated field was read. Native SEEDED/EXACT status, exact neutral
+    graph, names, broader classes, activity roles, cross-references and history remain
+    unchanged. Missing optional quantitative activity, molecular targets, resistance,
+    producer, clinical, graph and collection fields are not schema defects.
+- evidence_id: owners
+  kind: record_content
+  reference: 402-source-rows.json; scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  locator: Exact adopted rows and generated field ownership
+  accessed_at: '2026-10-21T15:30:21Z'
+  support: supports
+  summary: Original thirteen inputs were captured before judgment and retained within
+    17 expanded unchanged inputs. The exact ChEBI row owns the structure, definition
+    and parent relations. Readiness rows are context, not an independent source. ARO3009131
+    owns the penicillin class, dexacillin alias and PubChem/ChEMBL links; unrelated
+    ARO3000670 hits from the initial broad search are not evidence owners.
+  snapshot_sha256: e51037ec6a294ba37721bae00faa5f04f30dcdbb58f8337650b5d1d2d208b687
+- evidence_id: chemistry
+  kind: validation
+  reference: 041-authority-compare.json
+  locator: Independent RDKit comparison, record402
+  accessed_at: '2026-10-21T15:30:21Z'
+  support: supports
+  summary: Native SMILES, InChI and current ChEBI molfile agree with the stored key,
+    formula and charge. Focused chemistry also verifies masses and deterministic source
+    identifier. PubChem71392 and ChEMBL2104266 independently reproduce RPBAFSBGYDKNRG-NJBDSQKTSA-N,
+    with all four tetrahedral centres assigned.
+  snapshot_sha256: 888ed975fd7b3f58fc069b58117d5bd400fa28653b2ac08c928bcb15ed6ab91c
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:58974
+  locator: 402-chebi.json; current broader term definitions
+  accessed_at: '2026-10-21T15:30:21Z'
+  support: supports
+  summary: Current ChEBI identity, names, structure, exact identifiers, outgoing relations
+    and bibliography were inspected. CHEBI17334 is penicillin and CHEBI88187 drug
+    allergen; ARO3000008 is the penicillin beta-lactam class. The inherited antimicrobial
+    role is coherent and a separately materialized antibacterial role is not mandatory.
+  snapshot_sha256: e815f2c7f60e0d84afa35330657fa97216850d839420f3fc7e1d2b55a3fbb962
+- evidence_id: search
+  kind: search
+  reference: 402-local-hits.txt; 402-owners-search.json
+  locator: Ignored-inclusive local search and exact authority/primary links
+  accessed_at: '2026-10-21T15:30:21Z'
+  support: supports
+  summary: Local source/curation/conf/script searches included hidden and gitignored
+    files. Current authority descriptors and primary originals were sought by exact
+    label and identifiers. No extra exact corrective overlay was established in the
+    inspected scope. Transport failures are not biological or chemical refutation.
+  search_scope: rg --no-ignore --hidden exact names/identifiers over own checkout
+    data, curation, conf, scripts and .claude; bounded original journal/authority
+    retrieval
+  snapshot_sha256: b8abe2d4c596212f8cc78a06453833f8988d3c35c3f17c4221b5f80067612d49
+- evidence_id: invitro
+  kind: primary_source
+  reference: PMID:4343402; DOI:10.1128/iai.4.1.44-49.1971
+  locator: All six original scanned pages44–49, including Methods and Tables1–5, visually
+    read
+  accessed_at: '2026-10-21T15:30:21Z'
+  support: supports
+  summary: Squibb epicillin lotB4, potency970 micrograms/mg, was tested by broth or
+    agar dilution with organism-specific media and inocula; standard broth conditions
+    used37C18–24h, with documented exceptions. MIC meant absence of visible growth
+    and MBC required subculture. Table1 distinguishes S.aureus SC2399 at0.2 from penicillinase-producing
+    SC2400 above50 micrograms/mL. Fig1 depicts epicillin and its separate sodium salt.
+    The experiments establish antibacterial activity and beta-lactamase susceptibility;
+    they do not establish a purified PBP binding site, all-strain susceptibility or
+    present clinical breakpoints.
+  snapshot_sha256: 74b11128f18d32274a3d27ca16db9d363bb8e5880cdae784e70eabb5ce5678a0
+- evidence_id: animal
+  kind: primary_source
+  reference: PMID:4404324; DOI:10.1128/iai.4.1.50-53.1971
+  locator: All four original scanned pages50–53, including material lots, Tables1/2
+    and Figs1/2, visually read
+  accessed_at: '2026-10-21T15:30:21Z'
+  support: supports
+  summary: The study distinguishes crystalline epicillin and sodium-salt lots, oral/subcutaneous
+    mouse infection experiments, and pharmacokinetic experiments specifically using
+    sodium salts. ED50 in mg/kg is not a bacterial MIC. S.aureus penicillinase production
+    and Pseudomonas strain/route greatly affect response. The historical disc/MIC
+    correlation and tentative ampicillin-disc interpretation are not a current breakpoint
+    recommendation.
+  snapshot_sha256: d6483d2d59f30fbd42ec9b5a016dca929a5f2aa9a310e0af00e30d2c3eb1ae47
+- evidence_id: leads
+  kind: primary_source
+  reference: PMID:1170316;1701026;4404324;7191790;9689;4343402
+  locator: 041-root-primary-abstracts.json and the two full original1971 papers
+  accessed_at: '2026-10-21T15:30:21Z'
+  support: supports
+  summary: All five adopted ChEBI leads and the separate ARO4343402 were disposed.1170316
+    has no abstract and concerns crystalline forms; no hydrate conclusion was taken
+    from its title.1701026 full abstract concerns IgE hapten studies on several penicillins
+    but does not identify epicillin explicitly; it does not independently prove an
+    epicillin-specific allergenic determinant.7191790 concerns a historical gonorrhoea
+    regimen including probenecid and other treatment components;9689 compares epicillin
+    and ampicillin in meningitis. Both complete abstracts were read, without inferring
+    current approval, recommendations or monotherapy from combined treatment.
+  snapshot_sha256: 66bb9d78bce8a2bfbb433391c04f0b79082089343bc0426ec5a564919cf7065f
+- evidence_id: drugcentral
+  kind: authority
+  reference: https://drugcentral.org/drug/1025/molfile
+  locator: 402-drugcentral.html/.txt and downloaded molfile
+  accessed_at: '2026-10-21T15:30:21Z'
+  support: supports
+  summary: The exact DrugCentral card identifies epicillin, CAS26774-90-3 and matching
+    formula. Its molfile was independently parsed to the complete native key. Commercial/common-name
+    listings establish an association but do not by themselves resolve every historical
+    name type.
+  snapshot_sha256: 0bef32abf23b798b5e4ceaaea4fe7691285271a1524e1fd7a67a2aad4678f31f
+- evidence_id: documents
+  kind: primary_source
+  reference: https://patents.google.com/patent/DE2161659A1/en
+  locator: Document title, process description and original table around printedp32
+  accessed_at: '2026-10-21T15:30:21Z'
+  support: supports
+  summary: The native patent link resolves to a semisynthetic penicillin process.
+    Its table includes a D-cyclohexadienylglycyl precursor and an isolated half-hydrate;
+    the machine-transcribed table has OCR damage, so no quantitative yield or exact
+    salt equivalence is asserted. Wikipedia resolves to the correct compound but is
+    not primary mechanism evidence.
+  snapshot_sha256: 9b6e0a89eb5bcff08e878c2e4f247df3d26b400d4a93c85945b948d050c9a8fd
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact molecular identity and synonyms
+  outcome: supported
+  summary: Mutually agreeing complete graphs and original structure/chemical context
+    support neutral epicillin. The native D/2R side-chain configuration and penicillin
+    core are consistent. Common dexacillin/Dexacillin names are authority-attested;
+    the inspected evidence does not establish a contradictory exact structure or independently
+    certify their brand history.
+  target_ids:
+  - CHEBI:58974
+  evidence_ids:
+  - native
+  - chemistry
+  - authority
+  - drugcentral
+  - invitro
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and spectrum
+  outcome: supported
+  summary: Original growth experiments directly support antibacterial eligibility.
+    Quantitative reuse must retain medium, inoculum, strain, endpoint and active-material
+    potency. Historical mouse and combined clinical regimens cannot be collapsed into
+    intrinsic MICs.
+  target_ids:
+  - CHEBI:58974
+  evidence_ids:
+  - invitro
+  - animal
+  - leads
+- assessment_id: allergen
+  area: evidence
+  topic: Drug-allergen parent
+  outcome: unknown
+  summary: The broader parent is a faithful current ChEBI annotation; exact epicillin-specific
+    clinical allergy evidence was not established from the inspected abstract. No
+    false allergy claim or primary certification is inferred from that access/scope
+    limit.
+  target_ids:
+  - CHEBI:58974
+  evidence_ids:
+  - authority
+  - leads
+- assessment_id: xref
+  area: grounding
+  topic: Chemical and document links
+  outcome: supported
+  summary: Accessible exact structure authorities agree. Patent and Wikipedia are
+    related documents rather than chemical identity equivalences; Reaxys remains independently
+    unverified.
+  target_ids:
+  - CHEBI:58974
+  evidence_ids:
+  - chemistry
+  - drugcentral
+  - documents
+- assessment_id: provenance
+  area: provenance
+  topic: Source concepts, histories and coverage
+  outcome: supported
+  summary: All 4 native history entries and source concepts were read; generated ownership,
+    original hashes and focused validators are coherent. Native status remains SEEDED.
+    Optional absent evidence domains are not corrective findings.
+  target_ids:
+  - CHEBI:58974
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+  - search
+findings: []
+actions: []
+limitations:
+- The crystalline-form paper1170316 has no abstract; subscription full text was not
+  obtained. Only complete abstracts were inspected for1701026,7191790 and9689. Both
+  original1971 main papers were read in full as scans.
+- Reaxys1091831 was retained as adopted provenance but its proprietary structure was
+  not independently inspected. Drug-allergen evidence remains authority-level, and
+  commercial-name typing remains unresolved.
+- The patent was read at exact process/table scope, not every example; OCR damage
+  prevents exact quantitative reuse. Its hydrated preparation is distinct from the
+  native neutral formula unit.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Independent chemistry used the existing batch019 interpreter against batch041; native
+  schema and strict gates ran in the batch041 environment. No native or source field
+  was edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
