@@ -1,0 +1,653 @@
+schema_version: 1.0.0
+review_id: 20261021T075334Z-6-8-diprenylgenistein-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: '6,8-Diprenylgenistein: exact identity, activity and membrane-assay boundaries'
+started_at: '2026-10-21T07:36:11Z'
+finished_at: '2026-10-21T07:53:34Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. Entire record and
+    maintained source were read, chemistry independently recomputed, current official
+    identity compared, and exact-compound primary assay and mechanism sections inspected.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Exact neutral 6,8-diprenylgenistein identity and antibacterial role are supported.
+  One minor follow-up identifies useful primary activity evidence and a necessary
+  membrane-mechanism qualification. Permeabilization and killing vary with assay conditions;
+  neither a universal membrane-lysis mechanism nor a specific protein target is established.
+  A structural-description inconsistency in one additional paper is preserved as a
+  source limitation.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/5-7-4-trihydroxy-6-8-diprenylisoflavone.yaml
+    sha256: 43135b2cc1c9258d0193c6b4c9f44aa83f166b86a80f98e91b7aef8ac8376ef4
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:66263
+  path: data/antibiotics/antibacterial/5-7-4-trihydroxy-6-8-diprenylisoflavone.yaml
+  label: 5,7,4'-trihydroxy-6,8-diprenylisoflavone
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Whole exact native record, source ownership, all imported chemical
+    assertions and adopted citation, followed by bounded primary activity and mechanism
+    assessment.
+  selection: Initially uncovered queue position 047; batch 005 target 7 in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:66263
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused native execution exited 0.
+  target_ids:
+  - CHEBI:66263
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/5-7-4-trihydroxy-6-8-diprenylisoflavone.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused native execution exited 0.
+  target_ids:
+  - CHEBI:66263
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/5-7-4-trihydroxy-6-8-diprenylisoflavone.yaml --out
+    /private/tmp/am-review-session/047-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Correct final execution exited 0; initial helper mint error is disclosed
+    in chemistry evidence.
+  target_ids:
+  - CHEBI:66263
+  command: .venv/bin/python /private/tmp/am-review-session/chem005.py 47
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter
+  name: Structured expression-module applicability
+  status: not_applicable
+  required: false
+  summary: Native record names no gene, protein, regulator, pathway, stress response
+    or transcriptomic dataset. Literature-only membrane/porin proposals are not curated
+    expression-module claims.
+  target_ids:
+  - CHEBI:66263
+  evidence_ids:
+  - record
+  - primary2018
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:66263
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:66263
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:66263
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:66263
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:66263
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:66263
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:66263
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:66263
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:66263
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/5-7-4-trihydroxy-6-8-diprenylisoflavone.yaml
+  locator: Every native YAML field
+  accessed_at: '2026-10-21T07:52:20Z'
+  support: supports
+  summary: Read structural/isolation definition, five synonyms, broader parent, antibacterial
+    role, all chemical metadata, CAS/Reaxys xrefs, source concept and three seed/reseed
+    events. No numerical activity, molecular mechanism, target, producer, resistance,
+    clinical, graph or transcriptomic object is asserted. SEEDED/EXACT is unchanged.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Complete CHEBI:66263 row; MANIFEST, PATHS, source configuration, extractor
+    and seeder
+  accessed_at: '2026-10-21T07:52:20Z'
+  support: supports
+  summary: Imported identity reproduces the seed. PMID 16441081 is the adopted citation
+    lead and mechanism_role_ids is empty. The source concept, version and SHA256-based
+    mint agree. No exact-ID/minted-ID override was found in the stated ignored-inclusive
+    maintained-input search. Source identity and new scientific annotation have separate
+    maintained owners.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:66263
+  locator: Entire visible official entry;047-chebi.html
+  accessed_at: '2026-10-21T07:52:20Z'
+  support: supports
+  summary: Official identity, five synonyms, complete structural encodings, masses,
+    CAS 51225-28-6 and Reaxys 1357039 agree. CHEBI:55465 is the broader 7-hydroxyisoflavone
+    parent and CHEBI:33282 the antibacterial role. The two prenyl chains are at C6
+    and C8; this is neither unprenylated genistein nor ring-cyclized osajin/scandenone.
+    CAS and Reaxys remain source assertions without independent registry inspection.
+  snapshot_sha256: e2e39970f758a931bb1d7630cd6630d2384fc7d41ee225ba231224398840bc1d
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculation and maintained mint
+  locator: chem005.py 47;047-chemistry.json
+  accessed_at: '2026-10-21T07:52:20Z'
+  support: supports
+  summary: Both native encodings yield UCHYSPNEUSDFQR-UHFFFAOYSA-N, C25H26O5, charge
+    0, one fragment, mass 406.478 and exact mass 406.178023932, with no tetrahedral
+    stereocentres. Prenyl double bonds have equivalent methyl substituents and do
+    not require E/Z assignment. The correct mint is antibioticmech:chebi-d192da87f7.
+    Initial helper used a wrong mint algorithm; after inspection of the maintained
+    seeder, the corrected check passes. Initial scratch output is retained and is
+    not a native defect.
+  snapshot_sha256: 5e6cfb005796d342f9a93c3e0b790d7613e6e81f540b9dae10277b853dcbf484
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:16441081
+  locator: DOI:10.1021/np058069d; complete official abstract and original journal
+    text pp 121–124 at https://scispace.com/pdf/antibacterial-compounds-from-glycyrrhiza-uralensis-5auosmk8yq.pdf
+  accessed_at: '2026-10-21T07:52:20Z'
+  support: supports
+  summary: The exact compound is 5, identified by comparison with prior spectroscopy
+    and isolated from authenticated Glycyrrhiza uralensis roots. It gives MIC 2 µg/mL
+    against S. mutans ATCC 25175. The modified microdilution uses BHI, anaerobic 37°C
+    and a 16–20 h visible-growth endpoint. The 1 µg/mL result belongs to glycyrrhizol
+    A, not this compound. Plant extraction supports occurrence, not independent biosynthetic
+    proof. Browser extraction of original journal text was inspected; direct PDF download
+    returned 403.
+  snapshot_sha256: 929356387933ccdf8c648900caf5e8d792ac784030ee6681e1c72ce9ffff4f1a
+- evidence_id: primary2018
+  kind: primary_source
+  reference: PMID:29915354
+  locator: DOI:10.1038/s41598-018-27545-4; full XML Results, Discussion and Materials/Methods;
+    Table 1 compound 16
+  accessed_at: '2026-10-21T07:52:20Z'
+  support: supports
+  summary: Exact purchased 6,8-diprenylgenistein has reported MIC/MBC 6.3/6.3 µg/mL
+    for L. monocytogenes EGD-e. E. coli K12 has MIC >50 µg/mL without PAβN and MIC/MBC
+    >50/>50 with 48 µM PAβN. TSB testing runs 24 h at 37°C with viability plating;
+    this paper defines MBC as >99% inactivation, not a silently substituted 99.9%
+    criterion. Proposed porin influx, membrane localization and fluidity effects are
+    mechanistic hypotheses informed by SAR/QSAR, not direct protein-target measurements.
+  snapshot_sha256: 8b04ea52205054e439f1ff7721f1c4e8b1117f39a4266cb8d6eabb374b305023
+- evidence_id: primary2021
+  kind: primary_source
+  reference: PMID:34244528
+  locator: DOI:10.1038/s41598-021-92964-9; Table 1 compound 50 and antibacterial susceptibility
+    Methods
+  accessed_at: '2026-10-21T07:52:20Z'
+  support: supports
+  summary: The exact compound has MIC 9 and MBC 16 µg/mL against MRSA 18HN, with paired
+    molar values 23 and 38 µM. TSB, 37°C/24 h, an initial 3.8±0.4 log CFU/mL inoculum
+    and viability confirmation are specified; definitions reference the 2018 assay.
+    These are measured values, distinct from the paper’s QSAR predictions. The later
+    2025 table cites these values rather than independently redetermining them.
+  snapshot_sha256: 235b79b426431b377d1c4eab556abc06f7d9b8866db3bb76381a92917e6dc9fb
+- evidence_id: correction2022
+  kind: primary_source
+  reference: PMID:35236919
+  locator: DOI:10.1038/s41598-022-07664-9; complete correction XML
+  accessed_at: '2026-10-21T07:52:20Z'
+  support: context_only
+  summary: The correction changes the sign of the E_vdw term in the four-descriptor
+    QSAR equation in Table 2 from negative to positive. It does not report a change
+    to compound 50 MIC/MBC in Table 1. The corrected model is still a prediction,
+    not target-engagement evidence.
+  snapshot_sha256: fbb9345bfd844b18c2f653ac4213fca51ef636ffceba2ec17ec0c4a4d1248fb2
+- evidence_id: primary2024
+  kind: primary_source
+  reference: PMID:38893450
+  locator: DOI:10.3390/molecules29112574; Results/Discussion, Table 3, Methods 3.2.7/3.2.21
+    and Figure 1 visually inspected
+  accessed_at: '2026-10-21T07:52:20Z'
+  support: supports
+  summary: Synthetic compound 3 has the exact native systematic name and formula,
+    with supporting NMR/HRMS and a matching visual structure. MICs in µg/mL are 8
+    for S. aureus ATCC 29213, 16 for E. faecalis ATCC 29212, 4 for MRSA ATCC 33591
+    and >128 for E. coli ATCC 25922. Detailed MIC procedure is referred to earlier
+    papers rather than fully restated. SEM membrane damage is measured for compound
+    2, osajin, and cannot be transferred to compound 3.
+  snapshot_sha256: 1ef6d60001f41956d47379ec8e5a711625433f1c27a2e0d30f4f25bb52d16615
+- evidence_id: primary2025
+  kind: primary_source
+  reference: PMID:40827787
+  locator: DOI:10.1021/acs.jnatprod.5c00540; Results/Discussion, Conclusion and Experimental
+    Section; Figure 2 text/caption and Table 1 compound 28
+  accessed_at: '2026-10-21T07:52:20Z'
+  support: supports
+  summary: 'Exact purchased compound 28 was tested in MRSA 18HN membrane assays. At
+    50 µg/mL most cells remained unpermeabilized, and viable counts did not significantly
+    decrease after 1 or 24 h under the high-inoculum PPS conditions. Its antimicrobial
+    action therefore cannot primarily be assigned to permeabilization from these data.
+    This does not establish universal non-permeabilization or absence of bactericidal
+    activity: concentration-response measurements extend to 100 µg/mL and the cited
+    broth MBC is 16 µg/mL under different conditions. Other membrane effects are proposals
+    requiring further testing, and the paper identifies inoculum/time/assay differences
+    as a possible explanation.'
+  snapshot_sha256: b8d923e419e4ade70db9d9a4102da00a81a0a50e5bab26a578bfd746e3f84d4e
+- evidence_id: primary2015
+  kind: primary_source
+  reference: PMID:25531232
+  locator: DOI:10.1159/000362676; original journal reproduction at https://www.adm.org.mx/backup/biblioteca/caries-research/2015/IN%20VITRO%20ANTIMICROBIAL11.pdf
+    ; Methods and Results/Discussion; p83/Table 3 visually inspected
+  accessed_at: '2026-10-21T07:52:20Z'
+  support: partial
+  summary: HPLC-F10-3 is named 6,8-diprenylgenistein and assigned C25H26O5 with matching
+    HRMS. Reported MIC is 4 µg/mL for S. mutans UA159 and 1–4 across the listed mutans-streptococcal
+    panel. MIC, time-kill, crystal-violet biomass, confocal architecture and fibroblast
+    MTT are separate endpoints. However, the p83 structure paragraph also describes
+    a saturated H2/H3 methine/methylene and a 199.5-ppm carbonyl, then states C4 at
+    180.4 ppm; this conflicts with the named isoflavone and requires original supplementary
+    spectra/structure adjudication before confident new quantitative reuse. The printed
+    p89 erratum concerns an unrelated 2009 caries article.
+  snapshot_sha256: e5070a80d36489b1485e868ebb0f28b87d3ac49a6553bbda46af0017322803a9
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive repository and bounded public primary discovery
+  locator: 047-local-hits.txt;047-maintained-search.txt; systematic-name and 6,8-diprenylgenistein
+    searches
+  accessed_at: '2026-10-21T07:52:20Z'
+  support: context_only
+  summary: Repository searches included hidden and ignored files. Multiple exact-compound
+    activity studies and later mechanistic qualifications were inspected. Additional
+    search leads and generic isoflavone mechanisms were not treated as evidence of
+    a proven target. The 1999 Derris isolation report remains an official ChEBI attribution
+    and a reference in the 2006 paper, without independent full-text inspection.
+  search_scope: prepare.py 47 searched batch005 via rg --no-ignore --hidden excluding
+    .git/.venv. Focused CHEBI:66263/mint search covered curation/decisions.tsv, curation/curator_antibiotics.tsv
+    and conf. Public searches used the full systematic name, exact common name, activity/mechanism,
+    adopted PMID and original titles; followed free official EPMC XML, publisher correction,
+    publisher figure and public reproductions of original journal articles. This bounded
+    search does not prove absence of other mechanisms or producers.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact diprenylated isoflavone
+  outcome: supported
+  summary: Native encodings, formula, charge, positions and synonyms agree with official
+    identity and the exact synthetic compound. One additional source paragraph is
+    internally inconsistent; it does not establish a wrong native structure.
+  target_ids:
+  - CHEBI:66263
+  evidence_ids:
+  - record
+  - chebi
+  - chemistry
+  - primary2024
+  - primary2015
+- assessment_id: grounding
+  area: grounding
+  topic: Broader parent and identifiers
+  outcome: supported
+  summary: The parent is a valid broader class and the antibacterial role is independently
+    supported. CAS/Reaxys source assertions are preserved with explicit independent-access
+    limits.
+  target_ids:
+  - CHEBI:66263
+  evidence_ids:
+  - chebi
+  - adopted
+  - primary2018
+  - primary2024
+- assessment_id: activity
+  area: evidence
+  topic: Strain- and method-specific antibacterial effects
+  outcome: supported
+  summary: Multiple primary experiments support the antibacterial role. Different
+    strains, media, inocula, endpoints and MBC definitions must remain separate; E.
+    coli thresholds in particular do not establish species-wide inactivity or a resistance
+    determinant.
+  target_ids:
+  - CHEBI:66263
+  evidence_ids:
+  - adopted
+  - primary2018
+  - primary2021
+  - primary2024
+- assessment_id: mechanism
+  area: evidence
+  topic: Membrane-permeability interpretation
+  outcome: unknown
+  summary: No native mechanism or direct target is asserted. Exact-compound membrane
+    observations constrain simplistic lysis claims; proposed membrane location, fluidity
+    or porin effects remain hypotheses. Osajin SEM and wighteone rapid permeabilization
+    are different-compound results.
+  target_ids:
+  - CHEBI:66263
+  evidence_ids:
+  - record
+  - primary2018
+  - primary2024
+  - primary2025
+- assessment_id: source-boundary
+  area: evidence
+  topic: 2015 reported identity and endpoints
+  outcome: concern
+  summary: The named compound and HRMS support the intended assignment, but a conflicting
+    NMR paragraph requires supplementary-data adjudication before treating its new
+    assay values as fully resolved. Biofilm biomass and host cytotoxicity do not demonstrate
+    a bacterial molecular target or clinical safety.
+  target_ids:
+  - CHEBI:66263
+  evidence_ids:
+  - primary2015
+- assessment_id: producer
+  area: representation
+  topic: Natural occurrence and biosynthesis
+  outcome: unknown
+  summary: Glycyrrhiza root isolation is directly supported. Derris occurrence has
+    authority/retrospective support only in the inspected sources. Neither justifies
+    an unqualified structured biosynthetic producer from isolation alone.
+  target_ids:
+  - CHEBI:66263
+  evidence_ids:
+  - record
+  - adopted
+  - search
+- assessment_id: other
+  area: representation
+  topic: Resistance, clinical, graph and dataset claims
+  outcome: not_applicable
+  summary: No native objects need correction in these categories. Susceptibility thresholds,
+    model predictions, host-cell viability and product-development suggestions are
+    insufficient to create clinical or resistance-mechanism claims.
+  target_ids:
+  - CHEBI:66263
+  evidence_ids:
+  - record
+  - primary2018
+  - primary2015
+  - primary2025
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained provenance and sign-off
+  outcome: supported
+  summary: Source row, deterministic mint, version and three seed/reseed events are
+    coherent. New observations need curator-owned claim-level evidence and validated
+    history; this review does not promote native status.
+  target_ids:
+  - CHEBI:66263
+  evidence_ids:
+  - record
+  - owner
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-66263-exact-activity-membrane-boundary-evidence
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Capture exact activity evidence with membrane-assay and source-identity qualifications
+  description: Inspected original studies provide concrete activity observations and
+    mechanistic constraints that are absent from the seed. Curation can add useful
+    evidence while retaining the non-equivalence of growth inhibition, bactericidal
+    endpoints and PI permeability. One additional paper’s internal structural-description
+    conflict needs adjudication before its quantitative results are normalized. Empty
+    optional fields alone are not the finding.
+  target_ids:
+  - CHEBI:66263
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - mode_of_action_notes
+  - discussions
+  evidence_ids:
+  - record
+  - adopted
+  - primary2018
+  - primary2021
+  - primary2024
+  - primary2025
+  - primary2015
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/5-7-4-trihydroxy-6-8-diprenylisoflavone.yaml
+    role: Curator-owned primary evidence, activity and mechanistic discussion through
+      validated writer and native history
+  rule_id: native-review-checklist:Activity, Evidence and Mode of action
+  native_severity: minor concrete primary-evidence enrichment
+  normalization_reason: The current exact identity and broad antibacterial role are
+    supported, with no false native numerical or target claim. Verified source-specific
+    observations and limits justify a bounded enrichment follow-up.
+actions:
+- action_id: A1
+  description: Curate the exact-compound activity observations and mechanistic discussion
+    with method, identity and endpoint boundaries.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:66263
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/5-7-4-trihydroxy-6-8-diprenylisoflavone.yaml
+    role: Curator-owned primary evidence, activity and mechanistic discussion through
+      validated writer and native history
+  acceptance_checks:
+  - Map compound 5 in 2006, 16 in 2018, 50 in 2021, 3 in 2024 and 28 in 2025 explicitly
+    to the native exact molecule. Do not transfer osajin, scandenone, wighteone or
+    glycyrrhizol results.
+  - Preserve organism/strain, assay medium, temperature, duration, inoculum, units,
+    comparator and source-specific MIC/MBC definitions. Do not convert the 2018 >99%
+    MBC criterion into a 99.9% definition or count the 2025 restatement of 2021 MIC/MBC
+    as an independent assay.
+  - Use the 2025 high-inoculum PPS experiment to qualify membrane-permeabilization
+    claims; retain concentration and time. A nonsignificant viable-count reduction
+    there does not refute broth MBC or prove universal lack of killing.
+  - Keep porin entry, fluidity/depolarization, localization and QSAR hypotheses explicitly
+    inferential; require direct evidence before naming a protein target or lethal
+    causal chain.
+  - For 2015 HPLC-F10-3, inspect original supplementary structure/NMR and resolve
+    the saturated-skeleton paragraph before confident quantitative entry. Preserve
+    the paper’s identity attribution and uncertainty instead of silently repairing
+    the prose or rejecting all independent evidence.
+  - Do not treat isolation as biosynthesis proof, crystal-violet biomass as viable-cell
+    killing, or fibroblast MTT/product suggestions as clinical efficacy or safety.
+  - Use the native validated writer/history, focused schema/strict, source reproduction
+    and required QC; retain native scientific status until its sign-off criteria pass.
+limitations:
+- The 2006 original journal text was inspected through a public PDF browser extraction;
+  direct download returned 403. No independent visual interpretation of its spectra
+  is claimed.
+- The 2018 Results/Discussion and Methods, 2021 exact activity table and susceptibility
+  Methods, complete 2022 correction, 2024 Results/Discussion and relevant chemistry/MIC
+  Methods, and 2025 Results/Discussion, Conclusion and Experimental Section were inspected.
+  This does not claim complete independent reproduction of spectroscopy, modeling,
+  supplementary data or microscopy.
+- The 2024 structure Figure 1 was visually inspected. Its MIC Methods refer to earlier
+  papers; no unstated detailed protocol is invented. The 2025 microscopy interpretation
+  is based on authors’ text/caption and assay description rather than independent
+  image quantification.
+- The 2015 original PDF was read for chemistry, assays and interpretation; p83/Table
+  3 were visually verified. Original supplementary spectra were not obtained in this
+  pass, so the internally conflicting skeleton paragraph remains unresolved. No direct-target
+  mechanism or clinical safety follows from its phenotypic assays.
+- The original 1999 Derris isolation text and independent CAS/Reaxys registry entries
+  were not inspected. Their authority/retrospective assertions remain distinct from
+  direct experimental verification.
+- The initial scratch helper used the wrong mint algorithm; the retained initial output
+  is followed by the corrected maintained SHA256-based calculation. This was a helper
+  error, not a native identity finding.
+- Discovery was bounded and does not establish universal absence of other activity,
+  mechanism or biosynthesis evidence. No native edits or paid research occurred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- An independent second reviewer verified the retained source/input hashes, visually
+  confirmed the 2015 p83 contradiction and checked the 2024 compound boundary and
+  2025 assay interpretation. No material defect in the review was found.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
