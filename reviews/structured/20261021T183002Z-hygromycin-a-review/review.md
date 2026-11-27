@@ -1,0 +1,966 @@
+# Hygromycin A: supported ribosomal action with an incompatible exact ChEMBL reference
+
+- Review: 20261021T183002Z-hygromycin-a-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T18:07:30Z
+- Finished UTC: 2026-10-21T18:30:02Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The neutral native hygromycin A graph agrees with ChEBI and PubChem and with the corrected neo aminocyclitol configuration described in primary structural work. CHEMBL7611 instead encodes a Z alkene and an inverted aminocyclitol hydroxyl centre. The exact mapping requires correction. Primary ribosome studies support blockade of full tRNA accommodation, while native CARD resistance assertions retain their database status and organism-specific evidence limits.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 541; one whole exact native record. The original thirteen hashes were preserved and two actual ARO source inputs were appended before scientific assessment, yielding fifteen captured inputs.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:69414 | data/antibiotics/antibacterial/hygromycin-a.yaml | generated | hygromycin A |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema verification | passed | True | CHEBI:69414 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:69414 | Actual focused execution exited 0. |
+| Focused chemistry verification | passed | False | CHEBI:69414 | Actual focused execution exited 0. |
+| Independent chemical authority comparison | passed | False | CHEBI:69414 | The diagnostic executed successfully: six native/ChEBI/PubChem encodings agree; three ChEMBL encodings consistently differ at one tetrahedral centre and the alkene. The RCSB ligand has a separate keto tautomer representation and is not counted as an exact full-key match. |
+| Structured public-source grounding | passed | False | CHEBI:69414 | Actual structured adapter execution completed with exit 0. Catalog and native-claim searches preceded open-ended protein/mechanism web follow-up; later component summarization resolved the returned dataset-local hit. |
+| Structured public-source grounding | passed | False | CHEBI:69414 | Actual structured adapter execution completed with exit 0. Catalog and native-claim searches preceded open-ended protein/mechanism web follow-up; later component summarization resolved the returned dataset-local hit. |
+| Structured public-source grounding | passed | False | CHEBI:69414 | Actual structured adapter execution completed with exit 0. Catalog and native-claim searches preceded open-ended protein/mechanism web follow-up; later component summarization resolved the returned dataset-local hit. |
+| Structured public-source grounding | passed | False | CHEBI:69414 | Actual structured adapter execution completed with exit 0. Catalog and native-claim searches preceded open-ended protein/mechanism web follow-up; later component summarization resolved the returned dataset-local hit. |
+| Authoritative full QC | failed | True | CHEBI:69414 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:69414 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:69414 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:69414 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:69414 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:69414 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:69414 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:69414 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:69414 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact native structure and naming
+
+identity: supported. Targets: CHEBI:69414.
+
+Native formula, charge, masses, ten stereocentres, E geometry and totomycin alias agree with inspected authorities. Corrected primary neo stereochemistry supports retention of the native core; hygromycin B, epihygromycin, phosphorylated material and derivatives remain distinct.
+
+### Exact ChEMBL association
+
+grounding: concern. Targets: CHEBI:69414.
+
+The ChEMBL entry consistently encodes a different stereoisomer in three independent formats. Its name and constitutional key block do not establish exact equivalence. Correct the mapping rather than replacing the corroborated native graph.
+
+### Large-subunit PTC inhibition
+
+evidence: supported. Targets: CHEBI:69414.
+
+The cited primary and independent study directly support ribosomal PTC occupancy, translation inhibition and interference with full A-site tRNA accommodation. The definition is assessed within its stated PTC context; optional wording can explicitly distinguish initial tRNA binding from productive accommodation. RNA-site binding is not direct binding to a named ribosomal protein.
+
+### Three database-qualified resistance relations
+
+evidence: supported. Targets: CHEBI:69414.
+
+Current ARO reproduces all three relations. The 2023 original strongly supports VmlR and VmlR2 under specific host/expression conditions; the exact C. sporogenes CplR relation has only a twofold MIC effect and a prose A/B typo. Those limits are compatible with retaining explicitly database-qualified edges, without inflating effect size or generalizing across species.
+
+### Production and material identity
+
+evidence: supported. Targets: CHEBI:69414.
+
+Primary culture/isolation and NMR evidence supports S. hygroscopicus production. The cited mechanism paper uses purified material from NRRL 2388. Minor epimer contamination described in an older preparation limits unqualified purity claims but does not invalidate the exact native graph or establish that all later materials had the same composition.
+
+### Source ownership, class and history
+
+provenance: supported. Targets: CHEBI:69414.
+
+The ARO molecule and resistance rows plus ChEBI chemistry lend the fields as intended. Two actual source inputs were appended while preserving all initial hashes. The unclassified-antibiotic parent and three source history events are internally consistent with SEEDED status.
+
+### Optional detail and access scope
+
+completeness: unknown. Targets: CHEBI:69414.
+
+All native fields and asserted identifiers were assessed. Full supplementary methods, all historical biosynthetic papers and all current therapeutic research were not independently audited. Missing optional quantitative activity, graph, clinical or dataset objects are not defects; structured expression hits do not supply those claims.
+
+## Findings
+
+### F1: Correct the exact ChEMBL reference to a different stereoisomer
+
+major / open / confirmed; issue key: hygromycin-a-chembl-exact-stereoisomer-mismatch.
+
+The native xrefs entry chembl:CHEMBL7611 asserts exact equivalence, but the inspected ChEMBL SMILES, InChI and molfile all encode a Z alkene and an inverted aminocyclitol hydroxyl-bearing carbon. Their full key is YQYJSBFKSSDGFO-ATPAHKMZSA-N rather than the native E/neo graph YQYJSBFKSSDGFO-IIHALWDASA-N. Current ChEBI, PubChem and corrected primary structural work support retaining the native core. A matching name and formula cannot reconcile the stereochemical difference. Remove or qualify the maintained exact association until an independently verified matching ChEMBL entry or corrected graph is available.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the maintained exact ChEMBL mapping while preserving the supported native structure.
+
+- No generated exact xref remains to the demonstrated Z/epimeric ChEMBL graph. Retain an exact mapping only after independently verifying both alkene geometry and every assigned stereocentre.
+- Preserve the native CHEBI identifier, full graph/key, formula, charge, masses, CAS and matching PubChem association. Do not copy the conflicting CARD-display/ChEMBL SMILES or an obsolete ribosome ligand model into the native record.
+- Implement through a maintained source correction or scoped mapping override, regenerate reproducibly and pass focused schema/strict and corpus reproduction checks.
+
+### A2
+
+If adding optional mechanism or resistance evidence, retain the experimentally established boundaries.
+
+- Describe blockade of full tRNA CCA-end accommodation at the PTC while allowing initial ternary-complex/tRNA binding; do not claim a specific ribosomal protein-binding target.
+- Preserve B. subtilis surrogate-host and expression conditions for VmlR2, and the twofold C. sporogenes CplR effect plus the source prose/table A/B inconsistency. Do not generalize CplR across organisms.
+- Keep purified parent, phosphorylated antibiotic, epihygromycin and A201A distinct. Translation IC50, ligand occupancy and fermentation titer are not whole-cell MIC or binding Kd.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/hygromycin-a.yaml; Entire native YAML: definition and PMID, exact totomycin synonym, parent/class, all chemistry and exact references, ARO source concept, three resistance entries and three history events. | supports | CHEBI:69414 is an EXACT/SEEDED antibacterial record with neutral C23H29NO12, ten assigned tetrahedral centres, an E alkene and YQYJSBFKSSDGFO-IIHALWDASA-N. The definition names S. hygroscopicus production and the large-subunit peptidyl-transferase centre. Three target-protection entries explicitly state database assertions rather than primary evidence. No structured molecular target, MIC, clinical, producer, causal graph, dataset or discussion object is populated. |
+| owners | data/raw/aro_antibiotics.tsv:513; data/raw/aro_resistance_edges.tsv:4450; data/raw/chebi_antimicrobials.tsv:1765; conf/sources.yaml; scripts/extract_source_inventory.py:380; scripts/seed_from_sources.py:785; scripts/seed_from_sources.py:1738; Complete exact ARO molecule and three resistance rows, ChEBI structural support row, extraction/seeding code, source configuration and hidden/ignored-inclusive curator search. | supports | ARO supplies the definition, exact alias, classification and references; the out-of-role-scope two-star ChEBI row lends chemistry to the ARO concept under the explicit seeding rule. It is not silently promoted to an independently adopted ChEBI role concept. Resistance edges are emitted with database-only notes. No exact FDA, MIBiG, BindingDB or PubChem-enrichment row contributes. Hidden/ignored-inclusive searches found no applicable exact curator override. Original thirteen hashes are preserved, with ARO molecule and resistance inputs appended. |
+| adapter | iModulonDB b_subtilis/modulome and e_coli/precise1k; 541-adapter.json; Actual catalog and searches run before open-ended mechanism research, followed by a bounded summary of the returned dataset-local translation component. | context_only | The B. subtilis vmlR search returns BSU_05610, an ABCF ATPase, and no iModulon. The E. coli ribosome search returns generic translation genes and component e_coli/precise1k/1; its summary has 53 member genes. These are expression annotations, not proof of hygromycin A binding, an induced drug response or resistance. C. sporogenes and N. vireti are not in the returned catalog. No negative biochemical conclusion is inferred from catalog absence. |
+| aro | ARO:3007638; ARO:3000003; ARO:3004476; ARO:3007645; ARO:3007646; ARO:0001003; https://card.mcmaster.ca/ontology/46413; Complete current official OBO terms and accessible exact CARD molecule page; cached OBO retrieval manifest426-fetch2-results.json independently checked. | supports | Current ARO reproduces the exact name, totomycin alias, unclassified-antibiotic parent and all three target-protection relations. The parent denotes antibiotics lacking a defined class, not a broad molecule asserted to be chemically identical. VmlR references PMID30126986 and 36951104; CplR and VmlR2 reference PMID36951104. The CARD molecule page displays the same conflicting ChEMBL SMILES, but the maintained native structure correctly comes from ChEBI. Current database agreement establishes provenance, not independent primary proof of every mechanism. |
+| chemistry | https://www.ebi.ac.uk/chebi/backend/api/public/compound/69414/; pubchem.compound:6433481; cas:6379-56-2; Complete official chemical responses and independent native, ChEBI, PubChem and CAS-lookup parsing. | supports | Six structure encodings reproduce the full native key, neutral formula and stereochemistry; the CAS query returns the same PubChem CID. Focused native SMILES/InChI/mass checks pass. The sole adopted exact synonym is corroborated by ARO and current ChEBI. No missing ChEBI alias or broader parent is treated as a defect. |
+| chembl | https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL7611.json; Complete official ChEMBL molecule response; independent SMILES, InChI and molfile parsing with atom correspondence ignoring chirality. | refutes | All three ChEMBL encodings produce YQYJSBFKSSDGFO-ATPAHKMZSA-N. The shared constitutional scaffold has a Z alkene rather than native E, and one inverted aminocyclitol hydroxyl-bearing carbon: native SMILES atom 7 is S and the corresponding ChEMBL atom 27 is R. The native and ChEMBL labels alone therefore do not support exact equivalence. The diagnostic finds one tetrahedral inversion plus the alkene difference, not an unspecified or racemic structure. |
+| ribosome2015 | PMID:26028538; DOI:10.1016/j.molcel.2015.04.014; https://pmc.ncbi.nlm.nih.gov/articles/PMC4458074/; Complete original main text, tables and captions read; original Figure 1 visually inspected. Supplemental PDF route returned HTML and was not treated as retrieved experimental material. | supports | Hygromycin A purified from S. hygroscopicus NRRL 2388 was studied using T. thermophilus ribosome crystallography and E. coli biochemical/single-molecule assays. PTC occupancy and steric interference with the tRNA CCA end support translation inhibition. Initial ternary-complex delivery and tRNA binding remain possible; full accommodation is delayed. The native wording is read in its preceding large-subunit PTC context, not as a claim that every initial 30S binding event is prevented. Translation/puromycin IC50 values are not binding Kd or whole-cell MICs. Hygromycin A, phosphorylated HygA and A201A were experimentally distinct materials. |
+| correction2015 | PMID:26464437; DOI:10.1093/nar/gkv975; https://pmc.ncbi.nlm.nih.gov/articles/PMC4787777/; Complete Introduction, Materials and methods, Results, Discussion and Notes Added in Proof read from original XML; no raw diffraction data reprocessing. | supports | An independent D. radiodurans 50S structure and E. coli assays corroborate PTC binding and blockade of full accommodation while allowing initial aminoacyl-tRNA association. Notes Added in Proof explicitly identify the correct neo aminocyclitol configuration and explain that the initial Polikanov deposited models used myo and would be corrected. The native graph has the corrected configuration. This prevents treating obsolete deposited models as superior evidence for replacing the native structure. The source does not establish direct binding to a particular ribosomal protein. |
+| pdb | https://www.rcsb.org/structure/removed/4Z3Q; https://data.rcsb.org/rest/v1/core/entry/5DOY; https://data.rcsb.org/rest/v1/core/chemcomp/HGR; Official obsolete-entry record, replacement entry/nonpolymer metadata and complete HGR component graph. | context_only | RCSB confirms that 4Z3Q was superseded by 5DOY. The replacement contains HGR. HGR has the same E and aminocyclitol stereochemical assignments but encodes a phenolic keto tautomer with key LDTRVHIISSLXOQ-IIHALWDASA-N. It is not reported as an exact full-key match. The optional tautomer comparison is context only and can erase labile stereochemical annotations; the exact ChEMBL conflict is established directly without relying on that normalization. |
+| vmlr-primary | PMID:36951104; DOI:10.1093/nar/gkad193; https://pmc.ncbi.nlm.nih.gov/articles/PMC10201436/; Original2023 Methods for cultures, strain construction and susceptibility; Results sections for resistance spectra and clostridial phenotypes; Tables 1-4 and Discussion. Selected structural sections were read, not all supplementary data. | supports | Table 1 reports hygromycin A MIC above 256 µg/mL in B. subtilis 168 wild type versus 16 µg/mL in ΔvmlR. Complemented wild-type VmlR restores above 256 while its ATPase-deficient EQ2 variant remains16. Heterologous N. vireti VmlR2 expression in B. subtilis ΔvmlR also gives above 256. LB and 1 mM IPTG for expression strains,37°C and 16-20 h are specified in the table footnote. These results support the two database resistance relations, while distinguishing the heterologous host from an N. vireti whole-cell assay. A cryo-EM factor/ribosome structure supports ribosomal protection context but is not a direct hygromycin A–VmlR2 binding assay. |
+| cplr-primary | PMID:36951104; DOI:10.1093/nar/gkad193; original Table 4 and associated Results; Exact C. sporogenes JCM1416 rows, cplR disruption and sigD insertion control, Methods and table footnote inspected. | supports | Hygromycin A MIC is 4 µg/mL for wild type and the sigD::intron-ermB control, versus 2 µg/mL for cplR::intron-ermB, in GAM after 24 h anaerobic incubation at 37°C. This is a bounded twofold effect; larger pleuromutilin/lincosamide changes must not be transferred to hygromycin A. The prose calls the small effect hygromycin B, whereas Table 4 explicitly labels hygromycin A and the study tests that compound. The database-qualified native C. sporogenes relation is retained with this source inconsistency and effect-size limit; it is not upgraded to a strong direct biochemical protection claim or generalized to all CplR orthologues. |
+| vmlr2018 | PMID:30126986; DOI:10.1073/pnas.1808535115; https://pmc.ncbi.nlm.nih.gov/articles/PMC6130385/; Complete indexed abstract and original significance statement read; complete main study not independently audited. | context_only | This earlier structural work concerns B. subtilis VmlR-mediated resistance to lincomycin, virginiamycin M and tiamulin. Its factor/ribosome complex supplies mechanistic context, while the later2023 primary provides the exact hygromycin A resistance experiments. The older paper is not used to manufacture a HygA-specific assay. |
+| producer2003 | PMID:12821448; DOI:10.1128/AAC.47.7.2065-2071.2003; https://pmc.ncbi.nlm.nih.gov/articles/PMC161839/; Original culture, isolation, NMR and isotope-incorporation Methods plus opening production result; remaining isotope-assignment analysis not independently reanalysed. | supports | S. hygroscopicus NRRL 2388 was cultured, the antibiotic isolated by adsorption and preparative HPLC, and material compared by NMR with a standard. This is actual production evidence. The paper notes minor C-4″ epihygromycin in fermentation material, so purity is not silently assumed for every historical preparation. That observation does not make the exact native parent a mixture record. Biosynthetic precursor incorporation and fermentation titer are not antibacterial MIC or target measurements. |
+| adopted-chebi | PMID:21879726; DOI:10.1021/np200470u; Complete indexed abstract of the citation in the structural support row; full main text not retrieved in this bounded audit. | context_only | The Streptomyces C34 OSMAC paper identifies known hygromycin A as compound5 and a dihydro derivative as compound6. Its stated antibacterial comparison concerns new chaxalactins1-3, so no activity value is transferred to hygromycin A. This lead is separate from the sole native ARO definition citation PMID26028538. |
+| search | 541-local-hits.txt;541-owner-hits.txt;541-literature.json;541-focused-literature.json;541-fetch-results.json through541-fetch7-results.json; Hidden/ignored-inclusive repository exact-ID/name/owner searches; public official authority, primary PMID and bounded title searches. | context_only | The broad quoted hygromycin A search returned 2923 results because the search engine also admitted hygromycin B and selection-marker literature; only its first 100 were returned and no exhaustive coverage is claimed. A narrower title query excluding B returned 150 and the first 100 titles were inspected. Exact native-citation and CARD-paper queries drove full-text follow-up. A zero-result combined resistance-title query was superseded by the exact CARD PMIDs rather than treated as evidence absence. Initial direct CARD URLs using accessions failed; the actual molecule page 46413 and official OBO were inspected. Supplemental HTML responses were not PDFs. |
+
+## Limits And Additional Notes
+
+- The 2015 mechanism main text and independent NAR main sections were read, but supplemental PDFs/raw diffraction data were not independently analysed. The first PMC supplement response was HTML. Current 5DOY supersedes the original 4Z3Q model; its HGR descriptor uses a different keto tautomer and is not an exact full-key authority match.
+- The 2023 resistance audit covered exact relevant Methods, Results, Tables 1-4 and Discussion; it did not reanalyse all raw cryo-EM data or supplemental experiments. Generic Methods state24 h while the B. subtilis table specifies16-20 h; the table-specific context is preserved.
+- The C. sporogenes hygromycin A effect is only twofold. The paper prose calls it hygromycin B while the exact Table 4 column is hygromycin A. The native relation remains explicitly database-qualified and is not promoted to a strong direct biochemical result.
+- The 2018 VmlR source was read at complete abstract/significance depth, and the 2011 ChEBI structural lead at complete abstract depth. The 2003 producer source was read in selected culture/isolation/NMR Methods, with minor epihygromycin noted; the complete historical synthetic/biosynthetic literature was not independently audited.
+- The broad literature query admitted substantial hygromycin B and selection-marker noise. Only the first 100 results of each broad/narrowed query were returned; exact primary PMID follow-up supports the stated conclusions without implying comprehensive therapeutic or regulatory coverage.
+- The optional tautomer canonicalization removes some labile stereochemical annotations. It is used only to contextualize the HGR keto representation; the ChEMBL mismatch rests on direct unnormalized graph/stereochemistry comparison.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Actual fetch and adapter manifests retain UTC access times, URLs, hashes and execution statuses. The shared current ARO snapshot came from the official PURL at 2026-10-21T15:57:42Z with SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4.
+- Current CARD displays the conflicting ChEMBL SMILES, whereas the maintained native chemical_structure is explicitly ChEBI-derived. The finding targets the exact association without treating every field of an ontology concept as chemically authoritative.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T183002Z-hygromycin-a-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Hygromycin A: supported ribosomal action with an incompatible exact ChEMBL
+  reference'
+started_at: '2026-10-21T18:07:30Z'
+finished_at: '2026-10-21T18:30:02Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The neutral native hygromycin A graph agrees with ChEBI and PubChem and with
+  the corrected neo aminocyclitol configuration described in primary structural work.
+  CHEMBL7611 instead encodes a Z alkene and an inverted aminocyclitol hydroxyl centre.
+  The exact mapping requires correction. Primary ribosome studies support blockade
+  of full tRNA accommodation, while native CARD resistance assertions retain their
+  database status and organism-specific evidence limits.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/hygromycin-a.yaml
+    sha256: 1b81cea3997ee93af41a39a952609fc40b53c1f3987b3ea6fb20004d0a84927d
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:69414
+  path: data/antibiotics/antibacterial/hygromycin-a.yaml
+  label: hygromycin A
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual maintained source input for the record
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 541; one whole exact native record. The original thirteen
+    hashes were preserved and two actual ARO source inputs were appended before scientific
+    assessment, yielding fifteen captured inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:69414
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69414
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/hygromycin-a.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69414
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/hygromycin-a.yaml --out /private/tmp/am-review-session/541-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69414
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 541
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: Independent chemical authority comparison
+  status: passed
+  required: false
+  summary: 'The diagnostic executed successfully: six native/ChEBI/PubChem encodings
+    agree; three ChEMBL encodings consistently differ at one tetrahedral centre and
+    the alkene. The RCSB ligand has a separate keto tautomer representation and is
+    not counted as an exact full-key match.'
+  target_ids:
+  - CHEBI:69414
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/541-authority-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-0
+  name: Structured public-source grounding
+  status: passed
+  required: false
+  summary: Actual structured adapter execution completed with exit 0. Catalog and
+    native-claim searches preceded open-ended protein/mechanism web follow-up; later
+    component summarization resolved the returned dataset-local hit.
+  target_ids:
+  - CHEBI:69414
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-1
+  name: Structured public-source grounding
+  status: passed
+  required: false
+  summary: Actual structured adapter execution completed with exit 0. Catalog and
+    native-claim searches preceded open-ended protein/mechanism web follow-up; later
+    component summarization resolved the returned dataset-local hit.
+  target_ids:
+  - CHEBI:69414
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism b_subtilis --dataset modulome --query
+    vmlR
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-2
+  name: Structured public-source grounding
+  status: passed
+  required: false
+  summary: Actual structured adapter execution completed with exit 0. Catalog and
+    native-claim searches preceded open-ended protein/mechanism web follow-up; later
+    component summarization resolved the returned dataset-local hit.
+  target_ids:
+  - CHEBI:69414
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query ribosome
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-3
+  name: Structured public-source grounding
+  status: passed
+  required: false
+  summary: Actual structured adapter execution completed with exit 0. Catalog and
+    native-claim searches preceded open-ended protein/mechanism web follow-up; later
+    component summarization resolved the returned dataset-local hit.
+  target_ids:
+  - CHEBI:69414
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 summarize --organism e_coli --dataset precise1k --k 1
+    --limit 10
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:69414
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:69414
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:69414
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:69414
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:69414
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:69414
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:69414
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:69414
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:69414
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/hygromycin-a.yaml
+  locator: 'Entire native YAML: definition and PMID, exact totomycin synonym, parent/class,
+    all chemistry and exact references, ARO source concept, three resistance entries
+    and three history events.'
+  accessed_at: '2026-10-21T18:29:22Z'
+  support: supports
+  summary: CHEBI:69414 is an EXACT/SEEDED antibacterial record with neutral C23H29NO12,
+    ten assigned tetrahedral centres, an E alkene and YQYJSBFKSSDGFO-IIHALWDASA-N.
+    The definition names S. hygroscopicus production and the large-subunit peptidyl-transferase
+    centre. Three target-protection entries explicitly state database assertions rather
+    than primary evidence. No structured molecular target, MIC, clinical, producer,
+    causal graph, dataset or discussion object is populated.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv:513; data/raw/aro_resistance_edges.tsv:4450;
+    data/raw/chebi_antimicrobials.tsv:1765; conf/sources.yaml; scripts/extract_source_inventory.py:380;
+    scripts/seed_from_sources.py:785; scripts/seed_from_sources.py:1738
+  locator: Complete exact ARO molecule and three resistance rows, ChEBI structural
+    support row, extraction/seeding code, source configuration and hidden/ignored-inclusive
+    curator search.
+  accessed_at: '2026-10-21T18:29:22Z'
+  support: supports
+  summary: ARO supplies the definition, exact alias, classification and references;
+    the out-of-role-scope two-star ChEBI row lends chemistry to the ARO concept under
+    the explicit seeding rule. It is not silently promoted to an independently adopted
+    ChEBI role concept. Resistance edges are emitted with database-only notes. No
+    exact FDA, MIBiG, BindingDB or PubChem-enrichment row contributes. Hidden/ignored-inclusive
+    searches found no applicable exact curator override. Original thirteen hashes
+    are preserved, with ARO molecule and resistance inputs appended.
+  snapshot_sha256: 6ed84c7e4182e0c455e4aff68c0155c4d041e8c6c06d5e801bff8f469ecc67d5
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB b_subtilis/modulome and e_coli/precise1k; 541-adapter.json
+  locator: Actual catalog and searches run before open-ended mechanism research, followed
+    by a bounded summary of the returned dataset-local translation component.
+  accessed_at: '2026-10-21T18:29:22Z'
+  support: context_only
+  summary: The B. subtilis vmlR search returns BSU_05610, an ABCF ATPase, and no iModulon.
+    The E. coli ribosome search returns generic translation genes and component e_coli/precise1k/1;
+    its summary has 53 member genes. These are expression annotations, not proof of
+    hygromycin A binding, an induced drug response or resistance. C. sporogenes and
+    N. vireti are not in the returned catalog. No negative biochemical conclusion
+    is inferred from catalog absence.
+  snapshot_sha256: d4eff51e1e825e5a9b0f87d1b988988be6b639ef2c4aa9e928491f1bc51074ad
+- evidence_id: aro
+  kind: authority
+  reference: ARO:3007638; ARO:3000003; ARO:3004476; ARO:3007645; ARO:3007646; ARO:0001003;
+    https://card.mcmaster.ca/ontology/46413
+  locator: Complete current official OBO terms and accessible exact CARD molecule
+    page; cached OBO retrieval manifest426-fetch2-results.json independently checked.
+  accessed_at: '2026-10-21T18:29:22Z'
+  support: supports
+  summary: Current ARO reproduces the exact name, totomycin alias, unclassified-antibiotic
+    parent and all three target-protection relations. The parent denotes antibiotics
+    lacking a defined class, not a broad molecule asserted to be chemically identical.
+    VmlR references PMID30126986 and 36951104; CplR and VmlR2 reference PMID36951104.
+    The CARD molecule page displays the same conflicting ChEMBL SMILES, but the maintained
+    native structure correctly comes from ChEBI. Current database agreement establishes
+    provenance, not independent primary proof of every mechanism.
+  snapshot_sha256: fcfa9a4a81dec8548631ddb1de3584a7d630f3947d2d6f6898ef69d4117a3d69
+- evidence_id: chemistry
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/69414/; pubchem.compound:6433481;
+    cas:6379-56-2
+  locator: Complete official chemical responses and independent native, ChEBI, PubChem
+    and CAS-lookup parsing.
+  accessed_at: '2026-10-21T18:29:22Z'
+  support: supports
+  summary: Six structure encodings reproduce the full native key, neutral formula
+    and stereochemistry; the CAS query returns the same PubChem CID. Focused native
+    SMILES/InChI/mass checks pass. The sole adopted exact synonym is corroborated
+    by ARO and current ChEBI. No missing ChEBI alias or broader parent is treated
+    as a defect.
+  snapshot_sha256: 83268669c567113a4c912ab42a1b9412332e27cedc1989bf24ed10f52655c8dd
+- evidence_id: chembl
+  kind: authority
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL7611.json
+  locator: Complete official ChEMBL molecule response; independent SMILES, InChI and
+    molfile parsing with atom correspondence ignoring chirality.
+  accessed_at: '2026-10-21T18:24:46Z'
+  support: refutes
+  summary: 'All three ChEMBL encodings produce YQYJSBFKSSDGFO-ATPAHKMZSA-N. The shared
+    constitutional scaffold has a Z alkene rather than native E, and one inverted
+    aminocyclitol hydroxyl-bearing carbon: native SMILES atom 7 is S and the corresponding
+    ChEMBL atom 27 is R. The native and ChEMBL labels alone therefore do not support
+    exact equivalence. The diagnostic finds one tetrahedral inversion plus the alkene
+    difference, not an unspecified or racemic structure.'
+  snapshot_sha256: 98a6abb6b6095997eff47571eb6ac6cc56948d1539c7b4d240b2e650a7638798
+- evidence_id: ribosome2015
+  kind: primary_source
+  reference: PMID:26028538; DOI:10.1016/j.molcel.2015.04.014; https://pmc.ncbi.nlm.nih.gov/articles/PMC4458074/
+  locator: Complete original main text, tables and captions read; original Figure
+    1 visually inspected. Supplemental PDF route returned HTML and was not treated
+    as retrieved experimental material.
+  accessed_at: '2026-10-21T18:25:12Z'
+  support: supports
+  summary: Hygromycin A purified from S. hygroscopicus NRRL 2388 was studied using
+    T. thermophilus ribosome crystallography and E. coli biochemical/single-molecule
+    assays. PTC occupancy and steric interference with the tRNA CCA end support translation
+    inhibition. Initial ternary-complex delivery and tRNA binding remain possible;
+    full accommodation is delayed. The native wording is read in its preceding large-subunit
+    PTC context, not as a claim that every initial 30S binding event is prevented.
+    Translation/puromycin IC50 values are not binding Kd or whole-cell MICs. Hygromycin
+    A, phosphorylated HygA and A201A were experimentally distinct materials.
+  snapshot_sha256: 20e4c68ebc8b8eac940ebd480e5d216f0ade65aef0ecf4dc1c5f42e6b66b1268
+- evidence_id: correction2015
+  kind: primary_source
+  reference: PMID:26464437; DOI:10.1093/nar/gkv975; https://pmc.ncbi.nlm.nih.gov/articles/PMC4787777/
+  locator: Complete Introduction, Materials and methods, Results, Discussion and Notes
+    Added in Proof read from original XML; no raw diffraction data reprocessing.
+  accessed_at: '2026-10-21T18:25:29Z'
+  support: supports
+  summary: An independent D. radiodurans 50S structure and E. coli assays corroborate
+    PTC binding and blockade of full accommodation while allowing initial aminoacyl-tRNA
+    association. Notes Added in Proof explicitly identify the correct neo aminocyclitol
+    configuration and explain that the initial Polikanov deposited models used myo
+    and would be corrected. The native graph has the corrected configuration. This
+    prevents treating obsolete deposited models as superior evidence for replacing
+    the native structure. The source does not establish direct binding to a particular
+    ribosomal protein.
+  snapshot_sha256: 2ac3c5b3a3472fa98db95a5b326b6de912d59a9ede995a31b485eb0b8b7a5ec0
+- evidence_id: pdb
+  kind: authority
+  reference: https://www.rcsb.org/structure/removed/4Z3Q; https://data.rcsb.org/rest/v1/core/entry/5DOY;
+    https://data.rcsb.org/rest/v1/core/chemcomp/HGR
+  locator: Official obsolete-entry record, replacement entry/nonpolymer metadata and
+    complete HGR component graph.
+  accessed_at: '2026-10-21T18:26:34Z'
+  support: context_only
+  summary: RCSB confirms that 4Z3Q was superseded by 5DOY. The replacement contains
+    HGR. HGR has the same E and aminocyclitol stereochemical assignments but encodes
+    a phenolic keto tautomer with key LDTRVHIISSLXOQ-IIHALWDASA-N. It is not reported
+    as an exact full-key match. The optional tautomer comparison is context only and
+    can erase labile stereochemical annotations; the exact ChEMBL conflict is established
+    directly without relying on that normalization.
+  snapshot_sha256: 97c40f3c554b521c9fc3d3771051c08e5d0f38dc366fc98546fea677fa998caf
+- evidence_id: vmlr-primary
+  kind: primary_source
+  reference: PMID:36951104; DOI:10.1093/nar/gkad193; https://pmc.ncbi.nlm.nih.gov/articles/PMC10201436/
+  locator: Original2023 Methods for cultures, strain construction and susceptibility;
+    Results sections for resistance spectra and clostridial phenotypes; Tables 1-4
+    and Discussion. Selected structural sections were read, not all supplementary
+    data.
+  accessed_at: '2026-10-21T18:25:29Z'
+  support: supports
+  summary: Table 1 reports hygromycin A MIC above 256 µg/mL in B. subtilis 168 wild
+    type versus 16 µg/mL in ΔvmlR. Complemented wild-type VmlR restores above 256
+    while its ATPase-deficient EQ2 variant remains16. Heterologous N. vireti VmlR2
+    expression in B. subtilis ΔvmlR also gives above 256. LB and 1 mM IPTG for expression
+    strains,37°C and 16-20 h are specified in the table footnote. These results support
+    the two database resistance relations, while distinguishing the heterologous host
+    from an N. vireti whole-cell assay. A cryo-EM factor/ribosome structure supports
+    ribosomal protection context but is not a direct hygromycin A–VmlR2 binding assay.
+  snapshot_sha256: 3433769330015b23a70824a247fc231c552bae65a61749b745c44c25a6839766
+- evidence_id: cplr-primary
+  kind: primary_source
+  reference: PMID:36951104; DOI:10.1093/nar/gkad193; original Table 4 and associated
+    Results
+  locator: Exact C. sporogenes JCM1416 rows, cplR disruption and sigD insertion control,
+    Methods and table footnote inspected.
+  accessed_at: '2026-10-21T18:29:22Z'
+  support: supports
+  summary: Hygromycin A MIC is 4 µg/mL for wild type and the sigD::intron-ermB control,
+    versus 2 µg/mL for cplR::intron-ermB, in GAM after 24 h anaerobic incubation at
+    37°C. This is a bounded twofold effect; larger pleuromutilin/lincosamide changes
+    must not be transferred to hygromycin A. The prose calls the small effect hygromycin
+    B, whereas Table 4 explicitly labels hygromycin A and the study tests that compound.
+    The database-qualified native C. sporogenes relation is retained with this source
+    inconsistency and effect-size limit; it is not upgraded to a strong direct biochemical
+    protection claim or generalized to all CplR orthologues.
+  snapshot_sha256: f3d777a28d17f6d84fccc3855fbeb6d2691e0bcdf090fb1f015eb8a2c4e3cecf
+- evidence_id: vmlr2018
+  kind: primary_source
+  reference: PMID:30126986; DOI:10.1073/pnas.1808535115; https://pmc.ncbi.nlm.nih.gov/articles/PMC6130385/
+  locator: Complete indexed abstract and original significance statement read; complete
+    main study not independently audited.
+  accessed_at: '2026-10-21T18:25:12Z'
+  support: context_only
+  summary: This earlier structural work concerns B. subtilis VmlR-mediated resistance
+    to lincomycin, virginiamycin M and tiamulin. Its factor/ribosome complex supplies
+    mechanistic context, while the later2023 primary provides the exact hygromycin
+    A resistance experiments. The older paper is not used to manufacture a HygA-specific
+    assay.
+  snapshot_sha256: f42aad921ccc6bdfe41aeb422267c9505877e5e84df0e7b9c5ff5f078a4ddbe5
+- evidence_id: producer2003
+  kind: primary_source
+  reference: PMID:12821448; DOI:10.1128/AAC.47.7.2065-2071.2003; https://pmc.ncbi.nlm.nih.gov/articles/PMC161839/
+  locator: Original culture, isolation, NMR and isotope-incorporation Methods plus
+    opening production result; remaining isotope-assignment analysis not independently
+    reanalysed.
+  accessed_at: '2026-10-21T18:25:30Z'
+  support: supports
+  summary: S. hygroscopicus NRRL 2388 was cultured, the antibiotic isolated by adsorption
+    and preparative HPLC, and material compared by NMR with a standard. This is actual
+    production evidence. The paper notes minor C-4″ epihygromycin in fermentation
+    material, so purity is not silently assumed for every historical preparation.
+    That observation does not make the exact native parent a mixture record. Biosynthetic
+    precursor incorporation and fermentation titer are not antibacterial MIC or target
+    measurements.
+  snapshot_sha256: 99012732f49bb3e3bb00862048f01b6e5e59e6a147a8c948c5c20317e06c4933
+- evidence_id: adopted-chebi
+  kind: primary_source
+  reference: PMID:21879726; DOI:10.1021/np200470u
+  locator: Complete indexed abstract of the citation in the structural support row;
+    full main text not retrieved in this bounded audit.
+  accessed_at: '2026-10-21T18:24:46Z'
+  support: context_only
+  summary: The Streptomyces C34 OSMAC paper identifies known hygromycin A as compound5
+    and a dihydro derivative as compound6. Its stated antibacterial comparison concerns
+    new chaxalactins1-3, so no activity value is transferred to hygromycin A. This
+    lead is separate from the sole native ARO definition citation PMID26028538.
+  snapshot_sha256: 4a26685c3485dd0b176cb3ff7cde9ccc5262ae1ce9ec90052e0324398bc831f7
+- evidence_id: search
+  kind: search
+  reference: 541-local-hits.txt;541-owner-hits.txt;541-literature.json;541-focused-literature.json;541-fetch-results.json
+    through541-fetch7-results.json
+  locator: Hidden/ignored-inclusive repository exact-ID/name/owner searches; public
+    official authority, primary PMID and bounded title searches.
+  accessed_at: '2026-10-21T18:25:12Z'
+  support: context_only
+  summary: The broad quoted hygromycin A search returned 2923 results because the
+    search engine also admitted hygromycin B and selection-marker literature; only
+    its first 100 were returned and no exhaustive coverage is claimed. A narrower
+    title query excluding B returned 150 and the first 100 titles were inspected.
+    Exact native-citation and CARD-paper queries drove full-text follow-up. A zero-result
+    combined resistance-title query was superseded by the exact CARD PMIDs rather
+    than treated as evidence absence. Initial direct CARD URLs using accessions failed;
+    the actual molecule page 46413 and official OBO were inspected. Supplemental HTML
+    responses were not PDFs.
+  snapshot_sha256: 059401572fce0978ce10ce0c7c14d342f5345041ea96bd5bc33021f80d6c4d9d
+  search_scope: 2026-10-21; ignored and hidden repository paths included. Bounded
+    exact identifiers and title/abstract searches with explicit result limits and
+    direct primary-paper follow-up; no absence of further exact-compound literature
+    inferred.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact native structure and naming
+  outcome: supported
+  summary: Native formula, charge, masses, ten stereocentres, E geometry and totomycin
+    alias agree with inspected authorities. Corrected primary neo stereochemistry
+    supports retention of the native core; hygromycin B, epihygromycin, phosphorylated
+    material and derivatives remain distinct.
+  target_ids:
+  - CHEBI:69414
+  evidence_ids:
+  - native
+  - chemistry
+  - ribosome2015
+  - correction2015
+  - producer2003
+- assessment_id: xref
+  area: grounding
+  topic: Exact ChEMBL association
+  outcome: concern
+  summary: The ChEMBL entry consistently encodes a different stereoisomer in three
+    independent formats. Its name and constitutional key block do not establish exact
+    equivalence. Correct the mapping rather than replacing the corroborated native
+    graph.
+  target_ids:
+  - CHEBI:69414
+  evidence_ids:
+  - native
+  - chembl
+  - chemistry
+  - correction2015
+- assessment_id: mechanism
+  area: evidence
+  topic: Large-subunit PTC inhibition
+  outcome: supported
+  summary: The cited primary and independent study directly support ribosomal PTC
+    occupancy, translation inhibition and interference with full A-site tRNA accommodation.
+    The definition is assessed within its stated PTC context; optional wording can
+    explicitly distinguish initial tRNA binding from productive accommodation. RNA-site
+    binding is not direct binding to a named ribosomal protein.
+  target_ids:
+  - CHEBI:69414
+  evidence_ids:
+  - ribosome2015
+  - correction2015
+  - pdb
+- assessment_id: resistance
+  area: evidence
+  topic: Three database-qualified resistance relations
+  outcome: supported
+  summary: Current ARO reproduces all three relations. The 2023 original strongly
+    supports VmlR and VmlR2 under specific host/expression conditions; the exact C.
+    sporogenes CplR relation has only a twofold MIC effect and a prose A/B typo. Those
+    limits are compatible with retaining explicitly database-qualified edges, without
+    inflating effect size or generalizing across species.
+  target_ids:
+  - CHEBI:69414
+  evidence_ids:
+  - aro
+  - vmlr-primary
+  - cplr-primary
+  - vmlr2018
+- assessment_id: producer
+  area: evidence
+  topic: Production and material identity
+  outcome: supported
+  summary: Primary culture/isolation and NMR evidence supports S. hygroscopicus production.
+    The cited mechanism paper uses purified material from NRRL 2388. Minor epimer
+    contamination described in an older preparation limits unqualified purity claims
+    but does not invalidate the exact native graph or establish that all later materials
+    had the same composition.
+  target_ids:
+  - CHEBI:69414
+  evidence_ids:
+  - producer2003
+  - ribosome2015
+  - adopted-chebi
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership, class and history
+  outcome: supported
+  summary: The ARO molecule and resistance rows plus ChEBI chemistry lend the fields
+    as intended. Two actual source inputs were appended while preserving all initial
+    hashes. The unclassified-antibiotic parent and three source history events are
+    internally consistent with SEEDED status.
+  target_ids:
+  - CHEBI:69414
+  evidence_ids:
+  - owners
+  - native
+  - aro
+- assessment_id: coverage
+  area: completeness
+  topic: Optional detail and access scope
+  outcome: unknown
+  summary: All native fields and asserted identifiers were assessed. Full supplementary
+    methods, all historical biosynthetic papers and all current therapeutic research
+    were not independently audited. Missing optional quantitative activity, graph,
+    clinical or dataset objects are not defects; structured expression hits do not
+    supply those claims.
+  target_ids:
+  - CHEBI:69414
+  evidence_ids:
+  - adapter
+  - ribosome2015
+  - vmlr-primary
+  - producer2003
+  - search
+findings:
+- finding_id: F1
+  issue_key: hygromycin-a-chembl-exact-stereoisomer-mismatch
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Correct the exact ChEMBL reference to a different stereoisomer
+  description: The native xrefs entry chembl:CHEMBL7611 asserts exact equivalence,
+    but the inspected ChEMBL SMILES, InChI and molfile all encode a Z alkene and an
+    inverted aminocyclitol hydroxyl-bearing carbon. Their full key is YQYJSBFKSSDGFO-ATPAHKMZSA-N
+    rather than the native E/neo graph YQYJSBFKSSDGFO-IIHALWDASA-N. Current ChEBI,
+    PubChem and corrected primary structural work support retaining the native core.
+    A matching name and formula cannot reconcile the stereochemical difference. Remove
+    or qualify the maintained exact association until an independently verified matching
+    ChEMBL entry or corrected graph is available.
+  target_ids:
+  - CHEBI:69414
+  field_paths:
+  - xrefs[2]
+  evidence_ids:
+  - native
+  - chembl
+  - chemistry
+  - correction2015
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted exact ChEMBL reference
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction and scoped mapping correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated exact-reference emission
+  rule_id: 'Native checklist: exact cross-references must preserve chemical stereochemistry'
+  native_severity: major
+  normalization_reason: This is a confirmed exact-reference mapping to a different
+    stereoisomer. The independently supported native compound identity remains intact,
+    so the bounded mapping defect is major rather than a whole-record blocker.
+actions:
+- action_id: A1
+  description: Correct the maintained exact ChEMBL mapping while preserving the supported
+    native structure.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:69414
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted exact ChEMBL reference
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction and scoped mapping correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated exact-reference emission
+  acceptance_checks:
+  - No generated exact xref remains to the demonstrated Z/epimeric ChEMBL graph. Retain
+    an exact mapping only after independently verifying both alkene geometry and every
+    assigned stereocentre.
+  - Preserve the native CHEBI identifier, full graph/key, formula, charge, masses,
+    CAS and matching PubChem association. Do not copy the conflicting CARD-display/ChEMBL
+    SMILES or an obsolete ribosome ligand model into the native record.
+  - Implement through a maintained source correction or scoped mapping override, regenerate
+    reproducibly and pass focused schema/strict and corpus reproduction checks.
+- action_id: A2
+  description: If adding optional mechanism or resistance evidence, retain the experimentally
+    established boundaries.
+  finding_ids: []
+  target_ids:
+  - CHEBI:69414
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/hygromycin-a.yaml
+    role: Optional curator-owned scientific additions through the validated writer
+  acceptance_checks:
+  - Describe blockade of full tRNA CCA-end accommodation at the PTC while allowing
+    initial ternary-complex/tRNA binding; do not claim a specific ribosomal protein-binding
+    target.
+  - Preserve B. subtilis surrogate-host and expression conditions for VmlR2, and the
+    twofold C. sporogenes CplR effect plus the source prose/table A/B inconsistency.
+    Do not generalize CplR across organisms.
+  - Keep purified parent, phosphorylated antibiotic, epihygromycin and A201A distinct.
+    Translation IC50, ligand occupancy and fermentation titer are not whole-cell MIC
+    or binding Kd.
+limitations:
+- The 2015 mechanism main text and independent NAR main sections were read, but supplemental
+  PDFs/raw diffraction data were not independently analysed. The first PMC supplement
+  response was HTML. Current 5DOY supersedes the original 4Z3Q model; its HGR descriptor
+  uses a different keto tautomer and is not an exact full-key authority match.
+- The 2023 resistance audit covered exact relevant Methods, Results, Tables 1-4 and
+  Discussion; it did not reanalyse all raw cryo-EM data or supplemental experiments.
+  Generic Methods state24 h while the B. subtilis table specifies16-20 h; the table-specific
+  context is preserved.
+- The C. sporogenes hygromycin A effect is only twofold. The paper prose calls it
+  hygromycin B while the exact Table 4 column is hygromycin A. The native relation
+  remains explicitly database-qualified and is not promoted to a strong direct biochemical
+  result.
+- The 2018 VmlR source was read at complete abstract/significance depth, and the 2011
+  ChEBI structural lead at complete abstract depth. The 2003 producer source was read
+  in selected culture/isolation/NMR Methods, with minor epihygromycin noted; the complete
+  historical synthetic/biosynthetic literature was not independently audited.
+- The broad literature query admitted substantial hygromycin B and selection-marker
+  noise. Only the first 100 results of each broad/narrowed query were returned; exact
+  primary PMID follow-up supports the stated conclusions without implying comprehensive
+  therapeutic or regulatory coverage.
+- The optional tautomer canonicalization removes some labile stereochemical annotations.
+  It is used only to contextualize the HGR keto representation; the ChEMBL mismatch
+  rests on direct unnormalized graph/stereochemistry comparison.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Actual fetch and adapter manifests retain UTC access times, URLs, hashes and execution
+  statuses. The shared current ARO snapshot came from the official PURL at 2026-10-21T15:57:42Z
+  with SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4.
+- Current CARD displays the conflicting ChEMBL SMILES, whereas the maintained native
+  chemical_structure is explicitly ChEBI-derived. The finding targets the exact association
+  without treating every field of an ontology concept as chemically authoritative.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
